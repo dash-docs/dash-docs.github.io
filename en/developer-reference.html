@@ -4305,11 +4305,170 @@ features built in to Dash.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
+  <p>The <code class="highlighter-rouge">govobj</code> message is …</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Bytes</th>
+        <th>Name</th>
+        <th>Data type</th>
+        <th>Required</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>32</td>
+        <td>nHashParent</td>
+        <td>uint256</td>
+        <td>Required</td>
+        <td>Parent object, 0 is root</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>nRevision</td>
+        <td>int</td>
+        <td>Required</td>
+        <td>Object revision in the system</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>nTime</td>
+        <td>int64_t</td>
+        <td>Required</td>
+        <td>Time which this object was created</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>nCollateralHash</td>
+        <td>uint256</td>
+        <td>Required</td>
+        <td>Hash of the collateral fee transaction</td>
+      </tr>
+      <tr>
+        <td>0-16384</td>
+        <td>strData</td>
+        <td>string</td>
+        <td>Required</td>
+        <td>Data field - can be used for anything (leading varint indicates size of data)</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>nObjectType</td>
+        <td>int</td>
+        <td>Required</td>
+        <td>Type of governance object as defined by src/governance-object.h</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>vinMasternode</td>
+        <td>CTxIn</td>
+        <td>Required</td>
+        <td>Unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> for the masternode which is signing this object</td>
+      </tr>
+      <tr>
+        <td>66*</td>
+        <td>vchSig</td>
+        <td>char[]</td>
+        <td>Required</td>
+        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of the masternode (66 bytes in most cases. Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The following annotated hexdump shows a <code class="highlighter-rouge">govobj</code> message. (The
+<a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">00000000000000000000000000000000
+00000000000000000000000000000000 ..... Parent Hash (0 = root)
+01000000 ............................. Revision (1)
+911ea85900000000 ..................... Create timestamp (2017-08-31 10:34:57 EDT)
+00000000000000000000000000000000
+00000000000000000000000000000000 ..... Collateral Hash
+
+Data
+| ae11 ............................... Data length (4526)
+| fdae11356235623 ... 376435643564 ... Data (truncated)
+
+02000000 ............................. Object Type (2 = GOVERNANCE_OBJECT_TRIGGER)
+
+Transaction input
+| UTXO
+| | ffefbe4959085907bcd2ba29e357a441
+| | fa7b6e26e25896d8127332bba2419e97 ... Outpoint TXID
+| | 00000000 ........................... Outpoint index number (0)
+| 00 ................................... Script length (0)
+| ...................................... Signature (None)
+| ffffffff ............................. Sequence
+
+1ce3b782f66be8ae9fc4158680128864
+341202b6006384083ab2d9cfa73795e2
+6000668e84af4ef6a284a52b53843524
+72037d51bd9079ffd5c087d9632865ee
+75 ................................... Masternode Signature</code></pre></figure>
+
   <h4 id="govobjvote">govobjvote</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org//edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/ref_p2p_networking.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Bytes</th>
+        <th>Name</th>
+        <th>Data type</th>
+        <th>Required</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>41+</td>
+        <td>vinMasternode</td>
+        <td>CTxIn</td>
+        <td>Required</td>
+        <td>Unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> for the masternode which is voting</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>nParentHash</td>
+        <td>uint256</td>
+        <td>Required</td>
+        <td>Object which we’re voting on (proposal, contract, setting or final budget)</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>nVoteOutcome</td>
+        <td>int</td>
+        <td>Required</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>nVoteSignal</td>
+        <td>int</td>
+        <td>Required</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>nTime</td>
+        <td>int64_t</td>
+        <td>Required</td>
+        <td>Time which the vote was created</td>
+      </tr>
+      <tr>
+        <td>66*</td>
+        <td>vchSig</td>
+        <td>char[]</td>
+        <td>Required</td>
+        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of the masternode (66 bytes in most cases. Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))</td>
+      </tr>
+    </tbody>
+  </table>
 
   <h4 id="govsync">govsync</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org//edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
