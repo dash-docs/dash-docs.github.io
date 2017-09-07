@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Resources - Bitcoin</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+</head>
+
+<body>
+
+  
+
+<div class="donation-container">
+  <div class="donation-text">
+    <p>
+      Bitcoin.org is a community funded project, donations are appreciated and used to improve the website.
+    </p>
+    <button type="button" class="donation-btn" onclick="openDonationModal()">
+      Make a donation
+    </button>
+  </div>
+  <button type="button" class="donation-visibility-toggle" onclick="toggleDonationBanner()">
+    Bitcoin.org needs your support!
+  </button>
+</div>
+
+<div
+  id="donation-modal"
+  style="display: none"
+  class="donation-modal hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Bitcoin.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"
+        target="_blank">
+        1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE
+      </a>
+    </div>
+    <div class="modal-body bg-white" style="overflow-y:hidden;text-align: center;">
+      <div>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+      </div>
+
+      <div>
+        <input
+          style="margin-right: 15px"
+          type="text"
+          placeholder="Or custom amount? (BTC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/sumber-daya">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/ressourcer">Dansk</a></li>
+        
+        
+          <li><a href="/de/ressourcen">Deutsch</a></li>
+        
+        
+          <li><a href="/en/resources" class="active">English</a></li>
+        
+        
+          <li><a href="/es/recursos">Español</a></li>
+        
+        
+          <li><a href="/fr/ressources">Français</a></li>
+        
+        
+          <li><a href="/it/risorse">Italiano</a></li>
+        
+        
+          <li><a href="/hu/informacios-anyagok">Magyar</a></li>
+        
+        
+          <li><a href="/nl/hulpmiddelen">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/zasoby">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/recursos">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/resurse">Română</a></li>
+        
+        
+          <li><a href="/sl/viri">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/resurser">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/kaynaklar">Türkçe</a></li>
+        
+        
+          <li><a href="/el/resources">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/resources">български</a></li>
+        
+        
+          <li><a href="/ru/resources">Русский</a></li>
+        
+        
+          <li><a href="/uk/resources">Українська</a></li>
+        
+        
+          <li><a href="/ar/resources">العربية</a></li>
+        
+        
+          <li><a href="/fa/resources">فارسی</a></li>
+        
+        
+          <li><a href="/hi/resources">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/resources">한국의</a></li>
+        
+        
+          <li><a href="/ja/resources">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/resources">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/resources">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+
+<a class="logo" href="/en/"><img src="/img/icons/logotop.svg" alt="Bitcoin"></a>
+
+  
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/sumber-daya">Bahasa Indonesia</option>
+    
+          <option value="/da/ressourcer">Dansk</option>
+    
+          <option value="/de/ressourcen">Deutsch</option>
+    
+          <option value="/en/resources" selected="selected">English</option>
+    
+          <option value="/es/recursos">Español</option>
+    
+          <option value="/fr/ressources">Français</option>
+    
+          <option value="/it/risorse">Italiano</option>
+    
+          <option value="/hu/informacios-anyagok">Magyar</option>
+    
+          <option value="/nl/hulpmiddelen">Nederlands</option>
+    
+          <option value="/pl/zasoby">Polski</option>
+    
+          <option value="/pt_BR/recursos">Português Brasil</option>
+    
+          <option value="/ro/resurse">Română</option>
+    
+          <option value="/sl/viri">Slovenščina</option>
+    
+          <option value="/sv/resurser">Svenska</option>
+    
+          <option value="/tr/kaynaklar">Türkçe</option>
+    
+          <option value="/el/resources">Ελληνικά</option>
+    
+          <option value="/bg/resources">български</option>
+    
+          <option value="/ru/resources">Русский</option>
+    
+          <option value="/uk/resources">Українська</option>
+    
+          <option value="/ar/resources">العربية</option>
+    
+          <option value="/fa/resources">فارسی</option>
+    
+          <option value="/hi/resources">हिन्दी</option>
+    
+          <option value="/ko/resources">한국의</option>
+    
+          <option value="/ja/resources">日本語</option>
+    
+          <option value="/zh_CN/resources">简体中文</option>
+    
+          <option value="/zh_TW/resources">繁體中文</option>
+    
+</select></div>
+
+  
+
+<ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Introduction</a>
+    <ul>
+      <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
+      <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
+      <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+      <li><a href="/en/getting-started">Getting started</a></li>
+      <li><a href="/en/how-it-works">How it works</a></li>
+      <li><a href="/en/you-need-to-know">You need to know</a></li>
+    </ul>
+  </li>
+  <li><a>Resources</a>
+    <ul>
+      <li class="active"><a href="/en/resources">Resources</a>
+      <li><a href="/en/exchanges">Exchanges</a></li>
+      <li><a href="/en/community">Community</a></li>
+      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a href="/en/vocabulary">Vocabulary</a></li>
+      <li><a href="/en/events">Events</a></li>
+      
+        <li><a href="/en/bitcoin-core/">Bitcoin Core</a></li>
+      
+    </ul>
+  </li>
+  <li><a href="/en/innovation">Innovation</a></li>
+  <li><a>Participate</a>
+    <ul>
+      <li><a href="/en/support-bitcoin">Support Bitcoin</a>
+      <li><a href="/en/buy">Buy Bitcoin</a></li>
+      <li><a href="/en/full-node">Running a full node</a></li>
+      <li><a href="/en/development">Development</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/faq">FAQ</a></li>
+</ul>
+
+</div></div>
+
+<div class="body">
+  
+
+<div class="breadcrumbs">
+  
+</div>
+
+  
+
+<div id="content" class="content">
+  <h1>Bitcoin resources</h1>
+<p class="summary">Find useful websites and resources about Bitcoin.</p>
+
+<div class="resources">
+<div>
+ <div>
+    <h2 id="learn"><img src="/img/icons/ico_solve.svg" class="titleicon" alt="Icon">Learning resources</h2>
+    <p><a href="https://en.bitcoin.it/">Bitcoin Wiki</a></p>
+    
+    <p><a href="https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-what-is-it">Khan Academy</a></p>
+    <p><a href="http://letstalkbitcoin.com/">Let's Talk Bitcoin</a></p>
+    <p><a href="http://www.bitcoin.kn/">Bitcoin Knowledge Podcast</a></p>
+    <p><a href="https://www.weusecoins.com/">WeUseCoins.com</a></p>
+    <p><a href="https://www.bitcoinmining.com/">BitcoinMining.com</a></p>
+    <p><a href="http://www.iamsatoshi.com/category/video-archive/">IamSatoshi</a></p>
+  </div><div>
+    <h2 id="directories"><img src="/img/icons/ico_invoice.svg" class="titleicon" alt="Icon">Directories</h2>
+    <p><a href="/en/choose-your-wallet">Wallets</a> - bitcoin.org</p>
+    <p><a href="https://coinmap.org/">Merchants</a> - coinmap.org</p>
+    <p><a href="https://spendabit.co/">Merchants</a> - spendabit.co</p>
+    <p><a href="https://airbitz.co/">Merchants</a> - airbitz.co</p>
+    <p><a href="https://99bitcoins.com/who-accepts-bitcoins-payment-companies-stores-take-bitcoins/">Merchants</a> - 99Bitcoins.com</p>
+    <p><a href="https://www.buybitcoinworldwide.com/">Exchanges</a> - buybitcoinworldwide.com</p>
+    <p><a href="https://en.bitcoin.it/wiki/Category:Shopping_Cart_Interfaces">Merchant tools</a> - en.bitcoin.it</p>
+    <p><a href="http://www.bitcoinprojects.net/">Projects</a> - BitcoinProjects.net</p>
+  </div>
+</div>
+<div>
+  <div>
+    <h2 id="news"><img src="/img/icons/ico_spread.svg" class="titleicon" alt="Icon">News</h2>
+    
+    
+    
+    
+    
+    <p><a href="http://cointelegraph.com/">CoinTelegraph</a><p>
+    <p><a href="http://www.coindesk.com">CoinDesk</a></p>
+    <p><a href="https://bitcoinmagazine.com">Bitcoin Magazine</a></p>
+    <p><a href="http://coinjournal.net">CoinJournal</a></p>
+    <p><a href="https://bitcointalk.org/index.php?board=77.0">BitcoinTalk press links</a></p>
+  </div><div>
+    <h2 id="charts"><img src="/img/icons/ico_market.svg" class="titleicon" alt="Icon">Charts and statistics</h2>
+    <p><a href="https://blockchain.info/charts/">Blockchain.info</a></p>
+    <p><a href="https://www.biteasy.com">Biteasy</a></p>
+    <p><a href="https://tradeblock.com">Trade Block</a></p>
+    <p><a href="https://bitcoincharts.com/charts/">Bitcoincharts.com</a></p>
+    <p><a href="https://gobitcoin.io/en/">GoBitcoin.io</a></p>
+    <p><a href="https://bitcoinaverage.com/en/bitcoin-price/btc-to-usd">BitcoinAverage</a></p>
+    <p><a href="https://bitvol.info/">Bitcoin Volatility Index</a></p>
+  </div>
+</div>
+<div>
+  <div>
+    <h2 id="documentaries"><img src="/img/icons/ico_doc.svg" class="titleicon" alt="Icon">Documentaries</h2>
+    <p><a href="http://bitcoinfilm.org/">BitcoinFilm.org</a></p>
+    <p><a href="http://iamsatoshi.com/">Ulterior States</a></p>
+    <p><a href="https://www.youtube.com/watch?v=6pWblf8COH4">The Bitcoin Phenomenon</a></p>
+  </div><div>
+    <h2 id="vouchers"><img src="/img/icons/ico_voucher.svg" class="titleicon" alt="Icon">Vouchers</h2>
+    <p><a href="https://www.bitrefill.com/">Bitrefill</a></p>
+    <p><a href="https://foldapp.com/">Fold</a></p>
+    <p><a href="https://gyft.com/bitcoin/">Gyft</a></p>
+    <p><a href="https://opendime.com/">Opendime</a></p>
+  </div>
+</div>
+</div>
+
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/press">Press</a>
+  <a href="/en/about-us">About bitcoin.org</a>
+  <a href="/en/blog">Blog</a>
+</div>
+
+    
+
+<div class="footersponsor">
+  <!--<div><span>A community website sponsored by</span> <a href="https://bitcoinfoundation.org/"><img src="/img/brand/bitcoinfoundation.png" alt="Bitcoin Foundation"></a></div>-->
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a></div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

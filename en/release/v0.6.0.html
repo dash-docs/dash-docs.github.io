@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+
+<head>
+
+
+<link rel="stylesheet" href="/css/jquery-ui.min.css">
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Bitcoin-Qt version 0.6.0 released</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+
+
+
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery-ui.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/">Dansk</a></li>
+        
+        
+          <li><a href="/de/">Deutsch</a></li>
+        
+        
+          <li><a href="/en/" class="active">English</a></li>
+        
+        
+          <li><a href="/es/">Español</a></li>
+        
+        
+          <li><a href="/fr/">Français</a></li>
+        
+        
+          <li><a href="/it/">Italiano</a></li>
+        
+        
+          <li><a href="/hu/">Magyar</a></li>
+        
+        
+          <li><a href="/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/">Română</a></li>
+        
+        
+          <li><a href="/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/">български</a></li>
+        
+        
+          <li><a href="/ru/">Русский</a></li>
+        
+        
+          <li><a href="/uk/">Українська</a></li>
+        
+        
+          <li><a href="/ar/">العربية</a></li>
+        
+        
+          <li><a href="/fa/">فارسی</a></li>
+        
+        
+          <li><a href="/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/">한국의</a></li>
+        
+        
+          <li><a href="/ja/">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+    
+
+<a class="logo" href="/en/bitcoin-core/"><img src="/img/bitcoin-core/bitcoin-core.svg" alt="Bitcoin"></a>
+
+    
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/">Bahasa Indonesia</option>
+    
+          <option value="/da/">Dansk</option>
+    
+          <option value="/de/">Deutsch</option>
+    
+          <option value="/en/" selected="selected">English</option>
+    
+          <option value="/es/">Español</option>
+    
+          <option value="/fr/">Français</option>
+    
+          <option value="/it/">Italiano</option>
+    
+          <option value="/hu/">Magyar</option>
+    
+          <option value="/nl/">Nederlands</option>
+    
+          <option value="/pl/">Polski</option>
+    
+          <option value="/pt_BR/">Português Brasil</option>
+    
+          <option value="/ro/">Română</option>
+    
+          <option value="/sl/">Slovenščina</option>
+    
+          <option value="/sv/">Svenska</option>
+    
+          <option value="/tr/">Türkçe</option>
+    
+          <option value="/el/">Ελληνικά</option>
+    
+          <option value="/bg/">български</option>
+    
+          <option value="/ru/">Русский</option>
+    
+          <option value="/uk/">Українська</option>
+    
+          <option value="/ar/">العربية</option>
+    
+          <option value="/fa/">فارسی</option>
+    
+          <option value="/hi/">हिन्दी</option>
+    
+          <option value="/ko/">한국의</option>
+    
+          <option value="/ja/">日本語</option>
+    
+          <option value="/zh_CN/">简体中文</option>
+    
+          <option value="/zh_TW/">繁體中文</option>
+    
+</select></div>
+
+    
+
+<ul id="menusimple" class="menusimple menucore" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Features</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/features/">Overview</a></li>
+      <li><a href="/en/bitcoin-core/features/validation">Validation</a></li>
+      <li><a href="/en/bitcoin-core/features/privacy">Privacy</a></li>
+      <li><a href="/en/bitcoin-core/features/requirements">Requirements</a></li>
+      <li><a href="/en/bitcoin-core/features/user-interface">User Interface</a></li>
+      <li><a href="/en/bitcoin-core/features/network-support">Network Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/bitcoin-core/help">Get Help</a></li>
+  <li><a>Contribute</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/contribute/issues">Bug reports</a></li>
+      <li><a href="/en/development">Code</a></li>
+      <li><a href="/en/bitcoin-core/contribute/documentation">Documentation</a></li>
+      <li><a href="/en/bitcoin-core/contribute/translations">Translations</a></li>
+      <li><a href="/en/bitcoin-core/contribute/support">Tech Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/version-history">News</a></li>
+  <li><a href="/en/download">Download</a></li>
+</ul>
+
+  
+</div></div>
+
+<div class="body">
+  
+    
+
+<div class="breadcrumbs">
+  
+    
+      <a href="/en/">Bitcoin</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/bitcoin-core/">Core</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/version-history">News</a>
+        
+      &gt;
+    
+  
+    
+      
+          
+          0.6.0
+        
+    
+  
+</div>
+
+  
+  
+
+<div id="content" class="content">
+<div >
+  <link rel="alternate" type="application/rss+xml" href="/en/rss/releases.rss" title="Bitcoin Core releases">
+<div class="versiontext">
+  <h1>Bitcoin-Qt version 0.6.0 released<br><small>30 March 2012</small></h1>
+  <p>Bitcoin-Qt version 0.6.0 is now available for download at:
+  <a href="http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.6.0/">http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.6.0/</a></p>
+
+<p>This release includes more than 20 language localizations.
+More translations are welcome; join the
+project at Transifex to help:
+  <a href="https://www.transifex.net/projects/p/bitcoin/">https://www.transifex.net/projects/p/bitcoin/</a></p>
+
+<p>Please report bugs using the issue tracker at github:
+  <a href="https://github.com/bitcoin/bitcoin/issues">https://github.com/bitcoin/bitcoin/issues</a></p>
+
+<p>Project source code is hosted at github; we are no longer
+distributing .tar.gz files here, you can get them
+directly from github:
+ <a href="https://github.com/bitcoin/bitcoin/tarball/v0.6.0">https://github.com/bitcoin/bitcoin/tarball/v0.6.0</a>  # .tar.gz
+ <a href="https://github.com/bitcoin/bitcoin/zipball/v0.6.0">https://github.com/bitcoin/bitcoin/zipball/v0.6.0</a>  # .zip</p>
+
+<p>For Ubuntu users, there is a ppa maintained by Matt Corallo which
+you can add to your system so that it will automatically keep
+bitcoin up-to-date.  Just type
+ sudo apt-add-repository ppa:bitcoin/bitcoin
+in your terminal, then install the bitcoin-qt package.</p>
+
+<h2 id="known-issues">KNOWN ISSUES</h2>
+
+<p>Shutting down while synchronizing with the network
+(downloading the blockchain) can take more than a minute,
+because database writes are queued to speed up download
+time.</p>
+
+<h2 id="new-features-since-bitcoin-version-05">NEW FEATURES SINCE BITCOIN VERSION 0.5</h2>
+
+<p>Initial network synchronization should be much faster
+(one or two hours on a typical machine instead of ten or more
+hours).</p>
+
+<p>Backup Wallet menu option.</p>
+
+<p>Bitcoin-Qt can display and save QR codes for sending
+and receiving addresses.</p>
+
+<p>New context menu on addresses to copy/edit/delete them.</p>
+
+<p>New Sign Message dialog that allows you to prove that you
+own a bitcoin address by creating a digital
+signature.</p>
+
+<p>New wallets created with this version will
+use 33-byte ‘compressed’ public keys instead of
+65-byte public keys, resulting in smaller
+transactions and less traffic on the bitcoin
+network. The shorter keys are already supported
+by the network but wallet.dat files containing
+short keys are not compatible with earlier
+versions of Bitcoin-Qt/bitcoind.</p>
+
+<p>New command-line argument <code class="highlighter-rouge">-blocknotify=&lt;command&gt;</code>
+that will spawn a shell process to run <code class="highlighter-rouge">&lt;command&gt;</code>
+when a new block is accepted.</p>
+
+<p>New command-line argument -splash=0 to disable
+Bitcoin-Qt’s initial splash screen</p>
+
+<p>validateaddress JSON-RPC api command output includes
+two new fields for addresses in the wallet:
+ pubkey : hexadecimal public key
+ iscompressed : true if pubkey is a short 33-byte key</p>
+
+<p>New JSON-RPC api commands for dumping/importing
+private keys from the wallet (dumprivkey, importprivkey).</p>
+
+<p>New JSON-RPC api command for getting information about
+blocks (getblock, getblockhash).</p>
+
+<p>New JSON-RPC api command (getmininginfo) for getting
+extra information related to mining. The getinfo
+JSON-RPC command no longer includes mining-related
+information (generate/genproclimit/hashespersec).</p>
+
+<h2 id="notable-changes">NOTABLE CHANGES</h2>
+
+<p>BIP30 implemented (security fix for an attack involving
+duplicate “coinbase transactions”).</p>
+
+<p>The -nolisten, -noupnp and -nodnsseed command-line
+options were renamed to -listen, -upnp and -dnsseed,
+with a default value of 1. The old names are still
+supported for compatibility (so specifying -nolisten
+is automatically interpreted as -listen=0; every
+boolean argument can now be specified as either
+-foo or -nofoo).</p>
+
+<p>The -noirc command-line options was renamed to
+-irc, with a default value of 0. Run -irc=1 to
+get the old behavior.</p>
+
+<p>Three fill-up-available-memory denial-of-service
+attacks were fixed.</p>
+
+<h2 id="not-yet-implemented-features">NOT YET IMPLEMENTED FEATURES</h2>
+
+<p>Support for clicking on bitcoin: URIs and
+opening/launching Bitcoin-Qt is available only on Linux,
+and only if you configure your desktop to launch
+Bitcoin-Qt. All platforms support dragging and dropping
+bitcoin: URIs onto the Bitcoin-Qt window to start
+payment.</p>
+
+<h2 id="preliminary-support-for-multisignature-transactions">PRELIMINARY SUPPORT FOR MULTISIGNATURE TRANSACTIONS</h2>
+
+<p>This release has preliminary support for multisignature
+transactions– transactions that require authorization
+from more than one person or device before they
+will be accepted by the bitcoin network.</p>
+
+<p>Prior to this release, multisignature transactions
+were considered ‘non-standard’ and were ignored;
+with this release multisignature transactions are
+considered standard and will start to be relayed
+and accepted into blocks.</p>
+
+<p>It is expected that future releases of Bitcoin-Qt
+will support the creation of multisignature transactions,
+once enough of the network has upgraded so relaying
+and validating them is robust.</p>
+
+<p>For this release, creation and testing of multisignature
+transactions is limited to the bitcoin test network using
+the “addmultisigaddress” JSON-RPC api call.</p>
+
+<p>Short multisignature address support is included in this
+release, as specified in BIP 13 and BIP 16.</p>
+
+<p>Thanks to everybody who contributed to this release:</p>
+
+<ul>
+  <li>Alex B</li>
+  <li>Alistair Buxton</li>
+  <li>Chris Moore</li>
+  <li>Clark Gaebel</li>
+  <li>Daniel Folkinshteyn</li>
+  <li>Dylan Noblesmith</li>
+  <li>Forrest Voight</li>
+  <li>Gavin Andresen</li>
+  <li>Gregory Maxwell</li>
+  <li>Janne Pulkkinen</li>
+  <li>Joel Kaartinen</li>
+  <li>Lars Rasmusson</li>
+  <li>Luke Dashjr</li>
+  <li>Matt Corallo</li>
+  <li>Michael Ford</li>
+  <li>Michael Hendricks</li>
+  <li>Nick Bosma</li>
+  <li>Nils Schneider</li>
+  <li>Philip Kaufmann</li>
+  <li>Pierre Pronchery</li>
+  <li>Pieter Wuille</li>
+  <li>Rune K Svendsen</li>
+  <li>Wladimir J. van der Laan</li>
+  <li>coderrr</li>
+  <li>p2k</li>
+  <li>sje397</li>
+</ul>
+
+<p>Special thanks to Sergio Lerner and Matt Corallo for bringing
+potential denial-of-service attacks to our attention.</p>
+
+</div>
+<a href="/en/version-history">Go back to the version history</a>
+
+</div>
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/bitcoin-core/about-site">About</a>
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a><br>
+Bitcoin Core pages on Bitcoin.org are <a
+href="/en/bitcoin-core/about-site">maintained separately</a> from the
+rest of the site.
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  <script src="/js/bitcoin-core.js"></script>
+
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

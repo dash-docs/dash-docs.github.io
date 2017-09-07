@@ -1,0 +1,2429 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+
+<head>
+
+
+<link rel="stylesheet" href="/css/jquery-ui.min.css">
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Development - Bitcoin</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+
+
+
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery-ui.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/pengembangan">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/udvikling">Dansk</a></li>
+        
+        
+          <li><a href="/de/entwicklung">Deutsch</a></li>
+        
+        
+          <li><a href="/en/development" class="active">English</a></li>
+        
+        
+          <li><a href="/es/desarrollo">Español</a></li>
+        
+        
+          <li><a href="/fr/developpement">Français</a></li>
+        
+        
+          <li><a href="/it/sviluppo">Italiano</a></li>
+        
+        
+          <li><a href="/hu/fejlesztes">Magyar</a></li>
+        
+        
+          <li><a href="/nl/ontwikkeling">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/rozwoj">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/desenvolvimento">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/dezvoltare">Română</a></li>
+        
+        
+          <li><a href="/sl/razvoj">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/utveckling">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/gelistirme">Türkçe</a></li>
+        
+        
+          <li><a href="/el/development">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/development">български</a></li>
+        
+        
+          <li><a href="/ru/development">Русский</a></li>
+        
+        
+          <li><a href="/uk/development">Українська</a></li>
+        
+        
+          <li><a href="/ar/development">العربية</a></li>
+        
+        
+          <li><a href="/fa/development">فارسی</a></li>
+        
+        
+          <li><a href="/hi/development">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/development">한국의</a></li>
+        
+        
+          <li><a href="/ja/development">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/development">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/development">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+    
+
+<a class="logo" href="/en/bitcoin-core/"><img src="/img/bitcoin-core/bitcoin-core.svg" alt="Bitcoin"></a>
+
+    
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/pengembangan">Bahasa Indonesia</option>
+    
+          <option value="/da/udvikling">Dansk</option>
+    
+          <option value="/de/entwicklung">Deutsch</option>
+    
+          <option value="/en/development" selected="selected">English</option>
+    
+          <option value="/es/desarrollo">Español</option>
+    
+          <option value="/fr/developpement">Français</option>
+    
+          <option value="/it/sviluppo">Italiano</option>
+    
+          <option value="/hu/fejlesztes">Magyar</option>
+    
+          <option value="/nl/ontwikkeling">Nederlands</option>
+    
+          <option value="/pl/rozwoj">Polski</option>
+    
+          <option value="/pt_BR/desenvolvimento">Português Brasil</option>
+    
+          <option value="/ro/dezvoltare">Română</option>
+    
+          <option value="/sl/razvoj">Slovenščina</option>
+    
+          <option value="/sv/utveckling">Svenska</option>
+    
+          <option value="/tr/gelistirme">Türkçe</option>
+    
+          <option value="/el/development">Ελληνικά</option>
+    
+          <option value="/bg/development">български</option>
+    
+          <option value="/ru/development">Русский</option>
+    
+          <option value="/uk/development">Українська</option>
+    
+          <option value="/ar/development">العربية</option>
+    
+          <option value="/fa/development">فارسی</option>
+    
+          <option value="/hi/development">हिन्दी</option>
+    
+          <option value="/ko/development">한국의</option>
+    
+          <option value="/ja/development">日本語</option>
+    
+          <option value="/zh_CN/development">简体中文</option>
+    
+          <option value="/zh_TW/development">繁體中文</option>
+    
+</select></div>
+
+    
+
+<ul id="menusimple" class="menusimple menucore" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Features</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/features/">Overview</a></li>
+      <li><a href="/en/bitcoin-core/features/validation">Validation</a></li>
+      <li><a href="/en/bitcoin-core/features/privacy">Privacy</a></li>
+      <li><a href="/en/bitcoin-core/features/requirements">Requirements</a></li>
+      <li><a href="/en/bitcoin-core/features/user-interface">User Interface</a></li>
+      <li><a href="/en/bitcoin-core/features/network-support">Network Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/bitcoin-core/help">Get Help</a></li>
+  <li><a>Contribute</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/contribute/issues">Bug reports</a></li>
+      <li class="active"><a href="/en/development">Code</a></li>
+      <li><a href="/en/bitcoin-core/contribute/documentation">Documentation</a></li>
+      <li><a href="/en/bitcoin-core/contribute/translations">Translations</a></li>
+      <li><a href="/en/bitcoin-core/contribute/support">Tech Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/version-history">News</a></li>
+  <li><a href="/en/download">Download</a></li>
+</ul>
+
+  
+</div></div>
+
+<div class="body">
+  
+    
+
+<div class="breadcrumbs">
+  
+    
+      <a href="/en/">Bitcoin</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/bitcoin-core/">Core</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/bitcoin-core/contribute/">Contribute</a>
+        
+      &gt;
+    
+  
+    
+      Code
+      
+    
+  
+</div>
+
+  
+  
+
+<div id="content" class="content">
+<div class="one-column">
+  <!-- Note: this file is built non-deterministically -->
+<h1>Bitcoin development</h1>
+
+
+<p>Bitcoin is free software and any developer can contribute to the project. Everything you need is in the <a href="https://github.com/bitcoin/bitcoin">GitHub repository</a>. Please make sure to read and follow the development process described in the README, as well as to provide good quality code and respect all guidelines.</p>
+<p>Development discussion takes place on GitHub and the <a href="https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev">bitcoin-dev</a> mailing list. Less formal development discussion happens on irc.freenode.net #bitcoin-core-dev (<a href="https://webchat.freenode.net/?channels=bitcoin-core-dev">web interface</a>, <a href="http://bitcoinstats.com/irc/bitcoin-core-dev/logs">logs</a>).</p>
+<div id="chatbox" class="chatbox"></div>
+
+
+
+  
+<p><span class="fa fa-exclamation-triangle"></span> <em>To report an issue,
+please see the <a href="/en/bitcoin-core/contribute/issues">bug reporting</a> page.</em></p>
+
+<h2 id="code-review">Code Review</h2>
+
+<p>Bitcoin Core is security software that helps protect assets worth
+billions of dollars, so every code change needs to be reviewed by
+experienced developers.</p>
+
+<p>It can take a long time for other developers to review your pull
+requests. Remember that all reviewers are taking time away from their
+own projects to review your pull requests, so be patient and respectful
+of their time.</p>
+
+<p>Please also consider helping to review other people’s pull requests. You
+don’t need to be an expert in Bitcoin, the Bitcoin Core codebase, or C++
+(although all these things help). There are almost always <a href="https://github.com/dashpay/dash/pulls">open pull
+requests</a> that any programmer can review.</p>
+
+<h2 id="starter-projects">Starter Projects</h2>
+
+<p>Do you want to begin coding for Bitcoin Core but don’t have a specific
+improvement in mind?  Here are a few ideas:</p>
+
+<ul>
+  <li>
+    <p><strong>Fix existing issues:</strong> the <a href="https://github.com/dashpay/dash/issues">issue tracker</a> is the
+best place to find a useful way to contribute to Bitcoin Core.
+Before starting to write any patches for issues you find, you may
+want to comment on the issue to make sure nobody else is already
+working on it.</p>
+  </li>
+  <li>
+    <p><strong>Write tests:</strong> Bitcoin Core is covered by many tests, but patches
+that improve test coverage are always welcome and are a great way to
+build familiarity with the codebase.  See the documentation about
+<a href="https://github.com/dashpay/dash/blob/master/README.md#automated-testing">automated testing</a>.</p>
+  </li>
+</ul>
+
+<!-- Inventory Messages -->
+<!-- Inventory Messages: Dash Specific -->
+
+<!--[bitcoin-documentation mailing list]: https://groups.google.com/forum/#!forum/bitcoin-documentation-->
+
+
+
+
+
+<h2 id="spec">Documentation</h2>
+<p>If you are interested in learning more about the technical details of Bitcoin and how to use existing tools and APIs, it is recommended you start by exploring the <a href="/en/developer-documentation">developer documentation</a>.</p>
+
+
+  <input id="glossary_term" class="glossary_term" placeholder="Search the glossary, RPCs, and more">
+
+
+<section id="devcommunities">
+  <h2 id="dev-communities">Developer communities</h2>
+  <p>The following chatrooms and websites host discussions about Bitcoin development.  Please be sure to read their rules of conduct before posting.</p>
+
+  <ul>
+    <li><a href="https://webchat.freenode.net/?channels=bitcoin-core-dev">IRC Channel #bitcoin-core-dev</a> on freenode.</li>
+    <li><a href="https://slack.bitcoincore.org/">Bitcoin Core Slack Channel</a></li>
+    <li><a href="https://bitcoin.stackexchange.com/">Bitcoin StackExchange</a></li>
+    <li><a href="https://bitcointalk.org/index.php?board=6.0">BitcoinTalk Development &amp; Technical Discussion Forum</a></li>
+  </ul>
+</section>
+
+<section id="contributors">
+  <h2 id="bitcoin-core-contributors">Bitcoin Core contributors</h2>
+  <p>(Ordered by number of commits)</p>
+  <div class="contributors">
+    
+    <div>
+      <div><a href="https://github.com/laanwj">Wladimir J. van der Laan</a></div>
+      <div>(4884)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sipa">Pieter Wuille</a></div>
+      <div>(1418)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/gavinandresen">Gavin Andresen</a></div>
+      <div>(1101)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/MarcoFalke">MarcoFalke</a></div>
+      <div>(568)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/TheBlueMatt">TheBlueMatt</a></div>
+      <div>(534)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/theuni">Cory Fields</a></div>
+      <div>(528)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jonasschnelli">jonasschnelli</a></div>
+      <div>(500)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/luke-jr">Luke-Jr</a></div>
+      <div>(328)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/non-github-bitcoin">non-github-bitcoin</a></div>
+      <div>(271)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/gmaxwell">Gregory Maxwell</a></div>
+      <div>(261)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/morcos">morcos</a></div>
+      <div>(205)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jnewbery">jnewbery</a></div>
+      <div>(200)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/fanquake">fanquake</a></div>
+      <div>(185)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sdaftuar">sdaftuar</a></div>
+      <div>(180)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jtimon">jtimon</a></div>
+      <div>(156)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/paveljanik">paveljanik</a></div>
+      <div>(109)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/practicalswift">practicalswift</a></div>
+      <div>(107)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ryanofsky">ryanofsky</a></div>
+      <div>(105)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/petertodd">Peter Todd</a></div>
+      <div>(102)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/cozz">cozz</a></div>
+      <div>(70)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pstratem">pstratem</a></div>
+      <div>(70)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/instagibbs">instagibbs</a></div>
+      <div>(49)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/achow101">achow101</a></div>
+      <div>(39)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/rebroad">rebroad</a></div>
+      <div>(35)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/muggenhor">muggenhor</a></div>
+      <div>(34)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/btcdrak">btcdrak</a></div>
+      <div>(32)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/CodeShark">Eric Lombrozo</a></div>
+      <div>(32)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kallewoof">kallewoof</a></div>
+      <div>(32)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/domob1812">domob1812</a></div>
+      <div>(31)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/JeremyRubin">JeremyRubin</a></div>
+      <div>(29)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dooglus">dooglus</a></div>
+      <div>(27)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/promag">promag</a></div>
+      <div>(26)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Michagogo">Michagogo</a></div>
+      <div>(25)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dexX7">dexX7</a></div>
+      <div>(20)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/wtogami">wtogami</a></div>
+      <div>(19)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/NicolasDorier">NicolasDorier</a></div>
+      <div>(19)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kazcw">kazcw</a></div>
+      <div>(19)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jl2012">jl2012</a></div>
+      <div>(19)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dgenr8">dgenr8</a></div>
+      <div>(18)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mrbandrews">mrbandrews</a></div>
+      <div>(17)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/super3">super3</a></div>
+      <div>(16)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/casey">casey</a></div>
+      <div>(15)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kdomanski">kdomanski</a></div>
+      <div>(15)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jimmysong">jimmysong</a></div>
+      <div>(14)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ENikS">ENikS</a></div>
+      <div>(13)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/benma">benma</a></div>
+      <div>(13)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/21E14">21E14</a></div>
+      <div>(11)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/maaku">maaku</a></div>
+      <div>(11)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/nomnombtc">nomnombtc</a></div>
+      <div>(11)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dcousens">dcousens</a></div>
+      <div>(11)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/codler">codler</a></div>
+      <div>(10)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/wizeman">wizeman</a></div>
+      <div>(10)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/JohnDolittle">JohnDolittle</a></div>
+      <div>(10)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/roques">roques</a></div>
+      <div>(9)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jmcorgan">jmcorgan</a></div>
+      <div>(9)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/rnicoll">rnicoll</a></div>
+      <div>(9)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mrwhythat">mrwhythat</a></div>
+      <div>(9)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/danra">danra</a></div>
+      <div>(9)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/droark">droark</a></div>
+      <div>(9)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ajweiss">ajweiss</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jamesob">jamesob</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jordanlewis">jordanlewis</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/joshtriplett">joshtriplett</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/isle2983">isle2983</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/devrandom">devrandom</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jgarzik">Jeff Garzik</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/s-matthew-english">s-matthew-english</a></div>
+      <div>(8)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/schildbach">Andreas Schildbach</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/forrestv">forrestv</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/MeshCollider">MeshCollider</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/freewil">freewil</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sinetek">sinetek</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/celil-kj">celil-kj</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jlopp">jlopp</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/runeksvendsen">runeksvendsen</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sje397">sje397</a></div>
+      <div>(7)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ashleyholman">ashleyholman</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Christewart">Christewart</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dertin">dertin</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/str4d">str4d</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Matoking">Matoking</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mgiuca">mgiuca</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/OttoAllmendinger">OttoAllmendinger</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/tjps">tjps</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/vegard">vegard</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/zw">zw</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/fsb4000">fsb4000</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/p2k">p2k</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/randy-waterhouse">randy-waterhouse</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jrmithdobbs">jrmithdobbs</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/JoelKatz">JoelKatz</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/EthanHeilman">EthanHeilman</a></div>
+      <div>(6)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/alexanderkjeldaas">alexanderkjeldaas</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/federicobond">federicobond</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/maraoz">maraoz</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mndrix">mndrix</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/robbak">robbak</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/r000n">r000n</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/roybadami">roybadami</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/vinniefalco">vinniefalco</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/whitj00">Whit Jack</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/accraze">accraze</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/fcicq">fcicq</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/gubatron">gubatron</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ptschip">ptschip</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sandakersmann">sandakersmann</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/rdponticelli">rdponticelli</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ericshawlinux">ericshawlinux</a></div>
+      <div>(5)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/paraipan">paraipan</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/brandondahler">brandondahler</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/DomT4">DomT4</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/EricJ2190">EricJ2190</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/4tar">4tar</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jayschwa">jayschwa</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/JeremyRand">JeremyRand</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/greenaddress">greenaddress</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mibe">mibe</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/UdjinM6">UdjinM6</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/vsrinivas">vsrinivas</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/arowser">arowser</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/globalcitizen">globalcitizen</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/grimd34th">grimd34th</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Xekyo">Xekyo</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pedrobranco">pedrobranco</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mitchellcash">mitchellcash</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/unsystemizer">unsystemizer</a></div>
+      <div>(4)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/CryptAxe">CryptAxe</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/bytting">bytting</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/davecgh">davecgh</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ers35">ers35</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ian-kelling">ian-kelling</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jonls">jonls</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jonasnick">jonasnick</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Krellan">Krellan</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ldenman">ldenman</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/laudaa">laudaa</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ChoHag">ChoHag</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pinheadmz">pinheadmz</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Mirobit">Mirobit</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mikehearn">Mike Hearn</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/prusnak">prusnak</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/RHavar">RHavar</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/SergioDemianLerner">SergioDemianLerner</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/shaulkf">shaulkf</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/spencerlievens">spencerlievens</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/tholenst">tholenst</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/afk11">afk11</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Tyler-Hardin">Tyler-Hardin</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/lpescher">lpescher</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/al42and">al42and</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/cdecker">cdecker</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dajohi">dajohi</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/keystrike">keystrike</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/posita">posita</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/PRabahy">PRabahy</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/djpnewton">djpnewton</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/imharrywu">imharrywu</a></div>
+      <div>(3)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/AkioNak">AkioNak</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/alexwaters">alexwaters</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/AliceWonderMiscreations">AliceWonderMiscreations</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/negedzuregal">negedzuregal</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/AmirAbrams">AmirAbrams</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/bencxr">bencxr</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kanzure">kanzure</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dongcarl">dongcarl</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/CAFxX">CAFxX</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/cbeams">cbeams</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/chrisgavin">chrisgavin</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/cdhowie">cdhowie</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sudosurootdev">sudosurootdev</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/colindean">colindean</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mess110">mess110</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/bytemaster">bytemaster</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/harding">David Harding</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/enmaku">enmaku</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/spiechu">spiechu</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/xslidian">xslidian</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dlitz">dlitz</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/nobled">nobled</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Mischi">Mischi</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Flavien">Flavien</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/gdm85">gdm85</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/haakonn">haakonn</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Cocosoft">Cocosoft</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/welshjf">welshjf</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/wjx">wjx</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/joaopaulofonseca">joaopaulofonseca</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jonathancross">jonathancross</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kevcooper">kevcooper</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kostaz">kostaz</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/LongShao007">LongShao007</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/lucayepa">lucayepa</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mariodian">mariodian</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mhanne">mhanne</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/musalbas">musalbas</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/nathaniel-mahieu">nathaniel-mahieu</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/nbenoit">nbenoit</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pavlosantoniou">pavlosantoniou</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/robvanmieghem">robvanmieghem</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/rustyrussell">rustyrussell</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/maqifrnswa">maqifrnswa</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sime">sime</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sgimenez">sgimenez</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/drizzt">drizzt</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/thofmann">thofmann</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/wbnns">wbnns</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pirapira">pirapira</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/aideca">aideca</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/cardpuncher">cardpuncher</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/account-settings">account-settings</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/constantined">constantined</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/crowning-">crowning-</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/flack">flack</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/imwuzhh">imwuzhh</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kobake">kobake</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/phelixbtc">phelixbtc</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/shshshsh">shshshsh</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ayeowch">ayeowch</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/knocte">knocte</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/apoelstra">apoelstra</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/benhc123">benhc123</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Derek701">Derek701</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/xHire">xHire</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/tamasblummer">tamasblummer</a></div>
+      <div>(2)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/APerson241">APerson241</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/AbrahamJewowich">AbrahamJewowich</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/DeftNerd">DeftNerd</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/plaxton">plaxton</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/aitorpazos">aitorpazos</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Alex-van-der-Peet">Alex-van-der-Peet</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/AlexJeng">AlexJeng</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/alexreg">alexreg</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/netsafe">netsafe</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/alfiedotwtf">alfiedotwtf</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ali1234">ali1234</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/AllanDoensen">AllanDoensen</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Altoidnerd">Altoidnerd</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Altoidnerd1">Altoidnerd1</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/amiryal">amiryal</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/andersoyvind">andersoyvind</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/anditto">anditto</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/anddam">anddam</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/s3erios">s3erios</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/aalness">aalness</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/iongchun">iongchun</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ajtowns">ajtowns</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Arnavion">Arnavion</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/arnuschky">arnuschky</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/bardiharborow">bardiharborow</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/BitcoinPRReadingGroup">BitcoinPRReadingGroup</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/blakejakopovic">blakejakopovic</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/carryforward">carryforward</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/brianmcmichael">brianmcmichael</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jcalvinowens">jcalvinowens</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/calvintam">calvintam</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kr105">kr105</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/coblee">coblee</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/catilac">catilac</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/carnesen">carnesen</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kleetus">kleetus</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/chriswheeler">chriswheeler</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/cbarcenas">cbarcenas</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sarchar">sarchar</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Ciemon">Ciemon</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pygeek">pygeek</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/CohibAA">CohibAA</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/CryptoDJ">CryptoDJ</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/infertux">infertux</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dagurval">dagurval</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/daira">daira</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/witten">witten</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dlo">dlo</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/da2x">da2x</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/esotericnonsense">esotericnonsense</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dholbert">dholbert</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/DavidGriffith">DavidGriffith</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/davidsgrogan">davidsgrogan</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dserrano5">dserrano5</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/CypherGrue">CypherGrue</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/diegoviola">diegoviola</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/dimitris-t">dimitris-t</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/onlyjob">onlyjob</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/djp3">djp3</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Earlz">Earlz</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/elliotolds">elliotolds</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/esbullington">esbullington</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/lachesis">lachesis</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/erkmos">erkmos</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/eordano">eordano</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/eklitzke">eklitzke</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/heyrhett">heyrhett</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Unreal89">Unreal89</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/FelixWeis">FelixWeis</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/fametrano">fametrano</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Flowdalic">Flowdalic</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/codeboost">codeboost</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/makevoid">makevoid</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/francis16">francis16</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/bitcoinsSG">bitcoinsSG</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/gtsui">gtsui</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/gwillen">gwillen</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/haltingstate">haltingstate</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/heath">heath</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/hectorj">hectorj</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/HostFat">HostFat</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/iangcarroll">iangcarroll</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/irvingruan">irvingruan</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/isghe">isghe</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ivanpustogarov">ivanpustogarov</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ivdsangen">ivdsangen</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jl2035">jl2035</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/gandaro">gandaro</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jburkle">jburkle</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jameshilliard">jameshilliard</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/malleor">malleor</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jaromil">jaromil</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jarret">jarret</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jasonlewicki">jasonlewicki</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jimpo">jimpo</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jharvell">jharvell</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ius">ius</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jhenninger">jhenninger</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ethernomad">ethernomad</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/haight6716">haight6716</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/lian">lian</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/jyap808">jyap808</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/juscamarena">juscamarena</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/runn1ng">runn1ng</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/kewde">kewde</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/KibbledJiveElkZoo">KibbledJiveElkZoo</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/KrzysiekJ">KrzysiekJ</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/coinables">coinables</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/L2G">L2G</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/larsr">larsr</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/lukem512">lukem512</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/GamerSg">GamerSg</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/zauguin">zauguin</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mm-s">mm-s</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/marijnfs">marijnfs</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/murtyjones">murtyjones</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/MathyV">MathyV</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pastly">pastly</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/matthias-g">matthias-g</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/meeh420">meeh420</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/TripleSpeeder">TripleSpeeder</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/bitstein">bitstein</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/midnightmagic">midnightmagic</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/mcassano">mcassano</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/askmike">askmike</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Mikerah">Mikerah</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/msva">msva</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Har01d">Har01d</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ibno2">ibno2</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/TierNolan">TierNolan</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/lano1106">lano1106</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/xkpb">xkpb</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/patvarilly">patvarilly</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/veqtrus">veqtrus</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/peterjosling">peterjosling</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/petterreinholdtsen">petterreinholdtsen</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/khorben">khorben</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/pra85">pra85</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/tuladhar">tuladhar</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Rav3nPL">Rav3nPL</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ReneNyffenegger">ReneNyffenegger</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/rvelhote">rvelhote</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/richardkiss">richardkiss</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/94m3k1n9">94m3k1n9</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Nothing4You">Nothing4You</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/robmcl4">robmcl4</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/rktoomey">rktoomey</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/rubensayshi">rubensayshi</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ryan52">ryan52</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ryanxcharles">ryanxcharles</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/saivann">Saïvann Carignan</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/ghemawat">ghemawat</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/activescott">activescott</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/nvmd">nvmd</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sevastos">sevastos</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/shanew">shanew</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/shigeya">shigeya</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/simondlr">simondlr</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/madeo">madeo</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Need4Video">Need4Video</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Sjors">Sjors</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/czzarr">czzarr</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/glondu">glondu</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/scmorse">scmorse</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/sigwo">sigwo</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/stevendlander">stevendlander</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/itoffshore">itoffshore</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/Delta1977">Delta1977</a></div>
+      <div>(1)</div>
+    </div>
+    
+    <div>
+      <div><a href="https://github.com/34ro">34ro</a></div>
+      <div>(1)</div>
+    </div>
+    
+  </div>
+</section>
+
+<h2 id="more">More free software projects</h2>
+
+<p>
+
+Want to contribute to a different project?
+
+You can choose a project to contribute to by answering a few <a href="http://whatcanidoforbitcoin.xyz/">questions about your skills</a>.</p>
+
+<ul class="devprojectlist">
+  <li><a href="https://github.com/etotheipi/BitcoinArmory">Armory</a> - A wallet with enhanced security features, written in C++.</li>
+  <li><a href="https://github.com/luke-jr/bfgminer">BFGMiner</a> - A modular miner, written in C.</li>
+  <li><a href="https://github.com/bitcoin-wallet/bitcoin-wallet">Bitcoin Wallet</a> - A SPV wallet for Android and Blackberry, written in Java.</li>
+  <li><a href="https://github.com/bitcoinj/bitcoinj">bitcoinj</a> - A library for SPV wallets, written in Java.</li>
+  <li><a href="https://github.com/btcsuite/btcd">btcd</a> - A full node, written in Go.</li>
+  <li><a href="https://github.com/btcsuite/btcwallet">btcwallet</a> - A hierarchical deterministic wallet daemon, written in Go.</li>
+  <li><a href="https://bitbucket.org/ckolivas/ckpool">ckpool</a> - A fast mining pool server application, written in C.</li>
+  <li><a href="https://github.com/spesmilo/electrum">Electrum</a> - A fast server-trusting wallet, written in Python.</li>
+  <li><a href="https://github.com/luke-jr/eloipool">Eloipool</a> - A fast mining pool server application, written in Python.</li>
+  <li><a href="https://github.com/haskoin/haskoin">Haskoin</a> - An implementation of the Bitcoin protocol, written in Haskell.</li>
+  <li><a href="https://github.com/libbitcoin/libbitcoin">Libbitcoin</a> - A cross-platform development toolkit, written in C++.</li>
+  <li><a href="https://github.com/libbitcoin/libbitcoin-server/">Libbitcoin Server</a> - A full node and query server, built on libbitcoin.</li>
+  <li><a href="https://github.com/libbitcoin/libbitcoin-explorer">Libbitcoin Explorer</a> - A command line tool, built on libbitcoin.</li>
+  <li><a href="https://github.com/bitcoin/libblkmaker">Libblkmaker</a> - A client library for the getblocktemplate mining protocol, written in C.</li>
+  <li><a href="https://github.com/MetacoSA/NBitcoin">NBitcoin</a> - A cross-platform library, written in C#.</li>
+  <li><a href="https://github.com/jgarzik/picocoin">picocoin</a> - A tiny library with lightweight client and utilities, written in C.</li>
+  <li><a href="https://github.com/petertodd/python-bitcoinlib">python-bitcoinlib</a> - A library for structures and protocols, written in Python.</li>
+  <li><a href="https://github.com/luke-jr/python-blkmaker">Python Blkmaker</a> - A client library for the getblocktemplate mining protocol, written in Python.</li>
+  <li class="more"><a onclick="librariesShow(event)" ontouchstart="librariesShow(event);" class="link-js"><span class="fa fa-caret-down"></span> Show more...</a></li>
+</ul>
+
+
+  <script src="/js/devsearch.js"></script>
+
+
+</div>
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/bitcoin-core/about-site">About</a>
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a><br>
+Bitcoin Core pages on Bitcoin.org are <a
+href="/en/bitcoin-core/about-site">maintained separately</a> from the
+rest of the site.
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  <script src="/js/bitcoin-core.js"></script>
+
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

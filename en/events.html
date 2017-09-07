@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Conferences and events - Bitcoin</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+</head>
+
+<body>
+
+  
+
+<div class="donation-container">
+  <div class="donation-text">
+    <p>
+      Bitcoin.org is a community funded project, donations are appreciated and used to improve the website.
+    </p>
+    <button type="button" class="donation-btn" onclick="openDonationModal()">
+      Make a donation
+    </button>
+  </div>
+  <button type="button" class="donation-visibility-toggle" onclick="toggleDonationBanner()">
+    Bitcoin.org needs your support!
+  </button>
+</div>
+
+<div
+  id="donation-modal"
+  style="display: none"
+  class="donation-modal hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Bitcoin.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"
+        target="_blank">
+        1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE
+      </a>
+    </div>
+    <div class="modal-body bg-white" style="overflow-y:hidden;text-align: center;">
+      <div>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+      </div>
+
+      <div>
+        <input
+          style="margin-right: 15px"
+          type="text"
+          placeholder="Or custom amount? (BTC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/acara">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/begivenheder">Dansk</a></li>
+        
+        
+          <li><a href="/de/events">Deutsch</a></li>
+        
+        
+          <li><a href="/en/events" class="active">English</a></li>
+        
+        
+          <li><a href="/es/eventos">Español</a></li>
+        
+        
+          <li><a href="/fr/evenements">Français</a></li>
+        
+        
+          <li><a href="/it/eventi">Italiano</a></li>
+        
+        
+          <li><a href="/hu/rendezvenyek">Magyar</a></li>
+        
+        
+          <li><a href="/nl/evenementen">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/wydarzenia">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/eventos">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/evenimente">Română</a></li>
+        
+        
+          <li><a href="/sl/dogodki">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/evenemang">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/etkinlikler">Türkçe</a></li>
+        
+        
+          <li><a href="/el/events">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/events">български</a></li>
+        
+        
+          <li><a href="/ru/events">Русский</a></li>
+        
+        
+          <li><a href="/uk/events">Українська</a></li>
+        
+        
+          <li><a href="/ar/events">العربية</a></li>
+        
+        
+          <li><a href="/fa/events">فارسی</a></li>
+        
+        
+          <li><a href="/hi/events">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/events">한국의</a></li>
+        
+        
+          <li><a href="/ja/events">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/events">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/events">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+
+<a class="logo" href="/en/"><img src="/img/icons/logotop.svg" alt="Bitcoin"></a>
+
+  
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/acara">Bahasa Indonesia</option>
+    
+          <option value="/da/begivenheder">Dansk</option>
+    
+          <option value="/de/events">Deutsch</option>
+    
+          <option value="/en/events" selected="selected">English</option>
+    
+          <option value="/es/eventos">Español</option>
+    
+          <option value="/fr/evenements">Français</option>
+    
+          <option value="/it/eventi">Italiano</option>
+    
+          <option value="/hu/rendezvenyek">Magyar</option>
+    
+          <option value="/nl/evenementen">Nederlands</option>
+    
+          <option value="/pl/wydarzenia">Polski</option>
+    
+          <option value="/pt_BR/eventos">Português Brasil</option>
+    
+          <option value="/ro/evenimente">Română</option>
+    
+          <option value="/sl/dogodki">Slovenščina</option>
+    
+          <option value="/sv/evenemang">Svenska</option>
+    
+          <option value="/tr/etkinlikler">Türkçe</option>
+    
+          <option value="/el/events">Ελληνικά</option>
+    
+          <option value="/bg/events">български</option>
+    
+          <option value="/ru/events">Русский</option>
+    
+          <option value="/uk/events">Українська</option>
+    
+          <option value="/ar/events">العربية</option>
+    
+          <option value="/fa/events">فارسی</option>
+    
+          <option value="/hi/events">हिन्दी</option>
+    
+          <option value="/ko/events">한국의</option>
+    
+          <option value="/ja/events">日本語</option>
+    
+          <option value="/zh_CN/events">简体中文</option>
+    
+          <option value="/zh_TW/events">繁體中文</option>
+    
+</select></div>
+
+  
+
+<ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Introduction</a>
+    <ul>
+      <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
+      <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
+      <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+      <li><a href="/en/getting-started">Getting started</a></li>
+      <li><a href="/en/how-it-works">How it works</a></li>
+      <li><a href="/en/you-need-to-know">You need to know</a></li>
+    </ul>
+  </li>
+  <li><a>Resources</a>
+    <ul>
+      <li><a href="/en/resources">Resources</a>
+      <li><a href="/en/exchanges">Exchanges</a></li>
+      <li><a href="/en/community">Community</a></li>
+      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a href="/en/vocabulary">Vocabulary</a></li>
+      <li class="active"><a href="/en/events">Events</a></li>
+      
+        <li><a href="/en/bitcoin-core/">Bitcoin Core</a></li>
+      
+    </ul>
+  </li>
+  <li><a href="/en/innovation">Innovation</a></li>
+  <li><a>Participate</a>
+    <ul>
+      <li><a href="/en/support-bitcoin">Support Bitcoin</a>
+      <li><a href="/en/buy">Buy Bitcoin</a></li>
+      <li><a href="/en/full-node">Running a full node</a></li>
+      <li><a href="/en/development">Development</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/faq">FAQ</a></li>
+</ul>
+
+</div></div>
+
+<div class="body">
+  
+
+<div class="breadcrumbs">
+  
+</div>
+
+  
+
+<div id="content" class="content">
+  
+<!-- Note: this file is built non-deterministically -->
+<link rel="alternate" type="application/rss+xml" href="/en/rss/events.rss" title="Bitcoin conferences and events">
+<h1>Conferences and events<a type="application/rss+xml" href="/en/rss/events.rss"><img src="/img/icons/icon_rss.svg" alt="rss" class="rssicon"></a></h1>
+<p class="summary">Find events, conferences and meetups all over the world.</p>
+
+<link rel="stylesheet" type="text/css" href="/js/leaflet/leaflet.css" />
+<link rel="stylesheet" type="text/css" href="/js/leaflet-markercluster/MarkerCluster.css" />
+<link rel="stylesheet" type="text/css" href="/js/leaflet-markercluster/MarkerCluster.Default.css" />
+<script src="/js/leaflet/leaflet.js"></script>
+<script src="/js/leaflet-markercluster/leaflet.markercluster.js"></script>
+<div id="eventmap" class="eventmap"></div>
+<div id="eventdata" class="eventdata">
+
+
+<div data-lat="59.31478190000001" data-lon="18.1093409"><b><a href="https://stockholm.blockchainconf.world/en">Blockchain &amp; Bitcoin Conference Stockholm</a></b><br>2017-09-07<br>Elite Hotel Marina Tower<br>Saltsjoqvarns kaj 25, 131 71 Nacka<br>Stockholm, Sweden</div>
+
+<div data-lat="48.8551984" data-lon="2.2917588"><b><a href="https://breaking-bitcoin.com/">Breaking Bitcoin Conference</a></b><br>2017-09-09<br>16 Rue Jean Rey, 75015<br>16 Rue Jean Rey<br>Paris, France</div>
+
+<div data-lat="37.7862856" data-lon="-122.4013086"><b><a href="https://www.coinaltsfundsymposium.com/">CoinAlts Fund Symposium</a></b><br>2017-09-14<br>The St. Regis San Francisco<br>125 3rd Street<br>San Francisco, United States</div>
+
+<div data-lat="55.71300309999999" data-lon="37.721712"><b><a href="https://icoevent.ru/en">ICO Event Moscow</a></b><br>2017-09-20<br>Technopolis Moscow<br>Volgogradskiy dist. 42<br>Moscow, Russia</div>
+
+<div data-lat="50.435747" data-lon="30.490125"><b><a href="https://blockchainua.com/en">BlockchainUA Conference Kyiv</a></b><br>2017-09-22<br>Conference Hall Oasis<br>Vasylia Lypkivskoho St, 1А<br>Kiev, Ukraine</div>
+
+<div data-lat="51.517444" data-lon="-0.09748599999999999"><b><a href="http://london.keynote.ae/">World Blockchain Forum: Investments &amp; ICOs</a></b><br>2017-09-25<br>St Paul&apos;s - 200 Aldersgate Conference Centre<br>St. Pauls 200 Aldersgate<br>London, United Kingdom</div>
+
+<div data-lat="59.96379719999999" data-lon="30.2894783"><b><a href="https://blockchain-life.com">Blockchain Life 2017</a></b><br>2017-09-26<br>Petrocongress<br>Lodeynopolskaya st. 5/2<br>Saint-Petersburg, Russia</div>
+
+<div data-lat="50.4501" data-lon="30.5234"><b><a href="https://kiev.blockchainconf.world/en">Blockchain &amp; Bitcoin Conference Kiev</a></b><br>2017-10-12<br>Vsi. Svoi | Lokatsia<br>Desytinnaya St. 12<br>Kiev, Ukraine</div>
+
+<div data-lat="31.19147" data-lon="121.4735558"><b><a href="http://www.gfbccs.com">Global Fintech &amp; Blockchain China Summit 2017</a></b><br>2017-10-26<br>Shanghai Marriott Hotel Riverside<br>No. 99 Jiangbin Road,Huangpu District<br>Shanghai, China</div>
+
+<div data-lat="50.8204134" data-lon="-0.135529"><b><a href="http://bitbrighton.org/">BitBrighton - Crypto/Bitcoin Event</a></b><br>2017-10-28<br>Latest Music Bar<br>14 - 17 Manchester Street Brighton BN2 1TF<br>Brighton, United Kingdom</div>
+
+<div data-lat="30.3766535" data-lon="-97.76327510000002"><b><a href="http://texasbitcoinconference.com/conferences">Texas Bitcoin Conference III</a></b><br>2017-10-28<br>Canyon View Event Center<br>4800 Spicewood Springs Rd<br>Austin, United States</div>
+
+<div data-lat="37.800247" data-lon="-122.4010514"><b><a href="http://blockchain.withthebest.com">Blockchain WithTheBest</a></b><br>2017-11-15<br>Online Conference<br>950 Battery Street, 94111<br>San Francisco, United States</div>
+
+<div data-lat="52.4798169" data-lon="-1.8979607"><b><a href="http://bitbrum.org">BitBrum</a></b><br>2017-11-19<br>The Studio.<br>7 Cannon St. Birmingham. B2 5EP<br>Birmingham, United Kingdom</div>
+
+<div data-lat="37.4046706" data-lon="-121.975247"><b><a href="http://blockchain-expo.com/northamerica/">Blockchain Expo</a></b><br>2017-11-29<br>Santa Clara Convention Center<br>5001 Great America Pkwy, Santa Clara, 95054<br>Santa Clara, United States</div>
+
+<div data-lat="1.2709259" data-lon="103.8634087"><b><a href="https://coinsbank.com/cruise-asia">Blockchain Cruise Asia 2018</a></b><br>2018-01-15<br>Mariner of The Seas<br>61 Marina Coastal Drive, 018947<br>Singapore, Singapore</div>
+
+<div data-lat="32.9217399" data-lon="-97.0186542"><b><a href="https://www.bitcoinsuperconference.com/">The Bitcoin, Ethereum, And Blockchain Superconference</a></b><br>2018-02-16<br>Dallas/Fort Worth Airport Marriott<br>8440 Freeport Pkwy. 75063<br>Irving, United States</div>
+
+
+</div>
+<script src="/js/events.js"></script>
+<h2 id="upcoming">Upcoming events and conferences</h2>
+<div class="listtable eventtable">
+
+  <div><div>2017-09-07</div><div><a href="https://stockholm.blockchainconf.world/en">Blockchain &amp; Bitcoin Conference Stockholm</a></div><div>Stockholm, Sweden</div></div>
+
+  <div><div>2017-09-09</div><div><a href="https://breaking-bitcoin.com/">Breaking Bitcoin Conference</a></div><div>Paris, France</div></div>
+
+  <div><div>2017-09-12</div><div><a href="http://www.adisummit.com/">The Advanced Digital Innovation Summit</a></div><div>Toronto, Canada</div></div>
+
+  <div><div>2017-09-14</div><div><a href="https://www.coinaltsfundsymposium.com/">CoinAlts Fund Symposium</a></div><div>San Francisco, United States</div></div>
+
+  <div><div>2017-09-20</div><div><a href="https://icoevent.ru/en">ICO Event Moscow</a></div><div>Moscow, Russia</div></div>
+
+  <div><div>2017-09-22</div><div><a href="https://blockchainua.com/en">BlockchainUA Conference Kyiv</a></div><div>Kiev, Ukraine</div></div>
+
+  <div><div>2017-09-25</div><div><a href="http://london.keynote.ae/">World Blockchain Forum: Investments &amp; ICOs</a></div><div>London, United Kingdom</div></div>
+
+  <div><div>2017-09-26</div><div><a href="https://blockchain-life.com">Blockchain Life 2017</a></div><div>Saint-Petersburg, Russia</div></div>
+
+  <div><div>2017-10-12</div><div><a href="https://kiev.blockchainconf.world/en">Blockchain &amp; Bitcoin Conference Kiev</a></div><div>Kiev, Ukraine</div></div>
+
+  <div><div>2017-10-26</div><div><a href="http://www.gfbccs.com">Global Fintech &amp; Blockchain China Summit 2017</a></div><div>Shanghai, China</div></div>
+
+  <div><div>2017-10-28</div><div><a href="http://bitbrighton.org/">BitBrighton - Crypto/Bitcoin Event</a></div><div>Brighton, United Kingdom</div></div>
+
+  <div><div>2017-10-28</div><div><a href="http://texasbitcoinconference.com/conferences">Texas Bitcoin Conference III</a></div><div>Austin, United States</div></div>
+
+  <div><div>2017-11-15</div><div><a href="http://blockchain.withthebest.com">Blockchain WithTheBest</a></div><div>San Francisco, United States</div></div>
+
+  <div><div>2017-11-19</div><div><a href="http://bitbrum.org">BitBrum</a></div><div>Birmingham, United Kingdom</div></div>
+
+  <div><div>2017-11-29</div><div><a href="http://blockchain-expo.com/northamerica/">Blockchain Expo</a></div><div>Santa Clara, United States</div></div>
+
+  <div><div>2018-01-15</div><div><a href="https://coinsbank.com/cruise-asia">Blockchain Cruise Asia 2018</a></div><div>Singapore, Singapore</div></div>
+
+  <div><div>2018-02-16</div><div><a href="https://www.bitcoinsuperconference.com/">The Bitcoin, Ethereum, And Blockchain Superconference</a></div><div>Irving, United States</div></div>
+
+  <span><a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new?title=New%20event&amp;body=%20%20%20%20-%20date%3A%20YYYY-MM-DD%0A%20%20%20%20%20%20title%3A%20%22%22%0A%20%20%20%20%20%20venue%3A%20%22%22%0A%20%20%20%20%20%20address%3A%20%22%22%0A%20%20%20%20%20%20city%3A%20%22%22%0A%20%20%20%20%20%20country%3A%20%22%22%0A%20%20%20%20%20%20link%3A%20%22%22">Submit an event</a></span>
+</div>
+
+<p><a href="http://bitcoin.meetup.com/">Bitcoin meetup groups</a></p>
+<p><a href="https://bitcointalk.org/index.php?board=86.0">Bitcoin meetups on BitcoinTalk</a></p>
+<p><a href="https://en.bitcoin.it/wiki/Meetups">Bitcoin meetups on the Wiki</a></p>
+
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/press">Press</a>
+  <a href="/en/about-us">About bitcoin.org</a>
+  <a href="/en/blog">Blog</a>
+</div>
+
+    
+
+<div class="footersponsor">
+  <!--<div><span>A community website sponsored by</span> <a href="https://bitcoinfoundation.org/"><img src="/img/brand/bitcoinfoundation.png" alt="Bitcoin Foundation"></a></div>-->
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a></div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

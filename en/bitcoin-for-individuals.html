@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Bitcoin for Individuals - Bitcoin</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+</head>
+
+<body>
+
+  
+
+<div class="donation-container">
+  <div class="donation-text">
+    <p>
+      Bitcoin.org is a community funded project, donations are appreciated and used to improve the website.
+    </p>
+    <button type="button" class="donation-btn" onclick="openDonationModal()">
+      Make a donation
+    </button>
+  </div>
+  <button type="button" class="donation-visibility-toggle" onclick="toggleDonationBanner()">
+    Bitcoin.org needs your support!
+  </button>
+</div>
+
+<div
+  id="donation-modal"
+  style="display: none"
+  class="donation-modal hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Bitcoin.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"
+        target="_blank">
+        1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE
+      </a>
+    </div>
+    <div class="modal-body bg-white" style="overflow-y:hidden;text-align: center;">
+      <div>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+      </div>
+
+      <div>
+        <input
+          style="margin-right: 15px"
+          type="text"
+          placeholder="Or custom amount? (BTC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/bitcoin-untuk-perorangan">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/bitcoin-for-enkeltpersoner">Dansk</a></li>
+        
+        
+          <li><a href="/de/bitcoin-fuer-einzelpersonen">Deutsch</a></li>
+        
+        
+          <li><a href="/en/bitcoin-for-individuals" class="active">English</a></li>
+        
+        
+          <li><a href="/es/bitcoin-para-personas">Español</a></li>
+        
+        
+          <li><a href="/fr/bitcoin-pour-particuliers">Français</a></li>
+        
+        
+          <li><a href="/it/bitcoin-per-privati">Italiano</a></li>
+        
+        
+          <li><a href="/hu/bitcoin-maganszemelyeknek">Magyar</a></li>
+        
+        
+          <li><a href="/nl/bitcoin-voor-particulieren">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/bitcoin-dla-osob-fizycznych">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/bitcoin-para-pessoas">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/bitcoin-pentru-persoane-fizice">Română</a></li>
+        
+        
+          <li><a href="/sl/bitcoin-za-posameznike">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/bitcoin-for-privatpersoner">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/bireyler-icin-bitcoin">Türkçe</a></li>
+        
+        
+          <li><a href="/el/bitcoin-for-individuals">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/bitcoin-for-individuals">български</a></li>
+        
+        
+          <li><a href="/ru/bitcoin-for-individuals">Русский</a></li>
+        
+        
+          <li><a href="/uk/bitcoin-for-individuals">Українська</a></li>
+        
+        
+          <li><a href="/ar/bitcoin-for-individuals">العربية</a></li>
+        
+        
+          <li><a href="/fa/bitcoin-for-individuals">فارسی</a></li>
+        
+        
+          <li><a href="/hi/bitcoin-for-individuals">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/bitcoin-for-individuals">한국의</a></li>
+        
+        
+          <li><a href="/ja/bitcoin-for-individuals">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/bitcoin-for-individuals">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/bitcoin-for-individuals">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+
+<a class="logo" href="/en/"><img src="/img/icons/logotop.svg" alt="Bitcoin"></a>
+
+  
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/bitcoin-untuk-perorangan">Bahasa Indonesia</option>
+    
+          <option value="/da/bitcoin-for-enkeltpersoner">Dansk</option>
+    
+          <option value="/de/bitcoin-fuer-einzelpersonen">Deutsch</option>
+    
+          <option value="/en/bitcoin-for-individuals" selected="selected">English</option>
+    
+          <option value="/es/bitcoin-para-personas">Español</option>
+    
+          <option value="/fr/bitcoin-pour-particuliers">Français</option>
+    
+          <option value="/it/bitcoin-per-privati">Italiano</option>
+    
+          <option value="/hu/bitcoin-maganszemelyeknek">Magyar</option>
+    
+          <option value="/nl/bitcoin-voor-particulieren">Nederlands</option>
+    
+          <option value="/pl/bitcoin-dla-osob-fizycznych">Polski</option>
+    
+          <option value="/pt_BR/bitcoin-para-pessoas">Português Brasil</option>
+    
+          <option value="/ro/bitcoin-pentru-persoane-fizice">Română</option>
+    
+          <option value="/sl/bitcoin-za-posameznike">Slovenščina</option>
+    
+          <option value="/sv/bitcoin-for-privatpersoner">Svenska</option>
+    
+          <option value="/tr/bireyler-icin-bitcoin">Türkçe</option>
+    
+          <option value="/el/bitcoin-for-individuals">Ελληνικά</option>
+    
+          <option value="/bg/bitcoin-for-individuals">български</option>
+    
+          <option value="/ru/bitcoin-for-individuals">Русский</option>
+    
+          <option value="/uk/bitcoin-for-individuals">Українська</option>
+    
+          <option value="/ar/bitcoin-for-individuals">العربية</option>
+    
+          <option value="/fa/bitcoin-for-individuals">فارسی</option>
+    
+          <option value="/hi/bitcoin-for-individuals">हिन्दी</option>
+    
+          <option value="/ko/bitcoin-for-individuals">한국의</option>
+    
+          <option value="/ja/bitcoin-for-individuals">日本語</option>
+    
+          <option value="/zh_CN/bitcoin-for-individuals">简体中文</option>
+    
+          <option value="/zh_TW/bitcoin-for-individuals">繁體中文</option>
+    
+</select></div>
+
+  
+
+<ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Introduction</a>
+    <ul>
+      <li class="active"><a href="/en/bitcoin-for-individuals">Individuals</a></li>
+      <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
+      <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+      <li><a href="/en/getting-started">Getting started</a></li>
+      <li><a href="/en/how-it-works">How it works</a></li>
+      <li><a href="/en/you-need-to-know">You need to know</a></li>
+    </ul>
+  </li>
+  <li><a>Resources</a>
+    <ul>
+      <li><a href="/en/resources">Resources</a>
+      <li><a href="/en/exchanges">Exchanges</a></li>
+      <li><a href="/en/community">Community</a></li>
+      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a href="/en/vocabulary">Vocabulary</a></li>
+      <li><a href="/en/events">Events</a></li>
+      
+        <li><a href="/en/bitcoin-core/">Bitcoin Core</a></li>
+      
+    </ul>
+  </li>
+  <li><a href="/en/innovation">Innovation</a></li>
+  <li><a>Participate</a>
+    <ul>
+      <li><a href="/en/support-bitcoin">Support Bitcoin</a>
+      <li><a href="/en/buy">Buy Bitcoin</a></li>
+      <li><a href="/en/full-node">Running a full node</a></li>
+      <li><a href="/en/development">Development</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/faq">FAQ</a></li>
+</ul>
+
+</div></div>
+
+<div class="body">
+  
+
+<div class="breadcrumbs">
+  
+</div>
+
+  
+
+<div id="content" class="content">
+  <h1>Bitcoin for Individuals</h1>
+<p class="summary">Bitcoin is the simplest way to exchange money at very low cost.</p>
+
+<h2 id="mobile"><img class="titleicon" src="/img/icons/ico_mobile.svg" alt="Icon"/>Mobile payments made easy</h2>
+<p>Bitcoin on mobiles allows you to pay with a simple two step scan-and-pay. No need to sign up, swipe your card, type a PIN, or sign anything. All you need to receive Bitcoin payments is to display the QR code in your Bitcoin wallet app and let your friend scan your mobile, or touch the two phones together (using NFC radio technology).</p>
+
+<h2 id="secure"><img class="titleicon" src="/img/icons/ico_lock.svg" alt="Icon" />Security and control over your money</h2>
+<p>Bitcoin transactions are secured by military grade cryptography. Nobody can charge you money or make a payment on your behalf. So long as you take the required steps to <a href="/en/secure-your-wallet">protect your wallet</a>, Bitcoin can give you control over your money and a strong level of protection against many types of fraud.</p>
+
+<h2 id="simple"><img class="titleicon" src="/img/icons/ico_simple.svg" alt="Icon" />Works everywhere, anytime</h2>
+<p>Just like with email, you don't need to ask your family to use the same software or the same service providers. Just let them stick to their own favorites. No problem there; they are all compatible as they use the same open technology. The Bitcoin network never sleeps, even on holidays!</p>
+
+<h2 id="international"><img class="titleicon" src="/img/icons/ico_international.svg" alt="Icon" />Fast international payments</h2>
+<p>Sending bitcoins across borders is as easy as sending them across the street. There are no banks to make you wait three business days, no extra fees for making an international transfer, and no special limitations on the minimum or maximum amount you can send.
+</p>
+
+<h2 id="lowfee"><img class="titleicon" src="/img/icons/ico_lowfee.svg" alt="Icon" />Choose your own fees</h2>
+<p>There is no fee to receive bitcoins, and many wallets let you control how large a fee to pay when spending. Most wallets have reasonable default fees, and higher fees can encourage faster <a href="/en/you-need-to-know#instant">confirmation</a> of your transactions. Fees are unrelated to the amount transferred, so it's possible to send 100,000 bitcoins for the same fee it costs to send 1 bitcoin.
+</p>
+
+<h2 id="anonymous"><img class="titleicon" src="/img/icons/ico_anon.svg" alt="Icon" />Protect your identity</h2>
+<p>With Bitcoin, there is no credit card number that some malicious actor can collect in order to impersonate you. In fact, it is even possible to send a payment without revealing your identity, almost like with physical money. You should however take note that some effort can be required to <a href="/en/protect-your-privacy">protect your privacy</a>.</p>
+
+<div class="mainbutton"><a href="/en/getting-started"><img src="/img/icons/but_bitcoin.svg" alt="icon">Get started with Bitcoin</a></div>
+
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/press">Press</a>
+  <a href="/en/about-us">About bitcoin.org</a>
+  <a href="/en/blog">Blog</a>
+</div>
+
+    
+
+<div class="footersponsor">
+  <!--<div><span>A community website sponsored by</span> <a href="https://bitcoinfoundation.org/"><img src="/img/brand/bitcoinfoundation.png" alt="Bitcoin Foundation"></a></div>-->
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a></div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

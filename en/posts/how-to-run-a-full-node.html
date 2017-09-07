@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Updated Instructions: How to Run a Full Node</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+</head>
+
+<body>
+
+  
+
+<div class="donation-container">
+  <div class="donation-text">
+    <p>
+      Bitcoin.org is a community funded project, donations are appreciated and used to improve the website.
+    </p>
+    <button type="button" class="donation-btn" onclick="openDonationModal()">
+      Make a donation
+    </button>
+  </div>
+  <button type="button" class="donation-visibility-toggle" onclick="toggleDonationBanner()">
+    Bitcoin.org needs your support!
+  </button>
+</div>
+
+<div
+  id="donation-modal"
+  style="display: none"
+  class="donation-modal hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Bitcoin.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"
+        target="_blank">
+        1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE
+      </a>
+    </div>
+    <div class="modal-body bg-white" style="overflow-y:hidden;text-align: center;">
+      <div>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+      </div>
+
+      <div>
+        <input
+          style="margin-right: 15px"
+          type="text"
+          placeholder="Or custom amount? (BTC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/">Dansk</a></li>
+        
+        
+          <li><a href="/de/">Deutsch</a></li>
+        
+        
+          <li><a href="/en/" class="active">English</a></li>
+        
+        
+          <li><a href="/es/">Español</a></li>
+        
+        
+          <li><a href="/fr/">Français</a></li>
+        
+        
+          <li><a href="/it/">Italiano</a></li>
+        
+        
+          <li><a href="/hu/">Magyar</a></li>
+        
+        
+          <li><a href="/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/">Română</a></li>
+        
+        
+          <li><a href="/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/">български</a></li>
+        
+        
+          <li><a href="/ru/">Русский</a></li>
+        
+        
+          <li><a href="/uk/">Українська</a></li>
+        
+        
+          <li><a href="/ar/">العربية</a></li>
+        
+        
+          <li><a href="/fa/">فارسی</a></li>
+        
+        
+          <li><a href="/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/">한국의</a></li>
+        
+        
+          <li><a href="/ja/">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+
+<a class="logo" href="/en/"><img src="/img/icons/logotop.svg" alt="Bitcoin"></a>
+
+  
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/">Bahasa Indonesia</option>
+    
+          <option value="/da/">Dansk</option>
+    
+          <option value="/de/">Deutsch</option>
+    
+          <option value="/en/" selected="selected">English</option>
+    
+          <option value="/es/">Español</option>
+    
+          <option value="/fr/">Français</option>
+    
+          <option value="/it/">Italiano</option>
+    
+          <option value="/hu/">Magyar</option>
+    
+          <option value="/nl/">Nederlands</option>
+    
+          <option value="/pl/">Polski</option>
+    
+          <option value="/pt_BR/">Português Brasil</option>
+    
+          <option value="/ro/">Română</option>
+    
+          <option value="/sl/">Slovenščina</option>
+    
+          <option value="/sv/">Svenska</option>
+    
+          <option value="/tr/">Türkçe</option>
+    
+          <option value="/el/">Ελληνικά</option>
+    
+          <option value="/bg/">български</option>
+    
+          <option value="/ru/">Русский</option>
+    
+          <option value="/uk/">Українська</option>
+    
+          <option value="/ar/">العربية</option>
+    
+          <option value="/fa/">فارسی</option>
+    
+          <option value="/hi/">हिन्दी</option>
+    
+          <option value="/ko/">한국의</option>
+    
+          <option value="/ja/">日本語</option>
+    
+          <option value="/zh_CN/">简体中文</option>
+    
+          <option value="/zh_TW/">繁體中文</option>
+    
+</select></div>
+
+  
+
+<ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Introduction</a>
+    <ul>
+      <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
+      <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
+      <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+      <li><a href="/en/getting-started">Getting started</a></li>
+      <li><a href="/en/how-it-works">How it works</a></li>
+      <li><a href="/en/you-need-to-know">You need to know</a></li>
+    </ul>
+  </li>
+  <li><a>Resources</a>
+    <ul>
+      <li><a href="/en/resources">Resources</a>
+      <li><a href="/en/exchanges">Exchanges</a></li>
+      <li><a href="/en/community">Community</a></li>
+      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a href="/en/vocabulary">Vocabulary</a></li>
+      <li><a href="/en/events">Events</a></li>
+      
+        <li><a href="/en/bitcoin-core/">Bitcoin Core</a></li>
+      
+    </ul>
+  </li>
+  <li><a href="/en/innovation">Innovation</a></li>
+  <li><a>Participate</a>
+    <ul>
+      <li><a href="/en/support-bitcoin">Support Bitcoin</a>
+      <li><a href="/en/buy">Buy Bitcoin</a></li>
+      <li><a href="/en/full-node">Running a full node</a></li>
+      <li><a href="/en/development">Development</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/faq">FAQ</a></li>
+</ul>
+
+</div></div>
+
+<div class="body">
+  
+
+<div class="breadcrumbs">
+  
+</div>
+
+  
+
+<div id="content" class="content">
+  <link rel="alternate" type="application/atom+xml" href="/en/rss/blog.xml" title="Bitcoin.org Site Blog">
+
+<div class="subhead-links"><a href="/en/blog">Blog home</a>
+| <a type="application/atom+xml" href="/en/rss/blog.xml"><img src="/img/icons/header_rss.svg" alt="rss" class="rssicon"> Subscribe to RSS feed</a>
+| <a href="https://github.com/bitcoin-dot-org/bitcoin.org/commits/master/_posts/2016-12-31-updated-instructions-full-node.md">Post history</a>
+| <a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new?body=Source%20File%3A%20_posts/2016-12-31-updated-instructions-full-node.md%0A%0A">Report issue</a></div>
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Updated Instructions: How to Run a Full Node</h1>
+  </header>
+
+  <article class="post-content">
+    <p class="center"><img src="/img/blog/free/how-to-run-a-full-bitcoin-node.png" alt="How to Run a Full Node" /></p>
+
+<p>Updated instructions for <a href="https://bitcoin.org/en/full-node">how to run a full node</a>
+as of version <strong>0.13.1</strong> are now available on Bitcoin.org. These instructions allow
+one to quickly get set up and running with a full node on the following
+operating systems:</p>
+
+<ul>
+  <li>
+    <p><a href="https://bitcoin.org/en/full-node#linux-instructions">Linux</a></p>
+  </li>
+  <li>
+    <p><a href="https://bitcoin.org/en/full-node#mac-os-x-instructions">MacOS</a></p>
+  </li>
+  <li>
+    <p><a href="https://bitcoin.org/en/full-node#windows-instructions">Windows</a></p>
+  </li>
+</ul>
+
+<p>In addition to the above operating systems, tips on <a href="https://bitcoin.org/en/full-node#network-configuration">how to configure a full
+bitcoin node for a local area network</a>
+and <a href="https://bitcoin.org/en/full-node#configuration-tuning">how to tweak the reference client configuration</a>
+are available.</p>
+
+<h2 id="why-is-running-a-full-bitcoin-node-important">Why is running a full bitcoin node important?</h2>
+<p>Full nodes help enforce the consensus rules of the Bitcoin network. When a full
+node client is running, it downloads every new block and every new transaction
+and checks them to make sure they are valid. Here are some examples of consensus
+rules, though there are many more:</p>
+
+<ul>
+  <li>
+    <p>Blocks may only <a href="https://en.bitcoin.it/wiki/Controlled_supply">create</a> a
+certain number of bitcoins.</p>
+  </li>
+  <li>
+    <p>Transactions must have correct signatures for the bitcoins being spent.</p>
+  </li>
+  <li>
+    <p>Transactions/blocks must be in the correct data format.</p>
+  </li>
+  <li>
+    <p>Within the <a href="https://en.bitcoin.it/wiki/Block_chain">block chain</a>, a transaction
+output cannot be double-spent.</p>
+  </li>
+</ul>
+
+<p><em>Read more about what a full node is, the consensus rules above and other
+incentives for supporting the network in the <a href="https://en.bitcoin.it/wiki/Full_node">Bitcoin Wiki</a>.</em></p>
+
+<h2 id="minimum-requirements">Minimum Requirements</h2>
+<p>Bitcoin Core full nodes have certain requirements. If you try running a node on
+weak hardware, it may work — but you’ll likely spend more time dealing with
+issues. If you can meet the following requirements, you’ll have an easy-to-use
+node.</p>
+
+<ul>
+  <li>
+    <p>Desktop or laptop hardware running recent versions of Windows, Mac OS X, or
+Linux.</p>
+  </li>
+  <li>
+    <p>125GB of free disk space (size of the blockchain plus room to grow)</p>
+  </li>
+  <li>
+    <p>2GB of memory (RAM)</p>
+  </li>
+  <li>
+    <p>A broadband Internet connection with upload speeds of at least 400 kilobits
+(50 kilobytes) per second</p>
+  </li>
+  <li>
+    <p>An unmetered connection, a connection with high upload limits, or a connection
+you regularly monitor to ensure it doesn’t exceed its upload limits. It’s
+common for full nodes on high-speed connections to use 200GB in uploads or more
+a month. Download usage is around 20GB/month, plus around an additional 100GB
+the first time you start your node.</p>
+  </li>
+  <li>
+    <p>6 hours/day that your full node can be left running. (You can do other things
+with your computer while running a full node.) More hours would be better, and
+best of all would be if you can run your node continuously.</p>
+  </li>
+</ul>
+
+<p><strong>Note:</strong> many operating systems today (Windows, Mac, and Linux) enter a low-power
+mode after the screensaver activates, slowing or halting network traffic. This
+is often the default setting on laptops and on all Mac OS X laptops and
+desktops. Check your screensaver settings and disable automatic “sleep” or
+“suspend” options to ensure you support the network whenever your computer is
+running.</p>
+
+<h2 id="what-to-do-if-you-need-help">What to do if you need help</h2>
+<p>Please seek out assistance in the <a href="https://bitcoin.org/en/community">community</a>
+if you need help setting up your full node correctly to handle high-value and
+privacy-sensitive tasks. Do your own diligence to ensure who you get help from
+is ethical, reputable and qualified to assist you.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>A special thanks goes to the contributors (in no preferential order) who have
+worked to improve this page over time:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/harding">David Harding</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/kevcooper">Kevin Cooper</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/drazisil">Joseph Becher</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Jorgeminator">Jorgeminator</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Gyomu">Gyomu</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/jonasschnelli">Jonas Schnelli</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/MarcoFalke">Marko Falke</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/cpmx">cpmx</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/anduck">anduck</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/dabura667">dabura667</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/seusher">seusher</a></p>
+  </li>
+</ul>
+
+<p><strong>Interested in getting involved?</strong></p>
+
+<p><a href="https://github.com/bitcoin-dot-org/bitcoin.org#how-to-participate">Learn how you can participate</a>.</p>
+
+  </article>
+
+  <p class="post-meta">Posted to the <a href="/en/blog">Bitcoin.org Site
+  Blog</a> on 31 December 2016  by <a href="https://github.com/wbnns">Will Binns</a>
+</p>
+
+</div>
+
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/press">Press</a>
+  <a href="/en/about-us">About bitcoin.org</a>
+  <a href="/en/blog">Blog</a>
+</div>
+
+    
+
+<div class="footersponsor">
+  <!--<div><span>A community website sponsored by</span> <a href="https://bitcoinfoundation.org/"><img src="/img/brand/bitcoinfoundation.png" alt="Bitcoin Foundation"></a></div>-->
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a></div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

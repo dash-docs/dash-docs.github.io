@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+
+<head>
+
+
+<link rel="stylesheet" href="/css/jquery-ui.min.css">
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Bitcoin version 0.4.0 released</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+
+
+
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery-ui.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/">Dansk</a></li>
+        
+        
+          <li><a href="/de/">Deutsch</a></li>
+        
+        
+          <li><a href="/en/" class="active">English</a></li>
+        
+        
+          <li><a href="/es/">Español</a></li>
+        
+        
+          <li><a href="/fr/">Français</a></li>
+        
+        
+          <li><a href="/it/">Italiano</a></li>
+        
+        
+          <li><a href="/hu/">Magyar</a></li>
+        
+        
+          <li><a href="/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/">Română</a></li>
+        
+        
+          <li><a href="/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/">български</a></li>
+        
+        
+          <li><a href="/ru/">Русский</a></li>
+        
+        
+          <li><a href="/uk/">Українська</a></li>
+        
+        
+          <li><a href="/ar/">العربية</a></li>
+        
+        
+          <li><a href="/fa/">فارسی</a></li>
+        
+        
+          <li><a href="/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/">한국의</a></li>
+        
+        
+          <li><a href="/ja/">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+    
+
+<a class="logo" href="/en/bitcoin-core/"><img src="/img/bitcoin-core/bitcoin-core.svg" alt="Bitcoin"></a>
+
+    
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/">Bahasa Indonesia</option>
+    
+          <option value="/da/">Dansk</option>
+    
+          <option value="/de/">Deutsch</option>
+    
+          <option value="/en/" selected="selected">English</option>
+    
+          <option value="/es/">Español</option>
+    
+          <option value="/fr/">Français</option>
+    
+          <option value="/it/">Italiano</option>
+    
+          <option value="/hu/">Magyar</option>
+    
+          <option value="/nl/">Nederlands</option>
+    
+          <option value="/pl/">Polski</option>
+    
+          <option value="/pt_BR/">Português Brasil</option>
+    
+          <option value="/ro/">Română</option>
+    
+          <option value="/sl/">Slovenščina</option>
+    
+          <option value="/sv/">Svenska</option>
+    
+          <option value="/tr/">Türkçe</option>
+    
+          <option value="/el/">Ελληνικά</option>
+    
+          <option value="/bg/">български</option>
+    
+          <option value="/ru/">Русский</option>
+    
+          <option value="/uk/">Українська</option>
+    
+          <option value="/ar/">العربية</option>
+    
+          <option value="/fa/">فارسی</option>
+    
+          <option value="/hi/">हिन्दी</option>
+    
+          <option value="/ko/">한국의</option>
+    
+          <option value="/ja/">日本語</option>
+    
+          <option value="/zh_CN/">简体中文</option>
+    
+          <option value="/zh_TW/">繁體中文</option>
+    
+</select></div>
+
+    
+
+<ul id="menusimple" class="menusimple menucore" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Features</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/features/">Overview</a></li>
+      <li><a href="/en/bitcoin-core/features/validation">Validation</a></li>
+      <li><a href="/en/bitcoin-core/features/privacy">Privacy</a></li>
+      <li><a href="/en/bitcoin-core/features/requirements">Requirements</a></li>
+      <li><a href="/en/bitcoin-core/features/user-interface">User Interface</a></li>
+      <li><a href="/en/bitcoin-core/features/network-support">Network Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/bitcoin-core/help">Get Help</a></li>
+  <li><a>Contribute</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/contribute/issues">Bug reports</a></li>
+      <li><a href="/en/development">Code</a></li>
+      <li><a href="/en/bitcoin-core/contribute/documentation">Documentation</a></li>
+      <li><a href="/en/bitcoin-core/contribute/translations">Translations</a></li>
+      <li><a href="/en/bitcoin-core/contribute/support">Tech Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/version-history">News</a></li>
+  <li><a href="/en/download">Download</a></li>
+</ul>
+
+  
+</div></div>
+
+<div class="body">
+  
+    
+
+<div class="breadcrumbs">
+  
+    
+      <a href="/en/">Bitcoin</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/bitcoin-core/">Core</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/version-history">News</a>
+        
+      &gt;
+    
+  
+    
+      
+          
+          0.4.0
+        
+    
+  
+</div>
+
+  
+  
+
+<div id="content" class="content">
+<div >
+  <link rel="alternate" type="application/rss+xml" href="/en/rss/releases.rss" title="Bitcoin Core releases">
+<div class="versiontext">
+  <h1>Bitcoin version 0.4.0 released<br><small>23 September 2011</small></h1>
+  <p><a href="http://sourceforge.net/mailarchive/message.php?msg_id=28132490">Full announcement (including signatures)</a></p>
+
+<p>Bitcoin version 0.4.0 is now available for download at:
+  <a href="http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.4.0/">http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.4.0/</a></p>
+
+<p>The main feature in this release is wallet private key encryption;
+you can set a passphrase that must be entered before sending coins.
+See below for more information; if you decide to encrypt your wallet,
+<strong>WRITE DOWN YOUR PASSPHRASE AND PUT IT IN A SECURE LOCATION</strong>. If you
+forget or lose your wallet passphrase, you lose your bitcoins.
+Previous versions of bitcoin are unable to read encrypted wallets,
+and will crash on startup if the wallet is encrypted.</p>
+
+<p>Also note: bitcoin version 0.4 uses a newer version of Berkeley DB
+(bdb version 4.8) than previous versions (bdb 4.7). If you upgrade
+to version 0.4 and then revert back to an earlier version of bitcoin
+the it may be unable to start because bdb 4.7 cannot read bdb 4.8
+“log” files.</p>
+
+<h2 id="notable-bug-fixes-from-version-0324">Notable bug fixes from version 0.3.24</h2>
+
+<ul>
+  <li>
+    <p>Fix several bitcoin-becomes-unresponsive bugs due to multithreading
+deadlocks.</p>
+  </li>
+  <li>
+    <p>Optimize database writes for large (lots of inputs) transactions
+(fixes a potential denial-of-service attack)</p>
+  </li>
+</ul>
+
+<h2 id="wallet-encryption">Wallet Encryption</h2>
+<p>Bitcoin supports native wallet encryption so that people who steal your
+wallet file don’t automatically get access to all of your Bitcoins.
+In order to enable this feature, chose “Encrypt Wallet” from the
+Options menu.  You will be prompted to enter a passphrase, which
+will be used as the key to encrypt your wallet and will be needed
+every time you wish to send Bitcoins.  If you lose this passphrase,
+you will lose access to spend all of the bitcoins in your wallet,
+no one, not even the Bitcoin developers can recover your Bitcoins.
+This means you are responsible for your own security, store your
+passphrase in a secure location and do not forget it.</p>
+
+<p>Remember that the encryption built into bitcoin only encrypts the
+actual keys which are required to send your bitcoins, not the full
+wallet.  This means that someone who steals your wallet file will
+be able to see all the addresses which belong to you, as well as the
+relevant transactions, you are only protected from someone spending
+your coins.</p>
+
+<p>It is recommended that you backup your wallet file before you
+encrypt your wallet.  To do this, close the Bitcoin client and
+copy the wallet.dat file from <code class="highlighter-rouge">~/.bitcoin/</code> on Linux, <code class="highlighter-rouge">/Users/(user
+name)/Library/Application Support/Bitcoin/</code> on Mac OSX, and <code class="highlighter-rouge">%APPDATA%/Bitcoin/</code>
+on Windows (that is <code class="highlighter-rouge">/Users/(user name)/AppData/Roaming/Bitcoin</code> on
+Windows Vista and 7 and <code class="highlighter-rouge">/Documents and Settings/(user name)/Application
+Data/Bitcoin</code> on Windows XP).  Once you have copied that file to a
+safe location, reopen the Bitcoin client and Encrypt your wallet.
+If everything goes fine, delete the backup and enjoy your encrypted
+wallet.  Note that once you encrypt your wallet, you will never be
+able to go back to a version of the Bitcoin client older than 0.4.</p>
+
+<p>Keep in mind that you are always responsible for your own security.
+All it takes is a slightly more advanced wallet-stealing trojan which
+installs a keylogger to steal your wallet passphrase as you enter it
+in addition to your wallet file and you have lost all your Bitcoins.
+Wallet encryption cannot keep you safe if you do not practice
+good security, such as running up-to-date antivirus software, only
+entering your wallet passphrase in the Bitcoin client and using the
+same passphrase only as your wallet passphrase.</p>
+
+<p>See the <code class="highlighter-rouge">doc/README</code> file in the bitcoin source for technical details
+of wallet encryption.</p>
+
+</div>
+<a href="/en/version-history">Go back to the version history</a>
+
+</div>
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/bitcoin-core/about-site">About</a>
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a><br>
+Bitcoin Core pages on Bitcoin.org are <a
+href="/en/bitcoin-core/about-site">maintained separately</a> from the
+rest of the site.
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  <script src="/js/bitcoin-core.js"></script>
+
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

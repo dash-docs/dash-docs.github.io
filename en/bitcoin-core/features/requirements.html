@@ -1,0 +1,594 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+
+<head>
+
+
+<link rel="stylesheet" href="/css/jquery-ui.min.css">
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Requirements And Warnings - Bitcoin Core</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+
+
+
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery-ui.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/">Dansk</a></li>
+        
+        
+          <li><a href="/de/">Deutsch</a></li>
+        
+        
+          <li><a href="/en/" class="active">English</a></li>
+        
+        
+          <li><a href="/es/">Español</a></li>
+        
+        
+          <li><a href="/fr/">Français</a></li>
+        
+        
+          <li><a href="/it/">Italiano</a></li>
+        
+        
+          <li><a href="/hu/">Magyar</a></li>
+        
+        
+          <li><a href="/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/">Română</a></li>
+        
+        
+          <li><a href="/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/">български</a></li>
+        
+        
+          <li><a href="/ru/">Русский</a></li>
+        
+        
+          <li><a href="/uk/">Українська</a></li>
+        
+        
+          <li><a href="/ar/">العربية</a></li>
+        
+        
+          <li><a href="/fa/">فارسی</a></li>
+        
+        
+          <li><a href="/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/">한국의</a></li>
+        
+        
+          <li><a href="/ja/">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+    
+
+<a class="logo" href="/en/bitcoin-core/"><img src="/img/bitcoin-core/bitcoin-core.svg" alt="Bitcoin"></a>
+
+    
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/">Bahasa Indonesia</option>
+    
+          <option value="/da/">Dansk</option>
+    
+          <option value="/de/">Deutsch</option>
+    
+          <option value="/en/" selected="selected">English</option>
+    
+          <option value="/es/">Español</option>
+    
+          <option value="/fr/">Français</option>
+    
+          <option value="/it/">Italiano</option>
+    
+          <option value="/hu/">Magyar</option>
+    
+          <option value="/nl/">Nederlands</option>
+    
+          <option value="/pl/">Polski</option>
+    
+          <option value="/pt_BR/">Português Brasil</option>
+    
+          <option value="/ro/">Română</option>
+    
+          <option value="/sl/">Slovenščina</option>
+    
+          <option value="/sv/">Svenska</option>
+    
+          <option value="/tr/">Türkçe</option>
+    
+          <option value="/el/">Ελληνικά</option>
+    
+          <option value="/bg/">български</option>
+    
+          <option value="/ru/">Русский</option>
+    
+          <option value="/uk/">Українська</option>
+    
+          <option value="/ar/">العربية</option>
+    
+          <option value="/fa/">فارسی</option>
+    
+          <option value="/hi/">हिन्दी</option>
+    
+          <option value="/ko/">한국의</option>
+    
+          <option value="/ja/">日本語</option>
+    
+          <option value="/zh_CN/">简体中文</option>
+    
+          <option value="/zh_TW/">繁體中文</option>
+    
+</select></div>
+
+    
+
+<ul id="menusimple" class="menusimple menucore" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Features</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/features/">Overview</a></li>
+      <li><a href="/en/bitcoin-core/features/validation">Validation</a></li>
+      <li><a href="/en/bitcoin-core/features/privacy">Privacy</a></li>
+      <li class="active"><a href="/en/bitcoin-core/features/requirements">Requirements</a></li>
+      <li><a href="/en/bitcoin-core/features/user-interface">User Interface</a></li>
+      <li><a href="/en/bitcoin-core/features/network-support">Network Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/bitcoin-core/help">Get Help</a></li>
+  <li><a>Contribute</a>
+    <ul>
+      <li><a href="/en/bitcoin-core/contribute/issues">Bug reports</a></li>
+      <li><a href="/en/development">Code</a></li>
+      <li><a href="/en/bitcoin-core/contribute/documentation">Documentation</a></li>
+      <li><a href="/en/bitcoin-core/contribute/translations">Translations</a></li>
+      <li><a href="/en/bitcoin-core/contribute/support">Tech Support</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/version-history">News</a></li>
+  <li><a href="/en/download">Download</a></li>
+</ul>
+
+  
+</div></div>
+
+<div class="body">
+  
+    
+
+<div class="breadcrumbs">
+  
+    
+      <a href="/en/">Bitcoin</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/bitcoin-core/">Core</a>
+        
+      &gt;
+    
+  
+    
+      <a href="/en/bitcoin-core/features/">Features</a>
+        
+      &gt;
+    
+  
+    
+      Requirements
+      
+    
+  
+</div>
+
+  
+  
+
+<div id="content" class="content">
+<div class="one-column">
+  <h1 class="not-displayed" id="bitcoin-core-requirements-and-warnings">Bitcoin Core Requirements And Warnings</h1>
+
+<p><img src="/img/bitcoin-core/slider-warning.svg" alt="Bitcoin Core requirements and warnings" /></p>
+
+<div class="callout">
+<p><a href="/en/download">Download Bitcoin Core</a>
+  <img src="/img/os/windows.png" alt="Windows" />
+  <img src="/img/os/mac.png" alt="Mac" />
+  <img src="/img/os/linux.png" alt="Linux" />
+</p>
+</div>
+
+<p>Bitcoin Core gives you increased <a href="/en/bitcoin-core/features/validation">security</a> and
+<a href="/en/bitcoin-core/features/privacy">privacy</a> at a cost. You need to <a href="#wallet-responsibility-checklist">take
+responsibility</a> for the security of
+your bitcoins, meet higher <a href="#system-requirements">minimum system
+requirements</a>, and beware of some <a href="#possible-problems">possible
+problems</a>.</p>
+
+<p><img src="/img/icons/icon_warning.svg" alt="Warning icon" />
+<strong>No matter what Bitcoin software you use,</strong> you should never
+buy more bitcoins than you can afford to lose. Bitcoin is still an
+experimental system and bitcoins remain a risky investment.</p>
+
+<h2 id="wallet-responsibility-checklist">Wallet Responsibility Checklist</h2>
+
+<p>Bitcoin Core puts you in charge of your wallet, which means your
+bitcoins are at risk unless you complete certain tasks:</p>
+
+<ul>
+  <li>
+    <p><button class="popup js" data-container="backup_your_keys">Backup your keys</button></p>
+  </li>
+  <li>
+    <p>Make sure your <button class="popup js" data-container="secure_your_wallet">wallet is secure</button></p>
+  </li>
+  <li>
+    <p>Setup an <button class="popup js" data-container="offline_wallet">offline wallet</button>
+(cold storage) for significant amounts of bitcoins</p>
+  </li>
+  <li>
+    <p>Watch for <a href="/en/alerts">security notifications</a></p>
+  </li>
+  <li>
+    <p>Allow your heirs to <button class="popup js" data-container="bitcoin_inheritance">receive your bitcoins</button>
+if you die or become incapacitated</p>
+  </li>
+</ul>
+
+<p>If you need help with any step, please ask for assistance in any of
+Bitcoin’s <a href="/en/bitcoin-core/help#forums">friendly forums</a> or <a href="/en/bitcoin-core/help#live">live chatrooms</a>.</p>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<div class="two-column-list" id="system-requirements-accordion">
+
+  <h3 id="bare-minimum-with-default-settings">Bare Minimum (With Default Settings)</h3>
+
+  <div>
+
+    <ul class="fa-ul">
+      <li>
+        <p><span class="fa fa-li fa-hdd-o fa-2x"></span> <strong>Disk space</strong><br /> 145 GB</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-download fa-2x"></span> <strong>Download</strong><br /> 250 MB/day (8 GB/month)<b>*</b></p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-upload fa-2x"></span> <strong>Upload</strong><br /> 5 GB/day (150 GB/month)</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-database fa-2x"></span> <strong>Memory (RAM)</strong><br /> 512 MB</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-desktop fa-2x"></span> <strong>System</strong><br /> Desktop<br />Laptop<br /><a href="https://en.bitcoin.it/wiki/Bitcoin_Core_compatible_devices#ARM-based_Chipsets">Some ARM chipsets</a> &gt;1 GHz</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-windows fa-2x"></span> <strong>Operating system</strong><br /> Windows 7/8.x<br />Mac OS X<br />Linux<br />Some BSDs</p>
+      </li>
+    </ul>
+
+    <p><br class="clear" /></p>
+
+    <p><b>*</b> Plus a one-time 140 GB download the first time you start Bitcoin Core.</p>
+
+  </div>
+
+  <h3 id="bare-minimum-with-custom-settings">Bare Minimum (With Custom Settings)</h3>
+
+  <div>
+
+    <ul class="fa-ul">
+      <li>
+        <p><span class="fa fa-li fa-hdd-o fa-2x"></span> <strong>Disk space</strong><br /> 5 GB</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-download fa-2x"></span> <strong>Download</strong><br /> 150 MB/day (5 GB/month)<b>*</b></p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-upload fa-2x"></span> <strong>Upload</strong><br /> 10 MB/day (300 MB/month)</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-database fa-2x"></span> <strong>Memory (RAM)</strong><br /> 256 MB</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-desktop fa-2x"></span> <strong>System</strong><br /> Desktop<br />Laptop<br /><a href="https://en.bitcoin.it/wiki/Bitcoin_Core_compatible_devices#ARM-based_Chipsets">Most ARM chipsets</a></p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-windows fa-2x"></span> <strong>Operating system</strong><br /> Windows 7/8.x<br />Mac OS X<br />Linux<br />Some BSDs</p>
+      </li>
+    </ul>
+
+    <p><br class="clear" /></p>
+
+    <p><b>*</b> Plus a one-time 140 GB download the first time you start Bitcoin Core.</p>
+
+    <p><strong>Learn more:</strong> <a href="https://en.bitcoin.it/wiki/Running_Bitcoin">Bitcoin Core configuration options</a></p>
+
+  </div>
+
+  <h3 id="minimum-recommended">Minimum Recommended</h3>
+
+  <div>
+
+    <ul class="fa-ul">
+      <li>
+        <p><span class="fa fa-li fa-hdd-o fa-2x"></span> <strong>Disk space</strong><br /> 145 GB</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-download fa-2x"></span> <strong>Download</strong><br /> 500 MB/day (15 GB/month)<b>*</b></p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-upload fa-2x"></span> <strong>Upload</strong><br /> 5 GB/day (150 GB/month)</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-database fa-2x"></span> <strong>Memory (RAM)</strong><br /> 1 GB</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-desktop fa-2x"></span> <strong>System</strong><br /> Desktop<br />Laptop<br /><a href="https://en.bitcoin.it/wiki/Bitcoin_Core_compatible_devices#ARM-based_Chipsets">Some ARM chipsets</a> &gt;1 GHz</p>
+      </li>
+      <li>
+        <p><span class="fa fa-li fa-windows fa-2x"></span> <strong>Operating system</strong><br /> Windows 7/8.x/10<br />Mac OS X<br />Linux</p>
+      </li>
+    </ul>
+
+    <p><br class="clear" /></p>
+
+    <p><b>*</b> Plus a one-time 140 GB download the first time you start Bitcoin Core.</p>
+
+  </div>
+
+</div>
+
+<h2 id="possible-problems">Possible Problems</h2>
+
+<ul>
+  <li>
+    <p><strong>Legal:</strong> Bitcoin use is <a href="https://en.wikipedia.org/wiki/Legality_of_bitcoin_by_country">prohibited or restricted in some
+areas.</a></p>
+  </li>
+  <li>
+    <p><strong>Bandwidth limits</strong>: Some Internet plans will charge an additional
+amount for any excess upload bandwidth used that isn’t included in
+the plan. Worse, some providers may terminate your connection without
+warning because of overuse. We advise that you check whether your
+Internet connection is subjected to such limitations and monitor your
+bandwidth use so that you can stop Bitcoin Core before you reach your
+upload limit.</p>
+  </li>
+  <li>
+    <p><strong>Anti-virus:</strong> Several people have placed parts of known computer
+viruses in the Bitcoin block chain. This block chain data can’t infect
+your computer, but some anti-virus programs quarantine the data
+anyway, making it more difficult to run Bitcoin Core. This problem mostly
+affects computers running Windows.</p>
+  </li>
+  <li>
+    <p><strong>Attack target:</strong> Bitcoin Core powers the Bitcoin peer-to-peer
+network, so people who want to disrupt the network may
+attack Bitcoin Core users in ways that will affect other things
+you do with your computer, such as an attack that limits your
+available download bandwidth.</p>
+  </li>
+</ul>
+
+<div class="not-displayed">
+  <div id="backup_your_keys" title="Backup Your Keys">
+    <p>By default, you need to backup Bitcoin Core after every 100
+  transactions.  This includes both transactions you send as well as
+  payments you request (whether or not you actually received the payment).</p>
+
+    <p>For example, you need to backup after sending 33 payments and requesting
+  67 payments (even though you only received 60 payments).</p>
+
+    <p>Bitcoin Core can be configured to allow you to go more transactions
+  between backups.  See the <a href="https://en.bitcoin.it/wiki/Running_Bitcoin"><code class="highlighter-rouge">-keypool</code> setting</a>.</p>
+  </div>
+
+  <div id="secure_your_wallet" title="Secure Your Wallet">
+    <p>Anyone who gets access to your wallet can steal your bitcoins.  The
+  first line of defense against this is encrypting your wallet, an option
+  from the File menu in the graphical interface.</p>
+
+    <p>However, encrypting may not be enough if your computer becomes infected
+  by malware.  Learn about <button class="popup js" data-container="offline_wallet">offline wallets</button>
+  for security against this type of attack.</p>
+
+    <p>In addition to securing your wallet, you also need to keep your backups
+  secure.  Anyone who gets access to them can also steal your bitcoins.</p>
+
+    <p><strong>Learn more:</strong> <a href="/en/secure-your-wallet">secure your wallet</a></p>
+  </div>
+
+  <div id="offline_wallet" title="Offline Wallet">
+    <p>Computers that connect to the Internet are frequently hacked or infected
+  with bitcoin-stealing malware.  Computers that never connect to the
+  Internet are a much more secure location for your bitcoins.</p>
+
+    <p>Bitcoin Core can be run on an always-offline computer, creating an
+  offline wallet (also called a cold wallet).  The offline wallet will
+  securely store the private keys, while a separate online Bitcoin Core
+  wallet will send and receive transactions.</p>
+
+    <p><strong>Learn more:</strong> <a href="http://bitcoin.stackexchange.com/a/34122/21052">Creating and signing offline transactions</a></p>
+  </div>
+
+  <div id="bitcoin_inheritance" title="Bitcoin Inheritance">
+    <p>Your Bitcoin wallet isn’t like a bank account—it won’t automatically
+  go to your heirs if you die or become disabled.</p>
+
+    <p>You have to plan ahead and make sure there is a way for your heirs
+  to access your wallet backups when you’re no longer available.</p>
+
+    <p><strong>Learn more:</strong> <a href="http://bitcoin.stackexchange.com/q/38692/21052">Estate planning: how can I ensure my bitcoins are inheritable?</a></p>
+
+  </div>
+</div>
+
+<p><br class="clear big" /></p>
+<div class="prevnext">
+<span><strong>Previous Feature</strong><br /><a href="/en/bitcoin-core/features/privacy">Privacy</a></span>
+<span><strong>Next feature</strong><br /><a href="/en/bitcoin-core/features/user-interface">User interface</a></span>
+</div>
+<p><br class="clear" /></p>
+
+<!-- Inventory Messages -->
+<!-- Inventory Messages: Dash Specific -->
+
+<!--[bitcoin-documentation mailing list]: https://groups.google.com/forum/#!forum/bitcoin-documentation-->
+
+
+</div>
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/bitcoin-core/about-site">About</a>
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a><br>
+Bitcoin Core pages on Bitcoin.org are <a
+href="/en/bitcoin-core/about-site">maintained separately</a> from the
+rest of the site.
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  <script src="/js/bitcoin-core.js"></script>
+
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1445 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Bitcoin Core Version 0.14.0 Released</title>
+
+<link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+  <script src="/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="/js/jquery/jquery.qrcode.min.js"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/img/icons/logo_ios.png"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="/js/cookieconsent/cookieconsent.js"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = '/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+</head>
+
+<body>
+
+  
+
+<div class="donation-container">
+  <div class="donation-text">
+    <p>
+      Bitcoin.org is a community funded project, donations are appreciated and used to improve the website.
+    </p>
+    <button type="button" class="donation-btn" onclick="openDonationModal()">
+      Make a donation
+    </button>
+  </div>
+  <button type="button" class="donation-visibility-toggle" onclick="toggleDonationBanner()">
+    Bitcoin.org needs your support!
+  </button>
+</div>
+
+<div
+  id="donation-modal"
+  style="display: none"
+  class="donation-modal hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Bitcoin.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE"
+        target="_blank">
+        1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE
+      </a>
+    </div>
+    <div class="modal-body bg-white" style="overflow-y:hidden;text-align: center;">
+      <div>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+      </div>
+
+      <div>
+        <input
+          style="margin-right: 15px"
+          type="text"
+          placeholder="Or custom amount? (BTC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+<ul class="lang">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="/da/">Dansk</a></li>
+        
+        
+          <li><a href="/de/">Deutsch</a></li>
+        
+        
+          <li><a href="/en/" class="active">English</a></li>
+        
+        
+          <li><a href="/es/">Español</a></li>
+        
+        
+          <li><a href="/fr/">Français</a></li>
+        
+        
+          <li><a href="/it/">Italiano</a></li>
+        
+        
+          <li><a href="/hu/">Magyar</a></li>
+        
+        
+          <li><a href="/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="/pl/">Polski</a></li>
+        
+        
+          <li><a href="/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="/ro/">Română</a></li>
+        
+        
+          <li><a href="/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="/bg/">български</a></li>
+        
+        
+          <li><a href="/ru/">Русский</a></li>
+        
+        
+          <li><a href="/uk/">Українська</a></li>
+        
+        
+          <li><a href="/ar/">العربية</a></li>
+        
+        
+          <li><a href="/fa/">فارسی</a></li>
+        
+        
+          <li><a href="/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="/ko/">한국의</a></li>
+        
+        
+          <li><a href="/ja/">日本語</a></li>
+        
+        
+          <li><a href="/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+
+<a class="logo" href="/en/"><img src="/img/icons/logotop.svg" alt="Bitcoin"></a>
+
+  
+<div id="langselect" class="langselect"><select onchange="window.location=this.value;">
+    
+          <option value="/id/">Bahasa Indonesia</option>
+    
+          <option value="/da/">Dansk</option>
+    
+          <option value="/de/">Deutsch</option>
+    
+          <option value="/en/" selected="selected">English</option>
+    
+          <option value="/es/">Español</option>
+    
+          <option value="/fr/">Français</option>
+    
+          <option value="/it/">Italiano</option>
+    
+          <option value="/hu/">Magyar</option>
+    
+          <option value="/nl/">Nederlands</option>
+    
+          <option value="/pl/">Polski</option>
+    
+          <option value="/pt_BR/">Português Brasil</option>
+    
+          <option value="/ro/">Română</option>
+    
+          <option value="/sl/">Slovenščina</option>
+    
+          <option value="/sv/">Svenska</option>
+    
+          <option value="/tr/">Türkçe</option>
+    
+          <option value="/el/">Ελληνικά</option>
+    
+          <option value="/bg/">български</option>
+    
+          <option value="/ru/">Русский</option>
+    
+          <option value="/uk/">Українська</option>
+    
+          <option value="/ar/">العربية</option>
+    
+          <option value="/fa/">فارسی</option>
+    
+          <option value="/hi/">हिन्दी</option>
+    
+          <option value="/ko/">한국의</option>
+    
+          <option value="/ja/">日本語</option>
+    
+          <option value="/zh_CN/">简体中文</option>
+    
+          <option value="/zh_TW/">繁體中文</option>
+    
+</select></div>
+
+  
+
+<ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a>Introduction</a>
+    <ul>
+      <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
+      <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
+      <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+      <li><a href="/en/getting-started">Getting started</a></li>
+      <li><a href="/en/how-it-works">How it works</a></li>
+      <li><a href="/en/you-need-to-know">You need to know</a></li>
+    </ul>
+  </li>
+  <li><a>Resources</a>
+    <ul>
+      <li><a href="/en/resources">Resources</a>
+      <li><a href="/en/exchanges">Exchanges</a></li>
+      <li><a href="/en/community">Community</a></li>
+      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a href="/en/vocabulary">Vocabulary</a></li>
+      <li><a href="/en/events">Events</a></li>
+      
+        <li><a href="/en/bitcoin-core/">Bitcoin Core</a></li>
+      
+    </ul>
+  </li>
+  <li><a href="/en/innovation">Innovation</a></li>
+  <li><a>Participate</a>
+    <ul>
+      <li><a href="/en/support-bitcoin">Support Bitcoin</a>
+      <li><a href="/en/buy">Buy Bitcoin</a></li>
+      <li><a href="/en/full-node">Running a full node</a></li>
+      <li><a href="/en/development">Development</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/faq">FAQ</a></li>
+</ul>
+
+</div></div>
+
+<div class="body">
+  
+
+<div class="breadcrumbs">
+  
+</div>
+
+  
+
+<div id="content" class="content">
+  <link rel="alternate" type="application/atom+xml" href="/en/rss/blog.xml" title="Bitcoin.org Site Blog">
+
+<div class="subhead-links"><a href="/en/blog">Blog home</a>
+| <a type="application/atom+xml" href="/en/rss/blog.xml"><img src="/img/icons/header_rss.svg" alt="rss" class="rssicon"> Subscribe to RSS feed</a>
+| <a href="https://github.com/bitcoin-dot-org/bitcoin.org/commits/master/_posts/2017-03-08-bitcoin-core-0-14-0-released.md">Post history</a>
+| <a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new?body=Source%20File%3A%20_posts/2017-03-08-bitcoin-core-0-14-0-released.md%0A%0A">Report issue</a></div>
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Bitcoin Core Version 0.14.0 Released</h1>
+  </header>
+
+  <article class="post-content">
+    <p class="center"><img src="/img/blog/free/bitcoin-core-0140.png" alt="Bitcoin Core Version 0.14.0" /></p>
+
+<p><a href="https://bitcoin.org/en/download">Bitcoin Core version 0.14.0 is now available</a>.</p>
+
+<p>This is a new major version release, including new features, various bugfixes
+and performance improvements, as well as updated translations.</p>
+
+<p>Please report bugs using the <a href="https://github.com/bitcoin/bitcoin/issues">issue tracker on GitHub</a>.</p>
+
+<p><a href="https://bitcoincore.org/en/list/announcements/join/">Subscribe here</a> to receive
+security and update notifications.</p>
+
+<h2 id="compatibility">Compatibility</h2>
+
+<p>Bitcoin Core is extensively tested on multiple operating systems using
+the Linux kernel, macOS 10.8+, and Windows Vista and later.</p>
+
+<p>Microsoft ended support for Windows XP on <a href="https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support">April 8th,
+2014</a>,
+No attempt is made to prevent installing or running the software on Windows XP,
+you can still do so at your own risk but be aware that there are known
+instabilities and issues. Please do not report issues about Windows XP to the
+<a href="https://github.com/bitcoin/bitcoin/issues">issue tracker</a>.</p>
+
+<p>Bitcoin Core should also work on most other Unix-like systems but is not
+frequently tested on them.</p>
+
+<h2 id="notable-changes">Notable changes</h2>
+
+<h3 id="performance-improvements">Performance Improvements</h3>
+
+<p>Validation speed and network propagation performance have been greatly
+improved, leading to much shorter sync and initial block download times.</p>
+
+<ul>
+  <li>The script signature cache has been reimplemented as a “cuckoo cache”,
+allowing for more signatures to be cached and faster lookups.</li>
+  <li>Assumed-valid blocks have been introduced which allows script validation to
+be skipped for ancestors of known-good blocks, without changing the security
+model. See below for more details.</li>
+  <li>In some cases, compact blocks are now relayed before being fully validated as
+per BIP152.</li>
+  <li>P2P networking has been refactored with a focus on concurrency and
+throughput. Network operations are no longer bottlenecked by validation. As a
+result, block fetching is several times faster than previous releases in many
+cases.</li>
+  <li>The UTXO cache now claims unused mempool memory. This speeds up initial block
+download as UTXO lookups are a major bottleneck there, and there is no use for
+the mempool at that stage.</li>
+</ul>
+
+<h3 id="manual-pruning">Manual Pruning</h3>
+
+<p>Bitcoin Core has supported automatically pruning the blockchain since 0.11.
+Pruning the blockchain allows for significant storage space savings as the vast
+majority of the downloaded data can be discarded after processing so very little
+of it remains on the disk.</p>
+
+<p>Manual block pruning can now be enabled by setting <code class="highlighter-rouge">-prune=1</code>. Once that is set,
+the RPC command <code class="highlighter-rouge">pruneblockchain</code> can be used to prune the blockchain up to the
+specified height or timestamp.</p>
+
+<h3 id="getinfo-has-been-deprecated"><code class="highlighter-rouge">getinfo</code> has been deprecated</h3>
+
+<p>The <code class="highlighter-rouge">getinfo</code> RPC command has been deprecated. Each field in the RPC call
+has been moved to another command’s output with that command also giving
+additional information that <code class="highlighter-rouge">getinfo</code> did not provide. The following table
+shows where each field has been moved to:</p>
+
+<p><img src="/img/blog/free/getinfo-deprecation.png" alt="getinfo RPC deprecation" /></p>
+
+<h3 id="zmq-on-windows">ZMQ On Windows</h3>
+
+<p>Previously the ZeroMQ notification system was unavailable on Windows
+due to various issues with ZMQ. These have been fixed upstream and
+now ZMQ can be used on Windows. Please see <a href="https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md">this
+document</a> for
+help with using ZMQ in general.</p>
+
+<h3 id="nested-rpc-commands-in-debug-console">Nested RPC Commands in Debug Console</h3>
+
+<p>The ability to nest RPC commands has been added to the debug console. This
+allows users to have the output of a command become the input to another
+command without running the commands separately.</p>
+
+<p>The nested RPC commands use bracket syntax (i.e. <code class="highlighter-rouge">getwalletinfo()</code>) and can be
+nested (i.e. <code class="highlighter-rouge">getblock(getblockhash(1))</code>). Simple queries can be done with
+square brackets where object values are accessed with either an array index or a
+non-quoted string. Both commas and spaces can be
+used to separate parameters in both the bracket syntax and normal RPC command
+syntax.</p>
+
+<h3 id="network-activity-toggle">Network Activity Toggle</h3>
+
+<p>A RPC command and GUI toggle have been added to enable or disable all p2p
+network activity. The network status icon in the bottom right hand corner 
+is now the GUI toggle. Clicking the icon will either enable or disable all
+p2p network activity. If network activity is disabled, the icon will 
+be grayed out with an X on top of it.</p>
+
+<p>Additionally the <code class="highlighter-rouge">setnetworkactive</code> RPC command has been added which does
+the same thing as the GUI icon. The command takes one boolean parameter,
+<code class="highlighter-rouge">true</code> enables networking and <code class="highlighter-rouge">false</code> disables it.</p>
+
+<h3 id="out-of-sync-modal-info-layer">Out-of-sync Modal Info Layer</h3>
+
+<p>When Bitcoin Core is out-of-sync on startup, a semi-transparent information
+layer will be shown over top of the normal display. This layer contains
+details about the current sync progress and estimates the amount of time
+remaining to finish syncing. This layer can also be hidden and subsequently
+unhidden by clicking on the progress bar at the bottom of the window.</p>
+
+<h3 id="support-for-json-rpc-named-arguments">Support for JSON-RPC Named Arguments</h3>
+
+<p>Commands sent over the JSON-RPC interface and through the <code class="highlighter-rouge">bitcoin-cli</code> binary
+can now use named arguments. This follows the <a href="http://www.jsonrpc.org/specification">JSON-RPC specification</a>
+for passing parameters by-name with an object.</p>
+
+<p><code class="highlighter-rouge">bitcoin-cli</code> has been updated to support this by parsing <code class="highlighter-rouge">name=value</code> arguments
+when the <code class="highlighter-rouge">-named</code> option is given.</p>
+
+<p>Some examples:</p>
+
+<p><code class="highlighter-rouge">src/bitcoin-cli -named help command="help"</code>
+<code class="highlighter-rouge">src/bitcoin-cli -named getblockhash height=0</code>
+<code class="highlighter-rouge">src/bitcoin-cli -named getblock blockhash=000000000019d6689c085ae165831e934...</code>
+<code class="highlighter-rouge">src/bitcoin-cli -named sendtoaddress address="(snip)" amount="1.0" subtractfeefromamount=true</code></p>
+
+<p>The order of arguments doesn’t matter in this case. Named arguments are also
+useful to leave out arguments that should stay at their default value. The
+rarely-used arguments <code class="highlighter-rouge">comment</code> and <code class="highlighter-rouge">comment_to</code> to <code class="highlighter-rouge">sendtoaddress</code>, for
+example, can be left out. However, this is not yet implemented for many RPC
+calls, this is expected to land in a later release.</p>
+
+<p>The RPC server remains fully backwards compatible with positional arguments.</p>
+
+<h3 id="opt-into-rbf-when-sending">Opt into RBF When Sending</h3>
+
+<p>A new startup option, <code class="highlighter-rouge">-walletrbf</code>, has been added to allow users to have all
+transactions sent opt into RBF support. The default value for this option is
+currently <code class="highlighter-rouge">false</code>, so transactions will not opt into RBF by default. The new
+<code class="highlighter-rouge">bumpfee</code> RPC can be used to replace transactions that opt into RBF.</p>
+
+<h3 id="sensitive-data-is-no-longer-stored-in-debug-console-history">Sensitive Data Is No Longer Stored In Debug Console History</h3>
+
+<p>The debug console maintains a history of previously entered commands that can be
+accessed by pressing the Up-arrow key so that users can easily reuse previously
+entered commands. Commands which have sensitive information such as passphrases
+and private keys will now have a <code class="highlighter-rouge">(...)</code> in place of the parameters when
+accessed through the history.</p>
+
+<h3 id="retaining-the-mempool-across-restarts">Retaining the Mempool Across Restarts</h3>
+
+<p>The mempool will be saved to the data directory prior to shutdown to a
+<code class="highlighter-rouge">mempool.dat</code> file. This file preserves the mempool so that when the node
+restarts the mempool can be filled with transactions without waiting for new
+transactions to be created. This will also preserve any changes made to a
+transaction through commands such as <code class="highlighter-rouge">prioritisetransaction</code> so that those
+changes will not be lost.</p>
+
+<h3 id="final-alert">Final Alert</h3>
+
+<p>The Alert System was <a href="https://bitcoin.org/en/alert/2016-11-01-alert-retirement">disabled and deprecated</a>
+in Bitcoin Core 0.12.1 and removed in 0.13.0. The Alert System was retired with
+a maximum sequence final alert which causes any nodes supporting the Alert
+System to display a static hard-coded “Alert Key Compromised” message which also
+prevents any other alerts from overriding it. This final alert is hard-coded
+into this release so that all old nodes receive the final alert.</p>
+
+<h3 id="gui-changes">GUI Changes</h3>
+
+<ul>
+  <li>After resetting the options by clicking the <code class="highlighter-rouge">Reset Options</code> button 
+in the options dialog or with the <code class="highlighter-rouge">-resetguioptions</code> startup option, 
+the user will be prompted to choose the data directory again. This 
+is to ensure that custom data directories will be kept after the 
+option reset which clears the custom data directory set via the choose 
+datadir dialog.</li>
+  <li>Multiple peers can now be selected in the list of peers in the debug 
+window. This allows for users to ban or disconnect multiple peers 
+simultaneously instead of banning them one at a time.</li>
+  <li>An indicator has been added to the bottom right hand corner of the main
+window to indicate whether the wallet being used is a HD wallet. This
+icon will be grayed out with an X on top of it if the wallet is not a
+HD wallet.</li>
+</ul>
+
+<h3 id="low-level-rpc-changes">Low-level RPC changes</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">importprunedfunds</code> only accepts two required arguments. Some versions accept
+an optional third arg, which was always ignored. Make sure to never pass more
+than two arguments.</li>
+  <li>The first boolean argument to <code class="highlighter-rouge">getaddednodeinfo</code> has been removed. This is 
+an incompatible change.</li>
+  <li>RPC command <code class="highlighter-rouge">getmininginfo</code> loses the “testnet” field in favor of the more
+generic “chain” (which has been present for years).</li>
+  <li>A new RPC command <code class="highlighter-rouge">preciousblock</code> has been added which marks a block as
+precious. A precious block will be treated as if it were received earlier
+than a competing block.</li>
+  <li>A new RPC command <code class="highlighter-rouge">importmulti</code> has been added which receives an array of 
+JSON objects representing the intention of importing a public key, a 
+private key, an address and script/p2sh</li>
+  <li>Use of <code class="highlighter-rouge">getrawtransaction</code> for retrieving confirmed transactions with unspent
+outputs has been deprecated. For now this will still work, but in the future
+it may change to only be able to retrieve information about transactions in
+the mempool or if <code class="highlighter-rouge">txindex</code> is enabled.</li>
+  <li>A new RPC command <code class="highlighter-rouge">getmemoryinfo</code> has been added which will return
+information
+about the memory usage of Bitcoin Core. This was added in conjunction with
+optimizations to memory management. See <a href="https://github.com/bitcoin/bitcoin/pull/8753">Pull #8753</a>
+for more information.</li>
+  <li>A new RPC command <code class="highlighter-rouge">bumpfee</code> has been added which allows replacing an
+unconfirmed wallet transaction that signaled RBF (see the <code class="highlighter-rouge">-walletrbf</code>
+startup option above) with a new transaction that pays a higher fee, and
+should be more likely to get confirmed quickly.</li>
+</ul>
+
+<h3 id="http-rest-changes">HTTP REST Changes</h3>
+
+<ul>
+  <li>UTXO set query responses were changed to return status code <code class="highlighter-rouge">HTTP_BAD_REQUEST</code>
+(400) instead of <code class="highlighter-rouge">HTTP_INTERNAL_SERVER_ERROR</code> (500) when requests contain
+invalid parameters.</li>
+</ul>
+
+<h3 id="minimum-fee-rate-policies">Minimum Fee Rate Policies</h3>
+
+<p>Since the changes in 0.12 to automatically limit the size of the mempool and
+improve the performance of block creation in mining code it has not been
+important for relay nodes or miners to set <code class="highlighter-rouge">-minrelaytxfee</code>. With this release
+the following concepts that were tied to this option have been separated out:</p>
+
+<ul>
+  <li>incremental relay fee used for calculating BIP 125 replacement and mempool
+limiting. (1000 satoshis/kB)</li>
+  <li>calculation of threshold for a dust output. (effectively 3 * 1000 satoshis/kB)</li>
+  <li>minimum fee rate of a package of transactions to be included in a block
+created by the mining code. If miners wish to set this minimum they can use
+the new <code class="highlighter-rouge">-blockmintxfee</code> option.  (defaults to 1000 satoshis/kB)</li>
+</ul>
+
+<p>The <code class="highlighter-rouge">-minrelaytxfee</code> option continues to exist but is recommended to be left
+unset.</p>
+
+<h3 id="fee-estimation-changes">Fee Estimation Changes</h3>
+
+<ul>
+  <li>
+    <p>Since 0.13.2 fee estimation for a confirmation target of 1 block has been
+disabled. The fee slider will no longer be able to choose a target of 1 block.
+This is only a minor behavior change as there was often insufficient
+data for this target anyway. <code class="highlighter-rouge">estimatefee 1</code> will now always return -1 and
+<code class="highlighter-rouge">estimatesmartfee 1</code> will start searching at a target of 2.</p>
+  </li>
+  <li>
+    <p>The default target for fee estimation is changed to 6 blocks in both the GUI
+(previously 25) and for RPC calls (previously 2).</p>
+  </li>
+</ul>
+
+<h3 id="removal-of-priority-estimation">Removal of Priority Estimation</h3>
+
+<ul>
+  <li>
+    <p>Estimation of “priority” needed for a transaction to be included within a
+target
+number of blocks has been removed.  The RPC calls are deprecated and will
+either
+return -1 or 1e24 appropriately. The format for <code class="highlighter-rouge">fee_estimates.dat</code> has also
+changed to no longer save these priority estimates. It will automatically be
+converted to the new format which is not readable by prior versions of the
+software.</p>
+  </li>
+  <li>
+    <p>Support for “priority” (coin age) transaction sorting for mining is
+considered deprecated in Core and will be removed in the next major version.
+This is not to be confused with the <code class="highlighter-rouge">prioritisetransaction</code> RPC which will
+remain
+supported by Core for adding fee deltas to transactions.</p>
+  </li>
+</ul>
+
+<h3 id="p2p-connection-management">P2P connection management</h3>
+
+<ul>
+  <li>
+    <p>Peers manually added through the <code class="highlighter-rouge">-addnode</code> option or <code class="highlighter-rouge">addnode</code> RPC now have
+their own
+limit of eight connections which does not compete with other inbound or
+outbound
+connection usage and is not subject to the limitation imposed by the
+<code class="highlighter-rouge">-maxconnections</code>
+option.</p>
+  </li>
+  <li>
+    <p>New connections to manually added peers are performed more quickly.</p>
+  </li>
+</ul>
+
+<h3 id="introduction-of-assumed-valid-blocks">Introduction of assumed-valid blocks</h3>
+
+<ul>
+  <li>
+    <p>A significant portion of the initial block download time is spent verifying
+scripts/signatures.  Although the verification must pass to ensure the
+security
+of the system, no other result from this verification is needed: If the node
+knew the history of a given block were valid it could skip checking scripts
+for its ancestors.</p>
+  </li>
+  <li>
+    <p>A new configuration option ‘assumevalid’ is provided to express this knowledge
+to the software.  Unlike the ‘checkpoints’ in the past this setting does not
+force the use of a particular chain: chains that are consistent with it are
+processed quicker, but other chains are still accepted if they’d otherwise
+be chosen as best. Also unlike ‘checkpoints’ the user can configure which
+block history is assumed true, this means that even outdated software can
+sync more quickly if the setting is updated by the user.</p>
+  </li>
+  <li>
+    <p>Because the validity of a chain history is a simple objective fact it is much
+easier to review this setting.  As a result the software ships with a default
+value adjusted to match the current chain shortly before release.  The use
+of this default value can be disabled by setting -assumevalid=0</p>
+  </li>
+</ul>
+
+<h3 id="fundrawtransaction-change-address-reuse">Fundrawtransaction change address reuse</h3>
+
+<ul>
+  <li>
+    <p>Before 0.14, <code class="highlighter-rouge">fundrawtransaction</code> was by default wallet stateless. In
+almost all cases <code class="highlighter-rouge">fundrawtransaction</code> does add a change-output to the
+outputs of the funded transaction. Before 0.14, the used keypool key was
+never marked as change-address key and directly returned to the keypool
+(leading to address reuse).  Before 0.14, calling <code class="highlighter-rouge">getnewaddress</code>
+directly after <code class="highlighter-rouge">fundrawtransaction</code> did generate the same address as
+the change-output address.</p>
+  </li>
+  <li>
+    <p>Since 0.14, fundrawtransaction does reserve the change-output-key from
+the keypool by default (optional by setting  <code class="highlighter-rouge">reserveChangeKey</code>, default =
+<code class="highlighter-rouge">true</code>)</p>
+  </li>
+  <li>
+    <p>Users should also consider using <code class="highlighter-rouge">getrawchangeaddress()</code> in conjunction
+with <code class="highlighter-rouge">fundrawtransaction</code>’s <code class="highlighter-rouge">changeAddress</code> option.</p>
+  </li>
+</ul>
+
+<h3 id="unused-mempool-memory-used-by-coincache">Unused mempool memory used by coincache</h3>
+
+<ul>
+  <li>Before 0.14, memory reserved for mempool (using the <code class="highlighter-rouge">-maxmempool</code> option)
+went unused during initial block download, or IBD. In 0.14, the UTXO DB cache
+(controlled with the <code class="highlighter-rouge">-dbcache</code> option) borrows memory from the mempool
+when there is extra memory available. This may result in an increase in
+memory usage during IBD for those previously relying on only the <code class="highlighter-rouge">-dbcache</code>
+option to limit memory during that time.</li>
+</ul>
+
+<h2 id="change-log">0.14.0 Change log</h2>
+
+<p>Detailed release notes follow. This overview includes changes that affect
+behavior, not code moves, minor refactors and string updates. For convenience
+in locating the code changes and accompanying discussion, both the pull request
+and git merge commit are mentioned.</p>
+
+<h3 id="rpc-and-other-apis">RPC and other APIs</h3>
+
+<ul>
+  <li>#8421 <code class="highlighter-rouge">b77bb95</code> httpserver: drop boost dependency (theuni)</li>
+  <li>#8638 <code class="highlighter-rouge">f061415</code> rest.cpp: change <code class="highlighter-rouge">HTTP_INTERNAL_SERVER_ERROR</code> to
+<code class="highlighter-rouge">HTTP_BAD_REQUEST</code> (djpnewton)</li>
+  <li>#8272 <code class="highlighter-rouge">91990ee</code> Make the dummy argument to getaddednodeinfo optional (sipa)</li>
+  <li>#8722 <code class="highlighter-rouge">bb843ad</code> bitcoin-cli: More detailed error reporting (laanwj)</li>
+  <li>#6996 <code class="highlighter-rouge">7f71a3c</code> Add preciousblock RPC (sipa)</li>
+  <li>#8788 <code class="highlighter-rouge">97c7f73</code> Give RPC commands more information about the RPC request
+(jonasschnelli)</li>
+  <li>#7948 <code class="highlighter-rouge">5d2c8e5</code> Augment getblockchaininfo bip9_softforks data (mruddy)</li>
+  <li>#8980 <code class="highlighter-rouge">0e22855</code> importmulti: Avoid using boost::variant::operator!=, which is
+only in newer boost versions (luke-jr)</li>
+  <li>#9025 <code class="highlighter-rouge">4d8558a</code> Getrawtransaction should take a bool for verbose (jnewbery)</li>
+  <li>#8811 <code class="highlighter-rouge">5754e03</code> Add support for JSON-RPC named arguments (laanwj)</li>
+  <li>#9520 <code class="highlighter-rouge">2456a83</code> Deprecate non-txindex getrawtransaction and better warning
+(sipa)</li>
+  <li>#9518 <code class="highlighter-rouge">a65ced1</code> Return height of last block pruned by pruneblockchain RPC
+(ryanofsky)</li>
+  <li>#9222 <code class="highlighter-rouge">7cb024e</code> Add ‘subtractFeeFromAmount’ option to ‘fundrawtransaction’
+(dooglus)</li>
+  <li>#8456 <code class="highlighter-rouge">2ef52d3</code> Simplified <code class="highlighter-rouge">bumpfee</code> command (mrbandrews)</li>
+  <li>#9516 <code class="highlighter-rouge">727a798</code> Bug-fix: listsinceblock: use fork point as reference for
+blocks in reorg’d chains (kallewoof)</li>
+  <li>#9640 <code class="highlighter-rouge">7bfb770</code> Bumpfee: bugfixes for error handling and feerate calculation
+(sdaftuar)</li>
+  <li>#9673 <code class="highlighter-rouge">8d6447e</code> Set correct metadata on bumpfee wallet transactions
+(ryanofsky)</li>
+  <li>#9650 <code class="highlighter-rouge">40f7e27</code> Better handle invalid parameters to signrawtransaction
+(TheBlueMatt)</li>
+  <li>#9682 <code class="highlighter-rouge">edc9e63</code> Require timestamps for importmulti keys (ryanofsky)</li>
+  <li>#9108 <code class="highlighter-rouge">d8e8b06</code> Use importmulti timestamp when importing watch only keys (on
+top of #9682) (ryanofsky)</li>
+  <li>#9756 <code class="highlighter-rouge">7a93af8</code> Return error when importmulti called with invalid address
+(ryanofsky)</li>
+  <li>#9778 <code class="highlighter-rouge">ad168ef</code> Add two hour buffer to manual pruning (morcos)</li>
+  <li>#9761 <code class="highlighter-rouge">9828f9a</code> Use 2 hour grace period for key timestamps in importmulti
+rescans (ryanofsky)</li>
+  <li>#9474 <code class="highlighter-rouge">48d7e0d</code> Mark the minconf parameter to move as ignored (sipa)</li>
+  <li>#9619 <code class="highlighter-rouge">861cb0c</code> Bugfix: RPC/Mining: GBT should return 1 MB sizelimit before
+segwit activates (luke-jr)</li>
+  <li>#9773 <code class="highlighter-rouge">9072395</code> Return errors from importmulti if complete rescans are not
+successful (ryanofsky)</li>
+</ul>
+
+<h3 id="block-and-transaction-handling">Block and transaction handling</h3>
+
+<ul>
+  <li>#8391 <code class="highlighter-rouge">37d83bb</code> Consensus: Remove ISM (NicolasDorier)</li>
+  <li>#8365 <code class="highlighter-rouge">618c9dd</code> Treat high-sigop transactions as larger rather than rejecting
+them (sipa)</li>
+  <li>#8814 <code class="highlighter-rouge">14b7b3f</code> wallet, policy: ParameterInteraction: Don’t allow 0 fee
+(MarcoFalke)</li>
+  <li>#8515 <code class="highlighter-rouge">9bdf526</code> A few mempool removal optimizations (sipa)</li>
+  <li>#8448 <code class="highlighter-rouge">101c642</code> Store mempool and prioritization data to disk (sipa)</li>
+  <li>#7730 <code class="highlighter-rouge">3c03dc2</code> Remove priority estimation (morcos)</li>
+  <li>#9111 <code class="highlighter-rouge">fb15610</code> Remove unused variable <code class="highlighter-rouge">UNLIKELY_PCT</code> from fees.h (fanquake)</li>
+  <li>#9133 <code class="highlighter-rouge">434e683</code> Unset fImporting for loading mempool (morcos)</li>
+  <li>#9179 <code class="highlighter-rouge">b9a87b4</code> Set <code class="highlighter-rouge">DEFAULT_LIMITFREERELAY</code> = 0 kB/minute (MarcoFalke)</li>
+  <li>#9239 <code class="highlighter-rouge">3fbf079</code> Disable fee estimates for 1-block target (morcos)</li>
+  <li>#7562 <code class="highlighter-rouge">1eef038</code> Bump transaction version default to 2 (btcdrak)</li>
+  <li>#9313,#9367 If we don’t allow free txs, always send a fee filter (morcos)</li>
+  <li>#9346 <code class="highlighter-rouge">b99a093</code> Batch construct batches (sipa)</li>
+  <li>#9262 <code class="highlighter-rouge">5a70572</code> Prefer coins that have fewer ancestors, sanity check txn
+before ATMP (instagibbs)</li>
+  <li>#9288 <code class="highlighter-rouge">1ce7ede</code> Fix a bug if the min fee is 0 for FeeFilterRounder (morcos)</li>
+  <li>#9395 <code class="highlighter-rouge">0fc1c31</code> Add test for <code class="highlighter-rouge">-walletrejectlongchains</code> (morcos)</li>
+  <li>#9107 <code class="highlighter-rouge">7dac1e5</code> Safer modify new coins (morcos)</li>
+  <li>#9312 <code class="highlighter-rouge">a72f76c</code> Increase mempool expiry time to 2 weeks (morcos)</li>
+  <li>#8610 <code class="highlighter-rouge">c252685</code> Share unused mempool memory with coincache (sipa)</li>
+  <li>#9138 <code class="highlighter-rouge">f646275</code> Improve fee estimation (morcos)</li>
+  <li>#9408 <code class="highlighter-rouge">46b249e</code> Allow shutdown during LoadMempool, dump only when necessary
+(jonasschnelli)</li>
+  <li>#9310 <code class="highlighter-rouge">8c87f17</code> Assert FRESH validity in CCoinsViewCache::BatchWrite
+(ryanofsky)</li>
+  <li>#7871 <code class="highlighter-rouge">e2e624d</code> Manual block file pruning (mrbandrews)</li>
+  <li>#9507 <code class="highlighter-rouge">0595042</code> Fix use-after-free in CTxMemPool::removeConflicts() (sdaftuar)</li>
+  <li>#9380 <code class="highlighter-rouge">dd98f04</code> Separate different uses of minimum fees (morcos)</li>
+  <li>#9596 <code class="highlighter-rouge">71148b8</code> bugfix save feeDelta instead of priorityDelta in DumpMempool
+(morcos)</li>
+  <li>#9371 <code class="highlighter-rouge">4a1dc35</code> Notify on removal (morcos)</li>
+  <li>#9519 <code class="highlighter-rouge">9b4d267</code> Exclude RBF replacement txs from fee estimation (morcos)</li>
+  <li>#8606 <code class="highlighter-rouge">e2a1a1e</code> Fix some locks (sipa)</li>
+  <li>#8681 <code class="highlighter-rouge">6898213</code> Performance Regression Fix: Pre-Allocate txChanged vector
+(JeremyRubin)</li>
+  <li>#8223 <code class="highlighter-rouge">744d265</code> c++11: Use std::unique_ptr for block creation (domob1812)</li>
+  <li>#9125 <code class="highlighter-rouge">7490ae8</code> Make CBlock a vector of shared_ptr of CTransactions (sipa)</li>
+  <li>#8930 <code class="highlighter-rouge">93566e0</code> Move orphan processing to ActivateBestChain (TheBlueMatt)</li>
+  <li>#8580 <code class="highlighter-rouge">46904ee</code> Make CTransaction actually immutable (sipa)</li>
+  <li>#9240 <code class="highlighter-rouge">a1dcf2e</code> Remove txConflicted (morcos)</li>
+  <li>#8589 <code class="highlighter-rouge">e8cfe1e</code> Inline CTxInWitness inside CTxIn (sipa)</li>
+  <li>#9349 <code class="highlighter-rouge">2db4cbc</code> Make CScript (and prevector) c++11 movable (sipa)</li>
+  <li>#9252 <code class="highlighter-rouge">ce5c1f4</code> Release cs_main before calling ProcessNewBlock, or processing
+headers (cmpctblock handling) (sdaftuar)</li>
+  <li>#9283 <code class="highlighter-rouge">869781c</code> A few more CTransactionRef optimizations (sipa)</li>
+  <li>#9499 <code class="highlighter-rouge">9c9af5a</code> Use recent-rejects, orphans, and recently-replaced txn for
+compact-block-reconstruction (TheBlueMatt)</li>
+  <li>#9813 <code class="highlighter-rouge">3972a8e</code> Read/write mempool.dat as a binary (paveljanik)</li>
+</ul>
+
+<h3 id="p2p-protocol-and-network-code">P2P protocol and network code</h3>
+
+<ul>
+  <li>#8128 <code class="highlighter-rouge">1030fa7</code> Turn net structures into dumb storage classes (theuni)</li>
+  <li>#8282 <code class="highlighter-rouge">026c6ed</code> Feeler connections to increase online addrs in the tried table
+(EthanHeilman)</li>
+  <li>#8462 <code class="highlighter-rouge">53f8f22</code> Move AdvertiseLocal debug output to net category (Mirobit)</li>
+  <li>#8612 <code class="highlighter-rouge">84decb5</code> Check for compatibility with download in
+FindNextBlocksToDownload (sipa)</li>
+  <li>#8594 <code class="highlighter-rouge">5b2ea29</code> Do not add random inbound peers to addrman (gmaxwell)</li>
+  <li>#8085 <code class="highlighter-rouge">6423116</code> Begin encapsulation (theuni)</li>
+  <li>#8715 <code class="highlighter-rouge">881d7ea</code> only delete CConnman if it’s been created (theuni)</li>
+  <li>#8707 <code class="highlighter-rouge">f07424a</code> Fix maxuploadtarget setting (theuni)</li>
+  <li>#8661 <code class="highlighter-rouge">d2e4655</code> Do not set an addr time penalty when a peer advertises itself
+(gmaxwell)</li>
+  <li>#8822 <code class="highlighter-rouge">9bc6a6b</code> Consistent checksum handling (laanwj)</li>
+  <li>#8936 <code class="highlighter-rouge">1230890</code> Report NodeId in misbehaving debug (rebroad)</li>
+  <li>#8968 <code class="highlighter-rouge">3cf496d</code> Don’t hold cs_main when calling ProcessNewBlock from a
+cmpctblock (TheBlueMatt)</li>
+  <li>#9002 <code class="highlighter-rouge">e1d1f57</code> Make connect=0 disable automatic outbound connections
+(gmaxwell)</li>
+  <li>#9050 <code class="highlighter-rouge">fcf61b8</code> Make a few values immutable, and use deterministic randomness
+for the localnonce (theuni)</li>
+  <li>#8969 <code class="highlighter-rouge">3665483</code> Decouple peer-processing-logic from block-connection-logic
+(#2) (TheBlueMatt)</li>
+  <li>#8708 <code class="highlighter-rouge">c8c572f</code> have CConnman handle message sending (theuni)</li>
+  <li>#8709 <code class="highlighter-rouge">1e50d22</code> Allow filterclear messages for enabling TX relay only
+(rebroad)</li>
+  <li>#9045 <code class="highlighter-rouge">9f554e0</code> Hash P2P messages as they are received instead of at
+process-time (TheBlueMatt)</li>
+  <li>#9026 <code class="highlighter-rouge">dc6b940</code> Fix handling of invalid compact blocks (sdaftuar)</li>
+  <li>#8996 <code class="highlighter-rouge">ab914a6</code> Network activity toggle (luke-jr)</li>
+  <li>#9131 <code class="highlighter-rouge">62af164</code> fNetworkActive is not protected by a lock, use an atomic
+(jonasschnelli)</li>
+  <li>#8872 <code class="highlighter-rouge">0c577f2</code> Remove block-request logic from INV message processing
+(TheBlueMatt)</li>
+  <li>#8690 <code class="highlighter-rouge">791b58d</code> Do not fully sort all nodes for addr relay (sipa)</li>
+  <li>#9128 <code class="highlighter-rouge">76fec09</code> Decouple CConnman and message serialization (theuni)</li>
+  <li>#9226 <code class="highlighter-rouge">3bf06e9</code> Remove fNetworkNode and pnodeLocalHost (gmaxwell)</li>
+  <li>#9352 <code class="highlighter-rouge">a7f7651</code> Attempt reconstruction from all compact block announcements
+(sdaftuar)</li>
+  <li>#9319 <code class="highlighter-rouge">a55716a</code> Break addnode out from the outbound connection limits
+(gmaxwell)</li>
+  <li>#9261 <code class="highlighter-rouge">2742568</code> Add unstored orphans with rejected parents to recentRejects
+(morcos)</li>
+  <li>#9441 <code class="highlighter-rouge">8b66bf7</code> Massive speedup. Net locks overhaul (theuni)</li>
+  <li>#9375 <code class="highlighter-rouge">3908fc4</code> Relay compact block messages prior to full block connection
+(TheBlueMatt)</li>
+  <li>#9400 <code class="highlighter-rouge">8a445c5</code> Set peers as HB peers upon full block validation (instagibbs)</li>
+  <li>#9561 <code class="highlighter-rouge">6696b46</code> Wake message handling thread when we receive a new block
+(TheBlueMatt)</li>
+  <li>#9535 <code class="highlighter-rouge">82274c0</code> Split CNode::cs_vSend: message processing and message sending
+(TheBlueMatt)</li>
+  <li>#9606 <code class="highlighter-rouge">3f9f962</code> Consistently use GetTimeMicros() for inactivity checks
+(sdaftuar)</li>
+  <li>#9594 <code class="highlighter-rouge">fd70211</code> Send final alert message to older peers after connecting
+(gmaxwell)</li>
+  <li>#9626 <code class="highlighter-rouge">36966a1</code> Clean up a few CConnman cs_vNodes/CNode things (TheBlueMatt)</li>
+  <li>#9609 <code class="highlighter-rouge">4966917</code> Fix remaining net assertions (theuni)</li>
+  <li>#9671 <code class="highlighter-rouge">7821db3</code> Fix super-unlikely race introduced in 236618061a445d2cb11e72
+(TheBlueMatt)</li>
+  <li>#9730 <code class="highlighter-rouge">33f3b21</code> Remove bitseed.xf2.org form the dns seed list (jonasschnelli)</li>
+  <li>#9698 <code class="highlighter-rouge">2447c10</code> Fix socket close race (theuni)</li>
+  <li>#9708 <code class="highlighter-rouge">a06ede9</code> Clean up all known races/platform-specific UB at the time PR
+was opened (TheBlueMatt)</li>
+  <li>#9715 <code class="highlighter-rouge">b08656e</code> Disconnect peers which we do not receive VERACKs from within
+60 sec (TheBlueMatt)</li>
+  <li>#9720 <code class="highlighter-rouge">e87ce95</code> Fix banning and disallow sending messages before receiving
+verack (theuni)</li>
+  <li>#9268 <code class="highlighter-rouge">09c4fd1</code> Fix rounding privacy leak introduced in #9260 (TheBlueMatt)</li>
+  <li>#9075 <code class="highlighter-rouge">9346f84</code> Decouple peer-processing-logic from block-connection-logic
+(#3) (TheBlueMatt)</li>
+  <li>#8688 <code class="highlighter-rouge">047ded0</code> Move static global randomizer seeds into CConnman (sipa)</li>
+  <li>#9289 <code class="highlighter-rouge">d9ae1ce</code> net: drop boost::thread_group (theuni)</li>
+</ul>
+
+<h3 id="validation">Validation</h3>
+
+<ul>
+  <li>#9014 <code class="highlighter-rouge">d04aeba</code> Fix block-connection performance regression (TheBlueMatt)</li>
+  <li>#9299 <code class="highlighter-rouge">d52ce89</code> Remove no longer needed check for premature v2 txs (morcos)</li>
+  <li>#9273 <code class="highlighter-rouge">b68685a</code> Remove unused <code class="highlighter-rouge">CDiskBlockPos*</code> argument from ProcessNewBlock
+(TheBlueMatt)</li>
+  <li>#8895 <code class="highlighter-rouge">b83264d</code> Better SigCache Implementation (JeremyRubin)</li>
+  <li>#9490 <code class="highlighter-rouge">e126d0c</code> Replace FindLatestBefore used by importmulti with
+FindEarliestAtLeast (gmaxwell)</li>
+  <li>#9484 <code class="highlighter-rouge">812714f</code> Introduce assumevalid setting to skip validation presumed
+valid scripts (gmaxwell)</li>
+  <li>#9511 <code class="highlighter-rouge">7884956</code> Don’t overwrite validation state with corruption check
+(morcos)</li>
+  <li>#9765 <code class="highlighter-rouge">1e92e04</code> Harden against mistakes handling invalid blocks (sdaftuar)</li>
+  <li>#9779 <code class="highlighter-rouge">3c02b95</code> Update nMinimumChainWork and defaultAssumeValid (gmaxwell)</li>
+  <li>#8524 <code class="highlighter-rouge">19b0f33</code> Precompute sighashes (sipa)</li>
+  <li>#9791 <code class="highlighter-rouge">1825a03</code> Avoid VLA in hash.h (sipa)</li>
+</ul>
+
+<h3 id="build-system">Build system</h3>
+
+<ul>
+  <li>#8238 <code class="highlighter-rouge">6caf3ee</code> ZeroMQ 4.1.5 &amp;&amp; ZMQ on Windows (fanquake)</li>
+  <li>#8520 <code class="highlighter-rouge">b40e19c</code> Remove check for <code class="highlighter-rouge">openssl/ec.h</code> (laanwj)</li>
+  <li>#8617 <code class="highlighter-rouge">de07fdc</code> Include instructions to extract Mac OS X SDK on Linux using
+7zip and SleuthKit (luke-jr)</li>
+  <li>#8566 <code class="highlighter-rouge">7b98895</code> Easy to use gitian building script (achow101)</li>
+  <li>#8604 <code class="highlighter-rouge">f256843</code> build,doc: Update for 0.13.0+ and OpenBSD 5.9 (laanwj)</li>
+  <li>#8640 <code class="highlighter-rouge">2663e51</code> depends: Remove Qt46 package (fanquake)</li>
+  <li>#8645 <code class="highlighter-rouge">8ea4440</code> Remove unused Qt 4.6 patch (droark)</li>
+  <li>#8608 <code class="highlighter-rouge">7e9ab95</code> Install manpages via make install, also add some autogenerated
+manpages (nomnombtc)</li>
+  <li>#8781 <code class="highlighter-rouge">ca69ef4</code> contrib: delete <code class="highlighter-rouge">qt_translations.py</code> (MarcoFalke)</li>
+  <li>#8783 <code class="highlighter-rouge">64dc645</code> share: remove qt/protobuf.pri (MarcoFalke)</li>
+  <li>#8423 <code class="highlighter-rouge">3166dff</code> depends: expat 2.2.0, ccache 3.3.1, fontconfig 2.12.1
+(fanquake)</li>
+  <li>#8791 <code class="highlighter-rouge">b694b0d</code> travis: cross-mac: explicitly enable gui (MarcoFalke)</li>
+  <li>#8820 <code class="highlighter-rouge">dc64141</code> depends: Fix Qt compilation with Xcode 8 (fanquake)</li>
+  <li>#8730 <code class="highlighter-rouge">489a6ab</code> depends: Add libevent compatibility patch for windows (laanwj)</li>
+  <li>#8819 <code class="highlighter-rouge">c841816</code> depends: Boost 1.61.0 (fanquake)</li>
+  <li>#8826 <code class="highlighter-rouge">f560d95</code> Do not include <code class="highlighter-rouge">env_win.cc</code> on non-Windows systems
+(paveljanik)</li>
+  <li>#8948 <code class="highlighter-rouge">e077e00</code> Reorder Windows gitian build order to match Linux (Michagogo)</li>
+  <li>#8568 <code class="highlighter-rouge">078900d</code> new var <code class="highlighter-rouge">DIST_CONTRIB</code> adds useful things for packagers from
+contrib (nomnombtc)</li>
+  <li>#9114 <code class="highlighter-rouge">21e6c6b</code> depends: Set <code class="highlighter-rouge">OSX_MIN_VERSION</code> to 10.8 (fanquake)</li>
+  <li>#9140 <code class="highlighter-rouge">018a4eb</code> Bugfix: Correctly replace generated headers and fail cleanly
+(luke-jr)</li>
+  <li>#9156 <code class="highlighter-rouge">a8b2a82</code> Add compile and link options echo to configure (jonasschnelli)</li>
+  <li>#9393 <code class="highlighter-rouge">03d85f6</code> Include cuckoocache header in Makefile (MarcoFalke)</li>
+  <li>#9420 <code class="highlighter-rouge">bebe369</code> Fix linker error when configured with –enable-lcov (droark)</li>
+  <li>#9412 <code class="highlighter-rouge">53442af</code> Fix ‘make deploy’ for OSX (jonasschnelli)</li>
+  <li>#9475 <code class="highlighter-rouge">7014506</code> Let autoconf detect presence of <code class="highlighter-rouge">EVP_MD_CTX_new</code> (luke-jr)</li>
+  <li>#9513 <code class="highlighter-rouge">bbf193f</code> Fix qt distdir builds (theuni)</li>
+  <li>#9471 <code class="highlighter-rouge">ca615e6</code> depends: libevent 2.1.7rc (fanquake)</li>
+  <li>#9468 <code class="highlighter-rouge">f9117f2</code> depends: Dependency updates for 0.14.0 (fanquake)</li>
+  <li>#9469 <code class="highlighter-rouge">01c4576</code> depends: Qt 5.7.1 (fanquake)</li>
+  <li>#9574 <code class="highlighter-rouge">5ac6687</code> depends: Fix QT build on OSX (fanquake)</li>
+  <li>#9646 <code class="highlighter-rouge">720b579</code> depends: Fix cross build for qt5.7 (theuni)</li>
+  <li>#9705 <code class="highlighter-rouge">6a55515</code> Add options to override BDB cflags/libs (laanwj)</li>
+  <li>#8249 <code class="highlighter-rouge">4e1567a</code> Enable (and check for) 64-bit ASLR on Windows (laanwj)</li>
+  <li>#9758 <code class="highlighter-rouge">476cc47</code> Selectively suppress deprecation warnings (jonasschnelli)</li>
+  <li>#9783 <code class="highlighter-rouge">6d61a2b</code> release: bump gitian descriptors for a new 0.14 package cache
+(theuni)</li>
+  <li>#9789 <code class="highlighter-rouge">749fe95</code> build: add –enable-werror and warn on vla’s (theuni)</li>
+  <li>#9831 <code class="highlighter-rouge">99fd85c</code> build: force a c++ standard to be specified (theuni)</li>
+</ul>
+
+<h3 id="gui">GUI</h3>
+
+<ul>
+  <li>#8192 <code class="highlighter-rouge">c503863</code> Remove URLs from About dialog translations (fanquake)</li>
+  <li>#8540 <code class="highlighter-rouge">36404ae</code> Fix random segfault when closing “Choose data directory”
+dialog (laanwj)</li>
+  <li>#8517 <code class="highlighter-rouge">2468292</code> Show wallet HD state in statusbar (jonasschnelli)</li>
+  <li>#8463 <code class="highlighter-rouge">62a5a8a</code> Remove Priority from coincontrol dialog (MarcoFalke)</li>
+  <li>#7579 <code class="highlighter-rouge">0606f95</code> Show network/chain errors in the GUI (jonasschnelli)</li>
+  <li>#8583 <code class="highlighter-rouge">c19f8a4</code> Show XTHIN in GUI (rebroad)</li>
+  <li>#7783 <code class="highlighter-rouge">4335d5a</code> RPC-Console: support nested commands and simple value queries
+(jonasschnelli)</li>
+  <li>#8672 <code class="highlighter-rouge">6052d50</code> Show transaction size in transaction details window (Cocosoft)</li>
+  <li>#8777 <code class="highlighter-rouge">fec6af7</code> WalletModel: Expose disablewallet (MarcoFalke)</li>
+  <li>#8371 <code class="highlighter-rouge">24f72e9</code> Add out-of-sync modal info layer (jonasschnelli)</li>
+  <li>#8885 <code class="highlighter-rouge">b2fec4e</code> Fix ban from qt console (theuni)</li>
+  <li>#8821 <code class="highlighter-rouge">bf8e68a</code> sync-overlay: Don’t block during reindex (MarcoFalke)</li>
+  <li>#8906 <code class="highlighter-rouge">088d1f4</code> sync-overlay: Don’t show progress twice (MarcoFalke)</li>
+  <li>#8918 <code class="highlighter-rouge">47ace42</code> Add “Copy URI” to payment request context menu (luke-jr)</li>
+  <li>#8925 <code class="highlighter-rouge">f628d9a</code> Display minimum ping in debug window (rebroad)</li>
+  <li>#8774 <code class="highlighter-rouge">3e942a7</code> Qt refactors to better abstract wallet access (luke-jr)</li>
+  <li>#8985 <code class="highlighter-rouge">7b1bfa3</code> Use pindexBestHeader instead of setBlockIndexCandidates for
+NotifyHeaderTip() (jonasschnelli)</li>
+  <li>#8989 <code class="highlighter-rouge">d2143dc</code> Overhaul smart-fee slider, adjust default confirmation target
+(jonasschnelli)</li>
+  <li>#9043 <code class="highlighter-rouge">273bde3</code> Return useful error message on ATMP failure (MarcoFalke)</li>
+  <li>#9088 <code class="highlighter-rouge">4e57824</code> Reduce ambiguity of warning message (rebroad)</li>
+  <li>#8874 <code class="highlighter-rouge">e984730</code> Multiple Selection for peer and ban tables (achow101)</li>
+  <li>#9145 <code class="highlighter-rouge">924745d</code> Make network disabled icon 50% opaque (MarcoFalke)</li>
+  <li>#9130 <code class="highlighter-rouge">ac489b2</code> Mention the new network toggle functionality in the tooltip
+(paveljanik)</li>
+  <li>#9218 <code class="highlighter-rouge">4d955fc</code> Show progress overlay when clicking spinner icon (laanwj)</li>
+  <li>#9280 <code class="highlighter-rouge">e15660c</code> Show ModalOverlay by pressing the progress bar, allow hiding
+(jonasschnelli)</li>
+  <li>#9296 <code class="highlighter-rouge">fde7d99</code> Fix missed change to WalletTx structure (morcos)</li>
+  <li>#9266 <code class="highlighter-rouge">2044e37</code> Bugfix: Qt/RPCConsole: Put column enum in the right places
+(luke-jr)</li>
+  <li>#9255 <code class="highlighter-rouge">9851a84</code> layoutAboutToChange signal is called layoutAboutToBeChanged
+(laanwj)</li>
+  <li>#9330 <code class="highlighter-rouge">47e6a19</code> Console: add security warning (jonasschnelli)</li>
+  <li>#9329 <code class="highlighter-rouge">db45ad8</code> Console: allow empty arguments (jonasschnelli)</li>
+  <li>#8877 <code class="highlighter-rouge">6dc4c43</code> Qt RPC console: history sensitive-data filter, and saving
+input line when browsing history (luke-jr)</li>
+  <li>#9462 <code class="highlighter-rouge">649cf5f</code> Do not translate tilde character (MarcoFalke)</li>
+  <li>#9457 <code class="highlighter-rouge">123ea73</code> Select more files for translation (MarcoFalke)</li>
+  <li>#9413 <code class="highlighter-rouge">fd7d8c7</code> CoinControl: Allow non-wallet owned change addresses
+(jonasschnelli)</li>
+  <li>#9461 <code class="highlighter-rouge">b250686</code> Improve progress display during headers-sync and peer-finding
+(jonasschnelli)</li>
+  <li>#9588 <code class="highlighter-rouge">5086452</code> Use nPowTargetSpacing constant (MarcoFalke)</li>
+  <li>#9637 <code class="highlighter-rouge">d9e4d1d</code> Fix transaction details output-index to reflect vout index
+(jonasschnelli)</li>
+  <li>#9718 <code class="highlighter-rouge">36f9d3a</code> Qt/Intro: Various fixes (luke-jr)</li>
+  <li>#9735 <code class="highlighter-rouge">ec66d06</code> devtools: Handle Qt formatting characters edge-case in
+update-translations.py (laanwj)</li>
+  <li>#9755 <code class="highlighter-rouge">a441db0</code> Bugfix: Qt/Options: Restore persistent “restart required”
+notice (luke-jr)</li>
+  <li>#9817 <code class="highlighter-rouge">7d75a5a</code> Fix segfault crash when shutdown the GUI in disablewallet mode
+(jonasschnelli)</li>
+</ul>
+
+<h3 id="wallet">Wallet</h3>
+
+<ul>
+  <li>#8152 <code class="highlighter-rouge">b9c1cd8</code> Remove <code class="highlighter-rouge">CWalletDB*</code> parameter from CWallet::AddToWallet
+(pstratem)</li>
+  <li>#8432 <code class="highlighter-rouge">c7e05b3</code> Make CWallet::fFileBacked private (pstratem)</li>
+  <li>#8445 <code class="highlighter-rouge">f916700</code> Move CWallet::setKeyPool to private section of CWallet
+(pstratem)</li>
+  <li>#8564 <code class="highlighter-rouge">0168019</code> Remove unused code/conditions in ReadAtCursor (jonasschnelli)</li>
+  <li>#8601 <code class="highlighter-rouge">37ac678</code> Add option to opt into full-RBF when sending funds (rebase,
+original by petertodd) (laanwj)</li>
+  <li>#8494 <code class="highlighter-rouge">a5b20ed</code> init, wallet: ParameterInteraction() iff wallet enabled
+(MarcoFalke)</li>
+  <li>#8760 <code class="highlighter-rouge">02ac669</code> init: Get rid of some <code class="highlighter-rouge">ENABLE_WALLET</code> (MarcoFalke)</li>
+  <li>#8696 <code class="highlighter-rouge">a1f8d3e</code> Wallet: Remove last external reference to CWalletDB (pstratem)</li>
+  <li>#8768 <code class="highlighter-rouge">886e8c9</code> init: Get rid of fDisableWallet (MarcoFalke)</li>
+  <li>#8486 <code class="highlighter-rouge">ab0b411</code> Add high transaction fee warnings (MarcoFalke)</li>
+  <li>#8851 <code class="highlighter-rouge">940748b</code> Move key derivation logic from GenerateNewKey to
+DeriveNewChildKey (pstratem)</li>
+  <li>#8287 <code class="highlighter-rouge">e10af96</code> Set fLimitFree = true (MarcoFalke)</li>
+  <li>#8928 <code class="highlighter-rouge">c587577</code> Fix init segfault where InitLoadWallet() calls ATMP before
+genesis (TheBlueMatt)</li>
+  <li>#7551 <code class="highlighter-rouge">f2d7056</code> Add importmulti RPC call (pedrobranco)</li>
+  <li>#9016 <code class="highlighter-rouge">0dcb888</code> Return useful error message on ATMP failure (instagibbs)</li>
+  <li>#8753 <code class="highlighter-rouge">f8723d2</code> Locked memory manager (laanwj)</li>
+  <li>#8828 <code class="highlighter-rouge">a4fd8df</code> Move CWalletDB::ReorderTransactions to CWallet (pstratem)</li>
+  <li>#8977 <code class="highlighter-rouge">6a1343f</code> Refactor wallet/init interaction (Reaccept wtx, flush thread)
+(jonasschnelli)</li>
+  <li>#9036 <code class="highlighter-rouge">ed0cc50</code> Change default confirm target from 2 to 6 (laanwj)</li>
+  <li>#9071 <code class="highlighter-rouge">d1871da</code> Declare wallet.h functions inline (sipa)</li>
+  <li>#9132 <code class="highlighter-rouge">f54e460</code> Make strWalletFile const (jonasschnelli)</li>
+  <li>#9141 <code class="highlighter-rouge">5ea5e04</code> Remove unnecessary calls to CheckFinalTx (jonasschnelli)</li>
+  <li>#9165 <code class="highlighter-rouge">c01f16a</code> SendMoney: use already-calculated balance (instagibbs)</li>
+  <li>#9311 <code class="highlighter-rouge">a336d13</code> Flush wallet after abandontransaction (morcos)</li>
+  <li>#8717 <code class="highlighter-rouge">38e4887</code> Addition of ImmatureCreditCached to MarkDirty()
+(spencerlievens)</li>
+  <li>#9446 <code class="highlighter-rouge">510c0d9</code> SetMerkleBranch: remove unused code, remove cs_main lock
+requirement (jonasschnelli)</li>
+  <li>#8776 <code class="highlighter-rouge">2a524b8</code> Wallet refactoring leading up to multiwallet (luke-jr)</li>
+  <li>#9465 <code class="highlighter-rouge">a7d55c9</code> Do not perform ECDSA signing in the fee calculation inner loop
+(gmaxwell)</li>
+  <li>#9404 <code class="highlighter-rouge">12e3112</code> Smarter coordination of change and fee in CreateTransaction
+(morcos)</li>
+  <li>#9377 <code class="highlighter-rouge">fb75cd0</code> fundrawtransaction: Keep change-output keys by default, make
+it optional (jonasschnelli)</li>
+  <li>#9578 <code class="highlighter-rouge">923dc44</code> Add missing mempool lock for CalculateMemPoolAncestors
+(TheBlueMatt)</li>
+  <li>#9227 <code class="highlighter-rouge">02464da</code> Make nWalletDBUpdated atomic to avoid a potential race
+(pstratem)</li>
+  <li>#9764 <code class="highlighter-rouge">f8af89a</code> Prevent “overrides a member function but is not marked
+‘override’” warnings (laanwj)</li>
+  <li>#9771 <code class="highlighter-rouge">e43a585</code> Add missing cs_wallet lock that triggers new lock held
+assertion (ryanofsky)</li>
+  <li>#9316 <code class="highlighter-rouge">3097ea4</code> Disable free transactions when relay is disabled (MarcoFalke)</li>
+  <li>#9615 <code class="highlighter-rouge">d2c9e4d</code> Wallet incremental fee (morcos)</li>
+  <li>#9760 <code class="highlighter-rouge">40c754c</code> Remove importmulti always-true check (ryanofsky)</li>
+</ul>
+
+<h3 id="tests-and-qa">Tests and QA</h3>
+
+<ul>
+  <li>#8270 <code class="highlighter-rouge">6e5e5ab</code> Tests: Use portable #! in python scripts (/usr/bin/env)
+(ChoHag)</li>
+  <li>#8534,#8504 Remove java comparison tool (laanwj,MarcoFalke)</li>
+  <li>#8482 <code class="highlighter-rouge">740cff5</code> Use single cache dir for chains (MarcoFalke)</li>
+  <li>#8450 <code class="highlighter-rouge">21857d2</code> Replace <code class="highlighter-rouge">rpc_wallet_tests.cpp</code> with python RPC unit tests
+(pstratem)</li>
+  <li>#8671 <code class="highlighter-rouge">ddc3080</code> Minimal fix to slow prevector tests as stopgap measure
+(JeremyRubin)</li>
+  <li>#8680 <code class="highlighter-rouge">666eaf0</code> Address Travis spurious failures (theuni)</li>
+  <li>#8789 <code class="highlighter-rouge">e31a43c</code> pull-tester: Only print output when failed (MarcoFalke)</li>
+  <li>#8810 <code class="highlighter-rouge">14e8f99</code> tests: Add exception error message for JSONRPCException
+(laanwj)</li>
+  <li>#8830 <code class="highlighter-rouge">ef0801b</code> test: Add option to run bitcoin-util-test.py manually
+(jnewbery)</li>
+  <li>#8881 <code class="highlighter-rouge">e66cc1d</code> Add some verbose logging to bitcoin-util-test.py (jnewbery)</li>
+  <li>#8922 <code class="highlighter-rouge">0329511</code> Send segwit-encoded blocktxn messages in p2p-compactblocks
+(TheBlueMatt)</li>
+  <li>#8873 <code class="highlighter-rouge">74dc388</code> Add microbenchmarks to profile more code paths (ryanofsky)</li>
+  <li>#9032 <code class="highlighter-rouge">6a8be7b</code> test: Add format-dependent comparison to bctest (laanwj)</li>
+  <li>#9023 <code class="highlighter-rouge">774db92</code> Add logging to bitcoin-util-test.py (jnewbery)</li>
+  <li>#9065 <code class="highlighter-rouge">c9bdf9a</code> Merge <code class="highlighter-rouge">doc/unit-tests.md</code> into <code class="highlighter-rouge">src/test/README.md</code> (laanwj)</li>
+  <li>#9069 <code class="highlighter-rouge">ed64bce</code> Clean up bctest.py and bitcoin-util-test.py (jnewbery)</li>
+  <li>#9095 <code class="highlighter-rouge">b8f43e3</code> test: Fix test_random includes (MarcoFalke)</li>
+  <li>#8894 <code class="highlighter-rouge">faec09b</code> Testing: Include fRelay in mininode version messages
+(jnewbery)</li>
+  <li>#9097 <code class="highlighter-rouge">e536499</code> Rework <code class="highlighter-rouge">sync_*</code> and preciousblock.py (MarcoFalke)</li>
+  <li>#9049 <code class="highlighter-rouge">71bc39e</code> Remove duplicatable duplicate-input check from
+CheckTransaction (TheBlueMatt)</li>
+  <li>#9136 <code class="highlighter-rouge">b422913</code> sync_blocks cleanup (ryanofsky)</li>
+  <li>#9151 <code class="highlighter-rouge">4333b1c</code> proxy_test: Calculate hardcoded port numbers (MarcoFalke)</li>
+  <li>#9206 <code class="highlighter-rouge">e662d28</code> Make test constant consistent with consensus.h (btcdrak)</li>
+  <li>#9139 <code class="highlighter-rouge">0de7fd3</code> Change sync_blocks to pick smarter maxheight (on top of
+#9196) (ryanofsky)</li>
+  <li>#9100 <code class="highlighter-rouge">97ec6e5</code> tx_valid: re-order inputs to how they are encoded (dcousens)</li>
+  <li>#9202 <code class="highlighter-rouge">e56cf67</code> bench: Add support for measuring CPU cycles (laanwj)</li>
+  <li>#9223 <code class="highlighter-rouge">5412c08</code> unification of Bloom filter representation (s-matthew-english)</li>
+  <li>#9257 <code class="highlighter-rouge">d7ba4a2</code> Dump debug logs on travis failures (sdaftuar)</li>
+  <li>#9221 <code class="highlighter-rouge">9e4bb31</code> Get rid of duplicate code (MarcoFalke)</li>
+  <li>#9274 <code class="highlighter-rouge">919db03</code> Use cached utxo set to fix performance regression (MarcoFalke)</li>
+  <li>#9276 <code class="highlighter-rouge">ea33f19</code> Some minor testing cleanups (morcos)</li>
+  <li>#9291 <code class="highlighter-rouge">8601784</code> Remove mapOrphanTransactionsByPrev from DoS_tests (sipa)</li>
+  <li>#9309 <code class="highlighter-rouge">76fcd9d</code> Wallet needs to stay unlocked for whole test (morcos)</li>
+  <li>#9172 <code class="highlighter-rouge">5bc209c</code> Resurrect pstratem’s “Simple fuzzing framework” (laanwj)</li>
+  <li>#9331 <code class="highlighter-rouge">c6fd923</code> Add test for rescan feature of wallet key import RPCs
+(ryanofsky)</li>
+  <li>#9354 <code class="highlighter-rouge">b416095</code> Make fuzzer actually test CTxOutCompressor (sipa)</li>
+  <li>#9390,#9416 travis: make distdir (MarcoFalke)</li>
+  <li>#9308 <code class="highlighter-rouge">0698639</code> test: Add CCoinsViewCache Access/Modify/Write tests
+(ryanofsky)</li>
+  <li>#9406 <code class="highlighter-rouge">0f921e6</code> Re-enable a blank v1 Tx JSON test (droark)</li>
+  <li>#9435 <code class="highlighter-rouge">dbc8a8c</code> Removed unused variable in test, fixing warning (ryanofsky)</li>
+  <li>#9436 <code class="highlighter-rouge">dce853e</code> test: Include tx data in <code class="highlighter-rouge">EXTRA_DIST</code> (MarcoFalke)</li>
+  <li>#9525 <code class="highlighter-rouge">02e5308</code> test: Include tx data in <code class="highlighter-rouge">EXTRA_DIST</code> (MarcoFalke)</li>
+  <li>#9498 <code class="highlighter-rouge">054d664</code> Basic CCheckQueue Benchmarks (JeremyRubin)</li>
+  <li>#9554 <code class="highlighter-rouge">0b96abc</code> test: Avoid potential NULL pointer dereference in
+<code class="highlighter-rouge">addrman_tests.cpp</code> (practicalswift)</li>
+  <li>#9628 <code class="highlighter-rouge">f895023</code> Increase a sync_blocks timeout in pruning.py (sdaftuar)</li>
+  <li>#9638 <code class="highlighter-rouge">a7ea2f8</code> Actually test assertions in pruning.py (MarcoFalke)</li>
+  <li>#9647 <code class="highlighter-rouge">e99f0d7</code> Skip RAII event tests if libevent is built without
+<code class="highlighter-rouge">event_set_mem_functions</code> (luke-jr)</li>
+  <li>#9691 <code class="highlighter-rouge">fc67cd2</code> Init ECC context for <code class="highlighter-rouge">test_bitcoin_fuzzy</code> (gmaxwell)</li>
+  <li>#9712 <code class="highlighter-rouge">d304fef</code> bench: Fix initialization order in registration (laanwj)</li>
+  <li>#9707 <code class="highlighter-rouge">b860915</code> Fix RPC failure testing (jnewbery)</li>
+  <li>#9269 <code class="highlighter-rouge">43e8150</code> Align struct COrphan definition (sipa)</li>
+  <li>#9820 <code class="highlighter-rouge">599c69a</code> Fix pruning test broken by 2 hour manual prune window
+(ryanofsky)</li>
+  <li>#9824 <code class="highlighter-rouge">260c71c</code> qa: Check return code when stopping nodes (MarcoFalke)</li>
+  <li>#9875 <code class="highlighter-rouge">50953c2</code> tests: Fix dangling pwalletMain pointer in wallet tests
+(laanwj)</li>
+  <li>#9839 <code class="highlighter-rouge">eddaa6b</code> [qa] Make import-rescan.py watchonly check reliable
+(ryanofsky)</li>
+</ul>
+
+<h3 id="documentation">Documentation</h3>
+
+<ul>
+  <li>#8332 <code class="highlighter-rouge">806b9e7</code> Clarify witness branches in transaction.h serialization
+(dcousens)</li>
+  <li>#8935 <code class="highlighter-rouge">0306978</code> Documentation: Building on Windows with WSL (pooleja)</li>
+  <li>#9144 <code class="highlighter-rouge">c98f6b3</code> Correct waitforblockheight example help text (fanquake)</li>
+  <li>#9407 <code class="highlighter-rouge">041331e</code> Added missing colons in when running help command (anditto)</li>
+  <li>#9378 <code class="highlighter-rouge">870cd2b</code> Add documentation for CWalletTx::fFromMe member (ryanofsky)</li>
+  <li>#9297 <code class="highlighter-rouge">0b73807</code> Various RPC help outputs updated (Mirobit)</li>
+  <li>#9613 <code class="highlighter-rouge">07421cf</code> Clarify getbalance help string to explain interaction with
+bumpfee (ryanofsky)</li>
+  <li>#9663 <code class="highlighter-rouge">e30d928</code> Clarify listunspent amount description (instagibbs)</li>
+  <li>#9396 <code class="highlighter-rouge">d65a13b</code> Updated listsinceblock rpc documentation (accraze)</li>
+  <li>#8747 <code class="highlighter-rouge">ce43630</code> rpc: Fix transaction size comments and RPC help text
+(jnewbery)</li>
+  <li>#8058 <code class="highlighter-rouge">bbd9740</code> Doc: Add issue template (AmirAbrams)</li>
+  <li>#8567 <code class="highlighter-rouge">85d4e21</code> Add default port numbers to REST doc (djpnewton)</li>
+  <li>#8624 <code class="highlighter-rouge">89de153</code> build: Mention curl (MarcoFalke)</li>
+  <li>#8786 <code class="highlighter-rouge">9da7366</code> Mandatory copyright agreement (achow101)</li>
+  <li>#8823 <code class="highlighter-rouge">7b05af6</code> Add privacy recommendation when running hidden service
+(laanwj)</li>
+  <li>#9433 <code class="highlighter-rouge">caa2f10</code> Update the Windows build notes (droark)</li>
+  <li>#8879 <code class="highlighter-rouge">f928050</code> Rework docs (MarcoFalke)</li>
+  <li>#8887 <code class="highlighter-rouge">61d191f</code> Improve GitHub issue template (fanquake)</li>
+  <li>#8787 <code class="highlighter-rouge">279bbad</code> Add missing autogen to example builds (AmirAbrams)</li>
+  <li>#8892 <code class="highlighter-rouge">d270c30</code> Add build instructions for FreeBSD (laanwj)</li>
+  <li>#8890 <code class="highlighter-rouge">c71a654</code> Update Doxygen configuration file (fanquake)</li>
+  <li>#9207 <code class="highlighter-rouge">fa1f944</code> Move comments above bash command in build-unix (AmirAbrams)</li>
+  <li>#9219 <code class="highlighter-rouge">c4522e7</code> Improve windows build instructions using Linux subsystem
+(laanwj)</li>
+  <li>#8954 <code class="highlighter-rouge">932d02a</code> contrib: Add README for pgp keys (MarcoFalke)</li>
+  <li>#9093 <code class="highlighter-rouge">2fae5b9</code> release-process: Mention GitHub release and archived release
+notes (MarcoFalke)</li>
+  <li>#8743 <code class="highlighter-rouge">bae178f</code> Remove old manpages from contrib/debian in favour of doc/man
+(fanquake)</li>
+  <li>#9550 <code class="highlighter-rouge">4105cb6</code> Trim down the XP notice and say more about what we support
+(gmaxwell)</li>
+  <li>#9246 <code class="highlighter-rouge">9851498</code> Developer docs about existing subtrees (gmaxwell)</li>
+  <li>#9401 <code class="highlighter-rouge">c2ea1e6</code> Make rpcauth help message clearer, add example in example
+.conf (instagibbs)</li>
+  <li>#9022,#9033 Document dropping OS X 10.7 support (fanquake, MarcoFalke)</li>
+  <li>#8771 <code class="highlighter-rouge">bc9e3ab</code> contributing: Mention not to open several pulls (luke-jr)</li>
+  <li>#8852 <code class="highlighter-rouge">7b784cc</code> Mention Gitian building script in doc (Laudaa) (laanwj)</li>
+  <li>#8915 <code class="highlighter-rouge">03dd707</code> Add copyright/patent issues to possible NACK reasons
+(petertodd)</li>
+  <li>#8965 <code class="highlighter-rouge">23e03f8</code> Mention that PPA doesn’t support Debian (anduck)</li>
+  <li>#9115 <code class="highlighter-rouge">bfc7aad</code> Mention reporting security issues responsibly (paveljanik)</li>
+  <li>#9840 <code class="highlighter-rouge">08e0690</code> Update sendfrom RPC help to correct coin selection
+misconception (ryanofsky)</li>
+  <li>#9865 <code class="highlighter-rouge">289204f</code> Change bitcoin address in RPC help message (marijnfs)</li>
+</ul>
+
+<h3 id="miscellaneous">Miscellaneous</h3>
+
+<ul>
+  <li>#8274 <code class="highlighter-rouge">7a2d402</code> util: Update tinyformat (laanwj)</li>
+  <li>#8291 <code class="highlighter-rouge">5cac8b1</code> util: CopyrightHolders: Check for untranslated substitution
+(MarcoFalke)</li>
+  <li>#8557 <code class="highlighter-rouge">44691f3</code> contrib: Rework verifybinaries (MarcoFalke)</li>
+  <li>#8621 <code class="highlighter-rouge">e8ed6eb</code> contrib: python: Don’t use shell=True (MarcoFalke)</li>
+  <li>#8813 <code class="highlighter-rouge">fb24d7e</code> bitcoind: Daemonize using daemon(3) (laanwj)</li>
+  <li>#9004 <code class="highlighter-rouge">67728a3</code> Clarify <code class="highlighter-rouge">listenonion</code> (unsystemizer)</li>
+  <li>#8674 <code class="highlighter-rouge">bae81b8</code> tools for analyzing, updating and adding copyright headers in
+source files (isle2983)</li>
+  <li>#8976 <code class="highlighter-rouge">8c6218a</code> libconsensus: Add input validation of flags (laanwj)</li>
+  <li>#9112 <code class="highlighter-rouge">46027e8</code> Avoid ugly exception in log on unknown inv type (laanwj)</li>
+  <li>#8837 <code class="highlighter-rouge">2108911</code> Allow bitcoin-tx to parse partial transactions (jnewbery)</li>
+  <li>#9204 <code class="highlighter-rouge">74ced54</code> Clarify CreateTransaction error messages (instagibbs)</li>
+  <li>#9265 <code class="highlighter-rouge">31bcc66</code> bitcoin-cli: Make error message less confusing (laanwj)</li>
+  <li>#9303 <code class="highlighter-rouge">72bf1b3</code> Update comments in ctaes (sipa)</li>
+  <li>#9417 <code class="highlighter-rouge">c4b7d4f</code> Do not evaluate hidden LogPrint arguments (sipa)</li>
+  <li>#9506 <code class="highlighter-rouge">593a00c</code> RFC: Improve style for if indentation (sipa)</li>
+  <li>#8883 <code class="highlighter-rouge">d5d4ad8</code> Add all standard TXO types to bitcoin-tx (jnewbery)</li>
+  <li>#9531 <code class="highlighter-rouge">23281a4</code> Release notes for estimation changes  (morcos)</li>
+  <li>#9486 <code class="highlighter-rouge">f62bc10</code> Make peer=%d log prints consistent (TheBlueMatt)</li>
+  <li>#9552 <code class="highlighter-rouge">41cb05c</code> Add IPv6 support to qos.sh (jamesmacwhite)</li>
+  <li>#9542 <code class="highlighter-rouge">e9e7993</code> Docs: Update CONTRIBUTING.md (jnewbery)</li>
+  <li>#9649 <code class="highlighter-rouge">53ab12d</code> Remove unused clang format dev script (MarcoFalke)</li>
+  <li>#9625 <code class="highlighter-rouge">77bd8c4</code> Increase minimum debug.log size to 10MB after shrink (morcos)</li>
+  <li>#9070 <code class="highlighter-rouge">7b22e50</code> Lockedpool fixes (kazcw)</li>
+  <li>#8779 <code class="highlighter-rouge">7008e28</code> contrib: Delete spendfrom (MarcoFalke)</li>
+  <li>#9587,#8793,#9496,#8191,#8109,#8655,#8472,#8677,#8981,#9124  Avoid shadowing
+of variables (paveljanik)</li>
+  <li>#9063 <code class="highlighter-rouge">f2a6e82</code> Use deprecated <code class="highlighter-rouge">MAP_ANON</code> if <code class="highlighter-rouge">MAP_ANONYMOUS</code> is not defined
+(paveljanik)</li>
+  <li>#9060 <code class="highlighter-rouge">1107653</code> Fix bloom filter init to isEmpty = true (robmcl4)</li>
+  <li>#8613 <code class="highlighter-rouge">613bda4</code> LevelDB 1.19 (sipa)</li>
+  <li>#9225 <code class="highlighter-rouge">5488514</code> Fix some benign races (TheBlueMatt)</li>
+  <li>#8736 <code class="highlighter-rouge">5fa7b07</code> base58: Improve DecodeBase58 performance (wjx)</li>
+  <li>#9039 <code class="highlighter-rouge">e81df49</code> Various serialization simplifcations and optimizations (sipa)</li>
+  <li>#9010 <code class="highlighter-rouge">a143b88</code> Split up AppInit2 into multiple phases, daemonize after
+datadir lock errors (laanwj)</li>
+  <li>#9230 <code class="highlighter-rouge">c79e52a</code> Fix some benign races in timestamp logging (TheBlueMatt)</li>
+  <li>#9183,#9260 Mrs Peacock in The Library with The Candlestick (killed
+main.{h,cpp}) (TheBlueMatt)</li>
+  <li>#9236 <code class="highlighter-rouge">7f72568</code> Fix races for strMiscWarning and <code class="highlighter-rouge">fLargeWork*Found</code>, make QT
+runawayException use GetWarnings (gmaxwell)</li>
+  <li>#9243 <code class="highlighter-rouge">7aa7004</code> Clean up mapArgs and mapMultiArgs Usage (TheBlueMatt)</li>
+  <li>#9387 <code class="highlighter-rouge">cfe41d7</code> RAII of libevent stuff using unique ptrs with deleters
+(kallewoof)</li>
+  <li>#9472 <code class="highlighter-rouge">fac0f30</code> Disentangle progress estimation from checkpoints and update it
+(sipa)</li>
+  <li>#9512 <code class="highlighter-rouge">6012967</code> Fix various things -fsanitize complains about (sipa)</li>
+  <li>#9373,#9580 Various linearization script issues (droark)</li>
+  <li>#9674 <code class="highlighter-rouge">dd163f5</code> Lock debugging: Always enforce strict lock ordering (try or
+not) (TheBlueMatt)</li>
+  <li>#8453,#9334  Update to latest libsecp256k1 (laanwj,sipa)</li>
+  <li>#9656 <code class="highlighter-rouge">7c93952</code> Check verify-commits on pushes to master (TheBlueMatt)</li>
+  <li>#9679 <code class="highlighter-rouge">a351162</code> Access WorkQueue::running only within the cs lock
+(TheBlueMatt)</li>
+  <li>#9777 <code class="highlighter-rouge">8dee822</code> Handle unusual maxsigcachesize gracefully (jnewbery)</li>
+  <li>#8863,#8807 univalue: Pull subtree (MarcoFalke)</li>
+  <li>#9798 <code class="highlighter-rouge">e22c067</code> Fix Issue #9775 (Check returned value of fopen) (kirit93)</li>
+  <li>#9856 <code class="highlighter-rouge">69832aa</code> Terminate immediately when allocation fails (theuni)</li>
+</ul>
+
+<h2 id="credits">Credits</h2>
+
+<p>Thanks to everyone who directly contributed to this release:</p>
+
+<ul>
+  <li>accraze</li>
+  <li>adlawren</li>
+  <li>Alex Morcos</li>
+  <li>Alexey Vesnin</li>
+  <li>Amir Abrams</li>
+  <li>Anders Øyvind Urke-Sætre</li>
+  <li>Anditto Heristyo</li>
+  <li>Andrew Chow</li>
+  <li>anduck</li>
+  <li>Anthony Towns</li>
+  <li>Brian Deery</li>
+  <li>BtcDrak</li>
+  <li>Chris Moore</li>
+  <li>Chris Stewart</li>
+  <li>Christian Barcenas</li>
+  <li>Christian Decker</li>
+  <li>Cory Fields</li>
+  <li>crowning-</li>
+  <li>CryptAxe</li>
+  <li>CryptoVote</li>
+  <li>Dagur Valberg Johannsson</li>
+  <li>Daniel Cousens</li>
+  <li>Daniel Kraft</li>
+  <li>Derek Miller</li>
+  <li>djpnewton</li>
+  <li>Don Patterson</li>
+  <li>Doug</li>
+  <li>Douglas Roark</li>
+  <li>Ethan Heilman</li>
+  <li>fsb4000</li>
+  <li>Gaurav Rana</li>
+  <li>Geoffrey Tsui</li>
+  <li>Greg Walker</li>
+  <li>Gregory Maxwell</li>
+  <li>Gregory Sanders</li>
+  <li>Hampus Sjöberg</li>
+  <li>isle2983</li>
+  <li>Ivo van der Sangen</li>
+  <li>James White</li>
+  <li>Jameson Lopp</li>
+  <li>Jeremy Rubin</li>
+  <li>Jiaxing Wang</li>
+  <li>jnewbery</li>
+  <li>John Newbery</li>
+  <li>Johnson Lau</li>
+  <li>Jon Lund Steffensen</li>
+  <li>Jonas Schnelli</li>
+  <li>jonnynewbs</li>
+  <li>Jorge Timón</li>
+  <li>Justin Camarena</li>
+  <li>Karl-Johan Alm</li>
+  <li>Kaz Wesley</li>
+  <li>kirit93</li>
+  <li>Koki Takahashi</li>
+  <li>Lauda</li>
+  <li>leijurv</li>
+  <li>lizhi</li>
+  <li>Luke Dashjr</li>
+  <li>maiiz</li>
+  <li>MarcoFalke</li>
+  <li>Marijn Stollenga</li>
+  <li>Marty Jones</li>
+  <li>Masahiko Hyuga</li>
+  <li>Matt Corallo</li>
+  <li>Matthew King</li>
+  <li>matthias</li>
+  <li>Micha</li>
+  <li>Michael Ford</li>
+  <li>Michael Rotarius</li>
+  <li>Mitchell Cash</li>
+  <li>mrbandrews</li>
+  <li>mruddy</li>
+  <li>Nicolas DORIER</li>
+  <li>nomnombtc</li>
+  <li>Patrick Strateman</li>
+  <li>Pavel Janík</li>
+  <li>Pedro Branco</li>
+  <li>Peter Todd</li>
+  <li>Pieter Wuille</li>
+  <li>poole_party</li>
+  <li>practicalswift</li>
+  <li>R E Broadley</li>
+  <li>randy-waterhouse</li>
+  <li>Richard Kiss</li>
+  <li>Robert McLaughlin</li>
+  <li>rodasmith</li>
+  <li>Russell Yanofsky</li>
+  <li>S. Matthew English</li>
+  <li>Sev</li>
+  <li>Spencer Lievens</li>
+  <li>Stanislas Marion</li>
+  <li>Steven</li>
+  <li>Suhas Daftuar</li>
+  <li>Thomas Snider</li>
+  <li>UdjinM6</li>
+  <li>unsystemizer</li>
+  <li>whythat</li>
+  <li>Will Binns</li>
+  <li>Wladimir J. van der Laan</li>
+  <li>wodry</li>
+  <li>Zak Wilcox</li>
+</ul>
+
+<p>As well as everyone that helped translating on
+<a href="https://www.transifex.com/projects/p/bitcoin/">Transifex</a>.</p>
+
+  </article>
+
+  <p class="post-meta">Posted to the <a href="/en/blog">Bitcoin.org Site
+  Blog</a> on 08 March 2017  by <a href="https://github.com/wbnns">Will Binns</a>
+</p>
+
+</div>
+
+</div>
+
+  <div class="footer">
+    
+
+<div>
+  <p>Bitcoin.org is community supported: <a href="bitcoin:1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE" target="_blank">1GwV7fPX97hmavc6iNrUZUogmjpLPrPFoE</a></p>
+</div>
+
+<div class="footermenu">
+  <a href="/en/alerts" class="statusmenu">Network Status</a>
+  <a href="/en/legal">Legal</a>
+  
+  <a href="/en/privacy">Privacy Policy</a>
+  
+  <a href="/en/press">Press</a>
+  <a href="/en/about-us">About bitcoin.org</a>
+  <a href="/en/blog">Blog</a>
+</div>
+
+    
+
+<div class="footersponsor">
+  <!--<div><span>A community website sponsored by</span> <a href="https://bitcoinfoundation.org/"><img src="/img/brand/bitcoinfoundation.png" alt="Bitcoin Foundation"></a></div>-->
+</div>
+
+    
+
+<div class="footerlicense">© Bitcoin Project 2009-2017 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a></div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+</body>
+
+</html>
