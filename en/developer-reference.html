@@ -2172,8 +2172,8 @@ d39f608a7775b537729884d4e6633bb2
 
   <p>The response to a <a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> can be a <a href="/en/developer-reference#tx" title="A P2P protocol message which sends a single serialized transaction" class="auto-link"><code class="highlighter-rouge">tx</code> message</a>, <a href="/en/developer-reference#block" title="The P2P network message which sends a serialized block" class="auto-link"><code class="highlighter-rouge">block</code>
 message</a>, <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a>, <a href="/en/developer-reference#ix" title="A P2P protocol message which sends a single serialized transaction via InstantSend" class="auto-link"><code class="highlighter-rouge">ix</code> message</a>, <a href="/en/developer-reference#txlvote" title="A P2P protocol message which masternodes send in response to an ix (transaction lock request) message if the transaction inputs can be locked." class="auto-link"><code class="highlighter-rouge">txlvote</code> message</a>,
-<code class="highlighter-rouge">mnw</code> message, <code class="highlighter-rouge">mnb</code> message, <code class="highlighter-rouge">mnp</code> message, <code class="highlighter-rouge">dstx</code> message, <code class="highlighter-rouge">govobj</code> message,
-<code class="highlighter-rouge">govobjvote</code> message, <code class="highlighter-rouge">mnv</code> message, or <a href="/en/developer-reference#notfound" title="A P2P protocol message sent to indicate that the requested data was not available" class="auto-link"><code class="highlighter-rouge">notfound</code> message</a>.</p>
+<code class="highlighter-rouge">mnw</code> message, <code class="highlighter-rouge">mnb</code> message, <code class="highlighter-rouge">mnp</code> message, <code class="highlighter-rouge">dstx</code> message, <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>,
+<a href="/en/developer-reference#govobj" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>, <code class="highlighter-rouge">mnv</code> message, or <a href="/en/developer-reference#notfound" title="A P2P protocol message sent to indicate that the requested data was not available" class="auto-link"><code class="highlighter-rouge">notfound</code> message</a>.</p>
 
   <p>This message cannot be used to request arbitrary data, such as historic
 transactions no longer in the memory pool or relay set. Full <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> may
@@ -4305,7 +4305,7 @@ features built in to Dash.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <code class="highlighter-rouge">govobj</code> message is …</p>
+  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> is …</p>
 
   <table>
     <thead>
@@ -4377,7 +4377,7 @@ features built in to Dash.</p>
     </tbody>
   </table>
 
-  <p>The following annotated hexdump shows a <code class="highlighter-rouge">govobj</code> message. (The
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>. (The
 <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">00000000000000000000000000000000
@@ -4394,7 +4394,7 @@ Data
 02000000 ............................. Object Type (2 = GOVERNANCE_OBJECT_TRIGGER)
 
 Transaction input
-| UTXO
+| Previous Output
 | | ffefbe4959085907bcd2ba29e357a441
 | | fa7b6e26e25896d8127332bba2419e97 ... Outpoint TXID
 | | 00000000 ........................... Outpoint index number (0)
@@ -4413,6 +4413,8 @@ Transaction input
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/ref_p2p_networking.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a> is …</p>
 
   <table>
     <thead>
@@ -4470,11 +4472,73 @@ Transaction input
     </tbody>
   </table>
 
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>. (The
+<a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">Transaction input
+| Previous Output
+| | 57566a0ef85e6cac3415ced67b0b07e1
+| | 781bafb853650d7c9d56d8bc132cc3b4 ... Outpoint TXID
+| | 00000000 ........................... Outpoint index number (0)
+| 00 ................................... Script length (0)
+| ...................................... Signature (None)
+| ffffffff ............................. Sequence
+
+ad9579d5c181eee904156df1c88b050f
+b8b4d39e5fda71f015996dbf14a51bff...... Parent Hash (0 = root)
+01000000 ............................. Vote Outcome (1 = VOTE_OUTCOME_NONE)
+02000000 ............................. Vote Signal (2 = VOTE_SIGNAL_VALID)
+b517a85900000000 ..................... Vote Create Timestamp(2017-08-31 10:05:41 EDT)
+00000000000000000000000000000000 ..... Collateral Hash
+
+1b049113a81fe913f061ad295561d267
+00b8135a021ab0356a1e89b18d663d0b
+dc45e9c09ee0427223e332b52e8d709e
+6d64e86b6435d7bdf207d8f23b6ae0db
+6f ................................... Masternode Signature</code></pre></figure>
+
   <h4 id="govsync">govsync</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org//edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/ref_p2p_networking.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> is …</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Bytes</th>
+        <th>Name</th>
+        <th>Data type</th>
+        <th>Required</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>32</td>
+        <td>nHash</td>
+        <td>uint256</td>
+        <td>Required</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>#</td>
+        <td>filter</td>
+        <td>CBloomFiter</td>
+        <td>Required</td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>. (The
+<a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">2e46ea5418e097a3dbcccbee3cf2a911
+6fb94ba635153f276dcb2123efcb73ff ..... Hash
+00000000000000000000 ................. Bloom Filter</code></pre></figure>
 
   <h2 id="bitcoin-core-apis">Bitcoin Core APIs</h2>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/bitcoin-core/api-intro.md"><a href="https://github.com/thephez/dash.org//edit/master/_includes/devdoc/bitcoin-core/api-intro.md">Edit</a>
