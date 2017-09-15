@@ -48,11 +48,6 @@ uri: "/en/glossary/header-chain",
 category: "Glossary"
 },
 {
-label: "Bitcoins",
-uri: "/en/glossary/denominations",
-category: "Glossary"
-},
-{
 label: "Block",
 uri: "/en/glossary/block",
 category: "Glossary"
@@ -205,6 +200,11 @@ category: "Glossary"
 {
 label: "Double spend",
 uri: "/en/glossary/double-spend",
+category: "Glossary"
+},
+{
+label: "Duffs",
+uri: "/en/glossary/denominations",
 category: "Glossary"
 },
 {
@@ -615,11 +615,6 @@ category: "Glossary"
 {
 label: "RPC byte order",
 uri: "/en/glossary/rpc-byte-order",
-category: "Glossary"
-},
-{
-label: "Satoshis",
-uri: "/en/glossary/denominations",
 category: "Glossary"
 },
 {
