@@ -921,6 +921,31 @@ uri: "/en/developer-reference#getaddressesbyaccount",
 category: "RPCs"
 },
 {
+label: "GetAddressBalance",
+uri: "/en/developer-reference#getaddressbalance",
+category: "RPCs"
+},
+{
+label: "GetAddressDeltas",
+uri: "/en/developer-reference#getaddressdeltas",
+category: "RPCs"
+},
+{
+label: "GetAddressMempool",
+uri: "/en/developer-reference#getaddressmempool",
+category: "RPCs"
+},
+{
+label: "GetAddressTxids",
+uri: "/en/developer-reference#getaddresstxids",
+category: "RPCs"
+},
+{
+label: "GetAddressUtxos",
+uri: "/en/developer-reference#getaddressutxos",
+category: "RPCs"
+},
+{
 label: "GetBalance",
 uri: "/en/developer-reference#getbalance",
 category: "RPCs"
