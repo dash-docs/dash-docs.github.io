@@ -846,6 +846,11 @@ uri: "/en/developer-reference#createrawtransaction",
 category: "RPCs"
 },
 {
+label: "Debug",
+uri: "/en/developer-reference#debug",
+category: "RPCs"
+},
+{
 label: "DecodeRawTransaction",
 uri: "/en/developer-reference#decoderawtransaction",
 category: "RPCs"
@@ -976,8 +981,18 @@ uri: "/en/developer-reference#getblockhash",
 category: "RPCs"
 },
 {
+label: "GetBlockHashes",
+uri: "/en/developer-reference#getblockhashes",
+category: "RPCs"
+},
+{
 label: "GetBlockHeader",
 uri: "/en/developer-reference#getblockheader",
+category: "RPCs"
+},
+{
+label: "GetBlockHeaders",
+uri: "/en/developer-reference#getblockheaders",
 category: "RPCs"
 },
 {
@@ -998,6 +1013,11 @@ category: "RPCs"
 {
 label: "GetDifficulty",
 uri: "/en/developer-reference#getdifficulty",
+category: "RPCs"
+},
+{
+label: "GetGovernanceInfo",
+uri: "/en/developer-reference#getgovernanceinfo",
 category: "RPCs"
 },
 {
@@ -1071,6 +1091,11 @@ uri: "/en/developer-reference#getpeerinfo",
 category: "RPCs"
 },
 {
+label: "GetPoolInfo",
+uri: "/en/developer-reference#getpoolinfo",
+category: "RPCs"
+},
+{
 label: "GetRawChangeAddress",
 uri: "/en/developer-reference#getrawchangeaddress",
 category: "RPCs"
@@ -1093,6 +1118,16 @@ category: "RPCs"
 {
 label: "GetReceivedByAddress",
 uri: "/en/developer-reference#getreceivedbyaddress",
+category: "RPCs"
+},
+{
+label: "GetSpentInfo",
+uri: "/en/developer-reference#getspentinfo",
+category: "RPCs"
+},
+{
+label: "GetSuperblockBudget",
+uri: "/en/developer-reference#getsuperblockbudget",
 category: "RPCs"
 },
 {
@@ -1128,6 +1163,11 @@ category: "RPCs"
 {
 label: "GetWork",
 uri: "/en/developer-reference#getwork",
+category: "RPCs"
+},
+{
+label: "GObject",
+uri: "/en/developer-reference#gobject",
 category: "RPCs"
 },
 {
@@ -1216,6 +1256,26 @@ uri: "/en/developer-reference#lockunspent",
 category: "RPCs"
 },
 {
+label: "Masternode",
+uri: "/en/developer-reference#masternode",
+category: "RPCs"
+},
+{
+label: "MasternodeBroadcast",
+uri: "/en/developer-reference#masternodebroadcast",
+category: "RPCs"
+},
+{
+label: "MasternodeList",
+uri: "/en/developer-reference#masternodelist",
+category: "RPCs"
+},
+{
+label: "MnSync",
+uri: "/en/developer-reference#mnsync",
+category: "RPCs"
+},
+{
 label: "Move",
 uri: "/en/developer-reference#move",
 category: "RPCs"
@@ -1233,6 +1293,11 @@ category: "RPCs"
 {
 label: "PrioritiseTransaction",
 uri: "/en/developer-reference#prioritisetransaction",
+category: "RPCs"
+},
+{
+label: "PrivateSend",
+uri: "/en/developer-reference#privatesend",
 category: "RPCs"
 },
 {
@@ -1306,6 +1371,11 @@ uri: "/en/developer-reference#signrawtransaction",
 category: "RPCs"
 },
 {
+label: "Spork",
+uri: "/en/developer-reference#spork-rpc",
+category: "RPCs"
+},
+{
 label: "Stop",
 uri: "/en/developer-reference#stop",
 category: "RPCs"
@@ -1333,6 +1403,11 @@ category: "RPCs"
 {
 label: "VerifyTxOutProof",
 uri: "/en/developer-reference#verifytxoutproof",
+category: "RPCs"
+},
+{
+label: "VoteRaw",
+uri: "/en/developer-reference#voteraw",
 category: "RPCs"
 },
 {
