@@ -11,7 +11,7 @@
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta property="og:image" content="https://www.dash.org/assets/img/graphics/dash_circle_normal.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Bitcoin Core version 0.12.1 released</title>
 
@@ -434,45 +434,75 @@ git merge commit are mentioned.</p>
 
 <h3 id="rpc-and-other-apis">RPC and other APIs</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7739">#7739</a> <a href="https://github.com/bitcoin/bitcoin/commit/7ffc2bd"><code class="highlighter-rouge">7ffc2bd</code></a> Add abandoned status to listtransactions (jonasschnelli)</li>
+  <li>
+    <h1 id="ffc2bd-add-abandoned-status-to-listtransactions-jonasschnelli">7739 <code class="highlighter-rouge">7ffc2bd</code> Add abandoned status to listtransactions (jonasschnelli)</h1>
+  </li>
 </ul>
 
 <h3 id="block-and-transaction-handling">Block and transaction handling</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7543">#7543</a> <a href="https://github.com/bitcoin/bitcoin/commit/834aaef"><code class="highlighter-rouge">834aaef</code></a> Backport BIP9, BIP68 and BIP112 with softfork (btcdrak)</li>
+  <li>
+    <h1 id="aaef-backport-bip9-bip68-and-bip112-with-softfork-btcdrak">7543 <code class="highlighter-rouge">834aaef</code> Backport BIP9, BIP68 and BIP112 with softfork (btcdrak)</h1>
+  </li>
 </ul>
 
 <h3 id="p2p-protocol-and-network-code">P2P protocol and network code</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7804">#7804</a> <a href="https://github.com/bitcoin/bitcoin/commit/90f1d24"><code class="highlighter-rouge">90f1d24</code></a> Track block download times per individual block (sipa)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7832">#7832</a> <a href="https://github.com/bitcoin/bitcoin/commit/4c3a00d"><code class="highlighter-rouge">4c3a00d</code></a> Reduce block timeout to 10 minutes (laanwj)</li>
+  <li>
+    <h1 id="f1d24-track-block-download-times-per-individual-block-sipa">7804 <code class="highlighter-rouge">90f1d24</code> Track block download times per individual block (sipa)</h1>
+  </li>
+  <li>
+    <h1 id="c3a00d-reduce-block-timeout-to-10-minutes-laanwj">7832 <code class="highlighter-rouge">4c3a00d</code> Reduce block timeout to 10 minutes (laanwj)</h1>
+  </li>
 </ul>
 
 <h3 id="validation">Validation</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7821">#7821</a> <a href="https://github.com/bitcoin/bitcoin/commit/4226aac"><code class="highlighter-rouge">4226aac</code></a> init: allow shutdown during ‘Activating best chain…’ (laanwj)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7835">#7835</a> <a href="https://github.com/bitcoin/bitcoin/commit/46898e7"><code class="highlighter-rouge">46898e7</code></a> Version 2 transactions remain non-standard until CSV activates (sdaftuar)</li>
+  <li>
+    <h1 id="aac-init-allow-shutdown-during-activating-best-chain-laanwj">7821 <code class="highlighter-rouge">4226aac</code> init: allow shutdown during ‘Activating best chain…’ (laanwj)</h1>
+  </li>
+  <li>
+    <h1 id="e7-version-2-transactions-remain-non-standard-until-csv-activates-sdaftuar">7835 <code class="highlighter-rouge">46898e7</code> Version 2 transactions remain non-standard until CSV activates (sdaftuar)</h1>
+  </li>
 </ul>
 
 <h3 id="build-system">Build system</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7487">#7487</a> <a href="https://github.com/bitcoin/bitcoin/commit/00d57b4"><code class="highlighter-rouge">00d57b4</code></a> Workaround Travis-side CI issues (luke-jr)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7606">#7606</a> <a href="https://github.com/bitcoin/bitcoin/commit/a10da9a"><code class="highlighter-rouge">a10da9a</code></a> No need to set -L and –location for curl (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7614">#7614</a> <a href="https://github.com/bitcoin/bitcoin/commit/ca8f160"><code class="highlighter-rouge">ca8f160</code></a> Add curl to packages (now needed for depends) (luke-jr)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7776">#7776</a> <a href="https://github.com/bitcoin/bitcoin/commit/a784675"><code class="highlighter-rouge">a784675</code></a> Remove unnecessary executables from gitian release (laanwj)</li>
+  <li>
+    <h1 id="d57b4-workaround-travis-side-ci-issues-luke-jr">7487 <code class="highlighter-rouge">00d57b4</code> Workaround Travis-side CI issues (luke-jr)</h1>
+  </li>
+  <li>
+    <h1 id="a10da9a-no-need-to-set--l-and---location-for-curl-marcofalke">7606 <code class="highlighter-rouge">a10da9a</code> No need to set -L and –location for curl (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="ca8f160-add-curl-to-packages-now-needed-for-depends-luke-jr">7614 <code class="highlighter-rouge">ca8f160</code> Add curl to packages (now needed for depends) (luke-jr)</h1>
+  </li>
+  <li>
+    <h1 id="a784675-remove-unnecessary-executables-from-gitian-release-laanwj">7776 <code class="highlighter-rouge">a784675</code> Remove unnecessary executables from gitian release (laanwj)</h1>
+  </li>
 </ul>
 
 <h3 id="wallet">Wallet</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7715">#7715</a> <a href="https://github.com/bitcoin/bitcoin/commit/19866c1"><code class="highlighter-rouge">19866c1</code></a> Fix calculation of balances and available coins. (morcos)</li>
+  <li>
+    <h1 id="c1-fix-calculation-of-balances-and-available-coins-morcos">7715 <code class="highlighter-rouge">19866c1</code> Fix calculation of balances and available coins. (morcos)</h1>
+  </li>
 </ul>
 
 <h3 id="miscellaneous-1">Miscellaneous</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7617">#7617</a> <a href="https://github.com/bitcoin/bitcoin/commit/f04f4fd"><code class="highlighter-rouge">f04f4fd</code></a> Fix markdown syntax and line terminate LogPrint (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7747">#7747</a> <a href="https://github.com/bitcoin/bitcoin/commit/4d035bc"><code class="highlighter-rouge">4d035bc</code></a> added depends cross compile info (accraze)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7741">#7741</a> <a href="https://github.com/bitcoin/bitcoin/commit/a0cea89"><code class="highlighter-rouge">a0cea89</code></a> Mark p2p alert system as deprecated (btcdrak)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/7780">#7780</a> <a href="https://github.com/bitcoin/bitcoin/commit/c5f94f6"><code class="highlighter-rouge">c5f94f6</code></a> Disable bad-chain alert (btcdrak)</li>
+  <li>
+    <h1 id="f04f4fd-fix-markdown-syntax-and-line-terminate-logprint-marcofalke">7617 <code class="highlighter-rouge">f04f4fd</code> Fix markdown syntax and line terminate LogPrint (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="d035bc-added-depends-cross-compile-info-accraze">7747 <code class="highlighter-rouge">4d035bc</code> added depends cross compile info (accraze)</h1>
+  </li>
+  <li>
+    <h1 id="a0cea89-mark-p2p-alert-system-as-deprecated-btcdrak">7741 <code class="highlighter-rouge">a0cea89</code> Mark p2p alert system as deprecated (btcdrak)</h1>
+  </li>
+  <li>
+    <h1 id="c5f94f6-disable-bad-chain-alert-btcdrak">7780 <code class="highlighter-rouge">c5f94f6</code> Disable bad-chain alert (btcdrak)</h1>
+  </li>
 </ul>
 
 <h1 id="credits">Credits</h1>

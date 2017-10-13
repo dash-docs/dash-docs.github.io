@@ -11,7 +11,7 @@
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta property="og:image" content="https://www.dash.org/assets/img/graphics/dash_circle_normal.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Bitcoin Core version 0.11.1 released</title>
 
@@ -416,22 +416,54 @@ the code changes and accompanying discussion, both the pull request and
 git merge commit are mentioned.</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6438">#6438</a> <a href="https://github.com/bitcoin/bitcoin/commit/2531438"><code class="highlighter-rouge">2531438</code></a> openssl: avoid config file load/race</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6439">#6439</a> <a href="https://github.com/bitcoin/bitcoin/commit/980f820"><code class="highlighter-rouge">980f820</code></a> Updated URL location of netinstall for Debian</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6384">#6384</a> <a href="https://github.com/bitcoin/bitcoin/commit/8e5a969"><code class="highlighter-rouge">8e5a969</code></a> qt: Force TLS1.0+ for SSL connections</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6471">#6471</a> <a href="https://github.com/bitcoin/bitcoin/commit/92401c2"><code class="highlighter-rouge">92401c2</code></a> Depends: bump to qt 5.5</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6224">#6224</a> <a href="https://github.com/bitcoin/bitcoin/commit/93b606a"><code class="highlighter-rouge">93b606a</code></a> Be even stricter in processing unrequested blocks</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6571">#6571</a> <a href="https://github.com/bitcoin/bitcoin/commit/100ac4e"><code class="highlighter-rouge">100ac4e</code></a> libbitcoinconsensus: avoid a crash in multi-threaded environments</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6545">#6545</a> <a href="https://github.com/bitcoin/bitcoin/commit/649f5d9"><code class="highlighter-rouge">649f5d9</code></a> Do not store more than 200 timedata samples.</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6694">#6694</a> <a href="https://github.com/bitcoin/bitcoin/commit/834e299"><code class="highlighter-rouge">834e299</code></a> [QT] fix thin space word wrap line break issue</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6703">#6703</a> <a href="https://github.com/bitcoin/bitcoin/commit/1cd7952"><code class="highlighter-rouge">1cd7952</code></a> Backport bugfixes to 0.11</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6750">#6750</a> <a href="https://github.com/bitcoin/bitcoin/commit/5ed8d0b"><code class="highlighter-rouge">5ed8d0b</code></a> Recent rejects backport to v0.11</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6769">#6769</a> <a href="https://github.com/bitcoin/bitcoin/commit/71cc9d9"><code class="highlighter-rouge">71cc9d9</code></a> Test LowS in standardness, removes nuisance malleability vector.</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6789">#6789</a> <a href="https://github.com/bitcoin/bitcoin/commit/b4ad73f"><code class="highlighter-rouge">b4ad73f</code></a> Update miniupnpc to 1.9.20151008</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6785">#6785</a> <a href="https://github.com/bitcoin/bitcoin/commit/b4dc33e"><code class="highlighter-rouge">b4dc33e</code></a> Backport to v0.11: In (strCommand == “tx”), return if AlreadyHave()</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6412">#6412</a> <a href="https://github.com/bitcoin/bitcoin/commit/0095b9a"><code class="highlighter-rouge">0095b9a</code></a> Test whether created sockets are select()able</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6795">#6795</a> <a href="https://github.com/bitcoin/bitcoin/commit/4dbcec0"><code class="highlighter-rouge">4dbcec0</code></a> net: Disable upnp by default</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6793">#6793</a> <a href="https://github.com/bitcoin/bitcoin/commit/e7bcc4a"><code class="highlighter-rouge">e7bcc4a</code></a> Bump minrelaytxfee default</li>
+  <li>
+    <h1 id="openssl-avoid-config-file-loadrace">6438 <code class="highlighter-rouge">2531438</code> openssl: avoid config file load/race</h1>
+  </li>
+  <li>
+    <h1 id="f820-updated-url-location-of-netinstall-for-debian">6439 <code class="highlighter-rouge">980f820</code> Updated URL location of netinstall for Debian</h1>
+  </li>
+  <li>
+    <h1 id="e5a969-qt-force-tls10-for-ssl-connections">6384 <code class="highlighter-rouge">8e5a969</code> qt: Force TLS1.0+ for SSL connections</h1>
+  </li>
+  <li>
+    <h1 id="c2-depends-bump-to-qt-55">6471 <code class="highlighter-rouge">92401c2</code> Depends: bump to qt 5.5</h1>
+  </li>
+  <li>
+    <h1 id="b606a-be-even-stricter-in-processing-unrequested-blocks">6224 <code class="highlighter-rouge">93b606a</code> Be even stricter in processing unrequested blocks</h1>
+  </li>
+  <li>
+    <h1 id="ac4e-libbitcoinconsensus-avoid-a-crash-in-multi-threaded-environments">6571 <code class="highlighter-rouge">100ac4e</code> libbitcoinconsensus: avoid a crash in multi-threaded environments</h1>
+  </li>
+  <li>
+    <h1 id="f5d9-do-not-store-more-than-200-timedata-samples">6545 <code class="highlighter-rouge">649f5d9</code> Do not store more than 200 timedata samples.</h1>
+  </li>
+  <li>
+    <h1 id="e299-qt-fix-thin-space-word-wrap-line-break-issue">6694 <code class="highlighter-rouge">834e299</code> [QT] fix thin space word wrap line break issue</h1>
+  </li>
+  <li>
+    <h1 id="cd7952-backport-bugfixes-to-011">6703 <code class="highlighter-rouge">1cd7952</code> Backport bugfixes to 0.11</h1>
+  </li>
+  <li>
+    <h1 id="ed8d0b-recent-rejects-backport-to-v011">6750 <code class="highlighter-rouge">5ed8d0b</code> Recent rejects backport to v0.11</h1>
+  </li>
+  <li>
+    <h1 id="cc9d9-test-lows-in-standardness-removes-nuisance-malleability-vector">6769 <code class="highlighter-rouge">71cc9d9</code> Test LowS in standardness, removes nuisance malleability vector.</h1>
+  </li>
+  <li>
+    <h1 id="b4ad73f-update-miniupnpc-to-1920151008">6789 <code class="highlighter-rouge">b4ad73f</code> Update miniupnpc to 1.9.20151008</h1>
+  </li>
+  <li>
+    <h1 id="b4dc33e-backport-to-v011-in-strcommand--tx-return-if-alreadyhave">6785 <code class="highlighter-rouge">b4dc33e</code> Backport to v0.11: In (strCommand == “tx”), return if AlreadyHave()</h1>
+  </li>
+  <li>
+    <h1 id="b9a-test-whether-created-sockets-are-selectable">6412 <code class="highlighter-rouge">0095b9a</code> Test whether created sockets are select()able</h1>
+  </li>
+  <li>
+    <h1 id="dbcec0-net-disable-upnp-by-default">6795 <code class="highlighter-rouge">4dbcec0</code> net: Disable upnp by default</h1>
+  </li>
+  <li>
+    <h1 id="e7bcc4a-bump-minrelaytxfee-default">6793 <code class="highlighter-rouge">e7bcc4a</code> Bump minrelaytxfee default</h1>
+  </li>
 </ul>
 
 <h1 id="credits">Credits</h1>

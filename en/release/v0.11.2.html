@@ -11,7 +11,7 @@
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta property="og:image" content="https://www.dash.org/assets/img/graphics/dash_circle_normal.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Bitcoin Core version 0.11.2 released</title>
 
@@ -478,25 +478,63 @@ the code changes and accompanying discussion, both the pull request and
 git merge commit are mentioned.</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6124">#6124</a> <a href="https://github.com/bitcoin/bitcoin/commit/684636b"><code class="highlighter-rouge">684636b</code></a> Make CScriptNum() take nMaxNumSize as an argument</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6124">#6124</a> <a href="https://github.com/bitcoin/bitcoin/commit/4fa7a04"><code class="highlighter-rouge">4fa7a04</code></a> Replace NOP2 with CHECKLOCKTIMEVERIFY (BIP65)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6124">#6124</a> <a href="https://github.com/bitcoin/bitcoin/commit/6ea5ca4"><code class="highlighter-rouge">6ea5ca4</code></a> Enable CHECKLOCKTIMEVERIFY as a standard script verify flag</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6351">#6351</a> <a href="https://github.com/bitcoin/bitcoin/commit/5e82e1c"><code class="highlighter-rouge">5e82e1c</code></a> Add CHECKLOCKTIMEVERIFY (BIP65) soft-fork logic</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6353">#6353</a> <a href="https://github.com/bitcoin/bitcoin/commit/ba1da90"><code class="highlighter-rouge">ba1da90</code></a> Show softfork status in getblockchaininfo</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6351">#6351</a> <a href="https://github.com/bitcoin/bitcoin/commit/6af25b0"><code class="highlighter-rouge">6af25b0</code></a> Add BIP65 to getblockchaininfo softforks list</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6688">#6688</a> <a href="https://github.com/bitcoin/bitcoin/commit/01878c9"><code class="highlighter-rouge">01878c9</code></a> Fix locking in GetTransaction</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6653">#6653</a> <a href="https://github.com/bitcoin/bitcoin/commit/b3eaa30"><code class="highlighter-rouge">b3eaa30</code></a> [Qt] Raise debug window when requested</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6600">#6600</a> <a href="https://github.com/bitcoin/bitcoin/commit/1e672ae"><code class="highlighter-rouge">1e672ae</code></a> Debian/Ubuntu: Include bitcoin-tx binary</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6600">#6600</a> <a href="https://github.com/bitcoin/bitcoin/commit/2394f4d"><code class="highlighter-rouge">2394f4d</code></a> Debian/Ubuntu: Split bitcoin-tx into its own package</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/5987">#5987</a> <a href="https://github.com/bitcoin/bitcoin/commit/33d6825"><code class="highlighter-rouge">33d6825</code></a> Bugfix: Allow mining on top of old tip blocks for testnet</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6852">#6852</a> <a href="https://github.com/bitcoin/bitcoin/commit/21e58b8"><code class="highlighter-rouge">21e58b8</code></a> build: make sure OpenSSL heeds noexecstack</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6846">#6846</a> <a href="https://github.com/bitcoin/bitcoin/commit/af6edac"><code class="highlighter-rouge">af6edac</code></a> alias <code class="highlighter-rouge">-h</code> for <code class="highlighter-rouge">--help</code></li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6867">#6867</a> <a href="https://github.com/bitcoin/bitcoin/commit/95a5039"><code class="highlighter-rouge">95a5039</code></a> Set TCP_NODELAY on P2P sockets.</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6856">#6856</a> <a href="https://github.com/bitcoin/bitcoin/commit/dfe55bd"><code class="highlighter-rouge">dfe55bd</code></a> Do not allow blockfile pruning during reindex.</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6566">#6566</a> <a href="https://github.com/bitcoin/bitcoin/commit/a1d3c6f"><code class="highlighter-rouge">a1d3c6f</code></a> Add rules–presently disabled–for using GetMedianTimePast as end point for lock-time calculations</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6566">#6566</a> <a href="https://github.com/bitcoin/bitcoin/commit/f720c5f"><code class="highlighter-rouge">f720c5f</code></a> Enable policy enforcing GetMedianTimePast as the end point of lock-time constraints</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6917">#6917</a> <a href="https://github.com/bitcoin/bitcoin/commit/0af5b8e"><code class="highlighter-rouge">0af5b8e</code></a> leveldb: Win32WritableFile without memory mapping</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/6948">#6948</a> <a href="https://github.com/bitcoin/bitcoin/commit/4e895b0"><code class="highlighter-rouge">4e895b0</code></a> Always flush block and undo when switching to new file</li>
+  <li>
+    <h1 id="b-make-cscriptnum-take-nmaxnumsize-as-an-argument">6124 <code class="highlighter-rouge">684636b</code> Make CScriptNum() take nMaxNumSize as an argument</h1>
+  </li>
+  <li>
+    <h1 id="fa7a04-replace-nop2-with-checklocktimeverify-bip65">6124 <code class="highlighter-rouge">4fa7a04</code> Replace NOP2 with CHECKLOCKTIMEVERIFY (BIP65)</h1>
+  </li>
+  <li>
+    <h1 id="ea5ca4-enable-checklocktimeverify-as-a-standard-script-verify-flag">6124 <code class="highlighter-rouge">6ea5ca4</code> Enable CHECKLOCKTIMEVERIFY as a standard script verify flag</h1>
+  </li>
+  <li>
+    <h1 id="e82e1c-add-checklocktimeverify-bip65-soft-fork-logic">6351 <code class="highlighter-rouge">5e82e1c</code> Add CHECKLOCKTIMEVERIFY (BIP65) soft-fork logic</h1>
+  </li>
+  <li>
+    <h1 id="ba1da90-show-softfork-status-in-getblockchaininfo">6353 <code class="highlighter-rouge">ba1da90</code> Show softfork status in getblockchaininfo</h1>
+  </li>
+  <li>
+    <h1 id="af25b0-add-bip65-to-getblockchaininfo-softforks-list">6351 <code class="highlighter-rouge">6af25b0</code> Add BIP65 to getblockchaininfo softforks list</h1>
+  </li>
+  <li>
+    <h1 id="c9-fix-locking-in-gettransaction">6688 <code class="highlighter-rouge">01878c9</code> Fix locking in GetTransaction</h1>
+  </li>
+  <li>
+    <h1 id="b3eaa30-qt-raise-debug-window-when-requested">6653 <code class="highlighter-rouge">b3eaa30</code> [Qt] Raise debug window when requested</h1>
+  </li>
+  <li>
+    <h1 id="e672ae-debianubuntu-include-bitcoin-tx-binary">6600 <code class="highlighter-rouge">1e672ae</code> Debian/Ubuntu: Include bitcoin-tx binary</h1>
+  </li>
+  <li>
+    <h1 id="f4d-debianubuntu-split-bitcoin-tx-into-its-own-package">6600 <code class="highlighter-rouge">2394f4d</code> Debian/Ubuntu: Split bitcoin-tx into its own package</h1>
+  </li>
+  <li>
+    <h1 id="d6825-bugfix-allow-mining-on-top-of-old-tip-blocks-for-testnet">5987 <code class="highlighter-rouge">33d6825</code> Bugfix: Allow mining on top of old tip blocks for testnet</h1>
+  </li>
+  <li>
+    <h1 id="e58b8-build-make-sure-openssl-heeds-noexecstack">6852 <code class="highlighter-rouge">21e58b8</code> build: make sure OpenSSL heeds noexecstack</h1>
+  </li>
+  <li>
+    <h1 id="af6edac-alias--h-for---help">6846 <code class="highlighter-rouge">af6edac</code> alias <code class="highlighter-rouge">-h</code> for <code class="highlighter-rouge">--help</code></h1>
+  </li>
+  <li>
+    <h1 id="a5039-set-tcpnodelay-on-p2p-sockets">6867 <code class="highlighter-rouge">95a5039</code> Set TCP_NODELAY on P2P sockets.</h1>
+  </li>
+  <li>
+    <h1 id="dfe55bd-do-not-allow-blockfile-pruning-during-reindex">6856 <code class="highlighter-rouge">dfe55bd</code> Do not allow blockfile pruning during reindex.</h1>
+  </li>
+  <li>
+    <h1 id="a1d3c6f-add-rules--presently-disabled--for-using-getmediantimepast-as-end-point-for-lock-time-calculations">6566 <code class="highlighter-rouge">a1d3c6f</code> Add rules–presently disabled–for using GetMedianTimePast as end point for lock-time calculations</h1>
+  </li>
+  <li>
+    <h1 id="f720c5f-enable-policy-enforcing-getmediantimepast-as-the-end-point-of-lock-time-constraints">6566 <code class="highlighter-rouge">f720c5f</code> Enable policy enforcing GetMedianTimePast as the end point of lock-time constraints</h1>
+  </li>
+  <li>
+    <h1 id="af5b8e-leveldb-win32writablefile-without-memory-mapping">6917 <code class="highlighter-rouge">0af5b8e</code> leveldb: Win32WritableFile without memory mapping</h1>
+  </li>
+  <li>
+    <h1 id="e895b0-always-flush-block-and-undo-when-switching-to-new-file">6948 <code class="highlighter-rouge">4e895b0</code> Always flush block and undo when switching to new file</h1>
+  </li>
 </ul>
 
 <h1 id="credits">Credits</h1>

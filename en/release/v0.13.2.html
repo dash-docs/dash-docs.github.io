@@ -11,7 +11,7 @@
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta property="og:image" content="https://www.dash.org/assets/img/graphics/dash_circle_normal.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Bitcoin Core version 0.13.2 released</title>
 
@@ -364,93 +364,203 @@ git merge commit are mentioned.</p>
 
 <h3 id="consensus">Consensus</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9293">#9293</a> <a href="https://github.com/bitcoin/bitcoin/commit/e591c10"><code class="highlighter-rouge">e591c10</code></a> [0.13 Backport <a href="https://github.com/bitcoin/bitcoin/pull/9053">#9053</a>] IBD using chainwork instead of height and not using header timestamp (gmaxwell)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9053">#9053</a> <a href="https://github.com/bitcoin/bitcoin/commit/5b93eee"><code class="highlighter-rouge">5b93eee</code></a> IBD using chainwork instead of height and not using header timestamps (gmaxwell)</li>
+  <li>
+    <h1 id="e591c10-013-backport-9053-ibd-using-chainwork-instead-of-height-and-not-using-header-timestamp-gmaxwell">9293 <code class="highlighter-rouge">e591c10</code> [0.13 Backport #9053] IBD using chainwork instead of height and not using header timestamp (gmaxwell)</h1>
+  </li>
+  <li>
+    <h1 id="b93eee-ibd-using-chainwork-instead-of-height-and-not-using-header-timestamps-gmaxwell">9053 <code class="highlighter-rouge">5b93eee</code> IBD using chainwork instead of height and not using header timestamps (gmaxwell)</h1>
+  </li>
 </ul>
 
 <h3 id="rpc-and-other-apis">RPC and other APIs</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8845">#8845</a> <a href="https://github.com/bitcoin/bitcoin/commit/1d048b9"><code class="highlighter-rouge">1d048b9</code></a> Don’t return the address of a P2SH of a P2SH (jnewbery)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9041">#9041</a> <a href="https://github.com/bitcoin/bitcoin/commit/87fbced"><code class="highlighter-rouge">87fbced</code></a> keypoololdest denote Unix epoch, not GMT (s-matthew-english)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9122">#9122</a> <a href="https://github.com/bitcoin/bitcoin/commit/f82c81b"><code class="highlighter-rouge">f82c81b</code></a> fix getnettotals RPC description about timemillis (visvirial)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9042">#9042</a> <a href="https://github.com/bitcoin/bitcoin/commit/5bcb05d"><code class="highlighter-rouge">5bcb05d</code></a> [rpc] ParseHash: Fail when length is not 64 (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9194">#9194</a> <a href="https://github.com/bitcoin/bitcoin/commit/f26dab7"><code class="highlighter-rouge">f26dab7</code></a> Add option to return non-segwit serialization via rpc (instagibbs)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9347">#9347</a> <a href="https://github.com/bitcoin/bitcoin/commit/b711390"><code class="highlighter-rouge">b711390</code></a> [0.13.2] wallet/rpc backports (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9292">#9292</a> <a href="https://github.com/bitcoin/bitcoin/commit/c365556"><code class="highlighter-rouge">c365556</code></a> Complain when unknown rpcserialversion is specified (sipa)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9322">#9322</a> <a href="https://github.com/bitcoin/bitcoin/commit/49a612f"><code class="highlighter-rouge">49a612f</code></a> [qa] Don’t set unknown rpcserialversion (MarcoFalke)</li>
+  <li>
+    <h1 id="d048b9-dont-return-the-address-of-a-p2sh-of-a-p2sh-jnewbery">8845 <code class="highlighter-rouge">1d048b9</code> Don’t return the address of a P2SH of a P2SH (jnewbery)</h1>
+  </li>
+  <li>
+    <h1 id="fbced-keypoololdest-denote-unix-epoch-not-gmt-s-matthew-english">9041 <code class="highlighter-rouge">87fbced</code> keypoololdest denote Unix epoch, not GMT (s-matthew-english)</h1>
+  </li>
+  <li>
+    <h1 id="f82c81b-fix-getnettotals-rpc-description-about-timemillis-visvirial">9122 <code class="highlighter-rouge">f82c81b</code> fix getnettotals RPC description about timemillis (visvirial)</h1>
+  </li>
+  <li>
+    <h1 id="bcb05d-rpc-parsehash-fail-when-length-is-not-64-marcofalke">9042 <code class="highlighter-rouge">5bcb05d</code> [rpc] ParseHash: Fail when length is not 64 (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="f26dab7-add-option-to-return-non-segwit-serialization-via-rpc-instagibbs">9194 <code class="highlighter-rouge">f26dab7</code> Add option to return non-segwit serialization via rpc (instagibbs)</h1>
+  </li>
+  <li>
+    <h1 id="b711390-0132-walletrpc-backports-marcofalke">9347 <code class="highlighter-rouge">b711390</code> [0.13.2] wallet/rpc backports (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="c365556-complain-when-unknown-rpcserialversion-is-specified-sipa">9292 <code class="highlighter-rouge">c365556</code> Complain when unknown rpcserialversion is specified (sipa)</h1>
+  </li>
+  <li>
+    <h1 id="a612f-qa-dont-set-unknown-rpcserialversion-marcofalke">9322 <code class="highlighter-rouge">49a612f</code> [qa] Don’t set unknown rpcserialversion (MarcoFalke)</h1>
+  </li>
 </ul>
 
 <h3 id="block-and-transaction-handling">Block and transaction handling</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8357">#8357</a> <a href="https://github.com/bitcoin/bitcoin/commit/ce0d817"><code class="highlighter-rouge">ce0d817</code></a> [mempool] Fix relaypriority calculation error (maiiz)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9267">#9267</a> <a href="https://github.com/bitcoin/bitcoin/commit/0a4aa87"><code class="highlighter-rouge">0a4aa87</code></a> [0.13 backport <a href="https://github.com/bitcoin/bitcoin/pull/9239">#9239</a>] Disable fee estimates for a confirm target of 1 block (morcos)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9196">#9196</a> <a href="https://github.com/bitcoin/bitcoin/commit/0c09d9f"><code class="highlighter-rouge">0c09d9f</code></a> Send tip change notification from invalidateblock (ryanofsky)</li>
+  <li>
+    <h1 id="ce0d817-mempool-fix-relaypriority-calculation-error-maiiz">8357 <code class="highlighter-rouge">ce0d817</code> [mempool] Fix relaypriority calculation error (maiiz)</h1>
+  </li>
+  <li>
+    <h1 id="a4aa87-013-backport-9239-disable-fee-estimates-for-a-confirm-target-of-1-block-morcos">9267 <code class="highlighter-rouge">0a4aa87</code> [0.13 backport #9239] Disable fee estimates for a confirm target of 1 block (morcos)</h1>
+  </li>
+  <li>
+    <h1 id="c09d9f-send-tip-change-notification-from-invalidateblock-ryanofsky">9196 <code class="highlighter-rouge">0c09d9f</code> Send tip change notification from invalidateblock (ryanofsky)</h1>
+  </li>
 </ul>
 
 <h3 id="p2p-protocol-and-network-code">P2P protocol and network code</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8995">#8995</a> <a href="https://github.com/bitcoin/bitcoin/commit/9ef3875"><code class="highlighter-rouge">9ef3875</code></a> Add missing cs_main lock to ::GETBLOCKTXN processing (TheBlueMatt)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9234">#9234</a> <a href="https://github.com/bitcoin/bitcoin/commit/94531b5"><code class="highlighter-rouge">94531b5</code></a> torcontrol: Explicitly request RSA1024 private key (laanwj)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8637">#8637</a> <a href="https://github.com/bitcoin/bitcoin/commit/2cad5db"><code class="highlighter-rouge">2cad5db</code></a> Compact Block Tweaks (rebase of <a href="https://github.com/bitcoin/bitcoin/pull/8235">#8235</a>) (sipa)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9058">#9058</a> <a href="https://github.com/bitcoin/bitcoin/commit/286e548"><code class="highlighter-rouge">286e548</code></a> Fixes for p2p-compactblocks.py test timeouts on travis (<a href="https://github.com/bitcoin/bitcoin/pull/8842">#8842</a>) (ryanofsky)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8865">#8865</a> <a href="https://github.com/bitcoin/bitcoin/commit/4c71fc4"><code class="highlighter-rouge">4c71fc4</code></a> Decouple peer-processing-logic from block-connection-logic (TheBlueMatt)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9117">#9117</a> <a href="https://github.com/bitcoin/bitcoin/commit/6fe3981"><code class="highlighter-rouge">6fe3981</code></a> net: don’t send feefilter messages before the version handshake is complete (theuni)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9188">#9188</a> <a href="https://github.com/bitcoin/bitcoin/commit/ca1fd75"><code class="highlighter-rouge">ca1fd75</code></a> Make orphan parent fetching ask for witnesses (gmaxwell)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9052">#9052</a> <a href="https://github.com/bitcoin/bitcoin/commit/3a3bcbf"><code class="highlighter-rouge">3a3bcbf</code></a> Use RelevantServices instead of node_network in AttemptToEvict (gmaxwell)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9048">#9048</a> <a href="https://github.com/bitcoin/bitcoin/commit/9460771"><code class="highlighter-rouge">9460771</code></a> [0.13 backport <a href="https://github.com/bitcoin/bitcoin/pull/9026">#9026</a>] Fix handling of invalid compact blocks (sdaftuar)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9357">#9357</a> <a href="https://github.com/bitcoin/bitcoin/commit/03b6f62"><code class="highlighter-rouge">03b6f62</code></a> [0.13 backport <a href="https://github.com/bitcoin/bitcoin/pull/9352">#9352</a>] Attempt reconstruction from all compact block announcements (sdaftuar)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9189">#9189</a> <a href="https://github.com/bitcoin/bitcoin/commit/b96a8f7"><code class="highlighter-rouge">b96a8f7</code></a> Always add default_witness_commitment with GBT client support (sipa)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9253">#9253</a> <a href="https://github.com/bitcoin/bitcoin/commit/28d0f22"><code class="highlighter-rouge">28d0f22</code></a> Fix calculation of number of bound sockets to use (TheBlueMatt)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9199">#9199</a> <a href="https://github.com/bitcoin/bitcoin/commit/da5a16b"><code class="highlighter-rouge">da5a16b</code></a> Always drop the least preferred HB peer when adding a new one (gmaxwell)</li>
+  <li>
+    <h1 id="ef3875-add-missing-csmain-lock-to-getblocktxn-processing-thebluematt">8995 <code class="highlighter-rouge">9ef3875</code> Add missing cs_main lock to ::GETBLOCKTXN processing (TheBlueMatt)</h1>
+  </li>
+  <li>
+    <h1 id="b5-torcontrol-explicitly-request-rsa1024-private-key-laanwj">9234 <code class="highlighter-rouge">94531b5</code> torcontrol: Explicitly request RSA1024 private key (laanwj)</h1>
+  </li>
+  <li>
+    <h1 id="cad5db-compact-block-tweaks-rebase-of-8235-sipa">8637 <code class="highlighter-rouge">2cad5db</code> Compact Block Tweaks (rebase of #8235) (sipa)</h1>
+  </li>
+  <li>
+    <h1 id="e548-fixes-for-p2p-compactblockspy-test-timeouts-on-travis-8842-ryanofsky">9058 <code class="highlighter-rouge">286e548</code> Fixes for p2p-compactblocks.py test timeouts on travis (#8842) (ryanofsky)</h1>
+  </li>
+  <li>
+    <h1 id="c71fc4-decouple-peer-processing-logic-from-block-connection-logic-thebluematt">8865 <code class="highlighter-rouge">4c71fc4</code> Decouple peer-processing-logic from block-connection-logic (TheBlueMatt)</h1>
+  </li>
+  <li>
+    <h1 id="fe3981-net-dont-send-feefilter-messages-before-the-version-handshake-is-complete-theuni">9117 <code class="highlighter-rouge">6fe3981</code> net: don’t send feefilter messages before the version handshake is complete (theuni)</h1>
+  </li>
+  <li>
+    <h1 id="ca1fd75-make-orphan-parent-fetching-ask-for-witnesses-gmaxwell">9188 <code class="highlighter-rouge">ca1fd75</code> Make orphan parent fetching ask for witnesses (gmaxwell)</h1>
+  </li>
+  <li>
+    <h1 id="a3bcbf-use-relevantservices-instead-of-nodenetwork-in-attempttoevict-gmaxwell">9052 <code class="highlighter-rouge">3a3bcbf</code> Use RelevantServices instead of node_network in AttemptToEvict (gmaxwell)</h1>
+  </li>
+  <li>
+    <h1 id="backport-9026-fix-handling-of-invalid-compact-blocks-sdaftuar">9048 <code class="highlighter-rouge">9460771</code> [0.13 backport #9026] Fix handling of invalid compact blocks (sdaftuar)</h1>
+  </li>
+  <li>
+    <h1 id="b6f62-013-backport-9352-attempt-reconstruction-from-all-compact-block-announcements-sdaftuar">9357 <code class="highlighter-rouge">03b6f62</code> [0.13 backport #9352] Attempt reconstruction from all compact block announcements (sdaftuar)</h1>
+  </li>
+  <li>
+    <h1 id="b96a8f7-always-add-defaultwitnesscommitment-with-gbt-client-support-sipa">9189 <code class="highlighter-rouge">b96a8f7</code> Always add default_witness_commitment with GBT client support (sipa)</h1>
+  </li>
+  <li>
+    <h1 id="d0f22-fix-calculation-of-number-of-bound-sockets-to-use-thebluematt">9253 <code class="highlighter-rouge">28d0f22</code> Fix calculation of number of bound sockets to use (TheBlueMatt)</h1>
+  </li>
+  <li>
+    <h1 id="da5a16b-always-drop-the-least-preferred-hb-peer-when-adding-a-new-one-gmaxwell">9199 <code class="highlighter-rouge">da5a16b</code> Always drop the least preferred HB peer when adding a new one (gmaxwell)</h1>
+  </li>
 </ul>
 
 <h3 id="build-system">Build system</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9169">#9169</a> <a href="https://github.com/bitcoin/bitcoin/commit/d1b4da9"><code class="highlighter-rouge">d1b4da9</code></a> build: fix qt5.7 build under macOS (theuni)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9326">#9326</a> <a href="https://github.com/bitcoin/bitcoin/commit/a0f7ece"><code class="highlighter-rouge">a0f7ece</code></a> Update for OpenSSL 1.1 API (gmaxwell)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9224">#9224</a> <a href="https://github.com/bitcoin/bitcoin/commit/396c405"><code class="highlighter-rouge">396c405</code></a> Prevent FD_SETSIZE error building on OpenBSD (ivdsangen)</li>
+  <li>
+    <h1 id="d1b4da9-build-fix-qt57-build-under-macos-theuni">9169 <code class="highlighter-rouge">d1b4da9</code> build: fix qt5.7 build under macOS (theuni)</h1>
+  </li>
+  <li>
+    <h1 id="a0f7ece-update-for-openssl-11-api-gmaxwell">9326 <code class="highlighter-rouge">a0f7ece</code> Update for OpenSSL 1.1 API (gmaxwell)</h1>
+  </li>
+  <li>
+    <h1 id="c405-prevent-fdsetsize-error-building-on-openbsd-ivdsangen">9224 <code class="highlighter-rouge">396c405</code> Prevent FD_SETSIZE error building on OpenBSD (ivdsangen)</h1>
+  </li>
 </ul>
 
 <h3 id="gui">GUI</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8972">#8972</a> <a href="https://github.com/bitcoin/bitcoin/commit/6f86b53"><code class="highlighter-rouge">6f86b53</code></a> Make warnings label selectable (jonasschnelli) (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9185">#9185</a> <a href="https://github.com/bitcoin/bitcoin/commit/6d70a73"><code class="highlighter-rouge">6d70a73</code></a> Fix coincontrol sort issue (jonasschnelli)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9094">#9094</a> <a href="https://github.com/bitcoin/bitcoin/commit/5f3a12c"><code class="highlighter-rouge">5f3a12c</code></a> Use correct conversion function for boost::path datadir (laanwj)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8908">#8908</a> <a href="https://github.com/bitcoin/bitcoin/commit/4a974b2"><code class="highlighter-rouge">4a974b2</code></a> Update bitcoin-qt.desktop (s-matthew-english)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9190">#9190</a> <a href="https://github.com/bitcoin/bitcoin/commit/dc46b10"><code class="highlighter-rouge">dc46b10</code></a> Plug many memory leaks (laanwj)</li>
+  <li>
+    <h1 id="f86b53-make-warnings-label-selectable-jonasschnelli-marcofalke">8972 <code class="highlighter-rouge">6f86b53</code> Make warnings label selectable (jonasschnelli) (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="d70a73-fix-coincontrol-sort-issue-jonasschnelli">9185 <code class="highlighter-rouge">6d70a73</code> Fix coincontrol sort issue (jonasschnelli)</h1>
+  </li>
+  <li>
+    <h1 id="f3a12c-use-correct-conversion-function-for-boostpath-datadir-laanwj">9094 <code class="highlighter-rouge">5f3a12c</code> Use correct conversion function for boost::path datadir (laanwj)</h1>
+  </li>
+  <li>
+    <h1 id="a974b2-update-bitcoin-qtdesktop-s-matthew-english">8908 <code class="highlighter-rouge">4a974b2</code> Update bitcoin-qt.desktop (s-matthew-english)</h1>
+  </li>
+  <li>
+    <h1 id="dc46b10-plug-many-memory-leaks-laanwj">9190 <code class="highlighter-rouge">dc46b10</code> Plug many memory leaks (laanwj)</h1>
+  </li>
 </ul>
 
 <h3 id="wallet">Wallet</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9290">#9290</a> <a href="https://github.com/bitcoin/bitcoin/commit/35174a0"><code class="highlighter-rouge">35174a0</code></a> Make RelayWalletTransaction attempt to AcceptToMemoryPool (gmaxwell)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9295">#9295</a> <a href="https://github.com/bitcoin/bitcoin/commit/43bcfca"><code class="highlighter-rouge">43bcfca</code></a> Bugfix: Fundrawtransaction: don’t terminate when keypool is empty (jonasschnelli)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9302">#9302</a> <a href="https://github.com/bitcoin/bitcoin/commit/f5d606e"><code class="highlighter-rouge">f5d606e</code></a> Return txid even if ATMP fails for new transaction (sipa)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9262">#9262</a> <a href="https://github.com/bitcoin/bitcoin/commit/fe39f26"><code class="highlighter-rouge">fe39f26</code></a> Prefer coins that have fewer ancestors, sanity check txn before ATMP (instagibbs)</li>
+  <li>
+    <h1 id="a0-make-relaywallettransaction-attempt-to-accepttomemorypool-gmaxwell">9290 <code class="highlighter-rouge">35174a0</code> Make RelayWalletTransaction attempt to AcceptToMemoryPool (gmaxwell)</h1>
+  </li>
+  <li>
+    <h1 id="bcfca-bugfix-fundrawtransaction-dont-terminate-when-keypool-is-empty-jonasschnelli">9295 <code class="highlighter-rouge">43bcfca</code> Bugfix: Fundrawtransaction: don’t terminate when keypool is empty (jonasschnelli)</h1>
+  </li>
+  <li>
+    <h1 id="f5d606e-return-txid-even-if-atmp-fails-for-new-transaction-sipa">9302 <code class="highlighter-rouge">f5d606e</code> Return txid even if ATMP fails for new transaction (sipa)</h1>
+  </li>
+  <li>
+    <h1 id="fe39f26-prefer-coins-that-have-fewer-ancestors-sanity-check-txn-before-atmp-instagibbs">9262 <code class="highlighter-rouge">fe39f26</code> Prefer coins that have fewer ancestors, sanity check txn before ATMP (instagibbs)</h1>
+  </li>
 </ul>
 
 <h3 id="tests-and-qa">Tests and QA</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9159">#9159</a> <a href="https://github.com/bitcoin/bitcoin/commit/eca9b46"><code class="highlighter-rouge">eca9b46</code></a> Wait for specific block announcement in p2p-compactblocks (ryanofsky)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9186">#9186</a> <a href="https://github.com/bitcoin/bitcoin/commit/dccdc3a"><code class="highlighter-rouge">dccdc3a</code></a> Fix use-after-free in scheduler tests (laanwj)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9168">#9168</a> <a href="https://github.com/bitcoin/bitcoin/commit/3107280"><code class="highlighter-rouge">3107280</code></a> Add assert_raises_message to check specific error message (mrbandrews)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9191">#9191</a> <a href="https://github.com/bitcoin/bitcoin/commit/29435db"><code class="highlighter-rouge">29435db</code></a> 0.13.2 Backports (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9077">#9077</a> <a href="https://github.com/bitcoin/bitcoin/commit/1d4c884"><code class="highlighter-rouge">1d4c884</code></a> Increase wallet-dump RPC timeout (ryanofsky)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9098">#9098</a> <a href="https://github.com/bitcoin/bitcoin/commit/ecd7db5"><code class="highlighter-rouge">ecd7db5</code></a> Handle zombies and cluttered tmpdirs (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8927">#8927</a> <a href="https://github.com/bitcoin/bitcoin/commit/387ec9d"><code class="highlighter-rouge">387ec9d</code></a> Add script tests for FindAndDelete in pre-segwit and segwit scripts (jl2012)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9200">#9200</a> <a href="https://github.com/bitcoin/bitcoin/commit/eebc699"><code class="highlighter-rouge">eebc699</code></a> bench: Fix subtle counting issue when rescaling iteration count (laanwj)</li>
+  <li>
+    <h1 id="eca9b46-wait-for-specific-block-announcement-in-p2p-compactblocks-ryanofsky">9159 <code class="highlighter-rouge">eca9b46</code> Wait for specific block announcement in p2p-compactblocks (ryanofsky)</h1>
+  </li>
+  <li>
+    <h1 id="dccdc3a-fix-use-after-free-in-scheduler-tests-laanwj">9186 <code class="highlighter-rouge">dccdc3a</code> Fix use-after-free in scheduler tests (laanwj)</h1>
+  </li>
+  <li>
+    <h1 id="add-assertraisesmessage-to-check-specific-error-message-mrbandrews">9168 <code class="highlighter-rouge">3107280</code> Add assert_raises_message to check specific error message (mrbandrews)</h1>
+  </li>
+  <li>
+    <h1 id="db-0132-backports-marcofalke">9191 <code class="highlighter-rouge">29435db</code> 0.13.2 Backports (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="d4c884-increase-wallet-dump-rpc-timeout-ryanofsky">9077 <code class="highlighter-rouge">1d4c884</code> Increase wallet-dump RPC timeout (ryanofsky)</h1>
+  </li>
+  <li>
+    <h1 id="ecd7db5-handle-zombies-and-cluttered-tmpdirs-marcofalke">9098 <code class="highlighter-rouge">ecd7db5</code> Handle zombies and cluttered tmpdirs (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="ec9d-add-script-tests-for-findanddelete-in-pre-segwit-and-segwit-scripts-jl2012">8927 <code class="highlighter-rouge">387ec9d</code> Add script tests for FindAndDelete in pre-segwit and segwit scripts (jl2012)</h1>
+  </li>
+  <li>
+    <h1 id="eebc699-bench-fix-subtle-counting-issue-when-rescaling-iteration-count-laanwj">9200 <code class="highlighter-rouge">eebc699</code> bench: Fix subtle counting issue when rescaling iteration count (laanwj)</h1>
+  </li>
 </ul>
 
 <h3 id="miscellaneous">Miscellaneous</h3>
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8838">#8838</a> <a href="https://github.com/bitcoin/bitcoin/commit/094848b"><code class="highlighter-rouge">094848b</code></a> Calculate size and weight of block correctly in CreateNewBlock() (jnewbery)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8920">#8920</a> <a href="https://github.com/bitcoin/bitcoin/commit/40169dc"><code class="highlighter-rouge">40169dc</code></a> Set minimum required Boost to 1.47.0 (fanquake)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9251">#9251</a> <a href="https://github.com/bitcoin/bitcoin/commit/a710a43"><code class="highlighter-rouge">a710a43</code></a> Improvement of documentation of command line parameter ‘whitelist’ (wodry)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8932">#8932</a> <a href="https://github.com/bitcoin/bitcoin/commit/106da69"><code class="highlighter-rouge">106da69</code></a> Allow bitcoin-tx to create v2 transactions (btcdrak)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/8929">#8929</a> <a href="https://github.com/bitcoin/bitcoin/commit/12428b4"><code class="highlighter-rouge">12428b4</code></a> add software-properties-common (sigwo)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9120">#9120</a> <a href="https://github.com/bitcoin/bitcoin/commit/08d1c90"><code class="highlighter-rouge">08d1c90</code></a> bug: Missed one “return false” in recent refactoring in <a href="https://github.com/bitcoin/bitcoin/pull/9067">#9067</a> (UdjinM6)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9067">#9067</a> <a href="https://github.com/bitcoin/bitcoin/commit/f85ee01"><code class="highlighter-rouge">f85ee01</code></a> Fix exit codes (UdjinM6)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9340">#9340</a> <a href="https://github.com/bitcoin/bitcoin/commit/fb987b3"><code class="highlighter-rouge">fb987b3</code></a> [0.13] Update secp256k1 subtree (MarcoFalke)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/pull/9229">#9229</a> <a href="https://github.com/bitcoin/bitcoin/commit/b172377"><code class="highlighter-rouge">b172377</code></a> Remove calls to getaddrinfo_a (TheBlueMatt)</li>
+  <li>
+    <h1 id="b-calculate-size-and-weight-of-block-correctly-in-createnewblock-jnewbery">8838 <code class="highlighter-rouge">094848b</code> Calculate size and weight of block correctly in CreateNewBlock() (jnewbery)</h1>
+  </li>
+  <li>
+    <h1 id="dc-set-minimum-required-boost-to-1470-fanquake">8920 <code class="highlighter-rouge">40169dc</code> Set minimum required Boost to 1.47.0 (fanquake)</h1>
+  </li>
+  <li>
+    <h1 id="a710a43-improvement-of-documentation-of-command-line-parameter-whitelist-wodry">9251 <code class="highlighter-rouge">a710a43</code> Improvement of documentation of command line parameter ‘whitelist’ (wodry)</h1>
+  </li>
+  <li>
+    <h1 id="da69-allow-bitcoin-tx-to-create-v2-transactions-btcdrak">8932 <code class="highlighter-rouge">106da69</code> Allow bitcoin-tx to create v2 transactions (btcdrak)</h1>
+  </li>
+  <li>
+    <h1 id="b4-add-software-properties-common-sigwo">8929 <code class="highlighter-rouge">12428b4</code> add software-properties-common (sigwo)</h1>
+  </li>
+  <li>
+    <h1 id="d1c90-bug-missed-one-return-false-in-recent-refactoring-in-9067-udjinm6">9120 <code class="highlighter-rouge">08d1c90</code> bug: Missed one “return false” in recent refactoring in #9067 (UdjinM6)</h1>
+  </li>
+  <li>
+    <h1 id="f85ee01-fix-exit-codes-udjinm6">9067 <code class="highlighter-rouge">f85ee01</code> Fix exit codes (UdjinM6)</h1>
+  </li>
+  <li>
+    <h1 id="fb987b3-013-update-secp256k1-subtree-marcofalke">9340 <code class="highlighter-rouge">fb987b3</code> [0.13] Update secp256k1 subtree (MarcoFalke)</h1>
+  </li>
+  <li>
+    <h1 id="b172377-remove-calls-to-getaddrinfoa-thebluematt">9229 <code class="highlighter-rouge">b172377</code> Remove calls to getaddrinfo_a (TheBlueMatt)</h1>
+  </li>
 </ul>
 
 <h1 id="credits">Credits</h1>

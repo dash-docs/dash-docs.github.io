@@ -11,7 +11,7 @@
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta property="og:image" content="https://www.dash.org/assets/img/graphics/dash_circle_normal.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Running A Full Node - Bitcoin</title>
 
@@ -1827,7 +1827,7 @@ Configuration</a> section for details.</p>
 
   <p>The Bitcoin Core daemon (bitcoind) is not included in the .dmg file you may have downloaded to install Bitcoin-QT. Bitcoind, along with its support binaries, is instead included in the OS X .tar.gz file listed on the official Bitcoin Core download page. To download this file using Terminal, execute the following command:</p>
 
-  <div class="highlighter-rouge"><pre><code>curl -O https://bitcoin.org/bin/bitcoin-core-0.14.2/bitcoin-0.14.2-osx64.tar.gz
+  <div class="highlighter-rouge"><pre><code>curl -O https://bitcoin.org/bin/bitcoin-core-/bitcoin--osx64.tar.gz
 </code></pre>
   </div>
 
@@ -1868,20 +1868,20 @@ signatures file.</p>
 
   <p>Extract bitcoind and its support binaries from the archive we just downloaded by running this command in Terminal:</p>
 
-  <div class="highlighter-rouge"><pre><code>tar -zxf bitcoin-0.14.2-osx64.tar.gz
+  <div class="highlighter-rouge"><pre><code>tar -zxf bitcoin--osx64.tar.gz
 </code></pre>
   </div>
 
   <p>Now we’ll move the executables into your default path to make running and stopping bitcoind easier. To move the executables, run these commands (note that we have to use <code class="highlighter-rouge">sudo</code> to perform these commands since we are modifying directories owned by root):</p>
 
   <div class="highlighter-rouge"><pre><code>sudo mkdir -p /usr/local/bin
-sudo cp bitcoin-0.14.2/bin/bitcoin* /usr/local/bin/.
+sudo cp bitcoin-/bin/bitcoin* /usr/local/bin/.
 </code></pre>
   </div>
 
   <p>To clean up the directory we’ve been working in, run:</p>
 
-  <div class="highlighter-rouge"><pre><code>rm -rf bitcoin-0.14.2*
+  <div class="highlighter-rouge"><pre><code>rm -rf bitcoin-*
 </code></pre>
   </div>
 

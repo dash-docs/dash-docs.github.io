@@ -11,7 +11,7 @@
 
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta property="og:image" content="https://bitcoin.org/img/icons/opengraph.png" />
+<meta property="og:image" content="https://www.dash.org/assets/img/graphics/dash_circle_normal.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Bitcoin Core version 0.10.0 released</title>
 
@@ -665,347 +665,347 @@ behavior, not code moves, refactors or string updates.</p>
 <p>RPC:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f923c07"><code class="highlighter-rouge">f923c07</code></a> Support IPv6 lookup in bitcoin-cli even when IPv6 only bound on localhost</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b641c9c"><code class="highlighter-rouge">b641c9c</code></a> Fix addnode “onetry”: Connect with OpenNetworkConnection</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/171ca77"><code class="highlighter-rouge">171ca77</code></a> estimatefee / estimatepriority RPC methods</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b750cf1"><code class="highlighter-rouge">b750cf1</code></a> Remove cli functionality from bitcoind</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f6984e8"><code class="highlighter-rouge">f6984e8</code></a> Add “chain” to getmininginfo, improve help in getblockchaininfo</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/99ddc6c"><code class="highlighter-rouge">99ddc6c</code></a> Add nLocalServices info to RPC getinfo</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/cf0c47b"><code class="highlighter-rouge">cf0c47b</code></a> Remove getwork() RPC call</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2a72d45"><code class="highlighter-rouge">2a72d45</code></a> <code class="highlighter-rouge">prioritisetransaction &lt;txid&gt; &lt;priority delta&gt; &lt;priority tx fee&gt;</code></li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e44fea5"><code class="highlighter-rouge">e44fea5</code></a> Add an option <code class="highlighter-rouge">-datacarrier</code> to allow users to disable relaying/mining data carrier transactions</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2ec5a3d"><code class="highlighter-rouge">2ec5a3d</code></a> Prevent easy RPC memory exhaustion attack</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d4640d7"><code class="highlighter-rouge">d4640d7</code></a> Added argument to getbalance to include watchonly addresses and fixed errors in balance calculation</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/83f3543"><code class="highlighter-rouge">83f3543</code></a> Added argument to listaccounts to include watchonly addresses</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/952877e"><code class="highlighter-rouge">952877e</code></a> Showing ‘involvesWatchonly’ property for transactions returned by ‘listtransactions’ and ‘listsinceblock’. It is only appended when the transaction involves a watchonly address</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d7d5d23"><code class="highlighter-rouge">d7d5d23</code></a> Added argument to listtransactions and listsinceblock to include watchonly addresses</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f87ba3d"><code class="highlighter-rouge">f87ba3d</code></a> added includeWatchonly argument to ‘gettransaction’ because it affects balance calculation</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0fa2f88"><code class="highlighter-rouge">0fa2f88</code></a> added includedWatchonly argument to listreceivedbyaddress/…account</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6c37f7f"><code class="highlighter-rouge">6c37f7f</code></a> <code class="highlighter-rouge">getrawchangeaddress</code>: fail when keypool exhausted and wallet locked</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ff6a7af"><code class="highlighter-rouge">ff6a7af</code></a> getblocktemplate: longpolling support</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c4a321f"><code class="highlighter-rouge">c4a321f</code></a> Add peerid to getpeerinfo to allow correlation with the logs</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/1b4568c"><code class="highlighter-rouge">1b4568c</code></a> Add vout to ListTransactions output</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b33bd7a"><code class="highlighter-rouge">b33bd7a</code></a> Implement “getchaintips” RPC command to monitor blockchain forks</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/733177e"><code class="highlighter-rouge">733177e</code></a> Remove size limit in RPC client, keep it in server</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6b5b7cb"><code class="highlighter-rouge">6b5b7cb</code></a> Categorize rpc help overview</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6f2c26a"><code class="highlighter-rouge">6f2c26a</code></a> Closely track mempool byte total. Add “getmempoolinfo” RPC</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/aa82795"><code class="highlighter-rouge">aa82795</code></a> Add detailed network info to getnetworkinfo RPC</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/01094bd"><code class="highlighter-rouge">01094bd</code></a> Don’t reveal whether password is &lt;20 or &gt;20 characters in RPC</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/57153d4"><code class="highlighter-rouge">57153d4</code></a> rpc: Compute number of confirmations of a block from block height</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ff36cbe"><code class="highlighter-rouge">ff36cbe</code></a> getnetworkinfo: export local node’s client sub-version string</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d14d7de"><code class="highlighter-rouge">d14d7de</code></a> SanitizeString: allow ‘(‘ and ‘)’</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/31d6390"><code class="highlighter-rouge">31d6390</code></a> Fixed setaccount accepting foreign address</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b5ec5fe"><code class="highlighter-rouge">b5ec5fe</code></a> update getnetworkinfo help with subversion</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ad6e601"><code class="highlighter-rouge">ad6e601</code></a> RPC additions after headers-first</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/33dfbf5"><code class="highlighter-rouge">33dfbf5</code></a> rpc: Fix leveldb iterator leak, and flush before <code class="highlighter-rouge">gettxoutsetinfo</code></li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2aa6329"><code class="highlighter-rouge">2aa6329</code></a> Enable customising node policy for datacarrier data size with a -datacarriersize option</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f877aaa"><code class="highlighter-rouge">f877aaa</code></a> submitblock: Use a temporary CValidationState to determine accurately the outcome of ProcessBlock</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e69a587"><code class="highlighter-rouge">e69a587</code></a> submitblock: Support for returning specific rejection reasons</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/af82884"><code class="highlighter-rouge">af82884</code></a> Add “warmup mode” for RPC server</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e2655e0"><code class="highlighter-rouge">e2655e0</code></a> Add unauthenticated HTTP REST interface to public blockchain data</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/683dc40"><code class="highlighter-rouge">683dc40</code></a> Disable SSLv3 (in favor of TLS) for the RPC client and server</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/44b4c0d"><code class="highlighter-rouge">44b4c0d</code></a> signrawtransaction: validate private key</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9765a50"><code class="highlighter-rouge">9765a50</code></a> Implement BIP 23 Block Proposal</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f9de17e"><code class="highlighter-rouge">f9de17e</code></a> Add warning comment to getinfo</li>
+  <li><code class="highlighter-rouge">f923c07</code> Support IPv6 lookup in bitcoin-cli even when IPv6 only bound on localhost</li>
+  <li><code class="highlighter-rouge">b641c9c</code> Fix addnode “onetry”: Connect with OpenNetworkConnection</li>
+  <li><code class="highlighter-rouge">171ca77</code> estimatefee / estimatepriority RPC methods</li>
+  <li><code class="highlighter-rouge">b750cf1</code> Remove cli functionality from bitcoind</li>
+  <li><code class="highlighter-rouge">f6984e8</code> Add “chain” to getmininginfo, improve help in getblockchaininfo</li>
+  <li><code class="highlighter-rouge">99ddc6c</code> Add nLocalServices info to RPC getinfo</li>
+  <li><code class="highlighter-rouge">cf0c47b</code> Remove getwork() RPC call</li>
+  <li><code class="highlighter-rouge">2a72d45</code> <code class="highlighter-rouge">prioritisetransaction &lt;txid&gt; &lt;priority delta&gt; &lt;priority tx fee&gt;</code></li>
+  <li><code class="highlighter-rouge">e44fea5</code> Add an option <code class="highlighter-rouge">-datacarrier</code> to allow users to disable relaying/mining data carrier transactions</li>
+  <li><code class="highlighter-rouge">2ec5a3d</code> Prevent easy RPC memory exhaustion attack</li>
+  <li><code class="highlighter-rouge">d4640d7</code> Added argument to getbalance to include watchonly addresses and fixed errors in balance calculation</li>
+  <li><code class="highlighter-rouge">83f3543</code> Added argument to listaccounts to include watchonly addresses</li>
+  <li><code class="highlighter-rouge">952877e</code> Showing ‘involvesWatchonly’ property for transactions returned by ‘listtransactions’ and ‘listsinceblock’. It is only appended when the transaction involves a watchonly address</li>
+  <li><code class="highlighter-rouge">d7d5d23</code> Added argument to listtransactions and listsinceblock to include watchonly addresses</li>
+  <li><code class="highlighter-rouge">f87ba3d</code> added includeWatchonly argument to ‘gettransaction’ because it affects balance calculation</li>
+  <li><code class="highlighter-rouge">0fa2f88</code> added includedWatchonly argument to listreceivedbyaddress/…account</li>
+  <li><code class="highlighter-rouge">6c37f7f</code> <code class="highlighter-rouge">getrawchangeaddress</code>: fail when keypool exhausted and wallet locked</li>
+  <li><code class="highlighter-rouge">ff6a7af</code> getblocktemplate: longpolling support</li>
+  <li><code class="highlighter-rouge">c4a321f</code> Add peerid to getpeerinfo to allow correlation with the logs</li>
+  <li><code class="highlighter-rouge">1b4568c</code> Add vout to ListTransactions output</li>
+  <li><code class="highlighter-rouge">b33bd7a</code> Implement “getchaintips” RPC command to monitor blockchain forks</li>
+  <li><code class="highlighter-rouge">733177e</code> Remove size limit in RPC client, keep it in server</li>
+  <li><code class="highlighter-rouge">6b5b7cb</code> Categorize rpc help overview</li>
+  <li><code class="highlighter-rouge">6f2c26a</code> Closely track mempool byte total. Add “getmempoolinfo” RPC</li>
+  <li><code class="highlighter-rouge">aa82795</code> Add detailed network info to getnetworkinfo RPC</li>
+  <li><code class="highlighter-rouge">01094bd</code> Don’t reveal whether password is &lt;20 or &gt;20 characters in RPC</li>
+  <li><code class="highlighter-rouge">57153d4</code> rpc: Compute number of confirmations of a block from block height</li>
+  <li><code class="highlighter-rouge">ff36cbe</code> getnetworkinfo: export local node’s client sub-version string</li>
+  <li><code class="highlighter-rouge">d14d7de</code> SanitizeString: allow ‘(‘ and ‘)’</li>
+  <li><code class="highlighter-rouge">31d6390</code> Fixed setaccount accepting foreign address</li>
+  <li><code class="highlighter-rouge">b5ec5fe</code> update getnetworkinfo help with subversion</li>
+  <li><code class="highlighter-rouge">ad6e601</code> RPC additions after headers-first</li>
+  <li><code class="highlighter-rouge">33dfbf5</code> rpc: Fix leveldb iterator leak, and flush before <code class="highlighter-rouge">gettxoutsetinfo</code></li>
+  <li><code class="highlighter-rouge">2aa6329</code> Enable customising node policy for datacarrier data size with a -datacarriersize option</li>
+  <li><code class="highlighter-rouge">f877aaa</code> submitblock: Use a temporary CValidationState to determine accurately the outcome of ProcessBlock</li>
+  <li><code class="highlighter-rouge">e69a587</code> submitblock: Support for returning specific rejection reasons</li>
+  <li><code class="highlighter-rouge">af82884</code> Add “warmup mode” for RPC server</li>
+  <li><code class="highlighter-rouge">e2655e0</code> Add unauthenticated HTTP REST interface to public blockchain data</li>
+  <li><code class="highlighter-rouge">683dc40</code> Disable SSLv3 (in favor of TLS) for the RPC client and server</li>
+  <li><code class="highlighter-rouge">44b4c0d</code> signrawtransaction: validate private key</li>
+  <li><code class="highlighter-rouge">9765a50</code> Implement BIP 23 Block Proposal</li>
+  <li><code class="highlighter-rouge">f9de17e</code> Add warning comment to getinfo</li>
 </ul>
 
 <p>Command-line options:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ee21912"><code class="highlighter-rouge">ee21912</code></a> Use netmasks instead of wildcards for IP address matching</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/deb3572"><code class="highlighter-rouge">deb3572</code></a> Add <code class="highlighter-rouge">-rpcbind</code> option to allow binding RPC port on a specific interface</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/96b733e"><code class="highlighter-rouge">96b733e</code></a> Add <code class="highlighter-rouge">-version</code> option to get just the version</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/1569353"><code class="highlighter-rouge">1569353</code></a> Add <code class="highlighter-rouge">-stopafterblockimport</code> option</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/77cbd46"><code class="highlighter-rouge">77cbd46</code></a> Let -zapwallettxes recover transaction meta data</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/1c750db"><code class="highlighter-rouge">1c750db</code></a> remove -tor compatibility code (only allow -onion)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4aaa017"><code class="highlighter-rouge">4aaa017</code></a> rework help messages for fee-related options</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4278b1d"><code class="highlighter-rouge">4278b1d</code></a> Clarify error message when invalid -rpcallowip</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6b407e4"><code class="highlighter-rouge">6b407e4</code></a> -datadir is now allowed in config files</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/bdd5b58"><code class="highlighter-rouge">bdd5b58</code></a> Add option <code class="highlighter-rouge">-sysperms</code> to disable 077 umask (create new files with system default umask)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/cbe39a3"><code class="highlighter-rouge">cbe39a3</code></a> Add “bitcoin-tx” command line utility and supporting modules</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/dbca89b"><code class="highlighter-rouge">dbca89b</code></a> Trigger -alertnotify if network is upgrading without you</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ad96e7c"><code class="highlighter-rouge">ad96e7c</code></a> Make -reindex cope with out-of-order blocks</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/16d5194"><code class="highlighter-rouge">16d5194</code></a> Skip reindexed blocks individually</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ec01243"><code class="highlighter-rouge">ec01243</code></a> –tracerpc option for regression tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f654f00"><code class="highlighter-rouge">f654f00</code></a> Change -genproclimit default to 1</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/3c77714"><code class="highlighter-rouge">3c77714</code></a> Make -proxy set all network types, avoiding a connect leak</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/57be955"><code class="highlighter-rouge">57be955</code></a> Remove -printblock, -printblocktree, and -printblockindex</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ad3d208"><code class="highlighter-rouge">ad3d208</code></a> remove -maxorphanblocks config parameter since it is no longer functional</li>
+  <li><code class="highlighter-rouge">ee21912</code> Use netmasks instead of wildcards for IP address matching</li>
+  <li><code class="highlighter-rouge">deb3572</code> Add <code class="highlighter-rouge">-rpcbind</code> option to allow binding RPC port on a specific interface</li>
+  <li><code class="highlighter-rouge">96b733e</code> Add <code class="highlighter-rouge">-version</code> option to get just the version</li>
+  <li><code class="highlighter-rouge">1569353</code> Add <code class="highlighter-rouge">-stopafterblockimport</code> option</li>
+  <li><code class="highlighter-rouge">77cbd46</code> Let -zapwallettxes recover transaction meta data</li>
+  <li><code class="highlighter-rouge">1c750db</code> remove -tor compatibility code (only allow -onion)</li>
+  <li><code class="highlighter-rouge">4aaa017</code> rework help messages for fee-related options</li>
+  <li><code class="highlighter-rouge">4278b1d</code> Clarify error message when invalid -rpcallowip</li>
+  <li><code class="highlighter-rouge">6b407e4</code> -datadir is now allowed in config files</li>
+  <li><code class="highlighter-rouge">bdd5b58</code> Add option <code class="highlighter-rouge">-sysperms</code> to disable 077 umask (create new files with system default umask)</li>
+  <li><code class="highlighter-rouge">cbe39a3</code> Add “bitcoin-tx” command line utility and supporting modules</li>
+  <li><code class="highlighter-rouge">dbca89b</code> Trigger -alertnotify if network is upgrading without you</li>
+  <li><code class="highlighter-rouge">ad96e7c</code> Make -reindex cope with out-of-order blocks</li>
+  <li><code class="highlighter-rouge">16d5194</code> Skip reindexed blocks individually</li>
+  <li><code class="highlighter-rouge">ec01243</code> –tracerpc option for regression tests</li>
+  <li><code class="highlighter-rouge">f654f00</code> Change -genproclimit default to 1</li>
+  <li><code class="highlighter-rouge">3c77714</code> Make -proxy set all network types, avoiding a connect leak</li>
+  <li><code class="highlighter-rouge">57be955</code> Remove -printblock, -printblocktree, and -printblockindex</li>
+  <li><code class="highlighter-rouge">ad3d208</code> remove -maxorphanblocks config parameter since it is no longer functional</li>
 </ul>
 
 <p>Block and transaction handling:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7a0e84d"><code class="highlighter-rouge">7a0e84d</code></a> ProcessGetData(): abort if a block file is missing from disk</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8c93bf4"><code class="highlighter-rouge">8c93bf4</code></a> LoadBlockIndexDB(): Require block db reindex if any <code class="highlighter-rouge">blk*.dat</code> files are missing</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/77339e5"><code class="highlighter-rouge">77339e5</code></a> Get rid of the static chainMostWork (optimization)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4e0eed8"><code class="highlighter-rouge">4e0eed8</code></a> Allow ActivateBestChain to release its lock on cs_main</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/18e7216"><code class="highlighter-rouge">18e7216</code></a> Push cs_mains down in ProcessBlock</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/fa126ef"><code class="highlighter-rouge">fa126ef</code></a> Avoid undefined behavior using CFlatData in CScript serialization</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7f3b4e9"><code class="highlighter-rouge">7f3b4e9</code></a> Relax IsStandard rules for pay-to-script-hash transactions</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c9a0918"><code class="highlighter-rouge">c9a0918</code></a> Add a skiplist to the CBlockIndex structure</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/bc42503"><code class="highlighter-rouge">bc42503</code></a> Use unordered_map for CCoinsViewCache with salted hash (optimization)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d4d3fbd"><code class="highlighter-rouge">d4d3fbd</code></a> Do not flush the cache after every block outside of IBD (optimization)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ad08d0b"><code class="highlighter-rouge">ad08d0b</code></a> Bugfix: make CCoinsViewMemPool support pruned entries in underlying cache</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/5734d4d"><code class="highlighter-rouge">5734d4d</code></a> Only remove actualy failed blocks from setBlockIndexValid</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d70bc52"><code class="highlighter-rouge">d70bc52</code></a> Rework block processing benchmark code</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/714a3e6"><code class="highlighter-rouge">714a3e6</code></a> Only keep setBlockIndexValid entries that are possible improvements</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ea100c7"><code class="highlighter-rouge">ea100c7</code></a> Reduce maximum coinscache size during verification (reduce memory usage)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4fad8e6"><code class="highlighter-rouge">4fad8e6</code></a> Reject transactions with excessive numbers of sigops</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b0875eb"><code class="highlighter-rouge">b0875eb</code></a> Allow BatchWrite to destroy its input, reducing copying (optimization)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/92bb6f2"><code class="highlighter-rouge">92bb6f2</code></a> Bypass reloading blocks from disk (optimization)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2e28031"><code class="highlighter-rouge">2e28031</code></a> Perform CVerifyDB on pcoinsdbview instead of pcoinsTip (reduce memory usage)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ab15b2e"><code class="highlighter-rouge">ab15b2e</code></a> Avoid copying undo data (optimization)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/341735e"><code class="highlighter-rouge">341735e</code></a> Headers-first synchronization</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/afc32c5"><code class="highlighter-rouge">afc32c5</code></a> Fix rebuild-chainstate feature and improve its performance</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e11b2ce"><code class="highlighter-rouge">e11b2ce</code></a> Fix large reorgs</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ed6d1a2"><code class="highlighter-rouge">ed6d1a2</code></a> Keep information about all block files in memory</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a48f2d6"><code class="highlighter-rouge">a48f2d6</code></a> Abstract context-dependent block checking from acceptance</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7e615f5"><code class="highlighter-rouge">7e615f5</code></a> Fixed mempool sync after sending a transaction</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/51ce901"><code class="highlighter-rouge">51ce901</code></a> Improve chainstate/blockindex disk writing policy</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a206950"><code class="highlighter-rouge">a206950</code></a> Introduce separate flushing modes</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9ec75c5"><code class="highlighter-rouge">9ec75c5</code></a> Add a locking mechanism to IsInitialBlockDownload to ensure it never goes from false to true</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/868d041"><code class="highlighter-rouge">868d041</code></a> Remove coinbase-dependant transactions during reorg</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/723d12c"><code class="highlighter-rouge">723d12c</code></a> Remove txn which are invalidated by coinbase maturity during reorg</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0cb8763"><code class="highlighter-rouge">0cb8763</code></a> Check against MANDATORY flags prior to accepting to mempool</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8446262"><code class="highlighter-rouge">8446262</code></a> Reject headers that build on an invalid parent</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/008138c"><code class="highlighter-rouge">008138c</code></a> Bugfix: only track UTXO modification after lookup</li>
+  <li><code class="highlighter-rouge">7a0e84d</code> ProcessGetData(): abort if a block file is missing from disk</li>
+  <li><code class="highlighter-rouge">8c93bf4</code> LoadBlockIndexDB(): Require block db reindex if any <code class="highlighter-rouge">blk*.dat</code> files are missing</li>
+  <li><code class="highlighter-rouge">77339e5</code> Get rid of the static chainMostWork (optimization)</li>
+  <li><code class="highlighter-rouge">4e0eed8</code> Allow ActivateBestChain to release its lock on cs_main</li>
+  <li><code class="highlighter-rouge">18e7216</code> Push cs_mains down in ProcessBlock</li>
+  <li><code class="highlighter-rouge">fa126ef</code> Avoid undefined behavior using CFlatData in CScript serialization</li>
+  <li><code class="highlighter-rouge">7f3b4e9</code> Relax IsStandard rules for pay-to-script-hash transactions</li>
+  <li><code class="highlighter-rouge">c9a0918</code> Add a skiplist to the CBlockIndex structure</li>
+  <li><code class="highlighter-rouge">bc42503</code> Use unordered_map for CCoinsViewCache with salted hash (optimization)</li>
+  <li><code class="highlighter-rouge">d4d3fbd</code> Do not flush the cache after every block outside of IBD (optimization)</li>
+  <li><code class="highlighter-rouge">ad08d0b</code> Bugfix: make CCoinsViewMemPool support pruned entries in underlying cache</li>
+  <li><code class="highlighter-rouge">5734d4d</code> Only remove actualy failed blocks from setBlockIndexValid</li>
+  <li><code class="highlighter-rouge">d70bc52</code> Rework block processing benchmark code</li>
+  <li><code class="highlighter-rouge">714a3e6</code> Only keep setBlockIndexValid entries that are possible improvements</li>
+  <li><code class="highlighter-rouge">ea100c7</code> Reduce maximum coinscache size during verification (reduce memory usage)</li>
+  <li><code class="highlighter-rouge">4fad8e6</code> Reject transactions with excessive numbers of sigops</li>
+  <li><code class="highlighter-rouge">b0875eb</code> Allow BatchWrite to destroy its input, reducing copying (optimization)</li>
+  <li><code class="highlighter-rouge">92bb6f2</code> Bypass reloading blocks from disk (optimization)</li>
+  <li><code class="highlighter-rouge">2e28031</code> Perform CVerifyDB on pcoinsdbview instead of pcoinsTip (reduce memory usage)</li>
+  <li><code class="highlighter-rouge">ab15b2e</code> Avoid copying undo data (optimization)</li>
+  <li><code class="highlighter-rouge">341735e</code> Headers-first synchronization</li>
+  <li><code class="highlighter-rouge">afc32c5</code> Fix rebuild-chainstate feature and improve its performance</li>
+  <li><code class="highlighter-rouge">e11b2ce</code> Fix large reorgs</li>
+  <li><code class="highlighter-rouge">ed6d1a2</code> Keep information about all block files in memory</li>
+  <li><code class="highlighter-rouge">a48f2d6</code> Abstract context-dependent block checking from acceptance</li>
+  <li><code class="highlighter-rouge">7e615f5</code> Fixed mempool sync after sending a transaction</li>
+  <li><code class="highlighter-rouge">51ce901</code> Improve chainstate/blockindex disk writing policy</li>
+  <li><code class="highlighter-rouge">a206950</code> Introduce separate flushing modes</li>
+  <li><code class="highlighter-rouge">9ec75c5</code> Add a locking mechanism to IsInitialBlockDownload to ensure it never goes from false to true</li>
+  <li><code class="highlighter-rouge">868d041</code> Remove coinbase-dependant transactions during reorg</li>
+  <li><code class="highlighter-rouge">723d12c</code> Remove txn which are invalidated by coinbase maturity during reorg</li>
+  <li><code class="highlighter-rouge">0cb8763</code> Check against MANDATORY flags prior to accepting to mempool</li>
+  <li><code class="highlighter-rouge">8446262</code> Reject headers that build on an invalid parent</li>
+  <li><code class="highlighter-rouge">008138c</code> Bugfix: only track UTXO modification after lookup</li>
 </ul>
 
 <p>P2P protocol and network code:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f80cffa"><code class="highlighter-rouge">f80cffa</code></a> Do not trigger a DoS ban if SCRIPT_VERIFY_NULLDUMMY fails</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c30329a"><code class="highlighter-rouge">c30329a</code></a> Add testnet DNS seed of Alex Kotenko</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/45a4baf"><code class="highlighter-rouge">45a4baf</code></a> Add testnet DNS seed of Andreas Schildbach</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f1920e8"><code class="highlighter-rouge">f1920e8</code></a> Ping automatically every 2 minutes (unconditionally)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/806fd19"><code class="highlighter-rouge">806fd19</code></a> Allocate receive buffers in on the fly</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6ecf3ed"><code class="highlighter-rouge">6ecf3ed</code></a> Display unknown commands received</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/aa81564"><code class="highlighter-rouge">aa81564</code></a> Track peers’ available blocks</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/caf6150"><code class="highlighter-rouge">caf6150</code></a> Use async name resolving to improve net thread responsiveness</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9f4da19"><code class="highlighter-rouge">9f4da19</code></a> Use pong receive time rather than processing time</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0127a9b"><code class="highlighter-rouge">0127a9b</code></a> remove SOCKS4 support from core and GUI, use SOCKS5</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/40f5cb8"><code class="highlighter-rouge">40f5cb8</code></a> Send rejects and apply DoS scoring for errors in direct block validation</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/dc942e6"><code class="highlighter-rouge">dc942e6</code></a> Introduce whitelisted peers</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c994d2e"><code class="highlighter-rouge">c994d2e</code></a> prevent SOCKET leak in BindListenPort()</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a60120e"><code class="highlighter-rouge">a60120e</code></a> Add built-in seeds for .onion</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/60dc8e4"><code class="highlighter-rouge">60dc8e4</code></a> Allow -onlynet=onion to be used</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/3a56de7"><code class="highlighter-rouge">3a56de7</code></a> addrman: Do not propagate obviously poor addresses onto the network</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6050ab6"><code class="highlighter-rouge">6050ab6</code></a> netbase: Make SOCKS5 negotiation interruptible</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/604ee2a"><code class="highlighter-rouge">604ee2a</code></a> Remove tx from AlreadyAskedFor list once we receive it, not when we process it</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/efad808"><code class="highlighter-rouge">efad808</code></a> Avoid reject message feedback loops</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/71697f9"><code class="highlighter-rouge">71697f9</code></a> Separate protocol versioning from clientversion</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/20a5f61"><code class="highlighter-rouge">20a5f61</code></a> Don’t relay alerts to peers before version negotiation</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b4ee0bd"><code class="highlighter-rouge">b4ee0bd</code></a> Introduce preferred download peers</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/845c86d"><code class="highlighter-rouge">845c86d</code></a> Do not use third party services for IP detection</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/12a49ca"><code class="highlighter-rouge">12a49ca</code></a> Limit the number of new addressses to accumulate</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/35e408f"><code class="highlighter-rouge">35e408f</code></a> Regard connection failures as attempt for addrman</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a3a7317"><code class="highlighter-rouge">a3a7317</code></a> Introduce 10 minute block download timeout</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/3022e7d"><code class="highlighter-rouge">3022e7d</code></a> Require sufficent priority for relay of free transactions</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/58fda4d"><code class="highlighter-rouge">58fda4d</code></a> Update seed IPs, based on bitcoin.sipa.be crawler data</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/18021d0"><code class="highlighter-rouge">18021d0</code></a> Remove bitnodes.io from dnsseeds.</li>
+  <li><code class="highlighter-rouge">f80cffa</code> Do not trigger a DoS ban if SCRIPT_VERIFY_NULLDUMMY fails</li>
+  <li><code class="highlighter-rouge">c30329a</code> Add testnet DNS seed of Alex Kotenko</li>
+  <li><code class="highlighter-rouge">45a4baf</code> Add testnet DNS seed of Andreas Schildbach</li>
+  <li><code class="highlighter-rouge">f1920e8</code> Ping automatically every 2 minutes (unconditionally)</li>
+  <li><code class="highlighter-rouge">806fd19</code> Allocate receive buffers in on the fly</li>
+  <li><code class="highlighter-rouge">6ecf3ed</code> Display unknown commands received</li>
+  <li><code class="highlighter-rouge">aa81564</code> Track peers’ available blocks</li>
+  <li><code class="highlighter-rouge">caf6150</code> Use async name resolving to improve net thread responsiveness</li>
+  <li><code class="highlighter-rouge">9f4da19</code> Use pong receive time rather than processing time</li>
+  <li><code class="highlighter-rouge">0127a9b</code> remove SOCKS4 support from core and GUI, use SOCKS5</li>
+  <li><code class="highlighter-rouge">40f5cb8</code> Send rejects and apply DoS scoring for errors in direct block validation</li>
+  <li><code class="highlighter-rouge">dc942e6</code> Introduce whitelisted peers</li>
+  <li><code class="highlighter-rouge">c994d2e</code> prevent SOCKET leak in BindListenPort()</li>
+  <li><code class="highlighter-rouge">a60120e</code> Add built-in seeds for .onion</li>
+  <li><code class="highlighter-rouge">60dc8e4</code> Allow -onlynet=onion to be used</li>
+  <li><code class="highlighter-rouge">3a56de7</code> addrman: Do not propagate obviously poor addresses onto the network</li>
+  <li><code class="highlighter-rouge">6050ab6</code> netbase: Make SOCKS5 negotiation interruptible</li>
+  <li><code class="highlighter-rouge">604ee2a</code> Remove tx from AlreadyAskedFor list once we receive it, not when we process it</li>
+  <li><code class="highlighter-rouge">efad808</code> Avoid reject message feedback loops</li>
+  <li><code class="highlighter-rouge">71697f9</code> Separate protocol versioning from clientversion</li>
+  <li><code class="highlighter-rouge">20a5f61</code> Don’t relay alerts to peers before version negotiation</li>
+  <li><code class="highlighter-rouge">b4ee0bd</code> Introduce preferred download peers</li>
+  <li><code class="highlighter-rouge">845c86d</code> Do not use third party services for IP detection</li>
+  <li><code class="highlighter-rouge">12a49ca</code> Limit the number of new addressses to accumulate</li>
+  <li><code class="highlighter-rouge">35e408f</code> Regard connection failures as attempt for addrman</li>
+  <li><code class="highlighter-rouge">a3a7317</code> Introduce 10 minute block download timeout</li>
+  <li><code class="highlighter-rouge">3022e7d</code> Require sufficent priority for relay of free transactions</li>
+  <li><code class="highlighter-rouge">58fda4d</code> Update seed IPs, based on bitcoin.sipa.be crawler data</li>
+  <li><code class="highlighter-rouge">18021d0</code> Remove bitnodes.io from dnsseeds.</li>
 </ul>
 
 <p>Validation:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6fd7ef2"><code class="highlighter-rouge">6fd7ef2</code></a> Also switch the (unused) verification code to low-s instead of even-s</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/584a358"><code class="highlighter-rouge">584a358</code></a> Do merkle root and txid duplicates check simultaneously</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/217a5c9"><code class="highlighter-rouge">217a5c9</code></a> When transaction outputs exceed inputs, show the offending amounts so as to aid debugging</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f74fc9b"><code class="highlighter-rouge">f74fc9b</code></a> Print input index when signature validation fails, to aid debugging</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6fd59ee"><code class="highlighter-rouge">6fd59ee</code></a> script.h: set_vch() should shift a &gt;32 bit value</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d752ba8"><code class="highlighter-rouge">d752ba8</code></a> Add SCRIPT_VERIFY_SIGPUSHONLY (BIP62 rule 2) (test only)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/698c6ab"><code class="highlighter-rouge">698c6ab</code></a> Add SCRIPT_VERIFY_MINIMALDATA (BIP62 rules 3 and 4) (test only)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ab9edbd"><code class="highlighter-rouge">ab9edbd</code></a> script: create sane error return codes for script validation and remove logging</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/219a147"><code class="highlighter-rouge">219a147</code></a> script: check ScriptError values in script tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0391423"><code class="highlighter-rouge">0391423</code></a> Discourage NOPs reserved for soft-fork upgrades</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/98b135f"><code class="highlighter-rouge">98b135f</code></a> Make STRICTENC invalid pubkeys fail the script rather than the opcode</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/307f7d4"><code class="highlighter-rouge">307f7d4</code></a> Report script evaluation failures in log and reject messages</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ace39db"><code class="highlighter-rouge">ace39db</code></a> consensus: guard against openssl’s new strict DER checks</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/12b7c44"><code class="highlighter-rouge">12b7c44</code></a> Improve robustness of DER recoding code</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/76ce5c8"><code class="highlighter-rouge">76ce5c8</code></a> fail immediately on an empty signature</li>
+  <li><code class="highlighter-rouge">6fd7ef2</code> Also switch the (unused) verification code to low-s instead of even-s</li>
+  <li><code class="highlighter-rouge">584a358</code> Do merkle root and txid duplicates check simultaneously</li>
+  <li><code class="highlighter-rouge">217a5c9</code> When transaction outputs exceed inputs, show the offending amounts so as to aid debugging</li>
+  <li><code class="highlighter-rouge">f74fc9b</code> Print input index when signature validation fails, to aid debugging</li>
+  <li><code class="highlighter-rouge">6fd59ee</code> script.h: set_vch() should shift a &gt;32 bit value</li>
+  <li><code class="highlighter-rouge">d752ba8</code> Add SCRIPT_VERIFY_SIGPUSHONLY (BIP62 rule 2) (test only)</li>
+  <li><code class="highlighter-rouge">698c6ab</code> Add SCRIPT_VERIFY_MINIMALDATA (BIP62 rules 3 and 4) (test only)</li>
+  <li><code class="highlighter-rouge">ab9edbd</code> script: create sane error return codes for script validation and remove logging</li>
+  <li><code class="highlighter-rouge">219a147</code> script: check ScriptError values in script tests</li>
+  <li><code class="highlighter-rouge">0391423</code> Discourage NOPs reserved for soft-fork upgrades</li>
+  <li><code class="highlighter-rouge">98b135f</code> Make STRICTENC invalid pubkeys fail the script rather than the opcode</li>
+  <li><code class="highlighter-rouge">307f7d4</code> Report script evaluation failures in log and reject messages</li>
+  <li><code class="highlighter-rouge">ace39db</code> consensus: guard against openssl’s new strict DER checks</li>
+  <li><code class="highlighter-rouge">12b7c44</code> Improve robustness of DER recoding code</li>
+  <li><code class="highlighter-rouge">76ce5c8</code> fail immediately on an empty signature</li>
 </ul>
 
 <p>Build system:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f25e3ad"><code class="highlighter-rouge">f25e3ad</code></a> Fix build in OS X 10.9</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/65e8ba4"><code class="highlighter-rouge">65e8ba4</code></a> build: Switch to non-recursive make</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/460b32d"><code class="highlighter-rouge">460b32d</code></a> build: fix broken boost chrono check on some platforms</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9ce0774"><code class="highlighter-rouge">9ce0774</code></a> build: Fix windows configure when using –with-qt-libdir</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ea96475"><code class="highlighter-rouge">ea96475</code></a> build: Add mention of –disable-wallet to bdb48 error messages</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/1dec09b"><code class="highlighter-rouge">1dec09b</code></a> depends: add shared dependency builder</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c101c76"><code class="highlighter-rouge">c101c76</code></a> build: Add –with-utils (bitcoin-cli and bitcoin-tx, default=yes). Help string consistency tweaks. Target sanity check fix</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e432a5f"><code class="highlighter-rouge">e432a5f</code></a> build: add option for reducing exports (v2)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6134b43"><code class="highlighter-rouge">6134b43</code></a> Fixing condition ‘sabotaging’ MSVC build</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/af0bd5e"><code class="highlighter-rouge">af0bd5e</code></a> osx: fix signing to make Gatekeeper happy (again)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a7d1f03"><code class="highlighter-rouge">a7d1f03</code></a> build: fix dynamic boost check when –with-boost= is used</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d5fd094"><code class="highlighter-rouge">d5fd094</code></a> build: fix qt test build when libprotobuf is in a non-standard path</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2cf5f16"><code class="highlighter-rouge">2cf5f16</code></a> Add libbitcoinconsensus library</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/914868a"><code class="highlighter-rouge">914868a</code></a> build: add a deterministic dmg signer</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2d375fe"><code class="highlighter-rouge">2d375fe</code></a> depends: bump openssl to 1.0.1k</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b7a4ecc"><code class="highlighter-rouge">b7a4ecc</code></a> Build: Only check for boost when building code that requires it</li>
+  <li><code class="highlighter-rouge">f25e3ad</code> Fix build in OS X 10.9</li>
+  <li><code class="highlighter-rouge">65e8ba4</code> build: Switch to non-recursive make</li>
+  <li><code class="highlighter-rouge">460b32d</code> build: fix broken boost chrono check on some platforms</li>
+  <li><code class="highlighter-rouge">9ce0774</code> build: Fix windows configure when using –with-qt-libdir</li>
+  <li><code class="highlighter-rouge">ea96475</code> build: Add mention of –disable-wallet to bdb48 error messages</li>
+  <li><code class="highlighter-rouge">1dec09b</code> depends: add shared dependency builder</li>
+  <li><code class="highlighter-rouge">c101c76</code> build: Add –with-utils (bitcoin-cli and bitcoin-tx, default=yes). Help string consistency tweaks. Target sanity check fix</li>
+  <li><code class="highlighter-rouge">e432a5f</code> build: add option for reducing exports (v2)</li>
+  <li><code class="highlighter-rouge">6134b43</code> Fixing condition ‘sabotaging’ MSVC build</li>
+  <li><code class="highlighter-rouge">af0bd5e</code> osx: fix signing to make Gatekeeper happy (again)</li>
+  <li><code class="highlighter-rouge">a7d1f03</code> build: fix dynamic boost check when –with-boost= is used</li>
+  <li><code class="highlighter-rouge">d5fd094</code> build: fix qt test build when libprotobuf is in a non-standard path</li>
+  <li><code class="highlighter-rouge">2cf5f16</code> Add libbitcoinconsensus library</li>
+  <li><code class="highlighter-rouge">914868a</code> build: add a deterministic dmg signer</li>
+  <li><code class="highlighter-rouge">2d375fe</code> depends: bump openssl to 1.0.1k</li>
+  <li><code class="highlighter-rouge">b7a4ecc</code> Build: Only check for boost when building code that requires it</li>
 </ul>
 
 <p>Wallet:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b33d1f5"><code class="highlighter-rouge">b33d1f5</code></a> Use fee/priority estimates in wallet CreateTransaction</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4b7b1bb"><code class="highlighter-rouge">4b7b1bb</code></a> Sanity checks for estimates</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c898846"><code class="highlighter-rouge">c898846</code></a> Add support for watch-only addresses</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d5087d1"><code class="highlighter-rouge">d5087d1</code></a> Use script matching rather than destination matching for watch-only</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d88af56"><code class="highlighter-rouge">d88af56</code></a> Fee fixes</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a35b55b"><code class="highlighter-rouge">a35b55b</code></a> Dont run full check every time we decrypt wallet</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/3a7c348"><code class="highlighter-rouge">3a7c348</code></a> Fix make_change to not create half-satoshis</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f606bb9"><code class="highlighter-rouge">f606bb9</code></a> fix a possible memory leak in CWalletDB::Recover</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/870da77"><code class="highlighter-rouge">870da77</code></a> fix possible memory leaks in CWallet::EncryptWallet</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ccca27a"><code class="highlighter-rouge">ccca27a</code></a> Watch-only fixes</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9b1627d"><code class="highlighter-rouge">9b1627d</code></a> [Wallet] Reduce minTxFee for transaction creation to 1000 satoshis</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a53fd41"><code class="highlighter-rouge">a53fd41</code></a> Deterministic signing</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/15ad0b5"><code class="highlighter-rouge">15ad0b5</code></a> Apply AreSane() checks to the fees from the network</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/11855c1"><code class="highlighter-rouge">11855c1</code></a> Enforce minRelayTxFee on wallet created tx and add a maxtxfee option</li>
+  <li><code class="highlighter-rouge">b33d1f5</code> Use fee/priority estimates in wallet CreateTransaction</li>
+  <li><code class="highlighter-rouge">4b7b1bb</code> Sanity checks for estimates</li>
+  <li><code class="highlighter-rouge">c898846</code> Add support for watch-only addresses</li>
+  <li><code class="highlighter-rouge">d5087d1</code> Use script matching rather than destination matching for watch-only</li>
+  <li><code class="highlighter-rouge">d88af56</code> Fee fixes</li>
+  <li><code class="highlighter-rouge">a35b55b</code> Dont run full check every time we decrypt wallet</li>
+  <li><code class="highlighter-rouge">3a7c348</code> Fix make_change to not create half-satoshis</li>
+  <li><code class="highlighter-rouge">f606bb9</code> fix a possible memory leak in CWalletDB::Recover</li>
+  <li><code class="highlighter-rouge">870da77</code> fix possible memory leaks in CWallet::EncryptWallet</li>
+  <li><code class="highlighter-rouge">ccca27a</code> Watch-only fixes</li>
+  <li><code class="highlighter-rouge">9b1627d</code> [Wallet] Reduce minTxFee for transaction creation to 1000 satoshis</li>
+  <li><code class="highlighter-rouge">a53fd41</code> Deterministic signing</li>
+  <li><code class="highlighter-rouge">15ad0b5</code> Apply AreSane() checks to the fees from the network</li>
+  <li><code class="highlighter-rouge">11855c1</code> Enforce minRelayTxFee on wallet created tx and add a maxtxfee option</li>
 </ul>
 
 <p>GUI:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c21c74b"><code class="highlighter-rouge">c21c74b</code></a> osx: Fix missing dock menu with qt5</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b90711c"><code class="highlighter-rouge">b90711c</code></a> Fix Transaction details shows wrong To:</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/516053c"><code class="highlighter-rouge">516053c</code></a> Make links in ‘About Bitcoin Core’ clickable</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/bdc83e8"><code class="highlighter-rouge">bdc83e8</code></a> Ensure payment request network matches client network</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/65f78a1"><code class="highlighter-rouge">65f78a1</code></a> Add GUI view of peer information</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/06a91d9"><code class="highlighter-rouge">06a91d9</code></a> VerifyDB progress reporting</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/fe6bff2"><code class="highlighter-rouge">fe6bff2</code></a> Add BerkeleyDB version info to RPCConsole</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b917555"><code class="highlighter-rouge">b917555</code></a> PeerTableModel: Fix potential deadlock. <a href="https://github.com/bitcoin/bitcoin/pull/4296">#4296</a></li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/dff0e3b"><code class="highlighter-rouge">dff0e3b</code></a> Improve rpc console history behavior</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/95a9383"><code class="highlighter-rouge">95a9383</code></a> Remove CENT-fee-rule from coin control completely</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/56b07d2"><code class="highlighter-rouge">56b07d2</code></a> Allow setting listen via GUI</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d95ba75"><code class="highlighter-rouge">d95ba75</code></a> Log messages with type&gt;QtDebugMsg as non-debug</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8969828"><code class="highlighter-rouge">8969828</code></a> New status bar Unit Display Control and related changes</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/674c070"><code class="highlighter-rouge">674c070</code></a> seed OpenSSL PNRG with Windows event data</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/509f926"><code class="highlighter-rouge">509f926</code></a> Payment request parsing on startup now only changes network if a valid network name is specified</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/acd432b"><code class="highlighter-rouge">acd432b</code></a> Prevent balloon-spam after rescan</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7007402"><code class="highlighter-rouge">7007402</code></a> Implement SI-style (thin space) thoudands separator</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/91cce17"><code class="highlighter-rouge">91cce17</code></a> Use fixed-point arithmetic in amount spinbox</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/bdba2dd"><code class="highlighter-rouge">bdba2dd</code></a> Remove an obscure option no-one cares about</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/bd0aa10"><code class="highlighter-rouge">bd0aa10</code></a> Replace the temporary file hack currently used to change Bitcoin-Qt’s dock icon (OS X) with a buffer-based solution</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/94e1b9e"><code class="highlighter-rouge">94e1b9e</code></a> Re-work overviewpage UI</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8bfdc9a"><code class="highlighter-rouge">8bfdc9a</code></a> Better looking trayicon</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b197bf3"><code class="highlighter-rouge">b197bf3</code></a> disable tray interactions when client model set to 0</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/1c5f0af"><code class="highlighter-rouge">1c5f0af</code></a> Add column Watch-only to transactions list</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/21f139b"><code class="highlighter-rouge">21f139b</code></a> Fix tablet crash. closes <a href="https://github.com/bitcoin/bitcoin/pull/4854">#4854</a></li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e84843c"><code class="highlighter-rouge">e84843c</code></a> Broken addresses on command line no longer trigger testnet</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a49f11d"><code class="highlighter-rouge">a49f11d</code></a> Change splash screen to normal window</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/1f9be98"><code class="highlighter-rouge">1f9be98</code></a> Disable App Nap on OSX 10.9+</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/27c3e91"><code class="highlighter-rouge">27c3e91</code></a> Add proxy to options overridden if necessary</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4bd1185"><code class="highlighter-rouge">4bd1185</code></a> Allow “emergency” shutdown during startup</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d52f072"><code class="highlighter-rouge">d52f072</code></a> Don’t show wallet options in the preferences menu when running with -disablewallet</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6093aa1"><code class="highlighter-rouge">6093aa1</code></a> Qt: QProgressBar CPU-Issue workaround</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0ed9675"><code class="highlighter-rouge">0ed9675</code></a> [Wallet] Add global boolean whether to send free transactions (default=true)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ed3e5e4"><code class="highlighter-rouge">ed3e5e4</code></a> [Wallet] Add global boolean whether to pay at least the custom fee (default=true)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e7876b2"><code class="highlighter-rouge">e7876b2</code></a> [Wallet] Prevent user from paying a non-sense fee</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c1c9d5b"><code class="highlighter-rouge">c1c9d5b</code></a> Add Smartfee to GUI</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e0a25c5"><code class="highlighter-rouge">e0a25c5</code></a> Make askpassphrase dialog behave more sanely</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/94b362d"><code class="highlighter-rouge">94b362d</code></a> On close of splashscreen interrupt verifyDB</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b790d13"><code class="highlighter-rouge">b790d13</code></a> English translation update</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8543b0d"><code class="highlighter-rouge">8543b0d</code></a> Correct tooltip on address book page</li>
+  <li><code class="highlighter-rouge">c21c74b</code> osx: Fix missing dock menu with qt5</li>
+  <li><code class="highlighter-rouge">b90711c</code> Fix Transaction details shows wrong To:</li>
+  <li><code class="highlighter-rouge">516053c</code> Make links in ‘About Bitcoin Core’ clickable</li>
+  <li><code class="highlighter-rouge">bdc83e8</code> Ensure payment request network matches client network</li>
+  <li><code class="highlighter-rouge">65f78a1</code> Add GUI view of peer information</li>
+  <li><code class="highlighter-rouge">06a91d9</code> VerifyDB progress reporting</li>
+  <li><code class="highlighter-rouge">fe6bff2</code> Add BerkeleyDB version info to RPCConsole</li>
+  <li><code class="highlighter-rouge">b917555</code> PeerTableModel: Fix potential deadlock. #4296</li>
+  <li><code class="highlighter-rouge">dff0e3b</code> Improve rpc console history behavior</li>
+  <li><code class="highlighter-rouge">95a9383</code> Remove CENT-fee-rule from coin control completely</li>
+  <li><code class="highlighter-rouge">56b07d2</code> Allow setting listen via GUI</li>
+  <li><code class="highlighter-rouge">d95ba75</code> Log messages with type&gt;QtDebugMsg as non-debug</li>
+  <li><code class="highlighter-rouge">8969828</code> New status bar Unit Display Control and related changes</li>
+  <li><code class="highlighter-rouge">674c070</code> seed OpenSSL PNRG with Windows event data</li>
+  <li><code class="highlighter-rouge">509f926</code> Payment request parsing on startup now only changes network if a valid network name is specified</li>
+  <li><code class="highlighter-rouge">acd432b</code> Prevent balloon-spam after rescan</li>
+  <li><code class="highlighter-rouge">7007402</code> Implement SI-style (thin space) thoudands separator</li>
+  <li><code class="highlighter-rouge">91cce17</code> Use fixed-point arithmetic in amount spinbox</li>
+  <li><code class="highlighter-rouge">bdba2dd</code> Remove an obscure option no-one cares about</li>
+  <li><code class="highlighter-rouge">bd0aa10</code> Replace the temporary file hack currently used to change Bitcoin-Qt’s dock icon (OS X) with a buffer-based solution</li>
+  <li><code class="highlighter-rouge">94e1b9e</code> Re-work overviewpage UI</li>
+  <li><code class="highlighter-rouge">8bfdc9a</code> Better looking trayicon</li>
+  <li><code class="highlighter-rouge">b197bf3</code> disable tray interactions when client model set to 0</li>
+  <li><code class="highlighter-rouge">1c5f0af</code> Add column Watch-only to transactions list</li>
+  <li><code class="highlighter-rouge">21f139b</code> Fix tablet crash. closes #4854</li>
+  <li><code class="highlighter-rouge">e84843c</code> Broken addresses on command line no longer trigger testnet</li>
+  <li><code class="highlighter-rouge">a49f11d</code> Change splash screen to normal window</li>
+  <li><code class="highlighter-rouge">1f9be98</code> Disable App Nap on OSX 10.9+</li>
+  <li><code class="highlighter-rouge">27c3e91</code> Add proxy to options overridden if necessary</li>
+  <li><code class="highlighter-rouge">4bd1185</code> Allow “emergency” shutdown during startup</li>
+  <li><code class="highlighter-rouge">d52f072</code> Don’t show wallet options in the preferences menu when running with -disablewallet</li>
+  <li><code class="highlighter-rouge">6093aa1</code> Qt: QProgressBar CPU-Issue workaround</li>
+  <li><code class="highlighter-rouge">0ed9675</code> [Wallet] Add global boolean whether to send free transactions (default=true)</li>
+  <li><code class="highlighter-rouge">ed3e5e4</code> [Wallet] Add global boolean whether to pay at least the custom fee (default=true)</li>
+  <li><code class="highlighter-rouge">e7876b2</code> [Wallet] Prevent user from paying a non-sense fee</li>
+  <li><code class="highlighter-rouge">c1c9d5b</code> Add Smartfee to GUI</li>
+  <li><code class="highlighter-rouge">e0a25c5</code> Make askpassphrase dialog behave more sanely</li>
+  <li><code class="highlighter-rouge">94b362d</code> On close of splashscreen interrupt verifyDB</li>
+  <li><code class="highlighter-rouge">b790d13</code> English translation update</li>
+  <li><code class="highlighter-rouge">8543b0d</code> Correct tooltip on address book page</li>
 </ul>
 
 <p>Tests:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b41e594"><code class="highlighter-rouge">b41e594</code></a> Fix script test handling of empty scripts</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d3a33fc"><code class="highlighter-rouge">d3a33fc</code></a> Test CHECKMULTISIG with m == 0 and n == 0</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/29c1749"><code class="highlighter-rouge">29c1749</code></a> Let tx (in)valid tests use any SCRIPT_VERIFY flag</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6380180"><code class="highlighter-rouge">6380180</code></a> Add rejection of non-null CHECKMULTISIG dummy values</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/21bf3d2"><code class="highlighter-rouge">21bf3d2</code></a> Add tests for BoostAsioToCNetAddr</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b5ad5e7"><code class="highlighter-rouge">b5ad5e7</code></a> Add Python test for -rpcbind and -rpcallowip</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9ec0306"><code class="highlighter-rouge">9ec0306</code></a> Add CODESEPARATOR/FindAndDelete() tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/75ebced"><code class="highlighter-rouge">75ebced</code></a> Added many rpc wallet tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0193fb8"><code class="highlighter-rouge">0193fb8</code></a> Allow multiple regression tests to run at once</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/92a6220"><code class="highlighter-rouge">92a6220</code></a> Hook up sanity checks</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/3820e01"><code class="highlighter-rouge">3820e01</code></a> Extend and move all crypto tests to crypto_tests.cpp</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/3f9a019"><code class="highlighter-rouge">3f9a019</code></a> added list/get received by address/ account tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a90689f"><code class="highlighter-rouge">a90689f</code></a> Remove timing-based signature cache unit test</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/236982c"><code class="highlighter-rouge">236982c</code></a> Add skiplist unit tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f4b00be"><code class="highlighter-rouge">f4b00be</code></a> Add CChain::GetLocator() unit test</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b45a6e8"><code class="highlighter-rouge">b45a6e8</code></a> Add test for getblocktemplate longpolling</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/cdf305e"><code class="highlighter-rouge">cdf305e</code></a> Set -discover=0 in regtest framework</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ed02282"><code class="highlighter-rouge">ed02282</code></a> additional test for OP_SIZE in script_valid.json</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0072d98"><code class="highlighter-rouge">0072d98</code></a> script tests: BOOLAND, BOOLOR decode to integer</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/833ff16"><code class="highlighter-rouge">833ff16</code></a> script tests: values that overflow to 0 are true</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4cac5db"><code class="highlighter-rouge">4cac5db</code></a> script tests: value with trailing 0x00 is true</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/89101c6"><code class="highlighter-rouge">89101c6</code></a> script test: test case for 5-byte bools</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d2d9dc0"><code class="highlighter-rouge">d2d9dc0</code></a> script tests: add tests for CHECKMULTISIG limits</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d789386"><code class="highlighter-rouge">d789386</code></a> Add “it works” test for bitcoin-tx</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/df4d61e"><code class="highlighter-rouge">df4d61e</code></a> Add bitcoin-tx tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/aa41ac2"><code class="highlighter-rouge">aa41ac2</code></a> Test IsPushOnly() with invalid push</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6022b5d"><code class="highlighter-rouge">6022b5d</code></a> Make <code class="highlighter-rouge">script_{valid,invalid}.json</code> validation flags configurable</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8138cbe"><code class="highlighter-rouge">8138cbe</code></a> Add automatic script test generation, and actual checksig tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ed27e53"><code class="highlighter-rouge">ed27e53</code></a> Add coins_tests with a large randomized CCoinViewCache test</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9df9cf5"><code class="highlighter-rouge">9df9cf5</code></a> Make SCRIPT_VERIFY_STRICTENC compatible with BIP62</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/dcb9846"><code class="highlighter-rouge">dcb9846</code></a> Extend getchaintips RPC test</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/554147a"><code class="highlighter-rouge">554147a</code></a> Ensure MINIMALDATA invalid tests can only fail one way</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/dfeec18"><code class="highlighter-rouge">dfeec18</code></a> Test every numeric-accepting opcode for correct handling of the numeric minimal encoding rule</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2b62e17"><code class="highlighter-rouge">2b62e17</code></a> Clearly separate PUSHDATA and numeric argument MINIMALDATA tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/16d78bd"><code class="highlighter-rouge">16d78bd</code></a> Add valid invert of invalid every numeric opcode tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f635269"><code class="highlighter-rouge">f635269</code></a> tests: enable alertnotify test for Windows</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7a41614"><code class="highlighter-rouge">7a41614</code></a> tests: allow rpc-tests to get filenames for bitcoind and bitcoin-cli from the environment</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/5122ea7"><code class="highlighter-rouge">5122ea7</code></a> tests: fix forknotify.py on windows</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/fa7f8cd"><code class="highlighter-rouge">fa7f8cd</code></a> tests: remove old pull-tester scripts</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7667850"><code class="highlighter-rouge">7667850</code></a> tests: replace the old (unused since Travis) tests with new rpc test scripts</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f4e0aef"><code class="highlighter-rouge">f4e0aef</code></a> Do signature-s negation inside the tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/1837987"><code class="highlighter-rouge">1837987</code></a> Optimize -regtest setgenerate block generation</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2db4c8a"><code class="highlighter-rouge">2db4c8a</code></a> Fix node ranges in the test framework</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/a8b2ce5"><code class="highlighter-rouge">a8b2ce5</code></a> regression test only setmocktime RPC call</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/daf03e7"><code class="highlighter-rouge">daf03e7</code></a> RPC tests: create initial chain with specific timestamps</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8656dbb"><code class="highlighter-rouge">8656dbb</code></a> Port/fix txnmall.sh regression test</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/ca81587"><code class="highlighter-rouge">ca81587</code></a> Test the exact order of CHECKMULTISIG sig/pubkey evaluation</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7357893"><code class="highlighter-rouge">7357893</code></a> Prioritize and display -testsafemode status in UI</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f321d6b"><code class="highlighter-rouge">f321d6b</code></a> Add key generation/verification to ECC sanity check</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/132ea9b"><code class="highlighter-rouge">132ea9b</code></a> miner_tests: Disable checkpoints so they don’t fail the subsidy-change test</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/bc6cb41"><code class="highlighter-rouge">bc6cb41</code></a> QA RPC tests: Add tests block block proposals</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/f67a9ce"><code class="highlighter-rouge">f67a9ce</code></a> Use deterministically generated script tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/11d7a7d"><code class="highlighter-rouge">11d7a7d</code></a> [RPC] add rpc-test for http keep-alive (persistent connections)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/34318d7"><code class="highlighter-rouge">34318d7</code></a> RPC-test based on invalidateblock for mempool coinbase spends</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/76ec867"><code class="highlighter-rouge">76ec867</code></a> Use actually valid transactions for script tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/c8589bf"><code class="highlighter-rouge">c8589bf</code></a> Add actual signature tests</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e2677d7"><code class="highlighter-rouge">e2677d7</code></a> Fix smartfees test for change to relay policy</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/263b65e"><code class="highlighter-rouge">263b65e</code></a> tests: run sanity checks in tests too</li>
+  <li><code class="highlighter-rouge">b41e594</code> Fix script test handling of empty scripts</li>
+  <li><code class="highlighter-rouge">d3a33fc</code> Test CHECKMULTISIG with m == 0 and n == 0</li>
+  <li><code class="highlighter-rouge">29c1749</code> Let tx (in)valid tests use any SCRIPT_VERIFY flag</li>
+  <li><code class="highlighter-rouge">6380180</code> Add rejection of non-null CHECKMULTISIG dummy values</li>
+  <li><code class="highlighter-rouge">21bf3d2</code> Add tests for BoostAsioToCNetAddr</li>
+  <li><code class="highlighter-rouge">b5ad5e7</code> Add Python test for -rpcbind and -rpcallowip</li>
+  <li><code class="highlighter-rouge">9ec0306</code> Add CODESEPARATOR/FindAndDelete() tests</li>
+  <li><code class="highlighter-rouge">75ebced</code> Added many rpc wallet tests</li>
+  <li><code class="highlighter-rouge">0193fb8</code> Allow multiple regression tests to run at once</li>
+  <li><code class="highlighter-rouge">92a6220</code> Hook up sanity checks</li>
+  <li><code class="highlighter-rouge">3820e01</code> Extend and move all crypto tests to crypto_tests.cpp</li>
+  <li><code class="highlighter-rouge">3f9a019</code> added list/get received by address/ account tests</li>
+  <li><code class="highlighter-rouge">a90689f</code> Remove timing-based signature cache unit test</li>
+  <li><code class="highlighter-rouge">236982c</code> Add skiplist unit tests</li>
+  <li><code class="highlighter-rouge">f4b00be</code> Add CChain::GetLocator() unit test</li>
+  <li><code class="highlighter-rouge">b45a6e8</code> Add test for getblocktemplate longpolling</li>
+  <li><code class="highlighter-rouge">cdf305e</code> Set -discover=0 in regtest framework</li>
+  <li><code class="highlighter-rouge">ed02282</code> additional test for OP_SIZE in script_valid.json</li>
+  <li><code class="highlighter-rouge">0072d98</code> script tests: BOOLAND, BOOLOR decode to integer</li>
+  <li><code class="highlighter-rouge">833ff16</code> script tests: values that overflow to 0 are true</li>
+  <li><code class="highlighter-rouge">4cac5db</code> script tests: value with trailing 0x00 is true</li>
+  <li><code class="highlighter-rouge">89101c6</code> script test: test case for 5-byte bools</li>
+  <li><code class="highlighter-rouge">d2d9dc0</code> script tests: add tests for CHECKMULTISIG limits</li>
+  <li><code class="highlighter-rouge">d789386</code> Add “it works” test for bitcoin-tx</li>
+  <li><code class="highlighter-rouge">df4d61e</code> Add bitcoin-tx tests</li>
+  <li><code class="highlighter-rouge">aa41ac2</code> Test IsPushOnly() with invalid push</li>
+  <li><code class="highlighter-rouge">6022b5d</code> Make <code class="highlighter-rouge">script_{valid,invalid}.json</code> validation flags configurable</li>
+  <li><code class="highlighter-rouge">8138cbe</code> Add automatic script test generation, and actual checksig tests</li>
+  <li><code class="highlighter-rouge">ed27e53</code> Add coins_tests with a large randomized CCoinViewCache test</li>
+  <li><code class="highlighter-rouge">9df9cf5</code> Make SCRIPT_VERIFY_STRICTENC compatible with BIP62</li>
+  <li><code class="highlighter-rouge">dcb9846</code> Extend getchaintips RPC test</li>
+  <li><code class="highlighter-rouge">554147a</code> Ensure MINIMALDATA invalid tests can only fail one way</li>
+  <li><code class="highlighter-rouge">dfeec18</code> Test every numeric-accepting opcode for correct handling of the numeric minimal encoding rule</li>
+  <li><code class="highlighter-rouge">2b62e17</code> Clearly separate PUSHDATA and numeric argument MINIMALDATA tests</li>
+  <li><code class="highlighter-rouge">16d78bd</code> Add valid invert of invalid every numeric opcode tests</li>
+  <li><code class="highlighter-rouge">f635269</code> tests: enable alertnotify test for Windows</li>
+  <li><code class="highlighter-rouge">7a41614</code> tests: allow rpc-tests to get filenames for bitcoind and bitcoin-cli from the environment</li>
+  <li><code class="highlighter-rouge">5122ea7</code> tests: fix forknotify.py on windows</li>
+  <li><code class="highlighter-rouge">fa7f8cd</code> tests: remove old pull-tester scripts</li>
+  <li><code class="highlighter-rouge">7667850</code> tests: replace the old (unused since Travis) tests with new rpc test scripts</li>
+  <li><code class="highlighter-rouge">f4e0aef</code> Do signature-s negation inside the tests</li>
+  <li><code class="highlighter-rouge">1837987</code> Optimize -regtest setgenerate block generation</li>
+  <li><code class="highlighter-rouge">2db4c8a</code> Fix node ranges in the test framework</li>
+  <li><code class="highlighter-rouge">a8b2ce5</code> regression test only setmocktime RPC call</li>
+  <li><code class="highlighter-rouge">daf03e7</code> RPC tests: create initial chain with specific timestamps</li>
+  <li><code class="highlighter-rouge">8656dbb</code> Port/fix txnmall.sh regression test</li>
+  <li><code class="highlighter-rouge">ca81587</code> Test the exact order of CHECKMULTISIG sig/pubkey evaluation</li>
+  <li><code class="highlighter-rouge">7357893</code> Prioritize and display -testsafemode status in UI</li>
+  <li><code class="highlighter-rouge">f321d6b</code> Add key generation/verification to ECC sanity check</li>
+  <li><code class="highlighter-rouge">132ea9b</code> miner_tests: Disable checkpoints so they don’t fail the subsidy-change test</li>
+  <li><code class="highlighter-rouge">bc6cb41</code> QA RPC tests: Add tests block block proposals</li>
+  <li><code class="highlighter-rouge">f67a9ce</code> Use deterministically generated script tests</li>
+  <li><code class="highlighter-rouge">11d7a7d</code> [RPC] add rpc-test for http keep-alive (persistent connections)</li>
+  <li><code class="highlighter-rouge">34318d7</code> RPC-test based on invalidateblock for mempool coinbase spends</li>
+  <li><code class="highlighter-rouge">76ec867</code> Use actually valid transactions for script tests</li>
+  <li><code class="highlighter-rouge">c8589bf</code> Add actual signature tests</li>
+  <li><code class="highlighter-rouge">e2677d7</code> Fix smartfees test for change to relay policy</li>
+  <li><code class="highlighter-rouge">263b65e</code> tests: run sanity checks in tests too</li>
 </ul>
 
 <p>Miscellaneous:</p>
 
 <ul>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/122549f"><code class="highlighter-rouge">122549f</code></a> Fix incorrect checkpoint data for testnet3</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/5bd02cf"><code class="highlighter-rouge">5bd02cf</code></a> Log used config file to debug.log on startup</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/68ba85f"><code class="highlighter-rouge">68ba85f</code></a> Updated Debian example bitcoin.conf with config from wiki + removed some cruft and updated comments</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e5ee8f0"><code class="highlighter-rouge">e5ee8f0</code></a> Remove -beta suffix</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/38405ac"><code class="highlighter-rouge">38405ac</code></a> Add comment regarding experimental-use service bits</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/be873f6"><code class="highlighter-rouge">be873f6</code></a> Issue warning if collecting RandSeed data failed</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/8ae973c"><code class="highlighter-rouge">8ae973c</code></a> Allocate more space if necessary in RandSeedAddPerfMon</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/675bcd5"><code class="highlighter-rouge">675bcd5</code></a> Correct comment for 15-of-15 p2sh script size</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/fda3fed"><code class="highlighter-rouge">fda3fed</code></a> libsecp256k1 integration</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2e36866"><code class="highlighter-rouge">2e36866</code></a> Show nodeid instead of addresses in log (for anonymity) unless otherwise requested</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/cd01a5e"><code class="highlighter-rouge">cd01a5e</code></a> Enable paranoid corruption checks in LevelDB &gt;= 1.16</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/9365937"><code class="highlighter-rouge">9365937</code></a> Add comment about never updating nTimeOffset past 199 samples</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/403c1bf"><code class="highlighter-rouge">403c1bf</code></a> contrib: remove getwork-based pyminer (as getwork API call has been removed)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0c3e101"><code class="highlighter-rouge">0c3e101</code></a> contrib: Added systemd .service file in order to help distributions integrate bitcoind</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/0a0878d"><code class="highlighter-rouge">0a0878d</code></a> doc: Add new DNSseed policy</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/2887bff"><code class="highlighter-rouge">2887bff</code></a> Update coding style and add .clang-format</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/5cbda4f"><code class="highlighter-rouge">5cbda4f</code></a> Changed LevelDB cursors to use scoped pointers to ensure destruction when going out of scope</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/b4a72a7"><code class="highlighter-rouge">b4a72a7</code></a> contrib/linearize: split output files based on new-timestamp-year or max-file-size</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/e982b57"><code class="highlighter-rouge">e982b57</code></a> Use explicit fflush() instead of setvbuf()</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/234bfbf"><code class="highlighter-rouge">234bfbf</code></a> contrib: Add init scripts and docs for Upstart and OpenRC</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/01c2807"><code class="highlighter-rouge">01c2807</code></a> Add warning about the merkle-tree algorithm duplicate txid flaw</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/d6712db"><code class="highlighter-rouge">d6712db</code></a> Also create pid file in non-daemon mode</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/772ab0e"><code class="highlighter-rouge">772ab0e</code></a> contrib: use batched JSON-RPC in linarize-hashes (optimization)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/7ab4358"><code class="highlighter-rouge">7ab4358</code></a> Update bash-completion for v0.10</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/6e6a36c"><code class="highlighter-rouge">6e6a36c</code></a> contrib: show pull # in prompt for github-merge script</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/5b9f842"><code class="highlighter-rouge">5b9f842</code></a> Upgrade leveldb to 1.18, make chainstate databases compatible between ARM and x86 (issue <a href="https://github.com/bitcoin/bitcoin/pull/2293">#2293</a>)</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/4e7c219"><code class="highlighter-rouge">4e7c219</code></a> Catch UTXO set read errors and shutdown</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/867c600"><code class="highlighter-rouge">867c600</code></a> Catch LevelDB errors during flush</li>
-  <li><a href="https://github.com/bitcoin/bitcoin/commit/06ca065"><code class="highlighter-rouge">06ca065</code></a> Fix CScriptID(const CScript&amp; in) in empty script case</li>
+  <li><code class="highlighter-rouge">122549f</code> Fix incorrect checkpoint data for testnet3</li>
+  <li><code class="highlighter-rouge">5bd02cf</code> Log used config file to debug.log on startup</li>
+  <li><code class="highlighter-rouge">68ba85f</code> Updated Debian example bitcoin.conf with config from wiki + removed some cruft and updated comments</li>
+  <li><code class="highlighter-rouge">e5ee8f0</code> Remove -beta suffix</li>
+  <li><code class="highlighter-rouge">38405ac</code> Add comment regarding experimental-use service bits</li>
+  <li><code class="highlighter-rouge">be873f6</code> Issue warning if collecting RandSeed data failed</li>
+  <li><code class="highlighter-rouge">8ae973c</code> Allocate more space if necessary in RandSeedAddPerfMon</li>
+  <li><code class="highlighter-rouge">675bcd5</code> Correct comment for 15-of-15 p2sh script size</li>
+  <li><code class="highlighter-rouge">fda3fed</code> libsecp256k1 integration</li>
+  <li><code class="highlighter-rouge">2e36866</code> Show nodeid instead of addresses in log (for anonymity) unless otherwise requested</li>
+  <li><code class="highlighter-rouge">cd01a5e</code> Enable paranoid corruption checks in LevelDB &gt;= 1.16</li>
+  <li><code class="highlighter-rouge">9365937</code> Add comment about never updating nTimeOffset past 199 samples</li>
+  <li><code class="highlighter-rouge">403c1bf</code> contrib: remove getwork-based pyminer (as getwork API call has been removed)</li>
+  <li><code class="highlighter-rouge">0c3e101</code> contrib: Added systemd .service file in order to help distributions integrate bitcoind</li>
+  <li><code class="highlighter-rouge">0a0878d</code> doc: Add new DNSseed policy</li>
+  <li><code class="highlighter-rouge">2887bff</code> Update coding style and add .clang-format</li>
+  <li><code class="highlighter-rouge">5cbda4f</code> Changed LevelDB cursors to use scoped pointers to ensure destruction when going out of scope</li>
+  <li><code class="highlighter-rouge">b4a72a7</code> contrib/linearize: split output files based on new-timestamp-year or max-file-size</li>
+  <li><code class="highlighter-rouge">e982b57</code> Use explicit fflush() instead of setvbuf()</li>
+  <li><code class="highlighter-rouge">234bfbf</code> contrib: Add init scripts and docs for Upstart and OpenRC</li>
+  <li><code class="highlighter-rouge">01c2807</code> Add warning about the merkle-tree algorithm duplicate txid flaw</li>
+  <li><code class="highlighter-rouge">d6712db</code> Also create pid file in non-daemon mode</li>
+  <li><code class="highlighter-rouge">772ab0e</code> contrib: use batched JSON-RPC in linarize-hashes (optimization)</li>
+  <li><code class="highlighter-rouge">7ab4358</code> Update bash-completion for v0.10</li>
+  <li><code class="highlighter-rouge">6e6a36c</code> contrib: show pull # in prompt for github-merge script</li>
+  <li><code class="highlighter-rouge">5b9f842</code> Upgrade leveldb to 1.18, make chainstate databases compatible between ARM and x86 (issue #2293)</li>
+  <li><code class="highlighter-rouge">4e7c219</code> Catch UTXO set read errors and shutdown</li>
+  <li><code class="highlighter-rouge">867c600</code> Catch LevelDB errors during flush</li>
+  <li><code class="highlighter-rouge">06ca065</code> Fix CScriptID(const CScript&amp; in) in empty script case</li>
 </ul>
 
 <h1 id="credits">Credits</h1>
