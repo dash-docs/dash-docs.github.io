@@ -4161,7 +4161,7 @@ next <a href="/en/glossary/block" title="One or more transactions prefaced by a 
   <h4 id="synchronization">Synchronization</h4>
 
   <p>Dash Core synchronizes the governance system via the Masternode <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> as the
-last stage of the Masternode sync process (following they sync of sporks, the
+last stage of the Masternode sync process (following the sync of sporks, the
 Masternode list, and Masternode payments).</p>
 
   <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> initiates a sync of the governance system. Masternodes
@@ -4170,7 +4170,7 @@ respond to the <a href="/en/developer-reference#govobj" title="A P2P network mes
   <ul>
     <li>
       <p>First, the Masternode sends one <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (Sync Status Count) for <code class="highlighter-rouge">govobj</code>
-objects and one for <code class="highlighter-rouge">govobjvote</code> objects. These messages indicates how many
+objects and one for <code class="highlighter-rouge">govobjvote</code> objects. These messages indicate how many
 <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> items will be sent.</p>
     </li>
     <li>
@@ -4193,7 +4193,7 @@ objects.</p>
         <td><strong>Description</strong></td>
       </tr>
       <tr>
-        <td><code class="highlighter-rouge">govsync</code></td>
+        <td><a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a></td>
         <td>→</td>
         <td> </td>
         <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> initiates governance sync</td>
@@ -4223,7 +4223,7 @@ objects.</p>
         <td>Governance object vote <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventories</a></td>
       </tr>
       <tr>
-        <td><code class="highlighter-rouge">getdata</code> (govobj)</td>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> (govobj)</td>
         <td>→</td>
         <td> </td>
         <td>(Optional) Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests govobj</td>
@@ -4235,7 +4235,7 @@ objects.</p>
         <td>(If requested) Governance object</td>
       </tr>
       <tr>
-        <td><code class="highlighter-rouge">getdata</code> (govobjvote)</td>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> (govobjvote)</td>
         <td>→</td>
         <td> </td>
         <td>(Optional) Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests govobjvote</td>
