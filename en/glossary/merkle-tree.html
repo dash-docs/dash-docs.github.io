@@ -314,7 +314,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 
 <h2 id="definition">Definition</h2>
 
-<p>A tree constructed by hashing paired data (the leaves), then pairing and hashing the results until a single hash remains, the merkle root.  In Bitcoin, the leaves are almost always transactions from a single block.</p>
+<p>A tree constructed by hashing paired data (the leaves), then pairing and hashing the results until a single hash remains, the <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a>.  In Bitcoin, the leaves are almost always transactions from a single <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>.</p>
 
 <h3 id="synonyms">Synonyms</h3>
 
@@ -329,7 +329,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
     <p>Partial merkle branch (a branch connecting one or more leaves to the root)</p>
   </li>
   <li>
-    <p>Merkle block (a partial merkle branch connecting one or more transactions from a single block to the block merkle root)</p>
+    <p><a href="/en/glossary/merkle-block" title="A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block." class="auto-link">Merkle block</a> (a partial merkle branch connecting one or more transactions from a single <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a>)</p>
   </li>
 </ul>
 

@@ -767,918 +767,340 @@ git merge commit are mentioned.</p>
 <h3 id="rpc-and-rest">RPC and REST</h3>
 
 <ul>
-  <li>
-    <h1 id="f0ea-convert-entire-source-tree-from-jsonspirit-to-univalue-jonas-schnelli">6121 <code class="highlighter-rouge">466f0ea</code> Convert entire source tree from json_spirit to UniValue (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="d38cd47-fix-rpcmininggetblocktemplate-univalue-transition-logic-error-jonas-schnelli">6234 <code class="highlighter-rouge">d38cd47</code> fix rpcmining/getblocktemplate univalue transition logic error (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="f-dont-go-through-double-in-amountfromvalue-and-valuefromamount-wladimir-j-van-der-laan">6239 <code class="highlighter-rouge">643114f</code> Don’t go through double in AmountFromValue and ValueFromAmount (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="ebab5d3-fix-univalue-handling-of-u0000-characters-daniel-kraft">6266 <code class="highlighter-rouge">ebab5d3</code> Fix univalue handling of \u0000 characters. (Daniel Kraft)</h1>
-  </li>
-  <li>
-    <h1 id="f3d4dbb-fix-getbalance--0-tom-harding">6276 <code class="highlighter-rouge">f3d4dbb</code> Fix getbalance * 0 (Tom Harding)</h1>
-  </li>
-  <li>
-    <h1 id="ebe7db-add-paytxfee-and-errors-json-fields-where-appropriate-stephen">6257 <code class="highlighter-rouge">5ebe7db</code> Add <code class="highlighter-rouge">paytxfee</code> and <code class="highlighter-rouge">errors</code> JSON fields where appropriate (Stephen)</h1>
-  </li>
-  <li>
-    <h1 id="aae5-new-rpc-command-disconnectnode-alex-van-der-peet">6271 <code class="highlighter-rouge">754aae5</code> New RPC command disconnectnode (Alex van der Peet)</h1>
-  </li>
-  <li>
-    <h1 id="abfa8a-add-setbanlistbanned-rpc-commands-jonas-schnelli">6158 <code class="highlighter-rouge">0abfa8a</code> Add setban/listbanned RPC commands (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="ecdcd9-rpcban-fixes-jonas-schnelli">6307 <code class="highlighter-rouge">7ecdcd9</code> rpcban fixes (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="rpc-make-gettxoutsettinfo-run-lock-free-wladimir-j-van-der-laan">6290 <code class="highlighter-rouge">5753988</code> rpc: make <code class="highlighter-rouge">gettxoutsettinfo</code> run lock-free (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b914-return-all-available-information-via-rpc-call-validateaddress-dexx7">6262 <code class="highlighter-rouge">247b914</code> Return all available information via RPC call “validateaddress” (dexX7)</h1>
-  </li>
-  <li>
-    <h1 id="c3f0490-univalue-dont-escape-solidus-keep-espacing-of-reverse-solidus-jonas-schnelli">6339 <code class="highlighter-rouge">c3f0490</code> UniValue: don’t escape solidus, keep espacing of reverse solidus (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="bcb0a2-show-softfork-status-in-getblockchaininfo-wladimir-j-van-der-laan">6353 <code class="highlighter-rouge">6bcb0a2</code> Show softfork status in getblockchaininfo (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="e286-add-getblockheader-rpc-call-peter-todd">6247 <code class="highlighter-rouge">726e286</code> Add getblockheader RPC call (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="d6db115-fix-null-id-in-rpc-response-during-startup-forrest-voight">6362 <code class="highlighter-rouge">d6db115</code> Fix null id in RPC response during startup (Forrest Voight)</h1>
-  </li>
-  <li>
-    <h1 id="b322-rest-json-support-for-restheaders-jonas-schnelli">5486 <code class="highlighter-rouge">943b322</code> [REST] JSON support for /rest/headers (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="c52e8b3-rpc-accept-scientific-notation-for-monetary-amounts-in-json-wladimir-j-van-der-laan">6379 <code class="highlighter-rouge">c52e8b3</code> rpc: Accept scientific notation for monetary amounts in JSON (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="fd5dfda-rpc-implement-random-cookie-based-authentication-wladimir-j-van-der-laan">6388 <code class="highlighter-rouge">fd5dfda</code> rpc: Implement random-cookie based authentication (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="c923e8-include-pruned-state-in-chaininfojson-simon-males">6457 <code class="highlighter-rouge">3c923e8</code> Include pruned state in chaininfo.json (Simon Males)</h1>
-  </li>
-  <li>
-    <h1 id="bfd807f-rpc-avoid-unnecessary-parsing-roundtrip-in-number-formatting-fix-locale-issue-wladimir-j-van-der-laan">6456 <code class="highlighter-rouge">bfd807f</code> rpc: Avoid unnecessary parsing roundtrip in number formatting, fix locale issue (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b30e-rpc-accept-strings-in-amountfromvalue-wladimir-j-van-der-laan">6380 <code class="highlighter-rouge">240b30e</code> rpc: Accept strings in AmountFromValue (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="bb2805-add-opreturn-support-in-createrawtransaction-rpc-call-add-tests-paveljanik">6346 <code class="highlighter-rouge">6bb2805</code> Add OP_RETURN support in createrawtransaction RPC call, add tests. (paveljanik)</h1>
-  </li>
-  <li>
-    <h1 id="feeec1-rest-add-memory-pool-api-paveljanik">6013 <code class="highlighter-rouge">6feeec1</code> [REST] Add memory pool API (paveljanik)</h1>
-  </li>
-  <li>
-    <h1 id="da9beb2-stop-parsing-json-after-first-finished-construct-daniel-kraft">6576 <code class="highlighter-rouge">da9beb2</code> Stop parsing JSON after first finished construct. (Daniel Kraft)</h1>
-  </li>
-  <li>
-    <h1 id="aa9099-libevent-based-http-server-wladimir-j-van-der-laan">5677 <code class="highlighter-rouge">9aa9099</code> libevent-based http server (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="bbc2b39-report-minimum-ping-time-in-getpeerinfo-matt-corallo">6633 <code class="highlighter-rouge">bbc2b39</code> Report minimum ping time in getpeerinfo (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="cd381d7-simplify-logic-of-rest-request-suffix-parsing-daniel-kraft">6648 <code class="highlighter-rouge">cd381d7</code> Simplify logic of REST request suffix parsing. (Daniel Kraft)</h1>
-  </li>
-  <li>
-    <h1 id="e21388-libevent-http-fixes-wladimir-j-van-der-laan">6695 <code class="highlighter-rouge">5e21388</code> libevent http fixes (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="efbdb-show-scriptsig-signature-hash-types-in-transaction-decodes-fixes-3166-mruddy">5264 <code class="highlighter-rouge">48efbdb</code> show scriptSig signature hash types in transaction decodes. fixes #3166 (mruddy)</h1>
-  </li>
-  <li>
-    <h1 id="a9f19a-make-http-server-shutdown-more-graceful-wladimir-j-van-der-laan">6719 <code class="highlighter-rouge">1a9f19a</code> Make HTTP server shutdown more graceful (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="fbfc51-http-restrict-maximum-size-of-http--headers-wladimir-j-van-der-laan">6859 <code class="highlighter-rouge">0fbfc51</code> http: Restrict maximum size of http + headers (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="bf7c195-rpc-add-optional-locktime-to-createrawtransaction-tom-harding">5936 <code class="highlighter-rouge">bf7c195</code> [RPC] Add optional locktime to createrawtransaction (Tom Harding)</h1>
-  </li>
-  <li>
-    <h1 id="f5b34-rpc-add-maxmempool-and-effective-min-fee-to-getmempoolinfo-wladimir-j-van-der-laan">6877 <code class="highlighter-rouge">26f5b34</code> rpc: Add maxmempool and effective min fee to getmempoolinfo (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b3-fix-crash-in-validateaddress-with--disablewallet-wladimir-j-van-der-laan">6970 <code class="highlighter-rouge">92701b3</code> Fix crash in validateaddress with -disablewallet (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b4ba-expose-gui-labels-in-rpc-as-comments-luke-jr">5574 <code class="highlighter-rouge">755b4ba</code> Expose GUI labels in RPC as comments (Luke-Jr)</h1>
-  </li>
-  <li>
-    <h1 id="dbd2c13-http-speed-up-shutdown-wladimir-j-van-der-laan">6990 <code class="highlighter-rouge">dbd2c13</code> http: speed up shutdown (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="baa9f-remove-lockcsmain-from-decodescript-peter-todd">7013 <code class="highlighter-rouge">36baa9f</code> Remove LOCK(cs_main) from decodescript (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="bf9c-add-maxuploadtarget-infos-to-getnettotals-rpc-help-jonas-schnelli">6999 <code class="highlighter-rouge">972bf9c</code> add (max)uploadtarget infos to getnettotals RPC help (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="de241-add-mediantime-to-getblockchaininfo-peter-todd">7011 <code class="highlighter-rouge">31de241</code> Add mediantime to getblockchaininfo (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="f91e29f-http-add-boost-149-compatibility-wladimir-j-van-der-laan">7065 <code class="highlighter-rouge">f91e29f</code> http: add Boost 1.49 compatibility (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="be281d8-netadd--enforcenodebloom-option-patrick-strateman">7087 <code class="highlighter-rouge">be281d8</code> [Net]Add -enforcenodebloom option (Patrick Strateman)</h1>
-  </li>
-  <li>
-    <h1 id="ee59-rpc-added-additional-config-option-for-multiple-rpc-users-gregory-sanders">7044 <code class="highlighter-rouge">438ee59</code> RPC: Added additional config option for multiple RPC users. (Gregory Sanders)</h1>
-  </li>
-  <li>
-    <h1 id="c143c49-rpc-add-transaction-size-to-json-output-nikita-zhavoronkov">7072 <code class="highlighter-rouge">c143c49</code> [RPC] Add transaction size to JSON output (Nikita Zhavoronkov)</h1>
-  </li>
-  <li>
-    <h1 id="afbd96-change-default-block-priority-size-to-0-alex-morcos">7022 <code class="highlighter-rouge">9afbd96</code> Change default block priority size to 0 (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="c0c08c7-rpc-dont-translate-warning-messages-wladimir-j-van-der-laan">7141 <code class="highlighter-rouge">c0c08c7</code> rpc: Don’t translate warning messages (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="fd4bd50-add-rpc-call-abandontransaction-alex-morcos">7312 <code class="highlighter-rouge">fd4bd50</code> Add RPC call abandontransaction (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="e25b158-rpc-indicate-which-transactions-are-replaceable-suhas-daftuar">7222 <code class="highlighter-rouge">e25b158</code> RPC: indicate which transactions are replaceable (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="b2f2b85-rpc-add-www-authenticate-header-to-401-response-wladimir-j-van-der-laan">7472 <code class="highlighter-rouge">b2f2b85</code> rpc: Add WWW-Authenticate header to 401 response (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="cb31e6-neth-fix-spelling-misbehabving-matt">7469 <code class="highlighter-rouge">9cb31e6</code> net.h fix spelling: misbeha{b,v}ing (Matt)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6121">#6121</a> <a href="https://github.com/bitcoin/bitcoin/commit/466f0ea"><code class="highlighter-rouge">466f0ea</code></a> Convert entire source tree from json_spirit to UniValue (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6234">#6234</a> <a href="https://github.com/bitcoin/bitcoin/commit/d38cd47"><code class="highlighter-rouge">d38cd47</code></a> fix rpcmining/getblocktemplate univalue transition logic error (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6239">#6239</a> <a href="https://github.com/bitcoin/bitcoin/commit/643114f"><code class="highlighter-rouge">643114f</code></a> Don’t go through double in AmountFromValue and ValueFromAmount (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6266">#6266</a> <a href="https://github.com/bitcoin/bitcoin/commit/ebab5d3"><code class="highlighter-rouge">ebab5d3</code></a> Fix univalue handling of \u0000 characters. (Daniel Kraft)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6276">#6276</a> <a href="https://github.com/bitcoin/bitcoin/commit/f3d4dbb"><code class="highlighter-rouge">f3d4dbb</code></a> Fix getbalance * 0 (Tom Harding)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6257">#6257</a> <a href="https://github.com/bitcoin/bitcoin/commit/5ebe7db"><code class="highlighter-rouge">5ebe7db</code></a> Add <code class="highlighter-rouge">paytxfee</code> and <code class="highlighter-rouge">errors</code> JSON fields where appropriate (Stephen)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6271">#6271</a> <a href="https://github.com/bitcoin/bitcoin/commit/754aae5"><code class="highlighter-rouge">754aae5</code></a> New RPC command disconnectnode (Alex van der Peet)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6158">#6158</a> <a href="https://github.com/bitcoin/bitcoin/commit/0abfa8a"><code class="highlighter-rouge">0abfa8a</code></a> Add setban/listbanned RPC commands (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6307">#6307</a> <a href="https://github.com/bitcoin/bitcoin/commit/7ecdcd9"><code class="highlighter-rouge">7ecdcd9</code></a> rpcban fixes (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6290">#6290</a> <a href="https://github.com/bitcoin/bitcoin/commit/5753988"><code class="highlighter-rouge">5753988</code></a> rpc: make <code class="highlighter-rouge">gettxoutsettinfo</code> run lock-free (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6262">#6262</a> <a href="https://github.com/bitcoin/bitcoin/commit/247b914"><code class="highlighter-rouge">247b914</code></a> Return all available information via RPC call “validateaddress” (dexX7)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6339">#6339</a> <a href="https://github.com/bitcoin/bitcoin/commit/c3f0490"><code class="highlighter-rouge">c3f0490</code></a> UniValue: don’t escape solidus, keep espacing of reverse solidus (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6353">#6353</a> <a href="https://github.com/bitcoin/bitcoin/commit/6bcb0a2"><code class="highlighter-rouge">6bcb0a2</code></a> Show softfork status in getblockchaininfo (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6247">#6247</a> <a href="https://github.com/bitcoin/bitcoin/commit/726e286"><code class="highlighter-rouge">726e286</code></a> Add getblockheader RPC call (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6362">#6362</a> <a href="https://github.com/bitcoin/bitcoin/commit/d6db115"><code class="highlighter-rouge">d6db115</code></a> Fix null id in RPC response during startup (Forrest Voight)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5486">#5486</a> <a href="https://github.com/bitcoin/bitcoin/commit/943b322"><code class="highlighter-rouge">943b322</code></a> [REST] JSON support for /rest/headers (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6379">#6379</a> <a href="https://github.com/bitcoin/bitcoin/commit/c52e8b3"><code class="highlighter-rouge">c52e8b3</code></a> rpc: Accept scientific notation for monetary amounts in JSON (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6388">#6388</a> <a href="https://github.com/bitcoin/bitcoin/commit/fd5dfda"><code class="highlighter-rouge">fd5dfda</code></a> rpc: Implement random-cookie based authentication (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6457">#6457</a> <a href="https://github.com/bitcoin/bitcoin/commit/3c923e8"><code class="highlighter-rouge">3c923e8</code></a> Include pruned state in chaininfo.json (Simon Males)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6456">#6456</a> <a href="https://github.com/bitcoin/bitcoin/commit/bfd807f"><code class="highlighter-rouge">bfd807f</code></a> rpc: Avoid unnecessary parsing roundtrip in number formatting, fix locale issue (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6380">#6380</a> <a href="https://github.com/bitcoin/bitcoin/commit/240b30e"><code class="highlighter-rouge">240b30e</code></a> rpc: Accept strings in AmountFromValue (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6346">#6346</a> <a href="https://github.com/bitcoin/bitcoin/commit/6bb2805"><code class="highlighter-rouge">6bb2805</code></a> Add OP_RETURN support in createrawtransaction RPC call, add tests. (paveljanik)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6013">#6013</a> <a href="https://github.com/bitcoin/bitcoin/commit/6feeec1"><code class="highlighter-rouge">6feeec1</code></a> [REST] Add memory pool API (paveljanik)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6576">#6576</a> <a href="https://github.com/bitcoin/bitcoin/commit/da9beb2"><code class="highlighter-rouge">da9beb2</code></a> Stop parsing JSON after first finished construct. (Daniel Kraft)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5677">#5677</a> <a href="https://github.com/bitcoin/bitcoin/commit/9aa9099"><code class="highlighter-rouge">9aa9099</code></a> libevent-based http server (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6633">#6633</a> <a href="https://github.com/bitcoin/bitcoin/commit/bbc2b39"><code class="highlighter-rouge">bbc2b39</code></a> Report minimum ping time in getpeerinfo (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6648">#6648</a> <a href="https://github.com/bitcoin/bitcoin/commit/cd381d7"><code class="highlighter-rouge">cd381d7</code></a> Simplify logic of REST request suffix parsing. (Daniel Kraft)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6695">#6695</a> <a href="https://github.com/bitcoin/bitcoin/commit/5e21388"><code class="highlighter-rouge">5e21388</code></a> libevent http fixes (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5264">#5264</a> <a href="https://github.com/bitcoin/bitcoin/commit/48efbdb"><code class="highlighter-rouge">48efbdb</code></a> show scriptSig signature hash types in transaction decodes. fixes <a href="https://github.com/bitcoin/bitcoin/pull/3166">#3166</a> (mruddy)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6719">#6719</a> <a href="https://github.com/bitcoin/bitcoin/commit/1a9f19a"><code class="highlighter-rouge">1a9f19a</code></a> Make HTTP server shutdown more graceful (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6859">#6859</a> <a href="https://github.com/bitcoin/bitcoin/commit/0fbfc51"><code class="highlighter-rouge">0fbfc51</code></a> http: Restrict maximum size of http + headers (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5936">#5936</a> <a href="https://github.com/bitcoin/bitcoin/commit/bf7c195"><code class="highlighter-rouge">bf7c195</code></a> [RPC] Add optional locktime to createrawtransaction (Tom Harding)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6877">#6877</a> <a href="https://github.com/bitcoin/bitcoin/commit/26f5b34"><code class="highlighter-rouge">26f5b34</code></a> rpc: Add maxmempool and effective min fee to getmempoolinfo (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6970">#6970</a> <a href="https://github.com/bitcoin/bitcoin/commit/92701b3"><code class="highlighter-rouge">92701b3</code></a> Fix crash in validateaddress with -disablewallet (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5574">#5574</a> <a href="https://github.com/bitcoin/bitcoin/commit/755b4ba"><code class="highlighter-rouge">755b4ba</code></a> Expose GUI labels in RPC as comments (Luke-Jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6990">#6990</a> <a href="https://github.com/bitcoin/bitcoin/commit/dbd2c13"><code class="highlighter-rouge">dbd2c13</code></a> http: speed up shutdown (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7013">#7013</a> <a href="https://github.com/bitcoin/bitcoin/commit/36baa9f"><code class="highlighter-rouge">36baa9f</code></a> Remove LOCK(cs_main) from decodescript (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6999">#6999</a> <a href="https://github.com/bitcoin/bitcoin/commit/972bf9c"><code class="highlighter-rouge">972bf9c</code></a> add (max)uploadtarget infos to getnettotals RPC help (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7011">#7011</a> <a href="https://github.com/bitcoin/bitcoin/commit/31de241"><code class="highlighter-rouge">31de241</code></a> Add mediantime to getblockchaininfo (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7065">#7065</a> <a href="https://github.com/bitcoin/bitcoin/commit/f91e29f"><code class="highlighter-rouge">f91e29f</code></a> http: add Boost 1.49 compatibility (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7087">#7087</a> <a href="https://github.com/bitcoin/bitcoin/commit/be281d8"><code class="highlighter-rouge">be281d8</code></a> [Net]Add -enforcenodebloom option (Patrick Strateman)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7044">#7044</a> <a href="https://github.com/bitcoin/bitcoin/commit/438ee59"><code class="highlighter-rouge">438ee59</code></a> RPC: Added additional config option for multiple RPC users. (Gregory Sanders)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7072">#7072</a> <a href="https://github.com/bitcoin/bitcoin/commit/c143c49"><code class="highlighter-rouge">c143c49</code></a> [RPC] Add transaction size to JSON output (Nikita Zhavoronkov)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7022">#7022</a> <a href="https://github.com/bitcoin/bitcoin/commit/9afbd96"><code class="highlighter-rouge">9afbd96</code></a> Change default block priority size to 0 (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7141">#7141</a> <a href="https://github.com/bitcoin/bitcoin/commit/c0c08c7"><code class="highlighter-rouge">c0c08c7</code></a> rpc: Don’t translate warning messages (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7312">#7312</a> <a href="https://github.com/bitcoin/bitcoin/commit/fd4bd50"><code class="highlighter-rouge">fd4bd50</code></a> Add RPC call abandontransaction (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7222">#7222</a> <a href="https://github.com/bitcoin/bitcoin/commit/e25b158"><code class="highlighter-rouge">e25b158</code></a> RPC: indicate which transactions are replaceable (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7472">#7472</a> <a href="https://github.com/bitcoin/bitcoin/commit/b2f2b85"><code class="highlighter-rouge">b2f2b85</code></a> rpc: Add WWW-Authenticate header to 401 response (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7469">#7469</a> <a href="https://github.com/bitcoin/bitcoin/commit/9cb31e6"><code class="highlighter-rouge">9cb31e6</code></a> net.h fix spelling: misbeha{b,v}ing (Matt)</li>
 </ul>
 
 <h3 id="configuration-and-command-line-options">Configuration and command-line options</h3>
 
 <ul>
-  <li>
-    <h1 id="d05ec7-allow-user-to-use--debug1-to-enable-all-debugging-lpescher">6164 <code class="highlighter-rouge">8d05ec7</code> Allow user to use -debug=1 to enable all debugging (lpescher)</h1>
-  </li>
-  <li>
-    <h1 id="added--whiteconnectionsn-option-josh-lehan">5288 <code class="highlighter-rouge">4452205</code> Added <code class="highlighter-rouge">-whiteconnections=&lt;n&gt;</code> option (Josh Lehan)</h1>
-  </li>
-  <li>
-    <h1 id="ac38e-fix-argument-parsing-oddity-with--nox-wladimir-j-van-der-laan">6284 <code class="highlighter-rouge">10ac38e</code> Fix argument parsing oddity with -noX (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="c9c017a-give-a-better-error-message-if-system-clock-is-bad-casey-rodarmor">6489 <code class="highlighter-rouge">c9c017a</code> Give a better error message if system clock is bad (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="c384800-implement-uacomment-config-parameter-which-can-add-comments-to-user-agent-as-per-bip-0014-pavol-rusnak">6462 <code class="highlighter-rouge">c384800</code> implement uacomment config parameter which can add comments to user agent as per BIP-0014 (Pavol Rusnak)</h1>
-  </li>
-  <li>
-    <h1 id="a3babc8-sanitize-uacomment-marcofalke">6647 <code class="highlighter-rouge">a3babc8</code> Sanitize uacomment (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="b2d37c-changed-logging-to-make--logtimestamps-to-work-also-for--printtoconsole-arnuschky">6742 <code class="highlighter-rouge">3b2d37c</code> Changed logging to make -logtimestamps to work also for -printtoconsole (arnuschky)</h1>
-  </li>
-  <li>
-    <h1 id="cd020d-alias--h-for--help-daniel-cousens">6846 <code class="highlighter-rouge">2cd020d</code> alias -h for -help (Daniel Cousens)</h1>
-  </li>
-  <li>
-    <h1 id="introduce--maxuploadtarget-jonas-schnelli">6622 <code class="highlighter-rouge">7939164</code> Introduce -maxuploadtarget (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="b62551-debug-add-option-for-microsecond-precision-in-debuglog-suhas-daftuar">6881 <code class="highlighter-rouge">2b62551</code> Debug: Add option for microsecond precision in debug.log (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="e06c14f-support--checkmempooln-which-runs-checks-once-every-n-transactions-pieter-wuille">6776 <code class="highlighter-rouge">e06c14f</code> Support -checkmempool=N, which runs checks once every N transactions (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="d482c0a-make--checkmempool1-not-fail-through-int32-overflow-pieter-wuille">6896 <code class="highlighter-rouge">d482c0a</code> Make -checkmempool=1 not fail through int32 overflow (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="b632145-add--blocksonly-option-patrick-strateman">6993 <code class="highlighter-rouge">b632145</code> Add -blocksonly option (Patrick Strateman)</h1>
-  </li>
-  <li>
-    <h1 id="a344880-012-backport--bytespersigop-option-luke-jr">7323 <code class="highlighter-rouge">a344880</code> 0.12: Backport -bytespersigop option (Luke-Jr)</h1>
-  </li>
-  <li>
-    <h1 id="da83ecd-add-option--permitrbf-to-set-transaction-replacement-policy-wladimir-j-van-der-laan">7386 <code class="highlighter-rouge">da83ecd</code> Add option <code class="highlighter-rouge">-permitrbf</code> to set transaction replacement policy (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b16b5bc-add-missing-options-help-marcofalke">7290 <code class="highlighter-rouge">b16b5bc</code> Add missing options help (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="c76bfff-rename-permitrbf-to-mempoolreplacement-and-provide-minimal-string-list-forward-compatibility-luke-jr">7440 <code class="highlighter-rouge">c76bfff</code> Rename permitrbf to mempoolreplacement and provide minimal string-list forward compatibility (Luke-Jr)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6164">#6164</a> <a href="https://github.com/bitcoin/bitcoin/commit/8d05ec7"><code class="highlighter-rouge">8d05ec7</code></a> Allow user to use -debug=1 to enable all debugging (lpescher)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5288">#5288</a> <a href="https://github.com/bitcoin/bitcoin/commit/4452205"><code class="highlighter-rouge">4452205</code></a> Added <code class="highlighter-rouge">-whiteconnections=&lt;n&gt;</code> option (Josh Lehan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6284">#6284</a> <a href="https://github.com/bitcoin/bitcoin/commit/10ac38e"><code class="highlighter-rouge">10ac38e</code></a> Fix argument parsing oddity with -noX (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6489">#6489</a> <a href="https://github.com/bitcoin/bitcoin/commit/c9c017a"><code class="highlighter-rouge">c9c017a</code></a> Give a better error message if system clock is bad (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6462">#6462</a> <a href="https://github.com/bitcoin/bitcoin/commit/c384800"><code class="highlighter-rouge">c384800</code></a> implement uacomment config parameter which can add comments to user agent as per BIP-0014 (Pavol Rusnak)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6647">#6647</a> <a href="https://github.com/bitcoin/bitcoin/commit/a3babc8"><code class="highlighter-rouge">a3babc8</code></a> Sanitize uacomment (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6742">#6742</a> <a href="https://github.com/bitcoin/bitcoin/commit/3b2d37c"><code class="highlighter-rouge">3b2d37c</code></a> Changed logging to make -logtimestamps to work also for -printtoconsole (arnuschky)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6846">#6846</a> <a href="https://github.com/bitcoin/bitcoin/commit/2cd020d"><code class="highlighter-rouge">2cd020d</code></a> alias -h for -help (Daniel Cousens)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6622">#6622</a> <a href="https://github.com/bitcoin/bitcoin/commit/7939164"><code class="highlighter-rouge">7939164</code></a> Introduce -maxuploadtarget (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6881">#6881</a> <a href="https://github.com/bitcoin/bitcoin/commit/2b62551"><code class="highlighter-rouge">2b62551</code></a> Debug: Add option for microsecond precision in debug.log (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6776">#6776</a> <a href="https://github.com/bitcoin/bitcoin/commit/e06c14f"><code class="highlighter-rouge">e06c14f</code></a> Support -checkmempool=N, which runs checks once every N transactions (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6896">#6896</a> <a href="https://github.com/bitcoin/bitcoin/commit/d482c0a"><code class="highlighter-rouge">d482c0a</code></a> Make -checkmempool=1 not fail through int32 overflow (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6993">#6993</a> <a href="https://github.com/bitcoin/bitcoin/commit/b632145"><code class="highlighter-rouge">b632145</code></a> Add -blocksonly option (Patrick Strateman)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7323">#7323</a> <a href="https://github.com/bitcoin/bitcoin/commit/a344880"><code class="highlighter-rouge">a344880</code></a> 0.12: Backport -bytespersigop option (Luke-Jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7386">#7386</a> <a href="https://github.com/bitcoin/bitcoin/commit/da83ecd"><code class="highlighter-rouge">da83ecd</code></a> Add option <code class="highlighter-rouge">-permitrbf</code> to set transaction replacement policy (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7290">#7290</a> <a href="https://github.com/bitcoin/bitcoin/commit/b16b5bc"><code class="highlighter-rouge">b16b5bc</code></a> Add missing options help (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7440">#7440</a> <a href="https://github.com/bitcoin/bitcoin/commit/c76bfff"><code class="highlighter-rouge">c76bfff</code></a> Rename permitrbf to mempoolreplacement and provide minimal string-list forward compatibility (Luke-Jr)</li>
 </ul>
 
 <h3 id="block-and-transaction-handling">Block and transaction handling</h3>
 
 <ul>
-  <li>
-    <h1 id="f00b623-remove-p2sh-coinbase-flag-no-longer-interesting-luke-jr">6203 <code class="highlighter-rouge">f00b623</code> Remove P2SH coinbase flag, no longer interesting (Luke-Jr)</h1>
-  </li>
-  <li>
-    <h1 id="c93ee5-explicitly-set-txnversion-for-the-genesis-block-and-mining-tests-mark-friedenbach">6222 <code class="highlighter-rouge">9c93ee5</code> Explicitly set tx.nVersion for the genesis block and mining tests (Mark Friedenbach)</h1>
-  </li>
-  <li>
-    <h1 id="a1d3e8-fix-removing-of-orphan-transactions-alex-morcos">5985 <code class="highlighter-rouge">3a1d3e8</code> Fix removing of orphan transactions (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="dd8fe82-prune-support-noncontiguous-block-files-adam-weiss">6221 <code class="highlighter-rouge">dd8fe82</code> Prune: Support noncontiguous block files (Adam Weiss)</h1>
-  </li>
-  <li>
-    <h1 id="aa-mempool-only-checklocktimeverify-bip65-verification-unparameterized-version-peter-todd">6124 <code class="highlighter-rouge">41076aa</code> Mempool only CHECKLOCKTIMEVERIFY (BIP65) verification, unparameterized version (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="d0a10c1-acceptnonstdtxn-option-to-skip-most-non-standard-transaction-checks-for-testnetregtest-only-luke-jr">6329 <code class="highlighter-rouge">d0a10c1</code> acceptnonstdtxn option to skip (most) “non-standard transaction” checks, for testnet/regtest only (Luke-Jr)</h1>
-  </li>
-  <li>
-    <h1 id="cdefb9-implement-accurate-memory-accounting-for-mempool-pieter-wuille">6410 <code class="highlighter-rouge">7cdefb9</code> Implement accurate memory accounting for mempool (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="ce77d-exempt-unspendable-transaction-outputs-from-dust-checks-dexx7">6444 <code class="highlighter-rouge">24ce77d</code> Exempt unspendable transaction outputs from dust checks (dexX7)</h1>
-  </li>
-  <li>
-    <h1 id="a0625b8-add-absurdly-high-fee-message-to-validation-state-shaul-kfir">5913 <code class="highlighter-rouge">a0625b8</code> Add absurdly high fee message to validation state (Shaul Kfir)</h1>
-  </li>
-  <li>
-    <h1 id="f746c6-prevent-blockntime-from-decreasing-mark-friedenbach">6177 <code class="highlighter-rouge">2f746c6</code> Prevent block.nTime from decreasing (Mark Friedenbach)</h1>
-  </li>
-  <li>
-    <h1 id="e545371-handle-no-chain-tip-available-in-invalidchainfound-ross-nicoll">6377 <code class="highlighter-rouge">e545371</code> Handle no chain tip available in InvalidChainFound() (Ross Nicoll)</h1>
-  </li>
-  <li>
-    <h1 id="ddaeb-handle-leveldbdestroydb-errors-on-wipe-failure-adam-weiss">6551 <code class="highlighter-rouge">39ddaeb</code> Handle leveldb::DestroyDB() errors on wipe failure (Adam Weiss)</h1>
-  </li>
-  <li>
-    <h1 id="b0ce450-mempool-package-tracking-suhas-daftuar">6654 <code class="highlighter-rouge">b0ce450</code> Mempool package tracking (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="d2aef-fix-mempool-packages-suhas-daftuar">6715 <code class="highlighter-rouge">82d2aef</code> Fix mempool packages (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="f44530-use-cblockindex-instead-of-uint256-for-updatedblocktip-signal-jonas-schnelli">6680 <code class="highlighter-rouge">4f44530</code> use CBlockIndex instead of uint256 for UpdatedBlockTip signal (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="fac576-obfuscate-chainstate-james-obeirne">6650 <code class="highlighter-rouge">4fac576</code> Obfuscate chainstate (James O’Beirne)</h1>
-  </li>
-  <li>
-    <h1 id="caaf6e-unobfuscate-chainstate-data-in-ccoinsviewdbgetstats-james-obeirne">6777 <code class="highlighter-rouge">9caaf6e</code> Unobfuscate chainstate data in CCoinsViewDB::GetStats (James O’Beirne)</h1>
-  </li>
-  <li>
-    <h1 id="b20e23-limit-mempool-by-throwing-away-the-cheapest-txn-and-setting-min-relay-fee-to-it-matt-corallo">6722 <code class="highlighter-rouge">3b20e23</code> Limit mempool by throwing away the cheapest txn and setting min relay fee to it (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="dd-fix-locking-issue-with-new-mempool-limiting-jonas-schnelli">6889 <code class="highlighter-rouge">38369dd</code> fix locking issue with new mempool limiting (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="f3b3cd-always-clean-up-manual-transaction-prioritization-casey-rodarmor">6464 <code class="highlighter-rouge">8f3b3cd</code> Always clean up manual transaction prioritization (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="d0badb9-fix-chainstate-serializedsize-computation-pieter-wuille">6865 <code class="highlighter-rouge">d0badb9</code> Fix chainstate serialized_size computation (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="ff057f4-bip-113-mempool-only-median-time-past-as-endpoint-for-lock-time-calculations-mark-friedenbach">6566 <code class="highlighter-rouge">ff057f4</code> BIP-113: Mempool-only median time-past as endpoint for lock-time calculations (Mark Friedenbach)</h1>
-  </li>
-  <li>
-    <h1 id="eb6-restores-mempool-only-bip113-enforcement-gregory-maxwell">6934 <code class="highlighter-rouge">3038eb6</code> Restores mempool only BIP113 enforcement (Gregory Maxwell)</h1>
-  </li>
-  <li>
-    <h1 id="de7d459-benchmark-sanity-checks-and-fork-checks-in-connectblock-matt-corallo">6965 <code class="highlighter-rouge">de7d459</code> Benchmark sanity checks and fork checks in ConnectBlock (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="eb6172a-make-sigcache-faster-more-efficient-larger-pieter-wuille">6918 <code class="highlighter-rouge">eb6172a</code> Make sigcache faster, more efficient, larger (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="ed190-policy-lower-default-limits-for-tx-chains-alex-morcos">6771 <code class="highlighter-rouge">38ed190</code> Policy: Lower default limits for tx chains (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="fa5e6-modifynewcoins-saves-database-lookups-alex-morcos">6932 <code class="highlighter-rouge">73fa5e6</code> ModifyNewCoins saves database lookups (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="d5918-alter-assumptions-in-ccoinsviewcachebatchwrite-alex-morcos">5967 <code class="highlighter-rouge">05d5918</code> Alter assumptions in CCoinsViewCache::BatchWrite (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="e93586-nsequence-based-full-rbf-opt-in-peter-todd">6871 <code class="highlighter-rouge">0e93586</code> nSequence-based Full-RBF opt-in (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="eb77416-lower-bound-priority-alex-morcos">7008 <code class="highlighter-rouge">eb77416</code> Lower bound priority (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="ef5ffa-mempool-improve-removal-of-invalid-transactions-after-reorgs-suhas-daftuar">6915 <code class="highlighter-rouge">2ef5ffa</code> [Mempool] Improve removal of invalid transactions after reorgs (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="ad2-rewrite-createnewblock-alex-morcos">6898 <code class="highlighter-rouge">4077ad2</code> Rewrite CreateNewBlock (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="bdda4d5-remove-utxo-cache-entries-when-the-tx-they-were-added-for-is-removeddoes-not-enter-mempool-matt-corallo">6872 <code class="highlighter-rouge">bdda4d5</code> Remove UTXO cache entries when the tx they were added for is removed/does not enter mempool (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="c469b-mempool-fix-mempool-limiting-and-replace-by-fee-for-prioritisetransaction-suhas-daftuar">7062 <code class="highlighter-rouge">12c469b</code> [Mempool] Fix mempool limiting and replace-by-fee for PrioritiseTransaction (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="de36f-report-non-mandatory-script-failures-correctly-pieter-wuille">7276 <code class="highlighter-rouge">76de36f</code> Report non-mandatory script failures correctly (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="e08b7cb-mark-blocks-with-too-many-sigops-as-failed-suhas-daftuar">7217 <code class="highlighter-rouge">e08b7cb</code> Mark blocks with too many sigops as failed (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="f4b2ce8-get-rid-of-inaccurate-scriptsigargsexpected-pieter-wuille">7387 <code class="highlighter-rouge">f4b2ce8</code> Get rid of inaccurate ScriptSigArgsExpected (Pieter Wuille)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6203">#6203</a> <a href="https://github.com/bitcoin/bitcoin/commit/f00b623"><code class="highlighter-rouge">f00b623</code></a> Remove P2SH coinbase flag, no longer interesting (Luke-Jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6222">#6222</a> <a href="https://github.com/bitcoin/bitcoin/commit/9c93ee5"><code class="highlighter-rouge">9c93ee5</code></a> Explicitly set tx.nVersion for the genesis block and mining tests (Mark Friedenbach)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5985">#5985</a> <a href="https://github.com/bitcoin/bitcoin/commit/3a1d3e8"><code class="highlighter-rouge">3a1d3e8</code></a> Fix removing of orphan transactions (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6221">#6221</a> <a href="https://github.com/bitcoin/bitcoin/commit/dd8fe82"><code class="highlighter-rouge">dd8fe82</code></a> Prune: Support noncontiguous block files (Adam Weiss)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6124">#6124</a> <a href="https://github.com/bitcoin/bitcoin/commit/41076aa"><code class="highlighter-rouge">41076aa</code></a> Mempool only CHECKLOCKTIMEVERIFY (BIP65) verification, unparameterized version (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6329">#6329</a> <a href="https://github.com/bitcoin/bitcoin/commit/d0a10c1"><code class="highlighter-rouge">d0a10c1</code></a> acceptnonstdtxn option to skip (most) “non-standard transaction” checks, for testnet/regtest only (Luke-Jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6410">#6410</a> <a href="https://github.com/bitcoin/bitcoin/commit/7cdefb9"><code class="highlighter-rouge">7cdefb9</code></a> Implement accurate memory accounting for mempool (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6444">#6444</a> <a href="https://github.com/bitcoin/bitcoin/commit/24ce77d"><code class="highlighter-rouge">24ce77d</code></a> Exempt unspendable transaction outputs from dust checks (dexX7)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5913">#5913</a> <a href="https://github.com/bitcoin/bitcoin/commit/a0625b8"><code class="highlighter-rouge">a0625b8</code></a> Add absurdly high fee message to validation state (Shaul Kfir)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6177">#6177</a> <a href="https://github.com/bitcoin/bitcoin/commit/2f746c6"><code class="highlighter-rouge">2f746c6</code></a> Prevent block.nTime from decreasing (Mark Friedenbach)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6377">#6377</a> <a href="https://github.com/bitcoin/bitcoin/commit/e545371"><code class="highlighter-rouge">e545371</code></a> Handle no chain tip available in InvalidChainFound() (Ross Nicoll)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6551">#6551</a> <a href="https://github.com/bitcoin/bitcoin/commit/39ddaeb"><code class="highlighter-rouge">39ddaeb</code></a> Handle leveldb::DestroyDB() errors on wipe failure (Adam Weiss)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6654">#6654</a> <a href="https://github.com/bitcoin/bitcoin/commit/b0ce450"><code class="highlighter-rouge">b0ce450</code></a> Mempool package tracking (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6715">#6715</a> <a href="https://github.com/bitcoin/bitcoin/commit/82d2aef"><code class="highlighter-rouge">82d2aef</code></a> Fix mempool packages (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6680">#6680</a> <a href="https://github.com/bitcoin/bitcoin/commit/4f44530"><code class="highlighter-rouge">4f44530</code></a> use CBlockIndex instead of uint256 for UpdatedBlockTip signal (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6650">#6650</a> <a href="https://github.com/bitcoin/bitcoin/commit/4fac576"><code class="highlighter-rouge">4fac576</code></a> Obfuscate chainstate (James O’Beirne)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6777">#6777</a> <a href="https://github.com/bitcoin/bitcoin/commit/9caaf6e"><code class="highlighter-rouge">9caaf6e</code></a> Unobfuscate chainstate data in CCoinsViewDB::GetStats (James O’Beirne)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6722">#6722</a> <a href="https://github.com/bitcoin/bitcoin/commit/3b20e23"><code class="highlighter-rouge">3b20e23</code></a> Limit mempool by throwing away the cheapest txn and setting min relay fee to it (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6889">#6889</a> <a href="https://github.com/bitcoin/bitcoin/commit/38369dd"><code class="highlighter-rouge">38369dd</code></a> fix locking issue with new mempool limiting (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6464">#6464</a> <a href="https://github.com/bitcoin/bitcoin/commit/8f3b3cd"><code class="highlighter-rouge">8f3b3cd</code></a> Always clean up manual transaction prioritization (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6865">#6865</a> <a href="https://github.com/bitcoin/bitcoin/commit/d0badb9"><code class="highlighter-rouge">d0badb9</code></a> Fix chainstate serialized_size computation (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6566">#6566</a> <a href="https://github.com/bitcoin/bitcoin/commit/ff057f4"><code class="highlighter-rouge">ff057f4</code></a> BIP-113: Mempool-only median time-past as endpoint for lock-time calculations (Mark Friedenbach)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6934">#6934</a> <a href="https://github.com/bitcoin/bitcoin/commit/3038eb6"><code class="highlighter-rouge">3038eb6</code></a> Restores mempool only BIP113 enforcement (Gregory Maxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6965">#6965</a> <a href="https://github.com/bitcoin/bitcoin/commit/de7d459"><code class="highlighter-rouge">de7d459</code></a> Benchmark sanity checks and fork checks in ConnectBlock (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6918">#6918</a> <a href="https://github.com/bitcoin/bitcoin/commit/eb6172a"><code class="highlighter-rouge">eb6172a</code></a> Make sigcache faster, more efficient, larger (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6771">#6771</a> <a href="https://github.com/bitcoin/bitcoin/commit/38ed190"><code class="highlighter-rouge">38ed190</code></a> Policy: Lower default limits for tx chains (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6932">#6932</a> <a href="https://github.com/bitcoin/bitcoin/commit/73fa5e6"><code class="highlighter-rouge">73fa5e6</code></a> ModifyNewCoins saves database lookups (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5967">#5967</a> <a href="https://github.com/bitcoin/bitcoin/commit/05d5918"><code class="highlighter-rouge">05d5918</code></a> Alter assumptions in CCoinsViewCache::BatchWrite (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6871">#6871</a> <a href="https://github.com/bitcoin/bitcoin/commit/0e93586"><code class="highlighter-rouge">0e93586</code></a> nSequence-based Full-RBF opt-in (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7008">#7008</a> <a href="https://github.com/bitcoin/bitcoin/commit/eb77416"><code class="highlighter-rouge">eb77416</code></a> Lower bound priority (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6915">#6915</a> <a href="https://github.com/bitcoin/bitcoin/commit/2ef5ffa"><code class="highlighter-rouge">2ef5ffa</code></a> [Mempool] Improve removal of invalid transactions after reorgs (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6898">#6898</a> <a href="https://github.com/bitcoin/bitcoin/commit/4077ad2"><code class="highlighter-rouge">4077ad2</code></a> Rewrite CreateNewBlock (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6872">#6872</a> <a href="https://github.com/bitcoin/bitcoin/commit/bdda4d5"><code class="highlighter-rouge">bdda4d5</code></a> Remove UTXO cache entries when the tx they were added for is removed/does not enter mempool (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7062">#7062</a> <a href="https://github.com/bitcoin/bitcoin/commit/12c469b"><code class="highlighter-rouge">12c469b</code></a> [Mempool] Fix mempool limiting and replace-by-fee for PrioritiseTransaction (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7276">#7276</a> <a href="https://github.com/bitcoin/bitcoin/commit/76de36f"><code class="highlighter-rouge">76de36f</code></a> Report non-mandatory script failures correctly (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7217">#7217</a> <a href="https://github.com/bitcoin/bitcoin/commit/e08b7cb"><code class="highlighter-rouge">e08b7cb</code></a> Mark blocks with too many sigops as failed (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7387">#7387</a> <a href="https://github.com/bitcoin/bitcoin/commit/f4b2ce8"><code class="highlighter-rouge">f4b2ce8</code></a> Get rid of inaccurate ScriptSigArgsExpected (Pieter Wuille)</li>
 </ul>
 
 <h3 id="p2p-protocol-and-network-code">P2P protocol and network code</h3>
 
 <ul>
-  <li>
-    <h1 id="a7ead-ignore-getheaders-requests-when-not-synced-suhas-daftuar">6172 <code class="highlighter-rouge">88a7ead</code> Ignore getheaders requests when not synced (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="d60602-be-stricter-in-processing-unrequested-blocks-suhas-daftuar">5875 <code class="highlighter-rouge">9d60602</code> Be stricter in processing unrequested blocks (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="ccc07c-use-best-header-chain-timestamps-to-detect-partitioning-gavin-andresen">6256 <code class="highlighter-rouge">8ccc07c</code> Use best header chain timestamps to detect partitioning (Gavin Andresen)</h1>
-  </li>
-  <li>
-    <h1 id="a903ad7-make-caddrmansize-return-the-correct-type-of-sizet-diapolo">6283 <code class="highlighter-rouge">a903ad7</code> make CAddrMan::size() return the correct type of size_t (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="d5-improve-proxy-initialization-continues-4871-wladimir-j-van-der-laan-diapolo">6272 <code class="highlighter-rouge">40400d5</code> Improve proxy initialization (continues #4871) (Wladimir J. van der Laan, Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="e5465-banlistdat-store-banlist-on-disk-jonas-schnelli">6310 <code class="highlighter-rouge">66e5465</code> banlist.dat: store banlist on disk (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="a2de32-test-whether-created-sockets-are-selectable-pieter-wuille">6412 <code class="highlighter-rouge">1a2de32</code> Test whether created sockets are select()able (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="b916-keep-track-of-recently-rejected-transactions-with-a-rolling-bloom-filter-contd-peter-todd">6498 <code class="highlighter-rouge">219b916</code> Keep track of recently rejected transactions with a rolling bloom filter (cont’d) (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="ec975-fix-masking-of-irrelevant-bits-in-address-groups-alex-morcos">6556 <code class="highlighter-rouge">70ec975</code> Fix masking of irrelevant bits in address groups. (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="ea19c2b-improve-addrman-select-performance-when-buckets-are-nearly-empty-pieter-wuille">6530 <code class="highlighter-rouge">ea19c2b</code> Improve addrman Select() performance when buckets are nearly empty (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="af9305a-add-support-for-miniupnpc-api-version-14-pavel-vasin">6583 <code class="highlighter-rouge">af9305a</code> add support for miniupnpc api version 14 (Pavel Vasin)</h1>
-  </li>
-  <li>
-    <h1 id="dc5b5-connection-slot-exhaustion-dos-mitigation-patrick-strateman">6374 <code class="highlighter-rouge">69dc5b5</code> Connection slot exhaustion DoS mitigation (Patrick Strateman)</h1>
-  </li>
-  <li>
-    <h1 id="f-net-correctly-initialize-nminpingusectime-wladimir-j-van-der-laan">6636 <code class="highlighter-rouge">536207f</code> net: correctly initialize nMinPingUsecTime (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="c27795-add-nodebloom-service-bit-and-bump-protocol-version-matt-corallo">6579 <code class="highlighter-rouge">0c27795</code> Add NODE_BLOOM service bit and bump protocol version (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="c8be-relay-blocks-when-pruning-suhas-daftuar">6148 <code class="highlighter-rouge">999c8be</code> Relay blocks when pruning (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="cf9bb11-in-strcommand--tx-return-if-alreadyhave-tom-harding">6588 <code class="highlighter-rouge">cf9bb11</code> In (strCommand == “tx”), return if AlreadyHave() (Tom Harding)</h1>
-  </li>
-  <li>
-    <h1 id="f71b07-always-allow-getheaders-from-whitelisted-peers-wladimir-j-van-der-laan">6974 <code class="highlighter-rouge">2f71b07</code> Always allow getheaders from whitelisted peers (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="bd629d7-net-automatically-create-hidden-service-listen-on-tor-wladimir-j-van-der-laan">6639 <code class="highlighter-rouge">bd629d7</code> net: Automatically create hidden service, listen on Tor (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="ffc687-dont-enforce-maxuploadtargets-disconnect-for-whitelisted-peers-jonas-schnelli">6984 <code class="highlighter-rouge">9ffc687</code> don’t enforce maxuploadtarget’s disconnect for whitelisted peers (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="c322652-net-improve-blocks-only-mode-patrick-strateman">7046 <code class="highlighter-rouge">c322652</code> Net: Improve blocks only mode. (Patrick Strateman)</h1>
-  </li>
-  <li>
-    <h1 id="d6454f6-connect-to-tor-hidden-services-by-default-when-listening-on-tor-peter-todd">7090 <code class="highlighter-rouge">d6454f6</code> Connect to Tor hidden services by default (when listening on Tor) (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="c894fbb-fix-and-improve-relay-from-whitelisted-peers-pieter-wuille">7106 <code class="highlighter-rouge">c894fbb</code> Fix and improve relay from whitelisted peers (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="d5ef3a-direct-headers-announcement-rebase-of-6494-pieter-wuille">7129 <code class="highlighter-rouge">5d5ef3a</code> Direct headers announcement (rebase of #6494) (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="b5118b-prevent-peer-flooding-inv-request-queue-redux-redux-gregory-maxwell">7079 <code class="highlighter-rouge">1b5118b</code> Prevent peer flooding inv request queue (redux) (redux) (Gregory Maxwell)</h1>
-  </li>
-  <li>
-    <h1 id="ba25d2-disconnect-on-mempool-requests-from-peers-when-over-the-upload-limit-gregory-maxwell">7166 <code class="highlighter-rouge">6ba25d2</code> Disconnect on mempool requests from peers when over the upload limit. (Gregory Maxwell)</h1>
-  </li>
-  <li>
-    <h1 id="f31955d-replace-setinventoryknown-with-a-rolling-bloom-filter-rebase-of-7100-pieter-wuille">7133 <code class="highlighter-rouge">f31955d</code> Replace setInventoryKnown with a rolling bloom filter (rebase of #7100) (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="aff88-dont-do-mempool-lookups-for-mempool-command-without-a-filter-matt-corallo">7174 <code class="highlighter-rouge">82aff88</code> Don’t do mempool lookups for “mempool” command without a filter (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="fef99-net-fix-sent-reject-messages-for-blocks-and-transactions-wladimir-j-van-der-laan">7179 <code class="highlighter-rouge">44fef99</code> net: Fix sent reject messages for blocks and transactions (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="fc174a-net-add-and-document-network-messages-in-protocolh-wladimir-j-van-der-laan">7181 <code class="highlighter-rouge">8fc174a</code> net: Add and document network messages in protocol.h (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b88be-replace-global-trickle-node-with-random-delays-pieter-wuille">7125 <code class="highlighter-rouge">10b88be</code> Replace global trickle node with random delays (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="cb83beb-net-hardcoded-seeds-update-january-2016-wladimir-j-van-der-laan">7415 <code class="highlighter-rouge">cb83beb</code> net: Hardcoded seeds update January 2016 (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="e2d9a58-do-not-absolutely-protect-local-peers-decide-group-ties-based-on-time-gregory-maxwell">7438 <code class="highlighter-rouge">e2d9a58</code> Do not absolutely protect local peers; decide group ties based on time (Gregory Maxwell)</h1>
-  </li>
-  <li>
-    <h1 id="bc-add-whitelistforcerelay-to-control-forced-relaying-7099-redux-gregory-maxwell">7439 <code class="highlighter-rouge">86755bc</code> Add whitelistforcerelay to control forced relaying. [#7099 redux] (Gregory Maxwell)</h1>
-  </li>
-  <li>
-    <h1 id="e16f5b4-ensure-headers-count-is-correct-suhas-daftuar">7482 <code class="highlighter-rouge">e16f5b4</code> Ensure headers count is correct (Suhas Daftuar)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6172">#6172</a> <a href="https://github.com/bitcoin/bitcoin/commit/88a7ead"><code class="highlighter-rouge">88a7ead</code></a> Ignore getheaders requests when not synced (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5875">#5875</a> <a href="https://github.com/bitcoin/bitcoin/commit/9d60602"><code class="highlighter-rouge">9d60602</code></a> Be stricter in processing unrequested blocks (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6256">#6256</a> <a href="https://github.com/bitcoin/bitcoin/commit/8ccc07c"><code class="highlighter-rouge">8ccc07c</code></a> Use best header chain timestamps to detect partitioning (Gavin Andresen)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6283">#6283</a> <a href="https://github.com/bitcoin/bitcoin/commit/a903ad7"><code class="highlighter-rouge">a903ad7</code></a> make CAddrMan::size() return the correct type of size_t (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6272">#6272</a> <a href="https://github.com/bitcoin/bitcoin/commit/40400d5"><code class="highlighter-rouge">40400d5</code></a> Improve proxy initialization (continues <a href="https://github.com/bitcoin/bitcoin/pull/4871">#4871</a>) (Wladimir J. van der Laan, Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6310">#6310</a> <a href="https://github.com/bitcoin/bitcoin/commit/66e5465"><code class="highlighter-rouge">66e5465</code></a> banlist.dat: store banlist on disk (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6412">#6412</a> <a href="https://github.com/bitcoin/bitcoin/commit/1a2de32"><code class="highlighter-rouge">1a2de32</code></a> Test whether created sockets are select()able (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6498">#6498</a> <a href="https://github.com/bitcoin/bitcoin/commit/219b916"><code class="highlighter-rouge">219b916</code></a> Keep track of recently rejected transactions with a rolling bloom filter (cont’d) (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6556">#6556</a> <a href="https://github.com/bitcoin/bitcoin/commit/70ec975"><code class="highlighter-rouge">70ec975</code></a> Fix masking of irrelevant bits in address groups. (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6530">#6530</a> <a href="https://github.com/bitcoin/bitcoin/commit/ea19c2b"><code class="highlighter-rouge">ea19c2b</code></a> Improve addrman Select() performance when buckets are nearly empty (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6583">#6583</a> <a href="https://github.com/bitcoin/bitcoin/commit/af9305a"><code class="highlighter-rouge">af9305a</code></a> add support for miniupnpc api version 14 (Pavel Vasin)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6374">#6374</a> <a href="https://github.com/bitcoin/bitcoin/commit/69dc5b5"><code class="highlighter-rouge">69dc5b5</code></a> Connection slot exhaustion DoS mitigation (Patrick Strateman)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6636">#6636</a> <a href="https://github.com/bitcoin/bitcoin/commit/536207f"><code class="highlighter-rouge">536207f</code></a> net: correctly initialize nMinPingUsecTime (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6579">#6579</a> <a href="https://github.com/bitcoin/bitcoin/commit/0c27795"><code class="highlighter-rouge">0c27795</code></a> Add NODE_BLOOM service bit and bump protocol version (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6148">#6148</a> <a href="https://github.com/bitcoin/bitcoin/commit/999c8be"><code class="highlighter-rouge">999c8be</code></a> Relay blocks when pruning (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6588">#6588</a> <a href="https://github.com/bitcoin/bitcoin/commit/cf9bb11"><code class="highlighter-rouge">cf9bb11</code></a> In (strCommand == “tx”), return if AlreadyHave() (Tom Harding)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6974">#6974</a> <a href="https://github.com/bitcoin/bitcoin/commit/2f71b07"><code class="highlighter-rouge">2f71b07</code></a> Always allow getheaders from whitelisted peers (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6639">#6639</a> <a href="https://github.com/bitcoin/bitcoin/commit/bd629d7"><code class="highlighter-rouge">bd629d7</code></a> net: Automatically create hidden service, listen on Tor (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6984">#6984</a> <a href="https://github.com/bitcoin/bitcoin/commit/9ffc687"><code class="highlighter-rouge">9ffc687</code></a> don’t enforce maxuploadtarget’s disconnect for whitelisted peers (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7046">#7046</a> <a href="https://github.com/bitcoin/bitcoin/commit/c322652"><code class="highlighter-rouge">c322652</code></a> Net: Improve blocks only mode. (Patrick Strateman)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7090">#7090</a> <a href="https://github.com/bitcoin/bitcoin/commit/d6454f6"><code class="highlighter-rouge">d6454f6</code></a> Connect to Tor hidden services by default (when listening on Tor) (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7106">#7106</a> <a href="https://github.com/bitcoin/bitcoin/commit/c894fbb"><code class="highlighter-rouge">c894fbb</code></a> Fix and improve relay from whitelisted peers (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7129">#7129</a> <a href="https://github.com/bitcoin/bitcoin/commit/5d5ef3a"><code class="highlighter-rouge">5d5ef3a</code></a> Direct headers announcement (rebase of <a href="https://github.com/bitcoin/bitcoin/pull/6494">#6494</a>) (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7079">#7079</a> <a href="https://github.com/bitcoin/bitcoin/commit/1b5118b"><code class="highlighter-rouge">1b5118b</code></a> Prevent peer flooding inv request queue (redux) (redux) (Gregory Maxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7166">#7166</a> <a href="https://github.com/bitcoin/bitcoin/commit/6ba25d2"><code class="highlighter-rouge">6ba25d2</code></a> Disconnect on mempool requests from peers when over the upload limit. (Gregory Maxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7133">#7133</a> <a href="https://github.com/bitcoin/bitcoin/commit/f31955d"><code class="highlighter-rouge">f31955d</code></a> Replace setInventoryKnown with a rolling bloom filter (rebase of <a href="https://github.com/bitcoin/bitcoin/pull/7100">#7100</a>) (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7174">#7174</a> <a href="https://github.com/bitcoin/bitcoin/commit/82aff88"><code class="highlighter-rouge">82aff88</code></a> Don’t do mempool lookups for “mempool” command without a filter (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7179">#7179</a> <a href="https://github.com/bitcoin/bitcoin/commit/44fef99"><code class="highlighter-rouge">44fef99</code></a> net: Fix sent reject messages for blocks and transactions (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7181">#7181</a> <a href="https://github.com/bitcoin/bitcoin/commit/8fc174a"><code class="highlighter-rouge">8fc174a</code></a> net: Add and document network messages in protocol.h (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7125">#7125</a> <a href="https://github.com/bitcoin/bitcoin/commit/10b88be"><code class="highlighter-rouge">10b88be</code></a> Replace global trickle node with random delays (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7415">#7415</a> <a href="https://github.com/bitcoin/bitcoin/commit/cb83beb"><code class="highlighter-rouge">cb83beb</code></a> net: Hardcoded seeds update January 2016 (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7438">#7438</a> <a href="https://github.com/bitcoin/bitcoin/commit/e2d9a58"><code class="highlighter-rouge">e2d9a58</code></a> Do not absolutely protect local peers; decide group ties based on time (Gregory Maxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7439">#7439</a> <a href="https://github.com/bitcoin/bitcoin/commit/86755bc"><code class="highlighter-rouge">86755bc</code></a> Add whitelistforcerelay to control forced relaying. [<a href="https://github.com/bitcoin/bitcoin/pull/7099">#7099</a> redux] (Gregory Maxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7482">#7482</a> <a href="https://github.com/bitcoin/bitcoin/commit/e16f5b4"><code class="highlighter-rouge">e16f5b4</code></a> Ensure headers count is correct (Suhas Daftuar)</li>
 </ul>
 
 <h3 id="validation">Validation</h3>
 
 <ul>
-  <li>
-    <h1 id="d9f0a6-reduce-checkpoints-effect-on-consensus-pieter-wuille">5927 <code class="highlighter-rouge">8d9f0a6</code> Reduce checkpoints’ effect on consensus. (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="f2489-bugfix-dont-check-the-genesis-block-header-before-accepting-it-jorge-timn">6299 <code class="highlighter-rouge">24f2489</code> Bugfix: Don’t check the genesis block header before accepting it (Jorge Timón)</h1>
-  </li>
-  <li>
-    <h1 id="d7ada03-use-real-number-of-cores-for-default--par-ignore-virtual-cores-wladimir-j-van-der-laan">6361 <code class="highlighter-rouge">d7ada03</code> Use real number of cores for default -par, ignore virtual cores (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="f37e2-make-logging-for-validation-optional-wladimir-j-van-der-laan">6519 <code class="highlighter-rouge">87f37e2</code> Make logging for validation optional (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="a1090d-checklocktimeverify-bip65-issupermajority-soft-fork-peter-todd">6351 <code class="highlighter-rouge">2a1090d</code> CHECKLOCKTIMEVERIFY (BIP65) IsSuperMajority() soft-fork (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="e8bfe-skip-bip-30-verification-where-not-necessary-alex-morcos">6931 <code class="highlighter-rouge">54e8bfe</code> Skip BIP 30 verification where not necessary (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="e54ebbf-switch-to-libsecp256k1-based-ecdsa-validation-pieter-wuille">6954 <code class="highlighter-rouge">e54ebbf</code> Switch to libsecp256k1-based ECDSA validation (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="c2-switch-to-a-constant-space-merkle-rootbranch-algorithm-pieter-wuille">6508 <code class="highlighter-rouge">61457c2</code> Switch to a constant-space Merkle root/branch algorithm. (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="a-add-pre-allocated-vector-type-and-use-it-for-cscript-pieter-wuille">6914 <code class="highlighter-rouge">327291a</code> Add pre-allocated vector type and use it for CScript (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="e5b3-correctly-report-high-s-violations-pieter-wuille">7500 <code class="highlighter-rouge">889e5b3</code> Correctly report high-S violations (Pieter Wuille)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5927">#5927</a> <a href="https://github.com/bitcoin/bitcoin/commit/8d9f0a6"><code class="highlighter-rouge">8d9f0a6</code></a> Reduce checkpoints’ effect on consensus. (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6299">#6299</a> <a href="https://github.com/bitcoin/bitcoin/commit/24f2489"><code class="highlighter-rouge">24f2489</code></a> Bugfix: Don’t check the genesis block header before accepting it (Jorge Timón)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6361">#6361</a> <a href="https://github.com/bitcoin/bitcoin/commit/d7ada03"><code class="highlighter-rouge">d7ada03</code></a> Use real number of cores for default -par, ignore virtual cores (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6519">#6519</a> <a href="https://github.com/bitcoin/bitcoin/commit/87f37e2"><code class="highlighter-rouge">87f37e2</code></a> Make logging for validation optional (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6351">#6351</a> <a href="https://github.com/bitcoin/bitcoin/commit/2a1090d"><code class="highlighter-rouge">2a1090d</code></a> CHECKLOCKTIMEVERIFY (BIP65) IsSuperMajority() soft-fork (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6931">#6931</a> <a href="https://github.com/bitcoin/bitcoin/commit/54e8bfe"><code class="highlighter-rouge">54e8bfe</code></a> Skip BIP 30 verification where not necessary (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6954">#6954</a> <a href="https://github.com/bitcoin/bitcoin/commit/e54ebbf"><code class="highlighter-rouge">e54ebbf</code></a> Switch to libsecp256k1-based ECDSA validation (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6508">#6508</a> <a href="https://github.com/bitcoin/bitcoin/commit/61457c2"><code class="highlighter-rouge">61457c2</code></a> Switch to a constant-space Merkle root/branch algorithm. (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6914">#6914</a> <a href="https://github.com/bitcoin/bitcoin/commit/327291a"><code class="highlighter-rouge">327291a</code></a> Add pre-allocated vector type and use it for CScript (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7500">#7500</a> <a href="https://github.com/bitcoin/bitcoin/commit/889e5b3"><code class="highlighter-rouge">889e5b3</code></a> Correctly report high-S violations (Pieter Wuille)</li>
 </ul>
 
 <h3 id="build-system">Build system</h3>
 
 <ul>
-  <li>
-    <h1 id="e4f2a0-build-disable-optional-use-of-gmp-in-internal-secp256k1-build-wladimir-j-van-der-laan">6210 <code class="highlighter-rouge">0e4f2a0</code> build: disable optional use of gmp in internal secp256k1 build (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="aa-osx-revert-renaming-of-bitcoin-qtapp-and-use-cfbundledisplayname-partial-revert-of-6116-jonas-schnelli">6214 <code class="highlighter-rouge">87406aa</code> [OSX] revert renaming of Bitcoin-Qt.app and use CFBundleDisplayName (partial revert of #6116) (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="d67b10-buildgitian-misc-updates-cory-fields">6218 <code class="highlighter-rouge">9d67b10</code> build/gitian misc updates (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="d4565b6-gitian-use-the-new-bitcoin-detached-sigs-git-repo-for-osx-signatures-cory-fields">6269 <code class="highlighter-rouge">d4565b6</code> gitian: Use the new bitcoin-detached-sigs git repo for OSX signatures (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="d4a910c-add-autogensh-to-source-tarball-randy-waterhouse">6418 <code class="highlighter-rouge">d4a910c</code> Add autogen.sh to source tarball. (randy-waterhouse)</h1>
-  </li>
-  <li>
-    <h1 id="ae3196-depends-non-qt-bumps-for-012-cory-fields">6373 <code class="highlighter-rouge">1ae3196</code> depends: non-qt bumps for 0.12 (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="b352-preserve-user-passed-cxxflags-with---enable-debug-gavin-andresen">6434 <code class="highlighter-rouge">059b352</code> Preserve user-passed CXXFLAGS with –enable-debug (Gavin Andresen)</h1>
-  </li>
-  <li>
-    <h1 id="fee6554-misc-build-fixes-cory-fields">6501 <code class="highlighter-rouge">fee6554</code> Misc build fixes (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="ef4945f-include-bitcoin-tx-binary-on-debianubuntu-zak-wilcox">6600 <code class="highlighter-rouge">ef4945f</code> Include bitcoin-tx binary on Debian/Ubuntu (Zak Wilcox)</h1>
-  </li>
-  <li>
-    <h1 id="depends-bump-miniupnpc-and-ccache-michael-ford">6619 <code class="highlighter-rouge">4862708</code> depends: bump miniupnpc and ccache (Michael Ford)</h1>
-  </li>
-  <li>
-    <h1 id="ae69a75-depends-latest-configguess-and-configsub-michael-ford">6801 <code class="highlighter-rouge">ae69a75</code> [depends] Latest config.guess and config.sub (Michael Ford)</h1>
-  </li>
-  <li>
-    <h1 id="f7b5-build-if-both-qt4-and-qt5-are-installed-use-qt5-wladimir-j-van-der-laan">6938 <code class="highlighter-rouge">193f7b5</code> build: If both Qt4 and Qt5 are installed, use Qt5 (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b281-build-set-osx-permissions-in-the-dmg-to-make-gatekeeper-happy-cory-fields">7092 <code class="highlighter-rouge">348b281</code> build: Set osx permissions in the dmg to make Gatekeeper happy (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="eccd671-depends-bump-boost-miniupnpc-ccache--zeromq-michael-ford">6980 <code class="highlighter-rouge">eccd671</code> [Depends] Bump Boost, miniupnpc, ccache &amp; zeromq (Michael Ford)</h1>
-  </li>
-  <li>
-    <h1 id="aa26ee0-add-securityexport-checks-to-gitian-and-fix-current-failures-cory-fields">7424 <code class="highlighter-rouge">aa26ee0</code> Add security/export checks to gitian and fix current failures (Cory Fields)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6210">#6210</a> <a href="https://github.com/bitcoin/bitcoin/commit/0e4f2a0"><code class="highlighter-rouge">0e4f2a0</code></a> build: disable optional use of gmp in internal secp256k1 build (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6214">#6214</a> <a href="https://github.com/bitcoin/bitcoin/commit/87406aa"><code class="highlighter-rouge">87406aa</code></a> [OSX] revert renaming of Bitcoin-Qt.app and use CFBundleDisplayName (partial revert of <a href="https://github.com/bitcoin/bitcoin/pull/6116">#6116</a>) (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6218">#6218</a> <a href="https://github.com/bitcoin/bitcoin/commit/9d67b10"><code class="highlighter-rouge">9d67b10</code></a> build/gitian misc updates (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6269">#6269</a> <a href="https://github.com/bitcoin/bitcoin/commit/d4565b6"><code class="highlighter-rouge">d4565b6</code></a> gitian: Use the new bitcoin-detached-sigs git repo for OSX signatures (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6418">#6418</a> <a href="https://github.com/bitcoin/bitcoin/commit/d4a910c"><code class="highlighter-rouge">d4a910c</code></a> Add autogen.sh to source tarball. (randy-waterhouse)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6373">#6373</a> <a href="https://github.com/bitcoin/bitcoin/commit/1ae3196"><code class="highlighter-rouge">1ae3196</code></a> depends: non-qt bumps for 0.12 (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6434">#6434</a> <a href="https://github.com/bitcoin/bitcoin/commit/059b352"><code class="highlighter-rouge">059b352</code></a> Preserve user-passed CXXFLAGS with –enable-debug (Gavin Andresen)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6501">#6501</a> <a href="https://github.com/bitcoin/bitcoin/commit/fee6554"><code class="highlighter-rouge">fee6554</code></a> Misc build fixes (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6600">#6600</a> <a href="https://github.com/bitcoin/bitcoin/commit/ef4945f"><code class="highlighter-rouge">ef4945f</code></a> Include bitcoin-tx binary on Debian/Ubuntu (Zak Wilcox)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6619">#6619</a> <a href="https://github.com/bitcoin/bitcoin/commit/4862708"><code class="highlighter-rouge">4862708</code></a> depends: bump miniupnpc and ccache (Michael Ford)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6801">#6801</a> <a href="https://github.com/bitcoin/bitcoin/commit/ae69a75"><code class="highlighter-rouge">ae69a75</code></a> [depends] Latest config.guess and config.sub (Michael Ford)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6938">#6938</a> <a href="https://github.com/bitcoin/bitcoin/commit/193f7b5"><code class="highlighter-rouge">193f7b5</code></a> build: If both Qt4 and Qt5 are installed, use Qt5 (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7092">#7092</a> <a href="https://github.com/bitcoin/bitcoin/commit/348b281"><code class="highlighter-rouge">348b281</code></a> build: Set osx permissions in the dmg to make Gatekeeper happy (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6980">#6980</a> <a href="https://github.com/bitcoin/bitcoin/commit/eccd671"><code class="highlighter-rouge">eccd671</code></a> [Depends] Bump Boost, miniupnpc, ccache &amp; zeromq (Michael Ford)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7424">#7424</a> <a href="https://github.com/bitcoin/bitcoin/commit/aa26ee0"><code class="highlighter-rouge">aa26ee0</code></a> Add security/export checks to gitian and fix current failures (Cory Fields)</li>
 </ul>
 
 <h3 id="wallet">Wallet</h3>
 
 <ul>
-  <li>
-    <h1 id="ee-fix-off-by-one-error-w-nlocktime-in-the-wallet-peter-todd">6183 <code class="highlighter-rouge">87550ee</code> Fix off-by-one error w/ nLockTime in the wallet (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="ac5476e-re-enable-wallet-in-autoprune-jonas-schnelli">6057 <code class="highlighter-rouge">ac5476e</code> re-enable wallet in autoprune (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="e6c33b-delay-initial-pruning-until-after-wallet-init-adam-weiss">6356 <code class="highlighter-rouge">9e6c33b</code> Delay initial pruning until after wallet init (Adam Weiss)</h1>
-  </li>
-  <li>
-    <h1 id="e5-fundrawtransaction-matt-corallo">6088 <code class="highlighter-rouge">91389e5</code> fundrawtransaction (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="ddd8d80-implement-watchonly-support-in-fundrawtransaction-matt-corallo">6415 <code class="highlighter-rouge">ddd8d80</code> Implement watchonly support in fundrawtransaction (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="f0f323-fix-crash-when-mining-with-empty-keypool-daniel-kraft">6567 <code class="highlighter-rouge">0f0f323</code> Fix crash when mining with empty keypool. (Daniel Kraft)</h1>
-  </li>
-  <li>
-    <h1 id="eab-fix-locking-in-gettransaction-alex-morcos">6688 <code class="highlighter-rouge">4939eab</code> Fix locking in GetTransaction. (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="dbd43e-enable-wallet-key-imports-without-rescan-in-pruned-mode-gregory-maxwell">6645 <code class="highlighter-rouge">4dbd43e</code> Enable wallet key imports without rescan in pruned mode. (Gregory Maxwell)</h1>
-  </li>
-  <li>
-    <h1 id="b77244-do-not-store-merkle-branches-in-the-wallet-pieter-wuille">6550 <code class="highlighter-rouge">5b77244</code> Do not store Merkle branches in the wallet. (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="a7712-clean-up-change-computation-in-createtransaction-daniel-kraft">5924 <code class="highlighter-rouge">12a7712</code> Clean up change computation in CreateTransaction. (Daniel Kraft)</h1>
-  </li>
-  <li>
-    <h1 id="b5b84-reject-invalid-pubkeys-when-reading-ckey-items-from-the-wallet-gregory-maxwell">6906 <code class="highlighter-rouge">48b5b84</code> Reject invalid pubkeys when reading ckey items from the wallet. (Gregory Maxwell)</h1>
-  </li>
-  <li>
-    <h1 id="e0a5ef8-fix-fundrawtransaction-handling-of-includewatching-peter-todd">7010 <code class="highlighter-rouge">e0a5ef8</code> Fix fundrawtransaction handling of includeWatching (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="d61b-optimisation-store-transaction-list-order-in-memory-rather-than-compute-it-every-need-luke-jr">6851 <code class="highlighter-rouge">616d61b</code> Optimisation: Store transaction list order in memory rather than compute it every need (Luke-Jr)</h1>
-  </li>
-  <li>
-    <h1 id="e92377f-improve-usage-of-fee-estimation-code-alex-morcos">6134 <code class="highlighter-rouge">e92377f</code> Improve usage of fee estimation code (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="a775182-wallet-rpc-tests-fix-settxfee-paytxfee-marcofalke">7103 <code class="highlighter-rouge">a775182</code> [wallet, rpc tests] Fix settxfee, paytxfee (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="c2d8c-keep-track-of-explicit-wallet-conflicts-instead-of-using-mempool-pieter-wuille">7105 <code class="highlighter-rouge">30c2d8c</code> Keep track of explicit wallet conflicts instead of using mempool (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="bd7-wallet-improve-minimum-absolute-fee-gui-options-jonas-schnelli">7096 <code class="highlighter-rouge">9490bd7</code> [Wallet] Improve minimum absolute fee GUI options (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="f06ca-take-the-training-wheels-off-anti-fee-sniping-peter-todd">6216 <code class="highlighter-rouge">83f06ca</code> Take the training wheels off anti-fee-sniping (Peter Todd)</h1>
-  </li>
-  <li>
-    <h1 id="e8d12-issue1643-coinselection-prunes-extraneous-inputs-from-approximatebestsubset-murch">4906 <code class="highlighter-rouge">96e8d12</code> Issue#1643: Coinselection prunes extraneous inputs from ApproximateBestSubset (Murch)</h1>
-  </li>
-  <li>
-    <h1 id="c6a58-checks-for-null-data-transaction-before-issuing-error-to-debuglog-andy-craze">7200 <code class="highlighter-rouge">06c6a58</code> Checks for null data transaction before issuing error to debug.log (Andy Craze)</h1>
-  </li>
-  <li>
-    <h1 id="a36d79b-add-sane-fallback-for-fee-estimation-alex-morcos">7296 <code class="highlighter-rouge">a36d79b</code> Add sane fallback for fee estimation (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="ff9b610-add-regression-test-for-vvalue-sort-order-marcofalke">7293 <code class="highlighter-rouge">ff9b610</code> Add regression test for vValue sort order (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="make-sure-conflicted-wallet-txs-update-balances-alex-morcos">7306 <code class="highlighter-rouge">4707797</code> Make sure conflicted wallet tx’s update balances (Alex Morcos)</h1>
-  </li>
-  <li>
-    <h1 id="bbd8-walletdb-fix-syntax-error-in-key-parser-marcofalke">7381 <code class="highlighter-rouge">621bbd8</code> [walletdb] Fix syntax error in key parser (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="ec73e-wallet-ignore-markconflict-if-block-hash-is-not-known-wladimir-j-van-der-laan">7491 <code class="highlighter-rouge">00ec73e</code> wallet: Ignore MarkConflict if block hash is not known (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="update-the-wallet-best-block-marker-before-pruning-pieter-wuille">7502 <code class="highlighter-rouge">1329963</code> Update the wallet best block marker before pruning (Pieter Wuille)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6183">#6183</a> <a href="https://github.com/bitcoin/bitcoin/commit/87550ee"><code class="highlighter-rouge">87550ee</code></a> Fix off-by-one error w/ nLockTime in the wallet (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6057">#6057</a> <a href="https://github.com/bitcoin/bitcoin/commit/ac5476e"><code class="highlighter-rouge">ac5476e</code></a> re-enable wallet in autoprune (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6356">#6356</a> <a href="https://github.com/bitcoin/bitcoin/commit/9e6c33b"><code class="highlighter-rouge">9e6c33b</code></a> Delay initial pruning until after wallet init (Adam Weiss)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6088">#6088</a> <a href="https://github.com/bitcoin/bitcoin/commit/91389e5"><code class="highlighter-rouge">91389e5</code></a> fundrawtransaction (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6415">#6415</a> <a href="https://github.com/bitcoin/bitcoin/commit/ddd8d80"><code class="highlighter-rouge">ddd8d80</code></a> Implement watchonly support in fundrawtransaction (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6567">#6567</a> <a href="https://github.com/bitcoin/bitcoin/commit/0f0f323"><code class="highlighter-rouge">0f0f323</code></a> Fix crash when mining with empty keypool. (Daniel Kraft)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6688">#6688</a> <a href="https://github.com/bitcoin/bitcoin/commit/4939eab"><code class="highlighter-rouge">4939eab</code></a> Fix locking in GetTransaction. (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6645">#6645</a> <a href="https://github.com/bitcoin/bitcoin/commit/4dbd43e"><code class="highlighter-rouge">4dbd43e</code></a> Enable wallet key imports without rescan in pruned mode. (Gregory Maxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6550">#6550</a> <a href="https://github.com/bitcoin/bitcoin/commit/5b77244"><code class="highlighter-rouge">5b77244</code></a> Do not store Merkle branches in the wallet. (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5924">#5924</a> <a href="https://github.com/bitcoin/bitcoin/commit/12a7712"><code class="highlighter-rouge">12a7712</code></a> Clean up change computation in CreateTransaction. (Daniel Kraft)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6906">#6906</a> <a href="https://github.com/bitcoin/bitcoin/commit/48b5b84"><code class="highlighter-rouge">48b5b84</code></a> Reject invalid pubkeys when reading ckey items from the wallet. (Gregory Maxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7010">#7010</a> <a href="https://github.com/bitcoin/bitcoin/commit/e0a5ef8"><code class="highlighter-rouge">e0a5ef8</code></a> Fix fundrawtransaction handling of includeWatching (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6851">#6851</a> <a href="https://github.com/bitcoin/bitcoin/commit/616d61b"><code class="highlighter-rouge">616d61b</code></a> Optimisation: Store transaction list order in memory rather than compute it every need (Luke-Jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6134">#6134</a> <a href="https://github.com/bitcoin/bitcoin/commit/e92377f"><code class="highlighter-rouge">e92377f</code></a> Improve usage of fee estimation code (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7103">#7103</a> <a href="https://github.com/bitcoin/bitcoin/commit/a775182"><code class="highlighter-rouge">a775182</code></a> [wallet, rpc tests] Fix settxfee, paytxfee (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7105">#7105</a> <a href="https://github.com/bitcoin/bitcoin/commit/30c2d8c"><code class="highlighter-rouge">30c2d8c</code></a> Keep track of explicit wallet conflicts instead of using mempool (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7096">#7096</a> <a href="https://github.com/bitcoin/bitcoin/commit/9490bd7"><code class="highlighter-rouge">9490bd7</code></a> [Wallet] Improve minimum absolute fee GUI options (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6216">#6216</a> <a href="https://github.com/bitcoin/bitcoin/commit/83f06ca"><code class="highlighter-rouge">83f06ca</code></a> Take the training wheels off anti-fee-sniping (Peter Todd)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/4906">#4906</a> <a href="https://github.com/bitcoin/bitcoin/commit/96e8d12"><code class="highlighter-rouge">96e8d12</code></a> Issue<a href="https://github.com/bitcoin/bitcoin/pull/1643">#1643</a>: Coinselection prunes extraneous inputs from ApproximateBestSubset (Murch)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7200">#7200</a> <a href="https://github.com/bitcoin/bitcoin/commit/06c6a58"><code class="highlighter-rouge">06c6a58</code></a> Checks for null data transaction before issuing error to debug.log (Andy Craze)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7296">#7296</a> <a href="https://github.com/bitcoin/bitcoin/commit/a36d79b"><code class="highlighter-rouge">a36d79b</code></a> Add sane fallback for fee estimation (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7293">#7293</a> <a href="https://github.com/bitcoin/bitcoin/commit/ff9b610"><code class="highlighter-rouge">ff9b610</code></a> Add regression test for vValue sort order (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7306">#7306</a> <a href="https://github.com/bitcoin/bitcoin/commit/4707797"><code class="highlighter-rouge">4707797</code></a> Make sure conflicted wallet tx’s update balances (Alex Morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7381">#7381</a> <a href="https://github.com/bitcoin/bitcoin/commit/621bbd8"><code class="highlighter-rouge">621bbd8</code></a> [walletdb] Fix syntax error in key parser (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7491">#7491</a> <a href="https://github.com/bitcoin/bitcoin/commit/00ec73e"><code class="highlighter-rouge">00ec73e</code></a> wallet: Ignore MarkConflict if block hash is not known (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7502">#7502</a> <a href="https://github.com/bitcoin/bitcoin/commit/1329963"><code class="highlighter-rouge">1329963</code></a> Update the wallet best block marker before pruning (Pieter Wuille)</li>
 </ul>
 
 <h3 id="gui">GUI</h3>
 
 <ul>
-  <li>
-    <h1 id="c57e12a-disconnect-peers-from-peers-tab-via-context-menu-diapolo">6217 <code class="highlighter-rouge">c57e12a</code> disconnect peers from peers tab via context menu (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="ab0ec67-extend-rpc-console-peers-tab-diapolo">6209 <code class="highlighter-rouge">ab0ec67</code> extend rpc console peers tab (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="d69-use-chashwriter-also-in-signverifymessagedialog-pavel-vasin">6484 <code class="highlighter-rouge">1369d69</code> use CHashWriter also in SignVerifyMessageDialog (Pavel Vasin)</h1>
-  </li>
-  <li>
-    <h1 id="d42-introduce-platformstyle-wladimir-j-van-der-laan">6487 <code class="highlighter-rouge">9848d42</code> Introduce PlatformStyle (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="c9d3-cleanup-icons-marcofalke">6505 <code class="highlighter-rouge">100c9d3</code> cleanup icons (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="c465f5-allow-users-to-set--onion-via-gui-diapolo">4587 <code class="highlighter-rouge">0c465f5</code> allow users to set -onion via GUI (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="c0f66ce-show-client-user-agent-in-debug-window-diapolo">6529 <code class="highlighter-rouge">c0f66ce</code> show client user agent in debug window (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="ea69-disallow-duplicate-windows-casey-rodarmor">6594 <code class="highlighter-rouge">878ea69</code> Disallow duplicate windows. (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="f55cdd-add-verifysize-function-to-paymentserver-diapolo">5665 <code class="highlighter-rouge">6f55cdd</code> add verifySize() function to PaymentServer (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="ca5e2a1-minor-optimisations-in-peertablemodel-diapolo">6317 <code class="highlighter-rouge">ca5e2a1</code> minor optimisations in peertablemodel (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="e59d2a8-allow-banning-and-unbanning-over-ui-peers-table-jonas-schnelli">6315 <code class="highlighter-rouge">e59d2a8</code> allow banning and unbanning over UI-&gt;peers table (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="e04b2fa-pop-debug-window-in-foreground-when-opened-twice-marcofalke">6653 <code class="highlighter-rouge">e04b2fa</code> Pop debug window in foreground when opened twice (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="c702521-use-monospace-font-marcofalke">6864 <code class="highlighter-rouge">c702521</code> Use monospace font (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="b74-update-coin-control-and-smartfee-labels-marcofalke">6887 <code class="highlighter-rouge">3694b74</code> Update coin control and smartfee labels (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="c-add-shortcurts-for-debug-console-window-jonas-schnelli">7000 <code class="highlighter-rouge">814697c</code> add shortcurts for debug-/console-window (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="d8-use-maxtxfee-instead-of-10000000-marcofalke">6951 <code class="highlighter-rouge">03403d8</code> Use maxTxFee instead of 10000000 (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="a190777-ui-add-copy-raw-transaction-data-to-transaction-list-context-menu-wladimir-j-van-der-laan">7051 <code class="highlighter-rouge">a190777</code> ui: Add “Copy raw transaction data” to transaction list context menu (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="a-simple-mempool-info-in-debug-window-jonas-schnelli">6979 <code class="highlighter-rouge">776848a</code> simple mempool info in debug window (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="af1ac-add-startup-option-to-reset-qt-settings-jonas-schnelli">7006 <code class="highlighter-rouge">26af1ac</code> add startup option to reset Qt settings (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="a94cd6-call-inits-parameter-interaction-before-we-create-the-ui-options-model-jonas-schnelli">6780 <code class="highlighter-rouge">2a94cd6</code> Call init’s parameter interaction before we create the UI options model (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="b8025-reduce-csmain-locks-during-tip-update-more-fluently-update-ui-jonas-schnelli">7112 <code class="highlighter-rouge">96b8025</code> reduce cs_main locks during tip update, more fluently update UI (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="f43c2f9-add-nodebloom-to-guiutil-so-that-peers-dont-get-unknown4-matt-corallo">7206 <code class="highlighter-rouge">f43c2f9</code> Add “NODE_BLOOM” to guiutil so that peers don’t get UNKNOWN[4] (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="cadf3e-fix-coincontrol-update-issue-when-deleting-a-send-coins-entry-jonas-schnelli">7282 <code class="highlighter-rouge">5cadf3e</code> fix coincontrol update issue when deleting a send coins entry (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="intro-display-required-space-marcofalke">7319 <code class="highlighter-rouge">1320300</code> Intro: Display required space (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="e89-quickfix-for-rpc-timer-interface-problem-jonas-schnelli">7318 <code class="highlighter-rouge">9265e89</code> quickfix for RPC timer interface problem (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="b16b5bc-wallet-transaction-view-lastmonth-calculation-fixed-crowning-">7327 <code class="highlighter-rouge">b16b5bc</code> [Wallet] Transaction View: LastMonth calculation fixed (crowning-)</h1>
-  </li>
-  <li>
-    <h1 id="c48-qt-windows-make-rpcconsole-monospace-font-larger-marcofalke">7364 <code class="highlighter-rouge">7726c48</code> [qt] Windows: Make rpcconsole monospace font larger (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="f432-qt-peertable-increase-subversioncolumnwidth-marcofalke">7384 <code class="highlighter-rouge">294f432</code> [qt] Peertable: Increase SUBVERSION_COLUMN_WIDTH (MarcoFalke)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6217">#6217</a> <a href="https://github.com/bitcoin/bitcoin/commit/c57e12a"><code class="highlighter-rouge">c57e12a</code></a> disconnect peers from peers tab via context menu (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6209">#6209</a> <a href="https://github.com/bitcoin/bitcoin/commit/ab0ec67"><code class="highlighter-rouge">ab0ec67</code></a> extend rpc console peers tab (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6484">#6484</a> <a href="https://github.com/bitcoin/bitcoin/commit/1369d69"><code class="highlighter-rouge">1369d69</code></a> use CHashWriter also in SignVerifyMessageDialog (Pavel Vasin)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6487">#6487</a> <a href="https://github.com/bitcoin/bitcoin/commit/9848d42"><code class="highlighter-rouge">9848d42</code></a> Introduce PlatformStyle (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6505">#6505</a> <a href="https://github.com/bitcoin/bitcoin/commit/100c9d3"><code class="highlighter-rouge">100c9d3</code></a> cleanup icons (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/4587">#4587</a> <a href="https://github.com/bitcoin/bitcoin/commit/0c465f5"><code class="highlighter-rouge">0c465f5</code></a> allow users to set -onion via GUI (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6529">#6529</a> <a href="https://github.com/bitcoin/bitcoin/commit/c0f66ce"><code class="highlighter-rouge">c0f66ce</code></a> show client user agent in debug window (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6594">#6594</a> <a href="https://github.com/bitcoin/bitcoin/commit/878ea69"><code class="highlighter-rouge">878ea69</code></a> Disallow duplicate windows. (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5665">#5665</a> <a href="https://github.com/bitcoin/bitcoin/commit/6f55cdd"><code class="highlighter-rouge">6f55cdd</code></a> add verifySize() function to PaymentServer (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6317">#6317</a> <a href="https://github.com/bitcoin/bitcoin/commit/ca5e2a1"><code class="highlighter-rouge">ca5e2a1</code></a> minor optimisations in peertablemodel (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6315">#6315</a> <a href="https://github.com/bitcoin/bitcoin/commit/e59d2a8"><code class="highlighter-rouge">e59d2a8</code></a> allow banning and unbanning over UI-&gt;peers table (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6653">#6653</a> <a href="https://github.com/bitcoin/bitcoin/commit/e04b2fa"><code class="highlighter-rouge">e04b2fa</code></a> Pop debug window in foreground when opened twice (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6864">#6864</a> <a href="https://github.com/bitcoin/bitcoin/commit/c702521"><code class="highlighter-rouge">c702521</code></a> Use monospace font (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6887">#6887</a> <a href="https://github.com/bitcoin/bitcoin/commit/3694b74"><code class="highlighter-rouge">3694b74</code></a> Update coin control and smartfee labels (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7000">#7000</a> <a href="https://github.com/bitcoin/bitcoin/commit/814697c"><code class="highlighter-rouge">814697c</code></a> add shortcurts for debug-/console-window (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6951">#6951</a> <a href="https://github.com/bitcoin/bitcoin/commit/03403d8"><code class="highlighter-rouge">03403d8</code></a> Use maxTxFee instead of 10000000 (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7051">#7051</a> <a href="https://github.com/bitcoin/bitcoin/commit/a190777"><code class="highlighter-rouge">a190777</code></a> ui: Add “Copy raw transaction data” to transaction list context menu (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6979">#6979</a> <a href="https://github.com/bitcoin/bitcoin/commit/776848a"><code class="highlighter-rouge">776848a</code></a> simple mempool info in debug window (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7006">#7006</a> <a href="https://github.com/bitcoin/bitcoin/commit/26af1ac"><code class="highlighter-rouge">26af1ac</code></a> add startup option to reset Qt settings (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6780">#6780</a> <a href="https://github.com/bitcoin/bitcoin/commit/2a94cd6"><code class="highlighter-rouge">2a94cd6</code></a> Call init’s parameter interaction before we create the UI options model (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7112">#7112</a> <a href="https://github.com/bitcoin/bitcoin/commit/96b8025"><code class="highlighter-rouge">96b8025</code></a> reduce cs_main locks during tip update, more fluently update UI (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7206">#7206</a> <a href="https://github.com/bitcoin/bitcoin/commit/f43c2f9"><code class="highlighter-rouge">f43c2f9</code></a> Add “NODE_BLOOM” to guiutil so that peers don’t get UNKNOWN[4] (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7282">#7282</a> <a href="https://github.com/bitcoin/bitcoin/commit/5cadf3e"><code class="highlighter-rouge">5cadf3e</code></a> fix coincontrol update issue when deleting a send coins entry (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7319">#7319</a> <a href="https://github.com/bitcoin/bitcoin/commit/1320300"><code class="highlighter-rouge">1320300</code></a> Intro: Display required space (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7318">#7318</a> <a href="https://github.com/bitcoin/bitcoin/commit/9265e89"><code class="highlighter-rouge">9265e89</code></a> quickfix for RPC timer interface problem (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7327">#7327</a> <a href="https://github.com/bitcoin/bitcoin/commit/b16b5bc"><code class="highlighter-rouge">b16b5bc</code></a> [Wallet] Transaction View: LastMonth calculation fixed (crowning-)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7364">#7364</a> <a href="https://github.com/bitcoin/bitcoin/commit/7726c48"><code class="highlighter-rouge">7726c48</code></a> [qt] Windows: Make rpcconsole monospace font larger (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7384">#7384</a> <a href="https://github.com/bitcoin/bitcoin/commit/294f432"><code class="highlighter-rouge">294f432</code></a> [qt] Peertable: Increase SUBVERSION_COLUMN_WIDTH (MarcoFalke)</li>
 </ul>
 
 <h3 id="tests-and-qa">Tests and QA</h3>
 
 <ul>
-  <li>
-    <h1 id="c91-build-comparison-tool-swap-cory-fields">6305 <code class="highlighter-rouge">9005c91</code> build: comparison tool swap (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="e307e13-build-comparison-tool-npe-fix-cory-fields">6318 <code class="highlighter-rouge">e307e13</code> build: comparison tool NPE fix (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="c5b-testing-infrastructure-mocktime-fixes-gavin-andresen">6337 <code class="highlighter-rouge">0564c5b</code> Testing infrastructure: mocktime fixes (Gavin Andresen)</h1>
-  </li>
-  <li>
-    <h1 id="abba1-add-unit-tests-for-the-decodescript-rpc-mruddy">6350 <code class="highlighter-rouge">60abba1</code> add unit tests for the decodescript rpc (mruddy)</h1>
-  </li>
-  <li>
-    <h1 id="a08-fix-and-improve-txndoublespendpy-test-tom-harding">5881 <code class="highlighter-rouge">3203a08</code> Fix and improve txn_doublespend.py test (Tom Harding)</h1>
-  </li>
-  <li>
-    <h1 id="a73d66-tests-fix-bitcoin-tx-signing-test-case-wladimir-j-van-der-laan">6390 <code class="highlighter-rouge">6a73d66</code> tests: Fix bitcoin-tx signing test case (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="fc25c2-cltv-add-more-tests-to-improve-coverage-esteban-ordano">6368 <code class="highlighter-rouge">7fc25c2</code> CLTV: Add more tests to improve coverage (Esteban Ordano)</h1>
-  </li>
-  <li>
-    <h1 id="c68-fix-intermittent-test-failure-reduce-test-time-tom-harding">6414 <code class="highlighter-rouge">5121c68</code> Fix intermittent test failure, reduce test time (Tom Harding)</h1>
-  </li>
-  <li>
-    <h1 id="fa82d-qa-fix-possible-reorg-issue-in-fundrawtransactionspy-rpc-test-jonas-schnelli">6417 <code class="highlighter-rouge">44fa82d</code> [QA] fix possible reorg issue in (fund)rawtransaction(s).py RPC test (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="d9362d-rpc-remove-chain-specific-requirerpcpassword-wladimir-j-van-der-laan">6398 <code class="highlighter-rouge">3d9362d</code> rpc: Remove chain-specific RequireRPCPassword (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="bb59e78-tests-remove-old-sh-based-test-framework-wladimir-j-van-der-laan">6428 <code class="highlighter-rouge">bb59e78</code> tests: Remove old sh-based test framework (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="d946e9a-rfc-assert-on-probable-deadlocks-if-the-second-lock-isnt-trylock-matt-corallo">5515 <code class="highlighter-rouge">d946e9a</code> RFC: Assert on probable deadlocks if the second lock isnt try_lock (Matt Corallo)</h1>
-  </li>
-  <li>
-    <h1 id="d2464df-clang-lock-debug-cory-fields">6287 <code class="highlighter-rouge">d2464df</code> Clang lock debug (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="fd74-dont-share-objects-between-testinstances-casey-rodarmor">6465 <code class="highlighter-rouge">410fd74</code> Don’t share objects between TestInstances (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="c1c7fd-fix-test-locking-issues-and-un-revert-the-probable-deadlines-assertions-commit-cory-fields">6534 <code class="highlighter-rouge">6c1c7fd</code> Fix test locking issues and un-revert the probable-deadlines assertions commit (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="bb4faee-fix-race-condition-on-test-node-shutdown-casey-rodarmor">6509 <code class="highlighter-rouge">bb4faee</code> Fix race condition on test node shutdown (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="f8af-add-p2p-fullblocktestpy-casey-rodarmor">6523 <code class="highlighter-rouge">561f8af</code> Add p2p-fullblocktest.py (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="fd92-fix-stale-socket-rebinding-and-re-enable-python-tests-for-windows-cory-fields">6590 <code class="highlighter-rouge">981fd92</code> Fix stale socket rebinding and re-enable python tests for Windows (Cory Fields)</h1>
-  </li>
-  <li>
-    <h1 id="cb4d6d0-build-remove-dependency-of-bitcoin-cli-on-secp256k1-wladimir-j-van-der-laan">6730 <code class="highlighter-rouge">cb4d6d0</code> build: Remove dependency of bitcoin-cli on secp256k1 (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="ab5dca-regression-tests-migrated-rpc-testssh-to-all-python-rpc-testspy-peter-tschipper">6616 <code class="highlighter-rouge">5ab5dca</code> Regression Tests: Migrated rpc-tests.sh to all Python rpc-tests.py (Peter Tschipper)</h1>
-  </li>
-  <li>
-    <h1 id="d479311-creates-unittests-for-addrman-makes-addrman-more-testable-ethan-heilman">6720 <code class="highlighter-rouge">d479311</code> Creates unittests for addrman, makes addrman more testable. (Ethan Heilman)</h1>
-  </li>
-  <li>
-    <h1 id="c834f56-added-fpownoretargeting-field-to-consensusparams-eric-lombrozo">6853 <code class="highlighter-rouge">c834f56</code> Added fPowNoRetargeting field to Consensus::Params (Eric Lombrozo)</h1>
-  </li>
-  <li>
-    <h1 id="e5539-rpc-tests-check-return-code-marcofalke">6827 <code class="highlighter-rouge">87e5539</code> [rpc-tests] Check return code (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="f2c869a-add-dersig-transaction-test-cases-ross-nicoll">6848 <code class="highlighter-rouge">f2c869a</code> Add DERSIG transaction test cases (Ross Nicoll)</h1>
-  </li>
-  <li>
-    <h1 id="bb3-support-gathering-code-coverage-data-for-rpc-tests-with-lcov-dexx7">6813 <code class="highlighter-rouge">5242bb3</code> Support gathering code coverage data for RPC tests with lcov (dexX7)</h1>
-  </li>
-  <li>
-    <h1 id="c8322ff-clear-strmiscwarning-before-running-partitionalert-eric-lombrozo">6888 <code class="highlighter-rouge">c8322ff</code> Clear strMiscWarning before running PartitionAlert (Eric Lombrozo)</h1>
-  </li>
-  <li>
-    <h1 id="tests-fix-bip65-p2p-test-suhas-daftuar">6894 <code class="highlighter-rouge">2675276</code> [Tests] Fix BIP65 p2p test (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="e-test-suite-fix-test-for-null-tx-input-daniel-kraft">6863 <code class="highlighter-rouge">725539e</code> [Test Suite] Fix test for null tx input (Daniel Kraft)</h1>
-  </li>
-  <li>
-    <h1 id="a6d0d62-tests-initialize-networking-on-windows-wladimir-j-van-der-laan">6926 <code class="highlighter-rouge">a6d0d62</code> tests: Initialize networking on windows (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="fa54a1-tests-be-more-strict-checking-dust-marcofalke">6822 <code class="highlighter-rouge">9fa54a1</code> [tests] Be more strict checking dust (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="fcc14e-tests-add-basic-coverage-reporting-for-rpc-tests-james-obeirne">6804 <code class="highlighter-rouge">5fcc14e</code> [tests] Add basic coverage reporting for RPC tests (James O’Beirne)</h1>
-  </li>
-  <li>
-    <h1 id="dccfc-bugfix-use-unique-autostart-filenames-on-linux-for-testnetregtest-luke-jr">7045 <code class="highlighter-rouge">72dccfc</code> Bugfix: Use unique autostart filenames on Linux for testnet/regtest (Luke-Jr)</h1>
-  </li>
-  <li>
-    <h1 id="d8368a0-replace-scriptnumtests-normative-scriptnum-implementation-wladimir-j-van-der-laan">7095 <code class="highlighter-rouge">d8368a0</code> Replace scriptnum_test’s normative ScriptNum implementation (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="abf6eb-tests-add-prioritisetransaction-rpc-test-suhas-daftuar">7063 <code class="highlighter-rouge">6abf6eb</code> [Tests] Add prioritisetransaction RPC test (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="f4a6e-tests-explicitly-set-chain-limits-in-replace-by-fee-test-suhas-daftuar">7137 <code class="highlighter-rouge">16f4a6e</code> Tests: Explicitly set chain limits in replace-by-fee test (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="e49-removed-offline-testnet-dnsseed-alexykotme-tnull">7216 <code class="highlighter-rouge">9572e49</code> Removed offline testnet DNSSeed ‘alexykot.me’. (tnull)</h1>
-  </li>
-  <li>
-    <h1 id="f3ad812-test-dont-override-bitcoind-and-bitcoincli-if-theyre-set-wladimir-j-van-der-laan">7209 <code class="highlighter-rouge">f3ad812</code> test: don’t override BITCOIND and BITCOINCLI if they’re set (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="f16a-tests-add-more-tests-to-p2p-fullblocktest-suhas-daftuar">7226 <code class="highlighter-rouge">301f16a</code> Tests: Add more tests to p2p-fullblocktest (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="ef7c54-tests-add-mempoollimitpy-test-jonas-schnelli">7153 <code class="highlighter-rouge">9ef7c54</code> [Tests] Add mempool_limit.py test (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="c567-tests-disable-tor-interaction-wladimir-j-van-der-laan">7170 <code class="highlighter-rouge">453c567</code> tests: Disable Tor interaction (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="ed938b-qa-wallet-check-if-maintenance-changes-the-balance-marcofalke">7229 <code class="highlighter-rouge">1ed938b</code> [qa] wallet: Check if maintenance changes the balance (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="d513405-tests-eliminate-intermittent-failures-in-sendheaderspy-suhas-daftuar">7308 <code class="highlighter-rouge">d513405</code> [Tests] Eliminate intermittent failures in sendheaders.py (Suhas Daftuar)</h1>
-  </li>
-  <li>
-    <h1 id="c4ff-rpc-tests-change-solve-to-use-rehash-brad-andrews">7468 <code class="highlighter-rouge">947c4ff</code> [rpc-tests] Change solve() to use rehash (Brad Andrews)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6305">#6305</a> <a href="https://github.com/bitcoin/bitcoin/commit/9005c91"><code class="highlighter-rouge">9005c91</code></a> build: comparison tool swap (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6318">#6318</a> <a href="https://github.com/bitcoin/bitcoin/commit/e307e13"><code class="highlighter-rouge">e307e13</code></a> build: comparison tool NPE fix (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6337">#6337</a> <a href="https://github.com/bitcoin/bitcoin/commit/0564c5b"><code class="highlighter-rouge">0564c5b</code></a> Testing infrastructure: mocktime fixes (Gavin Andresen)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6350">#6350</a> <a href="https://github.com/bitcoin/bitcoin/commit/60abba1"><code class="highlighter-rouge">60abba1</code></a> add unit tests for the decodescript rpc (mruddy)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5881">#5881</a> <a href="https://github.com/bitcoin/bitcoin/commit/3203a08"><code class="highlighter-rouge">3203a08</code></a> Fix and improve txn_doublespend.py test (Tom Harding)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6390">#6390</a> <a href="https://github.com/bitcoin/bitcoin/commit/6a73d66"><code class="highlighter-rouge">6a73d66</code></a> tests: Fix bitcoin-tx signing test case (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6368">#6368</a> <a href="https://github.com/bitcoin/bitcoin/commit/7fc25c2"><code class="highlighter-rouge">7fc25c2</code></a> CLTV: Add more tests to improve coverage (Esteban Ordano)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6414">#6414</a> <a href="https://github.com/bitcoin/bitcoin/commit/5121c68"><code class="highlighter-rouge">5121c68</code></a> Fix intermittent test failure, reduce test time (Tom Harding)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6417">#6417</a> <a href="https://github.com/bitcoin/bitcoin/commit/44fa82d"><code class="highlighter-rouge">44fa82d</code></a> [QA] fix possible reorg issue in (fund)rawtransaction(s).py RPC test (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6398">#6398</a> <a href="https://github.com/bitcoin/bitcoin/commit/3d9362d"><code class="highlighter-rouge">3d9362d</code></a> rpc: Remove chain-specific RequireRPCPassword (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6428">#6428</a> <a href="https://github.com/bitcoin/bitcoin/commit/bb59e78"><code class="highlighter-rouge">bb59e78</code></a> tests: Remove old sh-based test framework (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5515">#5515</a> <a href="https://github.com/bitcoin/bitcoin/commit/d946e9a"><code class="highlighter-rouge">d946e9a</code></a> RFC: Assert on probable deadlocks if the second lock isnt try_lock (Matt Corallo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6287">#6287</a> <a href="https://github.com/bitcoin/bitcoin/commit/d2464df"><code class="highlighter-rouge">d2464df</code></a> Clang lock debug (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6465">#6465</a> <a href="https://github.com/bitcoin/bitcoin/commit/410fd74"><code class="highlighter-rouge">410fd74</code></a> Don’t share objects between TestInstances (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6534">#6534</a> <a href="https://github.com/bitcoin/bitcoin/commit/6c1c7fd"><code class="highlighter-rouge">6c1c7fd</code></a> Fix test locking issues and un-revert the probable-deadlines assertions commit (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6509">#6509</a> <a href="https://github.com/bitcoin/bitcoin/commit/bb4faee"><code class="highlighter-rouge">bb4faee</code></a> Fix race condition on test node shutdown (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6523">#6523</a> <a href="https://github.com/bitcoin/bitcoin/commit/561f8af"><code class="highlighter-rouge">561f8af</code></a> Add p2p-fullblocktest.py (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6590">#6590</a> <a href="https://github.com/bitcoin/bitcoin/commit/981fd92"><code class="highlighter-rouge">981fd92</code></a> Fix stale socket rebinding and re-enable python tests for Windows (Cory Fields)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6730">#6730</a> <a href="https://github.com/bitcoin/bitcoin/commit/cb4d6d0"><code class="highlighter-rouge">cb4d6d0</code></a> build: Remove dependency of bitcoin-cli on secp256k1 (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6616">#6616</a> <a href="https://github.com/bitcoin/bitcoin/commit/5ab5dca"><code class="highlighter-rouge">5ab5dca</code></a> Regression Tests: Migrated rpc-tests.sh to all Python rpc-tests.py (Peter Tschipper)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6720">#6720</a> <a href="https://github.com/bitcoin/bitcoin/commit/d479311"><code class="highlighter-rouge">d479311</code></a> Creates unittests for addrman, makes addrman more testable. (Ethan Heilman)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6853">#6853</a> <a href="https://github.com/bitcoin/bitcoin/commit/c834f56"><code class="highlighter-rouge">c834f56</code></a> Added fPowNoRetargeting field to Consensus::Params (Eric Lombrozo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6827">#6827</a> <a href="https://github.com/bitcoin/bitcoin/commit/87e5539"><code class="highlighter-rouge">87e5539</code></a> [rpc-tests] Check return code (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6848">#6848</a> <a href="https://github.com/bitcoin/bitcoin/commit/f2c869a"><code class="highlighter-rouge">f2c869a</code></a> Add DERSIG transaction test cases (Ross Nicoll)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6813">#6813</a> <a href="https://github.com/bitcoin/bitcoin/commit/5242bb3"><code class="highlighter-rouge">5242bb3</code></a> Support gathering code coverage data for RPC tests with lcov (dexX7)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6888">#6888</a> <a href="https://github.com/bitcoin/bitcoin/commit/c8322ff"><code class="highlighter-rouge">c8322ff</code></a> Clear strMiscWarning before running PartitionAlert (Eric Lombrozo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6894">#6894</a> <a href="https://github.com/bitcoin/bitcoin/commit/2675276"><code class="highlighter-rouge">2675276</code></a> [Tests] Fix BIP65 p2p test (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6863">#6863</a> <a href="https://github.com/bitcoin/bitcoin/commit/725539e"><code class="highlighter-rouge">725539e</code></a> [Test Suite] Fix test for null tx input (Daniel Kraft)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6926">#6926</a> <a href="https://github.com/bitcoin/bitcoin/commit/a6d0d62"><code class="highlighter-rouge">a6d0d62</code></a> tests: Initialize networking on windows (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6822">#6822</a> <a href="https://github.com/bitcoin/bitcoin/commit/9fa54a1"><code class="highlighter-rouge">9fa54a1</code></a> [tests] Be more strict checking dust (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6804">#6804</a> <a href="https://github.com/bitcoin/bitcoin/commit/5fcc14e"><code class="highlighter-rouge">5fcc14e</code></a> [tests] Add basic coverage reporting for RPC tests (James O’Beirne)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7045">#7045</a> <a href="https://github.com/bitcoin/bitcoin/commit/72dccfc"><code class="highlighter-rouge">72dccfc</code></a> Bugfix: Use unique autostart filenames on Linux for testnet/regtest (Luke-Jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7095">#7095</a> <a href="https://github.com/bitcoin/bitcoin/commit/d8368a0"><code class="highlighter-rouge">d8368a0</code></a> Replace scriptnum_test’s normative ScriptNum implementation (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7063">#7063</a> <a href="https://github.com/bitcoin/bitcoin/commit/6abf6eb"><code class="highlighter-rouge">6abf6eb</code></a> [Tests] Add prioritisetransaction RPC test (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7137">#7137</a> <a href="https://github.com/bitcoin/bitcoin/commit/16f4a6e"><code class="highlighter-rouge">16f4a6e</code></a> Tests: Explicitly set chain limits in replace-by-fee test (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7216">#7216</a> <a href="https://github.com/bitcoin/bitcoin/commit/9572e49"><code class="highlighter-rouge">9572e49</code></a> Removed offline testnet DNSSeed ‘alexykot.me’. (tnull)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7209">#7209</a> <a href="https://github.com/bitcoin/bitcoin/commit/f3ad812"><code class="highlighter-rouge">f3ad812</code></a> test: don’t override BITCOIND and BITCOINCLI if they’re set (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7226">#7226</a> <a href="https://github.com/bitcoin/bitcoin/commit/301f16a"><code class="highlighter-rouge">301f16a</code></a> Tests: Add more tests to p2p-fullblocktest (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7153">#7153</a> <a href="https://github.com/bitcoin/bitcoin/commit/9ef7c54"><code class="highlighter-rouge">9ef7c54</code></a> [Tests] Add mempool_limit.py test (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7170">#7170</a> <a href="https://github.com/bitcoin/bitcoin/commit/453c567"><code class="highlighter-rouge">453c567</code></a> tests: Disable Tor interaction (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7229">#7229</a> <a href="https://github.com/bitcoin/bitcoin/commit/1ed938b"><code class="highlighter-rouge">1ed938b</code></a> [qa] wallet: Check if maintenance changes the balance (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7308">#7308</a> <a href="https://github.com/bitcoin/bitcoin/commit/d513405"><code class="highlighter-rouge">d513405</code></a> [Tests] Eliminate intermittent failures in sendheaders.py (Suhas Daftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7468">#7468</a> <a href="https://github.com/bitcoin/bitcoin/commit/947c4ff"><code class="highlighter-rouge">947c4ff</code></a> [rpc-tests] Change solve() to use rehash (Brad Andrews)</li>
 </ul>
 
 <h3 id="miscellaneous">Miscellaneous</h3>
 
 <ul>
-  <li>
-    <h1 id="e54ff2f-init-add--blockversion-help-and-extend--upnp-help-diapolo">6213 <code class="highlighter-rouge">e54ff2f</code> [init] add -blockversion help and extend -upnp help (Diapolo)</h1>
-  </li>
-  <li>
-    <h1 id="fea667-consensus-decouple-contextualcheckblockheader-from-checkpoints-jorge-timn">5975 <code class="highlighter-rouge">1fea667</code> Consensus: Decouple ContextualCheckBlockHeader from checkpoints (Jorge Timón)</h1>
-  </li>
-  <li>
-    <h1 id="eba2f06-separate-consensuschecktxinputs-and-getspendheight-in-checkinputs-jorge-timn">6061 <code class="highlighter-rouge">eba2f06</code> Separate Consensus::CheckTxInputs and GetSpendHeight in CheckInputs (Jorge Timón)</h1>
-  </li>
-  <li>
-    <h1 id="ed11-detach-wallet-from-miner-jonas-schnelli">5994 <code class="highlighter-rouge">786ed11</code> detach wallet from miner (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="a5-bitcoin-cli-improve-error-output-jonas-schnelli">6387 <code class="highlighter-rouge">11576a5</code> [bitcoin-cli] improve error output (Jonas Schnelli)</h1>
-  </li>
-  <li>
-    <h1 id="db53b4-add-bitcoindsigtermtimeout-to-openrc-init-scripts-florian-schmaus">6401 <code class="highlighter-rouge">6db53b4</code> Add BITCOIND_SIGTERM_TIMEOUT to OpenRC init scripts (Florian Schmaus)</h1>
-  </li>
-  <li>
-    <h1 id="b01981e-doc-add-documentation-for-shared-library-libbitcoinconsensus-braydon-fuller">6430 <code class="highlighter-rouge">b01981e</code> doc: add documentation for shared library libbitcoinconsensus (Braydon Fuller)</h1>
-  </li>
-  <li>
-    <h1 id="dcc495e-update-linearize-tool-to-support-windows-paths-fix-variable-scope-update-readme-and-example-configuration-paul-georgiou">6372 <code class="highlighter-rouge">dcc495e</code> Update Linearize tool to support Windows paths; fix variable scope; update README and example configuration (Paul Georgiou)</h1>
-  </li>
-  <li>
-    <h1 id="fe5cce-separate-core-memory-usage-computation-in-corememusageh-pieter-wuille">6453 <code class="highlighter-rouge">8fe5cce</code> Separate core memory usage computation in core_memusage.h (Pieter Wuille)</h1>
-  </li>
-  <li>
-    <h1 id="fe10-buffer-log-messages-and-explicitly-open-logs-adam-weiss">6149 <code class="highlighter-rouge">633fe10</code> Buffer log messages and explicitly open logs (Adam Weiss)</h1>
-  </li>
-  <li>
-    <h1 id="cbed7f-avoid-leaking-file-descriptors-in-registerload-casey-rodarmor">6488 <code class="highlighter-rouge">7cbed7f</code> Avoid leaking file descriptors in RegisterLoad (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="a2bf40d-make-sure-logprintf-strings-are-line-terminated-wladimir-j-van-der-laan">6497 <code class="highlighter-rouge">a2bf40d</code> Make sure LogPrintf strings are line-terminated (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b6fee6b-rationalize-currency-unit-to-btc-ross-nicoll">6504 <code class="highlighter-rouge">b6fee6b</code> Rationalize currency unit to “BTC” (Ross Nicoll)</h1>
-  </li>
-  <li>
-    <h1 id="bb4dd8-removed-contribbitrpc-casey-rodarmor">6507 <code class="highlighter-rouge">9bb4dd8</code> Removed contrib/bitrpc (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="d650f-use-unique-name-for-alertnotify-tempfile-casey-rodarmor">6527 <code class="highlighter-rouge">41d650f</code> Use unique name for AlertNotify tempfile (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="e08a7d9-limitedmap-fixes-and-tests-casey-rodarmor">6561 <code class="highlighter-rouge">e08a7d9</code> limitedmap fixes and tests (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="a6f2aff-make-sure-we-re-acquire-lock-if-a-task-throws-casey-rodarmor">6565 <code class="highlighter-rouge">a6f2aff</code> Make sure we re-acquire lock if a task throws (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="f4d88c4-make-sure-logprint-strings-are-line-terminated-ross-nicoll">6599 <code class="highlighter-rouge">f4d88c4</code> Make sure LogPrint strings are line-terminated (Ross Nicoll)</h1>
-  </li>
-  <li>
-    <h1 id="d-replace-boostreverselock-with-our-own-casey-rodarmor">6630 <code class="highlighter-rouge">195942d</code> Replace boost::reverse_lock with our own (Casey Rodarmor)</h1>
-  </li>
-  <li>
-    <h1 id="b8282-add-zeromq-notifications-joo-barbosa">6103 <code class="highlighter-rouge">13b8282</code> Add ZeroMQ notifications (João Barbosa)</h1>
-  </li>
-  <li>
-    <h1 id="d5d1d2e-devtools-dont-push-if-signing-fails-in-github-merge-wladimir-j-van-der-laan">6692 <code class="highlighter-rouge">d5d1d2e</code> devtools: don’t push if signing fails in github-merge (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="b0567b-timedata-prevent-warning-overkill-wladimir-j-van-der-laan">6728 <code class="highlighter-rouge">2b0567b</code> timedata: Prevent warning overkill (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="f6ce59c-sanitizestring-allow-hypen-char-marcofalke">6713 <code class="highlighter-rouge">f6ce59c</code> SanitizeString: Allow hypen char (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="a04-bugfix-fix-testnet-in-a-box-use-case-luke-jr">5987 <code class="highlighter-rouge">4899a04</code> Bugfix: Fix testnet-in-a-box use case (Luke-Jr)</h1>
-  </li>
-  <li>
-    <h1 id="b7d78fd-simple-benchmarking-framework-gavin-andresen">6733 <code class="highlighter-rouge">b7d78fd</code> Simple benchmarking framework (Gavin Andresen)</h1>
-  </li>
-  <li>
-    <h1 id="a092970-devtools-add-security-checkpy-wladimir-j-van-der-laan">6854 <code class="highlighter-rouge">a092970</code> devtools: Add security-check.py (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="fa1d252-devtools-add-clang-formatpy-marcofalke">6790 <code class="highlighter-rouge">fa1d252</code> devtools: add clang-format.py (MarcoFalke)</h1>
-  </li>
-  <li>
-    <h1 id="f3d0fdd-util-dont-set-strmiscwarning-on-every-exception-wladimir-j-van-der-laan">7114 <code class="highlighter-rouge">f3d0fdd</code> util: Don’t set strMiscWarning on every exception (Wladimir J. van der Laan)</h1>
-  </li>
-  <li>
-    <h1 id="e0514-uint256getcheaphash-bigendian-compatibility-arowser">7078 <code class="highlighter-rouge">93e0514</code> uint256::GetCheapHash bigendian compatibility (arowser)</h1>
-  </li>
-  <li>
-    <h1 id="e02e0-assert-now--0-in-gettime-gettimemillis-gettimemicros-patrick-strateman">7094 <code class="highlighter-rouge">34e02e0</code> Assert now &gt; 0 in GetTime GetTimeMillis GetTimeMicros (Patrick Strateman)</h1>
-  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6213">#6213</a> <a href="https://github.com/bitcoin/bitcoin/commit/e54ff2f"><code class="highlighter-rouge">e54ff2f</code></a> [init] add -blockversion help and extend -upnp help (Diapolo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5975">#5975</a> <a href="https://github.com/bitcoin/bitcoin/commit/1fea667"><code class="highlighter-rouge">1fea667</code></a> Consensus: Decouple ContextualCheckBlockHeader from checkpoints (Jorge Timón)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6061">#6061</a> <a href="https://github.com/bitcoin/bitcoin/commit/eba2f06"><code class="highlighter-rouge">eba2f06</code></a> Separate Consensus::CheckTxInputs and GetSpendHeight in CheckInputs (Jorge Timón)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5994">#5994</a> <a href="https://github.com/bitcoin/bitcoin/commit/786ed11"><code class="highlighter-rouge">786ed11</code></a> detach wallet from miner (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6387">#6387</a> <a href="https://github.com/bitcoin/bitcoin/commit/11576a5"><code class="highlighter-rouge">11576a5</code></a> [bitcoin-cli] improve error output (Jonas Schnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6401">#6401</a> <a href="https://github.com/bitcoin/bitcoin/commit/6db53b4"><code class="highlighter-rouge">6db53b4</code></a> Add BITCOIND_SIGTERM_TIMEOUT to OpenRC init scripts (Florian Schmaus)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6430">#6430</a> <a href="https://github.com/bitcoin/bitcoin/commit/b01981e"><code class="highlighter-rouge">b01981e</code></a> doc: add documentation for shared library libbitcoinconsensus (Braydon Fuller)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6372">#6372</a> <a href="https://github.com/bitcoin/bitcoin/commit/dcc495e"><code class="highlighter-rouge">dcc495e</code></a> Update Linearize tool to support Windows paths; fix variable scope; update README and example configuration (Paul Georgiou)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6453">#6453</a> <a href="https://github.com/bitcoin/bitcoin/commit/8fe5cce"><code class="highlighter-rouge">8fe5cce</code></a> Separate core memory usage computation in core_memusage.h (Pieter Wuille)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6149">#6149</a> <a href="https://github.com/bitcoin/bitcoin/commit/633fe10"><code class="highlighter-rouge">633fe10</code></a> Buffer log messages and explicitly open logs (Adam Weiss)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6488">#6488</a> <a href="https://github.com/bitcoin/bitcoin/commit/7cbed7f"><code class="highlighter-rouge">7cbed7f</code></a> Avoid leaking file descriptors in RegisterLoad (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6497">#6497</a> <a href="https://github.com/bitcoin/bitcoin/commit/a2bf40d"><code class="highlighter-rouge">a2bf40d</code></a> Make sure LogPrintf strings are line-terminated (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6504">#6504</a> <a href="https://github.com/bitcoin/bitcoin/commit/b6fee6b"><code class="highlighter-rouge">b6fee6b</code></a> Rationalize currency unit to “BTC” (Ross Nicoll)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6507">#6507</a> <a href="https://github.com/bitcoin/bitcoin/commit/9bb4dd8"><code class="highlighter-rouge">9bb4dd8</code></a> Removed contrib/bitrpc (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6527">#6527</a> <a href="https://github.com/bitcoin/bitcoin/commit/41d650f"><code class="highlighter-rouge">41d650f</code></a> Use unique name for AlertNotify tempfile (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6561">#6561</a> <a href="https://github.com/bitcoin/bitcoin/commit/e08a7d9"><code class="highlighter-rouge">e08a7d9</code></a> limitedmap fixes and tests (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6565">#6565</a> <a href="https://github.com/bitcoin/bitcoin/commit/a6f2aff"><code class="highlighter-rouge">a6f2aff</code></a> Make sure we re-acquire lock if a task throws (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6599">#6599</a> <a href="https://github.com/bitcoin/bitcoin/commit/f4d88c4"><code class="highlighter-rouge">f4d88c4</code></a> Make sure LogPrint strings are line-terminated (Ross Nicoll)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6630">#6630</a> <a href="https://github.com/bitcoin/bitcoin/commit/195942d"><code class="highlighter-rouge">195942d</code></a> Replace boost::reverse_lock with our own (Casey Rodarmor)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6103">#6103</a> <a href="https://github.com/bitcoin/bitcoin/commit/13b8282"><code class="highlighter-rouge">13b8282</code></a> Add ZeroMQ notifications (João Barbosa)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6692">#6692</a> <a href="https://github.com/bitcoin/bitcoin/commit/d5d1d2e"><code class="highlighter-rouge">d5d1d2e</code></a> devtools: don’t push if signing fails in github-merge (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6728">#6728</a> <a href="https://github.com/bitcoin/bitcoin/commit/2b0567b"><code class="highlighter-rouge">2b0567b</code></a> timedata: Prevent warning overkill (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6713">#6713</a> <a href="https://github.com/bitcoin/bitcoin/commit/f6ce59c"><code class="highlighter-rouge">f6ce59c</code></a> SanitizeString: Allow hypen char (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/5987">#5987</a> <a href="https://github.com/bitcoin/bitcoin/commit/4899a04"><code class="highlighter-rouge">4899a04</code></a> Bugfix: Fix testnet-in-a-box use case (Luke-Jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6733">#6733</a> <a href="https://github.com/bitcoin/bitcoin/commit/b7d78fd"><code class="highlighter-rouge">b7d78fd</code></a> Simple benchmarking framework (Gavin Andresen)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6854">#6854</a> <a href="https://github.com/bitcoin/bitcoin/commit/a092970"><code class="highlighter-rouge">a092970</code></a> devtools: Add security-check.py (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/6790">#6790</a> <a href="https://github.com/bitcoin/bitcoin/commit/fa1d252"><code class="highlighter-rouge">fa1d252</code></a> devtools: add clang-format.py (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7114">#7114</a> <a href="https://github.com/bitcoin/bitcoin/commit/f3d0fdd"><code class="highlighter-rouge">f3d0fdd</code></a> util: Don’t set strMiscWarning on every exception (Wladimir J. van der Laan)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7078">#7078</a> <a href="https://github.com/bitcoin/bitcoin/commit/93e0514"><code class="highlighter-rouge">93e0514</code></a> uint256::GetCheapHash bigendian compatibility (arowser)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7094">#7094</a> <a href="https://github.com/bitcoin/bitcoin/commit/34e02e0"><code class="highlighter-rouge">34e02e0</code></a> Assert now &gt; 0 in GetTime GetTimeMillis GetTimeMicros (Patrick Strateman)</li>
 </ul>
 
 <h1 id="credits">Credits</h1>

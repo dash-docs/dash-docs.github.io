@@ -316,7 +316,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 
 <h2 id="definition">Definition</h2>
 
-<p>A Bitcoin payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script.</p>
+<p>A Bitcoin payment <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Bitcoin address.  Currently the most common way users exchange payment information." class="auto-link">address</a> comprising a hashed script, allowing the spender to create a standard <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those satoshis to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> that Pays To <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">Script Hash</a> (P2SH). The script can be almost any valid <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those satoshis to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>.</p>
 
 <h3 id="synonyms">Synonyms</h3>
 
@@ -333,13 +333,13 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 
 <ul>
   <li>
-    <p>P2PK output (an output paying a public key directly)</p>
+    <p>P2PK <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> (an <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> paying a <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> directly)</p>
   </li>
   <li>
-    <p>P2PKH address, P2PKH output (an address comprising a hashed pubkey, and its corresponding output)</p>
+    <p><a href="/en/glossary/p2pkh-address" title="A Bitcoin payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">P2PKH address</a>, <a href="/en/glossary/p2pkh-address" title="A Bitcoin payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">P2PKH output</a> (an <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Bitcoin address.  Currently the most common way users exchange payment information." class="auto-link">address</a> comprising a hashed <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">pubkey</a>, and its corresponding <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a>)</p>
   </li>
   <li>
-    <p>P2SH multisig (a particular instance of P2SH where the script uses a multisig opcode)</p>
+    <p><a href="/en/glossary/p2sh-multisig" title="A P2SH output where the redeem script uses one of the multisig opcodes.  Up until Bitcoin Core 0.10.0, P2SH multisig scripts were standard transactions, but most other P2SH scripts were not." class="auto-link">P2SH multisig</a> (a particular instance of P2SH where the script uses a <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig</a> <a href="/en/glossary/op-code" title="Operation codes from the Bitcoin Script language which push data or perform functions within a pubkey script or signature script." class="auto-link">opcode</a>)</p>
   </li>
 </ul>
 

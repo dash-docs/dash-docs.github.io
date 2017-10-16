@@ -314,7 +314,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 
 <h2 id="definition">Definition</h2>
 
-<p>A signature hash type which signs only the current input.</p>
+<p>A <a href="/en/glossary/signature-hash" title="A flag to Bitcoin signatures that indicates what parts of the transaction the signature signs.  (The default is SIGHASH_ALL.) The unsigned parts of the transaction may be modified." class="auto-link">signature hash</a> type which signs only the current <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>.</p>
 
 <h3 id="synonyms">Synonyms</h3>
 
@@ -325,7 +325,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 <h3 id="not-to-be-confused-with">Not To Be Confused With</h3>
 
 <ul>
-  <li>SIGHASH_SINGLE (which signs this input, its corresponding output, and other inputs partially)</li>
+  <li><a href="/en/glossary/sighash-single" title="Signature hash type that signs the output corresponding to this input (the one with the same index value), this input, and any other inputs partially. Allows modification of other outputs and the sequence number of other inputs." class="auto-link">SIGHASH_SINGLE</a> (which signs this <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>, its corresponding <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a>, and other <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> partially)</li>
 </ul>
 
 <h3 id="links">Links</h3>
