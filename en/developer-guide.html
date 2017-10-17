@@ -391,6 +391,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       </li>
       <li><a href="#misbehaving-nodes" id="markdown-toc-misbehaving-nodes">Misbehaving Nodes</a></li>
       <li><a href="#alerts" id="markdown-toc-alerts">Alerts</a></li>
+      <li><a href="#masternode-sync" id="markdown-toc-masternode-sync">Masternode Sync</a></li>
       <li><a href="#governance" id="markdown-toc-governance">Governance</a>        <ul>
           <li><a href="#synchronization" id="markdown-toc-synchronization">Synchronization</a></li>
         </ul>
@@ -4151,6 +4152,143 @@ next <a href="/en/glossary/block" title="One or more transactions prefaced by a 
 
   <p>Earlier versions of Bitcoin Core allowed developers and trusted community members to issue <a href="https://bitcoin.org/en/alerts">Bitcoin alerts</a> to notify users of critical <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>-wide issues. This messaging system <a href="https://bitcoin.org/en/alert/2016-11-01-alert-retirement">was retired</a> in Bitcoin Core v0.13.0; however, internal alerts, partition detection warnings and the <code class="highlighter-rouge">-alertnotify</code> option features remain.</p>
 
+  <h3 id="masternode-sync">Masternode Sync</h3>
+
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+| <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>Dash Core performs masternode synchronization as required, but it can be started
+manually by issuing the <code class="highlighter-rouge">mnsync reset</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> command.</p>
+
+  <p><em>Masternode Sync Data Flow</em></p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">Node</a> Message</strong></td>
+        <td><strong>Direction</strong></td>
+        <td><strong>Masternode Response</strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td><strong>1. Sporks</strong></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#getsporks" title="A P2P network message used to request the status of sporks" class="auto-link"><code class="highlighter-rouge">getsporks</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests sporks</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#spork" title="A P2P network message used to send the activation status of a spork" class="auto-link"><code class="highlighter-rouge">spork</code> message</a>(s)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td><strong>2. Masternode List</strong></td>
+        <td> </td>
+        <td> </td>
+        <td>Sync Masternode list from other connected clients</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests masternode list</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a></td>
+        <td>Number of entries in masternode list (MASTERNODE_SYNC_LIST)<br /><br />Only sent if requesting entire list</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a>(s) (mnb)</td>
+        <td>MSG_MASTERNODE_ANNOUNCE</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a>(s) (mnp)</td>
+        <td>MSG_MASTERNODE_PING</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>(s) (mnb)</td>
+        <td>→</td>
+        <td> </td>
+        <td>(Optional)</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>(s) (mnp)</td>
+        <td>→</td>
+        <td> </td>
+        <td>(Optional)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a>(s)</td>
+        <td>(If requested) Masternode announce message</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a>(s)</td>
+        <td>(If requested) Masternode ping message</td>
+      </tr>
+      <tr>
+        <td><strong>3. Masternode payments</strong></td>
+        <td> </td>
+        <td> </td>
+        <td>Ask <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> for all payment votes it has (new <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> will only return votes for future payments)</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#mnget" title="A P2P protocol message that requests masternode payment sync" class="auto-link"><code class="highlighter-rouge">mnget</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests masternode payment sync</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a></td>
+        <td>Number of entries in masternode payment list</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a>(s) (mnw)</td>
+        <td>MSG_MASTERNODE_PAYMENT_VOTE</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>(s) (mnw)</td>
+        <td>→</td>
+        <td> </td>
+        <td>(Optional)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#mnw" title="A P2P protocol message used to pick the next winning masternode (payee)" class="auto-link"><code class="highlighter-rouge">mnw</code> message</a>(s)</td>
+        <td>(If requested) Masternode payment vote message</td>
+      </tr>
+      <tr>
+        <td><strong>4. Governance</strong></td>
+        <td> </td>
+        <td> </td>
+        <td>See <a href="#governance">Governance sync</a></td>
+      </tr>
+    </tbody>
+  </table>
+
   <h3 id="governance">Governance</h3>
 
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
@@ -4164,8 +4302,8 @@ next <a href="/en/glossary/block" title="One or more transactions prefaced by a 
 last stage of the Masternode sync process (following the sync of sporks, the
 Masternode list, and Masternode payments).</p>
 
-  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> initiates a sync of the governance system. Masternodes
-respond to the <a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with several items:</p>
+  <p>The <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> initiates a sync of the governance system. Masternodes
+respond to the <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with several items:</p>
 
   <ul>
     <li>
@@ -4182,7 +4320,7 @@ objects.</p>
   <p>Once the syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> receives the counts and <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventories</a>, it may request any
 <code class="highlighter-rouge">govobj</code> and <code class="highlighter-rouge">govobjvote</code> objects from the Masternode via a <a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>.</p>
 
-  <p>Dash Core periodically (~ every 6 seconds) sends <a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> messages</a> to connected
+  <p>Dash Core periodically (~ every 6 seconds) sends <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> messages</a> to connected
 <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> until all the governance objects have been synchronized.</p>
 
   <p><em>Governance Sync Data Flow</em></p>
@@ -4196,7 +4334,7 @@ objects.</p>
         <td><strong>Description</strong></td>
       </tr>
       <tr>
-        <td><a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a></td>
+        <td><a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a></td>
         <td>→</td>
         <td> </td>
         <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> initiates governance sync</td>
@@ -4246,7 +4384,7 @@ objects.</p>
       <tr>
         <td> </td>
         <td>←</td>
-        <td><a href="/en/developer-reference#govobj" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a></td>
+        <td><a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a></td>
         <td>(If requested) Governance object vote</td>
       </tr>
     </tbody>
