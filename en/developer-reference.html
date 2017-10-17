@@ -5448,7 +5448,8 @@ bf110000 ................................... Count: 4543</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The following <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages enable the Governance features built in to Dash.</p>
+  <p>The following <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages enable the Governance features built in to Dash.
+For additional details on the governance system, see this <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585246/Budget+System+Funding+Voting+DGBB">Budget System page</a>.</p>
 
   <p><img src="/img/dev/en-p2p-governance-messages.svg" alt="Overview Of P2P Protocol Governance Request And Reply Messages" /></p>
 
@@ -5458,7 +5459,7 @@ bf110000 ................................... Count: 4543</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> is a governance object that is generally a proposal,
+  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> contains a governance object that is generally a proposal,
 contract, or setting.</p>
 
   <table>
@@ -5600,7 +5601,9 @@ Transaction input
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a> is sent by masternodes to indicate their intention (yes,
-  no, abstain) regarding a governance object.</p>
+no, abstain) regarding a governance object. A sufficient number of yes votes
+results in the proposed funding being payed out in the next superblock (assuming
+their are sufficient funds available in the budget).</p>
 
   <table>
     <thead>
@@ -5625,7 +5628,7 @@ Transaction input
         <td>nParentHash</td>
         <td>uint256</td>
         <td>Required</td>
-        <td>Object which we’re voting on (proposal, contract, setting or final budget)</td>
+        <td>Object (<code class="highlighter-rouge">govobj</code>) being voted on (proposal, contract, setting or final budget)</td>
       </tr>
       <tr>
         <td>4</td>
@@ -5646,7 +5649,7 @@ Transaction input
         <td>nTime</td>
         <td>int64_t</td>
         <td>Required</td>
-        <td>Time which the vote was created</td>
+        <td>Time the vote was created</td>
       </tr>
       <tr>
         <td>66*</td>
@@ -5715,7 +5718,7 @@ dc45e9c09ee0427223e332b52e8d709e
         <td>filter</td>
         <td>CBloomFiter</td>
         <td>Required</td>
-        <td> </td>
+        <td>Only supported since <a href="/en/developer-reference#protocol-versions">protocol version 70206</a></td>
       </tr>
     </tbody>
   </table>

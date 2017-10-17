@@ -4182,6 +4182,9 @@ objects.</p>
   <p>Once the syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> receives the counts and <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventories</a>, it may request any
 <code class="highlighter-rouge">govobj</code> and <code class="highlighter-rouge">govobjvote</code> objects from the Masternode via a <a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>.</p>
 
+  <p>Dash Core periodically (~ every 6 seconds) sends <a href="/en/developer-reference#govobj" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> messages</a> to connected
+<a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> until all the governance objects have been synchronized.</p>
+
   <p><em>Governance Sync Data Flow</em></p>
 
   <table>
