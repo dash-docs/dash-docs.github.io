@@ -4823,7 +4823,13 @@ ece5a95900000000 ..................... Signature Timestamp</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requests either the masternode list or a specific entry.</p>
+  <p>The <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requests either the entire masternode list or a specific
+entry. To request the list of all masternodes, use an empty <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">txIn</a> (<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> of all
+zeros and an index of 0xFFFFFFFF).  To request information about a specific
+masternode, use the unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> associated with that masternode.</p>
+
+  <p>The response to a <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> is an <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a> and an <a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a> from
+the masternode(s) requested.</p>
 
   <table>
     <thead>
@@ -4841,13 +4847,29 @@ ece5a95900000000 ..................... Signature Timestamp</code></pre></figure>
         <td>vin</td>
         <td><a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">txIn</a></td>
         <td>Required</td>
-        <td>The unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> which is holding 1000 DASH</td>
+        <td>Request options:<br /><code class="highlighter-rouge">All Entries</code> - empty <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">txIn</a><br /><code class="highlighter-rouge">Single Entry</code> - Masternode’s unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> which is holding 1000 DASH</td>
       </tr>
     </tbody>
   </table>
 
-  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a>. (The
-<a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">Note: Dash Core only allows nodes to request the entire list every 3 hours.
+Additional requests sent prior to then may result in the node being banned.</code></pre></figure>
+
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requesting <strong>all</strong>
+masternodes. (The <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">Masternode Unspent Output
+| 00000000000000000000000000000000
+| 00000000000000000000000000000000 ......... Outpoint TXID
+| ffffffff ................................. Outpoint index number: 0
+|
+| 00 ....................................... Bytes in sig. script: 0
+| .......................................... Secp256k1 signature: None
+|
+| ffffffff ................................. Sequence number: UINT32_MAX</code></pre></figure>
+
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requesting a specific
+masternode. (The <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">Masternode Unspent Output
 | 7fe33a2901aa654598ae0af572d4fbec
