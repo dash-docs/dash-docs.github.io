@@ -5758,14 +5758,14 @@ request if they are not fully synced.</p>
 
   <ol>
     <li>
-      <p>When a masternode receives a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with a hash of all zeros, it
+      <p>Object Sync - When a masternode receives a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with a hash of all zeros, it
 responds with one <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> for <code class="highlighter-rouge">govobj</code> objects and one for <code class="highlighter-rouge">govobjvote</code>
 objects. The masternode also sends an <a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> (MSG_GOVERNANCE_OBJECT - 0x17)
 for all valid <code class="highlighter-rouge">govobj</code> governance objects.
 <em>Governance object votes are excluded in this type of response.</em></p>
     </li>
     <li>
-      <p>When a masternode receives a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with a specific hash, it
+      <p>Vote Sync - When a masternode receives a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with a specific hash, it
 responds with one <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> for <code class="highlighter-rouge">govobj</code> objects and one for <code class="highlighter-rouge">govobjvote</code>
 objects. The masternode also sends both a <code class="highlighter-rouge">govobj</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> message
 (MSG_GOVERNANCE_OBJECT - 0x17) and <code class="highlighter-rouge">govobjvote</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> messages
@@ -5796,12 +5796,13 @@ objects. The masternode also sends both a <code class="highlighter-rouge">govobj
         <td>filter</td>
         <td>CBloomFiter</td>
         <td>Required</td>
-        <td>Only supported since <a href="/en/developer-reference#protocol-versions">protocol version 70206</a></td>
+        <td>Can be set to all zeros.<br />Only supported since <a href="/en/developer-reference#protocol-versions">protocol version 70206</a></td>
       </tr>
     </tbody>
   </table>
 
-  <p>Note: Both the hash and <a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">bloom filter</a> fields can be set to all zeros.</p>
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">Dash Core limits how frequently the first type of sync (object sync) can be
+requested. Frequent requests will result in the node being banned.</code></pre></figure>
 
   <p>The following annotated hexdump shows a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>. (The
 <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
