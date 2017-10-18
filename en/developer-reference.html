@@ -2150,7 +2150,7 @@ d39f608a7775b537729884d4e6633bb2
 
   <p>The response to a <a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> can be a <a href="/en/developer-reference#tx" title="A P2P protocol message which sends a single serialized transaction" class="auto-link"><code class="highlighter-rouge">tx</code> message</a>, <a href="/en/developer-reference#block" title="The P2P network message which sends a serialized block" class="auto-link"><code class="highlighter-rouge">block</code>
 message</a>, <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a>, <a href="/en/developer-reference#ix" title="A P2P protocol message which sends a single serialized transaction via InstantSend" class="auto-link"><code class="highlighter-rouge">ix</code> message</a>, <a href="/en/developer-reference#txlvote" title="A P2P protocol message which masternodes send in response to an ix (transaction lock request) message if the transaction inputs can be locked." class="auto-link"><code class="highlighter-rouge">txlvote</code> message</a>,
-<a href="/en/developer-reference#mnw" title="A P2P protocol message used to pick the next winning masternode (payee)" class="auto-link"><code class="highlighter-rouge">mnw</code> message</a>, <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a>, <a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a>, <a href="/en/developer-reference#dstx" title="A P2P network message sent by masternodes to broadcast subsidized transactions without fees (provides security in mixing)" class="auto-link"><code class="highlighter-rouge">dstx</code> message</a>, <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>,
+<a href="/en/developer-reference#mnw" title="A P2P protocol message used to pick the next winning masternode (payee)" class="auto-link"><code class="highlighter-rouge">mnw</code> message</a>, <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a>, <a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a>, <a href="/en/developer-reference#dstx" title="A P2P network message sent by masternodes to broadcast subsidized transactions without fees (provides security in mixing)" class="auto-link"><code class="highlighter-rouge">dstx</code> message</a>, <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>,
 <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>, <a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a>, or <a href="/en/developer-reference#notfound" title="A P2P protocol message sent to indicate that the requested data was not available" class="auto-link"><code class="highlighter-rouge">notfound</code> message</a>.</p>
 
   <p>This message cannot be used to request arbitrary data, such as historic
@@ -4823,12 +4823,12 @@ ece5a95900000000 ..................... Signature Timestamp</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requests either the entire masternode list or a specific
+  <p>The <a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requests either the entire masternode list or a specific
 entry. To request the list of all masternodes, use an empty <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">txIn</a> (<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> of all
 zeros and an index of 0xFFFFFFFF).  To request information about a specific
 masternode, use the unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> associated with that masternode.</p>
 
-  <p>The response to a <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> is an <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> and an
+  <p>The response to a <a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> is an <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> and an
 <a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> for each requested masternode. Masternodes ignore this
 request if they are not fully synced.</p>
 
@@ -4856,7 +4856,7 @@ request if they are not fully synced.</p>
   <figure class="highlight"><pre><code class="language-text" data-lang="text">Note: Dash Core only allows nodes to request the entire list every 3 hours.
 Additional requests sent prior to then may result in the node being banned.</code></pre></figure>
 
-  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requesting <strong>all</strong>
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requesting <strong>all</strong>
 masternodes. (The <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">Masternode Unspent Output
@@ -4869,7 +4869,7 @@ masternodes. (The <a href="/en/glossary/message-header" title="The four header f
 |
 | ffffffff ................................. Sequence number: UINT32_MAX</code></pre></figure>
 
-  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requesting a specific
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a> requesting a specific
 masternode. (The <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">Masternode Unspent Output
@@ -5331,10 +5331,10 @@ dd6cc6c11211793b239c2e311f1496e2
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> is used to track the sync status of masternode objects. This
-message is sent in response to sync requests for masternode payments
-(<a href="/en/developer-reference#mnw" title="A P2P protocol message used to pick the next winning masternode (payee)" class="auto-link"><code class="highlighter-rouge">mnw</code> message</a>), masternode list (<a href="/en/developer-reference#mnget" title="A P2P protocol message that requests masternode payment sync" class="auto-link"><code class="highlighter-rouge">mnget</code> message</a>),
-governance objects (<a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>), and governance object votes (<a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>).</p>
+  <p>The <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> is used to track the sync status of masternode objects. This
+message is sent in response to sync requests for the list of masternodes
+(<a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a>), masternode payments (<a href="/en/developer-reference#mnget" title="A P2P protocol message that requests masternode payment sync" class="auto-link"><code class="highlighter-rouge">mnget</code> message</a>), governance objects
+(<a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>), and governance object votes (<a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>).</p>
 
   <table>
     <thead>
@@ -5359,7 +5359,7 @@ governance objects (<a href="/en/developer-reference#govsync" title="A P2P netwo
         <td>nCount</td>
         <td>int</td>
         <td>Required</td>
-        <td>Masternode Sync Count</td>
+        <td>Number of items to sync</td>
       </tr>
     </tbody>
   </table>
@@ -5371,33 +5371,34 @@ governance objects (<a href="/en/developer-reference#govsync" title="A P2P netwo
       <tr>
         <th>ID</th>
         <th>Description</th>
+        <th>Response To</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>2</td>
         <td>MASTERNODE_SYNC_LIST</td>
+        <td><a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a></td>
       </tr>
       <tr>
         <td>3</td>
         <td>MASTERNODE_SYNC_MNW</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>MASTERNODE_SYNC_GOVERNANCE</td>
+        <td><a href="/en/developer-reference#mnget" title="A P2P protocol message that requests masternode payment sync" class="auto-link"><code class="highlighter-rouge">mnget</code> message</a></td>
       </tr>
       <tr>
         <td>10</td>
         <td>MASTERNODE_SYNC_GOVOBJ</td>
+        <td><a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a></td>
       </tr>
       <tr>
         <td>11</td>
         <td>MASTERNODE_SYNC_GOVOBJ_VOTE</td>
+        <td><a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with non-zero hash</td>
       </tr>
     </tbody>
   </table>
 
-  <p>The following annotated hexdump shows a <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a>. (The
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a>. (The
 <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">02000000 ................................... Item ID: MASTERNODE_SYNC_LIST (2)
@@ -5462,14 +5463,16 @@ For additional details on the governance system, see this <a href="https://dashp
 
   <p><img src="/img/dev/en-p2p-governance-messages.svg" alt="Overview Of P2P Protocol Governance Request And Reply Messages" /></p>
 
+  <p>For additional details, refer to the Developer Guide <a href="developer-guide#governance">Governance section</a>.</p>
+
   <h4 id="govobj">govobj</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/ref_p2p_networking.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> contains a governance object that is generally a proposal,
-contract, or setting.</p>
+  <p>The <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> contains a governance object that is generally a proposal,
+contract, or setting. Masternodes ignore this request if they are not fully synced.</p>
 
   <table>
     <thead>
@@ -5570,7 +5573,7 @@ contract, or setting.</p>
     </tbody>
   </table>
 
-  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>. (The
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>. (The
 <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">00000000000000000000000000000000
@@ -5609,10 +5612,22 @@ Transaction input
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a> is sent by masternodes to indicate their intention (yes,
-no, abstain) regarding a governance object. A sufficient number of yes votes
-results in the proposed funding being payed out in the next superblock (assuming
-their are sufficient funds available in the budget).</p>
+  <p>The <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a> is used to indicate the voting status of a governance
+object.  Voting status is comprised of the vote outcome (how the masternode
+voted) and the vote signal (the <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support status). A sufficient number of
+yes votes results in the proposed funding being payed out in the next
+superblock (assuming their are sufficient funds available in the budget).</p>
+
+  <p>The initial <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a> is created by a masternode to vote on a
+governance object (proposal, etc.). When the masternode votes, it broadcasts
+the <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a> to all its <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a>.</p>
+
+  <p>When a <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> receives a valid, <strong>new</strong> <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>, it relays the message
+to all its connected <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a> to propagate the vote.</p>
+
+  <p>Additionally, <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> can request <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> messages</a> for specific governance
+objects via a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>. Masternodes ignore requests for votes if they
+are not fully synced.</p>
 
   <table>
     <thead>
@@ -5670,6 +5685,40 @@ their are sufficient funds available in the budget).</p>
     </tbody>
   </table>
 
+  <p>Governance Object Vote Signals (defined by src/governance-object.h)</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Value</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Funding</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached for this object to be funded (doesn’t mean it will for sure though)</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Valid</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc.)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Delete</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached saying this object should be deleted from the system entirely</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Endorsed</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as endorsed by an elected representative body</td>
+      </tr>
+    </tbody>
+  </table>
+
   <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>. (The
 <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
@@ -5702,22 +5751,25 @@ dc45e9c09ee0427223e332b52e8d709e
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>The <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> is used to request syncing of governance objects
-(<a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> and <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>) with <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a>.</p>
+(<a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> and <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>) with <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a>. Masternodes ignore this
+request if they are not fully synced.</p>
 
-  <p>This message responds in two ways depending on the request:</p>
+  <p>This message responds in one of two ways depending on the request:</p>
 
   <ol>
     <li>
       <p>When a masternode receives a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with a hash of all zeros, it
-responds with a <code class="highlighter-rouge">govobj</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> message (MSG_GOVERNANCE_OBJECT - 0x17) for
-all valid governance objects. Governance object votes are excluded in this type
-of response.</p>
+responds with one <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> for <code class="highlighter-rouge">govobj</code> objects and one for <code class="highlighter-rouge">govobjvote</code>
+objects. The masternode also sends an <a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> (MSG_GOVERNANCE_OBJECT - 0x17)
+for all valid <code class="highlighter-rouge">govobj</code> governance objects.
+<em>Governance object votes are excluded in this type of response.</em></p>
     </li>
     <li>
       <p>When a masternode receives a <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with a specific hash, it
-responds with both a <code class="highlighter-rouge">govobj</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> message (MSG_GOVERNANCE_OBJECT - 0x17)
-and a <code class="highlighter-rouge">govobjvote</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> message (MSG_GOVERNANCE_OBJECT_VOTE - 0x18) for
-the single goverance object requested.</p>
+responds with one <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> for <code class="highlighter-rouge">govobj</code> objects and one for <code class="highlighter-rouge">govobjvote</code>
+objects. The masternode also sends both a <code class="highlighter-rouge">govobj</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> message
+(MSG_GOVERNANCE_OBJECT - 0x17) and <code class="highlighter-rouge">govobjvote</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> messages
+(MSG_GOVERNANCE_OBJECT_VOTE - 0x18) for the single governance object requested.</p>
     </li>
   </ol>
 
@@ -5737,7 +5789,7 @@ the single goverance object requested.</p>
         <td>nHash</td>
         <td>uint256</td>
         <td>Required</td>
-        <td> </td>
+        <td>Hash of governance object to request<br />Set to all zeros to request all objects (excludes votes)</td>
       </tr>
       <tr>
         <td>#</td>

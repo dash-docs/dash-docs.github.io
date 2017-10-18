@@ -4197,7 +4197,7 @@ manually by issuing the <code class="highlighter-rouge">mnsync reset</code> <a h
         <td>Sync Masternode list from other connected clients</td>
       </tr>
       <tr>
-        <td><a href="/en/developer-reference#dseg" title="A P2P network message which requests a masternode list or specific entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a></td>
+        <td><a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> message</a></td>
         <td>→</td>
         <td> </td>
         <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests masternode list</td>
@@ -4205,7 +4205,7 @@ manually by issuing the <code class="highlighter-rouge">mnsync reset</code> <a h
       <tr>
         <td> </td>
         <td>←</td>
-        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a></td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a></td>
         <td>Number of entries in masternode list (MASTERNODE_SYNC_LIST)<br /><br />Only sent if requesting entire list</td>
       </tr>
       <tr>
@@ -4259,7 +4259,7 @@ manually by issuing the <code class="highlighter-rouge">mnsync reset</code> <a h
       <tr>
         <td> </td>
         <td>←</td>
-        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a></td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a></td>
         <td>Number of entries in masternode payment list</td>
       </tr>
       <tr>
@@ -4303,11 +4303,12 @@ last stage of the Masternode sync process (following the sync of sporks, the
 Masternode list, and Masternode payments).</p>
 
   <p>The <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> initiates a sync of the governance system. Masternodes
-respond to the <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with several items:</p>
+ignore this request if they are not fully synced.  Otherwise, they respond to
+the <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with several items:</p>
 
   <ul>
     <li>
-      <p>First, the Masternode sends one <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (Sync Status Count) for <code class="highlighter-rouge">govobj</code>
+      <p>First, the Masternode sends one <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (Sync Status Count) for <code class="highlighter-rouge">govobj</code>
 objects and one for <code class="highlighter-rouge">govobjvote</code> objects. These messages indicate how many
 <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a> items will be sent.</p>
     </li>
@@ -4334,28 +4335,82 @@ objects.</p>
         <td><strong>Description</strong></td>
       </tr>
       <tr>
+        <td><strong>Inital request</strong></td>
+        <td> </td>
+        <td> </td>
+        <td><strong>Requests all governance objects (without votes)</strong></td>
+      </tr>
+      <tr>
         <td><a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a></td>
         <td>→</td>
         <td> </td>
-        <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> initiates governance sync</td>
+        <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> initiates governance sync (hash set to all zeros)</td>
       </tr>
       <tr>
         <td> </td>
         <td>←</td>
-        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (govobj)</td>
-        <td>Number of governance objects</td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (govobj)</td>
+        <td>Number of governance objects (0 or more)</td>
       </tr>
       <tr>
         <td> </td>
         <td>←</td>
-        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (govobjvote)</td>
-        <td>Number of governance object votes</td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (govobjvote)</td>
+        <td>Number of governance object votes <em>(0 since votes are only returned if a specific hash is provided with the <a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a>)</em></td>
       </tr>
       <tr>
         <td> </td>
         <td>←</td>
         <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> (govobj)</td>
         <td>Governance object <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventories</a></td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> (govobj)</td>
+        <td>→</td>
+        <td> </td>
+        <td>(Optional) Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests govobj</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a></td>
+        <td>(If requested) Governance object</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td><strong>Follow up requests</strong></td>
+        <td> </td>
+        <td> </td>
+        <td><strong>Requests governance object (with votes)</strong></td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Syncing <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> requests governance sync for a specific governance object</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (govobj)</td>
+        <td>Number of governance objects (1)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> message</a> (govobjvote)</td>
+        <td>Number of governance object votes (0 or more)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> (govobj)</td>
+        <td>Governance object <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network." class="auto-link">inventory</a></td>
       </tr>
       <tr>
         <td> </td>
@@ -4372,7 +4427,7 @@ objects.</p>
       <tr>
         <td> </td>
         <td>←</td>
-        <td><a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a></td>
+        <td><a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a></td>
         <td>(If requested) Governance object</td>
       </tr>
       <tr>
