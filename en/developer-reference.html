@@ -421,6 +421,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
               <li><a href="#clearbanned" id="markdown-toc-clearbanned">ClearBanned</a></li>
               <li><a href="#createmultisig" id="markdown-toc-createmultisig">CreateMultiSig</a></li>
               <li><a href="#debug" id="markdown-toc-debug">Debug</a></li>
+              <li><a href="#createrawtransaction" id="markdown-toc-createrawtransaction">CreateRawTransaction</a></li>
               <li><a href="#decoderawtransaction" id="markdown-toc-decoderawtransaction">DecodeRawTransaction</a></li>
               <li><a href="#decodescript" id="markdown-toc-decodescript">DecodeScript</a></li>
               <li><a href="#disconnectnode" id="markdown-toc-disconnectnode">DisconnectNode</a></li>
@@ -484,7 +485,22 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
               <li><a href="#getunconfirmedbalance" id="markdown-toc-getunconfirmedbalance">GetUnconfirmedBalance</a></li>
               <li><a href="#getwalletinfo" id="markdown-toc-getwalletinfo">GetWalletInfo</a></li>
               <li><a href="#getwork" id="markdown-toc-getwork">GetWork</a></li>
-              <li><a href="#gobject" id="markdown-toc-gobject">GObject</a></li>
+              <li><a href="#gobject" id="markdown-toc-gobject">GObject</a>                <ul>
+                  <li><a href="#gobject-check" id="markdown-toc-gobject-check">GObject Check</a></li>
+                  <li><a href="#gobject-prepare" id="markdown-toc-gobject-prepare">GObject Prepare</a></li>
+                  <li><a href="#gobject-submit" id="markdown-toc-gobject-submit">GObject Submit</a></li>
+                  <li><a href="#gobject-deserialize" id="markdown-toc-gobject-deserialize">GObject Deserialize</a></li>
+                  <li><a href="#gobject-count" id="markdown-toc-gobject-count">GObject Count</a></li>
+                  <li><a href="#gobject-get" id="markdown-toc-gobject-get">GObject Get</a></li>
+                  <li><a href="#gobject-getvotes" id="markdown-toc-gobject-getvotes">GObject Getvotes</a></li>
+                  <li><a href="#gobject-getcurrentvotes" id="markdown-toc-gobject-getcurrentvotes">GObject Getcurrentvotes</a></li>
+                  <li><a href="#gobject-list" id="markdown-toc-gobject-list">GObject List</a></li>
+                  <li><a href="#gobject-diff" id="markdown-toc-gobject-diff">GObject Diff</a></li>
+                  <li><a href="#gobject-vote-alias" id="markdown-toc-gobject-vote-alias">GObject Vote-alias</a></li>
+                  <li><a href="#gobject-vote-conf" id="markdown-toc-gobject-vote-conf">GObject Vote-conf</a></li>
+                  <li><a href="#gobject-vote-many" id="markdown-toc-gobject-vote-many">GObject Vote-many</a></li>
+                </ul>
+              </li>
               <li><a href="#help" id="markdown-toc-help">Help</a></li>
               <li><a href="#importaddress" id="markdown-toc-importaddress">ImportAddress</a></li>
               <li><a href="#importmulti" id="markdown-toc-importmulti">ImportMulti</a></li>
@@ -5549,7 +5565,8 @@ contract, or setting. Masternodes ignore this request if they are not fully sync
   <table>
     <thead>
       <tr>
-        <th>Object Type</th>
+        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
@@ -5557,18 +5574,22 @@ contract, or setting. Masternodes ignore this request if they are not fully sync
       <tr>
         <td>0</td>
         <td>GOVERNANCE_OBJECT_UNKNOWN</td>
+        <td> </td>
       </tr>
       <tr>
         <td>1</td>
         <td>GOVERNANCE_OBJECT_PROPOSAL</td>
+        <td>Submitted proposal (requires collateral transaction - currently 5 Dash)</td>
       </tr>
       <tr>
         <td>2</td>
         <td>GOVERNANCE_OBJECT_TRIGGER</td>
+        <td>Masternode generated. Removed after activation/execution. Used for superblocks.</td>
       </tr>
       <tr>
         <td>3</td>
         <td>GOVERNANCE_OBJECT_WATCHDOG</td>
+        <td>Masternode generated. Two hour expiration time.</td>
       </tr>
     </tbody>
   </table>
@@ -6320,7 +6341,7 @@ Bitcoin Wiki article for details and example code.</p>
     <li><a href="/en/developer-reference#getgovernanceinfo">GetGovernanceInfo</a>: returns an object containing governance parameters.</li>
     <li><a href="/en/developer-reference#getpoolinfo">GetPoolInfo</a>: returns an object containing mixing pool related information.</li>
     <li><a href="/en/developer-reference#getsuperblockbudget">GetSuperblockBudget</a>: returns the absolute maximum sum of superblock payments allowed.</li>
-    <li><a href="/en/developer-reference#gobject">GObject</a>:</li>
+    <li><a href="/en/developer-reference#gobject">GObject</a>: provides a set of commands for managing governance objects and displaying information about them.</li>
     <li><a href="/en/developer-reference#masternode">Masternode</a>:</li>
     <li><a href="/en/developer-reference#masternodebroadcast">MasternodeBroadcast</a>:</li>
     <li><a href="/en/developer-reference#masternodelist">MasternodeList</a>: returns a list of masternodes in different modes.</li>
@@ -7264,8 +7285,7 @@ one full <a href="/en/glossary/public-key" title="The public portion of a keypai
 
   <p><em>See also: none</em></p>
 
-  <p>__
-##### CreateRawTransaction</p>
+  <h5 id="createrawtransaction">CreateRawTransaction</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/dash-core/rpcs/rpcs/createrawtransaction.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/dash-core/rpcs/rpcs/createrawtransaction.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rpcs/rpcs/createrawtransaction.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/createrawtransaction.md%0A%0A">Report Issue</a>
@@ -7313,7 +7333,7 @@ one full <a href="/en/glossary/public-key" title="The public portion of a keypai
         <td>→ →<br /><code class="highlighter-rouge">Sequence</code></td>
         <td>number (int)</td>
         <td>Optional<br />(0 or 1)</td>
-        <td>NOT IMPLEMENTED IN DASH. The <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a> to use for the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a></td>
+        <td>NOT IMPLEMENTED IN DASH.<br /><br />The <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a> to use for the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a></td>
       </tr>
     </tbody>
   </table>
@@ -11640,7 +11660,7 @@ information, please see the following resources:</p>
   <p><em>See also:</em></p>
 
   <ul>
-    <li><a href="/en/developer-reference#gobject">GObject</a>:</li>
+    <li><a href="/en/developer-reference#gobject">GObject</a>: provides a set of commands for managing governance objects and displaying information about them.</li>
   </ul>
 
   <h5 id="gethashespersec">GetHashesPerSec</h5>
@@ -14920,7 +14940,349 @@ version of Bitcoin Core, use <code class="highlighter-rouge">help getwork</code>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/gobject.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#gobject" class="auto-link"><code class="highlighter-rouge">gobject</code> RPC</a></p>
+  <p>The <a href="/en/developer-reference#gobject" class="auto-link"><code class="highlighter-rouge">gobject</code> RPC</a> provides a set of commands for managing governance objects and displaying information about them.</p>
+
+  <h6 id="gobject-check">GObject Check</h6>
+
+  <h6 id="gobject-prepare">GObject Prepare</h6>
+
+  <h6 id="gobject-submit">GObject Submit</h6>
+
+  <h6 id="gobject-deserialize">GObject Deserialize</h6>
+
+  <h6 id="gobject-count">GObject Count</h6>
+
+  <p>The <code class="highlighter-rouge">gobject count</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> returns the count of governance objects and votes.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—count of governance objects and votes</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The count of governance objects and votes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject count</code></pre></figure>
+
+  <p>Result (wrapped):</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">Governance Objects: 177 (Proposals: 177, Triggers: 0, Watchdogs: 0/0, \
+	Other: 0; Erased: 5), Votes: 9680</code></pre></figure>
+
+  <h6 id="gobject-get">GObject Get</h6>
+
+  <p>The <code class="highlighter-rouge">gobject get</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> returns a governance object by hash.</p>
+
+  <p><em>Parameter #1—object hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">governance-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The hash of a governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—governance object details</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Information about the governance object</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">DataHex</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object info as hex string</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">DataString</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object info as string</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">Hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of this governance object</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">CollateralHash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the collateral payment transaction</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">ObjectType</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object types:<br /><code class="highlighter-rouge">1</code> - Unknown<br /><code class="highlighter-rouge">2</code> - Proposal<br /><code class="highlighter-rouge">3</code> - Trigger<br /><code class="highlighter-rouge">4</code> - Watchdog</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">CreationTime</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object creation time as <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">FundingResult</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Funding vote details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbsoluteYesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes minus number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">YesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">NoCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbstainCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Abstain</code> votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">ValidResult</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object validity vote details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbsoluteYesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes minus number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">YesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">NoCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbstainCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Abstain</code> votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">DeleteResult</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Delete vote details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbsoluteYesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes minus number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">YesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">NoCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbstainCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Abstain</code> votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">EndorsedResult</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Endorsed vote details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbsoluteYesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes minus number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">YesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">NoCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbstainCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Abstain</code> votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fLocalValidity</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Valid by the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">blockchain</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">IsValidReason</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td><code class="highlighter-rouge">fLocalValidity</code> error result. Empty if no error returned.</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedValid</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc)</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedFunding</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached for this object to be funded (doesn’t mean it will be for sure though)</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedDelete</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached saying this object should be deleted from the system entirely</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedEndorsed</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as endorsed</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject get <span class="se">\</span>
+	42253a7bec554b97a65d2889e6cb9a1cf308b3d47a778c704bf9cdc1fe1bf6ff</code></pre></figure>
+
+  <p>Result (wrapped):</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"DataHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a2231353037343339353130222c226e616d65223a227465737470726f706f73616c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353037323530343338222c227061796d656e745f61646472657373223a22795668577955345933756456784d5234464b3333556741534a41436831436835516a222c227061796d656e745f616d6f756e74223a2232222c2273746172745f65706f6368223a2231353037323530343338222c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353037323530343338227d5d5d"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"DataString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[[\"proposal\",{\"end_epoch\":\"1507439510\",\"name\":\"testproposal_-_abcdefghijklmnopqrstuvwxyz01234567891507250438\",\"payment_address\":\"yVhWyU4Y3udVxMR4FK33UgASJACh1Ch5Qj\",\"payment_amount\":\"2\",\"start_epoch\":\"1507250438\",\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1507250438\"}]]"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"Hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42253a7bec554b97a65d2889e6cb9a1cf308b3d47a778c704bf9cdc1fe1bf6ff"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"CollateralHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cb09bd0310c0a67cde9387ad4d8908a7ad9f5d89c5afd58e9332b8bd26a646c7"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"ObjectType"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"CreationTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507246694</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"FundingResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"AbsoluteYesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"YesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"NoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbstainCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"ValidResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"AbsoluteYesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"YesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"NoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbstainCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"DeleteResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"AbsoluteYesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"YesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"NoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbstainCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"EndorsedResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"AbsoluteYesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"YesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"NoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbstainCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"fLocalValidity"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"IsValidReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fCachedValid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fCachedFunding"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fCachedDelete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fCachedEndorsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="gobject-getvotes">GObject Getvotes</h6>
+
+  <h6 id="gobject-getcurrentvotes">GObject Getcurrentvotes</h6>
+
+  <h6 id="gobject-list">GObject List</h6>
+
+  <h6 id="gobject-diff">GObject Diff</h6>
+
+  <h6 id="gobject-vote-alias">GObject Vote-alias</h6>
+
+  <h6 id="gobject-vote-conf">GObject Vote-conf</h6>
+
+  <h6 id="gobject-vote-many">GObject Vote-many</h6>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject</code></pre></figure>
 
