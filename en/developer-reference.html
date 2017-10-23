@@ -3720,7 +3720,8 @@ in the same manner, without the need for a <a href="/en/developer-guide#term-net
   <p>A <a href="/en/developer-reference#spork" title="A P2P network message used to send the activation status of a spork" class="auto-link"><code class="highlighter-rouge">spork</code> message</a> may be sent in response to a <a href="/en/developer-reference#getsporks" title="A P2P network message used to request the status of sporks" class="auto-link"><code class="highlighter-rouge">getsporks</code> message</a>.</p>
 
   <p>The <a href="/en/developer-reference#spork" title="A P2P network message used to send the activation status of a spork" class="auto-link"><code class="highlighter-rouge">spork</code> message</a> tells the receiving <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peer</a> the status of the spork defined by
-the SporkID field.</p>
+the SporkID field. Upon receiving a spork message, the client must verify the
+<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> before accepting the spork message as valid.</p>
 
   <table>
     <thead>
@@ -3755,11 +3756,11 @@ the SporkID field.</p>
         <td>Time the spork value was signed</td>
       </tr>
       <tr>
-        <td>66*</td>
+        <td>66</td>
         <td>vchSig</td>
         <td>char[]</td>
         <td>Required</td>
-        <td>66 bytes in most cases. Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes)</td>
+        <td>Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes)</td>
       </tr>
     </tbody>
   </table>
@@ -3832,6 +3833,53 @@ the SporkID field.</p>
       </tr>
     </tbody>
   </table>
+
+  <p>To verify <code class="highlighter-rouge">vchSig</code>, compare the hard-coded spork <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> (<code class="highlighter-rouge">strSporkPubKey</code>
+from <a href="https://github.com/dashpay/dash/blob/eaf90b77177efbaf9cbed46e822f0d794f1a0ee5/src/chainparams.cpp#L158"><code class="highlighter-rouge">src/chainparams.cpp</code></a>) with the <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> recovered from
+the <a href="/en/developer-reference#spork" title="A P2P network message used to send the activation status of a spork" class="auto-link"><code class="highlighter-rouge">spork</code> message’s</a> hash and <code class="highlighter-rouge">vchSig</code> value (implementation details for Dash
+Core can be found in <code class="highlighter-rouge">CPubKey::RecoverCompact</code>). The hash is a double SHA-256 hash of:</p>
+
+  <ul>
+    <li>The spork <a href="/en/glossary/start-string" title="Four defined bytes which start every message in the Bitcoin P2P protocol to allow seeking to the next message." class="auto-link">magic</a> message (<code class="highlighter-rouge">"DarkCoin Signed Message:\n"</code>)</li>
+    <li>nSporkID</li>
+    <li>nValue</li>
+    <li>nTimeSigned</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th><a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">Network</a></th>
+        <th>Spork <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">Pubkey</a> (wrapped)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="/en/glossary/mainnet" title="The original and main network for Bitcoin transactions, where satoshis have real economic value." class="auto-link">Mainnet</a></td>
+        <td>04549ac134f694c0243f503e8c8a9a986f5de6610049c40b07816809b0d1<br />d06a21b07be27b9bb555931773f62ba6cf35a25fd52f694d4e1106ccd237<br />a7bb899fdd</td>
+      </tr>
+      <tr>
+        <td>Testnet3</td>
+        <td>046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb50<br />1b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f7<br />5e76869f0e</td>
+      </tr>
+      <tr>
+        <td><a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">RegTest</a></td>
+        <td>Undefined</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#spork" title="A P2P network message used to send the activation status of a spork" class="auto-link"><code class="highlighter-rouge">spork</code> message</a>.</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">11270000 .................................... Spork ID: Spork 2 InstantSend enabled (10001)
+0000000000000000 ............................ Value (0)
+2478da5900000000 ............................ Epoch time: 2017-10-08 19:10:28 UTC (1507489828)
+
+1b6762d3e70890b5cfaed5d1fd72121c
+d32020c827a89f8128a00acd210f4ea4
+1b36c26c3767f8a24f48663e189865ed
+403ed1e850cdb4207cdd466419d9d183
+45 .......................................... Masternode Signature</code></pre></figure>
 
   <h4 id="verack">VerAck</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
@@ -3953,7 +4001,7 @@ before initializing its half of the connection by first sending a
         <td>user_agent</td>
         <td>string</td>
         <td>Required if user_agent bytes &gt; 0</td>
-        <td><em>Renamed in <a href="/en/developer-reference#protocol-versions" class="auto-link">protocol version 60000</a>.</em> <br /><br />User agent as defined by <a href="https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki" class="auto-link">BIP14</a>. Previously called subVer.</td>
+        <td><em>Renamed in <a href="/en/developer-reference#protocol-versions" class="auto-link">protocol version 60000</a>.</em> <br /><br />User agent as defined by <a href="https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki" class="auto-link">BIP14</a>. Previously called subVer.<br /><br />Dash Core limits the length to 256 characters.</td>
       </tr>
       <tr>
         <td>4</td>
@@ -5815,7 +5863,7 @@ objects. The masternode also sends both a <code class="highlighter-rouge">govobj
       <tr>
         <td>#</td>
         <td>filter</td>
-        <td>CBloomFiter</td>
+        <td>CBloomFilter</td>
         <td>Required</td>
         <td>Can be set to all zeros.<br />Only supported since <a href="/en/developer-reference#protocol-versions">protocol version 70206</a></td>
       </tr>
