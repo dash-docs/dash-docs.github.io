@@ -3841,9 +3841,7 @@ Core can be found in <code class="highlighter-rouge">CPubKey::RecoverCompact</co
 
   <ul>
     <li>The spork <a href="/en/glossary/start-string" title="Four defined bytes which start every message in the Bitcoin P2P protocol to allow seeking to the next message." class="auto-link">magic</a> message (<code class="highlighter-rouge">"DarkCoin Signed Message:\n"</code>)</li>
-    <li>nSporkID</li>
-    <li>nValue</li>
-    <li>nTimeSigned</li>
+    <li>nSporkID + nValue + nTimeSigned</li>
   </ul>
 
   <table>
@@ -3874,6 +3872,8 @@ Core can be found in <code class="highlighter-rouge">CPubKey::RecoverCompact</co
   <figure class="highlight"><pre><code class="language-text" data-lang="text">11270000 .................................... Spork ID: Spork 2 InstantSend enabled (10001)
 0000000000000000 ............................ Value (0)
 2478da5900000000 ............................ Epoch time: 2017-10-08 19:10:28 UTC (1507489828)
+
+41 .......................................... Signature length: 65
 
 1b6762d3e70890b5cfaed5d1fd72121c
 d32020c827a89f8128a00acd210f4ea4
@@ -5222,7 +5222,9 @@ Masternode Signature
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a> is used to verify masternodes.</p>
+  <p>The <a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a> is used by masternodes to verify each other. Several <a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code>
+messages</a> are exchanged in the process. This results in the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Bitcoin address.  Currently the most common way users exchange payment information." class="auto-link">address</a> of
+masternode 1 being validated as of the provided <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">block height</a>.</p>
 
   <table>
     <thead>
@@ -5254,7 +5256,7 @@ Masternode Signature
         <td>addr</td>
         <td>CService</td>
         <td>Required</td>
-        <td>IPv4 address and port of the masternode</td>
+        <td>IPv4 address and port of masternode 1</td>
       </tr>
       <tr>
         <td>4</td>
@@ -5271,21 +5273,77 @@ Masternode Signature
         <td><a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">Block height</a></td>
       </tr>
       <tr>
-        <td>66*</td>
+        <td>66</td>
         <td>vchSig1</td>
         <td>char[]</td>
-        <td>Required</td>
-        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of this message by masternode 1 - verifiable via pubKeyMasternode (66 bytes in most cases. Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))</td>
+        <td>Required*<br /><br />Added in Step 2</td>
+        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of this message by masternode 1 - verifiable via pubKeyMasternode (Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))<br /><br /></td>
       </tr>
       <tr>
-        <td>66*</td>
+        <td>66</td>
         <td>vchSig2</td>
         <td>char[]</td>
-        <td>Required</td>
-        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of this message by masternode 2 - verifiable via pubKeyMasternode (66 bytes in most cases. Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))</td>
+        <td>Required*<br /><br />Added in Step 3</td>
+        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of this message by masternode 2 - verifiable via pubKeyMasternode (Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))<br /><br /></td>
       </tr>
     </tbody>
   </table>
+
+  <p>Initially, both <code class="highlighter-rouge">vchSig1</code> and <code class="highlighter-rouge">vchSig2</code> are empty. They are updated as the
+exchange of messages between the masternodes occurs as detailed in the table
+below.</p>
+
+  <p><em>Masternode Verify Data Flow</em></p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Step</td>
+        <td><strong>Masternode 2</strong></td>
+        <td><strong>Direction</strong></td>
+        <td><strong>Masternode 1</strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td><strong>Inital request</strong></td>
+        <td> </td>
+        <td> </td>
+        <td><strong><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a> with no <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signatures</a></strong></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Contains <code class="highlighter-rouge">addr</code>, <code class="highlighter-rouge">nonce</code>, and <code class="highlighter-rouge">nBlockHeight</code></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a></td>
+        <td>Add <code class="highlighter-rouge">vchSig1</code> (<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> of the IP address + nonce +hash of the requested <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Verify <code class="highlighter-rouge">vchSig1</code> <br /><br />Add <code class="highlighter-rouge">vchSig2</code> (<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> of the IP address + nonce + hash of the requested <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> + <code class="highlighter-rouge">vin1</code> prevout + <code class="highlighter-rouge">vin2</code> prevout)</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a></td>
+        <td>Verify <code class="highlighter-rouge">vchSig2</code> <br /><br />Relay message to <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a> if valid</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">Note: Dash Core limits how frequently a masternode verify request can be
+requested. Frequent requests will result in the node being banned.</code></pre></figure>
 
   <h4 id="mnw">mnw</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
