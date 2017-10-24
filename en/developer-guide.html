@@ -4152,6 +4152,19 @@ next <a href="/en/glossary/block" title="One or more transactions prefaced by a 
 
   <p>Earlier versions of Bitcoin Core allowed developers and trusted community members to issue <a href="https://bitcoin.org/en/alerts">Bitcoin alerts</a> to notify users of critical <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>-wide issues. This messaging system <a href="https://bitcoin.org/en/alert/2016-11-01-alert-retirement">was retired</a> in Bitcoin Core v0.13.0; however, internal alerts, partition detection warnings and the <code class="highlighter-rouge">-alertnotify</code> option features remain.</p>
 
+  <h3 id="masternode-payment">Masternode Payment</h3>
+
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+| <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>Masternode payment uses a verifiable process to determine which masternode is
+paid in each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. When a new <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> is processed, a quorum of
+<code class="highlighter-rouge">MNPAYMENTS_SIGNATURES_TOTAL</code> (10) masternodes vote on the next masternode
+payee. Each member of the quorum issues a ‘mnw’ message that is relayed to the
+<a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
+
   <h3 id="masternode-sync">Masternode Sync</h3>
 
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
