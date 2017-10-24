@@ -5146,7 +5146,8 @@ requested. Frequent requests will result in the node being banned.</code></pre><
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>The <a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a> is sent by masternodes every few minutes to ping the <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>
-with a message that propagates across the whole <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
+with a message that propagates across the whole <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>. Dash Core currently
+uses a minimum masternode ping time of 10 minutes.</p>
 
   <table>
     <thead>
@@ -5171,7 +5172,7 @@ with a message that propagates across the whole <a href="/en/developer-guide#ter
         <td>blockHash</td>
         <td>uint256</td>
         <td>Required</td>
-        <td>Current chaintip blockhash (minus 12??)</td>
+        <td><a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">Block</a> hash from 12 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> ago (current chaintip minus 12). This offset allows <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> to be slightly out of sync.</td>
       </tr>
       <tr>
         <td>8</td>
@@ -5263,7 +5264,7 @@ masternode 1 being validated as of the provided <a href="/en/glossary/block-heig
         <td>nonce</td>
         <td>int</td>
         <td>Required</td>
-        <td>Nonce</td>
+        <td>Random nonce</td>
       </tr>
       <tr>
         <td>4</td>
@@ -5299,14 +5300,14 @@ below.</p>
     <tbody>
       <tr>
         <td>Step</td>
-        <td><strong>Masternode 2</strong></td>
+        <td><strong>MN 2 (Verifier)</strong></td>
         <td><strong>Direction</strong></td>
-        <td><strong>Masternode 1</strong></td>
+        <td><strong>MN 1 (Being verified)</strong></td>
         <td><strong>Description</strong></td>
       </tr>
       <tr>
         <td> </td>
-        <td><strong>Inital request</strong></td>
+        <td><strong>Verification request</strong></td>
         <td> </td>
         <td> </td>
         <td><strong><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a> with no <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signatures</a></strong></td>
@@ -5323,27 +5324,29 @@ below.</p>
         <td> </td>
         <td>←</td>
         <td><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a></td>
-        <td>Add <code class="highlighter-rouge">vchSig1</code> (<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> of the IP address + nonce +hash of the requested <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>)</td>
+        <td>Add <code class="highlighter-rouge">vchSig1</code> (<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> of the IP address + nonce + hash of the requested <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>)</td>
       </tr>
       <tr>
         <td>3</td>
         <td><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a></td>
         <td>→</td>
         <td> </td>
-        <td>Verify <code class="highlighter-rouge">vchSig1</code> <br /><br />Add <code class="highlighter-rouge">vchSig2</code> (<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> of the IP address + nonce + hash of the requested <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> + <code class="highlighter-rouge">vin1</code> prevout + <code class="highlighter-rouge">vin2</code> prevout)</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td> </td>
-        <td>←</td>
-        <td><a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a></td>
-        <td>Verify <code class="highlighter-rouge">vchSig2</code> <br /><br />Relay message to <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a> if valid</td>
+        <td>Verify <code class="highlighter-rouge">vchSig1</code> <br /><br />Add <code class="highlighter-rouge">vchSig2</code> (<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> of the IP address + nonce + hash of the requested <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> + <code class="highlighter-rouge">vin1</code> prevout + <code class="highlighter-rouge">vin2</code> prevout) and relay message to <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a> if valid</td>
       </tr>
     </tbody>
   </table>
 
-  <figure class="highlight"><pre><code class="language-text" data-lang="text">Note: Dash Core limits how frequently a masternode verify request can be
-requested. Frequent requests will result in the node being banned.</code></pre></figure>
+  <p><a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">Nodes</a> receiving a relayed <a href="/en/developer-reference#mnv" title="A P2P protocol message used to verify masternodes." class="auto-link"><code class="highlighter-rouge">mnv</code> message</a> (one in which both <code class="highlighter-rouge">vchSig1</code> and
+<code class="highlighter-rouge">vchSig2</code> are already present) use it to update the PoSe ban score. If the ban
+score reaches <code class="highlighter-rouge">MASTERNODE_POSE_BAN_MAX_SCORE</code> (5), the masternode will be
+considered malicious and banned.</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">Important Notes:
+* Dash Core limits how frequently a masternode verify request can be
+  requested. Frequent requests will result in the node being banned.
+
+* Only masternodes in the top `MAX_POSE_RANK` (10) can send an `mnv` request
+  (to no more than `MAX_POSE_CONNECTIONS` (10)).</code></pre></figure>
 
   <h4 id="mnw">mnw</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
