@@ -351,12 +351,12 @@ you may want to install the current version of Bitcoin Core, either from
 
   <ul>
     <li>
-      <p><code class="highlighter-rouge">bitcoin-qt</code> provides a combination full Bitcoin <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peer</a> and <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive satoshis." class="auto-link">wallet</a>
+      <p><code class="highlighter-rouge">bitcoin-qt</code> provides a combination full Bitcoin <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> and <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive satoshis." class="auto-link">wallet</a>
 frontend. From the Help menu, you can access a console where you can
 enter the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> commands used throughout this document.</p>
     </li>
     <li>
-      <p><code class="highlighter-rouge">bitcoind</code> is more useful for programming: it provides a full <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peer</a>
+      <p><code class="highlighter-rouge">bitcoind</code> is more useful for programming: it provides a full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a>
 which you can interact with through <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPCs</a> to port 8332 (or 18332
 for <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">testnet</a>).</p>
     </li>
@@ -399,7 +399,7 @@ directory:</p>
 </code></pre>
   </div>
 
-  <p>For development, it’s safer and cheaper to use Bitcoin’s test <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> (<a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">testnet</a>)
+  <p>For development, it’s safer and cheaper to use Bitcoin’s test <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> (<a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">testnet</a>)
 or <a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">regression test mode</a> (<a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">regtest</a>) described below.</p>
 
   <p>Questions about Bitcoin use are best sent to the <a href="https://bitcointalk.org/index.php?board=4.0">BitcoinTalk forum</a> and <a href="https://en.bitcoin.it/wiki/IRC_channels">IRC channels</a>. Errors or suggestions related to
@@ -428,8 +428,8 @@ test their applications with reduced risks and limitations.</p>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>When run with no arguments, all Bitcoin Core programs default to Bitcoin’s main
-<a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> (<a href="/en/glossary/mainnet" title="The original and main network for Bitcoin transactions, where satoshis have real economic value." id="term-mainnet" class="term">mainnet</a>). However, for development,
-it’s safer and cheaper to use Bitcoin’s test <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> (<a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">testnet</a>)
+<a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> (<a href="/en/glossary/mainnet" title="The original and main network for Bitcoin transactions, where satoshis have real economic value." id="term-mainnet" class="term">mainnet</a>). However, for development,
+it’s safer and cheaper to use Bitcoin’s test <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> (<a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">testnet</a>)
 where the satoshis spent have no real-world value. <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">Testnet</a> also relaxes some
 restrictions (such as <a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transaction</a> checks) so you can test functions
 which might currently be disabled by default on <a href="/en/glossary/mainnet" title="The original and main network for Bitcoin transactions, where satoshis have real economic value." class="auto-link">mainnet</a>.</p>
@@ -447,7 +447,7 @@ community, so please don’t abuse it.</p>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>For situations
-where interaction with random <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a> and <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> is unnecessary or
+where interaction with random <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> and <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> is unnecessary or
 unwanted, Bitcoin Core’s <a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">regression test mode</a> (<a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">regtest mode</a>) lets you
 instantly create a brand-new private <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> with the same basic
 rules as <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">testnet</a>—but one major difference: you choose when to create
@@ -790,19 +790,19 @@ we just created does.</p>
 <a href="/en/developer-reference#createrawtransaction" class="auto-link"><code class="highlighter-rouge">createrawtransaction</code></a> and save the returned “hex” raw format signed
 transaction to a shell variable.</p>
 
-  <p>Even though the transaction is now complete, the Bitcoin Core <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> we’re
+  <p>Even though the transaction is now complete, the Bitcoin Core <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> we’re
 connected to doesn’t know anything about the transaction, nor does any
-other part of the <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>. We’ve created a spend, but we haven’t
+other part of the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>. We’ve created a spend, but we haven’t
 actually spent anything because we could simply unset the
 <code class="highlighter-rouge">$SIGNED_RAW_TX</code> variable to eliminate the transaction.</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>bitcoin-cli -regtest sendrawtransaction <span class="nv">$SIGNED_RAW_TX</span>
 c7736a0a0046d5a8cc61c8c3c2821d4d7517f5de2bc66a966011aaa79965ffba</code></pre></figure>
 
-  <p>Send the signed transaction to the connected <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> using the
-<a href="/en/developer-reference#sendrawtransaction" class="auto-link"><code class="highlighter-rouge">sendrawtransaction</code> RPC</a>. After accepting the transaction, the <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>
-would usually then broadcast it to other <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a>, but we’re not currently
-connected to other <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peers</a> because we started in <a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">regtest mode</a>.</p>
+  <p>Send the signed transaction to the connected <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> using the
+<a href="/en/developer-reference#sendrawtransaction" class="auto-link"><code class="highlighter-rouge">sendrawtransaction</code> RPC</a>. After accepting the transaction, the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>
+would usually then broadcast it to other <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>, but we’re not currently
+connected to other <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> because we started in <a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">regtest mode</a>.</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>bitcoin-cli -regtest generate 1
 
@@ -1047,7 +1047,7 @@ signed, the <code class="highlighter-rouge">complete</code> result is <em>true</
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nb">unset </span>PARTLY_SIGNED_RAW_TX RAW_TX NEW_ADDRESS1 <span class="o">[</span>...]</code></pre></figure>
 
   <p>Clean up the shell variables used. Unlike previous subsections, we’re
-not going to send this transaction to the connected <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> with
+not going to send this transaction to the connected <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> with
 <a href="/en/developer-reference#sendrawtransaction" class="auto-link"><code class="highlighter-rouge">sendrawtransaction</code></a>. This will allow us to illustrate in the Offline
 Signing subsection below how to spend a transaction which is not yet in
 the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> or memory pool.</p>
@@ -1059,7 +1059,7 @@ the <a href="/en/glossary/block-chain" title="A chain of blocks with each block 
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>We will now spend the transaction created in the Complex <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Bitcoin Core commands with &quot;raw&quot; in their names." class="auto-link">Raw Transaction</a>
-subsection above without sending it to the local <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> first. This is the
+subsection above without sending it to the local <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> first. This is the
 same basic process used by <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive satoshis." class="auto-link">wallet</a> programs for offline
 signing—which generally means signing a transaction without access
 to the current <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> set.</p>
@@ -1297,8 +1297,8 @@ broadcasts it.</p>
   </div>
 
   <p>Attempt to broadcast the second transaction before we’ve broadcast the
-first transaction.  The <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> rejects this attempt because the second
-transaction spends an <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> which is not a <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> the <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> knows about.</p>
+first transaction.  The <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> rejects this attempt because the second
+transaction spends an <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> which is not a <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> knows about.</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>bitcoin-cli -regtest sendrawtransaction <span class="nv">$OLD_SIGNED_RAW_TX</span>
 682cad881df69cb9df8f0c996ce96ecad758357ded2da03bad40cf18ffbb8e09
@@ -1306,7 +1306,7 @@ transaction spends an <a href="/en/glossary/output" title="An output in a transa
 67d53afa1a8167ca093d30be7fb9dcb8a64a5fdecacec9d93396330c47052c57</code></pre></figure>
 
   <p>Broadcast the first transaction, which succeeds, and then broadcast the
-second transaction—which also now succeeds because the <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> now sees
+second transaction—which also now succeeds because the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> now sees
 the <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a>.</p>
 
   <div class="multicode">
@@ -1322,7 +1322,7 @@ the <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transact
 
   <p>We have once again not generated an additional <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>, so the transactions
 above have not yet become part of the <a href="/en/glossary/regression-test-mode" title="A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value." class="auto-link">regtest</a> <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>.  However, they
-are part of the local <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node’s</a> memory pool.</p>
+are part of the local <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a> memory pool.</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nb">unset </span>OLD_SIGNED_RAW_TX SIGNED_RAW_TX RAW_TX <span class="o">[</span>...]</code></pre></figure>
 
@@ -1667,7 +1667,7 @@ complete.</p>
 430a4cee3a55efb04cbb8718713cab18dea7f2521039aa660ffb5aae14ff3f50</code></pre></figure>
 
   <p>We send the transaction spending the <a href="/en/glossary/p2sh-multisig" title="A P2SH output where the redeem script uses one of the multisig opcodes.  Up until Bitcoin Core 0.10.0, P2SH multisig scripts were standard transactions, but most other P2SH scripts were not." class="auto-link">P2SH multisig output</a> to the local
-<a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>, which accepts it.</p>
+<a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, which accepts it.</p>
 
   <h2 id="payment-processing">Payment Processing</h2>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/example_payment_processing.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/example_payment_processing.md">Edit</a>
@@ -1820,10 +1820,10 @@ your webserver, it will work for your <a href="/en/developer-examples#term-payme
 
   <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">details</span><span class="o">.</span><span class="n">network</span> <span class="o">=</span> <span class="s">"test"</span>  <span class="c">## Default: main</span></code></pre></figure>
 
-  <p><code class="highlighter-rouge">network</code>: (optional) tell the spender’s <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive satoshis." class="auto-link">wallet</a> program what Bitcoin <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> you’re
+  <p><code class="highlighter-rouge">network</code>: (optional) tell the spender’s <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive satoshis." class="auto-link">wallet</a> program what Bitcoin <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> you’re
 using; <a href="https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki" class="auto-link">BIP70</a> defines “main” for <a href="/en/glossary/mainnet" title="The original and main network for Bitcoin transactions, where satoshis have real economic value." class="auto-link">mainnet</a> (actual payments) and “test” for
 <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet." class="auto-link">testnet</a> (like <a href="/en/glossary/mainnet" title="The original and main network for Bitcoin transactions, where satoshis have real economic value." class="auto-link">mainnet</a>, but fake satoshis are used). If the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive satoshis." class="auto-link">wallet</a>
-program doesn’t run on the <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> you indicate, it will reject the
+program doesn’t run on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> you indicate, it will reject the
 <a href="/en/developer-examples#term-paymentrequest" title="The PaymentRequest of the payment protocol which contains and allows signing of the PaymentDetails" class="auto-link">PaymentRequest</a>.</p>
 
   <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">details</span><span class="o">.</span><span class="n">payment_url</span> <span class="o">=</span> <span class="s">"https://example.com/pay.py"</span></code></pre></figure>
@@ -2105,7 +2105,7 @@ Each code <a href="/en/glossary/block" title="One or more transactions prefaced 
   <p>We start by setting some maximum values defined in <a href="https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki" class="auto-link">BIP37</a>: the maximum
 number of bytes allowed in a filter and the maximum number of hash
 functions used to hash each piece of data.  We also set nFlags to zero,
-indicating we don’t want the remote <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> to update the filter for us.
+indicating we don’t want the remote <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> to update the filter for us.
 (We won’t use nFlags again in the sample program, but real programs will
 need to use it.)</p>
 
@@ -2292,9 +2292,9 @@ match failure:</p>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>For the <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a> documentation on the reference page, an
-actual <a href="/en/glossary/merkle-block" title="A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block." class="auto-link">merkle block</a> was retrieved from the <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> and manually
+actual <a href="/en/glossary/merkle-block" title="A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block." class="auto-link">merkle block</a> was retrieved from the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> and manually
 processed.  This section walks through each step of the process,
-demonstrating basic <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> communication and <a href="/en/glossary/merkle-block" title="A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block." class="auto-link">merkle block</a> processing.</p>
+demonstrating basic <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> communication and <a href="/en/glossary/merkle-block" title="A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block." class="auto-link">merkle block</a> processing.</p>
 
   <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
 
@@ -2325,8 +2325,8 @@ demonstrating basic <a href="/en/developer-guide#term-network" title="The Bitcoi
     <span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></code></pre></figure>
 
-  <p>To connect to the P2P <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, the trivial Python function above was
-developed to compute <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Bitcoin P2P network." class="auto-link">message headers</a> and send payloads decoded from hex.</p>
+  <p>To connect to the P2P <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, the trivial Python function above was
+developed to compute <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Dash P2P network." class="auto-link">message headers</a> and send payloads decoded from hex.</p>
 
   <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Create a version message</span>
 <span class="n">send</span><span class="p">(</span><span class="s">"version"</span><span class="p">,</span>
@@ -2345,8 +2345,8 @@ developed to compute <a href="/en/glossary/message-header" title="The four heade
     <span class="o">+</span> <span class="s">"00"</span> <span class="c"># .............................. Relay transactions: false</span>
 <span class="p">)</span></code></pre></figure>
 
-  <p><a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">Peers</a> on the <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a> will not accept any requests until you send them a
-<a href="/en/developer-reference#version" title="A P2P network message sent at the begining of a connection to allow protocol version negotiation" class="auto-link"><code class="highlighter-rouge">version</code> message</a>. The receiving <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> will reply with their <a href="/en/developer-reference#version" title="A P2P network message sent at the begining of a connection to allow protocol version negotiation" class="auto-link"><code class="highlighter-rouge">version</code>
+  <p><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peers</a> on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> will not accept any requests until you send them a
+<a href="/en/developer-reference#version" title="A P2P network message sent at the begining of a connection to allow protocol version negotiation" class="auto-link"><code class="highlighter-rouge">version</code> message</a>. The receiving <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> will reply with their <a href="/en/developer-reference#version" title="A P2P network message sent at the begining of a connection to allow protocol version negotiation" class="auto-link"><code class="highlighter-rouge">version</code>
 message</a> and a <a href="/en/developer-reference#verack" title="A P2P network message sent in reply to a version message to confirm a connection has been established" class="auto-link"><code class="highlighter-rouge">verack</code> message</a>.</p>
 
   <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -2393,7 +2393,7 @@ python get-merkle.py | nc localhost 8333 | hd</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/example_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>In the section above, we retrieved a <a href="/en/glossary/merkle-block" title="A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block." class="auto-link">merkle block</a> from the <a href="/en/developer-guide#term-network" title="The Bitcoin P2P network which broadcasts transactions and blocks" class="auto-link">network</a>; now
+  <p>In the section above, we retrieved a <a href="/en/glossary/merkle-block" title="A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block." class="auto-link">merkle block</a> from the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>; now
 we will parse it. Most of the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block header</a> has been omitted. For
 a more complete hexdump, see the example in the <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs"><code class="highlighter-rouge">merkleblock</code> message
 section</a>.</p>
@@ -2427,55 +2427,55 @@ of transactions in the <a href="/en/glossary/block" title="One or more transacti
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-002.svg" alt="Parsing A MerkleBlock" /></p>
 
   <p>The first flag is a 1 and the <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a> is (as always) a non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a>
-<a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>, so we will need to compute the hash later based on this <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node’s</a>
+<a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, so we will need to compute the hash later based on this <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a>
 children. Accordingly, we descend into the <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root’s</a> left child and
 look at the next flag for instructions.</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-003.svg" alt="Parsing A MerkleBlock" /></p>
 
-  <p>The next flag in the example is a 0 and this is also a non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>, so
-we apply the first hash from the <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a> to this <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>. We
-also don’t process any child <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a>—according to the <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">peer</a> which created
-the <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a>, none of those <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> will lead to <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXIDs</a> of
+  <p>The next flag in the example is a 0 and this is also a non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, so
+we apply the first hash from the <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a> to this <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>. We
+also don’t process any child <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>—according to the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> which created
+the <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a>, none of those <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> will lead to <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXIDs</a> of
 transactions that match our filter, so we don’t need them. We go back up
 to the <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a> and then descend into its right child and look at the
 next (third) flag for instructions.</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-004.svg" alt="Parsing A MerkleBlock" /></p>
 
-  <p>The third flag in the example is another 1 on another non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>, so
+  <p>The third flag in the example is another 1 on another non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, so
 we descend into its left child.</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-005.svg" alt="Parsing A MerkleBlock" /></p>
 
-  <p>The fourth flag is also a 1 on another non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>, so we descend
-again—we will always continue descending until we reach a <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> or
-a non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> with a 0 flag (or we finish filling out the tree).</p>
+  <p>The fourth flag is also a 1 on another non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, so we descend
+again—we will always continue descending until we reach a <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> or
+a non-<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> with a 0 flag (or we finish filling out the tree).</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-006.svg" alt="Parsing A MerkleBlock" /></p>
 
-  <p>Finally, on the fifth flag in the example (a 1), we reach a <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>.
+  <p>Finally, on the fifth flag in the example (a 1), we reach a <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>.
 The 1 flag indicates this <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID’s</a> transaction matches our filter and
-that we should take the next (second) hash and use it as this <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node’s</a>
+that we should take the next (second) hash and use it as this <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a>
 <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a>.</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-007.svg" alt="Parsing A MerkleBlock" /></p>
 
   <p>The sixth flag also applies to a <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a>, but it’s a 0 flag, so this
 <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID’s</a> transaction doesn’t match our filter; still, we take the next
-(third) hash and use it as this <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node’s</a> <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a>.</p>
+(third) hash and use it as this <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a> <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a>.</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-008.svg" alt="Parsing A MerkleBlock" /></p>
 
-  <p>We now have enough information to compute the hash for the fourth <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a>
+  <p>We now have enough information to compute the hash for the fourth <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>
 we encountered—it’s the hash of the concatenated hashes of the two
 <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXIDs</a> we filled out.</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-009.svg" alt="Parsing A MerkleBlock" /></p>
 
-  <p>Moving to the right child of the third <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">node</a> we encountered, we fill it
+  <p>Moving to the right child of the third <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> we encountered, we fill it
 out using the seventh flag and final hash—and discover there are no
-more child <a href="/en/glossary/node" title="A computer that connects to the Bitcoin network." class="auto-link">nodes</a> to process.</p>
+more child <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> to process.</p>
 
   <p><img src="/img/dev/gifs/en-merkleblock-parsing/en-merkleblock-parsing-011.svg" alt="Parsing A MerkleBlock" /></p>
 
