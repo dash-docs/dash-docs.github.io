@@ -5590,8 +5590,8 @@ contract, or setting. Masternodes ignore this request if they are not fully sync
         <td>32</td>
         <td>nCollateralHash</td>
         <td>uint256</td>
-        <td>Required</td>
-        <td>Hash of the collateral fee transaction</td>
+        <td>Required*</td>
+        <td>Hash of the collateral fee transaction for proposals.<br /><br />Set to all zeros for Triggers/Watchdogs.</td>
       </tr>
       <tr>
         <td>0-16384</td>
@@ -5611,15 +5611,15 @@ contract, or setting. Masternodes ignore this request if they are not fully sync
         <td>41</td>
         <td>vinMasternode</td>
         <td>CTxIn</td>
-        <td>Required</td>
-        <td>Unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> for the masternode which is signing this object</td>
+        <td>Required*</td>
+        <td>Unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> for the masternode which is signing this object.<br /><br />Set to all zeros for proposals since they can be created by non-masternodes.</td>
       </tr>
       <tr>
         <td>66*</td>
         <td>vchSig</td>
         <td>char[]</td>
-        <td>Optional</td>
-        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of the masternode (66 bytes in most cases. Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))<br /> Not required by proposal……..</td>
+        <td>Required*</td>
+        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of the masternode (Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))<br /><br />Not required for proposals - they will have a length of 0x00 and no <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a>.</td>
       </tr>
     </tbody>
   </table>
@@ -5637,36 +5637,69 @@ contract, or setting. Masternodes ignore this request if they are not fully sync
     <tbody>
       <tr>
         <td>0</td>
-        <td>GOVERNANCE_OBJECT_UNKNOWN</td>
+        <td><code class="highlighter-rouge">GOVERNANCE_OBJECT_UNKNOWN</code></td>
         <td> </td>
       </tr>
       <tr>
         <td>1</td>
-        <td>GOVERNANCE_OBJECT_PROPOSAL</td>
+        <td><code class="highlighter-rouge">GOVERNANCE_OBJECT_PROPOSAL</code></td>
         <td>Submitted proposal (requires collateral transaction - currently 5 Dash)</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>GOVERNANCE_OBJECT_TRIGGER</td>
+        <td><code class="highlighter-rouge">GOVERNANCE_OBJECT_TRIGGER</code></td>
         <td>Masternode generated. Removed after activation/execution. Used for superblocks.</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>GOVERNANCE_OBJECT_WATCHDOG</td>
+        <td><code class="highlighter-rouge">GOVERNANCE_OBJECT_WATCHDOG</code></td>
         <td>Masternode generated. Two hour expiration time.</td>
       </tr>
     </tbody>
   </table>
 
-  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>. (The
-<a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Dash P2P network." class="auto-link">message header</a> has been omitted.)</p>
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> for a Proposal object.
+Notice the presence of a non-zero collateral hash, a vinMasternode that is an
+empty CTxIn (hash of all zeros, index/sequence of 0xffffffff, no <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a>),
+and no vchSig.
+(The <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Dash P2P network." class="auto-link">message header</a> has been omitted.)</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">00000000000000000000000000000000
+00000000000000000000000000000000 ..... Parent Hash (0 = root)
+01000000 ............................. Revision: 1
+c8dfd65900000000 ..................... Create timestamp: 2017-10-06 01:43:31 UTC
+633611d2f3e7481325242f200c7f3485
+e3a9b4b6301e7f7d18d87d8231f3880b ..... Collateral Hash
+
+Data
+| 3e02 ............................... Data length: 574
+| 356235623232373 ... 376435643564 ... Data (truncated)
+
+01000000 ............................. Object Type: GOVERNANCE_OBJECT_PROPOSAL (1)
+
+Transaction input
+| Previous Output
+| | 00000000000000000000000000000000
+| | 00000000000000000000000000000000 ... Outpoint TXID
+| | ffffffff ........................... Outpoint index number: 0
+| 00 ................................... Script length: 0
+| ...................................... Signature: None
+| ffffffff ............................. Sequence
+
+00 ................................... Signature length: 0
+
+| .................................... Masternode Signature (None required)</code></pre></figure>
+
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a> for a Trigger object.
+Notice the collateral hash of all zeros.
+(The <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Dash P2P network." class="auto-link">message header</a> has been omitted.)</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">00000000000000000000000000000000
 00000000000000000000000000000000 ..... Parent Hash (0 = root)
 01000000 ............................. Revision: 1
 911ea85900000000 ..................... Create timestamp: 2017-08-31 14:34:57 UTC
 00000000000000000000000000000000
-00000000000000000000000000000000 ..... Collateral Hash
+00000000000000000000000000000000 ..... Collateral Hash (None required)
 
 Data
 | ae11 ............................... Data length: 4526
