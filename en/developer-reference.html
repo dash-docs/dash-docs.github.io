@@ -4192,8 +4192,23 @@ DarkSend) coin mixing features built in to Dash.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#dsa" title="A P2P network message used to reply to a P2P network dsq message" class="auto-link"><code class="highlighter-rouge">dsa</code> message</a> replies to a <a href="/en/developer-reference#dsq" title="A P2P network message asking users to sign a final mixing TX messages" class="auto-link"><code class="highlighter-rouge">dsq</code> message</a> and allows the user to join
-a mixing pool.</p>
+  <p>The <a href="/en/developer-reference#dsa" title="A P2P network message used to reply to a P2P network dsq message" class="auto-link"><code class="highlighter-rouge">dsa</code> message</a> allows a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> to join a mixing pool. A collateral fee is
+required and may be forfeited if the client acts maliciously.  The message
+operates in two ways:</p>
+
+  <ol>
+    <li>
+      <p>When sent to a masternode without a current mixing queue, it initiates the
+  start of a new mixing queue</p>
+    </li>
+    <li>
+      <p>When sent to a masternode with a current mixing queue, it attempts to join the
+  existing queue</p>
+    </li>
+  </ol>
+
+  <p>Dash Core starts a new queue ~33% of the time and attempts to join an existing
+queue the remainder of the time.</p>
 
   <table>
     <thead>
@@ -4222,6 +4237,30 @@ a mixing pool.</p>
       </tr>
     </tbody>
   </table>
+
+  <p>The following annotated hexdump shows a <a href="/en/developer-reference#dsa" title="A P2P network message used to reply to a P2P network dsq message" class="auto-link"><code class="highlighter-rouge">dsa</code> message</a>. (The <a href="/en/glossary/message-header" title="The four header fields prefixed to all messages on the Dash P2P network." class="auto-link">message header</a> has
+been omitted.)</p>
+
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">02000000 ................................... Denomination: 1 Dash (2)
+
+Collateral Transaction
+| Previous Output
+| |
+| | 010000000183bd1980c71c38f035db9b
+| | 14d7f934f7d595181b3436e362899026 ....... Outpoint TXID
+| | 19f3f7d3 ............................... Outpoint index number: 3556242201
+|
+| 83 ....................................... Bytes in sig. script: 131
+|
+| 000000006b483045022100f4d8fa0ae4132235fe
+| cd540a62715ccfb1c9a97f8698d066656e30bb1e
+| 1e06b90220301b4cc93f38950a69396ed89dfcc0
+| 8e72ec8e6e7169463592a0bf504946d98b812102
+| fa4b9c0f9e76e06d57c75cab9c8368a62a1ce8db
+| 6eb0c25c3e0719ddd9ab549cffffffff01e09304
+| 00000000001976a914f895 ................... Secp256k1 signature: None
+|
+| 6a4eb0e5 ................................. Sequence number: 3853536874</code></pre></figure>
 
   <h4 id="dsc">dsc</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
@@ -4503,7 +4542,16 @@ the entry <a href="/en/glossary/input" title="An input in a transaction which co
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#dsq" title="A P2P network message asking users to sign a final mixing TX messages" class="auto-link"><code class="highlighter-rouge">dsq</code> message</a> asks users to sign a final mixing TX messages.</p>
+  <p>The <a href="/en/developer-reference#dsq" title="A P2P network message asking users to sign a final mixing TX messages" class="auto-link"><code class="highlighter-rouge">dsq</code> message</a> provides <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> with mixing queue details and notifies them
+when to sign final mixing TX messages.</p>
+
+  <p>If the message indicates the queue is not ready, the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> verifies the message
+is valid. It also verifies that the masternode is not flooding the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> with
+<a href="/en/developer-reference#dsq" title="A P2P network message asking users to sign a final mixing TX messages" class="auto-link"><code class="highlighter-rouge">dsq</code> messages</a> in an attempt to dominate the queuing process. It then relays the
+message to its connected <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>.</p>
+
+  <p>If the message indicates the queue is ready, the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> responds with a <a href="/en/developer-reference#dsi" title="A P2P network message sent as the final mixing transaction in a PrivateSend mixing session" class="auto-link"><code class="highlighter-rouge">dsi</code>
+message</a>.</p>
 
   <table>
     <thead>
@@ -4531,16 +4579,16 @@ the entry <a href="/en/glossary/input" title="An input in a transaction which co
         <td>Unspent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent." class="auto-link">output</a> from masternode which is hosting this session</td>
       </tr>
       <tr>
-        <td>4</td>
+        <td>8</td>
         <td>nTime</td>
-        <td>int</td>
+        <td>int64_t</td>
         <td>Required</td>
         <td>Time this <a href="/en/developer-reference#dsq" title="A P2P network message asking users to sign a final mixing TX messages" class="auto-link"><code class="highlighter-rouge">dsq</code> message</a> was created</td>
       </tr>
       <tr>
-        <td>4</td>
+        <td>1</td>
         <td>fReady</td>
-        <td>int</td>
+        <td>bool</td>
         <td>Required</td>
         <td>Indicates if the mixing pool is ready to be executed</td>
       </tr>
@@ -4549,12 +4597,12 @@ the entry <a href="/en/glossary/input" title="An input in a transaction which co
         <td>vchSig</td>
         <td>char[]</td>
         <td>Required</td>
-        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of this message by masternode verifiable via pubKeyMasternode (66 bytes in most cases. Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))</td>
+        <td><a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> of this message by masternode verifiable via pubKeyMasternode (Length (1 byte) + <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> (65 bytes))</td>
       </tr>
     </tbody>
   </table>
 
-  <p><a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">Denominations</a></p>
+  <p><a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">Denominations</a> (per <a href="https://github.com/dashpay/dash/blob/753b1e486b2757b1dba59998ee477e7ceff04f2d/src/privatesend.cpp#L149-L171"><code class="highlighter-rouge">src/privatesend.cpp</code></a>)</p>
 
   <table>
     <thead>
@@ -4593,11 +4641,10 @@ Masternode Outpoint
 | 1811f08afc51dd485d5322f36c1f04c5 ... Outpoint TXID
 | 01000000 ........................... Outpoint index number: 1
 
-1318a859 ............................. Create Time
+1318a85900000000 ..................... Create Time: 2017-08-31 14:07:15 UTC
 
-00000000 ............................. Ready: 0
+00 ................................... Ready: 0
 
-00 ................................... ???
 41 ................................... Signature length: 65
 
 1bd74386ea4e111197f1b4b4660c1415
