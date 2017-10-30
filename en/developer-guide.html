@@ -391,6 +391,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       </li>
       <li><a href="#misbehaving-nodes" id="markdown-toc-misbehaving-nodes">Misbehaving Nodes</a></li>
       <li><a href="#alerts" id="markdown-toc-alerts">Alerts</a></li>
+      <li><a href="#privatesend" id="markdown-toc-privatesend">PrivateSend</a></li>
       <li><a href="#masternode-payment" id="markdown-toc-masternode-payment">Masternode Payment</a></li>
       <li><a href="#masternode-sync" id="markdown-toc-masternode-sync">Masternode Sync</a></li>
       <li><a href="#governance" id="markdown-toc-governance">Governance</a>        <ul>
@@ -4152,6 +4153,96 @@ next <a href="/en/glossary/block" title="One or more transactions prefaced by a 
   <p><em>Removed in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em></p>
 
   <p>Earlier versions of Bitcoin Core allowed developers and trusted community members to issue <a href="https://bitcoin.org/en/alerts">Bitcoin alerts</a> to notify users of critical <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>-wide issues. This messaging system <a href="https://bitcoin.org/en/alert/2016-11-01-alert-retirement">was retired</a> in Bitcoin Core v0.13.0; however, internal alerts, partition detection warnings and the <code class="highlighter-rouge">-alertnotify</code> option features remain.</p>
+
+  <h3 id="privatesend">PrivateSend</h3>
+
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+| <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>Dash Core’s PrivateSend feature provides a way to improve privacy by performing
+coin-mixing without relinquishing custodial access. For additional details,
+reference this <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146924/PrivateSend">Official Documentation PrivateSend page</a>.</p>
+
+  <p><em>PrivateSend Data Flow</em></p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>PrivateSend Clients</strong></td>
+        <td><strong>Direction</strong></td>
+        <td><strong>Masternode</strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#dsa" title="A P2P network message used to join a mixing pool" class="auto-link"><code class="highlighter-rouge">dsa</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Clients asks to join mixing pool (or have MN start a new one)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#dssu" title="A P2P network message providing a mixing pool status update" class="auto-link"><code class="highlighter-rouge">dssu</code> message</a></td>
+        <td>Masternode provides a mixing pool status update (Typical - State: <code class="highlighter-rouge">POOL_STATE_QUEUE</code>, Message: <code class="highlighter-rouge">MSG_NOERR</code>)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#dsq" title="A P2P network message sent to indicate the queue is ready and the user is expected to send the entry inputs to start mixing" class="auto-link"><code class="highlighter-rouge">dsq</code> message</a></td>
+        <td>Masternode notifies clients when it is ready to mix</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#dsi" title="A P2P network message sending a user's inputs, collateral, and outputs for a mixing session" class="auto-link"><code class="highlighter-rouge">dsi</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Clients each provide a list of their <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> (unsigned) to be mixed, collateral, and a list of <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> where mixed funds should be sent</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#dssu" title="A P2P network message providing a mixing pool status update" class="auto-link"><code class="highlighter-rouge">dssu</code> message</a></td>
+        <td>Masternode provides a mixing pool status update (typical - State: <code class="highlighter-rouge">POOL_STATE_ACCEPTING_ENTRIES</code>, Message: <code class="highlighter-rouge">MSG_ENTRIES_ADDED</code>)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#dsf" title="A P2P network message sent as the final mixing transaction in a session asking users to sign the final mixing TX messages" class="auto-link"><code class="highlighter-rouge">dsf</code> message</a></td>
+        <td>Masternode sends the final transaction containing all clients <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> (unsiged) and all client <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> to each client for verification</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#dssu" title="A P2P network message providing a mixing pool status update" class="auto-link"><code class="highlighter-rouge">dssu</code> message</a></td>
+        <td>Masternode provides a mixing pool status update (Typical - State: <code class="highlighter-rouge">POOL_STATE_SIGNING</code>, Message: <code class="highlighter-rouge">MSG_NOERR</code>)</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#dss" title="A P2P network message which sends the user’s signed inputs for a group transaction in a mixing session" class="auto-link"><code class="highlighter-rouge">dss</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>After verifying the final transaction, clients each sign their own <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> and send them back</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#dsc" title="A P2P network message used to indicates a PrivateSend mixing session is complete" class="auto-link"><code class="highlighter-rouge">dsc</code> message</a></td>
+        <td>Masternode verifies the signed <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a>, creates a <a href="/en/developer-reference#dstx" title="A P2P network message sent by masternodes to broadcast subsidized transactions without fees (provides security in mixing)" class="auto-link"><code class="highlighter-rouge">dstx</code> message</a> to broadcast the transaction, and notifies clients that the mixing transaction is complete (Typical - Message: <code class="highlighter-rouge">MSG_SUCCESS</code>)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a></td>
+        <td>Masternode broadcasts a <code class="highlighter-rouge">dstx</code> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventory</a> message</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> (dstx)</td>
+        <td>→</td>
+        <td> </td>
+        <td>(Optional)</td>
+      </tr>
+    </tbody>
+  </table>
 
   <h3 id="masternode-payment">Masternode Payment</h3>
 
