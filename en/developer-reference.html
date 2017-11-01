@@ -15377,11 +15377,558 @@ version of Bitcoin Core, use <code class="highlighter-rouge">help getwork</code>
 
   <h6 id="gobject-check">GObject Check</h6>
 
+  <p>The <code class="highlighter-rouge">gobject check</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> validates governance object data (<em>proposals only</em>).</p>
+
+  <p><em>Parameter #1—object data (hex)</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">data-hex</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The data (hex) of a governance proposal object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—governance object status</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object containing status</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">Object Status</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Status of the governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject check 5b5b2270726f706f73616c222c7b22656e645f65706f<span class="se">\</span>
+6368223a2231353037343534383935222c226e616d65223a227465737470726f706f73616c5f<span class="se">\</span>
+2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a30313233343536373839<span class="se">\</span>
+31353037323635383233222c227061796d656e745f61646472657373223a2279664e68484c4c<span class="se">\</span>
+695936577a5a646a51766137324a64395134313468516578514c68222c227061796d656e745f<span class="se">\</span>
+616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<span class="se">\</span>
+2c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472<span class="se">\</span>
+616c2e6f72672f702f746573745f70726f706f73616c5f31353037323635383233227d5d5d</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"Object status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
   <h6 id="gobject-prepare">GObject Prepare</h6>
+
+  <p>The <code class="highlighter-rouge">gobject prepare</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prepares a governance object by signing and creating a collateral transaction.</p>
+
+  <p><em>Parameter #1—parent hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">parent-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the parent object. Usually the root <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> which has a hash of 0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—revision</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">revision</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object revision number</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3—time</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">time</code></td>
+        <td>int64_t</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Create time</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #4—data</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">data</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object data (JSON object with governance details)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—collateral transaction ID</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Transaction ID for the collateral transaction</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">gobject prepare 0 1 1509548445 5b5b2270726f706f73616c222c7b22656e645f65706f6<span class="se">\</span>
+368223a313530393638303337392c226e616d65223a22746573742d70726f706f73616c2d646<span class="se">\</span>
+173682d646f6373222c227061796d656e745f61646472657373223a2279554b447a353950745<span class="se">\</span>
+0577348596b56346537424337416263454c72346a52787371222c227061796d656e745f616d6<span class="se">\</span>
+f756e74223a32302c2273746172745f65706f6368223a313530393637363831342c227479706<span class="se">\</span>
+5223a312c2275726c223a2268747470733a2f2f646173682d646f63732e746573742f7465737<span class="se">\</span>
+4227d5d5d</code></pre></figure>
+
+  <p>Result (Collateral Transaction ID):</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">061ec99eb641ffdeaa05a1a724a255103bebc445b15c6c8c028b19c08608496b</code></pre></figure>
 
   <h6 id="gobject-submit">GObject Submit</h6>
 
+  <p>The <code class="highlighter-rouge">gobject submit</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> submits a governance object to <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> (objects must first be prepared via <code class="highlighter-rouge">gobject prepare</code>).</p>
+
+  <p><em>Parameter #1—parent hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">parent-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the parent object. Usually the root <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> which has a hash of 0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—revision</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">revision</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object revision number</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3—time</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">time</code></td>
+        <td>int64_t</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Create time</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #4—data</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">data</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object data (JSON object with governance details)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #5—transaction ID</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">data</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Collateral transaction ID</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—governance object hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object hash</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">gobject submit 0 1 1509548445 5b5b2270726f706f73616c222c7b22656e645f65706f6<span class="se">\</span>
+368223a313530393638303337392c226e616d65223a22746573742d70726f706f73616c2d646<span class="se">\</span>
+173682d646f6373222c227061796d656e745f61646472657373223a2279554b447a353950745<span class="se">\</span>
+0577348596b56346537424337416263454c72346a52787371222c227061796d656e745f616d6<span class="se">\</span>
+f756e74223a32302c2273746172745f65706f6368223a313530393637363831342c227479706<span class="se">\</span>
+5223a312c2275726c223a2268747470733a2f2f646173682d646f63732e746573742f7465737<span class="se">\</span>
+4227d5d5d 061ec99eb641ffdeaa05a1a724a255103bebc445b15c6c8c028b19c08608496b</code></pre></figure>
+
+  <p>Result (Governance Object Hash):</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">75e991c86ed5a50305e315e00c9a95fc74841bd97d58391071edc9ff206a0d3c</code></pre></figure>
+
   <h6 id="gobject-deserialize">GObject Deserialize</h6>
+
+  <p>The <code class="highlighter-rouge">gobject deserialize</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> deserializes a governance object from a hex string to JSON.</p>
+
+  <p><em>Parameter #1—object data (hex)</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">data-hex</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The data (hex) of a governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Results</strong></p>
+
+  <p>The result output varies depending on the type of governance object being
+deserialized. Examples are shown below for both proposal and trigger object types.</p>
+
+  <p><strong>Result - Proposal</strong></p>
+
+  <p><em>Result—governance proposal object deserialized to JSON</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Array of governance objects</td>
+      </tr>
+      <tr>
+        <td>→<br />Object</td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal object</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">end_epoch</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object info as string</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">name</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal name</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">payment_address</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal payment <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a></td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">payment_amount</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal payment amount</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">start_epoch</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal start</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">type</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object type</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">url</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal URL</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject deserialize 5b5b2270726f706f73616c222c7b22656e645f6<span class="se">\</span>
+5706f6368223a2231353037343534383935222c226e616d65223a227465737470726f706f7361<span class="se">\</span>
+6c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a30313233343536373<span class="se">\</span>
+83931353037323635383233222c227061796d656e745f61646472657373223a2279664e68484c<span class="se">\</span>
+4c695936577a5a646a51766137324a64395134313468516578514c68222c227061796d656e745<span class="se">\</span>
+f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<span class="se">\</span>
+2c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e74726<span class="se">\</span>
+16c2e6f72672f702f746573745f70726f706f73616c5f31353037323635383233227d5d5d</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+  </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"proposal"</span><span class="p">,</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"end_epoch"</span><span class="p">:</span><span class="s2">"1507454895"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"testproposal_-_abcdefghijklmnopqrstuvwxyz01234567891507265823"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"payment_address"</span><span class="p">:</span><span class="s2">"yfNhHLLiY6WzZdjQva72Jd9Q414hQexQLh"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"payment_amount"</span><span class="p">:</span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"start_epoch"</span><span class="p">:</span><span class="s2">"1507265823"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"https://www.dashcentral.org/p/test_proposal_1507265823"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+  <p><strong>Result - Trigger</strong></p>
+
+  <p><em>Result—governance trigger object deserialized to JSON</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Array of governance objects</td>
+      </tr>
+      <tr>
+        <td>→<br />Object</td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Trigger object</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">event_block_height</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td><a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">Block height</a> to activate trigger</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">payment_addresses</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal payment <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a></td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">payment_amounts</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal payment amount</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">proposal_hashes</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Proposal hashes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">type</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object type</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject deserialize 5b5b2274726967676572222c207b226576656e7<span class="se">\</span>
+45f626c6f636b5f686569676874223a2031383435362c20227061796d656e745f616464726573<span class="se">\</span>
+736573223a20227952465968665a4a4258567a3861696850365a7166714174374245316256644<span class="se">\</span>
+676567c79544c795070554668696768355270787a72695a6362474c5972527836687959455022<span class="se">\</span>
+2c20227061796d656e745f616d6f756e7473223a2022322e31323334353637387c322e3030303<span class="se">\</span>
+030303030222c202270726f706f73616c5f686173686573223a20223632623161336564633938<span class="se">\</span>
+37626432313134636439323263336339376166643039383339353534313862313730316330666<span class="se">\</span>
+131353262616662386131313735667c3138376337353166653631336434386139623331316161<span class="se">\</span>
+34383833383635666166396234336333623931333433333438326636636632343763313835656<span class="se">\</span>
+13037222c202274797065223a20327d5d5d</code></pre></figure>
+
+  <p>Result (wrapped):</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">  
+  </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"trigger"</span><span class="p">,</span><span class="w">
+    </span><span class="p">{</span><span class="w">  
+      </span><span class="nt">"event_block_height"</span><span class="p">:</span><span class="mi">18456</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"payment_addresses"</span><span class="p">:</span><span class="s2">"yRFYhfZJBXVz8aihP6ZqfqAt7BE1bVdFvV\
+        |yTLyPpUFhigh5RpxzriZcbGLYrRx6hyYEP"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"payment_amounts"</span><span class="p">:</span><span class="s2">"2.12345678|2.00000000"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"proposal_hashes"</span><span class="p">:</span><span class="s2">"62b1a3edc987bd2114cd922c3c97afd0983955418b1701c0fa\
+        152bafb8a1175f|187c751fe613d48a9b311aa4883865faf9b43c3b913433482f6c\
+        f247c185ea07"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="mi">2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
 
   <h6 id="gobject-count">GObject Count</h6>
 
@@ -15705,11 +16252,285 @@ version of Bitcoin Core, use <code class="highlighter-rouge">help getwork</code>
 
   <h6 id="gobject-getvotes">GObject Getvotes</h6>
 
+  <p>The <code class="highlighter-rouge">gobject getvotes</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> gets all votes for a governance object hash (including old votes).</p>
+
+  <p><em>Parameter #1—object hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">governance-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The hash of a governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—votes for specified governance</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The governance object votes</td>
+      </tr>
+      <tr>
+        <td>→<br />Vote Info</td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Key: vote-hash<br /><br />Value: vinMasternode, time, outcome, and signal of the vote</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject getvotes 78941af577f639ac94440e4855a1ed8f<span class="se">\</span>
+  696f1506d1c0bed4f4b68f05be26d3ca</code></pre></figure>
+
+  <p>Result (truncated):</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"174aaba65982d25a23f437e2a66ec3836146ba7b7ce5b3fe2d5476907f7079d9"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(2eab488e3a7b030303de0d18e357ce17a9fc6b8876705d61076bbe923b2e5fc8, 1), scriptSig=):1509354047:YES:DELETE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"216cbc42addec1a6b83e1f2b0b3779594bd879f5671dd76a9826cc690c68286d"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(b0320c1eff10ccb5e26086017a09e77dacb30fdcafccb3d98db3e5b610b9f1bd, 1), scriptSig=):1509117256:YES:DELETE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"aa4dc9d3b9e74e8c1ffc725b737d07f8a32e43c64907e4bea19e64a86135f08a"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(af9f5646ace92f76b3a01b0abe08716a0a7ded64074c2d2e712c93174b9013d1, 1), scriptSig=):1508866932:YES:FUNDING"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"73dd135ea7bece0f2047de75d8ca04f2985daebed9568d28ee58a60a12a2a082"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(8e3fee7f668fed7019588be616225c6c4762ee632470878b2dc8eae3f0b3f67d, 1), scriptSig=):1508866932:YES:FUNDING"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"d13b9c5c28bbc8684a7291961a1023abbbe65b534804d0629fb44166cc1a6148"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(08b2dbffd61d927bc12c20f6853513f41fbf7737446632b13c7ca0df8c6da282, 1), scriptSig=):1508866932:YES:FUNDING"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"8a4283d457d8635b43c6fa6cbf865813a80d965c777e8ba07364eb6468200ae1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(76c40abd280441b75577e99e9e4f253f9281a7deb4feebff83860f9cede7a09b, 1), scriptSig=):1508866932:YES:FUNDING"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"313e19607813cb0db3b3fb477982b4d3418f13f8511295419df8fe1f7ff6668f"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(0fd502f28b9a9a256d9ba29a047c375fe2823b6e76e4853af16e079a709ab72a, 1), scriptSig=):1508866932:YES:FUNDING"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
   <h6 id="gobject-getcurrentvotes">GObject Getcurrentvotes</h6>
+
+  <p>The <code class="highlighter-rouge">gobject getcurrentvotes</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> gets only current (tallying) votes for a governance object hash (does not include old votes).</p>
+
+  <p><em>Parameter #1—object hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">governance-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The hash of a governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—votes for specified governance</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The governance object votes</td>
+      </tr>
+      <tr>
+        <td>→<br />Vote Info</td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Key: vote-hash<br /><br />Value: vinMasternode, time, outcome, and signal of the vote</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject getcurrentvotes 78941af577f639ac94440e4855a1ed8f<span class="se">\</span>
+  696f1506d1c0bed4f4b68f05be26d3ca</code></pre></figure>
+
+  <p>Result (truncated):</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"174aaba65982d25a23f437e2a66ec3836146ba7b7ce5b3fe2d5476907f7079d9"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(2eab488e3a7b030303de0d18e357ce17a9fc6b8876705d61076bbe923b2e5fc8, 1), scriptSig=):1509354047:YES:DELETE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"444d4d871ec35479804f060c733f516908382642ec2dfce6044a59fcadfdcd60"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(18e496fe85b61ac9a5fcaec1ef683c7e3fc9bce4a83c883608427ecfb1002fca, 1), scriptSig=):1508866932:YES:FUNDING"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"d49a472c62e9d8105931829fc50ef6c6ce04a230507646ee0eaa615e863ef3a0"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(18e496fe85b61ac9a5fcaec1ef683c7e3fc9bce4a83c883608427ecfb1002fca, 1), scriptSig=):1509117071:YES:DELETE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"78442507441d4524d2493b8568d130415c1eb394adb2fe38d6ffeb199115bc5d"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(3df7fb192e21c34da99bdd10c34e58ecaf3f3c37d6b2289f0ffedba5050188cc, 1), scriptSig=):1509312524:YES:DELETE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"aa4dc9d3b9e74e8c1ffc725b737d07f8a32e43c64907e4bea19e64a86135f08a"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CTxIn(COutPoint(af9f5646ace92f76b3a01b0abe08716a0a7ded64074c2d2e712c93174b9013d1, 1), scriptSig=):1508866932:YES:FUNDING"</span><span class="p">,</span><span class="w">
+</span><span class="err">}</span></code></pre></figure>
 
   <h6 id="gobject-list">GObject List</h6>
 
+  <p>The <code class="highlighter-rouge">gobject list</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> Lists governance objects (can be filtered by signal and/or object type).</p>
+
+  <p><em>Parameter #1—signal</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">signal</code></td>
+        <td>string (hex)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>Type of governance object signal: <br />• <code class="highlighter-rouge">valid</code><br />• <code class="highlighter-rouge">funding</code><br />• <code class="highlighter-rouge">delete</code><br />• <code class="highlighter-rouge">endorsed</code><br />• <code class="highlighter-rouge">all</code> (<em>DEFAULT</em>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—type</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">type</code></td>
+        <td>string (hex)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>Type of governance object signal: <br />• <code class="highlighter-rouge">proposals</code><br />• <code class="highlighter-rouge">triggers</code><br />• <code class="highlighter-rouge">watchdogs</code><br />• <code class="highlighter-rouge">all</code> (<em>DEFAULT</em>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject list all proposals</code></pre></figure>
+
+  <p>Result (truncated):</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"b370fa1afd61aca9aa879abea3087e29656a670478f281d4196efb4e7e893ffe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"DataHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a2231353037343430303338222c226e616d65223a227465737470726f706f73616c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353037323530393636222c227061796d656e745f61646472657373223a2279544c636f506d4e315963654432534345474d6b6e34395753565a4277626f646e6e222c227061796d656e745f616d6f756e74223a2232222c2273746172745f65706f6368223a2231353037323530393636222c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353037323530393636227d5d5d"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DataString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[[\"proposal\",{\"end_epoch\":\"1507440038\",\"name\":\"testproposal_-_abcdefghijklmnopqrstuvwxyz01234567891507250966\",\"payment_address\":\"yTLcoPmN1YceD2SCEGMkn49WSVZBwbodnn\",\"payment_amount\":\"2\",\"start_epoch\":\"1507250966\",\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1507250966\"}]]"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b370fa1afd61aca9aa879abea3087e29656a670478f281d4196efb4e7e893ffe"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"CollateralHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a51ea89c14735f8b5df37cd846b3561494cc616d4a741e4ef83b368d45c960ba"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ObjectType"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"CreationTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507250966</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbsoluteYesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"YesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"NoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbstainCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fBlockchainValidity"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"IsValidReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedValid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedFunding"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedDelete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedEndorsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"906ae4dbd285e1025832ac9b3160073ecbfeef094d34cf81b3d797a349c720ff"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"DataHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a2231353037343534383935222c226e616d65223a227465737470726f706f73616c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353037323635383233222c227061796d656e745f61646472657373223a2279664e68484c4c695936577a5a646a51766137324a64395134313468516578514c68222c227061796d656e745f616d6f756e74223a2232222c2273746172745f65706f6368223a2231353037323635383233222c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353037323635383233227d5d5d"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DataString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[[\"proposal\",{\"end_epoch\":\"1507454895\",\"name\":\"testproposal_-_abcdefghijklmnopqrstuvwxyz01234567891507265823\",\"payment_address\":\"yfNhHLLiY6WzZdjQva72Jd9Q414hQexQLh\",\"payment_amount\":\"2\",\"start_epoch\":\"1507265823\",\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1507265823\"}]]"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"906ae4dbd285e1025832ac9b3160073ecbfeef094d34cf81b3d797a349c720ff"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"CollateralHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1707470c4372ba048b72945365b4bb71afc8a986e0755c1f1e8a37bba21fde83"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ObjectType"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"CreationTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507265823</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbsoluteYesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"YesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"NoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbstainCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fBlockchainValidity"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"IsValidReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedValid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedFunding"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedDelete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedEndorsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
   <h6 id="gobject-diff">GObject Diff</h6>
+
+  <p>The <code class="highlighter-rouge">gobject diff</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> Lists governance objects differences since last diff.</p>
+
+  <p><em>Parameter #1—signal</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">signal</code></td>
+        <td>string (hex)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>Type of governance object signal: <br />• <code class="highlighter-rouge">valid</code><br />• <code class="highlighter-rouge">funding</code><br />• <code class="highlighter-rouge">delete</code><br />• <code class="highlighter-rouge">endorsed</code><br />• <code class="highlighter-rouge">all</code> (<em>DEFAULT</em>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—type</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">type</code></td>
+        <td>string (hex)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>Type of governance object signal: <br />• <code class="highlighter-rouge">proposals</code><br />• <code class="highlighter-rouge">triggers</code><br />• <code class="highlighter-rouge">watchdogs</code><br />• <code class="highlighter-rouge">all</code> (<em>DEFAULT</em>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject diff all all</code></pre></figure>
+
+  <p>Result (truncated):</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
   <h6 id="gobject-vote-alias">GObject Vote-alias</h6>
 
