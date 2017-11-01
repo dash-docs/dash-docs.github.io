@@ -6831,7 +6831,7 @@ Bitcoin Wiki article for details and example code.</p>
     <li><a href="/en/developer-reference#decoderawtransaction">DecodeRawTransaction</a>: decodes a <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> hex string into a JSON object describing the transaction. <em><abbr title="Updated in Bitcoin Core v0.13.0">Updated in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#decodescript">DecodeScript</a>: decodes a hex-encoded P2SH <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a>.</li>
     <li><a href="/en/developer-reference#fundrawtransaction">FundRawTransaction</a>: adds <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> to a transaction until it has enough in value to meet its out value. <em><abbr title="New in Bitcoin Core v0.12.0">New in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></abbr></em>, <strong><abbr title="Updated in Bitcoin Core v0.14.0">Updated in <a href="/en/release/v0.14.0" class="auto-link">Bitcoin Core 0.14.0</a></abbr></strong></li>
-    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Bitcoin Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Bitcoin Core startup settings. <strong><abbr title="Updated in Bitcoin Core v0.14.0">Updated in <a href="/en/release/v0.14.0" class="auto-link">Bitcoin Core 0.14.0</a></abbr></strong></li>
+    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Dash Core startup settings. <strong><abbr title="Updated in Bitcoin Core v0.14.0">Updated in <a href="/en/release/v0.14.0" class="auto-link">Bitcoin Core 0.14.0</a></abbr></strong></li>
     <li><a href="/en/developer-reference#sendrawtransaction">SendRawTransaction</a>: validates a transaction and broadcasts it to the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">peer-to-peer network</a>.</li>
     <li><a href="/en/developer-reference#signrawtransaction">SignRawTransaction</a>: signs a transaction in the <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> format using <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> stored in the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> or provided in the call.</li>
   </ul>
@@ -7651,24 +7651,24 @@ if the <a href="/en/glossary/wallet" title="Software that stores private keys an
     </tbody>
   </table>
 
-  <p><em>Example from <a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a></em></p>
+  <p><em>Example from Dash Core 0.12.2</em></p>
 
   <p>Creating a 2-of-3 <a href="/en/glossary/p2sh-multisig" title="A P2SH output where the redeem script uses one of the multisig opcodes.  Up until Bitcoin Core 0.10.0, P2SH multisig scripts were standard transactions, but most other P2SH scripts were not." class="auto-link">P2SH multisig</a> <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> by mixing two <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">P2PKH addresses</a> and
 one full <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a>:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli -testnet createmultisig 2 <span class="s1">'''
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet createmultisig 2 <span class="s1">'''
   [
-    "mjbLRSidW1MY8oubvs4SMEnHNFXxCcoehQ",
-    "02ecd2d250a76d204011de6bc365a56033b9b3a149f679bc17205555d3c2b2854f",
-    "mt17cV37fBqZsnMmrHnGCm9pM28R1kQdMG"
+    "yNpezfFDfoikDuT1f4iK75AiLp2YLPsGAb",
+    "0311f97539724e0de38fb1ff79f5148e5202459d06ed07193ab18c730274fd0d88",
+    "yVJj7TB3ZhMcSP2wo65ZFNqy23BQH9tT87"
   ]
 '''</span></code></pre></figure>
 
   <p>Result:</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2MyVxxgNBk5zHRPRY2iVjGRJHYZEp1pMCSq"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"redeemScript"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"522103ede722780d27b05f0b1169efc90fa15a601a32fc6c3295114500c586831b6aaf2102ecd2d250a76d204011de6bc365a56033b9b3a149f679bc17205555d3c2b2854f21022d609d2f0d359e5bc0e5d0ea20ff9f5d3396cb5b1906aa9c56a0e7b5edc0c5d553ae"</span><span class="w">
+  </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8uJLxDxk2gEMbidF5vT8XLS2UCgQmVcroW"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"redeemScript"</span><span class="p">:</span><span class="w"> </span><span class="s2">"522102eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29210311f97539724e0de38fb1ff79f5148e5202459d06ed07193ab18c730274fd0d882103251f25a5c0291446d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d053ae"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -7845,18 +7845,18 @@ one full <a href="/en/glossary/public-key" title="The public portion of a keypai
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet createrawtransaction <span class="s1">'''
   [
     {
-      "txid": "f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f",
-      "vout" : 0
+      "txid": "061ec99eb641ffdeaa05a1a724a255103bebc445b15c6c8c028b19c08608496b",
+      "vout" : 1
     }
   ]'''</span> <span class="se">\</span>
-  <span class="s1">'{"ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv": 800, "yY6AmGopsZS31wy1JLHR9P6AC6owFaXwuh":77.78}'</span> <span class="s1">'1024'</span></code></pre></figure>
+  <span class="s1">'{"ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv": 800, "yY6AmGopsZS31wy1JLHR9P6AC6owFaXwuh":74.99}'</span> <span class="s1">'0'</span></code></pre></figure>
 
   <p>Result (wrapped):</p>
 
-  <figure class="highlight"><pre><code class="language-text" data-lang="text">01000000010fab7e86a6d7c483b836fe862c8a23f69aebadce7c58c48778a4fa6bd93fc8f6\
-0000000000ffffffff0200205fa0120000001976a914485485425fa99504ec1638ac4213f3\
-cfc9f32ef388ac80dc9acf010000001976a914811eacc14db8ebb5b64486dc43400c0226b4\
-28a488ac00040000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">01000000016b490886c0198b028c6c5cb145c4eb3b1055a224a7a105aadeff41b69ec91e06\
+0100000000ffffffff0200205fa0120000001976a914485485425fa99504ec1638ac4213f3\
+cfc9f32ef388acc0a8f9be010000001976a914811eacc14db8ebb5b64486dc43400c0226b4\
+28a488ac00000000</code></pre></figure>
 
   <p><em>See also</em></p>
 
@@ -7921,22 +7921,10 @@ cfc9f32ef388ac80dc9acf010000001976a914811eacc14db8ebb5b64486dc43400c0226b4\
         <td>The transaction’s <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> encoded as hex in <a href="/en/glossary/rpc-byte-order" title="A hash digest displayed with the byte order reversed; used in Dash Core RPCs, many block explorers, and other software." class="auto-link">RPC byte order</a></td>
       </tr>
       <tr>
-        <td>→<br /><code class="highlighter-rouge">hash</code></td>
-        <td>string (hex)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The transaction hash.  Differs from <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> for witness transactions</td>
-      </tr>
-      <tr>
         <td>→<br /><code class="highlighter-rouge">size</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td><em>Added in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></em><br /><br />The <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> size</td>
-      </tr>
-      <tr>
-        <td>→<br /><code class="highlighter-rouge">vsize</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The virtual transaction size.  Differs from size for witness transactions</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">version</code></td>
@@ -7999,16 +7987,34 @@ cfc9f32ef388ac80dc9acf010000001976a914811eacc14db8ebb5b64486dc43400c0226b4\
         <td>The <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> (similar to the hex field of a <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">scriptSig</a>) encoded as hex.  Only present if this is a <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">coinbase transaction</a></td>
       </tr>
       <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">value</code></td>
+        <td>number (Dash)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → →<br /><code class="highlighter-rouge">addresses</code></td>
+        <td>string : array</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>The P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH addresses</a> used in this transaction, or the computed <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">P2PKH address</a> of any <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">pubkeys</a> in this transaction.  This array will not be returned for <code class="highlighter-rouge">nulldata</code> or <code class="highlighter-rouge">nonstandard</code> script types.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → → →<br /><a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">Address</a></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>A P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH address</a></td>
+      </tr>
+      <tr>
         <td>→ → →<br /><code class="highlighter-rouge">sequence</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>The <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a></td>
-      </tr>
-      <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">txinwitness</code></td>
-        <td>string : array</td>
-        <td>Optional<br />(0 or 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />Hex-encoded witness data. Only for segregated witness transactions</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">vout</code></td>
@@ -8024,9 +8030,15 @@ cfc9f32ef388ac80dc9acf010000001976a914811eacc14db8ebb5b64486dc43400c0226b4\
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">value</code></td>
-        <td><a href="/en/developer-reference#term-proper-money-handling" title="Bitcoin amounts need to be correctly processed without introducing rounding errors that could cause monetary loss" class="auto-link">number (bitcoins)</a></td>
+        <td>number (Dash)</td>
         <td>Required<br />(exactly 1)</td>
-        <td>The number of bitcoins paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">n</code></td>
@@ -8079,54 +8091,66 @@ cfc9f32ef388ac80dc9acf010000001976a914811eacc14db8ebb5b64486dc43400c0226b4\
     </tbody>
   </table>
 
-  <p><em>Example from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <p>Decode a signed one-<a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>, three-<a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> transaction:</p>
+  <p>Decode a signed one-<a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>, two-<a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> transaction:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli decoderawtransaction 0100000001bafe2175b9d7b3041ebac<span class="se">\</span>
-529056b393cf2997f7964485aa382ffa449ffdac02a000000008a47304402201<span class="se">\</span>
-3d212c22f0b46bb33106d148493b9a9723adb2c3dd3a3ebe3a9c9e3b95d8cb00<span class="se">\</span>
-220461661710202fbab550f973068af45c294667fc4dc526627a7463eb23ab39<span class="se">\</span>
-e9b01410479be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815<span class="se">\</span>
-b16f81798483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08<span class="se">\</span>
-ffb10d4b8ffffffff01b0a86a00000000001976a91401b81d5fa1e55e069e3cc<span class="se">\</span>
-2db9c19e2e80358f30688ac00000000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli decoderawtransaction 01000000016b490886c0198b028c6c5cb145c4eb3b10<span class="se">\</span>
+55a224a7a105aadeff41b69ec91e060100000069463043022033a61c56fa0867ed67b76b02<span class="se">\</span>
+3204a9dc0ee6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4<span class="se">\</span>
+182a1de0b96fc22716e0845f561d542e012102eacba539d92eb88d4e73bb32749d79f53f6e<span class="se">\</span>
+8d7947ac40a71bd4b26c13b6ec29ffffffff0200205fa0120000001976a914485485425fa9<span class="se">\</span>
+9504ec1638ac4213f3cfc9f32ef388acc0a8f9be010000001976a914811eacc14db8ebb5b6<span class="se">\</span>
+4486dc43400c0226b428a488ac00000000</code></pre></figure>
 
   <p>Result:</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52309405287e737cf412fc42883d65a392ab950869fae80b2a5f1e33326aca46"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52309405287e737cf412fc42883d65a392ab950869fae80b2a5f1e33326aca46"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">223</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"vsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">223</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"locktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2ac0daff49a4ff82a35a4864797f99f23c396b0529c5ba1e04b3d7b97521feba"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"scriptSig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3044022013d212c22f0b46bb33106d148493b9a9723adb2c3dd3a3ebe3a9c9e3b95d8cb00220461661710202fbab550f973068af45c294667fc4dc526627a7463eb23ab39e9b[ALL] 0479be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"473044022013d212c22f0b46bb33106d148493b9a9723adb2c3dd3a3ebe3a9c9e3b95d8cb00220461661710202fbab550f973068af45c294667fc4dc526627a7463eb23ab39e9b01410479be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967295</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.06990000</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 01b81d5fa1e55e069e3cc2db9c19e2e80358f306 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a91401b81d5fa1e55e069e3cc2db9c19e2e80358f30688ac"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="s2">"1A6Ei5cRfDJ8jjhwxfzLJph8B9ZEthR9Z"</span><span class="w">
-                </span><span class="p">]</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+  </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2f124cb550d9967b81914b544dea3783de23e85d67a9816f9bada665ecfe1cd5"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">224</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"locktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"061ec99eb641ffdeaa05a1a724a255103bebc445b15c6c8c028b19c08608496b"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"scriptSig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3043022033a61c56fa0867ed67b76b023204a9dc0ee6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4182a1de0b96fc22716e0845f561d542e[ALL] 02eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"463043022033a61c56fa0867ed67b76b023204a9dc0ee6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4182a1de0b96fc22716e0845f561d542e012102eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967295</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">800.00000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="w"> </span><span class="mi">80000000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 485485425fa99504ec1638ac4213f3cfc9f32ef3 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a914485485425fa99504ec1638ac4213f3cfc9f32ef388ac"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">74.99000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="w"> </span><span class="mi">7499000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 811eacc14db8ebb5b64486dc43400c0226b428a4 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a914811eacc14db8ebb5b64486dc43400c0226b428a488ac"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"yY6AmGopsZS31wy1JLHR9P6AC6owFaXwuh"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -8191,16 +8215,16 @@ ffb10d4b8ffffffff01b0a86a00000000001976a91401b81d5fa1e55e069e3cc<span class="se"
         <td>The <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> in decoded form with <a href="/en/glossary/op-code" title="Operation codes from the Bitcoin Script language which push data or perform functions within a pubkey script or signature script." class="auto-link">non-data-pushing opcodes</a> listed.  May be empty</td>
       </tr>
       <tr>
-        <td>→<br /><code class="highlighter-rouge">type</code></td>
-        <td>string</td>
-        <td>Optional<br />(0 or 1)</td>
-        <td>The type of script.  This will be one of the following:<br />• <code class="highlighter-rouge">pubkey</code> for a P2PK script inside P2SH<br />• <code class="highlighter-rouge">pubkeyhash</code> for a P2PKH script inside P2SH<br />• <code class="highlighter-rouge">multisig</code> for a <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig</a> script inside P2SH<br />• <code class="highlighter-rouge">nonstandard</code> for unknown scripts</td>
-      </tr>
-      <tr>
         <td>→<br /><code class="highlighter-rouge">reqSigs</code></td>
         <td>number (int)</td>
         <td>Optional<br />(0 or 1)</td>
         <td>The number of <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signatures</a> required; this is always <code class="highlighter-rouge">1</code> for P2PK or P2PKH within P2SH.  It may be greater than 1 for <a href="/en/glossary/p2sh-multisig" title="A P2SH output where the redeem script uses one of the multisig opcodes.  Up until Bitcoin Core 0.10.0, P2SH multisig scripts were standard transactions, but most other P2SH scripts were not." class="auto-link">P2SH multisig</a>.  This value will not be returned for <code class="highlighter-rouge">nonstandard</code> script types (see the <code class="highlighter-rouge">type</code> key above)</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">type</code></td>
+        <td>string</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>The type of script.  This will be one of the following:<br />• <code class="highlighter-rouge">pubkey</code> for a P2PK script inside P2SH<br />• <code class="highlighter-rouge">pubkeyhash</code> for a P2PKH script inside P2SH<br />• <code class="highlighter-rouge">multisig</code> for a <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig</a> script inside P2SH<br />• <code class="highlighter-rouge">nonstandard</code> for unknown scripts</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">addresses</code></td>
@@ -8223,27 +8247,27 @@ ffb10d4b8ffffffff01b0a86a00000000001976a91401b81d5fa1e55e069e3cc<span class="se"
     </tbody>
   </table>
 
-  <p><em>Example from <a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a></em></p>
+  <p><em>Example from Dash Core 0.12.2</em></p>
 
   <p>A 2-of-3 <a href="/en/glossary/p2sh-multisig" title="A P2SH output where the redeem script uses one of the multisig opcodes.  Up until Bitcoin Core 0.10.0, P2SH multisig scripts were standard transactions, but most other P2SH scripts were not." class="auto-link">P2SH multisig</a> <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli -testnet decodescript 522103ede722780d27b05f0b1169ef<span class="se">\</span>
-c90fa15a601a32fc6c3295114500c586831b6aaf2102ecd2d250a76d204011de<span class="se">\</span>
-6bc365a56033b9b3a149f679bc17205555d3c2b2854f21022d609d2f0d359e5b<span class="se">\</span>
-c0e5d0ea20ff9f5d3396cb5b1906aa9c56a0e7b5edc0c5d553ae</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet decodescript 522102eacba539d92eb88d4e73bb32<span class="se">\</span>
+749d79f53f6e8d7947ac40a71bd4b26c13b6ec29210311f97539724e0de38fb1<span class="se">\</span>
+ff79f5148e5202459d06ed07193ab18c730274fd0d882103251f25a5c0291446<span class="se">\</span>
+d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d053ae</code></pre></figure>
 
   <p>Result:</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"asm"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2 03ede722780d27b05f0b1169efc90fa15a601a32fc6c3295114500c586831b6aaf 02ecd2d250a76d204011de6bc365a56033b9b3a149f679bc17205555d3c2b2854f 022d609d2f0d359e5bc0e5d0ea20ff9f5d3396cb5b1906aa9c56a0e7b5edc0c5d5 3 OP_CHECKMULTISIG"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"reqSigs"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"multisig"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"addresses"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"mjbLRSidW1MY8oubvs4SMEnHNFXxCcoehQ"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"mo1vzGwCzWqteip29vGWWW6MsEBREuzW94"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"mt17cV37fBqZsnMmrHnGCm9pM28R1kQdMG"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nt">"p2sh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2MyVxxgNBk5zHRPRY2iVjGRJHYZEp1pMCSq"</span><span class="w">
+  </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 02eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29 0311f97539724e0de38fb1ff79f5148e5202459d06ed07193ab18c730274fd0d88 03251f25a5c0291446d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d0 3 OP_CHECKMULTISIG"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multisig"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"yNpezfFDfoikDuT1f4iK75AiLp2YLPsGAb"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"yWAk1cDVvsRdPYjnzcFkySJux75yaCE7xz"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"yVJj7TB3ZhMcSP2wo65ZFNqy23BQH9tT87"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"p2sh"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8uJLxDxk2gEMbidF5vT8XLS2UCgQmVcroW"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -8742,6 +8766,27 @@ All existing <a href="/en/glossary/input" title="An input in a transaction which
     </thead>
     <tbody>
       <tr>
+        <td><code class="highlighter-rouge">includeWatching</code></td>
+        <td>bool</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td><a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">Inputs</a> from <a href="/en/glossary/watch-only-address" title="An address or pubkey script stored in the wallet without the corresponding private key, allowing the wallet to watch for outputs but not spend them." class="auto-link">watch-only addresses</a> are also considered. The default is <code class="highlighter-rouge">false</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The following options from Bitcoin are not implemented in Dash Core.</p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
         <td>Options</td>
         <td>Object</td>
         <td>Optional<br />(0 or 1)</td>
@@ -8758,12 +8803,6 @@ All existing <a href="/en/glossary/input" title="An input in a transaction which
         <td>nummeric (int)</td>
         <td>Optional<br />(0 or 1)</td>
         <td>The index of the <a href="/en/glossary/change-address" title="An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees." class="auto-link">change output</a>. If not set, the change position is randomly chosen</td>
-      </tr>
-      <tr>
-        <td>→ <br /><code class="highlighter-rouge">includeWatching</code></td>
-        <td>bool</td>
-        <td>Optional<br />(0 or 1)</td>
-        <td><a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">Inputs</a> from <a href="/en/glossary/watch-only-address" title="An address or pubkey script stored in the wallet without the corresponding private key, allowing the wallet to watch for outputs but not spend them." class="auto-link">watch-only addresses</a> are also considered. The default is <code class="highlighter-rouge">false</code></td>
       </tr>
       <tr>
         <td>→ <br /><a href="/en/developer-reference#lockunspent" class="auto-link"><code class="highlighter-rouge">lockUnspent</code></a></td>
@@ -8837,26 +8876,17 @@ All existing <a href="/en/glossary/input" title="An input in a transaction which
     </tbody>
   </table>
 
-  <p><em>Example from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli -testnet fundrawtransaction 01000000011da9283b4ddf8d<span class="se">\</span>
-89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e0000000000ffff<span class="se">\</span>
-ffff01405dc600000000001976a9140dfc8bafc8419853b34d5e072ad37d1a51<span class="se">\</span>
-59f58488ac00000000 
-<span class="s1">'{
-    "changeAddress": "15gJiApWFGTN2iTteQwQbqasdT6dwGWwv6",
-    "changePosition" : 1,
-    "includeWatching" : false,
-    "lockUnspents" : true,
-    "feeRate" : 0.0001
-}'</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet fundrawtransaction 01000000000100205fa012000000<span class="se">\</span>
+1976a914485485425fa99504ec1638ac4213f3cfc9f32ef388ac00000000</code></pre></figure>
 
   <p>Result:</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">{
-	"hex": "01000000011da9283b4ddf8d89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e0000000000ffffffff01405dc600000000001976a9140dfc8bafc8419853b34d5e072ad37d1a5159f58488ac00000000",
-	"fee": 0.0000245,
-	"changepos": 2
+  "hex": "01000000016b490886c0198b028c6c5cb145c4eb3b1055a224a7a105aadeff41b69ec91e060100000000feffffff023e1207bf010000001976a914bd652a167e7ad674f7815dc549bea9c57a7f919b88ac00205fa0120000001976a914485485425fa99504ec1638ac4213f3cfc9f32ef388ac00000000",
+  "changepos": 0,
+  "fee": 0.00000226
 }</code></pre></figure>
 
   <p><em>See also</em></p>
@@ -13811,7 +13841,7 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/getrawtransaction.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#getrawtransaction" class="auto-link"><code class="highlighter-rouge">getrawtransaction</code> RPC</a> gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Bitcoin Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Bitcoin Core startup settings.</p>
+  <p>The <a href="/en/developer-reference#getrawtransaction" class="auto-link"><code class="highlighter-rouge">getrawtransaction</code> RPC</a> gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Dash Core startup settings.</p>
 
   <p>Note: if you begin using <code class="highlighter-rouge">txindex=1</code> after downloading the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>, you must rebuild your indexes by starting Bitcoin Core with the option  <code class="highlighter-rouge">-reindex</code>.  This may take several hours to complete, during which time your <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> will not process new <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> or transactions. This reindex only needs to be done once.</p>
 
@@ -13852,7 +13882,7 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
         <td>Format</td>
         <td>bool</td>
         <td>Optional<br />(0 or 1)</td>
-        <td><em>Updated in <a href="/en/release/v0.14.0" class="auto-link">Bitcoin Core 0.14.0</a></em><br /><br />Set to <code class="highlighter-rouge">false</code> (the default) to return the <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> as hex.  Set to <code class="highlighter-rouge">true</code> to return a decoded transaction.  Before 0.14.0, use <code class="highlighter-rouge">0</code> and <code class="highlighter-rouge">1</code>, respectively</td>
+        <td>For Dash:<br />Set to <code class="highlighter-rouge">0</code> (the default) to return the <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> as hex.  Set to <code class="highlighter-rouge">1</code> to return a decoded transaction.<br /><br /><em>Updated in <a href="/en/release/v0.14.0" class="auto-link">Bitcoin Core 0.14.0</a></em><br /><br />Set to <code class="highlighter-rouge">false</code> (the default) to return the <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> as hex.  Set to <code class="highlighter-rouge">true</code> to return a decoded transaction.  Before 0.14.0, use <code class="highlighter-rouge">0</code> and <code class="highlighter-rouge">1</code>, respectively</td>
       </tr>
     </tbody>
   </table>
@@ -13873,7 +13903,7 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
         <td><code class="highlighter-rouge">result</code></td>
         <td>null</td>
         <td>Required<br />(exactly 1)</td>
-        <td>If the transaction wasn’t found, the result will be JSON <code class="highlighter-rouge">null</code>.  This can occur because the transaction doesn’t exist in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> or memory pool, or because it isn’t part of the transaction index.  See the Bitcoin Core <code class="highlighter-rouge">-help</code> entry for <code class="highlighter-rouge">-txindex</code></td>
+        <td>If the transaction wasn’t found, the result will be JSON <code class="highlighter-rouge">null</code>.  This can occur because the transaction doesn’t exist in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> or memory pool, or because it isn’t part of the transaction index.  See the Dash Core <code class="highlighter-rouge">-help</code> entry for <code class="highlighter-rouge">-txindex</code></td>
       </tr>
     </tbody>
   </table>
@@ -13930,22 +13960,10 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
         <td>The transaction’s <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> encoded as hex in <a href="/en/glossary/rpc-byte-order" title="A hash digest displayed with the byte order reversed; used in Dash Core RPCs, many block explorers, and other software." class="auto-link">RPC byte order</a></td>
       </tr>
       <tr>
-        <td>→<br /><code class="highlighter-rouge">hash</code></td>
-        <td>string (hex)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The transaction hash.  Differs from <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> for witness transactions</td>
-      </tr>
-      <tr>
         <td>→<br /><code class="highlighter-rouge">size</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td><em>Added in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></em><br /><br />The <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> size</td>
-      </tr>
-      <tr>
-        <td>→<br /><code class="highlighter-rouge">vsize</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The virtual transaction size.  Differs from size for witness transactions</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">version</code></td>
@@ -14008,16 +14026,34 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
         <td>The <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> (similar to the hex field of a <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">scriptSig</a>) encoded as hex.  Only present if this is a <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">coinbase transaction</a></td>
       </tr>
       <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">value</code></td>
+        <td>number (Dash)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → →<br /><code class="highlighter-rouge">addresses</code></td>
+        <td>string : array</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>The P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH addresses</a> used in this transaction, or the computed <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">P2PKH address</a> of any <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">pubkeys</a> in this transaction.  This array will not be returned for <code class="highlighter-rouge">nulldata</code> or <code class="highlighter-rouge">nonstandard</code> script types.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → → →<br /><a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">Address</a></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>A P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH address</a></td>
+      </tr>
+      <tr>
         <td>→ → →<br /><code class="highlighter-rouge">sequence</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>The <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a></td>
-      </tr>
-      <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">txinwitness</code></td>
-        <td>string : array</td>
-        <td>Optional<br />(0 or 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />Hex-encoded witness data. Only for segregated witness transactions</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">vout</code></td>
@@ -14033,9 +14069,15 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">value</code></td>
-        <td><a href="/en/developer-reference#term-proper-money-handling" title="Bitcoin amounts need to be correctly processed without introducing rounding errors that could cause monetary loss" class="auto-link">number (bitcoins)</a></td>
+        <td>number (Dash)</td>
         <td>Required<br />(exactly 1)</td>
-        <td>The number of bitcoins paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">n</code></td>
@@ -14112,69 +14154,86 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.14.1" class="auto-link">Bitcoin Core 0.14.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>A transaction in <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> format:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli getrawtransaction <span class="se">\</span>
-  52309405287e737cf412fc42883d65a392ab950869fae80b2a5f1e33326aca46</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli getrawtransaction <span class="se">\</span>
+  2f124cb550d9967b81914b544dea3783de23e85d67a9816f9bada665ecfe1cd5</code></pre></figure>
 
   <p>Result (wrapped):</p>
 
-  <figure class="highlight"><pre><code class="language-text" data-lang="text">0100000001bafe2175b9d7b3041ebac529056b393cf2997f7964485aa382ffa4\
-49ffdac02a000000008a473044022013d212c22f0b46bb33106d148493b9a972\
-3adb2c3dd3a3ebe3a9c9e3b95d8cb00220461661710202fbab550f973068af45\
-c294667fc4dc526627a7463eb23ab39e9b01410479be667ef9dcbbac55a06295\
-ce870b07029bfcdb2dce28d959f2815b16f81798483ada7726a3c4655da4fbfc\
-0e1108a8fd17b448a68554199c47d08ffb10d4b8ffffffff01b0a86a00000000\
-001976a91401b81d5fa1e55e069e3cc2db9c19e2e80358f30688ac00000000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">01000000016b490886c0198b028c6c5cb145c4eb3b1055a224a7a105aadeff41\
+b69ec91e060100000069463043022033a61c56fa0867ed67b76b023204a9dc0e\
+e6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4\
+182a1de0b96fc22716e0845f561d542e012102eacba539d92eb88d4e73bb3274\
+9d79f53f6e8d7947ac40a71bd4b26c13b6ec29ffffffff0200205fa012000000\
+1976a914485485425fa99504ec1638ac4213f3cfc9f32ef388acc0a8f9be0100\
+00001976a914811eacc14db8ebb5b64486dc43400c0226b428a488ac00000000</code></pre></figure>
 
   <p>Get the same transaction in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli getrawtransaction <span class="se">\</span>
-ef7c0cbf6ba5af68d2ea239bba709b26ff7b0b669839a63bb01c2cb8e8de481e <span class="se">\</span>
-<span class="nb">true</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli getrawtransaction <span class="se">\</span>
+2f124cb550d9967b81914b544dea3783de23e85d67a9816f9bada665ecfe1cd5 <span class="se">\</span>
+1</code></pre></figure>
 
   <p>Result:</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0100000001bafe2175b9d7b3041ebac529056b393cf2997f7964485aa382ffa449ffdac02a000000008a473044022013d212c22f0b46bb33106d148493b9a9723adb2c3dd3a3ebe3a9c9e3b95d8cb00220461661710202fbab550f973068af45c294667fc4dc526627a7463eb23ab39e9b01410479be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8ffffffff01b0a86a00000000001976a91401b81d5fa1e55e069e3cc2db9c19e2e80358f30688ac00000000"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52309405287e737cf412fc42883d65a392ab950869fae80b2a5f1e33326aca46"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52309405287e737cf412fc42883d65a392ab950869fae80b2a5f1e33326aca46"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">223</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"vsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">223</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"locktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2ac0daff49a4ff82a35a4864797f99f23c396b0529c5ba1e04b3d7b97521feba"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"scriptSig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3044022013d212c22f0b46bb33106d148493b9a9723adb2c3dd3a3ebe3a9c9e3b95d8cb00220461661710202fbab550f973068af45c294667fc4dc526627a7463eb23ab39e9b[ALL] 0479be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"473044022013d212c22f0b46bb33106d148493b9a9723adb2c3dd3a3ebe3a9c9e3b95d8cb00220461661710202fbab550f973068af45c294667fc4dc526627a7463eb23ab39e9b01410479be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967295</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.06990000</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 01b81d5fa1e55e069e3cc2db9c19e2e80358f306 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a91401b81d5fa1e55e069e3cc2db9c19e2e80358f30688ac"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="s2">"1A6Ei5cRfDJ8jjhwxfzLJph8B9ZEthR9Z"</span><span class="w">
-                </span><span class="p">]</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nt">"blockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000000000015955e197fc362502a32f76290e5b5e5be822f9f161b3f3"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">374</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1483591778</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"blocktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1483591778</span><span class="w">
+  </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01000000016b490886c0198b028c6c5cb145c4eb3b1055a224a7a105aadeff41b69ec91e060100000069463043022033a61c56fa0867ed67b76b023204a9dc0ee6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4182a1de0b96fc22716e0845f561d542e012102eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29ffffffff0200205fa0120000001976a914485485425fa99504ec1638ac4213f3cfc9f32ef388acc0a8f9be010000001976a914811eacc14db8ebb5b64486dc43400c0226b428a488ac00000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2f124cb550d9967b81914b544dea3783de23e85d67a9816f9bada665ecfe1cd5"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">224</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"locktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"061ec99eb641ffdeaa05a1a724a255103bebc445b15c6c8c028b19c08608496b"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"scriptSig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3043022033a61c56fa0867ed67b76b023204a9dc0ee6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4182a1de0b96fc22716e0845f561d542e[ALL] 02eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"463043022033a61c56fa0867ed67b76b023204a9dc0ee6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4182a1de0b96fc22716e0845f561d542e012102eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">874.99879200</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="w"> </span><span class="mi">87499879200</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yNpezfFDfoikDuT1f4iK75AiLp2YLPsGAb"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967295</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">800.00000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="w"> </span><span class="mi">80000000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 485485425fa99504ec1638ac4213f3cfc9f32ef3 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a914485485425fa99504ec1638ac4213f3cfc9f32ef388ac"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">74.99000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="w"> </span><span class="mi">7499000000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 811eacc14db8ebb5b64486dc43400c0226b428a4 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a914811eacc14db8ebb5b64486dc43400c0226b428a488ac"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"yY6AmGopsZS31wy1JLHR9P6AC6owFaXwuh"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"blockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000e679e76eabc913b15c7f202e7ea831b8fb07beb28ca2a047b03ff3cc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">19560</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1509568811</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"blocktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1509568811</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -14806,7 +14865,7 @@ transactions with six or more <a href="/en/glossary/confirmation-score" title="A
   <p><em>See also</em></p>
 
   <ul>
-    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Bitcoin Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Bitcoin Core startup settings.</li>
+    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Dash Core startup settings.</li>
   </ul>
 
   <h5 id="gettxout">GetTxOut</h5>
@@ -15004,7 +15063,7 @@ searching the memory pool if necessary.</p>
   <p><em>See also</em></p>
 
   <ul>
-    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Bitcoin Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Bitcoin Core startup settings.</li>
+    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Dash Core startup settings.</li>
     <li><a href="/en/developer-reference#gettransaction">GetTransaction</a>: gets detailed information about an in-<a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> transaction.</li>
   </ul>
 
@@ -16527,7 +16586,7 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject diff all all</code></pre></figure>
 
-  <p>Result (truncated):</p>
+  <p>Result:</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -16538,13 +16597,12 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
 
   <h6 id="gobject-vote-many">GObject Vote-many</h6>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject</code></pre></figure>
-
-  <p>Result:</p>
-
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">	</span><span class="err">*INSERT</span><span class="w"> </span><span class="err">RESULTS</span><span class="w"> </span><span class="err">HERE*</span></code></pre></figure>
-
   <p><em>See also:</em></p>
+
+  <ul>
+    <li><a href="/en/developer-reference#getgovernanceinfo">GetGovernanceInfo</a>: returns an object containing governance parameters.</li>
+    <li><a href="/en/developer-reference#getsuperblockbudget">GetSuperblockBudget</a>: returns the absolute maximum sum of superblock payments allowed.</li>
+  </ul>
 
   <h5 id="help">Help</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/dash-core/rpcs/rpcs/help.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/dash-core/rpcs/rpcs/help.md">Edit</a>
@@ -20380,7 +20438,7 @@ bitcoins to the second <a href="/en/glossary/address" title="A 20-byte hash form
     </tbody>
   </table>
 
-  <p>*Parameter #2–whether to allow high fees**</p>
+  <p><em>Parameter #2–whether to allow high fees</em></p>
 
   <table class="ntpd">
     <thead>
@@ -20397,6 +20455,27 @@ bitcoins to the second <a href="/en/glossary/address" title="A 20-byte hash form
         <td>bool</td>
         <td>Optional<br />(0 or 1)</td>
         <td>Set to <code class="highlighter-rouge">true</code> to allow the transaction to pay a high <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a>.  Set to <code class="highlighter-rouge">false</code> (the default) to prevent Bitcoin Core from broadcasting the transaction if it includes a high fee.  <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">Transaction fees</a> are the sum of the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> minus the sum of the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>, so this high fees check helps ensures user including a <a href="/en/glossary/change-address" title="An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees." class="auto-link">change address</a> to return most of the difference back to themselves</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3–whether to use InstantSend</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Use InstantSend</td>
+        <td>bool</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>Set to <code class="highlighter-rouge">true</code> to send as an InstantSend transaction.  Set to <code class="highlighter-rouge">false</code> (the default) to send as a normal transaction</td>
       </tr>
     </tbody>
   </table>
@@ -20422,21 +20501,22 @@ bitcoins to the second <a href="/en/glossary/address" title="A 20-byte hash form
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Broadcast a signed transaction:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli -testnet sendrawtransaction 01000000011da9283b4ddf8d<span class="se">\</span>
-89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e000000006a4730<span class="se">\</span>
-4402200ebea9f630f3ee35fa467ffc234592c79538ecd6eb1c9199eb23c4a16a<span class="se">\</span>
-0485a20220172ecaf6975902584987d295b8dddf8f46ec32ca19122510e22405<span class="se">\</span>
-ba52d1f13201210256d16d76a49e6c8e2edc1c265d600ec1a64a45153d45c29a<span class="se">\</span>
-2fd0228c24c3a524ffffffff01405dc600000000001976a9140dfc8bafc84198<span class="se">\</span>
-53b34d5e072ad37d1a5159f58488ac00000000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet sendrawtransaction 01000000016b490886c0198b<span class="se">\</span>
+028c6c5cb145c4eb3b1055a224a7a105aadeff41b69ec91e0601000000694630<span class="se">\</span>
+43022033a61c56fa0867ed67b76b023204a9dc0ee6b0d63305dc5f65fe943354<span class="se">\</span>
+45ff2f021f712f55399d5238fc7146497c431fc4182a1de0b96fc22716e0845f<span class="se">\</span>
+561d542e012102eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71b<span class="se">\</span>
+d4b26c13b6ec29ffffffff0200205fa0120000001976a914485485425fa99504<span class="se">\</span>
+ec1638ac4213f3cfc9f32ef388acc0a8f9be010000001976a914811eacc14db8<span class="se">\</span>
+ebb5b64486dc43400c0226b428a488ac00000000</code></pre></figure>
 
   <p>Result:</p>
 
-  <figure class="highlight"><pre><code class="language-text" data-lang="text">f5a5ce5988cc72b9b90e8d1d6c910cda53c88d2175177357cc2f2cf0899fbaad</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">2f124cb550d9967b81914b544dea3783de23e85d67a9816f9bada665ecfe1cd5</code></pre></figure>
 
   <p><em>See also</em></p>
 
@@ -21396,21 +21476,22 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
     </tbody>
   </table>
 
-  <p><em>Example from <a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a></em></p>
+  <p><em>Example from Dash Core 0.12.2</em></p>
 
   <p>Sign the hex generated in the example section for the <a href="/en/developer-reference#createrawtransaction" class="auto-link"><code class="highlighter-rouge">createrawtransaction</code>
 RPC</a>:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">bitcoin-cli -testnet signrawtransaction 01000000011da9283b4ddf8d<span class="se">\</span>
-89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e0000000000ffff<span class="se">\</span>
-ffff01405dc600000000001976a9140dfc8bafc8419853b34d5e072ad37d1a51<span class="se">\</span>
-59f58488ac00000000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet signrawtransaction signrawtransaction 01000000016b4908<span class="se">\</span>
+86c0198b028c6c5cb145c4eb3b1055a224a7a105aadeff41b69ec91e060100000000ffff<span class="se">\</span>
+ffff0200205fa0120000001976a914485485425fa99504ec1638ac4213f3cfc9f32ef388<span class="se">\</span>
+acc0a8f9be010000001976a914811eacc14db8ebb5b64486dc43400c0226b428a488ac00<span class="se">\</span>
+000000</code></pre></figure>
 
   <p>Result:</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"hex"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"01000000011da9283b4ddf8d89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e000000006a47304402200ebea9f630f3ee35fa467ffc234592c79538ecd6eb1c9199eb23c4a16a0485a20220172ecaf6975902584987d295b8dddf8f46ec32ca19122510e22405ba52d1f13201210256d16d76a49e6c8e2edc1c265d600ec1a64a45153d45c29a2fd0228c24c3a524ffffffff01405dc600000000001976a9140dfc8bafc8419853b34d5e072ad37d1a5159f58488ac00000000"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"complete"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01000000016b490886c0198b028c6c5cb145c4eb3b1055a224a7a105aadeff41b69ec91e060100000069463043022033a61c56fa0867ed67b76b023204a9dc0ee6b0d63305dc5f65fe94335445ff2f021f712f55399d5238fc7146497c431fc4182a1de0b96fc22716e0845f561d542e012102eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29ffffffff0200205fa0120000001976a914485485425fa99504ec1638ac4213f3cfc9f32ef388acc0a8f9be010000001976a914811eacc14db8ebb5b64486dc43400c0226b428a488ac00000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"complete"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -22504,22 +22585,10 @@ untrusted source.</p>
         <td>The transaction’s <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> encoded as hex in <a href="/en/glossary/rpc-byte-order" title="A hash digest displayed with the byte order reversed; used in Dash Core RPCs, many block explorers, and other software." class="auto-link">RPC byte order</a></td>
       </tr>
       <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">hash</code></td>
-        <td>string (hex)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The transaction hash.  Differs from <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> for witness transactions</td>
-      </tr>
-      <tr>
         <td>→ → →<br /><code class="highlighter-rouge">size</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td><em>Added in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></em><br /><br />The <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> size</td>
-      </tr>
-      <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">vsize</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The virtual transaction size.  Differs from size for witness transactions</td>
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">version</code></td>
@@ -22582,16 +22651,34 @@ untrusted source.</p>
         <td>The <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> (similar to the hex field of a <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">scriptSig</a>) encoded as hex.  Only present if this is a <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">coinbase transaction</a></td>
       </tr>
       <tr>
+        <td>→ → → → →<br /><code class="highlighter-rouge">value</code></td>
+        <td>number (Dash)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → → → →<br /><code class="highlighter-rouge">addresses</code></td>
+        <td>string : array</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>The P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH addresses</a> used in this transaction, or the computed <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">P2PKH address</a> of any <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">pubkeys</a> in this transaction.  This array will not be returned for <code class="highlighter-rouge">nulldata</code> or <code class="highlighter-rouge">nonstandard</code> script types.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → → → → →<br /><a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">Address</a></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>A P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH address</a></td>
+      </tr>
+      <tr>
         <td>→ → → → →<br /><code class="highlighter-rouge">sequence</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>The <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a></td>
-      </tr>
-      <tr>
-        <td>→ → → → →<br /><code class="highlighter-rouge">txinwitness</code></td>
-        <td>string : array</td>
-        <td>Optional<br />(0 or 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />Hex-encoded witness data. Only for segregated witness transactions</td>
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">vout</code></td>
@@ -22607,9 +22694,15 @@ untrusted source.</p>
       </tr>
       <tr>
         <td>→ → → → →<br /><code class="highlighter-rouge">value</code></td>
-        <td><a href="/en/developer-reference#term-proper-money-handling" title="Bitcoin amounts need to be correctly processed without introducing rounding errors that could cause monetary loss" class="auto-link">number (bitcoins)</a></td>
+        <td>number (Dash)</td>
         <td>Required<br />(exactly 1)</td>
-        <td>The number of bitcoins paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+      </tr>
+      <tr>
+        <td>→ → → → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
       </tr>
       <tr>
         <td>→ → → → →<br /><code class="highlighter-rouge">n</code></td>
@@ -24149,22 +24242,10 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
         <td>The transaction’s <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> encoded as hex in <a href="/en/glossary/rpc-byte-order" title="A hash digest displayed with the byte order reversed; used in Dash Core RPCs, many block explorers, and other software." class="auto-link">RPC byte order</a></td>
       </tr>
       <tr>
-        <td>→<br /><code class="highlighter-rouge">hash</code></td>
-        <td>string (hex)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The transaction hash.  Differs from <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> for witness transactions</td>
-      </tr>
-      <tr>
         <td>→<br /><code class="highlighter-rouge">size</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td><em>Added in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></em><br /><br />The <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> size</td>
-      </tr>
-      <tr>
-        <td>→<br /><code class="highlighter-rouge">vsize</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The virtual transaction size.  Differs from size for witness transactions</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">version</code></td>
@@ -24227,16 +24308,34 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
         <td>The <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> (similar to the hex field of a <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">scriptSig</a>) encoded as hex.  Only present if this is a <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">coinbase transaction</a></td>
       </tr>
       <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">value</code></td>
+        <td>number (Dash)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code>.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → →<br /><code class="highlighter-rouge">addresses</code></td>
+        <td>string : array</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>The P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH addresses</a> used in this transaction, or the computed <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">P2PKH address</a> of any <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">pubkeys</a> in this transaction.  This array will not be returned for <code class="highlighter-rouge">nulldata</code> or <code class="highlighter-rouge">nonstandard</code> script types.<br /><br />Only present if <code class="highlighter-rouge">spentindex</code> enabled</td>
+      </tr>
+      <tr>
+        <td>→ → → → →<br /><a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">Address</a></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>A P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH address</a></td>
+      </tr>
+      <tr>
         <td>→ → →<br /><code class="highlighter-rouge">sequence</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>The <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a></td>
-      </tr>
-      <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">txinwitness</code></td>
-        <td>string : array</td>
-        <td>Optional<br />(0 or 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />Hex-encoded witness data. Only for segregated witness transactions</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">vout</code></td>
@@ -24252,9 +24351,15 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">value</code></td>
-        <td><a href="/en/developer-reference#term-proper-money-handling" title="Bitcoin amounts need to be correctly processed without introducing rounding errors that could cause monetary loss" class="auto-link">number (bitcoins)</a></td>
+        <td>number (Dash)</td>
         <td>Required<br />(exactly 1)</td>
-        <td>The number of bitcoins paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+        <td>The number of Dash paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">valueSat</code></td>
+        <td>number (<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The number of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to this <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  May be <code class="highlighter-rouge">0</code></td>
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">n</code></td>
@@ -24409,7 +24514,7 @@ cb6a325d2903b726980865210d2127de09710121023ee7a6437e9ad2957cd032\
   <p><em>See also</em></p>
 
   <ul>
-    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Bitcoin Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Bitcoin Core startup settings.</li>
+    <li><a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a>: gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Dash Core startup settings.</li>
     <li><a href="/en/developer-reference#gettransaction">GetTransaction</a> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a>: gets detailed information about an in-<a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> transaction.</li>
   </ul>
 
