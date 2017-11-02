@@ -891,6 +891,16 @@ uri: "/en/developer-reference#estimatepriority",
 category: "RPCs"
 },
 {
+label: "EstimateSmartFee",
+uri: "/en/developer-reference#estimatesmartfee",
+category: "RPCs"
+},
+{
+label: "EstimateSmartPriority",
+uri: "/en/developer-reference#estimatesmartpriority",
+category: "RPCs"
+},
+{
 label: "FundRawTransaction",
 uri: "/en/developer-reference#fundrawtransaction",
 category: "RPCs"

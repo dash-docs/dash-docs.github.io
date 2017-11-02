@@ -391,6 +391,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       </li>
       <li><a href="#misbehaving-nodes" id="markdown-toc-misbehaving-nodes">Misbehaving Nodes</a></li>
       <li><a href="#alerts" id="markdown-toc-alerts">Alerts</a></li>
+      <li><a href="#quorum-selection" id="markdown-toc-quorum-selection">Quorum Selection</a></li>
       <li><a href="#privatesend" id="markdown-toc-privatesend">PrivateSend</a></li>
       <li><a href="#masternode-payment" id="markdown-toc-masternode-payment">Masternode Payment</a></li>
       <li><a href="#masternode-sync" id="markdown-toc-masternode-sync">Masternode Sync</a></li>
@@ -4153,6 +4154,47 @@ next <a href="/en/glossary/block" title="One or more transactions prefaced by a 
   <p><em>Removed in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em></p>
 
   <p>Earlier versions of Bitcoin Core allowed developers and trusted community members to issue <a href="https://bitcoin.org/en/alerts">Bitcoin alerts</a> to notify users of critical <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>-wide issues. This messaging system <a href="https://bitcoin.org/en/alert/2016-11-01-alert-retirement">was retired</a> in Bitcoin Core v0.13.0; however, internal alerts, partition detection warnings and the <code class="highlighter-rouge">-alertnotify</code> option features remain.</p>
+
+  <h3 id="quorum-selection">Quorum Selection</h3>
+
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+| <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>Dash quorums are used to facilitate the operation of masternode provided
+features in a decentralized, deterministic way.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Quorum Type</th>
+        <th>Members</th>
+        <th><a href="/en/glossary/consensus" title="When several nodes (usually most nodes on the network) all have the same blocks in their locally-validated best block chain." class="auto-link">Consensus</a></th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>InstantSend</td>
+        <td>10</td>
+        <td>Majority</td>
+        <td>A set of 10 masternodes are selected for <em>each</em> <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> of the InstantSend transaction. A majority (6+) of them must agree to lock the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>. If all <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> in the transaction can be locked, it becomes a successful InstantSend.</td>
+      </tr>
+      <tr>
+        <td>MN Payments</td>
+        <td>10</td>
+        <td>Majority</td>
+        <td>A set of 10 masternodes are selected for each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. A majority (6+) of them must agree on the masternode payee for the next <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>.</td>
+      </tr>
+      <tr>
+        <td>MN Broadcast</td>
+        <td>10</td>
+        <td>Majority</td>
+        <td>If a majority (6+) of <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> agree, a new <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a> is not required.</td>
+      </tr>
+    </tbody>
+  </table>
 
   <h3 id="privatesend">PrivateSend</h3>
 
