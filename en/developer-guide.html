@@ -4332,6 +4332,13 @@ manually by issuing the <code class="highlighter-rouge">mnsync reset</code> <a h
     <li>A failure occurred during the last sync attempt (after a 1 minute cooldown before sync restarts)</li>
   </ul>
 
+  <p>Once a masternode completes an initial full sync, continuing synchronization is
+maintained by the exchange of P2P messages with other <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>. Each masternode
+issues a ping (<a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a>) periodically to notify others that it is still
+online. Masternodes that do not issue a ping for 3 hours will be put into the
+<code class="highlighter-rouge">MASTERNODE_NEW_START_REQUIRED</code> state and will need to issue a masternode
+announce (<a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a>).</p>
+
   <h4 id="masternode-sync-status">Masternode Sync Status</h4>
 
   <p>There are several status values used to track masternode synchronization. They
@@ -4403,7 +4410,7 @@ masternodes in sync with each other. This information is derived from
     </tbody>
   </table>
 
-  <p>The following actions only run when the masternode sync is past <code class="highlighter-rouge">MASTERNODE_SYNC_WAITING</code> status</p>
+  <p>The following actions only run when the masternode sync is past <code class="highlighter-rouge">MASTERNODE_SYNC_WAITING</code> status.</p>
 
   <table>
     <tbody>
@@ -4440,7 +4447,7 @@ masternodes in sync with each other. This information is derived from
       <tr>
         <td>300</td>
         <td>Full verification</td>
-        <td>Verify masternodes via direct requests (<a href="/en/developer-reference#mnv" title="A P2P protocol message used by masternodes to verify other masternode's IP Addresses." class="auto-link"><code class="highlighter-rouge">mnv</code> messages</a>). Note time constraints in the Developer Reference section</td>
+        <td>Verify masternodes via direct requests (<a href="/en/developer-reference#mnv" title="A P2P protocol message used by masternodes to verify other masternode's IP Addresses." class="auto-link"><code class="highlighter-rouge">mnv</code> messages</a> - note time constraints in the Developer Reference section)</td>
       </tr>
       <tr>
         <td>300</td>
