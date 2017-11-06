@@ -394,7 +394,12 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       <li><a href="#quorum-selection" id="markdown-toc-quorum-selection">Quorum Selection</a></li>
       <li><a href="#privatesend" id="markdown-toc-privatesend">PrivateSend</a></li>
       <li><a href="#masternode-payment" id="markdown-toc-masternode-payment">Masternode Payment</a></li>
-      <li><a href="#masternode-sync" id="markdown-toc-masternode-sync">Masternode Sync</a></li>
+      <li><a href="#masternode-sync" id="markdown-toc-masternode-sync">Masternode Sync</a>        <ul>
+          <li><a href="#masternode-sync-status" id="markdown-toc-masternode-sync-status">Masternode Sync Status</a></li>
+          <li><a href="#masternode-sync-schedule" id="markdown-toc-masternode-sync-schedule">Masternode Sync Schedule</a></li>
+          <li><a href="#masternode-sync-data-flow" id="markdown-toc-masternode-sync-data-flow">Masternode Sync Data Flow</a></li>
+        </ul>
+      </li>
       <li><a href="#governance" id="markdown-toc-governance">Governance</a>        <ul>
           <li><a href="#synchronization" id="markdown-toc-synchronization">Synchronization</a></li>
         </ul>
@@ -4320,7 +4325,140 @@ treated as misbehaving and have its ban score increased.</p>
   <p>Dash Core performs masternode synchronization as required, but it can be started
 manually by issuing the <code class="highlighter-rouge">mnsync reset</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> command.</p>
 
-  <p><em>Masternode Sync Data Flow</em></p>
+  <p>There are several conditions that restart the sync process:</p>
+
+  <ul>
+    <li>More than 60 minutes have passed since the last activation</li>
+    <li>A failure occurred during the last sync attempt (after a 1 minute cooldown before sync restarts)</li>
+  </ul>
+
+  <h4 id="masternode-sync-status">Masternode Sync Status</h4>
+
+  <p>There are several status values used to track masternode synchronization. They
+are used in both <a href="/en/developer-reference#ssc" title="A P2P network message used to track the sync status of masternode objects ()" class="auto-link"><code class="highlighter-rouge">ssc</code> messages</a> and the <a href="/en/developer-reference#mnsync" class="auto-link"><code class="highlighter-rouge">mnsync</code> RPC</a>.</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Value</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td>-1</td>
+        <td><code class="highlighter-rouge">MASTERNODE_SYNC_FAILED</code></td>
+        <td>Synchronization failed</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td><code class="highlighter-rouge">MASTERNODE_SYNC_INITIAL</code></td>
+        <td>Synchronization just started, was reset recently, or is still in <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><code class="highlighter-rouge">MASTERNODE_SYNC_WAITING</code></td>
+        <td>Synchronization pending - waiting after initial to check for more <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">headers</a>/<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><code class="highlighter-rouge">MASTERNODE_SYNC_LIST</code></td>
+        <td>Synchronizing masternode list</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><code class="highlighter-rouge">MASTERNODE_SYNC_MNW</code></td>
+        <td>Synchronizing masternode payments</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><code class="highlighter-rouge">MASTERNODE_SYNC_GOVERNANCE</code></td>
+        <td>Synchronizing governance objects</td>
+      </tr>
+      <tr>
+        <td>999</td>
+        <td><code class="highlighter-rouge">MASTERNODE_SYNC_FINISHED</code></td>
+        <td>Synchronization finished</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="masternode-sync-schedule">Masternode Sync Schedule</h4>
+
+  <p>The following tables detail the timing of various functions used to keep the
+masternodes in sync with each other. This information is derived from
+<code class="highlighter-rouge">ThreadCheckPrivateSend</code> in <code class="highlighter-rouge">src/privatesend.cpp</code>.</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Period (seconds)</strong></td>
+        <td><strong>Action</strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>MN Sync</td>
+        <td>Synchronizes sporks, masternode list, masternode payments, and governance objects</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The following actions only run when the masternode sync is past <code class="highlighter-rouge">MASTERNODE_SYNC_WAITING</code> status</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Period (seconds)</strong></td>
+        <td><strong>Action</strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>MN Check</td>
+        <td>Check the state of each masternode that is still funded and not banned. The action occurs once per second, but individual masternodes are only checked at most every 5 seconds (only a subset of masternodes are checked each time it runs)</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>Process MN Connections</td>
+        <td>Disconnects some masternodes</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>MN Check/Remove</td>
+        <td>Remove spent masternodes and check the state of inactive ones</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>MN Payment Check/Remove</td>
+        <td>Remove old masternode payment votes/<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a></td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>InstantSend Check/Remove</td>
+        <td>Remove expired/orphaned/invalid InstantSend candidates and votes</td>
+      </tr>
+      <tr>
+        <td>300</td>
+        <td>Full verification</td>
+        <td>Verify masternodes via direct requests (<a href="/en/developer-reference#mnv" title="A P2P protocol message used by masternodes to verify other masternode's IP Addresses." class="auto-link"><code class="highlighter-rouge">mnv</code> messages</a>). Note time constraints in the Developer Reference section</td>
+      </tr>
+      <tr>
+        <td>300</td>
+        <td>Maintenance</td>
+        <td>Check/remove/reprocess governance objects</td>
+      </tr>
+      <tr>
+        <td>600</td>
+        <td>Manage State</td>
+        <td>Sends masternode pings (<a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a>). Also sends initial masternode broadcast (<a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a>) for local masternodes.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 id="masternode-sync-data-flow">Masternode Sync Data Flow</h4>
+
+  <p>The following tables details the exchanged of P2P messages during masternode
+synchronization.</p>
 
   <table>
     <tbody>
