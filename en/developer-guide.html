@@ -4322,14 +4322,14 @@ treated as misbehaving and have its ban score increased.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Dash Core performs masternode synchronization as required, but it can be started
-manually by issuing the <code class="highlighter-rouge">mnsync reset</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> command.</p>
-
-  <p>There are several conditions that restart the sync process:</p>
+  <p>Dash Core performs full masternode synchronization as required. There are
+several conditions that initiate a start/restart the sync process:</p>
 
   <ul>
+    <li>Initial startup of Dash Core</li>
     <li>More than 60 minutes have passed since the last activation</li>
     <li>A failure occurred during the last sync attempt (after a 1 minute cooldown before sync restarts)</li>
+    <li>Issuing a <code class="highlighter-rouge">mnsync reset</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> command</li>
   </ul>
 
   <p>Once a masternode completes an initial full sync, continuing synchronization is
@@ -4338,6 +4338,21 @@ issues a ping (<a href="/en/developer-reference#mnp" title="A P2P protocol messa
 online. Masternodes that do not issue a ping for 3 hours will be put into the
 <code class="highlighter-rouge">MASTERNODE_NEW_START_REQUIRED</code> state and will need to issue a masternode
 announce (<a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a>).</p>
+
+  <p><em>Masternode List</em></p>
+
+  <p>After the initial masternode list has been received, it is kept current by a
+combination of the periodic <a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> messages</a> received from other masternodes and
+the <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> messages</a> sent by masternodes as they come online. Also, <a href="/en/developer-reference#dseg" title="A P2P network message which requests either the entire masternode list or a specific masternode entry" class="auto-link"><code class="highlighter-rouge">dseg</code> messages</a>
+can be sent to request masternode info when messages are received containing
+unrecognized masternode <code class="highlighter-rouge">vin</code> entries (most masternode/governance messages
+include a <code class="highlighter-rouge">vin</code> value that can be used to verify the masternode’s unspent 1000
+Dash).</p>
+
+  <p><em>Masternode Payment</em></p>
+
+  <p>After the initial masternode payment synchronization, payment information is
+kept current via the <a href="/en/developer-reference#mnw" title="A P2P protocol message used to pick the next winning masternode (payee)" class="auto-link"><code class="highlighter-rouge">mnw</code> messages</a> relayed on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
 
   <h4 id="masternode-sync-status">Masternode Sync Status</h4>
 
@@ -4464,7 +4479,12 @@ masternodes in sync with each other. This information is derived from
 
   <h4 id="masternode-sync-data-flow">Masternode Sync Data Flow</h4>
 
-  <p>The following tables details the exchanged of P2P messages during masternode
+  <p>This diagram shows the order in which P2P messages are sent to perform
+masternode synchronization initially after startup.</p>
+
+  <p><img src="/img/dev/en-masternode-sync-initial.svg" alt="Masternode Sync (Initial)" /></p>
+
+  <p>The following table details the exchanged of P2P messages during masternode
 synchronization.</p>
 
   <table>
