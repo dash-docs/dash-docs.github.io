@@ -392,6 +392,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       <li><a href="#misbehaving-nodes" id="markdown-toc-misbehaving-nodes">Misbehaving Nodes</a></li>
       <li><a href="#alerts" id="markdown-toc-alerts">Alerts</a></li>
       <li><a href="#quorum-selection" id="markdown-toc-quorum-selection">Quorum Selection</a></li>
+      <li><a href="#instantsend" id="markdown-toc-instantsend">InstantSend</a></li>
       <li><a href="#privatesend" id="markdown-toc-privatesend">PrivateSend</a></li>
       <li><a href="#masternode-payment" id="markdown-toc-masternode-payment">Masternode Payment</a></li>
       <li><a href="#masternode-sync" id="markdown-toc-masternode-sync">Masternode Sync</a>        <ul>
@@ -4200,6 +4201,79 @@ features in a decentralized, deterministic way.</p>
       </tr>
     </tbody>
   </table>
+
+  <h3 id="instantsend">InstantSend</h3>
+
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+| <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>Dash Core’s InstantSend feature provides a way to lock transaction <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> and
+enable secure, instantaneous transactions.</p>
+
+  <p><em>InstantSend Data Flow</em></p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>InstantSend Client</strong></td>
+        <td><strong>Direction</strong></td>
+        <td><strong><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peers</a></strong></td>
+        <td><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> (ix)</td>
+        <td>→</td>
+        <td> </td>
+        <td>Client sends <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventory</a> for transaction lock request</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> (ix)</td>
+        <td><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peer</a> responds with request for transaction lock request</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#ix" title="A P2P protocol message which sends a single serialized transaction via InstantSend" class="auto-link"><code class="highlighter-rouge">ix</code> message</a></td>
+        <td>→</td>
+        <td> </td>
+        <td>Client sends InstantSend transaction lock request</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> (txlvote)</td>
+        <td>Masternodes in the <a href="#quorum-selection">quorum</a> respond with votes</td>
+      </tr>
+      <tr>
+        <td><a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> (txlvote)</td>
+        <td>→</td>
+        <td> </td>
+        <td>Client requests vote</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>←</td>
+        <td><a href="/en/developer-reference#txlvote" title="A P2P protocol message which masternodes send in response to an ix (transaction lock request) message if the transaction inputs can be locked." class="auto-link"><code class="highlighter-rouge">txlvote</code> message</a></td>
+        <td><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peer</a> responds with vote</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Once a sufficient number of votes approve the transaction lock, the InstantSend
+transaction is approved and shows 5 <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmations</a> (<code class="highlighter-rouge">DEFAULT_INSTANTSEND_DEPTH</code>).
+If an InstantSend transaction is a valid transaction but does not receive a
+transaction lock, it reverts to being a <a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transaction</a>.</p>
+
+  <p>There are a number of limitations on InstantSend transactions:</p>
+
+  <ul>
+    <li>To be used in an InstantSend transaction, an <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> must have 6+ <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmations</a> (<code class="highlighter-rouge">INSTANTSEND_CONFIRMATIONS_REQUIRED</code>)</li>
+    <li>The lock request will timeout 15 seconds after the first vote is seen (<code class="highlighter-rouge">INSTANTSEND_LOCK_TIMEOUT_SECONDS</code>)</li>
+    <li>The lock request will fail if it has not been locked after 60 seconds (<code class="highlighter-rouge">INSTANTSEND_FAILED_TIMEOUT_SECONDS</code>)</li>
+    <li>A <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." class="auto-link">minimum fee</a> (0.001 Dash) is required since the transaction involves the masternodes in addition to <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a>. Activation of <a href="https://github.com/dashpay/dips/blob/master/dip-0001.md">DIP-0001</a> will reduce the fee by an order of magnitude (to 0.0001 Dash).</li>
+  </ul>
 
   <h3 id="privatesend">PrivateSend</h3>
 

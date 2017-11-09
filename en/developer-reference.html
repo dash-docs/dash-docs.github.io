@@ -1729,7 +1729,7 @@ please <a href="https://github.com/thephez/dash.org/issues">open an issue</a>.)<
     <tbody>
       <tr>
         <td>70208</td>
-        <td>Dash Core 0.12.2.x <br />(??? 2017)</td>
+        <td>Dash Core 0.12.2.x <br />(Nov 2017)</td>
         <td> </td>
       </tr>
       <tr>
@@ -4091,7 +4091,10 @@ bc8f5e5400000000 ............................ Epoch time: 1415483324
 
   <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages all help control the InstantSend feature of Dash.
 InstantSend uses the masternode <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> to lock transaction <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> and enable
-secure, instantaneous transactions.</p>
+secure, instantaneous transactions. For additional details, refer to
+the Developer Guide <a href="developer-guide#instantsend">InstantSend section</a>.</p>
+
+  <p><img src="/img/dev/en-p2p-instantsend-messages.svg" alt="Overview Of P2P Protocol InstantSend Request And Reply Messages" /></p>
 
   <h4 id="ix">ix</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
@@ -4188,6 +4191,13 @@ Masternode Outpoint
   <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages all help control the PrivateSend (formerly
 DarkSend) coin mixing features built in to Dash and facilitated by the
 masternode <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
+
+  <p>Since the messages are all related to a single process, this diagram shows them
+sequentially numbered. The <a href="/en/developer-reference#dssu" title="A P2P network message providing a mixing pool status update" class="auto-link"><code class="highlighter-rouge">dssu</code> message</a> (not shown) is sent by the
+masternode in conjunction with some responses. For additional details, refer to
+the Developer Guide <a href="developer-guide#privatesend">PrivateSend section</a>.</p>
+
+  <p><img src="/img/dev/en-p2p-privatesend-messages.svg" alt="Overview Of P2P Protocol PrivateSend Request And Reply Messages" /></p>
 
   <h4 id="dsa">dsa</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
@@ -5164,7 +5174,12 @@ ece5a95900000000 ..................... Signature Timestamp</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages enable the Masternode features built in to Dash.</p>
+  <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages enable the masternode features built in to Dash.</p>
+
+  <p><img src="/img/dev/en-p2p-masternode-messages.svg" alt="Overview Of P2P Protocol Masternode Request And Reply Messages" /></p>
+
+  <p>For additional details, refer to the Developer Guide <a href="developer-guide#masternode-sync">Masternode Sync</a>
+and <a href="developer-guide#masternode-payment">Masternode Payment</a> sections.</p>
 
   <h4 id="dseg">dseg</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
@@ -6222,7 +6237,7 @@ requested. Frequent requests will result in the node being banned.</code></pre><
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_p2p_networking.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages have been deprecated and should not longer be used.</p>
+  <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages have been deprecated and should no longer be used.</p>
 
   <h4 id="mnvs">mnvs</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
