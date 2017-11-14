@@ -271,7 +271,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 <div class="breadcrumbs">
   
     
-      <a href="/en/developer-documentation">Dev Docs</a>
+      <a href="/en/developer-documentation">Developer Documentation</a>
         
       &gt;
     
@@ -324,7 +324,6 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   <li><a href="#contracts" id="markdown-toc-contracts">Contracts</a>    <ul>
       <li><a href="#escrow-and-arbitration" id="markdown-toc-escrow-and-arbitration">Escrow And Arbitration</a></li>
       <li><a href="#micropayment-channel" id="markdown-toc-micropayment-channel">Micropayment Channel</a></li>
-      <li><a href="#coinjoin" id="markdown-toc-coinjoin">CoinJoin</a></li>
     </ul>
   </li>
   <li><a href="#wallets" id="markdown-toc-wallets">Wallets</a>    <ul>
@@ -858,28 +857,28 @@ transactions using the current <a href="/en/glossary/consensus-rules" title="The
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_transactions.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Transactions let users spend satoshis. Each transaction is constructed
+  <p>Transactions let users spend <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>. Each transaction is constructed
 out of several parts which enable both simple direct payments and complex
 transactions. This section will describe each part and
 demonstrate how to use them together to build complete transactions.</p>
 
   <p>To keep things simple, this section pretends <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">coinbase transactions</a> do
-not exist. <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">Coinbase transactions</a> can only be created by Bitcoin <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a>
+not exist. <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">Coinbase transactions</a> can only be created by Dash <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a>
 and they’re an exception to many of the rules listed below. Instead of
 pointing out the <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> exception to each rule, we invite you to read
 about <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">coinbase transactions</a> in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> section of this guide.</p>
 
   <p><img src="/img/dev/en-tx-overview.svg" alt="The Parts Of A Transaction" /></p>
 
-  <p>The figure above shows the main parts of a Bitcoin transaction. Each
+  <p>The figure above shows the main parts of a Dash transaction. Each
 transaction has at least one <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> and one <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>. Each <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." id="term-input" class="term">input</a> spends the
-satoshis paid to a previous <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>. Each <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." id="term-output" class="term">output</a> then waits as an Unspent
+<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to a previous <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>. Each <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." id="term-output" class="term">output</a> then waits as an Unspent
 Transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">Output</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a>) until a later <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> spends it. When your
-Bitcoin <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> tells you that you have a 10,000 satoshi balance, it really
-means that you have 10,000 satoshis waiting in one or more <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a>.</p>
+Dash <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> tells you that you have a 10,000 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duff</a> balance, it really
+means that you have 10,000 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> waiting in one or more <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a>.</p>
 
   <p>Each transaction is prefixed by a four-byte <a href="/en/developer-guide#term-transaction-version-number" title="A version number prefixed to transactions to allow upgrading&quot;" id="term-transaction-version-number" class="term">transaction version number</a> which tells
-Bitcoin <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> and <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a> which set of rules to use to validate it.  This
+Dash <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> and <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a> which set of rules to use to validate it.  This
 lets developers create new rules for future transactions without
 invalidating previous transactions.</p>
 
@@ -887,9 +886,9 @@ invalidating previous transactions.</p>
 
   <p>An <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> has an implied index number based on its location in the
 transaction—the first <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> is <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> zero. The <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> also has an
-amount in satoshis which it pays to a conditional <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>. Anyone
+amount in <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> which it pays to a conditional <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>. Anyone
 who can satisfy the conditions of that <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> can spend up to the
-amount of satoshis paid to it.</p>
+amount of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to it.</p>
 
   <p>An <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> uses a <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">transaction identifier</a> (<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a>) and an <a href="/en/developer-guide#term-output-index" title="The sequentially-numbered index of outputs in a single transaction starting from 0" class="auto-link">output index</a> number
 (often called “vout” for <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> vector) to identify a particular <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> to
@@ -902,14 +901,14 @@ a later subsection.)</p>
 showing the workflow Alice uses to send Bob a transaction and which Bob
 later uses to spend that transaction. Both Alice and Bob will use the
 most common form of the standard Pay-To-Public-Key-Hash (P2PKH) transaction
-type. <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." id="term-p2pkh" class="term">P2PKH</a> lets Alice spend satoshis to a typical Bitcoin <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>,
-and then lets Bob further spend those satoshis using a simple
+type. <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." id="term-p2pkh" class="term">P2PKH</a> lets Alice spend <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> to a typical Dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>,
+and then lets Bob further spend those <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> using a simple
 cryptographic <a href="/en/developer-guide#term-key-pair" title="A private key and its derived public key" class="auto-link">key pair</a>.</p>
 
   <p><img src="/img/dev/en-creating-p2pkh-output.svg" alt="Creating A P2PKH Public Key Hash To Receive Payment" /></p>
 
   <p>Bob must first generate a private/public <a href="/en/developer-guide#term-key-pair" title="A private key and its derived public key" id="term-key-pair" class="term">key pair</a> before Alice can create the
-first transaction. Bitcoin uses the Elliptic Curve Digital <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> Algorithm (<a href="https://en.wikipedia.org/wiki/Elliptic_Curve_DSA" class="auto-link">ECDSA</a>) with
+first transaction. Dash uses the Elliptic Curve Digital <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">Signature</a> Algorithm (<a href="https://en.wikipedia.org/wiki/Elliptic_Curve_DSA" class="auto-link">ECDSA</a>) with
 the <a href="http://www.secg.org/sec2-v2.pdf" class="auto-link">secp256k1</a> curve; <a href="http://www.secg.org/sec2-v2.pdf" class="auto-link">secp256k1</a> <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." id="term-private-key" class="term">private keys</a> are 256 bits of random
 data. A copy of that data is deterministically transformed into an <a href="http://www.secg.org/sec2-v2.pdf" class="auto-link">secp256k1</a> <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." id="term-public-key" class="term">public
 key</a>. Because the transformation can be reliably repeated later, the
@@ -923,13 +922,13 @@ unanticipated problems which might allow reconstruction of <a href="/en/glossary
 from <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> data at some later point.</p>
 
   <p>Bob provides the <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">pubkey hash</a> to Alice. <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">Pubkey hashes</a> are almost always
-sent encoded as Bitcoin <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." id="term-address" class="term">addresses</a>, which are <a href="/en/glossary/base58check" title="The method used in Dash for converting 160-bit hashes into P2PKH and P2SH addresses.  Also used in other parts of Bitcoin, such as encoding private keys for backup in WIP format.  Not the same as other base58 implementations." class="auto-link">base58</a>-encoded strings
+sent encoded as Dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." id="term-address" class="term">addresses</a>, which are <a href="/en/glossary/base58check" title="The method used in Dash for converting 160-bit hashes into P2PKH and P2SH addresses.  Also used in other parts of Bitcoin, such as encoding private keys for backup in WIP format.  Not the same as other base58 implementations." class="auto-link">base58</a>-encoded strings
 containing an <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> version number, the hash, and an error-detection
 checksum to catch typos. The <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> can be transmitted
 through any medium, including one-way mediums which prevent the spender
 from communicating with the receiver, and it can be further encoded
-into another format, such as a QR code containing a <a href="/en/developer-guide#term-bitcoin-uri" title="A URI which allows receivers to encode payment details so spenders don't have to manually enter addresses and other details" class="auto-link"><code class="highlighter-rouge">bitcoin:</code>
-URI</a>.</p>
+into another format, such as a QR code containing a <code class="highlighter-rouge">dash:</code>
+URI.</p>
 
   <p>Once Alice has the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> and decodes it back into a standard hash, she
 can create the first transaction. She creates a standard P2PKH
@@ -982,13 +981,13 @@ broadcast them over the <a href="/en/developer-guide#term-network" title="The Da
   <p>As illustrated in the figure above, the data Bob signs includes the
 <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> and <a href="/en/developer-guide#term-output-index" title="The sequentially-numbered index of outputs in a single transaction starting from 0" class="auto-link">output index</a> of the previous transaction, the previous
 <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output’s</a> <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>, the <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> Bob creates which will let the next
-recipient spend this transaction’s <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>, and the amount of satoshis to
+recipient spend this transaction’s <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>, and the amount of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> to
 spend to the next recipient. In essence, the entire transaction is
 signed except for any <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">signature scripts</a>, which hold the full <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> and
 <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">secp256k1 signatures</a>.</p>
 
   <p>After putting his <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> and <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> in the <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">signature script</a>, Bob
-broadcasts the transaction to Bitcoin <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a> through the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">peer-to-peer
+broadcasts the transaction to Dash <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a> through the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">peer-to-peer
 network</a>. Each <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> and <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miner</a> independently validates the transaction
 before broadcasting it further or attempting to include it in a new <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> of
 transactions.</p>
@@ -1090,7 +1089,7 @@ problems with it).</p>
 that script does. Receivers do care about the script conditions and, if
 they want, they can ask spenders to use a particular <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>.
 Unfortunately, custom <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey scripts</a> are less convenient than short
-Bitcoin <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> and there was no standard way to communicate them
+Dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> and there was no standard way to communicate them
 between programs prior to widespread implementation of the <a href="https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki" class="auto-link">BIP70</a> <a href="/en/glossary/payment-protocol" title="The protocol defined in BIP70 (and other BIPs) which lets spenders get signed payment details from receivers." class="auto-link">Payment
 Protocol</a> discussed later.</p>
 
@@ -1118,7 +1117,7 @@ Bob spend the <a href="/en/glossary/output" title="An output in a transaction wh
   <p><img src="/img/dev/en-unlocking-p2sh-output.svg" alt="Unlocking A P2SH Output For Spending" /></p>
 
   <p>The hash of the <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> has the same properties as a <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">pubkey
-hash</a>—so it can be transformed into the standard Bitcoin <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> format
+hash</a>—so it can be transformed into the standard Dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> format
 with only one small change to differentiate it from a standard <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>.
 This makes collecting a P2SH-style <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> as simple as collecting a
 P2PKH-style <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>. The hash also obfuscates any <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> in the
@@ -1139,11 +1138,11 @@ is the <code class="highlighter-rouge">IsStandard()</code> test, and transaction
 <a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transactions</a>.</p>
 
   <p>Non-<a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transactions</a>—those that fail the test—may be accepted
-by <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> not using the default Bitcoin Core settings. If they are
+by <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> not using the default Dash Core settings. If they are
 included in <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>, they will also avoid the IsStandard test and be
 processed.</p>
 
-  <p>Besides making it more difficult for someone to attack Bitcoin for
+  <p>Besides making it more difficult for someone to attack Dash for
 free by broadcasting harmful transactions, the <a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transaction</a>
 test also helps prevent users from creating transactions today that
 would make adding new transaction features in the future more
@@ -1152,7 +1151,7 @@ a version number—if users started arbitrarily changing the version
 number, it would become useless as a tool for introducing
 backwards-incompatible features.</p>
 
-  <p>As of Bitcoin Core 0.9, the standard <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> types are:</p>
+  <p>As of Dash Core 0.12.2, the standard <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> types are:</p>
 
   <h4 class="no_toc" id="pay-to-public-key-hash-p2pkh">Pay To Public Key Hash (P2PKH)</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_transactions.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_transactions.md">Edit</a>
@@ -1161,7 +1160,7 @@ backwards-incompatible features.</p>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>P2PKH is the most common form of <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> used to send a transaction to one
-or multiple Bitcoin <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
+or multiple Dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
 
   <div class="highlighter-rouge"><pre><code>Pubkey script: OP_DUP OP_HASH160 &lt;PubKeyHash&gt; OP_EQUALVERIFY OP_CHECKSIG
 Signature script: &lt;sig&gt; &lt;pubkey&gt;
@@ -1256,25 +1255,22 @@ if possible.</p>
 script</a> size of 10,000 bytes provided they follow all other <a href="/en/glossary/consensus-rules" title="The block validation rules that full nodes follow to stay in consensus with other nodes." class="auto-link">consensus
 rules</a>, such as not having any data pushes larger than 520 bytes.</p>
 
-  <p>Bitcoin Core 0.9.x to 0.10.x will, by default, relay and <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">mine</a> <a href="/en/glossary/null-data-transaction" title="A transaction type relayed and mined by default in Bitcoin Core 0.9.0 and later that adds arbitrary data to a provably unspendable pubkey script that full nodes don't have to store in their UTXO database." class="auto-link">null data
+  <p>Dash Core 0.11.x will, by default, relay and <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">mine</a> <a href="/en/glossary/null-data-transaction" title="A transaction type relayed and mined by default in Bitcoin Core 0.9.0 and later that adds arbitrary data to a provably unspendable pubkey script that full nodes don't have to store in their UTXO database." class="auto-link">null data
 transactions</a> with up to 40 bytes in a single data push and only one null
-data <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> that pays exactly 0 satoshis:</p>
+data <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> that pays exactly 0 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>:</p>
 
   <div class="highlighter-rouge"><pre><code>Pubkey Script: OP_RETURN &lt;0 to 40 bytes of data&gt;
 (Null data scripts cannot be spent, so there's no signature script.)
 </code></pre>
   </div>
 
-  <p>Bitcoin Core 0.11.x increases this default to 80 bytes, with the other
-rules remaining the same.</p>
-
-  <p>Bitcoin Core 0.12.0 defaults
+  <p>Dash Core 0.12.1 defaults
 to relaying and mining null data outputs with up to 83 bytes with any
 number of data pushes, provided the total byte limit is not exceeded.
 There must still only be a single null data output and it must still pay
-exactly 0 satoshis.</p>
+exactly 0 duffs.</p>
 
-  <p>The <code class="highlighter-rouge">-datacarriersize</code> Bitcoin Core configuration option allows you to
+  <p>The <code class="highlighter-rouge">-datacarriersize</code> Dash Core configuration option allows you to
 set the maximum number of bytes in null data outputs that you will relay
 or mine.</p>
 
@@ -1285,7 +1281,7 @@ or mine.</p>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>If you use anything besides a standard <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> in an <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>, <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>
-and <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a> using the default Bitcoin Core settings will neither
+and <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a> using the default Dash Core settings will neither
 accept, broadcast, nor <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">mine</a> your transaction. When you try to broadcast
 your transaction to a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> running the default settings, you will
 receive an error.</p>
@@ -1301,10 +1297,9 @@ that don’t follow the standard mempool policy.</p>
 
   <p>Note: <a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transactions</a> are designed to protect and help the
 <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, not prevent you from making mistakes. It’s easy to create
-<a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transactions</a> which make the satoshis sent to them unspendable.</p>
+<a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transactions</a> which make the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> sent to them unspendable.</p>
 
-  <p>As of <a href="/en/release/v0.9.3" class="auto-link">Bitcoin Core 0.9.3</a>, <a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transactions</a> must also meet the following
-conditions:</p>
+  <p><a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">Standard transactions</a> must also meet the following conditions:</p>
 
   <ul>
     <li>
@@ -1334,9 +1329,9 @@ evaluation stack. It cannot push new <a href="/en/glossary/op-code" title="Opera
     <li>
       <p>The transaction must not include any <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> which receive fewer than
 1/3 as many satoshis as it would take to spend it in a typical <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>.
-That’s <a href="https://github.com/bitcoin/bitcoin/commit/6a4c196dd64da2fd33dc7ae77a8cdd3e4cf0eff1">currently 546 satoshis</a> for a
-P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH output</a> on a Bitcoin Core <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> with the default <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." class="auto-link">relay fee</a>.
-Exception: standard null data <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> must receive zero satoshis.</p>
+That’s currently 5460 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> for a
+P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH output</a> on a Dash Core <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> with the default <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." class="auto-link">relay fee</a>.
+Exception: standard null data <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> must receive zero <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>.</p>
     </li>
   </ul>
 
@@ -1363,7 +1358,7 @@ protecting everything except the <a href="/en/glossary/signature-script" title="
     </li>
     <li>
       <p><a href="/en/glossary/sighash-none" title="Signature hash type which only signs the inputs, allowing anyone to change the outputs however they'd like." id="term-sighash-none" class="term"><code class="highlighter-rouge">SIGHASH_NONE</code></a> signs all of the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> but none of the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>,
-allowing anyone to change where the satoshis are going unless other
+allowing anyone to change where the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> are going unless other
 <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signatures</a> using other <a href="/en/glossary/signature-hash" title="A flag to Bitcoin signatures that indicates what parts of the transaction the signature signs.  (The default is SIGHASH_ALL.) The unsigned parts of the transaction may be modified." class="auto-link">signature hash</a> flags protect the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>.</p>
     </li>
     <li>
@@ -1385,8 +1380,8 @@ pay) flag, creating three new combined types:</p>
     <li>
       <p><a href="/en/glossary/sighash-anyonecanpay" title="A signature hash type which signs only the current input." class="auto-link"><code class="highlighter-rouge">SIGHASH_ALL|SIGHASH_ANYONECANPAY</code></a> signs all of the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> but only
 this one <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>, and it also allows anyone to add or remove other
-<a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a>, so anyone can contribute additional satoshis but they cannot
-change how many satoshis are sent nor where they go.</p>
+<a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a>, so anyone can contribute additional <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> but they cannot
+change how many <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> are sent nor where they go.</p>
     </li>
     <li>
       <p><a href="/en/glossary/sighash-anyonecanpay" title="A signature hash type which signs only the current input." class="auto-link"><code class="highlighter-rouge">SIGHASH_NONE|SIGHASH_ANYONECANPAY</code></a> signs only this one <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> and
@@ -1405,7 +1400,7 @@ example, a single-<a href="/en/glossary/input" title="An input in a transaction 
 <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> changed by the <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miner</a> who adds it to the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>. On the other
 hand, if a two-<a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> transaction has one <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> signed with <code class="highlighter-rouge">NONE</code> and
 one <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> signed with <code class="highlighter-rouge">ALL</code>, the <code class="highlighter-rouge">ALL</code> signer can choose where to spend
-the satoshis without consulting the <code class="highlighter-rouge">NONE</code> signer—but nobody else can
+the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> without consulting the <code class="highlighter-rouge">NONE</code> signer—but nobody else can
 modify the transaction.</p>
 
   <h3 id="locktime-and-sequence-number">Locktime And Sequence Number</h3>
@@ -1415,7 +1410,7 @@ modify the transaction.</p>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>One thing all <a href="/en/glossary/signature-hash" title="A flag to Bitcoin signatures that indicates what parts of the transaction the signature signs.  (The default is SIGHASH_ALL.) The unsigned parts of the transaction may be modified." class="auto-link">signature hash</a> types sign is the transaction’s <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." id="term-locktime" class="term">locktime</a>.
-(Called <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">nLockTime</a> in the Bitcoin Core source code.)
+(Called <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">nLockTime</a> in the Dash Core source code.)
 The <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a> indicates the earliest time a transaction can be added to
 the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>.</p>
 
@@ -1437,7 +1432,7 @@ to two hours before its time lock officially expires. Also, <a href="/en/glossar
 not created at guaranteed intervals, so any attempt to cancel a valuable
 transaction should be made a few hours before the time lock expires.</p>
 
-  <p>Previous versions of Bitcoin Core provided a feature which prevented
+  <p>Previous versions of Dash Core provided a feature which prevented
 transaction signers from using the method described above to cancel a
 time-locked transaction, but a necessary part of this feature was
 disabled to prevent denial of service attacks. A legacy of this system are four-byte
@@ -1449,7 +1444,7 @@ allowing the transaction to be added to a <a href="/en/glossary/block" title="On
 had not expired.</p>
 
   <p>Even today, setting all <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence numbers</a> to 0xffffffff (the default in
-Bitcoin Core) can still disable the time lock, so if you want to use
+Dash Core) can still disable the time lock, so if you want to use
 <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a>, at least one <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> must have a <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a> below the
 maximum. Since <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence numbers</a> are not used by the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> for any
 other purpose, setting any <a href="/en/glossary/sequence-number" title="Part of all transactions. A number intended to allow unconfirmed time-locked transactions to be updated before being finalized; not currently used except to disable locktime in a transaction" class="auto-link">sequence number</a> to zero is sufficient to
@@ -1477,19 +1472,26 @@ than the <a href="/en/glossary/locktime" title="Part of a transaction which indi
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_transactions.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Transactions pay fees based on the total byte size of the signed transaction. Fees per byte are calculated based on current demand for space in mined <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> with fees rising as demand increases.  The <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a> is given to the
-Bitcoin <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miner</a>, as explained in the <a href="/en/developer-guide#block-chain">block chain section</a>, and so it is
-ultimately up to each <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miner</a> to choose the minimum <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a> they
+  <p>Transactions pay fees based on the total byte size of the signed transaction.
+Fees per byte are calculated based on current demand for space in mined <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>
+with fees rising as demand increases.  The <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a> is given to the
+Dash <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miner</a>, as explained in the <a href="/en/developer-guide#block-chain">block chain section</a>, and
+so it is ultimately up to each <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miner</a> to choose the minimum <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a> they
 will accept.</p>
 
-  <p>There is also a concept of so-called “<a href="/en/glossary/high-priority-transaction" title="Transactions that don't have to pay a transaction fee because their inputs have been idle long enough to accumulated large amounts of priority.  Note: miners choose whether to accept free transactions." id="term-high-priority-transactions" class="term">high-priority transactions</a>” which spend satoshis that have not moved for a long time.</p>
+  <p>There is also a concept of so-called “<a href="/en/glossary/high-priority-transaction" title="Transactions that don't have to pay a transaction fee because their inputs have been idle long enough to accumulated large amounts of priority.  Note: miners choose whether to accept free transactions." id="term-high-priority-transactions" class="term">high-priority transactions</a>”
+which spend <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> that have not moved for a long time.</p>
 
-  <p>In the past, these “priority” transaction were often exempt from the normal fee requirements. Before Bitcoin Core 0.12, 50 KB of each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> would be reserved for these <a href="/en/glossary/high-priority-transaction" title="Transactions that don't have to pay a transaction fee because their inputs have been idle long enough to accumulated large amounts of priority.  Note: miners choose whether to accept free transactions." class="auto-link">high-priority transactions</a>, however this is now set to 0 KB by default.  After the priority area, all transactions are prioritized based on their fee per byte, with higher-paying transactions being added in sequence until all of the available space is filled.</p>
+  <p>These “priority” transaction can be often exempt from the normal fee
+requirements. As of Dash Core 0.12.2, 10 KB of each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> are reserved for these
+<a href="/en/glossary/high-priority-transaction" title="Transactions that don't have to pay a transaction fee because their inputs have been idle long enough to accumulated large amounts of priority.  Note: miners choose whether to accept free transactions." class="auto-link">high-priority transactions</a>.  After the priority area, all transactions are
+prioritized based on their fee per byte, with higher-paying transactions being
+added in sequence until all of the available space is filled.</p>
 
-  <p>As of Bitcoin Core 0.9, a <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." id="term-minimum-fee" class="term">minimum fee</a> (currently 1,000 satoshis) has been required to
-broadcast a transaction across the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>. Any transaction paying only the <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." class="auto-link">minimum fee</a>
-should be prepared to wait a long time before there’s enough spare space
-in a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to include it. Please see the <a href="/en/developer-guide#verifying-payment">verifying payment section</a>
+  <p>As of Dash Core 0.12.2.x, a <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." id="term-minimum-fee" class="term">minimum fee</a>(1,000 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> following <a href="https://github.com/dashpay/dips/blob/master/dip-0001.md">DIP1</a> activation) is required to
+broadcast a non-priority transaction across the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>. Any transaction paying
+only the <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." class="auto-link">minimum fee</a> should be prepared to wait a long time before there’s
+enough spare space in a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to include it. Please see the <a href="/en/developer-guide#verifying-payment">verifying payment section</a>
 for why this could be important.</p>
 
   <p>Since each transaction spends Unspent Transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">Outputs</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a>) and
@@ -1498,7 +1500,7 @@ because a <a href="/en/glossary/unspent-transaction-output" title="An Unspent Tr
 people will have <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> that exactly match the amount they want to pay,
 so most transactions include a <a href="/en/glossary/change-address" title="An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees." class="auto-link">change output</a>.</p>
 
-  <p><a href="/en/glossary/change-address" title="An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees." id="term-change-output" class="term">Change outputs</a> are regular <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> which spend the surplus satoshis
+  <p><a href="/en/glossary/change-address" title="An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees." id="term-change-output" class="term">Change outputs</a> are regular <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> which spend the surplus <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>
 from the <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> back to the spender.  They can reuse the same P2PKH <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">pubkey hash</a>
 or P2SH <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">script hash</a> as was used in the <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a>, but for the reasons
 described in the <a href="#avoiding-key-reuse">next subsection</a>, it is highly recommended that <a href="/en/glossary/change-address" title="An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees." class="auto-link">change
@@ -1516,9 +1518,9 @@ person to use the public <a href="/en/glossary/block-chain" title="A chain of bl
 transactions involving the other person’s same <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> or <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
 
   <p>If the same <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> is reused often, as happens when people use
-Bitcoin <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> (hashed <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a>) as static payment <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>,
+Dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> (hashed <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a>) as static payment <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>,
 other people can easily track the receiving and spending habits of that
-person, including how many satoshis they control in known <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
+person, including how many <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> they control in known <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
 
   <p>It doesn’t have to be that way. If each <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> is used exactly
 twice—once to receive a payment and once to spend that payment—the
@@ -1527,9 +1529,9 @@ user can gain a significant amount of financial privacy.</p>
   <p>Even better, using new <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> or <a href="/en/developer-guide#term-unique-address" title="Address which are only used once to protect privacy and increase security" id="term-unique-address" class="term">unique
 addresses</a> when accepting payments or creating
 <a href="/en/glossary/change-address" title="An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees." class="auto-link">change outputs</a> can be combined with other techniques discussed later,
-such as CoinJoin or <a href="/en/developer-guide#term-merge-avoidance" title="A strategy for selecting which outputs to spend that avoids merging outputs with different histories that could leak private information" class="auto-link">merge avoidance</a>, to make it extremely difficult to
+such as PrivateSend or <a href="/en/developer-guide#term-merge-avoidance" title="A strategy for selecting which outputs to spend that avoids merging outputs with different histories that could leak private information" class="auto-link">merge avoidance</a>, to make it extremely difficult to
 use the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> by itself to reliably track how users receive and
-spend their satoshis.</p>
+spend their <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>.</p>
 
   <p>Avoiding key reuse can also provide security against attacks which might
 allow reconstruction of <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> from <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> (hypothesized) or
@@ -1540,7 +1542,7 @@ described below, with more general attacks hypothesized).</p>
     <li>
       <p>Unique (non-reused) P2PKH and <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH addresses</a> protect against the first
 type of attack by keeping <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">ECDSA public keys</a> hidden (hashed) until the
-first time satoshis sent to those <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> are spent, so attacks
+first time <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> sent to those <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> are spent, so attacks
 are effectively useless unless they can reconstruct <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> in
 less than the hour or two it takes for a transaction to be well
 protected by the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>.</p>
@@ -1560,7 +1562,7 @@ is exposed by some means, such as a
 applications to avoid <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> reuse and, when possible, to discourage
 users from reusing <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>. If your application needs to provide a
 fixed URI to which payments should be sent, please see the
-<a href="/en/developer-guide#bitcoin-uri"><code class="highlighter-rouge">bitcoin:</code> URI section</a> below.</p>
+<a href="/en/developer-guide#bitcoin-uri"><code class="highlighter-rouge">dash:</code> URI section</a> below.</p>
 
   <h3 id="transaction-malleability">Transaction Malleability</h3>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_transactions.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_transactions.md">Edit</a>
@@ -1568,7 +1570,7 @@ fixed URI to which payments should be sent, please see the
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_transactions.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>None of Bitcoin’s <a href="/en/glossary/signature-hash" title="A flag to Bitcoin signatures that indicates what parts of the transaction the signature signs.  (The default is SIGHASH_ALL.) The unsigned parts of the transaction may be modified." class="auto-link">signature hash</a> types protect the <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">signature script</a>, leaving
+  <p>None of Dash’s <a href="/en/glossary/signature-hash" title="A flag to Bitcoin signatures that indicates what parts of the transaction the signature signs.  (The default is SIGHASH_ALL.) The unsigned parts of the transaction may be modified." class="auto-link">signature hash</a> types protect the <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">signature script</a>, leaving
 the door open for a limited denial of service attack called <a href="/en/glossary/malleability" title="The ability of someone to change (mutate) unconfirmed transactions without making them invalid, which changes the transaction's txid, making child transactions invalid." class="term" id="term-transaction-malleability">transaction
 malleability</a>. The <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">signature script</a>
 contains the <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">secp256k1 signature</a>, which can’t sign itself, allowing attackers to
@@ -1583,20 +1585,12 @@ links to previous transactions using hashes as a <a href="/en/glossary/txid" tit
 identifier</a> (<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a>), a modified transaction will not have the <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> its
 creator expected.</p>
 
-  <p>This isn’t a problem for most Bitcoin transactions which are designed to
+  <p>This isn’t a problem for most Dash transactions which are designed to
 be added to the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> immediately. But it does become a problem
 when the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> from a transaction is spent before that transaction is
 added to the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>.</p>
 
-  <p>Bitcoin developers have been working to reduce <a href="/en/glossary/malleability" title="The ability of someone to change (mutate) unconfirmed transactions without making them invalid, which changes the transaction's txid, making child transactions invalid." class="auto-link">transaction malleability</a>
-among <a href="/en/glossary/standard-transaction" title="A transaction that passes Bitcoin Core's IsStandard() and IsStandardTx() tests. Only standard transactions are mined or broadcast by peers running the default Bitcoin Core software." class="auto-link">standard transaction</a> types, one outcome of those efforts is
-<a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP 141: Segregated Witness</a>,
-which is supported by Bitcoin Core but not activated. At present, new
-transactions should not depend on
-previous transactions which have not been added to the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> yet,
-especially if large amounts of satoshis are at stake.</p>
-
-  <p><a href="/en/glossary/malleability" title="The ability of someone to change (mutate) unconfirmed transactions without making them invalid, which changes the transaction's txid, making child transactions invalid." class="auto-link">Transaction malleability</a> also affects payment tracking.  Bitcoin Core’s
+  <p><a href="/en/glossary/malleability" title="The ability of someone to change (mutate) unconfirmed transactions without making them invalid, which changes the transaction's txid, making child transactions invalid." class="auto-link">Transaction malleability</a> also affects payment tracking.  Dash Core’s
 <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> interface lets you track transactions by their <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a>—but if that
 <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> changes because the transaction was modified, it may appear that
 the transaction has disappeared from the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
@@ -1618,14 +1612,13 @@ always work is to ensure the reissued payment spends all of the same
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_contracts.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Contracts are
-transactions which use the decentralized Bitcoin system to enforce financial
-agreements.
-Bitcoin contracts can often be crafted to minimize dependency on outside
+  <p>Contracts are transactions which use the decentralized Dash system to enforce
+financial agreements.
+Dash contracts can often be crafted to minimize dependency on outside
 agents, such as the court system, which significantly decreases the risk
 of dealing with unknown entities in financial transactions.</p>
 
-  <p>The following subsections will describe a variety of Bitcoin contracts
+  <p>The following subsections will describe a variety of Dash contracts
 already in use. Because contracts deal with real people, not just
 transactions, they are framed below in story format.</p>
 
@@ -1643,18 +1636,18 @@ page</a> of the Bitcoin Wiki.</p>
 but neither of them trusts the other person, so they use a contract to
 help ensure Charlie gets his merchandise and Bob gets his payment.</p>
 
-  <p>A simple contract could say that Charlie will spend satoshis to an
+  <p>A simple contract could say that Charlie will spend <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> to an
 <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> which can only be spent if Charlie and Bob both sign the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>
 spending it. That means Bob won’t get paid unless Charlie gets his
 merchandise, but Charlie can’t get the merchandise and keep his payment.</p>
 
   <p>This simple contract isn’t much help if there’s a dispute, so Bob and
 Charlie enlist the help of Alice-the-arbitrator to create an <a href="/en/glossary/escrow-contract" title="A transaction in which a spender and receiver place funds in a 2-of-2 (or other m-of-n) multisig output so that neither can spend the funds until they're both satisfied with some external outcome." id="term-escrow-contract" class="term">escrow
-contract</a>. Charlie spends his satoshis
+contract</a>. Charlie spends his <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>
 to an <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> which can only be spent if two of the three people sign the
 <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>. Now Charlie can pay Bob if everything is ok, Bob can <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a>
 Charlie’s money if there’s a problem, or Alice can arbitrate and decide
-who should get the satoshis if there’s a dispute.</p>
+who should get the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> if there’s a dispute.</p>
 
   <p>To create a multiple-<a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> (<a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." id="term-multisig" class="term">multisig</a>)
 <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>, they each give the others a <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a>. Then Bob creates the
@@ -1676,7 +1669,7 @@ keys</a> provided).</p>
 
   <p>Bob gives the <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> to Charlie, who checks to make sure his
 <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> and Alice’s <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> are included. Then he hashes the
-<a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> to create a P2SH <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> and pays the satoshis to it. Bob
+<a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> to create a P2SH <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> and pays the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> to it. Bob
 sees the payment get added to the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> and ships the merchandise.</p>
 
   <p>Unfortunately, the merchandise gets slightly damaged in transit. Charlie
@@ -1687,7 +1680,7 @@ Charlie checked.</p>
 
   <p>After looking at the evidence, Alice thinks a 40% <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> is sufficient,
 so she creates and signs a transaction with two <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>, one that spends 60%
-of the satoshis to Bob’s <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> and one that spends the remaining
+of the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> to Bob’s <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> and one that spends the remaining
 40% to Charlie’s <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a>.</p>
 
   <p>In the <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">signature script</a> Alice puts her <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a>
@@ -1716,14 +1709,11 @@ validates, the two transaction <a href="/en/glossary/output" title="An output in
 <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> as spendable balances.</p>
 
   <p>However, if Alice created and signed a transaction neither of them would
-agree to, such as spending all the satoshis to herself, Bob and Charlie
-can find a new arbitrator and sign a transaction spending the satoshis
+agree to, such as spending all the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> to herself, Bob and Charlie
+can find a new arbitrator and sign a transaction spending the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>
 to another 2-of-3 <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig</a> <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script hash</a>, this one including a <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public
 key</a> from that second arbitrator. This means that Bob and Charlie never
 need to worry about their arbitrator stealing their money.</p>
-
-  <p><strong>Resource:</strong> <a href="https://www.bitrated.com/">BitRated</a> provides a <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig</a> arbitration
-service interface using HTML/JavaScript on a GNU AGPL-licensed website.</p>
 
   <h3 id="micropayment-channel">Micropayment Channel</h3>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_contracts.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_contracts.md">Edit</a>
@@ -1736,18 +1726,18 @@ someone posts to Bob’s busy forum, Alice skims the post to make sure it
 isn’t offensive or spam. Alas, Bob often forgets to pay her, so Alice
 demands to be paid immediately after each post she approves or rejects.
 Bob says he can’t do that because hundreds of small payments will cost
-him thousands of satoshis in <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fees</a>, so Alice suggests they use a
+him thousands of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> in <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fees</a>, so Alice suggests they use a
 <a href="/en/developer-guide#term-micropayment-channel" id="term-micropayment-channel" class="term">micropayment channel</a>.</p>
 
   <p>Bob asks Alice for her <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> and then creates two transactions.
-The first transaction pays 100 millibitcoins to a <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH output</a> whose
+The first transaction pays 100 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a> to a <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH output</a> whose
 2-of-2 <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig</a> <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> requires <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signatures</a> from both Alice and Bob.
 This is the bond transaction.
-Broadcasting this transaction would let Alice hold the millibitcoins
+Broadcasting this transaction would let Alice hold the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a>
 hostage, so Bob keeps this transaction private for now and creates a
 second transaction.</p>
 
-  <p>The second transaction spends all of the first transaction’s millibitcoins
+  <p>The second transaction spends all of the first transaction’s <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a>
 (minus a <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a>) back to Bob after a 24 hour delay enforced
 by <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a>. This is the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction. Bob can’t sign the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction by himself, so he gives
 it to Alice to sign, as shown in the
@@ -1760,7 +1750,7 @@ future, signs it, and gives a copy of it back to Bob. She then asks Bob
 for the bond transaction and checks that the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction spends
 the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> of the bond transaction. She can now broadcast the bond
 transaction to the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> to ensure Bob has to wait for the time lock
-to expire before further spending his millibitcoins. Bob hasn’t actually
+to expire before further spending his <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a>. Bob hasn’t actually
 spent anything so far, except possibly a small <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a>, and
 he’ll be able to broadcast the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction in 24 hours for a
 full <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a>.</p>
@@ -1786,100 +1776,108 @@ near the time lock expiry, she could be cheated out of her payment.</p>
   <p><a href="/en/glossary/malleability" title="The ability of someone to change (mutate) unconfirmed transactions without making them invalid, which changes the transaction's txid, making child transactions invalid." class="auto-link">Transaction malleability</a>, discussed above in the Transactions section,
 is another reason to limit the value of <a href="/en/developer-guide#term-micropayment-channel" class="auto-link">micropayment channels</a>.
 If someone uses <a href="/en/glossary/malleability" title="The ability of someone to change (mutate) unconfirmed transactions without making them invalid, which changes the transaction's txid, making child transactions invalid." class="auto-link">transaction malleability</a> to break the link between the
-two transactions, Alice could hold Bob’s 100 millibitcoins hostage even if she
+two transactions, Alice could hold Bob’s 100 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a> hostage even if she
 hadn’t done any work.</p>
 
-  <p>For larger payments, Bitcoin <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fees</a> are very low as a
+  <p>For larger payments, Dash <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fees</a> are very low as a
 percentage of the total transaction value, so it makes more sense to
 protect payments with immediately-broadcast separate transactions.</p>
 
-  <p><strong>Resource:</strong> The <a href="http://bitcoinj.github.io">bitcoinj</a> Java library
+  <p><strong>Resource:</strong> The <a href="https://github.com/HashEngineering/dashj">dashj</a> Java library
 provides a complete set of micropayment functions, an example
 implementation, and <a href="https://bitcoinj.github.io/working-with-micropayments">a
-tutorial</a>
+tutorial (from bitcoinj)</a>
 all under an Apache license.</p>
 
-  <h3 id="coinjoin">CoinJoin</h3>
-  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_contracts.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_contracts.md">Edit</a>
+  <!-- Obsolesced by PrivateSend
+### CoinJoin
+<div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_contracts.md"
+><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_contracts.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_contracts.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_contracts.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Alice is concerned about her privacy.  She knows every transaction gets
-added to the public <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>, so when Bob and Charlie pay her, they
-can each easily track those satoshis to learn what Bitcoin
-<a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> she pays, how much she pays them, and possibly how many
-satoshis she has left.</p>
 
-  <p>Alice isn’t a criminal, she just wants plausible deniability about
-where she has spent her satoshis and how many she has left, so she
+
+
+
+Alice is concerned about her privacy.  She knows every transaction gets
+added to the public [block chain][/en/glossary/block-chain]{:.auto-link}, so when Bob and Charlie pay her, they
+can each easily track those [duffs][/en/glossary/denominations]{:.auto-link} to learn what Bitcoin
+[addresses][/en/glossary/address]{:.auto-link} she pays, how much she pays them, and possibly how many
+[duffs][/en/glossary/denominations]{:.auto-link} she has left.
+
+Alice isn't a criminal, she just wants plausible deniability about
+where she has spent her [duffs][/en/glossary/denominations]{:.auto-link} and how many she has left, so she
 starts up the Tor anonymity service on her computer and logs into an
-IRC chatroom as “AnonGirl.”</p>
+IRC chatroom as "AnonGirl."
 
-  <p>Also in the chatroom are “Nemo” and “Neminem.”  They collectively
-agree to transfer satoshis between each other so no one besides them
-can reliably determine who controls which satoshis.  But they’re faced
-with a dilemma: who transfers their satoshis to one of the other two
+Also in the chatroom are "Nemo" and "Neminem."  They collectively
+agree to transfer [duffs][/en/glossary/denominations]{:.auto-link} between each other so no one besides them
+can reliably determine who controls which [duffs][/en/glossary/denominations]{:.auto-link}.  But they're faced
+with a dilemma: who transfers their [duffs][/en/glossary/denominations]{:.auto-link} to one of the other two
 pseudonymous persons first? The CoinJoin-style contract, shown in the
 illustration below, makes this decision easy: they create a single
 transaction which does all of the spending simultaneously, ensuring none
-of them can steal the others’ satoshis.</p>
+of them can steal the others' [duffs][/en/glossary/denominations]{:.auto-link}.
 
-  <p><img src="/img/dev/en-coinjoin.svg" alt="Example CoinJoin Transaction" /></p>
+![Example CoinJoin Transaction](/img/dev/en-coinjoin.svg)
 
-  <p>Each contributor looks through their collection of Unspent Transaction
-<a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">Outputs</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a>) for 100 millibitcoins they can spend. They then each generate
-a brand new <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> and give <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> details and <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">pubkey hashes</a> to the
+Each contributor looks through their collection of Unspent Transaction
+[Outputs][/en/glossary/output]{:.auto-link} ([UTXOs][/en/glossary/unspent-transaction-output]{:.auto-link}) for 100 [millidash][/en/glossary/denominations]{:.auto-link} they can spend. They then each generate
+a brand new [public key][/en/glossary/public-key]{:.auto-link} and give [UTXO][/en/glossary/unspent-transaction-output]{:.auto-link} details and [pubkey hashes][/en/glossary/p2pkh-address]{:.auto-link} to the
 facilitator.  In this case, the facilitator is AnonGirl; she creates
-a transaction spending each of the <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> to three equally-sized <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>.
-One <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> goes to each of the contributors’ <a href="/en/glossary/p2pkh-address" title="A Dash payment address comprising a hashed public key, allowing the spender to create a standard pubkey script that Pays To PubKey Hash (P2PKH)." class="auto-link">pubkey hashes</a>.</p>
+a transaction spending each of the [UTXOs][/en/glossary/unspent-transaction-output]{:.auto-link} to three equally-sized [outputs][/en/glossary/output]{:.auto-link}.
+One [output][/en/glossary/output]{:.auto-link} goes to each of the contributors' [pubkey hashes][/en/glossary/p2pkh-address]{:.auto-link}.
 
-  <p>AnonGirl then signs her <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> using <a href="/en/glossary/sighash-all" title="Default signature hash type which signs the entire transaction except any signature scripts, preventing modification of the signed parts." class="auto-link"><code class="highlighter-rouge">SIGHASH_ALL</code></a> to ensure nobody can
-change the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> or <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> details.  She gives the partially-signed
-transaction to Nemo who signs his <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> the same way and passes it
+AnonGirl then signs her [inputs][/en/glossary/input]{:.auto-link} using [`SIGHASH_ALL`][/en/glossary/sighash-all]{:.auto-link} to ensure nobody can
+change the [input][/en/glossary/input]{:.auto-link} or [output][/en/glossary/output]{:.auto-link} details.  She gives the partially-signed
+transaction to Nemo who signs his [inputs][/en/glossary/input]{:.auto-link} the same way and passes it
 to Neminem, who also signs it the same way.  Neminem then broadcasts
-the transaction to the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">peer-to-peer network</a>, mixing all of the millibitcoins in
-a single transaction.</p>
+the transaction to the [peer-to-peer network][network]{:.auto-link}, mixing all of the [millidash][/en/glossary/denominations]{:.auto-link} in
+a single transaction.
 
-  <p>As you can see in the illustration, there’s no way for anyone besides
+As you can see in the illustration, there's no way for anyone besides
 AnonGirl, Nemo, and Neminem to confidently determine who received
-which <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>, so they can each spend their <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> with plausible
-deniability.</p>
+which [output][/en/glossary/output]{:.auto-link}, so they can each spend their [output][/en/glossary/output]{:.auto-link} with plausible
+deniability.
 
-  <p>Now when Bob or Charlie try to track Alice’s transactions through the
-<a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>, they’ll also see transactions made by Nemo and
+Now when Bob or Charlie try to track Alice's transactions through the
+[block chain][/en/glossary/block-chain]{:.auto-link}, they'll also see transactions made by Nemo and
 Neminem.  If Alice does a few more CoinJoins, Bob and Charlie might
 have to guess which transactions made by dozens or hundreds of people
-were actually made by Alice.</p>
+were actually made by Alice.
 
-  <p>The complete history of Alice’s satoshis is still in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>,
+The complete history of Alice's [duffs][/en/glossary/denominations]{:.auto-link} is still in the [block chain][/en/glossary/block-chain]{:.auto-link},
 so a determined investigator could talk to the people AnonGirl
-CoinJoined with to find out the ultimate origin of her satoshis and
+CoinJoined with to find out the ultimate origin of her [duffs][/en/glossary/denominations]{:.auto-link} and
 possibly reveal AnonGirl as Alice. But against anyone casually browsing
-<a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> history, Alice gains plausible deniability.</p>
+[block chain][/en/glossary/block-chain]{:.auto-link} history, Alice gains plausible deniability.
 
-  <p>The CoinJoin technique described above costs the participants a small
-amount of satoshis to pay the <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a>.  An alternative
-technique, purchaser CoinJoin, can actually save them satoshis and
-improve their privacy at the same time.</p>
+The CoinJoin technique described above costs the participants a small
+amount of [duffs][/en/glossary/denominations]{:.auto-link} to pay the [transaction fee][/en/glossary/transaction-fee]{:.auto-link}.  An alternative
+technique, purchaser CoinJoin, can actually save them [duffs][/en/glossary/denominations]{:.auto-link} and
+improve their privacy at the same time.
 
-  <p>AnonGirl waits in the IRC chatroom until she wants to make a purchase.
-She announces her intention to spend satoshis and waits until someone
+AnonGirl waits in the IRC chatroom until she wants to make a purchase.
+She announces her intention to spend [duffs][/en/glossary/denominations]{:.auto-link} and waits until someone
 else wants to make a purchase, likely from a different merchant. Then
-they combine their <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> the same way as before but set the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>
-to the separate merchant <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> so nobody will be able to figure
-out solely from <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> history which one of them bought what from
-the merchants.</p>
+they combine their [inputs][/en/glossary/input]{:.auto-link} the same way as before but set the [outputs][/en/glossary/output]{:.auto-link}
+to the separate merchant [addresses][/en/glossary/address]{:.auto-link} so nobody will be able to figure
+out solely from [block chain][/en/glossary/block-chain]{:.auto-link} history which one of them bought what from
+the merchants.
 
-  <p>Since they would’ve had to pay a <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a> to make their purchases
-anyway, AnonGirl and her co-spenders don’t pay anything extra—but
+Since they would've had to pay a [transaction fee][/en/glossary/transaction-fee]{:.auto-link} to make their purchases
+anyway, AnonGirl and her co-spenders don't pay anything extra---but
 because they reduced overhead by combining multiple transactions, saving
-bytes, they may be able to pay a smaller aggregate <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a>,
-saving each one of them a tiny amount of satoshis.</p>
+bytes, they may be able to pay a smaller aggregate [transaction fee][/en/glossary/transaction-fee]{:.auto-link},
+saving each one of them a tiny amount of [duffs][/en/glossary/denominations]{:.auto-link}.
 
-  <p><strong>Resource:</strong> An alpha-quality (as of this writing) implementation of decentralized
-CoinJoin is <a href="http://coinmux.com/">CoinMux</a>, available under the Apache
-license.</p>
+
+**Resource:** An alpha-quality (as of this writing) implementation of decentralized
+CoinJoin is [CoinMux](http://coinmux.com/), available under the Apache
+license.
+-->
 
   <h2 id="wallets">Wallets</h2>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_wallets.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_wallets.md">Edit</a>

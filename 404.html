@@ -8,7 +8,7 @@
 <meta property="og:image" content="https://www.dash.org/assets/img/graphics/dash_circle_normal.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Dash - Open source P2P money</title>
-<meta name="description" content="Bitcoin is an innovative payment network and a new kind of money. Find all you need to know and get started with Bitcoin on bitcoin.org.">
+<meta name="description" content="Dash is an innovative payment network and a new kind of money. Find all you need to know and get started with Dash on dash.org.">
 <link rel="stylesheet" href="/css/font-awesome-4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/main.css">
 <!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
@@ -287,21 +287,87 @@ window.location.href='/'+lang+'/';
 <meta name="robots" content="noindex">
 
 
-<p class="mainsummary">Bitcoin is an innovative payment network and a new kind of money.</p>
-<div class="mainvideo"><div onclick="loadYoutubeVideo(event);" ontouchstart="loadYoutubeVideo(event);" data-youtubeurl="//www.youtube.com/embed/Gc2en3nHxA4?rel=0&amp;showinfo=0&amp;wmode=opaque&amp;autoplay=1">
-  <img src="/img/video/video_wuc.jpg" alt="Youtube video">
-  <div class="mainvideoicon"></div>
-  <div class="mainvideoiconhover"></div>
-</div></div>
-<div class="mainlist">
-  <div><div><img src="/img/icons/main_ico_instant.svg" alt="Icon"><div>Fast peer-to-peer<br>transactions</div></div></div>
-  <div><div><img src="/img/icons/main_ico_worldwide.svg" alt="Icon"><div>Worldwide<br>payments</div></div></div>
-  <div><div><img src="/img/icons/main_ico_lowfee.svg" alt="Icon"><div>Low<br>processing fees</div></div></div>
+<link rel="stylesheet" href="/css/jquery-ui.min.css">
+
+<h1 id="developer-documentation">Developer Documentation</h1>
+
+<p class="summary">Find useful resources, guides and reference material for developers.</p>
+
+<input id="glossary_term" class="glossary_term" placeholder="Search the glossary, RPCs, and more">
+
+<div class="docreference">
+<a href="/en/developer-guide"><span class="fa fa-info-circle fa-2x"></span><span>Guide</span></a>
+<a href="/en/developer-reference"><span class="fa fa-book fa-2x"></span><span>Reference</span></a>
+<a href="/en/developer-examples"><span class="fa fa-code fa-2x"></span><span>Examples</span></a>
+<a href="/en/developer-glossary"><span class="fa fa-font fa-2x"></span><span>Glossary</span></a>
 </div>
-<p class="maindesc">Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. <b>Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and <a href="/en/support-bitcoin">everyone can take part</a></b>. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>
-<div class="mainbutton"><a href="/en/getting-started"><img src="/img/icons/but_bitcoin.svg" alt="icon">Get started with Bitcoin</a></div>
-<div class="mainoverview">Or get a quick overview for</div>
-<div class="mainoverviews"><a href="/en/bitcoin-for-individuals">Individuals</a> <a href="/en/bitcoin-for-businesses">Businesses</a> <a href="/en/bitcoin-for-developers">Developers</a></div>
+
+<div class="resources">
+  <div><div>
+      <h2 id="block_chain"><span class="fa fa-cube fa-lg"></span> Block Chain</h2>
+      <p><a href="/en/developer-guide#block-chain">Block Chain Guide</a></p>
+      <p><a href="/en/developer-reference#block-chain">Block Chain Reference</a></p>
+    </div><div>
+      <h2 id="transactions"><span class="fa fa-exchange fa-lg"></span> Transactions</h2>
+      <p><a href="/en/developer-guide#transactions">Transactions Guide</a></p>
+      <p><a href="/en/developer-reference#transactions">Transactions Reference</a></p>
+      <p><a href="/en/developer-examples#transactions">Transaction Examples</a></p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <h2 id="contracts"><span class="fa fa-sitemap fa-lg fa-rotate-270"></span> Contracts</h2>
+      <p><a href="/en/developer-guide#contracts">Contracts Guide</a></p>
+      <p><a href="https://en.bitcoin.it/wiki/Contracts"><span class="fa fa-external-link"></span> More Contracts</a> - Wiki</p>
+      <p><a href="https://bitcoinj.github.io/working-with-micropayments"><span class="fa fa-external-link"></span> Micropayment Channel Example</a> - bitcoinj</p>
+    </div><div>
+      <h2 id="wallets"><span class="fa fa-btc fa-lg"></span> Wallets</h2>
+      <p><a href="/en/developer-guide#wallets">Wallets Guide</a></p>
+      <p><a href="/en/developer-reference#wallets">Wallets Reference</a></p>
+      <p><a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki"><span class="fa fa-external-link"></span> HD Wallets</a> - BIP32</p>
+      <p><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"><span class="fa fa-external-link"></span> Mnemonic Code</a> - BIP39</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <h2 id="payment-processing"><span class="fa fa-cart-plus fa-lg"></span> Payment Processing</h2>
+      <p><a href="/en/developer-guide#payment-processing">Payment Processing Guide</a></p>
+      <p><a href="/en/developer-examples#payment-processing">Payment Processing Examples</a></p>
+      <p><a href="https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki"><span class="fa fa-external-link"></span> Payment Protocol</a> - BIP70</p>
+    </div><div>
+      <h2 id="operating_modes"><span class="fa fa-cogs fa-lg"></span> Operating Modes</h2>
+      <p><a href="/en/developer-guide#operating-modes">Operating Modes Guide</a></p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <h2 id="p2p-network"><span class="fa fa-share-alt fa-lg"></span> P2P Network</h2>
+      <p><a href="/en/developer-guide#p2p-network">P2P Network Guide</a></p>
+      <p><a href="/en/developer-reference#p2p-network">P2P Network Reference</a></p>
+      <p><a href="/en/developer-examples#p2p-network">P2P Network Examples</a></p>
+      <p><a href="https://en.bitcoin.it/wiki/Protocol_specification"><span class="fa fa-external-link"></span> Full Protocol Specification</a> - Wiki</p>
+    </div><div>
+      <h2 id="mining"><span class="fa fa-puzzle-piece fa-lg"></span> Mining</h2>
+      <p><a href="/en/developer-guide#mining">Mining Guide</a></p>
+      <p><a href="https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki"><span class="fa fa-external-link"></span> getblocktemplate Fundamentals</a> - BIP22</p>
+      <p><a href="https://github.com/bitcoin/bips/blob/master/bip-0023.mediawiki"><span class="fa fa-external-link"></span> getblocktemplate Pooled Mining</a> - BIP23</p>
+    </div>
+  </div>
+</div>
+
+<div class="resourcesmore"><div>
+  <h2 id="additional-resources"><span class="fa fa-link fa-lg"></span> Additional resources</h2>
+  <p><a href="/en/bitcoin-paper"><span class="fa fa-external-link"></span> Bitcoin: A Peer-to-Peer Electronic Cash System</a> - Satoshi Nakamoto</p>
+  <p><a href="https://github.com/bitcoin/bips#readme"><span class="fa fa-external-link"></span> Bitcoin Improvement Proposals</a> - GitHub</p>
+  <p><a href="https://github.com/minium/Bitcoin-Spec"><span class="fa fa-external-link"></span> Bitcoin Developer Reference (working paper)</a> - Krzysztof Okupski</p>
+  <p><a href="https://bitcoinj.github.io/#documentation"><span class="fa fa-external-link"></span> Bitcoinj Developer Documentation</a> - bitcoinj.org</p>
+   <p><a href="https://programmingblockchain.gitbooks.io/programmingblockchain/content/"><span class="fa fa-external-link"></span> The C# Bitcoin book (NBitcoin Developer Documentation)</a> - Nicolas Dorier</p>
+  <p><a href="https://en.bitcoin.it/wiki/Category:Technical"><span class="fa fa-external-link"></span> Technical Pages</a> - Wiki</p>
+</div></div>
+
+<script src="/js/jquery/jquery-1.11.2.min.js"></script>
+<script src="/js/jquery/jquery-ui.min.js"></script>
+<script src="/js/devsearch.js"></script>
 
 
 </div>
