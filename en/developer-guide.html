@@ -1783,12 +1783,6 @@ hadn’t done any work.</p>
 percentage of the total transaction value, so it makes more sense to
 protect payments with immediately-broadcast separate transactions.</p>
 
-  <p><strong>Resource:</strong> The <a href="https://github.com/HashEngineering/dashj">dashj</a> Java library
-provides a complete set of micropayment functions, an example
-implementation, and <a href="https://bitcoinj.github.io/working-with-micropayments">a
-tutorial (from bitcoinj)</a>
-all under an Apache license.</p>
-
   <!-- Obsolesced by PrivateSend
 ### CoinJoin
 <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_contracts.md"
@@ -1885,9 +1879,9 @@ license.
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>A Bitcoin <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> can refer to either a <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> program or a <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> file.
-<a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">Wallet</a> programs create <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> to receive satoshis and use the
-corresponding <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> to spend those satoshis. <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">Wallet</a> files
+  <p>A Dash <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> can refer to either a <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> program or a <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> file.
+<a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">Wallet</a> programs create <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> to receive <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> and use the
+corresponding <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> to spend those <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>. <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">Wallet</a> files
 store <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> and (optionally) other information related to
 transactions for the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> program.</p>
 
@@ -1901,11 +1895,11 @@ we’re talking about <a href="/en/glossary/wallet" title="Software that stores 
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Permitting receiving and spending of satoshis is the only essential
+  <p>Permitting receiving and spending of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> is the only essential
 feature of <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> software—but a particular <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> program doesn’t
 need to do both things.  Two <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> programs can work together, one
-program distributing <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> in order to receive satoshis and
-another program signing transactions spending those satoshis.</p>
+program distributing <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> in order to receive <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> and
+another program signing transactions spending those <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>.</p>
 
   <p><a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">Wallet</a> programs also need to interact with the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">peer-to-peer network</a> to
 get information from the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> and to broadcast new transactions.
@@ -1941,7 +1935,7 @@ full-service <a href="/en/glossary/wallet" title="Software that stores private k
 
   <p>The main advantage of full-service <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> is that they are easy to use.
 A single program does everything the user needs to receive and spend
-satoshis.</p>
+<a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>.</p>
 
   <p>The main disadvantage of full-service <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> is that they store the
 <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> on a device connected to the Internet.  The compromise of
@@ -2020,7 +2014,7 @@ removable media.</p>
       <p>(Online) Install the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> software on another device, this one
 connected to the Internet, and import the <a href="/en/glossary/parent-key" title="In HD wallets, a key used to derive child keys.  The key can be either a private key or a public key, and the key derivation may also require a chain code." class="auto-link">parent public key</a> from the
 removable media. As you would with a full-service <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>, distribute
-<a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> to receive payment. When ready to spend satoshis, fill in
+<a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> to receive payment. When ready to spend <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>, fill in
 the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> details and save the unsigned transaction generated by the
 <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> to removable media.</p>
     </li>
@@ -2041,7 +2035,7 @@ broadcast it to the <a href="/en/developer-guide#term-network" title="The Dash P
   <p>The primary advantage of offline <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> is their possibility for
 greatly improved security over full-service <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a>.  As long as the
 offline <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> is not compromised (or flawed) and the user reviews all outgoing
-transactions before signing, the user’s satoshis are safe even if the
+transactions before signing, the user’s <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> are safe even if the
 online <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> is compromised.</p>
 
   <p>The primary disadvantage of offline <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> is hassle. For maximum
@@ -2069,7 +2063,7 @@ transfer data manually.  The user’s workflow is something like:</p>
     </li>
     <li>
       <p>(Networked) As you would with a full-service <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>, distribute
-<a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> to receive payment. When ready to spend satoshis, fill in
+<a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> to receive payment. When ready to spend <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>, fill in
 the transaction details, connect the hardware <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>, and click
 Spend.  The networked <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> will automatically send the transaction
 details to the hardware <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>.</p>
@@ -2141,7 +2135,7 @@ Processing</a> section for details.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Bitcoin <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> at their core are a collection of <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a>. These
+  <p>Dash <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> at their core are a collection of <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a>. These
 collections are stored digitally in a file, or can even be physically
 stored on pieces of paper.</p>
 
@@ -2151,9 +2145,9 @@ stored on pieces of paper.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p><a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">Private keys</a> are what are used to unlock satoshis from a particular <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>. In Bitcoin, a <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> in standard format is simply a 256-bit number, between the values:</p>
+  <p><a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">Private keys</a> are what are used to unlock <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> from a particular <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>. In Dash, a <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> in standard format is simply a 256-bit number, between the values:</p>
 
-  <p>0x01 and 0xFFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFE BAAE DCE6 AF48 A03B BFD2 5E8C D036 4140, representing nearly the entire range of 2<sup>256</sup>-1 values. The range is governed by the <a href="http://www.secg.org/sec2-v2.pdf" class="auto-link">secp256k1</a> <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_DSA" class="auto-link">ECDSA</a> encryption standard used by Bitcoin.</p>
+  <p>0x01 and 0xFFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFE BAAE DCE6 AF48 A03B BFD2 5E8C D036 4140, representing nearly the entire range of 2<sup>256</sup>-1 values. The range is governed by the <a href="http://www.secg.org/sec2-v2.pdf" class="auto-link">secp256k1</a> <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_DSA" class="auto-link">ECDSA</a> encryption standard used by Dash.</p>
 
   <h5 id="wallet-import-format-wif">Wallet Import Format (WIF)</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_wallets.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_wallets.md">Edit</a>
@@ -2161,7 +2155,7 @@ stored on pieces of paper.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>In order to make copying of <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> less prone to error, <a href="/en/glossary/wallet-import-format" title="A data interchange format designed to allow exporting and importing a single private key with a flag indicating whether or not it uses a compressed public key." id="term-wallet-import-format" class="term">Wallet Import Format</a> may be utilized. <a href="/en/glossary/wallet-import-format" title="A data interchange format designed to allow exporting and importing a single private key with a flag indicating whether or not it uses a compressed public key." class="auto-link">WIF</a> uses <a href="/en/glossary/base58check" title="The method used in Dash for converting 160-bit hashes into P2PKH and P2SH addresses.  Also used in other parts of Bitcoin, such as encoding private keys for backup in WIP format.  Not the same as other base58 implementations." class="auto-link">base58Check</a> encoding on an <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>, greatly decreasing the chance of copying error, much like standard Bitcoin <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
+  <p>In order to make copying of <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> less prone to error, <a href="/en/glossary/wallet-import-format" title="A data interchange format designed to allow exporting and importing a single private key with a flag indicating whether or not it uses a compressed public key." id="term-wallet-import-format" class="term">Wallet Import Format</a> may be utilized. <a href="/en/glossary/wallet-import-format" title="A data interchange format designed to allow exporting and importing a single private key with a flag indicating whether or not it uses a compressed public key." class="auto-link">WIF</a> uses <a href="/en/glossary/base58check" title="The method used in Dash for converting 160-bit hashes into P2PKH and P2SH addresses.  Also used in other parts of Bitcoin, such as encoding private keys for backup in WIP format.  Not the same as other base58 implementations." class="auto-link">base58Check</a> encoding on an <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>, greatly decreasing the chance of copying error, much like standard Dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
 
   <ol>
     <li>
@@ -2200,7 +2194,7 @@ it is used with uncompressed <a href="/en/glossary/public-key" title="The public
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Mini <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> format is a method for encoding a <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> in under 30 characters, enabling keys to be embedded in a small physical space, such as physical bitcoin tokens, and more damage-resistant QR codes.</p>
+  <p>Mini <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> format is a method for encoding a <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> in under 30 characters, enabling keys to be embedded in a small physical space and more damage-resistant QR codes.</p>
 
   <ol>
     <li>
@@ -2210,7 +2204,7 @@ it is used with uncompressed <a href="/en/glossary/public-key" title="The public
       <p>In order to determine if a mini <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> is well-formatted, a question mark is added to the <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>.</p>
     </li>
     <li>
-      <p>The SHA256 hash is calculated. If the first byte produced is a `00’, it is well-formatted. This key restriction acts as a typo-checking mechanism. A user brute forces the process using random numbers until a well-formatted mini <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> is produced.</p>
+      <p>The SHA256 hash is calculated. If the first byte produced is a <code class="highlighter-rouge">00</code>, it is well-formatted. This key restriction acts as a typo-checking mechanism. A user brute forces the process using random numbers until a well-formatted mini <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> is produced.</p>
     </li>
     <li>
       <p>In order to derive the full <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>, the user simply takes a single SHA256 hash of the original mini <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>. This process is one-way: it is intractable to compute the mini <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> format from the derived key.</p>
@@ -2227,11 +2221,11 @@ it is used with uncompressed <a href="/en/glossary/public-key" title="The public
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Bitcoin <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">ECDSA public keys</a> represent a point on a particular Elliptic
+  <p>Dash <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">ECDSA public keys</a> represent a point on a particular Elliptic
 Curve (EC) defined in <a href="http://www.secg.org/sec2-v2.pdf" class="auto-link">secp256k1</a>. In their traditional uncompressed form,
 <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> contain an identification byte, a 32-byte X coordinate, and
 a 32-byte Y coordinate. The extremely simplified illustration below
-shows such a point on the elliptic curve used by Bitcoin,
+shows such a point on the elliptic curve used by Dash,
 y<sup>2</sup> = x<sup>3</sup> + 7, over a field of
 contiguous numbers.</p>
 
@@ -2256,8 +2250,8 @@ default in the widely-used OpenSSL library.</p>
 
   <p>Because they’re easy to use, and because they reduce almost by half
 the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> space used to store <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> for every spent <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>,
-<a href="/en/glossary/compressed-public-key" title="An ECDSA public key that is 33 bytes long rather than the 65 bytes of an uncompressed public key." class="auto-link">compressed public keys</a> are the default in Bitcoin Core and are the
-recommended default for all Bitcoin software.</p>
+<a href="/en/glossary/compressed-public-key" title="An ECDSA public key that is 33 bytes long rather than the 65 bytes of an uncompressed public key." class="auto-link">compressed public keys</a> are the default in Dash Core and are the
+recommended default for all Dash software.</p>
 
   <p>However, Bitcoin Core prior to 0.6 used uncompressed keys.  This creates
 a few complications, as the hashed form of an uncompressed key is
@@ -2266,7 +2260,7 @@ works with two different <a href="/en/glossary/p2pkh-address" title="A Dash paym
 must be submitted in the correct format in the <a href="/en/glossary/signature-script" title="Data generated by a spender which is almost always used as variables to satisfy a pubkey script. Signature Scripts are called scriptSig in code." class="auto-link">signature script</a> so it
 matches the hash in the previous <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output’s</a> <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>.</p>
 
-  <p>For this reason, Bitcoin Core uses several different identifier bytes to
+  <p>For this reason, Bitcoin Core (and Dash Core) uses several different identifier bytes to
 help programs identify how keys should be used:</p>
 
   <ul>
@@ -2289,7 +2283,7 @@ official <a href="http://www.secg.org/sec2-v2.pdf" class="auto-link">secp256k1</
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <!-- 
+  <!--
 For consistent word ordering:
 [normal|hardened|] [master|parent|child|grandchild] [extended|non-extended|] [private|public|chain] [key|code]
 -->
@@ -2319,7 +2313,7 @@ existing <a href="/en/glossary/parent-key" title="In HD wallets, a key used to d
 integer (<em>i</em>) value. This <a href="/en/glossary/child-key" title="In HD wallets, a key derived from a parent key.  The key can be either a private key or a public key, and the key derivation may also require a chain code." class="auto-link">child public key</a> is the same <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> which
 would be created by the <a href="/en/developer-guide#term-point-function" title="The ECDSA function used to create a public key from a private key" class="auto-link"><code class="highlighter-rouge">point()</code></a> function if you added the <em>i</em> value to
 the original (parent) <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> and then found the remainder of that
-sum divided by a global constant used by all Bitcoin software (<em>p</em>):</p>
+sum divided by a global constant used by all Dash software (<em>p</em>):</p>
 
   <div class="highlighter-rouge"><pre><code>point( (parent_private_key + i) % p ) == parent_public_key + point(i)
 </code></pre>
@@ -2479,7 +2473,7 @@ keys</a> can’t create hardened <a href="/en/glossary/child-key" title="In HD w
 
   <p>Because of that, a <a href="/en/glossary/hardened-extended-key" title="A variation on HD wallet extended keys where only the hardened extended private key can derive child keys. This prevents compromise of the chain code plus any private key from putting the whole wallet at risk." id="term-hardened-extended-private-key" class="term">hardened extended private
 key</a> is much less
-useful than a normal extended <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>—however, 
+useful than a normal extended <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>—however,
 <a href="/en/glossary/hardened-extended-key" title="A variation on HD wallet extended keys where only the hardened extended private key can derive child keys. This prevents compromise of the chain code plus any private key from putting the whole wallet at risk." class="auto-link">hardened extended private keys</a> create a firewall through which
 multi-level key derivation compromises cannot happen. Because hardened
 child extended <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> cannot generate grandchild <a href="/en/glossary/chain-code" title="In HD wallets, 256 bits of entropy added to the public and private keys to help them generate secure child keys; the master chain code is usually derived from a seed along with the master private key" class="auto-link">chain codes</a> on
@@ -2495,7 +2489,7 @@ make descriptions easy, many developers use the <a href="https://en.wikipedia.or
 hardened keys, so the first normal key (0x00) is 0 and the first hardened
 key (0x80000000) is 0´.</p>
 
-  <p>(Bitcoin developers typically use the ASCII apostrophe rather than
+  <p>(Dash developers typically use the ASCII apostrophe rather than
 the unicode prime symbol, a convention we will henceforth follow.)</p>
 
   <p>This compact description is further combined with slashes prefixed by
@@ -2582,14 +2576,14 @@ duress.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_wallets.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Loose-Key <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a>, also called “Just a Bunch Of Keys (JBOK)”, are a deprecated form of <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> that originated from the Bitcoin Core client <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>. The Bitcoin Core client <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> would create 100 <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>/<a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> pairs automatically via a Pseudo-Random-Number Generator (PRNG) for later use.</p>
+  <p>Loose-Key <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a>, also called “Just a Bunch Of Keys (JBOK)”, are a form of <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> that originated from the Bitcoin Core client <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>. The Dash Core client <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> creates 1000 <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>/<a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> pairs automatically via a Pseudo-Random-Number Generator (PRNG) for later use.</p>
 
   <p>These unused <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> are stored in a virtual “key pool”, with new
 keys being generated whenever a previously-generated key was used,
-ensuring the pool maintained 100 unused keys. (If the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> is
+ensuring the pool maintained 1000 unused keys. (If the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> is
 encrypted, new keys are only generated while the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> is unlocked.)</p>
 
-  <p>This created considerable difficulty in backing up one’s keys, considering backups have to be run manually to save the newly-generated <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a>. If a new <a href="/en/developer-guide#term-key-pair" title="A private key and its derived public key" class="auto-link">key pair</a> set is generated, used, and then lost prior to a backup, the stored satoshis are likely lost forever. Many older-style mobile <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> followed a similar format, but only generated a new <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> upon user demand.</p>
+  <p>This creates considerable difficulty in backing up one’s keys, considering backups have to be run manually to save the newly-generated <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a>. If a new <a href="/en/developer-guide#term-key-pair" title="A private key and its derived public key" class="auto-link">key pair</a> set is generated, used, and then lost prior to a backup, the stored <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> are likely lost forever. Many older-style mobile <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> followed a similar format, but only generated a new <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> upon user demand.</p>
 
   <p>This <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> type is being actively phased out and discouraged from being used due to the backup hassle.</p>
 
@@ -3428,9 +3422,9 @@ chance receivers get paid on time.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_operating_modes.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The first and most secure model is the one followed by Bitcoin Core, also known as a “thick” or “full chain” client. This security model assures the validity of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> by downloading and validating <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> from the <a href="/en/glossary/genesis-block" title="The first block in the Dash block chain." class="auto-link">genesis block</a> all the way to the most recently discovered <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. This is known as using the <em><a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a></em> of a particular <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to verify the client’s view of the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
+  <p>The first and most secure model is the one followed by Dash Core, also known as a “thick” or “full chain” client. This security model assures the validity of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> by downloading and validating <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> from the <a href="/en/glossary/genesis-block" title="The first block in the Dash block chain." class="auto-link">genesis block</a> all the way to the most recently discovered <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. This is known as using the <em><a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a></em> of a particular <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to verify the client’s view of the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
 
-  <p>For a client to be fooled, an adversary would need to give a complete alternative <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> history that is of greater <a href="/en/glossary/difficulty" title="How difficult it is to find a block relative to the difficulty of finding the easiest possible block. The easiest possible block has a proof-of-work difficulty of 1." class="auto-link">difficulty</a> than the current “true” chain, which is computationally expensive (if not impossible) due to the fact that the chain with the most cumulative <a href="/en/glossary/proof-of-work" title="A hash below a target value which can only be obtained, on average, by performing a certain amount of brute force work---therefore demonstrating proof of work." class="auto-link">proof of work</a> is by definition the “true” chain. Due to the computational <a href="/en/glossary/difficulty" title="How difficult it is to find a block relative to the difficulty of finding the easiest possible block. The easiest possible block has a proof-of-work difficulty of 1." class="auto-link">difficulty</a> required to generate a new <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> at the tip of the chain, the ability to fool a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">full node</a> becomes very expensive after 6 <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmations</a>. This form of verification is highly resistent to sybil attacks—only a single honest <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> is required in order to receive and verify the complete state of the “true” <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>.</p>
+  <p>For a client to be fooled, an adversary would need to give a complete alternative <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> history that is of greater <a href="/en/glossary/difficulty" title="How difficult it is to find a block relative to the difficulty of finding the easiest possible block. The easiest possible block has a proof-of-work difficulty of 1." class="auto-link">difficulty</a> than the current “true” chain, which is computationally expensive (if not impossible) due to the fact that the chain with the most cumulative <a href="/en/glossary/proof-of-work" title="A hash below a target value which can only be obtained, on average, by performing a certain amount of brute force work---therefore demonstrating proof of work." class="auto-link">proof of work</a> is by definition the “true” chain. Due to the computational <a href="/en/glossary/difficulty" title="How difficult it is to find a block relative to the difficulty of finding the easiest possible block. The easiest possible block has a proof-of-work difficulty of 1." class="auto-link">difficulty</a> required to generate a new <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> at the tip of the chain, the ability to fool a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">full node</a> becomes very expensive after 6 <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmations</a>. This form of verification is highly resistant to sybil attacks—only a single honest <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> is required in order to receive and verify the complete state of the “true” <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>.</p>
 
   <p><img src="/img/dev/en-block-height-vs-depth.svg" alt="Block Height Compared To Block Depth" /></p>
 
@@ -3440,7 +3434,7 @@ chance receivers get paid on time.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_operating_modes.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>An alternative approach detailed in the <a href="https://bitcoin.org/en/bitcoin-paper">original Bitcoin paper</a> is a client that only downloads the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">headers</a> of <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> during the initial syncing process and then requests transactions from full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> as needed. This scales linearly with the <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> at only 80 bytes per <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block header</a>, or up to 4.2MB per year, regardless of total <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> size.</p>
+  <p>An alternative approach detailed in the <a href="https://bitcoin.org/en/bitcoin-paper">original Bitcoin paper</a> is a client that only downloads the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">headers</a> of <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> during the initial syncing process and then requests transactions from full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> as needed. This scales linearly with the <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> at only 80 bytes per <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block header</a>, or up to 16.8MB per year, regardless of total <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> size.</p>
 
   <p>As described in the white paper, the <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a> in the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block header</a> along with a merkle branch can prove to the <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight Bitcoin clients." class="auto-link">SPV client</a> that the transaction in question is embedded in a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>. This does not guarantee validity of the transactions that are embedded. Instead it demonstrates the amount of work required to perform a <a href="/en/glossary/double-spend" title="A transaction that uses the same input as an already broadcast transaction. The attempt of duplication, deceit, or conversion,  will be adjudicated when only one of the transactions is recorded in the blockchain." class="auto-link">double-spend</a> attack.</p>
 
@@ -3489,7 +3483,8 @@ scripts</a> and <a href="/en/glossary/pubkey-script" title="A script included in
 
   <p>If a user is more privacy-conscious, he can set the <a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">Bloom filter</a> to include more false positives, at the expense of extra bandwidth used for transaction discovery. If a user is on a tight bandwidth budget, he can set the false-positive rate to low, knowing that this will allow full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> a clear view of what transactions are associated with his client.</p>
 
-  <p><strong>Resources:</strong> <a href="http://bitcoinj.github.io">BitcoinJ</a>, a Java implementation of Bitcoin that is based on the <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight Bitcoin clients." class="auto-link">SPV</a> security model and <a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">Bloom filters</a>. Used in most Android <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a>.</p>
+  <p><strong>Resources:</strong> <a href="https://github.com/HashEngineering/dashj">DashJ</a>, a Java implementation of Dash based on <a href="http://bitcoinj.github.io" class="auto-link">BitcoinJ</a> that uses
+the <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight Bitcoin clients." class="auto-link">SPV</a> security model and <a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">Bloom filters</a>. Used in most Android <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a>.</p>
 
   <p><a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">Bloom filters</a> were standardized for use via <a href="https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki">BIP37</a>. Review the BIP for implementation details.</p>
 
@@ -3501,7 +3496,7 @@ scripts</a> and <a href="/en/glossary/pubkey-script" title="A script included in
 
   <p>There are future proposals such as Unspent Transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">Output</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a>) commitments in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> to find a more satisfactory middle-ground for clients between needing a complete copy of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>, or trusting that a majority of your connected <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> are not lying. <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> commitments would enable a very secure client using a finite amount of storage using a data structure that is authenticated in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>. These type of proposals are, however, in very early stages, and will require <a href="/en/glossary/soft-fork" title="A softfork is a change to the bitcoin protocol  wherein only previously valid blocks/transactions  are made invalid. Since old nodes will recognise  the new blocks as valid, a softfork is backward-compatible." class="auto-link">soft forks</a> in the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</p>
 
-  <p>Until these types of operating modes are implemented, modes should be chosen based on the likely threat model, computing and bandwidth constraints, and liability in bitcoin value.</p>
+  <p>Until these types of operating modes are implemented, modes should be chosen based on the likely threat model, computing and bandwidth constraints, and liability in Dash value.</p>
 
   <p><strong>Resources:</strong> <a href="https://bitcointalk.org/index.php?topic=88208.0">Original Thread on UTXO Commitments</a>, <a href="https://github.com/maaku/bips/blob/master/drafts/auth-trie.mediawiki">Authenticated Prefix Trees BIP Proposal</a></p>
 
@@ -3511,23 +3506,23 @@ scripts</a> and <a href="/en/glossary/pubkey-script" title="A script included in
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The Bitcoin <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> protocol allows full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>
+  <p>The Dash <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> protocol allows full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>
 (<a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>) to collaboratively maintain a
 <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" id="term-network" class="term">peer-to-peer network</a> for <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> and
 transaction exchange. Full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> download and verify every <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> and transaction
 prior to relaying them to other <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>. Archival <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> are full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> which
 store the entire <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">blockchain</a> and can serve historical <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> to other <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>.
 Pruned <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> are full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> which do not store the entire <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">blockchain</a>. Many <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight Bitcoin clients." class="auto-link">SPV
-clients</a> also use the Bitcoin <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> protocol to connect to full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>.</p>
+clients</a> also use the Dash <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> protocol to connect to full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>.</p>
 
-  <p><a href="/en/glossary/consensus-rules" title="The block validation rules that full nodes follow to stay in consensus with other nodes." class="auto-link">Consensus rules</a> do not cover networking, so Bitcoin programs may use
+  <p><a href="/en/glossary/consensus-rules" title="The block validation rules that full nodes follow to stay in consensus with other nodes." class="auto-link">Consensus rules</a> do <em>not</em> cover networking, so Dash programs may use
 alternative networks and protocols, such as the <a href="https://www.mail-archive.com/bitcoin-development@lists.sourceforge.net/msg03189.html">high-speed block relay
 network</a> used by some <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miners</a> and the <a href="https://github.com/spesmilo/electrum-server">dedicated transaction
 information servers</a> used by some <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallets</a> that provide
 <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight Bitcoin clients." class="auto-link">SPV</a>-level security.</p>
 
-  <p>To provide practical examples of the Bitcoin <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">peer-to-peer network</a>, this
-section uses Bitcoin Core as a representative <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">full node</a> and <a href="http://bitcoinj.github.io">BitcoinJ</a>
+  <p>To provide practical examples of the Dash <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">peer-to-peer network</a>, this
+section uses Dash Core as a representative <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">full node</a> and <a href="https://github.com/HashEngineering/dashj">DashJ</a>
 as a representative <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight Bitcoin clients." class="auto-link">SPV client</a>. Both programs are flexible, so only
 default behavior is described. Also, for privacy, actual IP addresses
 in the example <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> below have been replaced with <a href="http://tools.ietf.org/html/rfc5737">RFC5737</a> reserved
@@ -3542,43 +3537,41 @@ IP addresses.</p>
   <p>When started for the first time, programs don’t know the IP
 addresses of any active full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>. In order to discover some IP
 addresses, they query one or more DNS names (called <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." id="term-dns-seed" class="term">DNS seeds</a>)
-hardcoded into Bitcoin Core and
-<a href="http://bitcoinj.github.io" class="auto-link">BitcoinJ</a>. The response to the lookup should include one or more <a href="http://tools.ietf.org/html/rfc1035#section-3.2.2">DNS
-A records</a> with the IP addresses of full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> that may accept new
-incoming connections. For example, using the <a href="https://en.wikipedia.org/wiki/Dig_%28Unix_command%29">Unix <code class="highlighter-rouge">dig</code>
-command</a>:</p>
+hardcoded into Dash Core. The response to the lookup should include one or more
+<a href="http://tools.ietf.org/html/rfc1035#section-3.2.2">DNS A records</a> with the IP addresses of full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> that may accept new
+incoming connections. For example, using the <a href="https://en.wikipedia.org/wiki/Dig_%28Unix_command%29">Unix <code class="highlighter-rouge">dig</code>command</a>:</p>
 
   <div class="highlighter-rouge"><pre><code>;; QUESTION SECTION:
-;seed.bitcoin.sipa.be.	    IN  A
+;dnsseed.masternode.io.		  IN	A
 
 ;; ANSWER SECTION:
-seed.bitcoin.sipa.be.	60  IN  A  192.0.2.113
-seed.bitcoin.sipa.be.	60  IN  A  198.51.100.231
-seed.bitcoin.sipa.be.	60  IN  A  203.0.113.183
+dnsseed.masternode.io.	60	IN	A	192.0.2.113
+dnsseed.masternode.io.	60	IN	A	198.51.100.231
+dnsseed.masternode.io.	60	IN	A	203.0.113.183
+
 [...]
 </code></pre>
   </div>
 
-  <p>The <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seeds</a> are maintained by Bitcoin community members: some of them
+  <p>The <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seeds</a> are maintained by Dash community members: some of them
 provide dynamic <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seed</a> servers which automatically get IP addresses
 of active <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> by scanning the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>; others provide static <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS
 seeds</a> that are updated manually and are more likely to provide IP
 addresses for inactive <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>. In either case, <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> are added to the
-<a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seed</a> if they run on the default Bitcoin ports of 8333 for <a href="/en/glossary/mainnet" title="The original and main network for Dash transactions, where duffs have real economic value." class="auto-link">mainnet</a>
-or 18333 for <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend duffs that have no real-world value on a network that is very similar to the Dash mainnet." class="auto-link">testnet</a>.</p>
+<a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seed</a> if they run on the default Dash ports of 9999 for <a href="/en/glossary/mainnet" title="The original and main network for Dash transactions, where duffs have real economic value." class="auto-link">mainnet</a>
+or 19999 for <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend duffs that have no real-world value on a network that is very similar to the Dash mainnet." class="auto-link">testnet</a>.</p>
 
   <p><a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seed</a> results are not authenticated and a malicious seed operator or
-<a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="auto-link">man-in-the-middle</a> attacker can return only IP addresses of
+<a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="auto-link">man-in-the-middle</a> attacker could return only IP addresses of
 <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> controlled by the attacker, isolating a program on the attacker’s
 own <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> and allowing the attacker to feed it bogus transactions and
-<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>.  For this reason, programs should not rely on <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seeds</a>
-exclusively.</p>
+<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>. For this reason, programs should not rely on <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seeds</a> exclusively.</p>
 
   <p>Once a program has connected to the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, its <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> can begin to send
 it <code class="highlighter-rouge">addr</code>
 (address) messages with the IP addresses and port numbers of
 other <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, providing a fully decentralized method of
-<a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> discovery. Bitcoin Core keeps a record of known <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> in a
+<a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> discovery. Dash Core keeps a record of known <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> in a
 persistent on-disk database which usually allows it to connect directly
 to those <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> on subsequent startups without having to use <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seeds</a>.</p>
 
@@ -3589,31 +3582,28 @@ significant delay to the amount of time it takes to connect to the
 <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, forcing a user to wait before sending a transaction or checking
 the status of payment.</p>
 
-  <p>To avoid this possible delay, <a href="http://bitcoinj.github.io" class="auto-link">BitcoinJ</a> always uses dynamic <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seeds</a> to
-get IP addresses for <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> believed to be currently active.
-Bitcoin Core also tries to strike a balance between minimizing delays
-and avoiding unnecessary <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seed</a> use: if Bitcoin Core has entries in
+  <p>Dash Core tries to strike a balance between minimizing delays
+and avoiding unnecessary <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seed</a> use: if Dash Core has entries in
 its <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> database, it spends up to 11 seconds attempting to connect to
 at least one of them before falling back to seeds; if a connection is
 made within that time, it does not query any seeds.</p>
 
-  <p>Both Bitcoin Core and <a href="http://bitcoinj.github.io" class="auto-link">BitcoinJ</a> also include a hardcoded list of IP
+  <p>Dash Core also include a hardcoded list of IP
 addresses and port numbers to several dozen <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> which were active
 around the time that particular version of the software was first
-released. Bitcoin Core will start attempting to connect to these <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>
+released. Dash Core will start attempting to connect to these <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>
 if none of the <a href="/en/glossary/dns-seed" title="A DNS server which returns IP addresses of full nodes on the Dash network to assist in peer discovery." class="auto-link">DNS seed</a> servers have responded to a query within 60
 seconds, providing an automatic fallback option.</p>
 
-  <p>As a manual fallback option, Bitcoin Core also provides several
+  <p>As a manual fallback option, Dash Core also provides several
 command-line connection options, including the ability to get a list of
 <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> from a specific <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> by IP address, or to make a persistent
 connection to a specific <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> by IP address.  See the <code class="highlighter-rouge">-help</code> text for
-details.  <a href="http://bitcoinj.github.io" class="auto-link">BitcoinJ</a> can be programmed to do the same thing.</p>
+details.</p>
 
-  <p><strong>Resources:</strong> <a href="https://github.com/sipa/bitcoin-seeder">Bitcoin Seeder</a>, the program run by several of the
-seeds used by Bitcoin Core and <a href="http://bitcoinj.github.io" class="auto-link">BitcoinJ</a>. The Bitcoin Core <a href="https://github.com/dashpay/dash/blob/master/doc/dnsseed-policy.md">DNS Seed
-Policy</a>.  The hardcoded list of IP addresses used by Bitcoin Core and
-<a href="http://bitcoinj.github.io" class="auto-link">BitcoinJ</a> is generated using the <a href="https://github.com/dashpay/dash/tree/master/contrib/seeds">makeseeds script</a>.</p>
+  <p><strong>Resources:</strong> <a href="https://github.com/nightlydash/dash-seeder/tree/master">Dash Seeder</a>, the program run by several of the
+seeds used by Dash Core. The Dash Core [DNS SeedPolicy][]. The hardcoded list
+ of IP addresses used by Dash Core is generated using the <a href="https://github.com/dashpay/dash/tree/master/contrib/seeds">makeseeds script</a>.</p>
 
   <h3 id="connecting-to-peers">Connecting To Peers</h3>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
@@ -3649,11 +3639,11 @@ downloaded, such as when a previously-caught-up <a href="/en/glossary/node" titl
 for a long time. In this case, a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> can use the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> method to download
 all the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> which were produced since the last time it was online.</p>
 
-  <p>Bitcoin Core uses the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> method any time the last <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> on its local
+  <p>Dash Core uses the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> method any time the last <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> on its local
 <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> has a <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block header</a> time more than 24 hours in the past.
-<a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a> will also perform <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> if its local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> is
+Dash Core will also perform <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> if its local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> is
 more than 144 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> lower than its local <a href="/en/glossary/header-chain" title="A chain of block headers with each header linking to the header that preceded it; the most-difficult-to-recreate chain is the best header chain" class="auto-link">best header chain</a> (that is,
-the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> is more than about 24 hours in the past).</p>
+the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> is more than about 6 hours in the past).</p>
 
   <h4 id="blocks-first">Blocks-First</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
@@ -3661,9 +3651,9 @@ the local <a href="/en/glossary/block-chain" title="A chain of blocks with each 
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Bitcoin Core (up until version <a href="/en/release/v0.9.3">0.9.3</a>) uses a
-simple <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">initial block download</a> (<a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a>) method we’ll call <em><a href="/en/glossary/blocks-first-sync" title="Synchronizing the block chain by downloading each block from a peer and then validating it." class="auto-link">blocks-first</a></em>.
-The goal is to download the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> from the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> in sequence.</p>
+  <p>Dash Core (up until version 0.12.0.x) uses a simple <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">initial block download</a> (<a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a>)
+method we’ll call <em><a href="/en/glossary/blocks-first-sync" title="Synchronizing the block chain by downloading each block from a peer and then validating it." class="auto-link">blocks-first</a></em>. The goal is to download the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> from the
+<a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> in sequence.</p>
 
   <p><img src="/img/dev/en-blocks-first-flowchart.svg" alt="Overview Of Blocks-First Method" /></p>
 
@@ -3676,7 +3666,7 @@ local <a href="/en/glossary/block-chain" title="A chain of blocks with each bloc
 
   <p>In the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hashes field of the <a href="/en/developer-reference#getblocks" title="A P2P protocol message used to request an inv message containing a range of block header hashes" class="auto-link"><code class="highlighter-rouge">getblocks</code> message</a>, this new <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>
 sends the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash of the only <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> it has, the <a href="/en/glossary/genesis-block" title="The first block in the Dash block chain." class="auto-link">genesis block</a>
-(6fe2…0000 in <a href="/en/glossary/internal-byte-order" title="The standard order in which hash digests are displayed as strings---the same format used in serialized blocks and transactions." class="auto-link">internal byte order</a>).  It also sets the stop hash field
+(b67a…0000 in <a href="/en/glossary/internal-byte-order" title="The standard order in which hash digests are displayed as strings---the same format used in serialized blocks and transactions." class="auto-link">internal byte order</a>).  It also sets the stop hash field
 to all zeroes to request a maximum-size response.</p>
 
   <p>Upon <a href="/en/developer-guide#term-receipt" title="A cryptographically-verifiable receipt created using parts of a payment request and a confirmed transaction" class="auto-link">receipt</a> of the <a href="/en/developer-reference#getblocks" title="A P2P protocol message used to request an inv message containing a range of block header hashes" class="auto-link"><code class="highlighter-rouge">getblocks</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> takes the first
@@ -3696,7 +3686,7 @@ the <a href="/en/glossary/block" title="One or more transactions prefaced by a b
   <p>The <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventories</a> appear in the <a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> in the same order they
 appear in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>, so this first <a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> contains
 <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventories</a> for <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> 1 through 501. (For example, the hash of <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> 1
-is 4860…0000 as seen in the illustration above.)</p>
+is 4343…0000 as seen in the illustration above.)</p>
 
   <p>The <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> uses the received <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventories</a> to request 128 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> from
 the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> in the <a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> illustrated below.</p>
@@ -3763,7 +3753,7 @@ of its downloading. This has several implications:</p>
     <li>
       <p><strong>Speed Limits:</strong> All requests are made to the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, so if the
 sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> has limited upload bandwidth, the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> will have slow
-download speeds.  Note: if the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> goes offline, Bitcoin Core
+download speeds.  Note: if the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> goes offline, Dash Core
 will continue downloading from another <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>—but it will still only
 download from a single sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> at a time.</p>
     </li>
@@ -3772,7 +3762,7 @@ download from a single sync <a href="/en/glossary/node" title="A computer that c
 otherwise valid) <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> to the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>. The <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> won’t be
 able to identify it as non-best until the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">initial block download</a> nears
 completion, forcing the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> to restart its <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> download
-over again from a different <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>. Bitcoin Core ships with several
+over again from a different <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>. Dash Core ships with several
 <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> checkpoints at various <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">block heights</a> selected by
 developers to help an <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> detect that it is being fed an
 alternative <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> history—allowing the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> to restart
@@ -3794,7 +3784,7 @@ which may lead to high memory use.</p>
   </ul>
 
   <p>All of these problems are addressed in part or in full by the
-<a href="/en/glossary/headers-first-sync" title="Synchronizing the block chain by downloading block headers before downloading the full blocks." class="auto-link">headers-first IBD</a> method used in <a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a>.</p>
+<a href="/en/glossary/headers-first-sync" title="Synchronizing the block chain by downloading block headers before downloading the full blocks." class="auto-link">headers-first IBD</a> method used in Dash Core 0.12.0.x.</p>
 
   <p><strong>Resources:</strong> The table below summarizes the messages mentioned
 throughout this subsection. The links in the message field will take you
@@ -3832,7 +3822,7 @@ to the reference page for that message.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p><a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a> uses an <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">initial block download</a> (<a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a>) method called
+  <p>Dash Core 0.12.0 uses an <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">initial block download</a> (<a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a>) method called
 <em><a href="/en/glossary/headers-first-sync" title="Synchronizing the block chain by downloading block headers before downloading the full blocks." class="auto-link">headers-first</a></em>. The goal is to download the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">headers</a> for the best <a href="/en/glossary/header-chain" title="A chain of block headers with each header linking to the header that preceded it; the most-difficult-to-recreate chain is the best header chain" id="term-header-chain" class="term">header
 chain</a>, partially validate them as best
 as possible, and then download the corresponding <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> in parallel.  This
@@ -3849,7 +3839,7 @@ local <a href="/en/glossary/block-chain" title="A chain of blocks with each bloc
 
   <p>In the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hashes field of the <a href="/en/developer-reference#getheaders" title="A P2P protocol message used to request a range of block headers" class="auto-link"><code class="highlighter-rouge">getheaders</code> message</a>, the new <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>
 sends the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash of the only <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> it has, the <a href="/en/glossary/genesis-block" title="The first block in the Dash block chain." class="auto-link">genesis block</a>
-(6fe2…0000 in <a href="/en/glossary/internal-byte-order" title="The standard order in which hash digests are displayed as strings---the same format used in serialized blocks and transactions." class="auto-link">internal byte order</a>).  It also sets the stop hash field
+(b67a…0000 in <a href="/en/glossary/internal-byte-order" title="The standard order in which hash digests are displayed as strings---the same format used in serialized blocks and transactions." class="auto-link">internal byte order</a>).  It also sets the stop hash field
 to all zeroes to request a maximum-size response.</p>
 
   <p>Upon <a href="/en/developer-guide#term-receipt" title="A cryptographically-verifiable receipt created using parts of a payment request and a confirmed transaction" class="auto-link">receipt</a> of the <a href="/en/developer-reference#getheaders" title="A P2P protocol message used to request a range of block headers" class="auto-link"><code class="highlighter-rouge">getheaders</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> takes the first
@@ -3888,7 +3878,7 @@ of downloaded data.</p>
  has downloaded belong to the <a href="/en/glossary/header-chain" title="A chain of block headers with each header linking to the header that preceded it; the most-difficult-to-recreate chain is the best header chain" class="auto-link">best header chain</a> reported by any of
  its outbound <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>. This means a dishonest sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> will quickly be
  discovered even if checkpoints aren’t used (as long as the <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>
- connects to at least one honest <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a>; Bitcoin Core will continue to
+ connects to at least one honest <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a>; Dash Core will continue to
  provide checkpoints in case honest <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> can’t be found).</p>
     </li>
     <li>
@@ -3903,23 +3893,23 @@ may store all <a href="/en/glossary/block" title="One or more transactions prefa
 avoid having its download speed constrained to the upload speed of a
 single sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>.</p>
 
-      <p>To spread the load between multiple <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>, Bitcoin Core will only
+      <p>To spread the load between multiple <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>, Dash Core will only
  request up to 16 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> at a time from a single <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a>. Combined with
  its maximum of 8 outbound connections, this means <a href="/en/glossary/headers-first-sync" title="Synchronizing the block chain by downloading block headers before downloading the full blocks." class="auto-link">headers-first</a>
- Bitcoin Core will request a maximum of 128 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> simultaneously
- during <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> (the same maximum number that <a href="/en/glossary/blocks-first-sync" title="Synchronizing the block chain by downloading each block from a peer and then validating it." class="auto-link">blocks-first</a> Bitcoin Core
+ Dash Core will request a maximum of 128 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> simultaneously
+ during <a href="/en/glossary/initial-block-download" title="The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain." class="auto-link">IBD</a> (the same maximum number that <a href="/en/glossary/blocks-first-sync" title="Synchronizing the block chain by downloading each block from a peer and then validating it." class="auto-link">blocks-first</a> Dash Core
  requested from its sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>).</p>
     </li>
   </ol>
 
   <p><img src="/img/dev/en-headers-first-moving-window.svg" alt="Simulated Headers-First Download Window" /></p>
 
-  <p>Bitcoin Core’s <a href="/en/glossary/headers-first-sync" title="Synchronizing the block chain by downloading block headers before downloading the full blocks." class="auto-link">headers-first</a> mode uses a 1,024-<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> moving download
+  <p>Dash Core’s <a href="/en/glossary/headers-first-sync" title="Synchronizing the block chain by downloading block headers before downloading the full blocks." class="auto-link">headers-first</a> mode uses a 1,024-<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> moving download
 window to maximize download speed. The lowest-<a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in the window
 is the next <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to be validated; if the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> hasn’t arrived by the
-time Bitcoin Core is ready to validate it, Bitcoin Core will wait a
+time Dash Core is ready to validate it, Dash Core will wait a
 minimum of two more seconds for the stalling <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> to send the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. If
-the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> still hasn’t arrived, Bitcoin Core will disconnect from the
+the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> still hasn’t arrived, Dash Core will disconnect from the
 stalling <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> and attempt to connect to another <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>. For example, in
 the illustration above, <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Node</a> A will be disconnected if it doesn’t send
 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> 3 within at least two seconds.</p>
@@ -4011,7 +4001,7 @@ subsection below.</p>
     </li>
   </ul>
 
-  <p>By default, Bitcoin Core broadcasts <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> using <a href="/en/developer-guide#term-standard-block-relay" title="The regular block relay method: announcing a block with an inv message and waiting for a response" class="auto-link">standard block relay</a>,
+  <p>By default, Dash Core broadcasts <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> using <a href="/en/developer-guide#term-standard-block-relay" title="The regular block relay method: announcing a block with an inv message and waiting for a response" class="auto-link">standard block relay</a>,
 but it will accept <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> sent using either of the methods described above.</p>
 
   <p>Full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> validate the received <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> and then advertise it to their
@@ -4112,7 +4102,10 @@ ignore <a href="/en/glossary/orphan-block" title="Blocks whose parent block has 
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>In order to send a transaction to a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a>, an <a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> is sent. If a <code class="highlighter-rouge">getdata</code> response message is received, the transaction is sent using <code class="highlighter-rouge">tx</code>. The <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> receiving this transaction also forwards the transaction in the same manner, given that it is a valid transaction.</p>
+  <p>In order to send a transaction to a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a>, an <a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a> is sent. If a
+<a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a> is received in reply, the transaction is sent using a
+<a href="/en/developer-reference#tx" title="A P2P protocol message which sends a single serialized transaction" class="auto-link"><code class="highlighter-rouge">tx</code> message</a>. If it is a valid transaction, the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> receiving the transaction
+also forwards the transaction to its <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a>.</p>
 
   <h4 id="memory-pool">Memory Pool</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
@@ -4126,8 +4119,8 @@ actually <a href="/en/glossary/mining" title="Mining is the act of creating vali
 for any <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> who wants to keep track of <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">unconfirmed transactions</a>, such
 as <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> serving <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">unconfirmed transaction</a> information to <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight Bitcoin clients." class="auto-link">SPV clients</a>.</p>
 
-  <p>Because <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">unconfirmed transactions</a> have no permanent status in Bitcoin,
-Bitcoin Core stores them in non-persistent memory, calling them a memory
+  <p>Because <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">unconfirmed transactions</a> have no permanent status in Dash,
+Dash Core stores them in non-persistent memory, calling them a memory
 pool or mempool. When a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> shuts down, its memory pool is lost except
 for any transactions stored by its <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>. This means that never-mined
 <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">unconfirmed transactions</a> tend to slowly disappear from the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> as
@@ -4137,7 +4130,7 @@ for others.</p>
   <p>Transactions which are mined into <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> that later become <a href="/en/glossary/stale-block" title="Blocks which were successfully mined but which aren't included on the current best block chain, likely because some other block at the same height had its chain extended first." class="auto-link">stale blocks</a> may be
 added back into the memory pool. These re-added transactions may be
 re-removed from the pool almost immediately if the replacement <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>
-include them. This is the case in Bitcoin Core, which removes <a href="/en/glossary/stale-block" title="Blocks which were successfully mined but which aren't included on the current best block chain, likely because some other block at the same height had its chain extended first." class="auto-link">stale
+include them. This is the case in Dash Core, which removes <a href="/en/glossary/stale-block" title="Blocks which were successfully mined but which aren't included on the current best block chain, likely because some other block at the same height had its chain extended first." class="auto-link">stale
 blocks</a> from the chain one by one, starting with the tip (highest <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>).
 As each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> is removed, its transactions are added back to the memory
 pool. After all of the <a href="/en/glossary/stale-block" title="Blocks which were successfully mined but which aren't included on the current best block chain, likely because some other block at the same height had its chain extended first." class="auto-link">stale blocks</a> are removed, the replacement
@@ -4157,7 +4150,162 @@ next <a href="/en/glossary/block" title="One or more transactions prefaced by a 
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Take note that for both types of broadcasting, mechanisms are in place to punish misbehaving <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> who take up bandwidth and computing resources by sending false information. If a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> gets a banscore above the <code class="highlighter-rouge">-banscore=&lt;n&gt;</code> threshold, he will be banned for the number of seconds defined by <code class="highlighter-rouge">-bantime=&lt;n&gt;</code>, which is 86,400 by default (24 hours).</p>
+  <p>Take note that for both types of broadcasting, mechanisms are in place to punish
+misbehaving <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> who take up bandwidth and computing resources by sending false
+information. If a <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> gets a banscore above the <code class="highlighter-rouge">-banscore=&lt;n&gt;</code> threshold, he
+will be banned for the number of seconds defined by <code class="highlighter-rouge">-bantime=&lt;n&gt;</code>, which is
+86,400 by default (24 hours).</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Misbehavior</th>
+        <th>Ban Score</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Net</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td><a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">Bloom Filter</a> Service</td>
+        <td><strong>100</strong></td>
+        <td><a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">Bloom filter</a> message received from <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peer</a> that has <a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">bloom filter</a> commands disabled by default (protocol version &gt; 70201) (<a href="/en/developer-reference#filterclear" title="A P2P protocol message used to send a filter to a remote peer, requesting that they only send transactions which match the filter." class="auto-link"><code class="highlighter-rouge">filterload</code> message</a>, <a href="/en/developer-reference#filteradd" title="A P2P protocol message used to add a data element to an existing bloom filter." class="auto-link"><code class="highlighter-rouge">filteradd</code> message</a>, or <a href="/en/developer-reference#filterclear" title="A P2P protocol message used to remove an existing bloom filter." class="auto-link"><code class="highlighter-rouge">filterclear</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td>Duplicate Version</td>
+        <td>1</td>
+        <td>Duplicate <a href="/en/developer-reference#version" title="A P2P network message sent at the begining of a connection to allow protocol version negotiation" class="auto-link"><code class="highlighter-rouge">version</code> message</a> received</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td>No Version</td>
+        <td>1</td>
+        <td>Received a message prior to receiving a <a href="/en/developer-reference#version" title="A P2P network message sent at the begining of a connection to allow protocol version negotiation" class="auto-link"><code class="highlighter-rouge">version</code> message</a></td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td><a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">Address</a> List Size</td>
+        <td>20</td>
+        <td>More than 1000 <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> received (<a href="/en/developer-reference#addr" title="The P2P network message which relays IP addresses and port numbers of active nodes to other nodes and clients, allowing decentralized peer discovery." class="auto-link"><code class="highlighter-rouge">addr</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td><a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">Inventory</a> List</td>
+        <td>20</td>
+        <td>More than 50000 <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventories</a> received (<a href="/en/developer-reference#inv" title="A P2P protocol message used to send inventories of transactions and blocks known to the transmitting peer" class="auto-link"><code class="highlighter-rouge">inv</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td>Get Data Size</td>
+        <td>20</td>
+        <td>More than 50000 <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventories</a> requested (<a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td>Orphan Transaction</td>
+        <td><strong>??</strong></td>
+        <td><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peer</a> relayed an invalid orphan transaction</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td> </td>
+        <td><strong>??</strong></td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td><a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">Header</a> List Size</td>
+        <td>20</td>
+        <td>More than 2000 <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">headers</a> received (<a href="/en/developer-reference#headers" title="A P2P protocol message containing one or more block headers" class="auto-link"><code class="highlighter-rouge">headers</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td><a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">Header</a> List Sequence</td>
+        <td>20</td>
+        <td>Non-continous <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">headers</a> sequence received (<a href="/en/developer-reference#headers" title="A P2P protocol message containing one or more block headers" class="auto-link"><code class="highlighter-rouge">headers</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td>Invalid <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">Block</a></td>
+        <td>Varies</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td>Invalid/Expired Alert</td>
+        <td>10</td>
+        <td>Invalid or expired alert received (<a href="/en/developer-reference#alert" title="The P2P network message which sends alerts in case of major software problems." class="auto-link"><code class="highlighter-rouge">alert</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Net</td>
+        <td><a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">Bloom Filter</a> Size</td>
+        <td><strong>100</strong></td>
+        <td>Maximum script element size (520) exceeded (<a href="/en/developer-reference#filterclear" title="A P2P protocol message used to send a filter to a remote peer, requesting that they only send transactions which match the filter." class="auto-link"><code class="highlighter-rouge">filterload</code> message</a> or <a href="/en/developer-reference#filteradd" title="A P2P protocol message used to add a data element to an existing bloom filter." class="auto-link"><code class="highlighter-rouge">filteradd</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Governance</td>
+        <td>Sync</td>
+        <td>20</td>
+        <td>Requesting a governance sync too frequently (<a href="/en/developer-reference#govsync" title="A P2P network message used to synchronize governance objects" class="auto-link"><code class="highlighter-rouge">govsync</code> message</a> with empty hash)</td>
+      </tr>
+      <tr>
+        <td>Governance</td>
+        <td>Invalid Object</td>
+        <td>20</td>
+        <td><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peer</a> relayed an invalid governance object (<a href="/en/developer-reference#govobj" title="A P2P network message used to send governance objects (proposals, etc.)" class="auto-link"><code class="highlighter-rouge">govobj</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Governance</td>
+        <td>Invalid Vote</td>
+        <td>20</td>
+        <td><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peer</a> relayed an invalid/invalid old vote(<a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Governance</td>
+        <td>Unsupported Vote Signal</td>
+        <td>20</td>
+        <td>Vote signal outside the accepted range (see <a href="/en/developer-reference#govobjvote" title="A P2P network message used to send governance object votes" class="auto-link"><code class="highlighter-rouge">govobjvote</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Payment</td>
+        <td>Sync</td>
+        <td>20</td>
+        <td>Requesting a masternode payment sync too frequently (<a href="/en/developer-reference#mnget" title="A P2P protocol message that requests masternode payment sync" class="auto-link"><code class="highlighter-rouge">mnget</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Payment</td>
+        <td>Vote Signature</td>
+        <td>20</td>
+        <td>Invalid <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> on payment vote (<a href="/en/developer-reference#mnw" title="A P2P protocol message used to pick the next winning masternode (payee)" class="auto-link"><code class="highlighter-rouge">mnw</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Payment</td>
+        <td>Non-quorum Vote</td>
+        <td>20</td>
+        <td>Payment vote from masternode not in the quorum. Rule activates with DIP1 (<a href="/en/developer-reference#mnw" title="A P2P protocol message used to pick the next winning masternode (payee)" class="auto-link"><code class="highlighter-rouge">mnw</code> message</a>)</td>
+      </tr>
+      <tr>
+        <td>Spork</td>
+        <td>Signature</td>
+        <td><strong>100</strong></td>
+        <td><a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">Peer</a> relayed a spork with an invalid <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> (<a href="/en/developer-reference#spork" title="A P2P network message used to send the activation status of a spork" class="auto-link"><code class="highlighter-rouge">spork</code> message</a>)</td>
+      </tr>
+    </tbody>
+  </table>
 
   <h3 id="alerts">Alerts</h3>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
