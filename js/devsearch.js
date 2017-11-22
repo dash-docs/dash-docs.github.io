@@ -1381,6 +1381,11 @@ uri: "/en/developer-reference#signrawtransaction",
 category: "RPCs"
 },
 {
+label: "SentinelPing",
+uri: "/en/developer-reference#sentinelping",
+category: "RPCs"
+},
+{
 label: "Spork",
 uri: "/en/developer-reference#spork-rpc",
 category: "RPCs"
