@@ -395,6 +395,13 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       </li>
       <li><a href="#governance" id="markdown-toc-governance">Governance</a>        <ul>
           <li><a href="#synchronization" id="markdown-toc-synchronization">Synchronization</a></li>
+          <li><a href="#sentinel" id="markdown-toc-sentinel">Sentinel</a>            <ul>
+              <li><a href="#sentinel-sync" id="markdown-toc-sentinel-sync">Sentinel Sync</a></li>
+              <li><a href="#sentinel-ping" id="markdown-toc-sentinel-ping">Sentinel Ping</a></li>
+              <li><a href="#sentinel-prune" id="markdown-toc-sentinel-prune">Sentinel Prune</a></li>
+              <li><a href="#sentinel-superblock" id="markdown-toc-sentinel-superblock">Sentinel Superblock</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
@@ -4254,6 +4261,43 @@ objects.</p>
       </tr>
     </tbody>
   </table>
+
+  <h4 id="sentinel">Sentinel</h4>
+
+  <p>Sentinel is a Python application that connects to a masternode’s local dashd
+instance to run as an autonomous agent for persisting, processing, and automating
+Dash 12.1+ governance objects and tasks. Sentinel abstracts some governance
+details away from Dash Core for easier extensibility of the governance system in
+the future. This will allow the integration between Evolution and Dash Core to
+proceed more smoothly and enable new governance object additions with minimal
+impact to Dash Core.</p>
+
+  <p>Sentinel runs periodically and performs four main tasks as described below:
+governance sync, ping, governance object pruning, and superblock management.
+The governance object data is stored in a SQLite database.</p>
+
+  <h5 id="sentinel-sync">Sentinel Sync</h5>
+  <p>Sentinel issues a <code class="highlighter-rouge">gobject list</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> command and updates its database with the
+results returned from dashd. When objects are removed from the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, they are
+purged from the Sentinel database.</p>
+
+  <h5 id="sentinel-ping">Sentinel Ping</h5>
+  <p>In Dash Core 12.2, use of the <code class="highlighter-rouge">watchdog</code> governance object type was replaced
+by integrating a sentinel information into the masternode ping (<a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a>)
+via <a href="https://github.com/dashpay/dash/pull/1491">Pull Request #1491</a>.
+Sentinel calls the <a href="/en/developer-reference#sentinelping" class="auto-link"><code class="highlighter-rouge">sentinelping</code> RPC</a> which updates the masternode info to
+prevent it from entering a <code class="highlighter-rouge">MASTERNODE_WATCHDOG_EXPIRED</code> state.</p>
+
+  <h5 id="sentinel-prune">Sentinel Prune</h5>
+  <p>Sentinel 1.1.0 introduced proposal pruning which automatically votes to delete
+expired proposals following approximately half of a superblock cycle. This delay
+period ensures that proposals are not deleted prematurely. Prior to this,
+proposals remained in memory unless a sufficient number of masternodes manually
+voted to delete them.</p>
+
+  <h5 id="sentinel-superblock">Sentinel Superblock</h5>
+  <p>Sentinel manages superblock creation, voting, and submission to dashd for
+<a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> propagation.</p>
 
   <h2 id="mining">Mining</h2>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_mining.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_mining.md">Edit</a>

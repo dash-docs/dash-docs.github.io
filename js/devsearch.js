@@ -866,6 +866,11 @@ uri: "/en/developer-reference#disconnectnode",
 category: "RPCs"
 },
 {
+label: "DumpHDInfo",
+uri: "/en/developer-reference#dumphdinfo",
+category: "RPCs"
+},
+{
 label: "DumpPrivKey",
 uri: "/en/developer-reference#dumpprivkey",
 category: "RPCs"
@@ -1191,6 +1196,11 @@ uri: "/en/developer-reference#importaddress",
 category: "RPCs"
 },
 {
+label: "ImportElectrumWallet",
+uri: "/en/developer-reference#importelectrumwallet",
+category: "RPCs"
+},
+{
 label: "ImportMulti",
 uri: "/en/developer-reference#importmulti",
 category: "RPCs"
@@ -1206,8 +1216,23 @@ uri: "/en/developer-reference#importprunedfunds",
 category: "RPCs"
 },
 {
+label: "ImportPubkey",
+uri: "/en/developer-reference#importpubkey",
+category: "RPCs"
+},
+{
 label: "ImportWallet",
 uri: "/en/developer-reference#importwallet",
+category: "RPCs"
+},
+{
+label: "InstantSendToAddress",
+uri: "/en/developer-reference#instantsendtoaddress",
+category: "RPCs"
+},
+{
+label: "Keepass",
+uri: "/en/developer-reference#keepass",
 category: "RPCs"
 },
 {
