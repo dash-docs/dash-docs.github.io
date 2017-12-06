@@ -313,6 +313,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 
 
 
+
  -->
 
 <h1 id="dash-developer-reference">Dash Developer Reference</h1>
@@ -533,7 +534,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
               <li><a href="#importpubkey" id="markdown-toc-importpubkey">ImportPubKey</a></li>
               <li><a href="#importwallet" id="markdown-toc-importwallet">ImportWallet</a></li>
               <li><a href="#instantsendtoaddress" id="markdown-toc-instantsendtoaddress">InstantSendToAddress</a></li>
-              <li><a href="#keepass" id="markdown-toc-keepass">Keepass</a></li>
+              <li><a href="#keepass" id="markdown-toc-keepass">KeePass</a></li>
               <li><a href="#keypoolrefill" id="markdown-toc-keypoolrefill">KeyPoolRefill</a></li>
               <li><a href="#listaccounts" id="markdown-toc-listaccounts">ListAccounts</a></li>
               <li><a href="#listaddressgroupings" id="markdown-toc-listaddressgroupings">ListAddressGroupings</a></li>
@@ -545,7 +546,22 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
               <li><a href="#listtransactions" id="markdown-toc-listtransactions">ListTransactions</a></li>
               <li><a href="#listunspent" id="markdown-toc-listunspent">ListUnspent</a></li>
               <li><a href="#lockunspent" id="markdown-toc-lockunspent">LockUnspent</a></li>
-              <li><a href="#masternode" id="markdown-toc-masternode">Masternode</a></li>
+              <li><a href="#masternode" id="markdown-toc-masternode">Masternode</a>                <ul>
+                  <li><a href="#masternode-count" id="markdown-toc-masternode-count">Masternode Count</a></li>
+                  <li><a href="#masternode-current" id="markdown-toc-masternode-current">Masternode Current</a></li>
+                  <li><a href="#masternode-debug" id="markdown-toc-masternode-debug">Masternode Debug</a></li>
+                  <li><a href="#masternode-genkey" id="markdown-toc-masternode-genkey">Masternode Genkey</a></li>
+                  <li><a href="#masternode-outputs" id="markdown-toc-masternode-outputs">Masternode Outputs</a></li>
+                  <li><a href="#masternode-start" id="markdown-toc-masternode-start">Masternode Start</a></li>
+                  <li><a href="#masternode-start-alias" id="markdown-toc-masternode-start-alias">Masternode Start-alias</a></li>
+                  <li><a href="#masternode-start-mode" id="markdown-toc-masternode-start-mode">Masternode Start-mode</a></li>
+                  <li><a href="#masternode-status" id="markdown-toc-masternode-status">Masternode Status</a></li>
+                  <li><a href="#masternode-list" id="markdown-toc-masternode-list">Masternode List</a></li>
+                  <li><a href="#masternode-list-conf" id="markdown-toc-masternode-list-conf">Masternode List-conf</a></li>
+                  <li><a href="#masternode-winner" id="markdown-toc-masternode-winner">Masternode Winner</a></li>
+                  <li><a href="#masternode-winners" id="markdown-toc-masternode-winners">Masternode Winners</a></li>
+                </ul>
+              </li>
               <li><a href="#masternodebroadcast" id="markdown-toc-masternodebroadcast">MasternodeBroadcast</a>                <ul>
                   <li><a href="#mnb-create-alias" id="markdown-toc-mnb-create-alias">MNB create-alias</a></li>
                   <li><a href="#mnb-create-all" id="markdown-toc-mnb-create-all">MNB create-all</a></li>
@@ -7556,7 +7572,7 @@ th.tg-sort-header::-moz-selection { background:transparent; }th.tg-sort-header::
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">Keepass</td>
+    <td class="tg-b7b8">KeePass</td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
@@ -7785,14 +7801,14 @@ function searchRPC() {
     <li><a href="/en/developer-reference#getpoolinfo">GetPoolInfo</a>: returns an object containing mixing pool related information.</li>
     <li><a href="/en/developer-reference#getsuperblockbudget">GetSuperblockBudget</a>: returns the absolute maximum sum of superblock payments allowed.</li>
     <li><a href="/en/developer-reference#gobject">GObject</a>: provides a set of commands for managing governance objects and displaying information about them.</li>
-    <li><a href="/en/developer-reference#masternode">Masternode</a>:</li>
+    <li><a href="/en/developer-reference#masternode">Masternode</a>: provides a set of commands for managing masternodes and displaying information about them.</li>
     <li><a href="/en/developer-reference#masternodebroadcast">MasternodeBroadcast</a>: provides a set of commands to create and relay masternode broadcast messages.</li>
     <li><a href="/en/developer-reference#masternodelist">MasternodeList</a>: returns a list of masternodes in different modes.</li>
     <li><a href="/en/developer-reference#mnsync">MnSync</a>: returns the sync status, updates to the next step or resets it entirely.</li>
     <li><a href="/en/developer-reference#privatesend">PrivateSend</a>: controls the mixing process.</li>
     <li><a href="/en/developer-reference#sentinelping">SentinelPing</a>: sends a Sentinel Ping to the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</li>
     <li><a href="/en/developer-reference#spork-rpc">Spork</a>: reads or updates spork settings on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>.</li>
-    <li><a href="/en/developer-reference#voteraw">VoteRaw</a>:</li>
+    <li><a href="/en/developer-reference#voteraw">VoteRaw</a>: compiles and relays a governance vote with provided external <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> instead of signing vote internally</li>
   </ul>
 
   <h4 class="no_toc" id="generating-rpcs">Generating RPCs</h4>
@@ -7874,7 +7890,7 @@ default.</p>
     <li><a href="/en/developer-reference#abandontransaction">AbandonTransaction</a>: marks an in-<a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> transaction and all its in-<a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> descendants as abandoned. This allows their <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> to be respent. <em><abbr title="New in Bitcoin Core v0.12.0">New in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#addmultisigaddress">AddMultiSigAddress</a>: adds a <a href="/en/glossary/p2sh-multisig" title="A P2SH output where the redeem script uses one of the multisig opcodes.  Up until Bitcoin Core 0.10.0, P2SH multisig scripts were standard transactions, but most other P2SH scripts were not." class="auto-link">P2SH multisig</a> <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> to the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>.</li>
     <li><a href="/en/developer-reference#backupwallet">BackupWallet</a>: safely copies <code class="highlighter-rouge">wallet.dat</code> to the specified file, which can be a directory or a path with filename.</li>
-    <li><a href="/en/developer-reference#dumphdinfo">DumpHDInfo</a>:  <em><abbr title="New in Dash Core v0.12.2">New in Dash Core 0.12.2</abbr></em></li>
+    <li><a href="/en/developer-reference#dumphdinfo">DumpHDInfo</a>: returns an object containing sensitive private info about this <a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a> <em><abbr title="New in Dash Core v0.12.2">New in Dash Core 0.12.2</abbr></em></li>
     <li><a href="/en/developer-reference#dumpprivkey">DumpPrivKey</a>: returns the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>-import-format (WIP) <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> corresponding to an <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>. (But does not remove it from the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>.)</li>
     <li><a href="/en/developer-reference#dumpwallet">DumpWallet</a>: creates or overwrites a file with all <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> keys in a human-readable format.</li>
     <li><a href="/en/developer-reference#encryptwallet">EncryptWallet</a>: encrypts the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> with a passphrase.  This is only to enable encryption for the first time. After encryption is enabled, you will need to enter the passphrase to use <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a>.</li>
@@ -7894,8 +7910,8 @@ default.</p>
     <li><a href="/en/developer-reference#importprivkey">ImportPrivKey</a>: adds a <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> to your <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>. The key should be formatted in the <a href="/en/glossary/wallet-import-format" title="A data interchange format designed to allow exporting and importing a single private key with a flag indicating whether or not it uses a compressed public key." class="auto-link">wallet import format</a> created by the <a href="/en/developer-reference#dumpprivkey" class="auto-link"><code class="highlighter-rouge">dumpprivkey</code> RPC</a>.</li>
     <li><a href="/en/developer-reference#importpubkey">ImportPubKey</a>: imports a <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> (in hex) that can be watched as if it were in your <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> but cannot be used to spend</li>
     <li><a href="/en/developer-reference#importwallet">ImportWallet</a>: imports <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> from a file in <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> dump file format (see the <a href="/en/developer-reference#dumpwallet" class="auto-link"><code class="highlighter-rouge">dumpwallet</code> RPC</a>). These keys will be added to the keys currently in the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>.  This call may need to rescan all or parts of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> for transactions affecting the newly-added keys, which may take several minutes.</li>
-    <li><a href="/en/developer-reference#instantsendtoaddress">InstantSendToAddress</a>:</li>
-    <li><a href="/en/developer-reference#keepass">Keepass</a>:  <em><abbr title="New in Darkcoin Core v0.11.0">New in Darkcoin Core 0.11.0</abbr></em></li>
+    <li><a href="/en/developer-reference#instantsendtoaddress">InstantSendToAddress</a>: InstantSend an amount to a given <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>.</li>
+    <li><a href="/en/developer-reference#keepass">KeePass</a>: provides commands for configuring and managing KeePass authentication <em><abbr title="New in Darkcoin Core v0.11.0">New in Darkcoin Core 0.11.0</abbr></em></li>
     <li><a href="/en/developer-reference#keypoolrefill">KeyPoolRefill</a>: fills the cache of unused pre-generated keys (the keypool).</li>
     <li><a href="/en/developer-reference#listaccounts">ListAccounts</a>: lists accounts and their balances. <strong><abbr title="Deprecated; will be removed in a future version of Bitcoin Core">Deprecated</abbr></strong></li>
     <li><a href="/en/developer-reference#listaddressgroupings">ListAddressGroupings</a>: lists groups of <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> that may have had their common ownership made public by common use as <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> in the same transaction or from being used as change from a previous transaction.</li>
@@ -9156,21 +9172,64 @@ d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d053ae</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/dumphdinfo.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#dumphdinfo" class="auto-link"><code class="highlighter-rouge">dumphdinfo</code> RPC</a></p>
+  <!-- __ -->
 
-  <p><em>Parameter #1—PARAMETER DESCRIPTION</em></p>
+  <p>The <a href="/en/developer-reference#dumphdinfo" class="auto-link"><code class="highlighter-rouge">dumphdinfo</code> RPC</a> returns an object containing sensitive private info about this <a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a></p>
 
-  <p><em>Result—RESULT DESCRIPTION</em></p>
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—<a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a> information</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>An object containing sensitive private info about this <a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a>.</td>
+      </tr>
+      <tr>
+        <td>→ <br /><code class="highlighter-rouge">hdseed</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The BIP-32 <a href="/en/glossary/hd-wallet-seed" title="A potentially-short value used as a seed to generate the master private key and master chain code for an HD wallet." class="auto-link">HD seed</a> (in hex)</td>
+      </tr>
+      <tr>
+        <td>→ <br /><code class="highlighter-rouge">mnemonic</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The BIP-39 mnemonic for this <a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a> (English words)</td>
+      </tr>
+      <tr>
+        <td>→ <br /><code class="highlighter-rouge">mnemonicpassphrase</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The BIP-39 mnemonic passphrase for this <a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a> (may be empty)</td>
+      </tr>
+    </tbody>
+  </table>
 
   <p><em>Example from Dash Core 0.12.2</em></p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet dumphdinfo</code></pre></figure>
 
-  <p>Result:</p>
+  <p>Result (truncated for security reasons):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">	</span><span class="err">*INSERT</span><span class="w"> </span><span class="err">RESULTS</span><span class="w"> </span><span class="err">HERE*</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"hdseed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20c63c3fb298ebd52de3 ..."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"mnemonic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cost circle shiver ..."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"mnemonicpassphrase"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
-  <p><em>See also:</em></p>
+  <p><em>See also: none</em></p>
 
   <h5 id="dumpprivkey">DumpPrivKey</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/dash-core/rpcs/rpcs/dumpprivkey.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/dash-core/rpcs/rpcs/dumpprivkey.md">Edit</a>
@@ -16592,7 +16651,7 @@ format used for the proof.</li>
     </thead>
     <tbody>
       <tr>
-        <td><code class="highlighter-rouge">result</code></td>
+        <td>Result</td>
         <td>object</td>
         <td>Required<br />(exactly 1)</td>
         <td>Object containing status</td>
@@ -16734,7 +16793,7 @@ format used for the proof.</li>
 
   <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">gobject prepare 0 1 1509548445 5b5b2270726f706f73616c222c7b22656e645f65706f6<span class="se">\</span>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject prepare 0 1 1509548445 5b5b2270726f706f73616c222c7b22656e645f65706f6<span class="se">\</span>
 368223a313530393638303337392c226e616d65223a22746573742d70726f706f73616c2d646<span class="se">\</span>
 173682d646f6373222c227061796d656e745f61646472657373223a2279554b447a353950745<span class="se">\</span>
 0577348596b56346537424337416263454c72346a52787371222c227061796d656e745f616d6<span class="se">\</span>
@@ -16878,7 +16937,7 @@ f756e74223a32302c2273746172745f65706f6368223a313530393637363831342c227479706<spa
 
   <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">gobject submit 0 1 1509548445 5b5b2270726f706f73616c222c7b22656e645f65706f6<span class="se">\</span>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject submit 0 1 1509548445 5b5b2270726f706f73616c222c7b22656e645f65706f6<span class="se">\</span>
 368223a313530393638303337392c226e616d65223a22746573742d70726f706f73616c2d646<span class="se">\</span>
 173682d646f6373222c227061796d656e745f61646472657373223a2279554b447a353950745<span class="se">\</span>
 0577348596b56346537424337416263454c72346a52787371222c227061796d656e745f616d6<span class="se">\</span>
@@ -16935,13 +16994,13 @@ deserialized. Examples are shown below for both proposal and trigger object type
     </thead>
     <tbody>
       <tr>
-        <td><code class="highlighter-rouge">result</code></td>
+        <td>Result</td>
         <td>object</td>
         <td>Required<br />(exactly 1)</td>
         <td>Array of governance objects</td>
       </tr>
       <tr>
-        <td>→<br />Object</td>
+        <td>→<br /><code class="highlighter-rouge">proposal</code></td>
         <td>string (hex)</td>
         <td>Required<br />(exactly 1)</td>
         <td>Proposal object</td>
@@ -17034,13 +17093,13 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
     </thead>
     <tbody>
       <tr>
-        <td><code class="highlighter-rouge">result</code></td>
+        <td>Result</td>
         <td>object</td>
         <td>Required<br />(exactly 1)</td>
         <td>Array of governance objects</td>
       </tr>
       <tr>
-        <td>→<br />Object</td>
+        <td>→<br /><code class="highlighter-rouge">trigger</code></td>
         <td>string (hex)</td>
         <td>Required<br />(exactly 1)</td>
         <td>Trigger object</td>
@@ -17183,7 +17242,7 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
     </thead>
     <tbody>
       <tr>
-        <td><code class="highlighter-rouge">result</code></td>
+        <td>Result</td>
         <td>object</td>
         <td>Required<br />(exactly 1)</td>
         <td>Information about the governance object</td>
@@ -17467,7 +17526,7 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
     </thead>
     <tbody>
       <tr>
-        <td><code class="highlighter-rouge">result</code></td>
+        <td>Result</td>
         <td>object</td>
         <td>Required<br />(exactly 1)</td>
         <td>The governance object votes</td>
@@ -17536,7 +17595,7 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
     </thead>
     <tbody>
       <tr>
-        <td><code class="highlighter-rouge">result</code></td>
+        <td>Result</td>
         <td>object</td>
         <td>Required<br />(exactly 1)</td>
         <td>The governance object votes</td>
@@ -17607,6 +17666,129 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
         <td>string (hex)</td>
         <td>Optional<br />(exactly 1)</td>
         <td>Type of governance object signal: <br />• <code class="highlighter-rouge">proposals</code><br />• <code class="highlighter-rouge">triggers</code><br />• <code class="highlighter-rouge">watchdogs</code><br />• <code class="highlighter-rouge">all</code> (<em>DEFAULT</em>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—governance objects</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Information about the governance object</td>
+      </tr>
+      <tr>
+        <td>→<br />Governance Object(s)</td>
+        <td>object</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Key: Governance object hash<br />Values: Governance object details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">DataHex</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object info as hex string</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">DataString</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object info as string</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">Hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of this governance object</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">CollateralHash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the collateral payment transaction</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">ObjectType</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object types:<br /><code class="highlighter-rouge">1</code> - Unknown<br /><code class="highlighter-rouge">2</code> - Proposal<br /><code class="highlighter-rouge">3</code> - Trigger<br /><code class="highlighter-rouge">4</code> - Watchdog</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">CreationTime</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object creation time as <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a></td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbsoluteYesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes minus number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">YesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">NoCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbstainCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Abstain</code> votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fLocalValidity</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Valid by the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">blockchain</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">IsValidReason</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td><code class="highlighter-rouge">fLocalValidity</code> error result. Empty if no error returned.</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedValid</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc)</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedFunding</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached for this object to be funded (doesn’t mean it will be for sure though)</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedDelete</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached saying this object should be deleted from the system entirely</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedEndorsed</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as endorsed</td>
       </tr>
     </tbody>
   </table>
@@ -17702,32 +17884,578 @@ f616d6f756e74223a2232222c2273746172745f65706f6368223a223135303732363538323322<sp
     </tbody>
   </table>
 
+  <p><em>Result—governance objects</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Information about the governance object</td>
+      </tr>
+      <tr>
+        <td>→<br />Governance Object(s)</td>
+        <td>object</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Key: Governance object hash<br />Values: Governance object details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">DataHex</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object info as hex string</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">DataString</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Governance object info as string</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">Hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of this governance object</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">CollateralHash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the collateral payment transaction</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">ObjectType</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object types:<br /><code class="highlighter-rouge">1</code> - Unknown<br /><code class="highlighter-rouge">2</code> - Proposal<br /><code class="highlighter-rouge">3</code> - Trigger<br /><code class="highlighter-rouge">4</code> - Watchdog</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">CreationTime</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Object creation time as <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a></td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbsoluteYesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes minus number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">YesCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Yes</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">NoCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">No</code> votes</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">AbstainCount</code></td>
+        <td>number</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Number of <code class="highlighter-rouge">Abstain</code> votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fLocalValidity</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Valid by the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">blockchain</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">IsValidReason</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td><code class="highlighter-rouge">fLocalValidity</code> error result. Empty if no error returned.</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedValid</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc)</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedFunding</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached for this object to be funded (doesn’t mean it will be for sure though)</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedDelete</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached saying this object should be deleted from the system entirely</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">fCachedEndorsed</code></td>
+        <td>boolean</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Minimum <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> support has been reached flagging this object as endorsed</td>
+      </tr>
+    </tbody>
+  </table>
+
   <p><em>Example from Dash Core 0.12.2</em></p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject diff all all</code></pre></figure>
 
-  <p>Result:</p>
+  <p>Result (truncated):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"17c2bd32005c5168a52f9b5caa74d875ee8a6867a6109f36923887ef6c36b301"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"DataHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a2231353037343533353731222c226e616d65223a227465737470726f706f73616c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353037323634343939222c227061796d656e745f61646472657373223a2279697355653636445352487048504233514245426764574746637068435933626234222c227061796d656e745f616d6f756e74223a2232222c2273746172745f65706f6368223a2231353037323634343939222c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353037323634343939227d5d5d"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DataString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[[\"proposal\",{\"end_epoch\":\"1507453571\",\"name\":\"testproposal\",\"payment_address\":\"yisUe66DSRHpHPB3QBEBgdWGFcphCY3bb4\",\"payment_amount\":\"2\",\"start_epoch\":\"1507264499\",\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1507264499\"}]]"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"Hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17c2bd32005c5168a52f9b5caa74d875ee8a6867a6109f36923887ef6c36b301"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"CollateralHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a25c44b57931afd74530ce39741f91456446a8fd794d2f1c58c42d6f492647ad"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ObjectType"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"CreationTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507264499</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbsoluteYesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"YesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"NoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"AbstainCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fBlockchainValidity"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"IsValidReason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedValid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedFunding"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedDelete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fCachedEndorsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <h6 id="gobject-vote-alias">GObject Vote-alias</h6>
 
-  <p>dash-cli -<a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend duffs that have no real-world value on a network that is very similar to the Dash mainnet." class="auto-link">testnet</a> gobject vote-alias 5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313531303437373730332c226e616d65223a226768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353039373237303331222c227061796d656e745f61646472657373223a2279595643554872786146435a4e6978536b576e4836365775513170736f774d617548222c227061796d656e745f616d6f756e74223a312e32323334353637382c2273746172745f65706f6368223a313530393732373033312c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353039373237303331227d5d5d valid abstain MN01</p>
+  <p>The <code class="highlighter-rouge">gobject vote-alias</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> votes on a governance object by masternode alias (using masternode.conf setup).</p>
 
-  <p>{
-  “overall”: “Voted successfully 0 time(s) and failed 1 time(s).”,
-  “detail”: {
-    “MN01”: {
-      “result”: “failed”,
-      “errorMessage”: “GOVERNANCE_EXCEPTION_WARNING:CGovernanceManager::ProcessVote – Unknown parent object , MN outpoint = f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f-1, governance object hash = 672f702f746573745f70726f706f73616c5f31353039373237303331227d5d5d”
-    }
-  }
-}</p>
+  <p><em>Parameter #1—governance hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">governance-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—vote signal</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">signal</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote signal: <code class="highlighter-rouge">funding</code>, <code class="highlighter-rouge">valid</code>, or <code class="highlighter-rouge">delete</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3—vote outcome</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">outcome</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote outcome: <code class="highlighter-rouge">yes</code>, <code class="highlighter-rouge">no</code>, or <code class="highlighter-rouge">abstain</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #4—masternode alias</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">alias</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Alias of voting masternode</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—votes for specified governance</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The governance object votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">overall</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Reports number of vote successes/failures</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">detail</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote details</td>
+      </tr>
+      <tr>
+        <td>→ →<br />Masternode Alias</td>
+        <td>object</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Name of the masternode alias</td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">result</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote result</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject vote-alias <span class="se">\</span>
+0bf97bce78b3b642c36d4ca8e9265f8f66de8774c220221f57739c1956413e2b <span class="se">\</span>
+funding yes MN01</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"overall"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Voted successfully 1 time(s) and failed 0 time(s)."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"MN01"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
   <h6 id="gobject-vote-conf">GObject Vote-conf</h6>
 
+  <p>The <code class="highlighter-rouge">gobject vote-conf</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> votes on a governance object by masternode configured in dash.conf.</p>
+
+  <p><em>Parameter #1—governance hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">governance-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—vote signal</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">signal</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote signal: <code class="highlighter-rouge">funding</code>, <code class="highlighter-rouge">valid</code>, or <code class="highlighter-rouge">delete</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3—vote outcome</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">outcome</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote outcome: <code class="highlighter-rouge">yes</code>, <code class="highlighter-rouge">no</code>, or <code class="highlighter-rouge">abstain</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—votes for specified governance</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The governance object votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">overall</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Reports number of vote successes/failures</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">detail</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">dash.conf</code></td>
+        <td>object</td>
+        <td>Required<br />(1 or more)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">result</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote result</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject vote-conf <span class="se">\</span>
+0bf97bce78b3b642c36d4ca8e9265f8f66de8774c220221f57739c1956413e2b funding yes</code></pre></figure>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"overall"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Voted successfully 1 time(s) and failed 0 time(s)."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"dash.conf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
   <h6 id="gobject-vote-many">GObject Vote-many</h6>
+
+  <p>The <code class="highlighter-rouge">gobject vote-many</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> votes on a governance object by all masternodes (using masternode.conf setup).</p>
+
+  <p><em>Parameter #1—governance hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">governance-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—vote signal</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">signal</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote signal: <code class="highlighter-rouge">funding</code>, <code class="highlighter-rouge">valid</code>, or <code class="highlighter-rouge">delete</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3—vote outcome</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">outcome</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote outcome: <code class="highlighter-rouge">yes</code>, <code class="highlighter-rouge">no</code>, or <code class="highlighter-rouge">abstain</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #4—masternode alias</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">alias</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Alias of voting masternode</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—votes for specified governance</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The governance object votes</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">overall</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Reports number of vote successes/failures</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">detail</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote details</td>
+      </tr>
+      <tr>
+        <td>→ →<br />Masternode Alias</td>
+        <td>object</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Name of the masternode alias</td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">result</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote result</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet gobject vote-many <span class="se">\</span>
+0bf97bce78b3b642c36d4ca8e9265f8f66de8774c220221f57739c1956413e2b funding yes</code></pre></figure>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"overall"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Voted successfully 1 time(s) and failed 0 time(s)."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"MN01"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also:</em></p>
 
@@ -18159,7 +18887,7 @@ entire <a href="/en/glossary/block-chain" title="A chain of blocks with each blo
   <ul>
     <li><a href="/en/developer-reference#dumpprivkey">DumpPrivKey</a>: returns the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>-import-format (WIP) <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a> corresponding to an <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>. (But does not remove it from the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>.)</li>
     <li><a href="/en/developer-reference#importaddress">ImportAddress</a>: adds an <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> or <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> to the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> without the associated <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>, allowing you to watch for transactions affecting that <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> or <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> without being able to spend any of its <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>.</li>
-    <li><a href="/en/developer-reference#importpubkey">ImportPrivKey</a>: imports a <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> (in hex) that can be watched as if it were in your <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> but cannot be used to spend</li>
+    <li><a href="/en/developer-reference#importpubkey">ImportPubKey</a>: imports a <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> (in hex) that can be watched as if it were in your <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> but cannot be used to spend</li>
     <li><a href="/en/developer-reference#importwallet">ImportWallet</a>: imports <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private keys</a> from a file in <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> dump file format (see the <a href="/en/developer-reference#dumpwallet" class="auto-link"><code class="highlighter-rouge">dumpwallet</code> RPC</a>). These keys will be added to the keys currently in the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>.  This call may need to rescan all or parts of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> for transactions affecting the newly-added keys, which may take several minutes.</li>
   </ul>
 
@@ -18363,43 +19091,335 @@ entire <a href="/en/glossary/block-chain" title="A chain of blocks with each blo
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/instantsendtoaddress.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#instantsendtoaddress" class="auto-link"><code class="highlighter-rouge">instantsendtoaddress</code> RPC</a></p>
+  <!-- __ -->
 
-  <p><em>Parameter #1—PARAMETER DESCRIPTION</em></p>
+  <p>The <a href="/en/developer-reference#instantsendtoaddress" class="auto-link"><code class="highlighter-rouge">instantsendtoaddress</code> RPC</a> InstantSend an amount to a given <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>.</p>
 
-  <p><em>Result—RESULT DESCRIPTION</em></p>
+  <p><em>Parameter #1—to <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a></em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>To <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">Address</a></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>A P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH address</a> to which the dash should be sent</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—amount to spend</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Amount</td>
+        <td>number (dash)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The amount to spent in dash</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3—a comment</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Comment</td>
+        <td>string</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>A locally-stored (not broadcast) comment assigned to this transaction.  Default is no comment</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #4—a comment about who the payment was sent to</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Comment To</td>
+        <td>string</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>A locally-stored (not broadcast) comment assigned to this transaction.  Meant to be used for describing who the payment was sent to. Default is no comment</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #5—automatic fee subtraction</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Subtract Fee From Amount</td>
+        <td>boolean</td>
+        <td>Optional<br />(0 or 1)</td>
+        <td>The fee will be deducted from the amount being sent. The recipient will receive less dash than you enter in the amount field. Default is <code class="highlighter-rouge">false</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—a <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> of the sent transaction</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> of the sent transaction, encoded as hex in <a href="/en/glossary/rpc-byte-order" title="A hash digest displayed with the byte order reversed; used in Dash Core RPCs, many block explorers, and other software." class="auto-link">RPC byte order</a></td>
+      </tr>
+    </tbody>
+  </table>
 
   <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet instantsendtoaddress</code></pre></figure>
+  <p>InstantSend 0.1 dash to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “instantsendtoadress
+example” and the comment-to “Nemo From Example.com”:</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet instantsendtoaddress ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv <span class="se">\</span>
+  1.0 <span class="s2">"instantsendtoadress example"</span> <span class="s2">"Nemo From Example.com"</span></code></pre></figure>
 
   <p>Result:</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">	</span><span class="err">*INSERT</span><span class="w"> </span><span class="err">RESULTS</span><span class="w"> </span><span class="err">HERE*</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">70e2029d363f0110fe8a0aa2ba7bd771a579453135568b2aa559b2cb30f875aa</code></pre></figure>
 
   <p><em>See also:</em></p>
 
-  <h5 id="keepass">Keepass</h5>
+  <ul>
+    <li><a href="/en/developer-reference#sendfrom">SendFrom</a>: spends an amount from a local account to a dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>.</li>
+    <li><a href="/en/developer-reference#sendmany">SendMany</a>: creates and broadcasts a transaction which sends <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> to multiple <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</li>
+    <li><a href="/en/developer-reference#sendtoaddress">SendToAddress</a>: spends an amount to a given <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>.</li>
+    <li><a href="/en/developer-reference#move">Move</a>: moves a specified amount from one account in your <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> to another using an off-<a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block-chain</a> transaction.</li>
+  </ul>
+
+  <h5 id="keepass">KeePass</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/dash-core/rpcs/rpcs/keepass.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/dash-core/rpcs/rpcs/keepass.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rpcs/rpcs/keepass.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/keepass.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#keepass" class="auto-link"><code class="highlighter-rouge">keepass</code> RPC</a></p>
+  <!-- __ -->
 
-  <p><em>Parameter #1—PARAMETER DESCRIPTION</em></p>
+  <p>The <a href="/en/developer-reference#keepass" class="auto-link"><code class="highlighter-rouge">keepass</code> RPC</a> provides commands for configuring and managing KeePass authentication</p>
 
-  <p><em>Result—RESULT DESCRIPTION</em></p>
+  <p><em>Parameter #1—Command mode</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">mode</code></td>
+        <td>string</td>
+        <td>Required (exactly 1)</td>
+        <td>The command mode to use:<br /><code class="highlighter-rouge">genkey</code>,<br /><code class="highlighter-rouge">init</code>,<br /><code class="highlighter-rouge">setpassphrase</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Command Options</em></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Mode</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">genkey</code></td>
+        <td>Generates a base64 encoded 256 bit AES key that can be used for the communication with KeePassHttp. This is only necessary for manual configuration.</td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">init</code></td>
+        <td>Sets up the association between Dash Core and KeePass by generating an AES key and sending an association message to KeePassHttp. This will trigger KeePass to ask for an Id for the association. Returns the association and the base64 encoded string for the AES key.</td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">setpassphrase</code></td>
+        <td>Updates the passphrase in KeePassHttp to a new value. This should match the passphrase you intend to use for the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a>. Please note that the standard <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> commands walletpassphrasechange and the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> encryption from the QT GUI already send the updates to KeePassHttp, so this is only necessary for manual manipulation of the password.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Command Mode - <code class="highlighter-rouge">genkey</code></strong></p>
+
+  <p><em>Result—the new key</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string (base64)</td>
+        <td>Required (exactly 1)</td>
+        <td>The new key</td>
+      </tr>
+    </tbody>
+  </table>
 
   <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet keepass</code></pre></figure>
+  <p>Manually generate a key</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet keepass genkey</code></pre></figure>
 
   <p>Result:</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">	</span><span class="err">*INSERT</span><span class="w"> </span><span class="err">RESULTS</span><span class="w"> </span><span class="err">HERE*</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Generated Key: dNjo+J8Jb30txbJiKq4s9H6vEgWq/whb1w9bb2cTOFo<span class="o">=</span></code></pre></figure>
 
-  <p><em>See also:</em></p>
+  <p><strong>Command Mode - <code class="highlighter-rouge">init</code></strong></p>
+
+  <p><em>Result—initialization response</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string</td>
+        <td>Required (exactly 1)</td>
+        <td>The success/error status</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <p>Automatically initialize</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet keepass init</code></pre></figure>
+
+  <p>Result (wrapped):</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Association successful. Id: testwalletassociation - <span class="se">\</span>
+Key: MSb+JLygqz7ZH40SyJ1QR62i00IXoa3tmT85MGGI2K0<span class="o">=</span></code></pre></figure>
+
+  <p><strong>Command Mode - <code class="highlighter-rouge">setpassphrase</code></strong></p>
+
+  <p><em>Parameter #2—Passphrase</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Passphrase</td>
+        <td>string</td>
+        <td>Required (exactly 1)</td>
+        <td>The passphrase to set</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—status</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string</td>
+        <td>Required (exactly 1)</td>
+        <td>The success/error status</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <p>Set KeePass passphrase</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet keepass setpassphrase 1BWi20Xyk76uWumxJQy4</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">setlogin: Updated credentials.</code></pre></figure>
+
+  <p><em>See also: none</em></p>
 
   <h5 id="keypoolrefill">KeyPoolRefill</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/dash-core/rpcs/rpcs/keypoolrefill.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/dash-core/rpcs/rpcs/keypoolrefill.md">Edit</a>
@@ -20254,15 +21274,866 @@ the <em>spendable</em> field in the results described below.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/masternode.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#masternode" class="auto-link"><code class="highlighter-rouge">masternode</code> RPC</a></p>
+  <!-- __ -->
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode</code></pre></figure>
+  <p>The <a href="/en/developer-reference#masternode" class="auto-link"><code class="highlighter-rouge">masternode</code> RPC</a> provides a set of commands for managing masternodes and displaying information about them.</p>
+
+  <h6 id="masternode-count">Masternode Count</h6>
+
+  <p>The <code class="highlighter-rouge">masternode count</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints the number of all known masternodes.</p>
+
+  <p><em>Parameter #1—mode</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mode</td>
+        <td>string (hex)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>Which masternodes to count:<br /><code class="highlighter-rouge">ps</code> - PrivateSend capable,<br /><code class="highlighter-rouge">enabled</code> - Enabled,<br /><code class="highlighter-rouge">all</code> - All,<br /><code class="highlighter-rouge">qualify</code> - Eligible for payment</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—number of known masternodes</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">result</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Transaction ID for the collateral transaction</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode count</code></pre></figure>
 
   <p>Result:</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">	</span><span class="err">*INSERT</span><span class="w"> </span><span class="err">RESULTS</span><span class="w"> </span><span class="err">HERE*</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">120</code></pre></figure>
+
+  <p>Get summarized count of all masternode <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode count all</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Total: 129 <span class="o">(</span>PS Compatible: 97 / Enabled: 97 / Qualify: 90<span class="o">)</span></code></pre></figure>
+
+  <h6 id="masternode-current">Masternode Current</h6>
+
+  <p>The <code class="highlighter-rouge">masternode current</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints info on current masternode winner to be paid the next <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> (calculated locally).</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—current winning masternode info</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Winning masternode info</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">height</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td><a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">Block height</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">IP:port</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The IP address/port of the masternode</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">protocol</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The protocol version number used by this <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>.  See the <a href="/en/developer-reference#protocol-versions">protocol versions section</a> for more information</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">outpoint</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>The masternode’s <a href="/en/glossary/outpoint" title="The data structure used to refer to a particular transaction output, consisting of a 32-byte TXID and a 4-byte output index number (vout)." class="auto-link">outpoint</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">payee</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Payee <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">lastseen</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> when the masternode was last seen</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">activeseconds</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The number of seconds the masternode has been active</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode current</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">37375</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"IP:port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"108.61.192.47:19999"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="mi">70208</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"outpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3df7fb192e21c34da99bdd10c34e58ecaf3f3c37d6b2289f0ffedba5050188cc-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ydGgePy4a3zza37Zm4D44B99czyo6TftU1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"lastseen"</span><span class="p">:</span><span class="w"> </span><span class="mi">1512482630</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"activeseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">3170434</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-debug">Masternode Debug</h6>
+
+  <p>The <code class="highlighter-rouge">masternode debug</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints masternode status.</p>
+
+  <p><img src="/img/icons/icon_warning.svg" alt="Warning icon" /> <strong>Warning:</strong> <code class="highlighter-rouge">masternode debug</code> will be removed in Dash Core 0.12.3.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—masternode status</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode status</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode debug</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Masternode successfully started</code></pre></figure>
+
+  <h6 id="masternode-genkey">Masternode Genkey</h6>
+
+  <p>The <code class="highlighter-rouge">masternode genkey</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> generates a new masternodeprivkey.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—masternode <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a></em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode genkey</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">92Mn5DQpnBHjFPbS3ZXcX3EdhuET18u3eXTTtVsdDzdcAMaXqtG</code></pre></figure>
+
+  <h6 id="masternode-outputs">Masternode Outputs</h6>
+
+  <p>The <code class="highlighter-rouge">masternode outputs</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints masternode compatible <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—masternode <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a></em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode compatible <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">Output</a></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Masternode compatible <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> (<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a>:Index)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode outputs</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-start">Masternode Start</h6>
+
+  <p>The <code class="highlighter-rouge">masternode start</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> starts a local hot masternode configure in dash.conf.</p>
+
+  <p><img src="/img/icons/icon_warning.svg" alt="Warning icon" /> <strong>Warning:</strong> <code class="highlighter-rouge">masternode start</code> will be removed in Dash Core 0.12.3. Local
+masternode support is being removed for security reasons.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—masternode status</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode status</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode start</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Masternode successfully started</code></pre></figure>
+
+  <h6 id="masternode-start-alias">Masternode Start-alias</h6>
+
+  <p>The <code class="highlighter-rouge">masternode start-alias</code> starts a single remote masternode by assigned alias configured in masternode.conf.</p>
+
+  <p><em>Parameter #1—masternode alias</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alias</td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Alias of the masternode to start</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—masternode status</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode status</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode start-alias MN01</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MN01"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"successful"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-start-mode">Masternode Start-mode</h6>
+
+  <p>The <code class="highlighter-rouge">masternode start-&lt;mode&gt;</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> starts remote masternodes configured in
+masternode.conf. Valid modes are: <code class="highlighter-rouge">all</code>, <code class="highlighter-rouge">missing</code>, or <code class="highlighter-rouge">disabled</code>.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—masternode status</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode status</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">overall</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Reports masternode start successes/failures</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">detail</code></td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Start details</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">status</code></td>
+        <td>object</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Name of the masternode alias</td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">alias</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode alias</td>
+      </tr>
+      <tr>
+        <td>→ → →<br /><code class="highlighter-rouge">result</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Start result</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <p>Start all masternodes in masternodes.conf</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode start-all</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"overall"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successfully started 1 masternodes, failed to start 0, total 1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MN01"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"successful"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <p>Start missing masternodes in masternodes.conf</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode start-missing</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"overall"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successfully started 0 masternodes, failed to start 0, total 0"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <p>Start disabled masternodes in masternodes.conf</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode start-disabled</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"overall"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successfully started 1 masternodes, failed to start 0, total 1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MN01"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"successful"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-status">Masternode Status</h6>
+
+  <p>The <code class="highlighter-rouge">masternode status</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints masternode status information.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—masternode status info</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode status info</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">outpoint</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>The masternode’s <a href="/en/glossary/outpoint" title="The data structure used to refer to a particular transaction output, consisting of a 32-byte TXID and a 4-byte output index number (vout)." class="auto-link">outpoint</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">service</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The IP address/port of the masternode</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">payee</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Payee <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">status</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>The masternode’s status</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode status</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"outpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45.32.237.77:19999"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yY6AmGopsZS31wy1JLHR9P6AC6owFaXwuh"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Masternode successfully started"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-list">Masternode List</h6>
+
+  <p>The <code class="highlighter-rouge">masternode list</code> prints a list of all known masternodes.</p>
+
+  <p>This <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> uses the same parameters and returns the same data as
+<a href="/en/developer-reference#masternodelist">masternodelist</a>. Please reference it for full details.</p>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode list <span class="se">\</span>
+	rank f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f-1"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-list-conf">Masternode List-conf</h6>
+
+  <p>The <code class="highlighter-rouge">masternode list-conf</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints masternode.conf in JSON format.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—masternode info</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode status info</td>
+      </tr>
+      <tr>
+        <td>→<br /><a href="/en/developer-reference#masternode" class="auto-link"><code class="highlighter-rouge">masternode</code></a></td>
+        <td>object</td>
+        <td>Required<br />(1 or more)</td>
+        <td>Object containing masternode info</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">alias</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode alias</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">address</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The IP address/port of the masternode</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">privateKey</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a></td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">txHash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode collateral transaction hash</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">outputIndex</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Masternode collateral transaction index</td>
+      </tr>
+      <tr>
+        <td>→ →<br /><code class="highlighter-rouge">status</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The masternode’s status</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode status</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"masternode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MN01"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45.32.237.77:19999"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"privateKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92woG282ZQMASn8BAah6H8QmiE5NsPwucv7cu9eTVG1uU63fcfs"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"outputIndex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ENABLED"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"masternode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MN02"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45.32.237.78:19999"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"privateKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92woG282ZQMASn8BAah6H8QmiE5NsPwucv7cu9eTVG1uU63fcfs"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"outputIndex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ENABLED"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-winner">Masternode Winner</h6>
+
+  <p>The <code class="highlighter-rouge">masternode winner</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints info on the next masternode winner to vote for.</p>
+
+  <p><em>Parameters: none</em></p>
+
+  <p><em>Result—next masternode winner info</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Winning masternode info</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">height</code></td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td><a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">Block height</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">IP:port</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The IP address/port of the masternode</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">protocol</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The protocol version number used by this <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>.  See the <a href="/en/developer-reference#protocol-versions">protocol versions section</a> for more information</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">outpoint</code></td>
+        <td>string</td>
+        <td>Required<br />(1 or more)</td>
+        <td>The masternode’s <a href="/en/glossary/outpoint" title="The data structure used to refer to a particular transaction output, consisting of a 32-byte TXID and a 4-byte output index number (vout)." class="auto-link">outpoint</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">payee</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Payee <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a></td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">lastseen</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> when the masternode was last seen</td>
+      </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">activeseconds</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The number of seconds the masternode has been active</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode winner</code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">37384</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"IP:port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"145.239.235.17:29999"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="mi">70208</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"outpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66eddd00e5927d0a03437d5b8a2f15367c978ef7951c80ae1608a45b1bf64318-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yY3q6wqRe1y7xzHbGE88YfRg4t97GU7BJ6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"lastseen"</span><span class="p">:</span><span class="w"> </span><span class="mi">1512482474</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"activeseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">1180019</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <h6 id="masternode-winners">Masternode Winners</h6>
+
+  <p>The <code class="highlighter-rouge">masternode winners</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> prints the list of masternode winners.</p>
+
+  <p>By default, the 10 previous <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> winners, the current <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> winner, and the
+next 20 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> winners are displayed. More past <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> winners can be requested
+via the optional <code class="highlighter-rouge">count</code> parameter.</p>
+
+  <p><em>Parameter #1—count</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Count</td>
+        <td>string (hex)</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>Number of previous <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> winners to display (default: 10)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—filter</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Filter</td>
+        <td>string</td>
+        <td>Optional<br />(exactly 1)</td>
+        <td>Payment <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> to filter by</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—masternode winners</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Winning masternode info</td>
+      </tr>
+      <tr>
+        <td>→<br />Masternode Winner</td>
+        <td>int</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Key: <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">Block height</a><br />Value: payee <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode winners</code></pre></figure>
+
+  <p>Result (current <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> - 37458):</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"37448"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ygSWwhyzU61FNEta8gDh8gfoH5EZZUvc5m:8"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37449"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yjGZLzSSoFfTFgLDJrgniXfYxu3xF9xKQg:5"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37450"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yRTo1wXWoNnPFWcQVepKGXuLsoypnPkGWj:7"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37451"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yYMFRAYZ25XspHZ1EXC39wUMx9FhoC5VT2:9"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37452"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yX5y3otE4LitGYiSfZhVH4LdbwHShdzQ8v:7"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37453"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yX5y3otE4LitGYiSfZhVH4LdbwHShdzQ8v:4"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37454"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yUamtYUFhqUxCMny3JTcZJTyttVt8SYFug:9"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37455"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yU35XcdGMnj8Exa2ZZqCg4ongiNqQwpeUZ:9"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37456"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yaJc6tADbEjxQBAC69ugWNoTFpzxqkcgWd:7"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37457"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yf4WpwRX17p7YRkHJPQpHMXTwzi5s2VDcR:7"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37458"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ydbfUYWfLm6xg7Y5aBLjy38DvksrvNcHEc:9"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37459"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yYp9k2iuDptT2MB7qVZtVy6ModHtLXFjio:6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37460"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yP1UHNx26ShYLej56SbHiTiPAUv2QppbUv:6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37461"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yaCtZRpiYnVFMyWELHZF74v9ayLKCLPcC9:8"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37462"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ygYFnLHoVRyhRoxd6fXQ9nmEafX4eLoWkB:6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37463"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yM5kTThWi8MnAFtZqx98Zipp1BbyypUZGK:7"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37464"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yeDY39aiqbBHbJft5F6rokR23EaZca6UTU:9"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37465"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yMME1ns1xfpGS2XbFPktsNyp7Cjr1BoJxb:8"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37466"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ycn5RWc4Ruo35FTS8bJwugVyCEkfVcrw9a:6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37467"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yUTDkKKhbvDrnwkiaoP8HvqxTNC6rNnUe2:6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37468"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yTstes2nSaSpvu9nTapiCGnjCLvLD5fUqt:5"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37469"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37470"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37471"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37472"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37473"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37474"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37475"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37476"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37477"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+  <p>Get a filtered list of masternode winners</p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet masternode winners 150 <span class="s2">"yTZ99"</span></code></pre></figure>
+
+  <p>Result:</p>
+
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"37338"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yTZ99fCnjNu33RDRtawf81iwJ9uxXFmkgM:9"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37339"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yTZ99fCnjNu33RDRtawf81iwJ9uxXFmkgM:8"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37432"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yTZ99fCnjNu33RDRtawf81iwJ9uxXFmkgM:6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"37433"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yTZ99fCnjNu33RDRtawf81iwJ9uxXFmkgM:9"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also:</em></p>
+
+  <ul>
+    <li><a href="/en/developer-reference#masternodelist">MasternodeList</a>: returns a list of masternodes in different modes.</li>
+  </ul>
 
   <h5 id="masternodebroadcast">MasternodeBroadcast</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/dash-core/rpcs/rpcs/masternodebroadcast.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/dash-core/rpcs/rpcs/masternodebroadcast.md">Edit</a>
@@ -20934,7 +22805,7 @@ ab575aac752b5944ee3e7221df204b4d04000000004d3c145a00000000411bef1bdf25a500ae<spa
   <p><em>See also:</em></p>
 
   <ul>
-    <li><a href="/en/developer-reference#masternode">Masternode</a>:</li>
+    <li><a href="/en/developer-reference#masternode">Masternode</a>: provides a set of commands for managing masternodes and displaying information about them.</li>
     <li><a href="/en/developer-reference#masternodebroadcast">MasternodeBroadcast</a>: provides a set of commands to create and relay masternode broadcast messages.</li>
     <li><a href="/en/developer-reference#mnsync">MnSync</a>: returns the sync status, updates to the next step or resets it entirely.</li>
   </ul>
@@ -21171,7 +23042,7 @@ ab575aac752b5944ee3e7221df204b4d04000000004d3c145a00000000411bef1bdf25a500ae<spa
   <p><em>See also:</em></p>
 
   <ul>
-    <li><a href="/en/developer-reference#masternode">Masternode</a>:</li>
+    <li><a href="/en/developer-reference#masternode">Masternode</a>: provides a set of commands for managing masternodes and displaying information about them.</li>
     <li><a href="/en/developer-reference#masternodebroadcast">MasternodeBroadcast</a>: provides a set of commands to create and relay masternode broadcast messages.</li>
     <li><a href="/en/developer-reference#masternodelist">MasternodeList</a>: returns a list of masternodes in different modes.</li>
   </ul>
@@ -22521,6 +24392,7 @@ comment “sendtoadressexample” and the comment-to “Nemo From Example.com”
   <p><em>See also</em></p>
 
   <ul>
+    <li><a href="/en/developer-reference#instantsendtoaddress">InstantSendToAddress</a>: InstantSend an amount to a given <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>.</li>
     <li><a href="/en/developer-reference#sendfrom">SendFrom</a>: spends an amount from a local account to a dash <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a>.</li>
     <li><a href="/en/developer-reference#sendmany">SendMany</a>: creates and broadcasts a transaction which sends <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> to multiple <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</li>
     <li><a href="/en/developer-reference#move">Move</a>: moves a specified amount from one account in your <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> to another using an off-<a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block-chain</a> transaction.</li>
@@ -24161,15 +26033,195 @@ format used for the proof.</li>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/voteraw.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#voteraw" class="auto-link"><code class="highlighter-rouge">voteraw</code> RPC</a></p>
+  <!-- __ -->
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet voteraw</code></pre></figure>
+  <p>The <a href="/en/developer-reference#voteraw" class="auto-link"><code class="highlighter-rouge">voteraw</code> RPC</a> compiles and relays a governance vote with provided external <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> instead of signing vote internally</p>
+
+  <p><em>Parameter #1—masternode transaction hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">masternode-tx-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the masternode collateral transaction</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #2—vote signal</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">masternode-tx-index</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Index of the masternode collateral transaction</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #3—governance hash</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">governance-hash</code></td>
+        <td>string (hex)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Hash of the governance object</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #4—vote signal</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">signal</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote signal: <code class="highlighter-rouge">funding</code>, <code class="highlighter-rouge">valid</code>, or <code class="highlighter-rouge">delete</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #5—vote outcome</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">outcome</code></td>
+        <td>string</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Vote outcome: <code class="highlighter-rouge">yes</code>, <code class="highlighter-rouge">no</code>, or <code class="highlighter-rouge">abstain</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #6—time</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">time</code></td>
+        <td>int64_t</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>Create time</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Parameter #7—vote <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a></em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">vote-sig</code></td>
+        <td>string (base64)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The vote <a href="/en/glossary/signature" title="A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Bitcoin to authorize spending satoshis previously sent to a public key." class="auto-link">signature</a> created by external application (i.e. <a href="https://github.com/Bertrand256/dash-masternode-tool">Dash Masternode Tool</a> or <a href="https://github.com/chaeplin/dashmnb">dashmnb</a>).<br /><br />Must match the Dash Core (<a href="https://github.com/dashpay/dash/blob/48d63ab296f5613c727306ea39524f51d157a04c/src/governance-vote.cpp#L240-#L241">governance vote signature format</a>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Result—votes for specified governance</em></p>
+
+  <table class="ntpd">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Presence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Result</td>
+        <td>object</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The vote result</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Example from Dash Core 0.12.2</em></p>
+
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet voteraw <span class="se">\</span>
+f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f 1 <span class="se">\</span>
+65a358fefaace40fc07053350be23e519178519290f963dab8ba92f6f85f98c3 <span class="se">\</span>
+funding yes 1512507255 <span class="se">\</span>
+H1jXKZQp1TZWBPW11E665OwmGBYV1038FohEr0au7zp+O5BCKmVDP/3rGq38ZMy3KOpwnBu6ehd6jlas79hsRBY<span class="o">=</span></code></pre></figure>
 
   <p>Result:</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">	</span><span class="err">*INSERT</span><span class="w"> </span><span class="err">RESULTS</span><span class="w"> </span><span class="err">HERE*</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Voted successfully</code></pre></figure>
 
   <p><em>See also:</em></p>
+
+  <ul>
+    <li><a href="/en/developer-reference#gobject">GObject</a>: provides a set of commands for managing governance objects and displaying information about them.</li>
+  </ul>
 
   <h5 id="walletlock">WalletLock</h5>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/dash-core/rpcs/rpcs/walletlock.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/dash-core/rpcs/rpcs/walletlock.md">Edit</a>

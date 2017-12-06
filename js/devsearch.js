@@ -1231,7 +1231,7 @@ uri: "/en/developer-reference#instantsendtoaddress",
 category: "RPCs"
 },
 {
-label: "Keepass",
+label: "KeePass",
 uri: "/en/developer-reference#keepass",
 category: "RPCs"
 },
