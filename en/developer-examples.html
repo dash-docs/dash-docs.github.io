@@ -218,15 +218,23 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   
 
 <ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
-  <li><a>Introduction</a>
+  <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+  <!--<li><a href="/en/developer-documentation">Documentation</a></li>-->
+
+  <li><a>Documentation</a>
     <ul>
       <!--
       <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
       <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
-      -->
+
       <li><a href="/en/bitcoin-for-developers">Developers</a></li>
-      <li><a href="/en/getting-started">Getting started</a></li>
+      -->
+      <li><a href="/en/developer-guide">Guide</a></li>
+      <li><a href="/en/developer-reference">Reference</a></li>
+      <li><a href="/en/developer-glossary">Glossary</a></li>
+
       <!--
+      <li><a href="/en/getting-started">Getting started</a></li>
       <li><a href="/en/how-it-works">How it works</a></li>
       <li><a href="/en/you-need-to-know">You need to know</a></li>
     -->
@@ -238,8 +246,8 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       <li><a href="/en/exchanges">Exchanges</a></li>
       <li><a href="/en/community">Community</a></li>
       -->
-      <li><a href="https://www.dash.org/community/">Community</a></li>
-      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a rel="noopener noreferrer" target="_blank" href="https://www.dash.org/community/">Community</a></li>
+      <!-- <li><a href="/en/developer-documentation">Documentation</a></li> -->
       <li><a href="/en/vocabulary">Vocabulary</a></li>
       <!--
       <li><a href="/en/events">Events</a></li>
@@ -249,7 +257,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
     -->
     </ul>
   </li>
-  <li><a href="/en/innovation">Innovation</a></li>
+  <!-- <li><a href="/en/innovation">Innovation</a></li> -->
   <!--
   <li><a>Participate</a>
     <ul>
@@ -271,7 +279,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 <div class="breadcrumbs">
   
     
-      <a href="/en/developer-documentation">Developer Documentation</a>
+      <a href="/en/">Developer Documentation</a>
         
       &gt;
     
@@ -335,7 +343,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   </li>
 </ul>
 
-    <ul class="goback"><li><a href="/en/developer-documentation">Return To Overview</a></li></ul>
+    <ul class="goback"><li><a href="/en">Return To Overview</a></li></ul>
     <ul class="reportissue"><li><a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new" onmouseover="updateIssue(event);">Report An Issue</a></li></ul>
     <ul class="editsource"><li><a href="https://github.com/bitcoin-dot-org/bitcoin.org/tree/master/_includes" onmouseover="updateSource(event);">Edit On GitHub</a></li></ul>
 
@@ -676,8 +684,7 @@ please be careful using <a href="/en/glossary/serialized-transaction" title="Com
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">UTXO_TXID</span><span class="o">=</span>3f4fa19803dec4d6a84fae3821da7ac7577080ef75451294e71f[...]
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">UTXO_TXID</span><span class="o">=</span>3f4fa19803dec4d6a84fae3821da7ac7577080ef75451294e71f[...]
 <span class="gp">&gt; </span><span class="nv">UTXO_VOUT</span><span class="o">=</span>0</code></pre></figure>
 
   </div>
@@ -794,8 +801,7 @@ we just created does.</p>
     </span><span class="nt">"complete"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">SIGNED_RAW_TX</span><span class="o">=</span>01000000017b1eabe0209b1fe794124575ef807057c77ada[...]</code></pre></figure>
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">SIGNED_RAW_TX</span><span class="o">=</span>01000000017b1eabe0209b1fe794124575ef807057c77ada[...]</code></pre></figure>
 
   </div>
 
@@ -892,11 +898,10 @@ transaction together (such as a CoinJoin transaction).</p>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">UTXO1_TXID</span><span class="o">=</span>78203a8f6b529693759e1917a1b9f05670d036fbb129110ed26[...]
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">UTXO1_TXID</span><span class="o">=</span>78203a8f6b529693759e1917a1b9f05670d036fbb129110ed26[...]
 <span class="gp">&gt; </span><span class="nv">UTXO1_VOUT</span><span class="o">=</span>0
 <span class="gp">&gt; </span><span class="nv">UTXO1_ADDRESS</span><span class="o">=</span>n2KprMQm4z2vmZnPMENfbp2P1LLdAEFRjS
- 
+
 <span class="gp">&gt; </span><span class="nv">UTXO2_TXID</span><span class="o">=</span>263c018582731ff54dc72c7d67e858c002ae298835501d80200[...]
 <span class="gp">&gt; </span><span class="nv">UTXO2_VOUT</span><span class="o">=</span>0
 <span class="gp">&gt; </span><span class="nv">UTXO2_ADDRESS</span><span class="o">=</span>muhtvdmsnbQEPFuEmxcChX58fGvXaaUoVt</code></pre></figure>
@@ -945,9 +950,9 @@ n4LWXU59yM5MzQev7Jx7VNeq1BqZ85ZbLj
 <span class="gp">&gt; </span>bitcoin-cli -regtest createrawtransaction <span class="s1">'''
     [
       {
-        "txid": "'</span><span class="nv">$UTXO1_TXID</span><span class="s1">'", 
+        "txid": "'</span><span class="nv">$UTXO1_TXID</span><span class="s1">'",
         "vout": '</span><span class="nv">$UTXO1_VOUT</span><span class="s1">'
-      }, 
+      },
       {
         "txid": "'</span><span class="nv">$UTXO2_TXID</span><span class="s1">'",
         "vout": '</span><span class="nv">$UTXO2_VOUT</span><span class="s1">'
@@ -955,8 +960,8 @@ n4LWXU59yM5MzQev7Jx7VNeq1BqZ85ZbLj
     ]
     '''</span> <span class="s1">'''
     {
-      "'</span><span class="nv">$NEW_ADDRESS1</span><span class="s1">'": 79.9999, 
-      "'</span><span class="nv">$NEW_ADDRESS2</span><span class="s1">'": 10 
+      "'</span><span class="nv">$NEW_ADDRESS1</span><span class="s1">'": 79.9999,
+      "'</span><span class="nv">$NEW_ADDRESS2</span><span class="s1">'": 10
     }'''</span>
 0100000002f327e86da3e66bd20e1129b1fb36d07056f0b9a117199e75939652<span class="se">\</span>
 6b8f3a20780000000000fffffffff0ede03d75050f20801d50358829ae02c058<span class="se">\</span>
@@ -999,8 +1004,7 @@ before, except now we have two <a href="/en/glossary/input" title="An input in a
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">PARTLY_SIGNED_RAW_TX</span><span class="o">=</span>0100000002f327e86da3e66bd20e1129b1fb36d07[...]</code></pre></figure>
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">PARTLY_SIGNED_RAW_TX</span><span class="o">=</span>0100000002f327e86da3e66bd20e1129b1fb36d07[...]</code></pre></figure>
 
   </div>
 
@@ -1187,8 +1191,7 @@ variable.</p>
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">UTXO_TXID</span><span class="o">=</span>682cad881df69cb9df8f0c996ce96ecad758357ded2da03bad40[...]
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">UTXO_TXID</span><span class="o">=</span>682cad881df69cb9df8f0c996ce96ecad758357ded2da03bad40[...]
 <span class="gp">&gt; </span><span class="nv">UTXO_VOUT</span><span class="o">=</span>1
 <span class="gp">&gt; </span><span class="nv">UTXO_OUTPUT_SCRIPT</span><span class="o">=</span>76a914fa5139067622fd7e1e722a05c17c2bb7d5fd6[...]</code></pre></figure>
 
@@ -1267,8 +1270,8 @@ so it can’t automatically insert the previous <a href="/en/glossary/pubkey-scr
     <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>bitcoin-cli -regtest signrawtransaction <span class="nv">$RAW_TX</span> <span class="s1">'''
     [
       {
-        "txid": "'</span><span class="nv">$UTXO_TXID</span><span class="s1">'", 
-        "vout": '</span><span class="nv">$UTXO_VOUT</span><span class="s1">', 
+        "txid": "'</span><span class="nv">$UTXO_TXID</span><span class="s1">'",
+        "vout": '</span><span class="nv">$UTXO_VOUT</span><span class="s1">',
         "scriptPubKey": "'</span><span class="nv">$UTXO_OUTPUT_SCRIPT</span><span class="s1">'"
       }
     ]'''</span></code></pre></figure>
@@ -1285,8 +1288,7 @@ so it can’t automatically insert the previous <a href="/en/glossary/pubkey-scr
     </span><span class="nt">"complete"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">SIGNED_RAW_TX</span><span class="o">=</span>0100000001098ebbff18cf40ad3ba02ded7d3558d7ca6ee9[...]</code></pre></figure>
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">SIGNED_RAW_TX</span><span class="o">=</span>0100000001098ebbff18cf40ad3ba02ded7d3558d7ca6ee9[...]</code></pre></figure>
 
   </div>
 
@@ -1397,13 +1399,12 @@ redeem script</a>. You must give them a full <a href="/en/glossary/public-key" t
     </span><span class="nt">"account"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">NEW_ADDRESS3_PUBLIC_KEY</span><span class="o">=</span>029e03a901b85534ff1e92c43c74431f7ce720[...]</code></pre></figure>
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">NEW_ADDRESS3_PUBLIC_KEY</span><span class="o">=</span>029e03a901b85534ff1e92c43c74431f7ce720[...]</code></pre></figure>
 
   </div>
 
   <p>Use the <a href="/en/developer-reference#validateaddress" class="auto-link"><code class="highlighter-rouge">validateaddress</code> RPC</a> to display the full (unhashed) <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a>
-for one of the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.  This is the information which will 
+for one of the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.  This is the information which will
 actually be included in the <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig</a> <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a>.  This is also the
 information you would give another person or device as part of creating
 a <a href="/en/glossary/multisig" title="A pubkey script that provides *n* number of pubkeys and requires the corresponding signature script provide *m* minimum number signatures corresponding to the provided pubkeys." class="auto-link">multisig output</a> or <a href="/en/glossary/p2sh-multisig" title="A P2SH output where the redeem script uses one of the multisig opcodes.  Up until Bitcoin Core 0.10.0, P2SH multisig scripts were standard transactions, but most other P2SH scripts were not." class="auto-link">P2SH multisig redeem script</a>.</p>
@@ -1415,7 +1416,7 @@ a <a href="/en/glossary/multisig" title="A pubkey script that provides *n* numbe
     <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>bitcoin-cli -regtest createmultisig 2 <span class="s1">'''
     [
       "'</span><span class="nv">$NEW_ADDRESS1</span><span class="s1">'",
-      "'</span><span class="nv">$NEW_ADDRESS2</span><span class="s1">'", 
+      "'</span><span class="nv">$NEW_ADDRESS2</span><span class="s1">'",
       "'</span><span class="nv">$NEW_ADDRESS3_PUBLIC_KEY</span><span class="s1">'"
     ]'''</span></code></pre></figure>
 
@@ -1427,8 +1428,7 @@ a <a href="/en/glossary/multisig" title="A pubkey script that provides *n* numbe
     c43c74431f7ce72046060fcf7a95c37e148f78c7725553ae"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">P2SH_ADDRESS</span><span class="o">=</span>2N7NaqSKYQUeM8VNgBy8D9xQQbiA8yiJayk
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">P2SH_ADDRESS</span><span class="o">=</span>2N7NaqSKYQUeM8VNgBy8D9xQQbiA8yiJayk
 <span class="gp">&gt; </span><span class="nv">P2SH_REDEEM_SCRIPT</span><span class="o">=</span>522103310188e911026cf18c3ce274e0ebb5f95b007[...]</code></pre></figure>
 
   </div>
@@ -1534,15 +1534,14 @@ output</a> to a new one of our <a href="/en/glossary/p2pkh-address" title="A Das
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">UTXO_VOUT</span><span class="o">=</span>0
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">UTXO_VOUT</span><span class="o">=</span>0
 <span class="gp">&gt; </span><span class="nv">UTXO_OUTPUT_SCRIPT</span><span class="o">=</span>a9149af61346ce0aa2dffcf697352b4b704c84dcbaff87</code></pre></figure>
 
   </div>
 
   <p>We use the <a href="/en/developer-reference#getrawtransaction" class="auto-link"><code class="highlighter-rouge">getrawtransaction</code> RPC</a> with the optional second argument
 (<em>true</em>) to get the decoded transaction we just created with
-<code class="highlighter-rouge">spendtoaddress</code>. We choose one of the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> to be our <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> and get
+<a href="/en/developer-reference#sendtoaddress" class="auto-link"><code class="highlighter-rouge">sendtoaddress</code></a>. We choose one of the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> to be our <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> and get
 its <a href="/en/developer-guide#term-output-index" title="The sequentially-numbered index of outputs in a single transaction starting from 0" class="auto-link">output index</a> number (vout) and <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> (<a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">scriptPubKey</a>).</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>bitcoin-cli -regtest getnewaddress
@@ -1597,9 +1596,9 @@ so <a href="/en/glossary/signature" title="A value related to a public key which
     <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>bitcoin-cli -regtest signrawtransaction <span class="nv">$RAW_TX</span> <span class="s1">'''
     [
       {
-        "txid": "'</span><span class="nv">$UTXO_TXID</span><span class="s1">'", 
-        "vout": '</span><span class="nv">$UTXO_VOUT</span><span class="s1">', 
-        "scriptPubKey": "'</span><span class="nv">$UTXO_OUTPUT_SCRIPT</span><span class="s1">'", 
+        "txid": "'</span><span class="nv">$UTXO_TXID</span><span class="s1">'",
+        "vout": '</span><span class="nv">$UTXO_VOUT</span><span class="s1">',
+        "scriptPubKey": "'</span><span class="nv">$UTXO_OUTPUT_SCRIPT</span><span class="s1">'",
         "redeemScript": "'</span><span class="nv">$P2SH_REDEEM_SCRIPT</span><span class="s1">'"
       }
     ]
@@ -1623,8 +1622,7 @@ so <a href="/en/glossary/signature" title="A value related to a public key which
     </span><span class="nt">"complete"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">PARTLY_SIGNED_RAW_TX</span><span class="o">=</span>010000000175e1769813db8418fea17576694af1f[...]</code></pre></figure>
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">PARTLY_SIGNED_RAW_TX</span><span class="o">=</span>010000000175e1769813db8418fea17576694af1f[...]</code></pre></figure>
 
   </div>
 
@@ -1639,7 +1637,7 @@ to the <a href="/en/glossary/signature-script" title="Data generated by a spende
       {
         "txid": "'</span><span class="nv">$UTXO_TXID</span><span class="s1">'",
         "vout": '</span><span class="nv">$UTXO_VOUT</span><span class="s1">',
-        "scriptPubKey": "'</span><span class="nv">$UTXO_OUTPUT_SCRIPT</span><span class="s1">'", 
+        "scriptPubKey": "'</span><span class="nv">$UTXO_OUTPUT_SCRIPT</span><span class="s1">'",
         "redeemScript": "'</span><span class="nv">$P2SH_REDEEM_SCRIPT</span><span class="s1">'"
       }
     ]
@@ -1666,8 +1664,7 @@ to the <a href="/en/glossary/signature-script" title="Data generated by a spende
     </span><span class="nt">"complete"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
-<span class="gp">&gt; </span><span class="nv">SIGNED_RAW_TX</span><span class="o">=</span>010000000175e1769813db8418fea17576694af1ff31cb2b[...]</code></pre></figure>
+    <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="nv">SIGNED_RAW_TX</span><span class="o">=</span>010000000175e1769813db8418fea17576694af1ff31cb2b[...]</code></pre></figure>
 
   </div>
 
@@ -2225,7 +2222,7 @@ larger filter size as computed earlier.)</p>
 dependencies, see <a href="https://github.com/petertodd/python-bitcoinlib">python-bitcoinlib’s</a> <a href="/en/glossary/bloom-filter" title="A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes." class="auto-link">bloom filter</a>
 module which is based directly on Bitcoin Core’s C++ implementation.</p>
 
-  <p>Using the <a href="/en/developer-reference#filterclear" title="A P2P protocol message used to send a filter to a remote peer, requesting that they only send transactions which match the filter." class="auto-link"><code class="highlighter-rouge">filterload</code> message</a> format, the complete filter created above 
+  <p>Using the <a href="/en/developer-reference#filterclear" title="A P2P protocol message used to send a filter to a remote peer, requesting that they only send transactions which match the filter." class="auto-link"><code class="highlighter-rouge">filterload</code> message</a> format, the complete filter created above
 would be the binary form of the annotated hexdump shown below:</p>
 
   <figure class="highlight"><pre><code class="language-text" data-lang="text">02 ......... Filter bytes: 2
@@ -2369,7 +2366,7 @@ message</a> and a <a href="/en/developer-reference#verack" title="A P2P network 
 script, but we will sleep a short bit and send back our own <a href="/en/developer-reference#verack" title="A P2P network message sent in reply to a version message to confirm a connection has been established" class="auto-link"><code class="highlighter-rouge">verack</code>
 message</a> as if we had accepted their <a href="/en/developer-reference#version" title="A P2P network message sent at the begining of a connection to allow protocol version negotiation" class="auto-link"><code class="highlighter-rouge">version</code> message</a>.</p>
 
-  <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">send</span><span class="p">(</span><span class="s">"filterload"</span><span class="p">,</span> 
+  <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">send</span><span class="p">(</span><span class="s">"filterload"</span><span class="p">,</span>
       <span class="s">"02"</span>  <span class="c"># ........ Filter bytes: 2</span>
     <span class="o">+</span> <span class="s">"b50f"</span> <span class="c"># ....... Filter: 1010 1101 1111 0000</span>
     <span class="o">+</span> <span class="s">"0b000000"</span> <span class="c"># ... nHashFuncs: 11</span>
@@ -2495,7 +2492,7 @@ more child <a href="/en/glossary/node" title="A computer that connects to the Da
   <p>We hash as appropriate to fill out the tree.  Note that the eighth flag is
 not used—this is acceptable as it was required to pad out a flag byte.</p>
 
-  <p>The final steps would be to ensure the computed computed <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a>
+  <p>The final steps would be to ensure the computed <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a>
 is identical to the <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a> in the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> and check the other steps
 of the parsing checklist in the <a href="/en/developer-reference#merkleblock" title="A P2P protocol message used to request a filtered block useful for SPV proofs" class="auto-link"><code class="highlighter-rouge">merkleblock</code> message</a> section.</p>
 

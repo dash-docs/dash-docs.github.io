@@ -218,15 +218,23 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   
 
 <ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
-  <li><a>Introduction</a>
+  <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+  <!--<li><a href="/en/developer-documentation">Documentation</a></li>-->
+
+  <li><a>Documentation</a>
     <ul>
       <!--
       <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
       <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
-      -->
+
       <li><a href="/en/bitcoin-for-developers">Developers</a></li>
-      <li><a href="/en/getting-started">Getting started</a></li>
+      -->
+      <li class="active"><a href="/en/developer-guide">Guide</a></li>
+      <li><a href="/en/developer-reference">Reference</a></li>
+      <li><a href="/en/developer-glossary">Glossary</a></li>
+
       <!--
+      <li><a href="/en/getting-started">Getting started</a></li>
       <li><a href="/en/how-it-works">How it works</a></li>
       <li><a href="/en/you-need-to-know">You need to know</a></li>
     -->
@@ -238,8 +246,8 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       <li><a href="/en/exchanges">Exchanges</a></li>
       <li><a href="/en/community">Community</a></li>
       -->
-      <li><a href="https://www.dash.org/community/">Community</a></li>
-      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a rel="noopener noreferrer" target="_blank" href="https://www.dash.org/community/">Community</a></li>
+      <!-- <li><a href="/en/developer-documentation">Documentation</a></li> -->
       <li><a href="/en/vocabulary">Vocabulary</a></li>
       <!--
       <li><a href="/en/events">Events</a></li>
@@ -249,7 +257,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
     -->
     </ul>
   </li>
-  <li><a href="/en/innovation">Innovation</a></li>
+  <!-- <li><a href="/en/innovation">Innovation</a></li> -->
   <!--
   <li><a>Participate</a>
     <ul>
@@ -271,7 +279,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 <div class="breadcrumbs">
   
     
-      <a href="/en/developer-documentation">Developer Documentation</a>
+      <a href="/en/">Developer Documentation</a>
         
       &gt;
     
@@ -383,7 +391,9 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       </li>
       <li><a href="#misbehaving-nodes" id="markdown-toc-misbehaving-nodes">Misbehaving Nodes</a></li>
       <li><a href="#alerts" id="markdown-toc-alerts">Alerts</a></li>
-      <li><a href="#quorum-selection" id="markdown-toc-quorum-selection">Quorum Selection</a></li>
+    </ul>
+  </li>
+  <li><a href="#dash-features" id="markdown-toc-dash-features">Dash Features</a>    <ul>
       <li><a href="#instantsend" id="markdown-toc-instantsend">InstantSend</a></li>
       <li><a href="#privatesend" id="markdown-toc-privatesend">PrivateSend</a></li>
       <li><a href="#masternode-payment" id="markdown-toc-masternode-payment">Masternode Payment</a></li>
@@ -404,6 +414,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
           </li>
         </ul>
       </li>
+      <li><a href="#quorum-selection" id="markdown-toc-quorum-selection">Quorum Selection</a></li>
     </ul>
   </li>
   <li><a href="#mining" id="markdown-toc-mining">Mining</a>    <ul>
@@ -419,7 +430,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   </li>
 </ul>
 
-    <ul class="goback"><li><a href="/en/developer-documentation">Return To Overview</a></li></ul>
+    <ul class="goback"><li><a href="/en">Return To Overview</a></li></ul>
     <ul class="reportissue"><li><a href="https://github.com/thephez/dash.org/issues/new" onmouseover="updateIssue(event);">Report An Issue</a></li></ul>
     <ul class="editsource"><li><a href="https://github.com/thephez/dash.org/tree/master/_includes" onmouseover="updateSource(event);">Edit On GitHub</a></li></ul>
 
@@ -637,7 +648,7 @@ other considerations, discussed below, <a href="/en/glossary/node" title="A comp
 the competing simultaneously-mined <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>. This makes that side of
 the <a href="/en/glossary/fork" title="When two or more blocks have the same block height, forking the block chain.  Typically occurs when two or more miners find blocks at nearly the same time.  Can also happen as part of an attack." class="auto-link">fork</a> stronger than the other side.
 Assuming a <a href="/en/glossary/fork" title="When two or more blocks have the same block height, forking the block chain.  Typically occurs when two or more miners find blocks at nearly the same time.  Can also happen as part of an attack." class="auto-link">fork</a> only contains valid
-<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>, normal <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> always follow the the most difficult chain
+<a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>, normal <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">peers</a> always follow the most difficult chain
 to recreate and throw away <a href="/en/glossary/stale-block" title="Blocks which were successfully mined but which aren't included on the current best block chain, likely because some other block at the same height had its chain extended first." id="term-stale-block" class="term">stale blocks</a> belonging to shorter <a href="/en/glossary/fork" title="When two or more blocks have the same block height, forking the block chain.  Typically occurs when two or more miners find blocks at nearly the same time.  Can also happen as part of an attack." class="auto-link">forks</a>.
 (<a href="/en/glossary/stale-block" title="Blocks which were successfully mined but which aren't included on the current best block chain, likely because some other block at the same height had its chain extended first." class="auto-link">Stale blocks</a> are also sometimes called orphans or orphan blocks, but
 those terms are also used for true <a href="/en/glossary/orphan-block" title="Blocks whose parent block has not been processed by the local node, so they can't be fully validated yet." class="auto-link">orphan blocks</a> without a known parent <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>.)</p>
@@ -872,7 +883,7 @@ invalidating previous transactions.</p>
   <p><img src="/img/dev/en-tx-overview-spending.svg" alt="Spending An Output" /></p>
 
   <p>An <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> has an implied index number based on its location in the
-transaction—the first <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> is <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> zero. The <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> also has an
+transaction—the index of the first <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> is zero. The <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> also has an
 amount in <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> which it pays to a conditional <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a>. Anyone
 who can satisfy the conditions of that <a href="/en/glossary/pubkey-script" title="A script included in outputs which sets the conditions that must be fulfilled for those duffs to be spent.  Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code." class="auto-link">pubkey script</a> can spend up to the
 amount of <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> paid to it.</p>
@@ -3543,52 +3554,30 @@ control.</p>
   <p><strong>Resource:</strong> More details about the structure of <a href="/en/developer-reference#alert" title="The P2P network message which sends alerts in case of major software problems." class="auto-link"><code class="highlighter-rouge">alert</code> messages</a> and a
 complete list of message types can be found in the <a href="/en/developer-reference#p2p-network">P2P reference section</a>.</p>
 
-  <h3 id="quorum-selection">Quorum Selection</h3>
-
-  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
-| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
-| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+  <h2 id="dash-features">Dash Features</h2>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>Dash quorums are used to facilitate the operation of masternode provided
-features in a decentralized, deterministic way.</p>
+  <p>Dash aims to be the most user-friendly and scalable payments-focused
+cryptocurrency in the world. The Dash <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> features instant transaction
+<a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmation</a>, <a href="/en/glossary/double-spend" title="A transaction that uses the same input as an already broadcast transaction. The attempt of duplication, deceit, or conversion,  will be adjudicated when only one of the transactions is recorded in the blockchain." class="auto-link">double spend</a> protection, anonymity equal to that of physical cash,
+a self-governing, self-funding model driven by incentivized full <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> and a
+clear roadmap for on-chain scaling to up to 400MB <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> using custom-developed
+open source hardware.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Quorum Type</th>
-        <th>Members</th>
-        <th><a href="/en/glossary/consensus" title="When several nodes (usually most nodes on the network) all have the same blocks in their locally-validated best block chain." class="auto-link">Consensus</a></th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>InstantSend</td>
-        <td>10</td>
-        <td>Majority</td>
-        <td>A set of 10 masternodes are selected for <em>each</em> <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> of the InstantSend transaction. A majority (6+) of them must agree to lock the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>. If all <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> in the transaction can be locked, it becomes a successful InstantSend.</td>
-      </tr>
-      <tr>
-        <td>MN Payments</td>
-        <td>10</td>
-        <td>Majority</td>
-        <td>A set of 10 masternodes are selected for each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. A majority (6+) of them must agree on the masternode payee for the next <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>.</td>
-      </tr>
-      <tr>
-        <td>MN Broadcast</td>
-        <td>10</td>
-        <td>Majority</td>
-        <td>If a majority (6+) of <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> agree, a new <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a> is not required.</td>
-      </tr>
-    </tbody>
-  </table>
+  <p>While Dash is based on Bitcoin and compatible with many key components of the
+Bitcoin ecosystem, its two-tier <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> structure offers significant
+improvements in transaction speed, anonymity and governance. This section of the
+documentation describes these key features that set Dash apart in the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">blockchain</a>
+economy.</p>
 
   <h3 id="instantsend">InstantSend</h3>
 
-  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
-| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
-| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>Dash Core’s InstantSend feature provides a way to lock transaction <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> and
@@ -3659,9 +3648,9 @@ transaction lock, it reverts to being a <a href="/en/glossary/standard-transacti
 
   <h3 id="privatesend">PrivateSend</h3>
 
-  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
-| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
-| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>Dash Core’s PrivateSend feature provides a way to improve privacy by performing
@@ -3749,9 +3738,9 @@ reference this <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146
 
   <h3 id="masternode-payment">Masternode Payment</h3>
 
-  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
-| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
-| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>Masternode payment uses a verifiable process to determine which masternode is
@@ -3773,9 +3762,9 @@ treated as misbehaving and have its ban score increased.</p>
 
   <h3 id="masternode-sync">Masternode Sync</h3>
 
-  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
-| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
-| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <p>Dash Core performs full masternode synchronization as required. There are
@@ -4091,9 +4080,9 @@ masternodes in sync with each other. This information is derived from
 
   <h3 id="governance">Governance</h3>
 
-  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_p2p_network.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_p2p_network.md">Edit</a>
-| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_p2p_network.md">History</a>
-| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_p2p_network.md%0A%0A">Report Issue</a>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
   <h4 id="synchronization">Synchronization</h4>
@@ -4264,7 +4253,7 @@ objects.</p>
 
   <h4 id="sentinel">Sentinel</h4>
 
-  <p>Sentinel is a Python application that connects to a masternode’s local dashd
+  <p><a href="https://github.com/dashpay/sentinel/">Sentinel</a> is a Python application that connects to a masternode’s local dashd
 instance to run as an autonomous agent for persisting, processing, and automating
 Dash 12.1+ governance objects and tasks. Sentinel abstracts some governance
 details away from Dash Core for easier extensibility of the governance system in
@@ -4298,6 +4287,47 @@ voted to delete them.</p>
   <h5 id="sentinel-superblock">Sentinel Superblock</h5>
   <p>Sentinel manages superblock creation, voting, and submission to dashd for
 <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> propagation.</p>
+
+  <h3 id="quorum-selection">Quorum Selection</h3>
+
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <p>Dash quorums are used to facilitate the operation of masternode provided
+features in a decentralized, deterministic way.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Quorum Type</th>
+        <th>Members</th>
+        <th><a href="/en/glossary/consensus" title="When several nodes (usually most nodes on the network) all have the same blocks in their locally-validated best block chain." class="auto-link">Consensus</a></th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>InstantSend</td>
+        <td>10</td>
+        <td>Majority</td>
+        <td>A set of 10 masternodes are selected for <em>each</em> <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a> of the InstantSend transaction. A majority (6+) of them must agree to lock the <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>. If all <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> in the transaction can be locked, it becomes a successful InstantSend.</td>
+      </tr>
+      <tr>
+        <td>MN Payments</td>
+        <td>10</td>
+        <td>Majority</td>
+        <td>A set of 10 masternodes are selected for each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. A majority (6+) of them must agree on the masternode payee for the next <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>.</td>
+      </tr>
+      <tr>
+        <td>MN Broadcast</td>
+        <td>10</td>
+        <td>Majority</td>
+        <td>If a majority (6+) of <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a> agree, a new <a href="/en/developer-reference#mnb" title="A P2P protocol message used to describe the masternode entry and how to validate messages from it" class="auto-link"><code class="highlighter-rouge">mnb</code> message</a> is not required.</td>
+      </tr>
+    </tbody>
+  </table>
 
   <h2 id="mining">Mining</h2>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_mining.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_mining.md">Edit</a>
@@ -4381,7 +4411,7 @@ but which do hash below the pool’s <a href="/en/glossary/nbits" title="The tar
 
   <p>The <a href="/en/glossary/mining" title="Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices." class="auto-link">miner</a> then sends to the pool a copy of the information the pool
 needs to validate that the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> will hash below the <a href="/en/glossary/nbits" title="The target is the threshold below which a block header hash must be in order for the block to valid, and nBits is the encoded form of the target threshold as it appears in the block header." class="auto-link">target</a> and that
-the the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> of transactions referred to by the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a> field
+the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> of transactions referred to by the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> <a href="/en/glossary/merkle-root" title="The root node of a merkle tree, a descendant of all the hashed pairs in the tree.  Block headers must include a valid merkle root descended from all transactions in that block." class="auto-link">merkle root</a> field
 is valid for the pool’s purposes. (This usually means that the <a href="/en/glossary/coinbase-transaction" title="The first transaction in a block.  Always created by a miner, it includes a single coinbase." class="auto-link">coinbase
 transaction</a> must pay the pool.)</p>
 

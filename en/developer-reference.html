@@ -218,15 +218,23 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   
 
 <ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
-  <li><a>Introduction</a>
+  <li><a href="/en/bitcoin-for-developers">Developers</a></li>
+  <!--<li><a href="/en/developer-documentation">Documentation</a></li>-->
+
+  <li><a>Documentation</a>
     <ul>
       <!--
       <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
       <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
-      -->
+
       <li><a href="/en/bitcoin-for-developers">Developers</a></li>
-      <li><a href="/en/getting-started">Getting started</a></li>
+      -->
+      <li><a href="/en/developer-guide">Guide</a></li>
+      <li class="active"><a href="/en/developer-reference">Reference</a></li>
+      <li><a href="/en/developer-glossary">Glossary</a></li>
+
       <!--
+      <li><a href="/en/getting-started">Getting started</a></li>
       <li><a href="/en/how-it-works">How it works</a></li>
       <li><a href="/en/you-need-to-know">You need to know</a></li>
     -->
@@ -238,8 +246,8 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
       <li><a href="/en/exchanges">Exchanges</a></li>
       <li><a href="/en/community">Community</a></li>
       -->
-      <li><a href="https://www.dash.org/community/">Community</a></li>
-      <li><a href="/en/developer-documentation">Documentation</a></li>
+      <li><a rel="noopener noreferrer" target="_blank" href="https://www.dash.org/community/">Community</a></li>
+      <!-- <li><a href="/en/developer-documentation">Documentation</a></li> -->
       <li><a href="/en/vocabulary">Vocabulary</a></li>
       <!--
       <li><a href="/en/events">Events</a></li>
@@ -249,7 +257,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
     -->
     </ul>
   </li>
-  <li><a href="/en/innovation">Innovation</a></li>
+  <!-- <li><a href="/en/innovation">Innovation</a></li> -->
   <!--
   <li><a>Participate</a>
     <ul>
@@ -271,7 +279,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 <div class="breadcrumbs">
   
     
-      <a href="/en/developer-documentation">Developer Documentation</a>
+      <a href="/en/">Developer Documentation</a>
         
       &gt;
     
@@ -625,7 +633,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   </li>
 </ul>
 
-    <ul class="goback"><li><a href="/en/developer-documentation">Return To Overview</a></li></ul>
+    <ul class="goback"><li><a href="/en">Return To Overview</a></li></ul>
     <ul class="reportissue"><li><a href="https://github.com/thephez/dash.org/issues/new" onmouseover="updateIssue(event);">Report An Issue</a></li></ul>
     <ul class="editsource"><li><a href="https://github.com/thephez/dash.org/tree/master/_includes" onmouseover="updateSource(event);">Edit On GitHub</a></li></ul>
 
@@ -7766,7 +7774,7 @@ function searchRPC() {
     <li><a href="/en/developer-reference#getmempoolinfo">GetMemPoolInfo</a>: returns information about the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a> current transaction memory pool. <em><abbr title="Updated in Bitcoin Core v0.12.0">Updated in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#getrawmempool">GetRawMemPool</a>: returns all <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">transaction identifiers</a> (<a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXIDs</a>) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object. <em><abbr title="Updated in Bitcoin Core v0.13.0">Updated in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#getspentinfo">GetSpentInfo</a>: returns the <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">txid</a> and index where an <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> is spent (requires <code class="highlighter-rouge">spentindex</code> to be enabled). <em><abbr title="New in Dash Core v0.12.1">New in Dash Core 0.12.1</abbr></em></li>
-    <li><a href="/en/developer-reference#gettxout">GetTxOut</a>: returns details about a transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  Only unspent transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a>) are guaranteed to be available.</li>
+    <li><a href="/en/developer-reference#gettxout">GetTxOut</a>: returns details about an unspent transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a>).</li>
     <li><a href="/en/developer-reference#gettxoutproof">GetTxOutProof</a>: returns a hex-encoded proof that one or more specified transactions were included in a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a>. <em><abbr title="New in Bitcoin Core v0.11.0">New in <a href="/en/release/v0.11.0" class="auto-link">Bitcoin Core 0.11.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#gettxoutsetinfo">GetTxOutSetInfo</a>: returns statistics about the <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmed</a> unspent transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a>) set. Note that this call may take some time and that it only counts <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> from <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmed transactions</a>—it does not count <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> from the memory pool.</li>
     <li><a href="/en/developer-reference#verifychain">VerifyChain</a>: verifies each entry in the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> database.</li>
@@ -15837,7 +15845,7 @@ locked InstantSend transactions):</p>
         <td>A <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> when the transaction was added to the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a></td>
       </tr>
       <tr>
-        <td>→ <br /><code class="highlighter-rouge">timerecived</code></td>
+        <td>→ <br /><code class="highlighter-rouge">timereceived</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>A <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> when the transaction was detected by the local <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, or the time of the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> on the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> that included the transaction</td>
@@ -15984,7 +15992,9 @@ locked InstantSend transactions):</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rpcs/rpcs/gettxout.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <a href="/en/developer-reference#gettxout" class="auto-link"><code class="highlighter-rouge">gettxout</code> RPC</a> returns details about a transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  Only unspent transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a>) are guaranteed to be available.</p>
+  <!-- __ -->
+
+  <p>The <a href="/en/developer-reference#gettxout" class="auto-link"><code class="highlighter-rouge">gettxout</code> RPC</a> returns details about an unspent transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a>).</p>
 
   <p><em>Parameter #1—the <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXID</a> of the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> to get</em></p>
 
@@ -16065,7 +16075,7 @@ locked InstantSend transactions):</p>
         <td><code class="highlighter-rouge">result</code></td>
         <td>object/null</td>
         <td>Required<br />(exactly 1)</td>
-        <td>Information about the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  If <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> wasn’t found or if an error occurred, this will be JSON <code class="highlighter-rouge">null</code></td>
+        <td>Information about the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a>.  If <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> wasn’t found, if it was spent, or if an error occurred, this will be JSON <code class="highlighter-rouge">null</code></td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">bestblock</code></td>
@@ -19223,11 +19233,11 @@ entire <a href="/en/glossary/block-chain" title="A chain of blocks with each blo
 
   <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <p>InstantSend 0.1 dash to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “instantsendtoadress
+  <p>InstantSend 0.1 dash to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “instantsendtoaddress
 example” and the comment-to “Nemo From Example.com”:</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet instantsendtoaddress ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv <span class="se">\</span>
-  1.0 <span class="s2">"instantsendtoadress example"</span> <span class="s2">"Nemo From Example.com"</span></code></pre></figure>
+  1.0 <span class="s2">"instantsendtoaddress example"</span> <span class="s2">"Nemo From Example.com"</span></code></pre></figure>
 
   <p>Result:</p>
 
@@ -20491,7 +20501,7 @@ transactions):</p>
         <td>A <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> when the transaction was added to the <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a></td>
       </tr>
       <tr>
-        <td>→ → → <br /><code class="highlighter-rouge">timerecived</code></td>
+        <td>→ → → <br /><code class="highlighter-rouge">timereceived</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>A <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> when the transaction was detected by the local <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>, or the time of the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> on the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> that included the transaction</td>
@@ -24343,7 +24353,7 @@ ebb5b64486dc43400c0226b428a488ac00000000</code></pre></figure>
 
   <p><em>Example from Dash Core 0.12.2</em></p>
 
-  <p>Spend 0.1 dash to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “sendtoadress
+  <p>Spend 0.1 dash to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “sendtoaddress
 example” and the comment-to “Nemo From Example.com”:</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet sendtoaddress ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv <span class="se">\</span>
@@ -24355,7 +24365,7 @@ example” and the comment-to “Nemo From Example.com”:</p>
 
   <p><em>Example from Dash Core 0.12.2 (InstantSend)</em></p>
 
-  <p>Spend 0.1 dash via InstantSend to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “sendtoadress
+  <p>Spend 0.1 dash via InstantSend to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “sendtoaddress
 example” and the comment-to “Nemo From Example.com”:</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet sendtoaddress ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv <span class="se">\</span>
@@ -24367,7 +24377,7 @@ example” and the comment-to “Nemo From Example.com”:</p>
 
   <p><em>Example from Dash Core 0.12.2 (PrivateSend)</em></p>
 
-  <p>Spend 0.1 dash via PrivateSend to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “sendtoadress
+  <p>Spend 0.1 dash via PrivateSend to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the comment “sendtoaddress
 example” and the comment-to “Nemo From Example.com”:</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet sendtoaddress ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv <span class="se">\</span>
@@ -24380,7 +24390,7 @@ example” and the comment-to “Nemo From Example.com”:</p>
   <p><em>Example from Dash Core 0.12.2 (InstantSend + PrivateSend)</em></p>
 
   <p>Spend 0.1 dash via InstantSend and PrivateSend to the <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">address</a> below with the
-comment “sendtoadressexample” and the comment-to “Nemo From Example.com”:</p>
+comment “sendtoaddressexample” and the comment-to “Nemo From Example.com”:</p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet sendtoaddress ySutkc49Khpz1HQN8AfWNitVBLwqtyaxvv <span class="se">\</span>
   1.008 <span class="s2">"sendtoaddress example"</span> <span class="s2">"Nemo From Example.com"</span> <span class="nb">false true true</span></code></pre></figure>
@@ -25120,11 +25130,10 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
   <p>Sign the hex generated in the example section for the <a href="/en/developer-reference#createrawtransaction" class="auto-link"><code class="highlighter-rouge">createrawtransaction</code>
 RPC</a>:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet signrawtransaction signrawtransaction 01000000016b4908<span class="se">\</span>
-86c0198b028c6c5cb145c4eb3b1055a224a7a105aadeff41b69ec91e060100000000ffff<span class="se">\</span>
-ffff0200205fa0120000001976a914485485425fa99504ec1638ac4213f3cfc9f32ef388<span class="se">\</span>
-acc0a8f9be010000001976a914811eacc14db8ebb5b64486dc43400c0226b428a488ac00<span class="se">\</span>
-000000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet signrawtransaction 01000000016b490886c0198b028c6c5cb14<span class="se">\</span>
+5c4eb3b1055a224a7a105aadeff41b69ec91e060100000000ffffffff0200205fa012000<span class="se">\</span>
+0001976a914485485425fa99504ec1638ac4213f3cfc9f32ef388acc0a8f9be010000001<span class="se">\</span>
+976a914811eacc14db8ebb5b64486dc43400c0226b428a488ac00000000</code></pre></figure>
 
   <p>Result:</p>
 
@@ -26495,14 +26504,15 @@ value of the passphrase parameter).</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/intro.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>As of <a href="/en/release/v0.10.0">version 0.10.0</a>, Bitcoin Core provides
-an <strong>unauthenticated</strong> HTTP REST interface.  The interface runs on the
-same port as the JSON-<a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> interface, by default port 8332 for <a href="/en/glossary/mainnet" title="The original and main network for Dash transactions, where duffs have real economic value." class="auto-link">mainnet</a> and
-port 18332 for <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend duffs that have no real-world value on a network that is very similar to the Dash mainnet." class="auto-link">testnet</a>. It must be enabled by either starting Bitcoin
+  <!-- __ -->
+
+  <p>Dash Core provides an <strong>unauthenticated</strong> HTTP REST interface.  The interface
+runs on the same port as the JSON-<a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> interface, by default port 9998 for
+<a href="/en/glossary/mainnet" title="The original and main network for Dash transactions, where duffs have real economic value." class="auto-link">mainnet</a> and port 19998 for <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend duffs that have no real-world value on a network that is very similar to the Dash mainnet." class="auto-link">testnet</a>. It must be enabled by either starting Dash
 Core with the <code class="highlighter-rouge">-rest</code> option or by specifying <code class="highlighter-rouge">rest=1</code> in the
 configuration file. Make sure that the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> interface is also activated.
-Set <code class="highlighter-rouge">server=1</code> in <code class="highlighter-rouge">bitcoin.conf</code> or supply the <code class="highlighter-rouge">-server</code> argument when 
-starting Bitcoin Core. Starting Bitcoin Core with <code class="highlighter-rouge">bitcoind</code> automatically 
+Set <code class="highlighter-rouge">server=1</code> in <code class="highlighter-rouge">dash.conf</code> or supply the <code class="highlighter-rouge">-server</code> argument when
+starting Dash Core. Starting Dash Core with <code class="highlighter-rouge">dashd</code> automatically
 enables the <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> interface.</p>
 
   <p>The interface is not intended for public access and is only accessible
@@ -26512,7 +26522,7 @@ from localhost by default.</p>
 localhost, possibly allowing third parties to use cross-site scripting
 attacks to download your transaction and <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> data, reducing your
 privacy.  If you have privacy concerns, you should not run a browser on
-the same computer as a REST-enabled Bicoin Core <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>.</p>
+the same computer as a REST-enabled Dash Core <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a>.</p>
 
   <p>The interface uses standard <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status
 codes</a> and
@@ -26524,6 +26534,8 @@ returns a plain-text description of errors for debugging.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/quick-reference.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
+  <!-- __ -->
+
   <ul>
     <li><a href="/en/developer-reference#get-block">GET Block</a> gets a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> with a particular <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash from the local <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> database either as a JSON object or as a <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a>. <em><abbr title="Updated in Bitcoin Core v0.13.0">Updated in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#get-blocknotxdetails">GET Block/NoTxDetails</a> gets a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> with a particular <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash from the local <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> database either as a JSON object or as a <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a>.  The JSON object includes <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXIDs</a> for transactions within the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> rather than the complete transactions <a href="/en/developer-reference#get-block">GET block</a> returns. <em><abbr title="Updated in Bitcoin Core v0.13.0">Updated in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></abbr></em></li>
@@ -26532,7 +26544,7 @@ returns a plain-text description of errors for debugging.</p>
     <li><a href="/en/developer-reference#get-headers">GET Headers</a> returns a specified amount of <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block headers</a> in upward direction. <em><abbr title="New in Bitcoin Core v0.11.0">New in <a href="/en/release/v0.11.0" class="auto-link">Bitcoin Core 0.11.0</a></abbr></em>, <em><abbr title="Updated in Bitcoin Core v0.13.0">Updated in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#get-mempoolcontents">GET MemPool/Contents</a> returns all transaction in the memory pool with detailed information. <em><abbr title="New in Bitcoin Core v0.12.0">New in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></abbr></em></li>
     <li><a href="/en/developer-reference#get-mempoolinfo">GET MemPool/Info</a> returns information about the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a> current transaction memory pool. <em><abbr title="New in Bitcoin Core v0.12.0">New in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></abbr></em></li>
-    <li><a href="/en/developer-reference#get-tx">GET Tx</a> gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Bitcoin Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so this method may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Bitcoin Core startup settings. <em><abbr title="Updated in Bitcoin Core v0.13.0">Updated in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></abbr></em></li>
+    <li><a href="/en/developer-reference#get-tx">GET Tx</a> gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so this method may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Dash Core startup settings. <em><abbr title="Updated in Bitcoin Core v0.13.0">Updated in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></abbr></em></li>
   </ul>
 
   <h4 id="requests">Requests</h4>
@@ -26552,6 +26564,8 @@ untrusted source.</p>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rest/requests/get_block.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_block.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <!-- __ -->
 
   <p>The <code class="highlighter-rouge">GET block</code> operation gets a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> with a particular <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash from the local <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> database either as a JSON object or as a <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a>.</p>
 
@@ -26632,22 +26646,10 @@ untrusted source.</p>
         <td>The number of <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmations</a> the transactions in this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> have, starting at 1 when this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> is at the tip of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a>.  This score will be -1 if the the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> is not part of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a></td>
       </tr>
       <tr>
-        <td>→<br /><code class="highlighter-rouge">strippedsize</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The size of this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format excluding witness data, counted in bytes</td>
-      </tr>
-      <tr>
         <td>→<br /><code class="highlighter-rouge">size</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>The size of this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format, counted in bytes</td>
-      </tr>
-      <tr>
-        <td>→<br /><code class="highlighter-rouge">weight</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> weight as defined in BIP 141</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">height</code></td>
@@ -26660,12 +26662,6 @@ untrusted source.</p>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>This <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block’s</a> version number.  See <a href="/en/developer-reference#block-versions">block version numbers</a></td>
-      </tr>
-      <tr>
-        <td>→<br /><code class="highlighter-rouge">versionHex</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />This <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block’s</a> version number formatted in hexadecimal.  See <a href="https://github.com/bitcoin/bips/blob/master/bip-0009/assignments.mediawiki">BIP9 assignments</a></td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">merkleroot</code></td>
@@ -26910,77 +26906,145 @@ untrusted source.</p>
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Request a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in hex-encoded <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/block/00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048.hex</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/block/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex</code></pre></figure>
 
   <p>Result (wrapped):</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">010000006fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d61900<span class="se">\</span>
-00000000982051fd1e4ba744bbbe680e1fee14677ba1a3c3540bf7b1cdb606e8<span class="se">\</span>
-57233e0e61bc6649ffff001d01e3629901010000000100000000000000000000<span class="se">\</span>
-00000000000000000000000000000000000000000000ffffffff0704ffff001d<span class="se">\</span>
-0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec1<span class="se">\</span>
-1600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781<span class="se">\</span>
-e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">0000002097e8135d73afa52145f6d0b4d0f957030cd598837ddc6750271fb109<span class="se">\</span>
+000000008478305a7abf2f7cb21a889fb68d53c3e51685349e18e1b104b5956c<span class="se">\</span>
+100bfea2c72d285a84030a1cd0041ed701010000000100000000000000000000<span class="se">\</span>
+00000000000000000000000000000000000000000000ffffffff13037a94000e<span class="se">\</span>
+2f5032506f6f6c2d74444153482fffffffff06a1f9ef04000000001976a91414<span class="se">\</span>
+e3832cd7192ffb358a31d842636c4db8dfb1ac88ac6c357f3c000000001976a9<span class="se">\</span>
+149262f2289e1f021dca954d8cf07a7ad72c2cc24d88ac31f49e010000000019<span class="se">\</span>
+76a914d93f7ffa324b77d361e89a3c9c8df46ccdb4b39288ac40230e43000000<span class="se">\</span>
+001976a914c4541983721b26ada79770bf22de4885e19f566188ac0200000000<span class="se">\</span>
+0000004341047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9<span class="se">\</span>
+440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d72<span class="se">\</span>
+81bdc9430f35ac00000000000000002a6a28c855abe6461b1003ea36feb88a3b<span class="se">\</span>
+d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000</code></pre></figure>
 
   <p>Get the same <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/block/00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048.json </code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/block/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">443372</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"strippedsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">860</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"versionHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000001"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"tx"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"vsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"locktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"coinbase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04ffff001d0104"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967295</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858ee OP_CHECKSIG"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkey"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-              </span><span class="s2">"12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1231469665</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1231469665</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">2573394689</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"bits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d00ffff"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000000000000000000000000000000000000000000000000200020002"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000006a625f06636b8bb6ac7b960a8d03705d1ace08b1a19da3fdcc99ddbd"</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
+   </span><span class="nt">"hash"</span><span class="p">:</span><span class="s2">"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"size"</span><span class="p">:</span><span class="mi">414</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"height"</span><span class="p">:</span><span class="mi">38010</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">536870912</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="s2">"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"tx"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"txid"</span><span class="p">:</span><span class="s2">"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"size"</span><span class="p">:</span><span class="mi">333</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"locktime"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"vin"</span><span class="p">:[</span><span class="w">  
+            </span><span class="p">{</span><span class="w">  
+               </span><span class="nt">"coinbase"</span><span class="p">:</span><span class="s2">"037a94000e2f5032506f6f6c2d74444153482f"</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"sequence"</span><span class="p">:</span><span class="mi">4294967295</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">],</span><span class="w">
+         </span><span class="nt">"vout"</span><span class="p">:[</span><span class="w">  
+            </span><span class="p">{</span><span class="w">  
+               </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">0.82835873</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">82835873</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+                  </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_DUP OP_HASH160 14e3832cd7192ffb358a31d842636c4db8dfb1ac OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"76a91414e3832cd7192ffb358a31d842636c4db8dfb1ac88ac"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+                     </span><span class="s2">"yNDtusuhm6otr3eeGh3SqdpNczV4aZSx1b"</span><span class="w">
+                  </span><span class="p">]</span><span class="w">
+               </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">  
+               </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">10.14969708</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">1014969708</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+                  </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_DUP OP_HASH160 9262f2289e1f021dca954d8cf07a7ad72c2cc24d OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"76a9149262f2289e1f021dca954d8cf07a7ad72c2cc24d88ac"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+                     </span><span class="s2">"yZfU36R8dhdnFaK3AwfnubrLXAG2G1WiVn"</span><span class="w">
+                  </span><span class="p">]</span><span class="w">
+               </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">  
+               </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">0.27194417</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">27194417</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+                  </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_DUP OP_HASH160 d93f7ffa324b77d361e89a3c9c8df46ccdb4b392 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"76a914d93f7ffa324b77d361e89a3c9c8df46ccdb4b39288ac"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+                     </span><span class="s2">"yg89Yt5Tjzs9nRpX3wJCuvr7KuQvgkvmeC"</span><span class="w">
+                  </span><span class="p">]</span><span class="w">
+               </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">  
+               </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">11.25000000</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">1125000000</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+                  </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_DUP OP_HASH160 c4541983721b26ada79770bf22de4885e19f5661 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"76a914c4541983721b26ada79770bf22de4885e19f566188ac"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+                     </span><span class="s2">"yeDY39aiqbBHbJft5F6rokR23EaZca6UTU"</span><span class="w">
+                  </span><span class="p">]</span><span class="w">
+               </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">  
+               </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">0.00000002</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+                  </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d7281bdc9430f35 OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"41047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d7281bdc9430f35ac"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkey"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+                     </span><span class="s2">"yb21342iADyqAotjwcn4imqjvAcdYhnzeH"</span><span class="w">
+                  </span><span class="p">]</span><span class="w">
+               </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">  
+               </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">0.00000000</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
+               </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+                  </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_RETURN c855abe6461b1003ea36feb88a3bd50c5696e5784d11f8cd5e892978685de1d60000000001000000"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"6a28c855abe6461b1003ea36feb88a3bd50c5696e5784d11f8cd5e892978685de1d60000000001000000"</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"nulldata"</span><span class="w">
+               </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+   </span><span class="nt">"time"</span><span class="p">:</span><span class="mi">1512582599</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="mi">1512582025</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"nonce"</span><span class="p">:</span><span class="mi">3609068752</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"bits"</span><span class="p">:</span><span class="s2">"1c0a0384"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="mf">25.56450187425715</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="s2">"00000000000000000000000000000000000000000000000000092fc476457b68"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="s2">"0000000009b11f275067dc7d8398d50c0357f9d0b4d0f64521a5af735d13e897"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="s2">"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -26997,6 +27061,8 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rest/requests/get_block-notxdetails.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_block-notxdetails.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <!-- __ -->
 
   <p>The <code class="highlighter-rouge">GET block/notxdetails</code> operation gets a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> with a particular <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash from the local <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> database either as a JSON object or as a <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a>.  The JSON object includes <a href="/en/glossary/txid" title="An identifier used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction." class="auto-link">TXIDs</a> for transactions within the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> rather than the complete transactions <a href="/en/developer-reference#get-block">GET block</a> returns.</p>
 
@@ -27077,12 +27143,6 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
         <td>The number of <a href="/en/glossary/confirmation-score" title="A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher." class="auto-link">confirmations</a> the transactions in this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> have, starting at 1 when this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> is at the tip of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a>.  This score will be -1 if the the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> is not part of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a></td>
       </tr>
       <tr>
-        <td>→<br /><code class="highlighter-rouge">strippedsize</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The size of this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format excluding witness data, counted in bytes</td>
-      </tr>
-      <tr>
         <td>→<br /><code class="highlighter-rouge">size</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
@@ -27095,22 +27155,10 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
         <td>The <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> of this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> on its <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a></td>
       </tr>
       <tr>
-        <td>→<br /><code class="highlighter-rouge">weight</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> weight as defined in BIP 141</td>
-      </tr>
-      <tr>
         <td>→<br /><code class="highlighter-rouge">version</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
         <td>This <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block’s</a> version number.  See <a href="/en/developer-reference#block-versions">block version numbers</a></td>
-      </tr>
-      <tr>
-        <td>→<br /><code class="highlighter-rouge">versionHex</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />This <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block’s</a> version number formatted in hexadecimal.  See <a href="https://github.com/bitcoin/bips/blob/master/bip-0009/assignments.mediawiki">BIP9 assignments</a></td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">merkleroot</code></td>
@@ -27181,49 +27229,52 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.10.0" class="auto-link">Bitcoin Core 0.10.0</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Request a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in hex-encoded <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/block/notxdetails/00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048.hex</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex</code></pre></figure>
 
   <p>Result (wrapped):</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">010000006fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d61900<span class="se">\</span>
-00000000982051fd1e4ba744bbbe680e1fee14677ba1a3c3540bf7b1cdb606e8<span class="se">\</span>
-57233e0e61bc6649ffff001d01e3629901010000000100000000000000000000<span class="se">\</span>
-00000000000000000000000000000000000000000000ffffffff0704ffff001d<span class="se">\</span>
-0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec1<span class="se">\</span>
-1600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781<span class="se">\</span>
-e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">0000002097e8135d73afa52145f6d0b4d0f957030cd598837ddc6750271fb109<span class="se">\</span>
+000000008478305a7abf2f7cb21a889fb68d53c3e51685349e18e1b104b5956c<span class="se">\</span>
+100bfea2c72d285a84030a1cd0041ed701010000000100000000000000000000<span class="se">\</span>
+00000000000000000000000000000000000000000000ffffffff13037a94000e<span class="se">\</span>
+2f5032506f6f6c2d74444153482fffffffff06a1f9ef04000000001976a91414<span class="se">\</span>
+e3832cd7192ffb358a31d842636c4db8dfb1ac88ac6c357f3c000000001976a9<span class="se">\</span>
+149262f2289e1f021dca954d8cf07a7ad72c2cc24d88ac31f49e010000000019<span class="se">\</span>
+76a914d93f7ffa324b77d361e89a3c9c8df46ccdb4b39288ac40230e43000000<span class="se">\</span>
+001976a914c4541983721b26ada79770bf22de4885e19f566188ac0200000000<span class="se">\</span>
+0000004341047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9<span class="se">\</span>
+440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d72<span class="se">\</span>
+81bdc9430f35ac00000000000000002a6a28c855abe6461b1003ea36feb88a3b<span class="se">\</span>
+d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000</code></pre></figure>
 
   <p>Get the same <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/block/notxdetails/00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048.json</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">443375</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"strippedsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">860</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"versionHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000001"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"tx"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1231469665</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1231469665</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">2573394689</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"bits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d00ffff"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000000000000000000000000000000000000000000000000200020002"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000006a625f06636b8bb6ac7b960a8d03705d1ace08b1a19da3fdcc99ddbd"</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
+   </span><span class="nt">"hash"</span><span class="p">:</span><span class="s2">"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="mi">55</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"size"</span><span class="p">:</span><span class="mi">414</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"height"</span><span class="p">:</span><span class="mi">38010</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">536870912</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="s2">"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"tx"</span><span class="p">:[</span><span class="w">  
+      </span><span class="s2">"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884"</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+   </span><span class="nt">"time"</span><span class="p">:</span><span class="mi">1512582599</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="mi">1512582025</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"nonce"</span><span class="p">:</span><span class="mi">3609068752</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"bits"</span><span class="p">:</span><span class="s2">"1c0a0384"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="mf">25.56450187425715</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="s2">"00000000000000000000000000000000000000000000000000092fc476457b68"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="s2">"0000000009b11f275067dc7d8398d50c0357f9d0b4d0f64521a5af735d13e897"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="s2">"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -27240,6 +27291,8 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rest/requests/get_chaininfo.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_chaininfo.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <!-- __ -->
 
   <p>The <code class="highlighter-rouge">GET chaininfo</code> operation returns information about the current state of the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>.  Supports only <code class="highlighter-rouge">json</code> as <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> format.</p>
 
@@ -27325,7 +27378,7 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
         <td>→<br /><code class="highlighter-rouge">pruneheight</code></td>
         <td>number (int)</td>
         <td>Optional<br />(0 or 1)</td>
-        <td>The lowest-<a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> complete <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> stored if prunning is activated</td>
+        <td>The lowest-<a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> complete <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> stored if pruning is activated</td>
       </tr>
       <tr>
         <td>→<br /><code class="highlighter-rouge">softforks</code></td>
@@ -27420,7 +27473,7 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
       <tr>
         <td>→ →<br />Name</td>
         <td>string : object</td>
-        <td>Required<br />(2 or more)</td>
+        <td>Required<br />(1 or more)</td>
         <td>A specific <a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki" class="auto-link">BIP9</a> softfork</td>
       </tr>
       <tr>
@@ -27429,83 +27482,87 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
         <td>Required<br />(exactly 1)</td>
         <td>Set to one of the following reasons:<br />• <code class="highlighter-rouge">defined</code> if voting hasn’t started yet<br />• <code class="highlighter-rouge">started</code> if the voting has started <br />• <code class="highlighter-rouge">locked_in</code> if the voting was successful but the softfort hasn’t been activated yet<br />• <code class="highlighter-rouge">active</code> if the softfork was activated<br />• <code class="highlighter-rouge">failed</code> if the softfork has not receieved enough votes</td>
       </tr>
-      <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">bit</code></td>
-        <td>numeric<br />(int)</td>
-        <td>Optional<br />(0 or 1)</td>
-        <td>The bit (0-28) in the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> version field used to signal this softfork.  Field is only shown when status is <code class="highlighter-rouge">started</code></td>
-      </tr>
-      <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">startTime</code></td>
-        <td>numeric<br />(int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td>The <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> when the softfork voting begins</td>
-      </tr>
-      <tr>
-        <td>→ → →<br /><code class="highlighter-rouge">timeout</code></td>
-        <td>numeric<br />(int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td>The <a href="https://en.wikipedia.org/wiki/Unix_time" class="auto-link">Unix epoch time</a> at which the deployment is considered failed if not yet locked in</td>
-      </tr>
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Get <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">blockchain</a> info in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/chaininfo.json</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/chaininfo.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"chain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"blocks"</span><span class="p">:</span><span class="w"> </span><span class="mi">443372</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="mi">443372</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"bestblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000000000029a7ee8eb90c47cfcb3e3d877428ed85a3251719bf65ad7"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="mf">286765766820.5504</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1481671547</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"verificationprogress"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9999951668985226</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000000000000000000000000000000330d0672c7d7f4f705b65c"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"pruned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"softforks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bip34"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"reject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
+   </span><span class="nt">"chain"</span><span class="p">:</span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"blocks"</span><span class="p">:</span><span class="mi">38066</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"headers"</span><span class="p">:</span><span class="mi">38066</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"bestblockhash"</span><span class="p">:</span><span class="s2">"0000000006c6f812d4721c09b3a3ce6547d2291ff822ee39597515f75822ed3e"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="mf">18.8278810867833</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="mi">1512591324</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"verificationprogress"</span><span class="p">:</span><span class="mf">0.9999996159024219</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="s2">"00000000000000000000000000000000000000000000000000093549c2729cb1"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"pruned"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"softforks"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"bip34"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"enforce"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"found"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="mi">51</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"window"</span><span class="p">:</span><span class="mi">100</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nt">"reject"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"found"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="mi">75</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"window"</span><span class="p">:</span><span class="mi">100</span><span class="w">
+         </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"bip66"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"enforce"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"found"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="mi">51</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"window"</span><span class="p">:</span><span class="mi">100</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nt">"reject"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"found"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="mi">75</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"window"</span><span class="p">:</span><span class="mi">100</span><span class="w">
+         </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"bip65"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"enforce"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"found"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="mi">51</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"window"</span><span class="p">:</span><span class="mi">100</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nt">"reject"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"found"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="mi">75</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"window"</span><span class="p">:</span><span class="mi">100</span><span class="w">
+         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bip66"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"reject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+   </span><span class="nt">"bip9_softforks"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"csv"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"status"</span><span class="p">:</span><span class="s2">"active"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"dip0001"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"status"</span><span class="p">:</span><span class="s2">"active"</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bip65"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"reject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"bip9_softforks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"csv"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1462060800</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"timeout"</span><span class="p">:</span><span class="w"> </span><span class="mi">1493596800</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"since"</span><span class="p">:</span><span class="w"> </span><span class="mi">419328</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"segwit"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"started"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"bit"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1479168000</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"timeout"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510704000</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"since"</span><span class="p">:</span><span class="w"> </span><span class="mi">439488</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -27519,6 +27576,8 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rest/requests/get_getutxos.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_getutxos.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <!-- __ -->
 
   <p>The <code class="highlighter-rouge">GET getutxos</code> operation returns an <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> set given a set of <a href="/en/glossary/outpoint" title="The data structure used to refer to a particular transaction output, consisting of a 32-byte TXID and a 4-byte output index number (vout)." class="auto-link">outpoints</a>.</p>
 
@@ -27700,44 +27759,44 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Request the <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> set:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/getutxos/checkmempool/42f9df54a39026ccb54362141c41713968f19e1f14949ab6609b03ffa4b7f120-0.hex</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/getutxos/checkmempool/7b6caf68c33794b0bda65e63691739919f13156b57c7ec20a0b4de1f33c580bd-0.hex</code></pre></figure>
 
   <p>Result (wrapped):</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">d0c306004f438cea9c68557da34e8e7823a963eb9350daa107ffd80100000000<span class="se">\</span>
-0000000001010101000000ffffff7fc8883303000000001976a9145f4865d186<span class="se">\</span>
-5127807f714b0ad1ddfae9870866d888ac</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">c39400005ac8db505390f3c77635132117a7fdf07b2eb45c3d9fe38535b77b05<span class="se">\</span>
+0000000001010101000000c394000050ae3b16000000001976a9146f4def95a3<span class="se">\</span>
+15e83bef5e1197ace4aa7ec55f2ecc88ac</code></pre></figure>
 
   <p>Same request in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/getutxos/checkmempool/42f9df54a39026ccb54362141c41713968f19e1f14949ab6609b03ffa4b7f120-0.json</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/getutxos/checkmempool/7b6caf68c33794b0bda65e63691739919f13156b57c7ec20a0b4de1f33c580bd-0.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"chainHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">443344</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"chaintipHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000001d8ff07a1da5093eb63a923788e4ea37d55689cea8c434f"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"bitmap"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"utxos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"txvers"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147483647</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.53709</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 5f4865d1865127807f714b0ad1ddfae9870866d8 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a9145f4865d1865127807f714b0ad1ddfae9870866d888ac"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"19govWMzsRXqLUsUrHQKQ3DzekRxhsqwWH"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
+   </span><span class="nt">"chainHeight"</span><span class="p">:</span><span class="mi">38083</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"chaintipHash"</span><span class="p">:</span><span class="s2">"00000000057bb73585e39f3d5cb42e7bf0fda71721133576c7f3905350dbc85a"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"bitmap"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"utxos"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"txvers"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"height"</span><span class="p">:</span><span class="mi">38083</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">3.73010000</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_DUP OP_HASH160 6f4def95a315e83bef5e1197ace4aa7ec55f2ecc OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"76a9146f4def95a315e83bef5e1197ace4aa7ec55f2ecc88ac"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+               </span><span class="s2">"yWTyDaMb1KZSRYwrq2DDW3Q4rKYuuPutDS"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -27751,6 +27810,8 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rest/requests/get_headers.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_headers.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <!-- __ -->
 
   <p>The <code class="highlighter-rouge">GET headers</code> operation returns a specified amount of <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block headers</a> in upward direction.</p>
 
@@ -27870,12 +27931,6 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
         <td>This <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block’s</a> version number.  See <a href="/en/developer-reference#block-versions">block version numbers</a></td>
       </tr>
       <tr>
-        <td>→→<br /><code class="highlighter-rouge">versionHex</code></td>
-        <td>string (hex)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />This <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block’s</a> version number formatted in hexadecimal.  See <a href="https://github.com/bitcoin/bips/blob/master/bip-0009/assignments.mediawiki">BIP9 assignments</a></td>
-      </tr>
-      <tr>
         <td>→→<br /><code class="highlighter-rouge">merkleroot</code></td>
         <td>string (hex)</td>
         <td>Required<br />(exactly 1)</td>
@@ -27932,59 +27987,57 @@ e62294721166bf621e73a82cbf2342c858eeac00000000</code></pre></figure>
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
-  <p>Request 5 <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block headers</a> in hex-encoded <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format:</p>
+  <p>Request 2 <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block headers</a> in hex-encoded <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/headers/5/000000000000000002538dfef658564662025e0687b0c65c6d5c9d765984ec5a.hex</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex</code></pre></figure>
 
   <p>Result (wrapped):</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">040000004b9e8debb1bb9df8f85d0f64cf45d408f5f7fcf3293ec40400000000<span class="se">\</span>
-000000008c37685c878a66aa2709c3dc27a35020269ce1ce7ecb41dabe8f4e0c<span class="se">\</span>
-ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se">\</span>
-065e0262465658f6fe8d53020000000000000000cb9a492474a4791b7f4dee49<span class="se">\</span>
-0b3d813b1eb192fb67109c0c99317101019f72a7cd1f2b57762706185c2921b4</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">0000002097e8135d73afa52145f6d0b4d0f957030cd598837ddc6750271fb109<span class="se">\</span>
+000000008478305a7abf2f7cb21a889fb68d53c3e51685349e18e1b104b5956c<span class="se">\</span>
+100bfea2c72d285a84030a1cd0041ed70000002051b45fe788d100ff8be0bc39<span class="se">\</span>
+e88b59829f01c17a82786bcf46bfcc000000000004dc24bddd15f790efcd7af3<span class="se">\</span>
+8d03f805cc1c74516888ccec8874db2ac8beb043092e285a999f091c5d6ec419</code></pre></figure>
 
   <p>Get the same <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block headers</a> in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/headers/5/000000000000000002538dfef658564662025e0687b0c65c6d5c9d765984ec5a.json</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000002538dfef658564662025e0687b0c65c6d5c9d765984ec5a"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">33009</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">410334</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"versionHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000004"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08c58fca0c4e8fbeda41cb7ecee19c262050a327dcc30927aa668a875c68378c"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1462442853</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1462441310</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">307247563</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"bits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18062776"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="mf">178659257772.5273</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000000000000000000000000000000000000018562bc90589834ae929d0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000004c43e29f3fcf7f508d445cf640f5df8f89dbbb1eb8d9e4b"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000000f198b9f92bc29fa294be4bb777e61fdd56aac07f174553"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000000f198b9f92bc29fa294be4bb777e61fdd56aac07f174553"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">33008</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">410335</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">536870912</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"versionHex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20000000"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a7729f01017131990c9c1067fb92b11e3b813d0b49ee4d7f1b79a47424499acb"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1462443981</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1462441496</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">3022072156</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"bits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18062776"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="mf">178659257772.5273</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000000000000000000000000000000185655621b104558a77160"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000000000002538dfef658564662025e0687b0c65c6d5c9d765984ec5a"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000000000005b3caade164fcc5f3f00fd99ddbdb47ee66ea4bbe9387a"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">  
+   </span><span class="p">{</span><span class="w">  
+      </span><span class="nt">"hash"</span><span class="p">:</span><span class="s2">"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"height"</span><span class="p">:</span><span class="mi">38010</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">536870912</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="s2">"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"time"</span><span class="p">:</span><span class="mi">1512582599</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="mi">1512582025</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"nonce"</span><span class="p">:</span><span class="mi">3609068752</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"bits"</span><span class="p">:</span><span class="s2">"1c0a0384"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="mf">25.56450187425715</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="s2">"00000000000000000000000000000000000000000000000000092fc476457b68"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="s2">"0000000009b11f275067dc7d8398d50c0357f9d0b4d0f64521a5af735d13e897"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="s2">"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="p">{</span><span class="w">  
+      </span><span class="nt">"hash"</span><span class="p">:</span><span class="s2">"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="mi">79</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"height"</span><span class="p">:</span><span class="mi">38011</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">536870912</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"merkleroot"</span><span class="p">:</span><span class="s2">"43b0bec82adb7488eccc886851741ccc05f8038df37acdef90f715ddbd24dc04"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"time"</span><span class="p">:</span><span class="mi">1512582665</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"mediantime"</span><span class="p">:</span><span class="mi">1512582146</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"nonce"</span><span class="p">:</span><span class="mi">432303709</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"bits"</span><span class="p">:</span><span class="s2">"1c099f99"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="mf">26.60134045579303</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"chainwork"</span><span class="p">:</span><span class="s2">"00000000000000000000000000000000000000000000000000092fdf1051882b"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"previousblockhash"</span><span class="p">:</span><span class="s2">"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"nextblockhash"</span><span class="p">:</span><span class="s2">"0000000008de9da638149042323fc05ded619a922ff1fac6e66f66fc773bd716"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -28001,6 +28054,8 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rest/requests/get_mempool-contents.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_mempool-contents.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <!-- __ -->
 
   <p>The <code class="highlighter-rouge">GET mempool/contents</code> operation returns all transaction in the memory pool with detailed information.  Supports only <code class="highlighter-rouge">json</code> as <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> format.</p>
 
@@ -28095,24 +28150,6 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
         <td><em>Added in <a href="/en/release/v0.12.0" class="auto-link">Bitcoin Core 0.12.0</a></em><br /><br />The modified fees (see <code class="highlighter-rouge">modifiedfee</code> above) of in-mempool descendants (including this one)</td>
       </tr>
       <tr>
-        <td>→ →<br /><code class="highlighter-rouge">ancestorcount</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The number of in-mempool ancestor transactions (including this one)</td>
-      </tr>
-      <tr>
-        <td>→ →<br /><code class="highlighter-rouge">ancestorsize</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The size of in-mempool ancestors (including this one)</td>
-      </tr>
-      <tr>
-        <td>→ →<br /><code class="highlighter-rouge">ancestorfees</code></td>
-        <td>number (int)</td>
-        <td>Required<br />(exactly 1)</td>
-        <td><em>Added in <a href="/en/release/v0.13.0" class="auto-link">Bitcoin Core 0.13.0</a></em><br /><br />The modified fees (see <code class="highlighter-rouge">modifiedfee</code> above) of in-mempool ancestors (including this one)</td>
-      </tr>
-      <tr>
         <td>→ →<br /><code class="highlighter-rouge">depends</code></td>
         <td>array</td>
         <td>Required<br />(exactly 1)</td>
@@ -28127,49 +28164,30 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Get all transactions in the memory pool in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/mempool/contents.json</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/mempool/contents.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"b104586f229e330caf42c475fd52684e9eb5e2d02f0fcd216d9554c5347b0873"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">485</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00009700</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"modifiedfee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00009700</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1479423635</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">439431</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"startingpriority"</span><span class="p">:</span><span class="w"> </span><span class="mf">15327081.81818182</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"currentpriority"</span><span class="p">:</span><span class="w"> </span><span class="mf">21536936.36363636</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"descendantcount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"descendantsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">485</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"descendantfees"</span><span class="p">:</span><span class="w"> </span><span class="mi">9700</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ancestorcount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ancestorsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">485</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ancestorfees"</span><span class="p">:</span><span class="w"> </span><span class="mi">9700</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"depends"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"094f7dcbc7494510d4daeceb2941ed73b1bd011bf527f6c3b7c897fee85c11d4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">554</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00005540</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"modifiedfee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00005540</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1479423327</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">439430</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"startingpriority"</span><span class="p">:</span><span class="w"> </span><span class="mf">85074.91071428571</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"currentpriority"</span><span class="p">:</span><span class="w"> </span><span class="mf">3497174.4375</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"descendantcount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"descendantsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">554</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"descendantfees"</span><span class="p">:</span><span class="w"> </span><span class="mi">5540</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ancestorcount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ancestorsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">554</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ancestorfees"</span><span class="p">:</span><span class="w"> </span><span class="mi">5540</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"depends"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
+   </span><span class="nt">"b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32"</span><span class="p">:{</span><span class="w">  
+      </span><span class="nt">"size"</span><span class="p">:</span><span class="mi">225</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"fee"</span><span class="p">:</span><span class="mf">0.00010000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"modifiedfee"</span><span class="p">:</span><span class="mf">0.00010000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"time"</span><span class="p">:</span><span class="mi">1512596309</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"height"</span><span class="p">:</span><span class="mi">38094</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"startingpriority"</span><span class="p">:</span><span class="mf">1934576927.410256</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"currentpriority"</span><span class="p">:</span><span class="mf">1934576927.410256</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"descendantcount"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"descendantsize"</span><span class="p">:</span><span class="mi">225</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"descendantfees"</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"depends"</span><span class="p">:[</span><span class="w">  
+
+      </span><span class="p">]</span><span class="w">
+   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -28185,6 +28203,8 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/dash-core/rest/requests/get_mempool-info.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_mempool-info.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
+
+  <!-- __ -->
 
   <p>The <code class="highlighter-rouge">GET mempool/info</code> operation returns information about the <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a> current transaction memory pool.  Supports only <code class="highlighter-rouge">json</code> as <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> format.</p>
 
@@ -28245,20 +28265,20 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Get memory pool info in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/mempool/info.json</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/mempool/info.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">989</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"bytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">736919</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"usage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1970496</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"maxmempool"</span><span class="p">:</span><span class="w"> </span><span class="mi">300000000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"mempoolminfee"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
+   </span><span class="nt">"size"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"bytes"</span><span class="p">:</span><span class="mi">1256</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"usage"</span><span class="p">:</span><span class="mi">3376</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"maxmempool"</span><span class="p">:</span><span class="mi">300000000</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"mempoolminfee"</span><span class="p">:</span><span class="mf">0.00000000</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
@@ -28274,7 +28294,9 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/dash-core/rest/requests/get_tx.md%0A%0A">Report Issue</a>
 | <a href="/en/development#devcommunities">Discuss</a></div>
 
-  <p>The <code class="highlighter-rouge">GET tx</code> operation gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Bitcoin Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so this method may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Bitcoin Core startup settings.</p>
+  <!-- __ -->
+
+  <p>The <code class="highlighter-rouge">GET tx</code> operation gets a hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a> and your own transactions, so this method may fail on historic transactions unless you use the non-default <code class="highlighter-rouge">txindex=1</code> in your Dash Core startup settings.</p>
 
   <p>Note: if you begin using <code class="highlighter-rouge">txindex=1</code> after downloading the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a>, you must rebuild your indexes by starting Bitcoin Core with the option  <code class="highlighter-rouge">-reindex</code>.  This may take several hours to complete, during which time your <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> will not process new <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> or transactions. This reindex only needs to be done once.</p>
 
@@ -28523,6 +28545,12 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
         <td>If the transaction has been included in a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> on the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a>, this is the hash of that <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> encoded as hex in <a href="/en/glossary/rpc-byte-order" title="A hash digest displayed with the byte order reversed; used in Dash Core RPCs, many block explorers, and other software." class="auto-link">RPC byte order</a></td>
       </tr>
       <tr>
+        <td>→<br /><code class="highlighter-rouge">height</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td>The <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> of this <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> on its <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a></td>
+      </tr>
+      <tr>
         <td>→<br /><code class="highlighter-rouge">confirmations</code></td>
         <td>number (int)</td>
         <td>Required<br />(exactly 1)</td>
@@ -28543,79 +28571,79 @@ ca8fc508651b2b5776270618cb395012000000205aec8459769d5c6d5cc6b087<span class="se"
     </tbody>
   </table>
 
-  <p><em>Examples from <a href="/en/release/v0.13.1" class="auto-link">Bitcoin Core 0.13.1</a></em></p>
+  <p><em>Examples from Dash Core 0.12.2</em></p>
 
   <p>Request a transaction in hex-encoded <a href="/en/glossary/serialized-transaction" title="Complete transactions in their binary format; often represented using hexadecimal.  Sometimes called raw format because of the various Dash Core commands with &quot;raw&quot; in their names." class="auto-link">serialized transaction</a> format:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/tx/42f9df54a39026ccb54362141c41713968f19e1f14949ab6609b03ffa4b7f120.hex</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.hex</code></pre></figure>
 
   <p>Result (wrapped):</p>
 
-  <figure class="highlight"><pre><code class="language-text" data-lang="text">0100000001bf33f5e034d1774f4019c03e119f4fa9e421339271f7476e5e34ff\
-72839ebc16000000006b483045022100dab0ade70063cbc5ad44664b707391f8\
-ffe6e406b1bab43abfb547d701694d98022067580db89b81c69ba83487ea0a1b\
-cb6a325d2903b726980865210d2127de09710121023ee7a6437e9ad2957cd032\
-38b9668c15cb1dc6ac9c9d142f829168e1a3e4a9c4feffffff02c88833030000\
-00001976a9145f4865d1865127807f714b0ad1ddfae9870866d888ac102697eb\
-000000001976a91479e19d5c1cbc1c18f59c57d37ca403f3bcdaa73f88acd0c3\
-0600</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-text" data-lang="text">0100000001c91d4bb14e061f8f6b775ca8e62ec8a66739b375f169bce1964cee\
+a2368197e5000000006a473044022050644e406be3e463d94868c617309dc021\
+174551dbb340665f48119e110a72b2022022f3cc93deeb4c44ce70bebe8e7f0f\
+69c462f120eb64b47eeb77f0a62e9bd361012102f542dde7c155717ac8df05d0\
+fc8f65e2ecc078ecad42b23462f27832b441ffa5feffffff0200e1f505000000\
+001976a91443d11ad5889532f22f069b18b24489b1f94f253188ac7dbafa0800\
+0000001976a914bb900427682b8f7cae6779fb955a610ff71d68c888acce940000</code></pre></figure>
 
   <p>Get the same transaction in JSON:</p>
 
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:8332/rest/tx/42f9df54a39026ccb54362141c41713968f19e1f14949ab6609b03ffa4b7f120.json</code></pre></figure>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.json</code></pre></figure>
 
   <p>Result (whitespaced added):</p>
 
-  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42f9df54a39026ccb54362141c41713968f19e1f14949ab6609b03ffa4b7f120"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42f9df54a39026ccb54362141c41713968f19e1f14949ab6609b03ffa4b7f120"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">226</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"vsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">226</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"locktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">443344</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"vin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16bc9e8372ff345e6e47f771923321e4a94f9f113ec019404f77d134e0f533bf"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"scriptSig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3045022100dab0ade70063cbc5ad44664b707391f8ffe6e406b1bab43abfb547d701694d98022067580db89b81c69ba83487ea0a1bcb6a325d2903b726980865210d2127de0971[ALL] 023ee7a6437e9ad2957cd03238b9668c15cb1dc6ac9c9d142f829168e1a3e4a9c4"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"483045022100dab0ade70063cbc5ad44664b707391f8ffe6e406b1bab43abfb547d701694d98022067580db89b81c69ba83487ea0a1bcb6a325d2903b726980865210d2127de09710121023ee7a6437e9ad2957cd03238b9668c15cb1dc6ac9c9d142f829168e1a3e4a9c4"</span><span class="w">
+  <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
+   </span><span class="nt">"txid"</span><span class="p">:</span><span class="s2">"b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"size"</span><span class="p">:</span><span class="mi">225</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"locktime"</span><span class="p">:</span><span class="mi">38094</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"vin"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"txid"</span><span class="p">:</span><span class="s2">"e5978136a2ee4c96e1bc69f175b33967a6c82ee6a85c776b8f1f064eb14b1dc9"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"vout"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"scriptSig"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"3044022050644e406be3e463d94868c617309dc021174551dbb340665f48119e110a72b2022022f3cc93deeb4c44ce70bebe8e7f0f69c462f120eb64b47eeb77f0a62e9bd361[ALL] 02f542dde7c155717ac8df05d0fc8f65e2ecc078ecad42b23462f27832b441ffa5"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"473044022050644e406be3e463d94868c617309dc021174551dbb340665f48119e110a72b2022022f3cc93deeb4c44ce70bebe8e7f0f69c462f120eb64b47eeb77f0a62e9bd361012102f542dde7c155717ac8df05d0fc8f65e2ecc078ecad42b23462f27832b441ffa5"</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nt">"sequence"</span><span class="p">:</span><span class="mi">4294967294</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+   </span><span class="nt">"vout"</span><span class="p">:[</span><span class="w">  
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">1.00000000</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">100000000</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_DUP OP_HASH160 43d11ad5889532f22f069b18b24489b1f94f2531 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"76a91443d11ad5889532f22f069b18b24489b1f94f253188ac"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+               </span><span class="s2">"ySW2cuvm2wJ4EU5KzX4waYfFPV3xQni6Nm"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967294</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"vout"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.53709</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 5f4865d1865127807f714b0ad1ddfae9870866d8 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a9145f4865d1865127807f714b0ad1ddfae9870866d888ac"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"19govWMzsRXqLUsUrHQKQ3DzekRxhsqwWH"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+      </span><span class="p">{</span><span class="w">  
+         </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">1.50649469</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"valueSat"</span><span class="p">:</span><span class="mi">150649469</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"n"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"scriptPubKey"</span><span class="p">:{</span><span class="w">  
+            </span><span class="nt">"asm"</span><span class="p">:</span><span class="s2">"OP_DUP OP_HASH160 bb900427682b8f7cae6779fb955a610ff71d68c8 OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"hex"</span><span class="p">:</span><span class="s2">"76a914bb900427682b8f7cae6779fb955a610ff71d68c888ac"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"addresses"</span><span class="p">:[</span><span class="w">  
+               </span><span class="s2">"ydRBjVr78ejCqXuGs2wbtYoFpGbDkqV8V4"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">39.5255144</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"asm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP_DUP OP_HASH160 79e19d5c1cbc1c18f59c57d37ca403f3bcdaa73f OP_EQUALVERIFY OP_CHECKSIG"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a91479e19d5c1cbc1c18f59c57d37ca403f3bcdaa73f88ac"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"reqSigs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pubkeyhash"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"1C7T3CJ6MEYf1YCYYPfN6zuGirqZcD3wuE"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"blockhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000000000023da07114323ad9676896f354951e6b563d143428b69c03"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1481662934</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"blocktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1481662934</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+   </span><span class="nt">"blockhash"</span><span class="p">:</span><span class="s2">"0000000003b6a57e3614176e5b93caf9498009853e06d16028ebffeb361afda5"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"height"</span><span class="p">:</span><span class="mi">38095</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"confirmations"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"time"</span><span class="p">:</span><span class="mi">1512596315</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"blocktime"</span><span class="p">:</span><span class="mi">1512596315</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also</em></p>
