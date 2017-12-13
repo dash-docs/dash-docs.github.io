@@ -223,14 +223,9 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
 
   <li><a>Documentation</a>
     <ul>
-      <!--
-      <li><a href="/en/bitcoin-for-individuals">Individuals</a></li>
-      <li><a href="/en/bitcoin-for-businesses">Businesses</a></li>
-
-      <li><a href="/en/bitcoin-for-developers">Developers</a></li>
-      -->
       <li><a href="/en/developer-guide">Guide</a></li>
       <li class="active"><a href="/en/developer-reference">Reference</a></li>
+      <li><a href="/en/developer-examples">Examples</a></li>
       <li><a href="/en/developer-glossary">Glossary</a></li>
 
       <!--
@@ -242,33 +237,11 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   </li>
   <li><a>Resources</a>
     <ul>
-      <!--
-      <li><a href="/en/exchanges">Exchanges</a></li>
-      <li><a href="/en/community">Community</a></li>
-      -->
       <li><a rel="noopener noreferrer" target="_blank" href="https://www.dash.org/community/">Community</a></li>
-      <!-- <li><a href="/en/developer-documentation">Documentation</a></li> -->
       <li><a href="/en/vocabulary">Vocabulary</a></li>
-      <!--
-      <li><a href="/en/events">Events</a></li>
-      
-        <li><a href="/en/bitcoin-core/">Bitcoin Core</a></li>
-      
-    -->
     </ul>
   </li>
   <!-- <li><a href="/en/innovation">Innovation</a></li> -->
-  <!--
-  <li><a>Participate</a>
-    <ul>
-      <li><a href="/en/support-bitcoin">Support Bitcoin</a>
-      <li><a href="/en/buy">Buy Bitcoin</a></li>
-      <li><a href="/en/full-node">Running a full node</a></li>
-      <li><a href="/en/development">Development</a></li>
-    </ul>
-  </li>
-  <li><a href="/en/faq">FAQ</a></li>
--->
 </ul>
 
 </div></div>
@@ -661,7 +634,7 @@ Core, either from <a href="https://github.com/dashpay/dash/">source</a> or from 
   <p>Questions about Dash development are best asked in one of the
 <a href="https://www.dash.org/community/">Dash development communities</a>.
 Errors or suggestions related to
-documentation on {Dash.org} can be <a href="https://github.com/thephez/dash.org/issues">submitted as an issue</a>.</p>
+documentation on dash-docs.github.io can be <a href="https://github.com/thephez/dash.org/issues">submitted as an issue</a>.</p>
 
   <p>In the following documentation, some strings have been shortened or wrapped: “[…]”
 indicates extra data was removed, and lines ending in a single backslash “\”
@@ -675,7 +648,7 @@ definition of the term will be displayed in a tooltip.</p>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/ref_intro.md%0A%0A">Report Issue</a>
 | <a href="https://www.dash.org/forum/">Discuss</a></div>
 
-  <p>The {Dash.org} Developer Documentation describes how Dash works to
+  <p>The dash-docs.github.io Developer Documentation describes how Dash works to
 help educate new Dash developers, but it is not a specification—and
 it never will be.</p>
 
@@ -684,7 +657,8 @@ it never will be.</p>
 divergence doesn’t matter: it could be a bug in your program, it could
 be an <a href="https://github.com/thephez/dash.org/issues?q=is%3Aissue+label%3A%22Dev+Docs%22">error in this documentation</a> which you
 implemented as described, or it could be you do everything right but
-other software on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="/en/alert/2013-03-11-chain-fork">behaves unexpectedly</a> as in the case of Bitcoin’s v0.8 chain <a href="/en/glossary/fork" title="When two or more blocks have the same block height, forking the block chain.  Typically occurs when two or more miners find blocks at nearly the same time.  Can also happen as part of an attack." class="auto-link">fork</a>. The specific cause
+other software on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="https://bitcoin.org/en/alert/2013-03-11-chain-[fork][/en/glossary/fork]{:.auto-link}">behaves unexpectedly</a>
+as in the case of Bitcoin’s v0.8 chain <a href="/en/glossary/fork" title="When two or more blocks have the same block height, forking the block chain.  Typically occurs when two or more miners find blocks at nearly the same time.  Can also happen as part of an attack." class="auto-link">fork</a>. The specific cause
 will not matter to the users of your software whose wealth is lost.</p>
 
   <p>The only correct specification of <a href="/en/glossary/consensus" title="When several nodes (usually most nodes on the network) all have the same blocks in their locally-validated best block chain." class="auto-link">consensus</a> behavior is the actual
@@ -6920,799 +6894,799 @@ th.tg-sort-header::-moz-selection { background:transparent; }th.tg-sort-header::
   </tr>
   <tr>
     <td class="tg-b7b8">Addressindex</td>
-    <td class="tg-b7b8">GetAddressBalance</td>
+    <td class="tg-b7b8"><a href="#getaddressbalance">GetAddressBalance</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Addressindex</td>
-    <td class="tg-yw4l">GetAddressDeltas</td>
+    <td class="tg-yw4l"><a href="#getaddressdeltas">GetAddressDeltas</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Addressindex</td>
-    <td class="tg-b7b8">GetAddressMempool</td>
+    <td class="tg-b7b8"><a href="#getaddressmempool">GetAddressMempool</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Addressindex</td>
-    <td class="tg-yw4l">GetAddressTxids</td>
+    <td class="tg-yw4l"><a href="#getaddresstxids">GetAddressTxids</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Addressindex</td>
-    <td class="tg-b7b8">GetAddressUtxos</td>
+    <td class="tg-b7b8"><a href="#getaddressutxos">GetAddressUtxos</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetBestBlockHash</td>
+    <td class="tg-yw4l"><a href="#getbestblockhash">GetBestBlockHash</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetBlock</td>
+    <td class="tg-b7b8"><a href="#getblock">GetBlock</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetBlockChainInfo</td>
+    <td class="tg-yw4l"><a href="#getblockchaininfo">GetBlockChainInfo</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetBlockCount</td>
+    <td class="tg-b7b8"><a href="#getblockcount">GetBlockCount</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetBlockHash</td>
+    <td class="tg-yw4l"><a href="#getblockhash">GetBlockHash</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetBlockHashes</td>
+    <td class="tg-b7b8"><a href="#getblockhashes">GetBlockHashes</a></td>
     <td class="tg-dzk6">Y</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">0.12.1</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetBlockHeader</td>
+    <td class="tg-yw4l"><a href="#getblockheader">GetBlockHeader</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetBlockHeaders</td>
+    <td class="tg-b7b8"><a href="#getblockheaders">GetBlockHeaders</a></td>
     <td class="tg-dzk6">Y</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">0.12.1</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetChainTips</td>
+    <td class="tg-yw4l"><a href="#getchaintips">GetChainTips</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetDifficulty</td>
+    <td class="tg-b7b8"><a href="#getdifficulty">GetDifficulty</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetMemPoolAncestors</td>
+    <td class="tg-yw4l"><a href="#getmempoolancestors">GetMemPoolAncestors</a></td>
     <td class="tg-baqh">N</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">N/A</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetMemPoolDescendants</td>
+    <td class="tg-b7b8"><a href="#getmempooldescendants">GetMemPoolDescendants</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetMemPoolEntry</td>
+    <td class="tg-yw4l"><a href="#getmempoolentry">GetMemPoolEntry</a></td>
     <td class="tg-baqh">N</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">N/A</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetMemPoolInfo</td>
+    <td class="tg-b7b8"><a href="#getmempoolinfo">GetMemPoolInfo</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetRawMemPool</td>
+    <td class="tg-yw4l"><a href="#getrawmempool">GetRawMemPool</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetSpentInfo</td>
+    <td class="tg-b7b8"><a href="#getspentinfo">GetSpentInfo</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.1</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#gettxout">GetTxOut</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#gettxoutproof">GetTxOutProof</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetTxOut</td>
+    <td class="tg-yw4l"><a href="#gettxoutsetinfo">GetTxOutSetInfo</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">GetTxOutProof</td>
-    <td class="tg-dzk6">Y</td>
-    <td class="tg-dzk6"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">GetTxOutSetInfo</td>
-    <td class="tg-baqh">Y</td>
-    <td class="tg-baqh"></td>
-  </tr>
-  <tr>
-    <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">PreciousBlock</td>
+    <td class="tg-b7b8"><a href="#preciousblock">PreciousBlock</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">PruneBlockChain</td>
+    <td class="tg-yw4l"><a href="#pruneblockchain">PruneBlockChain</a></td>
     <td class="tg-baqh">N</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">N/A</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Blockchain</td>
-    <td class="tg-b7b8">VerifyChain</td>
+    <td class="tg-b7b8"><a href="#verifychain">VerifyChain</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Blockchain</td>
-    <td class="tg-yw4l">VerifyTxOutProof</td>
+    <td class="tg-yw4l"><a href="#verifytxoutproof">VerifyTxOutProof</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Control</td>
-    <td class="tg-b7b8">Debug</td>
+    <td class="tg-b7b8"><a href="#debug">Debug</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Control</td>
-    <td class="tg-yw4l">GetInfo</td>
+    <td class="tg-yw4l"><a href="#getinfo">GetInfo</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Control</td>
-    <td class="tg-b7b8">Help</td>
+    <td class="tg-b7b8"><a href="#help">Help</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Control</td>
-    <td class="tg-yw4l">Stop</td>
+    <td class="tg-yw4l"><a href="#stop">Stop</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Dash</td>
-    <td class="tg-b7b8">GetGovernanceInfo</td>
+    <td class="tg-b7b8"><a href="#getgovernanceinfo">GetGovernanceInfo</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Dash</td>
-    <td class="tg-yw4l">GetPoolInfo</td>
+    <td class="tg-yw4l"><a href="#getpoolinfo">GetPoolInfo</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Dash</td>
-    <td class="tg-b7b8">GetSuperblockBudget</td>
+    <td class="tg-b7b8"><a href="#getsuperblockbudget">GetSuperblockBudget</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Dash</td>
-    <td class="tg-yw4l">GObject</td>
+    <td class="tg-yw4l"><a href="#gobject">GObject</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Dash</td>
-    <td class="tg-b7b8">Masternode</td>
+    <td class="tg-b7b8"><a href="#masternode">Masternode</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Dash</td>
-    <td class="tg-yw4l">MasternodeBroadcast</td>
+    <td class="tg-yw4l"><a href="#masternodebroadcast">MasternodeBroadcast</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Dash</td>
-    <td class="tg-b7b8">MasternodeList</td>
+    <td class="tg-b7b8"><a href="#masternodelist">MasternodeList</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Dash</td>
-    <td class="tg-yw4l">MnSync</td>
+    <td class="tg-yw4l"><a href="#mnsync">MnSync</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Dash</td>
-    <td class="tg-b7b8">PrivateSend</td>
+    <td class="tg-b7b8"><a href="#privatesend">PrivateSend</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Dash</td>
-    <td class="tg-yw4l">SentinelPing</td>
+    <td class="tg-yw4l"><a href="#sentinelping">SentinelPing</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Dash</td>
-    <td class="tg-b7b8">Spork</td>
+    <td class="tg-b7b8"><a href="#spork-rpc">Spork</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Dash</td>
-    <td class="tg-yw4l">VoteRaw</td>
+    <td class="tg-yw4l"><a href="#voteraw">VoteRaw</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Generating</td>
-    <td class="tg-b7b8">Generate</td>
+    <td class="tg-b7b8"><a href="#generate">Generate</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Generating</td>
-    <td class="tg-yw4l">GenerateToAddress</td>
+    <td class="tg-yw4l"><a href="#generatetoaddress">GenerateToAddress</a></td>
     <td class="tg-baqh">N</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">N/A</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Generating</td>
-    <td class="tg-b7b8">GetGenerate</td>
+    <td class="tg-b7b8"><a href="#getgenerate">GetGenerate</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Generating</td>
-    <td class="tg-yw4l">SetGenerate</td>
+    <td class="tg-yw4l"><a href="#setgenerate">SetGenerate</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Mining</td>
-    <td class="tg-b7b8">GetBlockTemplate</td>
+    <td class="tg-b7b8"><a href="#getblocktemplate">GetBlockTemplate</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Mining</td>
-    <td class="tg-yw4l">GetMiningInfo</td>
+    <td class="tg-yw4l"><a href="#getmininginfo">GetMiningInfo</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Mining</td>
-    <td class="tg-b7b8">GetNetworkHashPS</td>
+    <td class="tg-b7b8"><a href="#getnetworkhashps">GetNetworkHashPS</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Mining</td>
-    <td class="tg-yw4l">PrioritiseTransaction</td>
+    <td class="tg-yw4l"><a href="#prioritisetransaction">PrioritiseTransaction</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Mining</td>
-    <td class="tg-b7b8">SubmitBlock</td>
+    <td class="tg-b7b8"><a href="#submitblock">SubmitBlock</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Network</td>
-    <td class="tg-yw4l">AddNode</td>
+    <td class="tg-yw4l"><a href="#addnode">AddNode</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Network</td>
-    <td class="tg-b7b8">ClearBanned</td>
+    <td class="tg-b7b8"><a href="#clearbanned">ClearBanned</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Network</td>
-    <td class="tg-yw4l">DisconnectNode</td>
+    <td class="tg-yw4l"><a href="#disconnectnode">DisconnectNode</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Network</td>
-    <td class="tg-b7b8">GetAddedNodeInfo</td>
+    <td class="tg-b7b8"><a href="#getaddednodeinfo">GetAddedNodeInfo</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Network</td>
-    <td class="tg-yw4l">GetConnectionCount</td>
+    <td class="tg-yw4l"><a href="#getconnectioncount">GetConnectionCount</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Network</td>
-    <td class="tg-b7b8">GetNetTotals</td>
+    <td class="tg-b7b8"><a href="#getnettotals">GetNetTotals</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Network</td>
-    <td class="tg-yw4l">GetNetworkInfo</td>
+    <td class="tg-yw4l"><a href="#getnetworkinfo">GetNetworkInfo</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Network</td>
-    <td class="tg-b7b8">GetPeerInfo</td>
+    <td class="tg-b7b8"><a href="#getpeerinfo">GetPeerInfo</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Network</td>
-    <td class="tg-yw4l">ListBanned</td>
+    <td class="tg-yw4l"><a href="#listbanned">ListBanned</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Network</td>
-    <td class="tg-b7b8">Ping</td>
+    <td class="tg-b7b8"><a href="#ping-rpc">Ping</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Network</td>
-    <td class="tg-yw4l">SetBan</td>
+    <td class="tg-yw4l"><a href="#setban">SetBan</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Network</td>
-    <td class="tg-b7b8">SetNetworkActive</td>
+    <td class="tg-b7b8"><a href="#setnetworkactive">SetNetworkActive</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Rawtransactions</td>
-    <td class="tg-yw4l">CreateRawTransaction</td>
+    <td class="tg-yw4l"><a href="#createrawtransaction">CreateRawTransaction</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Rawtransactions</td>
-    <td class="tg-b7b8">DecodeRawTransaction</td>
+    <td class="tg-b7b8"><a href="#decoderawtransaction">DecodeRawTransaction</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Rawtransactions</td>
-    <td class="tg-yw4l">DecodeScript</td>
+    <td class="tg-yw4l"><a href="#decodescript">DecodeScript</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Rawtransactions</td>
-    <td class="tg-b7b8">FundRawTransaction</td>
+    <td class="tg-b7b8"><a href="#fundrawtransaction">FundRawTransaction</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Rawtransactions</td>
-    <td class="tg-yw4l">GetRawTransaction</td>
+    <td class="tg-yw4l"><a href="#getrawtransaction">GetRawTransaction</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Rawtransactions</td>
-    <td class="tg-b7b8">SendRawTransaction</td>
+    <td class="tg-b7b8"><a href="#sendrawtransaction">SendRawTransaction</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Rawtransactions</td>
-    <td class="tg-yw4l">SignRawTransaction</td>
+    <td class="tg-yw4l"><a href="#signrawtransaction">SignRawTransaction</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Removed</td>
-    <td class="tg-b7b8">GetHashesPerSec</td>
+    <td class="tg-b7b8"><a href="#gethashespersec">GetHashesPerSec</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Removed</td>
-    <td class="tg-yw4l">GetWork</td>
+    <td class="tg-yw4l"><a href="#getwork">GetWork</a></td>
     <td class="tg-baqh">N</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">N/A</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Util</td>
-    <td class="tg-b7b8">CreateMultiSig</td>
+    <td class="tg-b7b8"><a href="#createmultisig">CreateMultiSig</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Util</td>
-    <td class="tg-yw4l">EstimateFee</td>
+    <td class="tg-yw4l"><a href="#estimatefee">EstimateFee</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Util</td>
-    <td class="tg-b7b8">EstimatePriority</td>
+    <td class="tg-b7b8"><a href="#estimatepriority">EstimatePriority</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Util</td>
-    <td class="tg-yw4l">EstimateSmartFee</td>
+    <td class="tg-yw4l"><a href="#estimatesmartfee">EstimateSmartFee</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Util</td>
-    <td class="tg-b7b8">EstimateSmartPriority</td>
+    <td class="tg-b7b8"><a href="#estimatesmartpriority">EstimateSmartPriority</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Util</td>
-    <td class="tg-yw4l">GetMemoryInfo</td>
+    <td class="tg-yw4l"><a href="#getmemoryinfo">GetMemoryInfo</a></td>
     <td class="tg-baqh">N</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">N/A</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Util</td>
-    <td class="tg-b7b8">ValidateAddress</td>
+    <td class="tg-b7b8"><a href="#validateaddress">ValidateAddress</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Util</td>
-    <td class="tg-yw4l">VerifyMessage</td>
+    <td class="tg-yw4l"><a href="#verifymessage">VerifyMessage</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">AbandonTransaction</td>
+    <td class="tg-b7b8"><a href="#abandontransaction">AbandonTransaction</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">AddMultiSigAddress</td>
+    <td class="tg-yw4l"><a href="#addmultisigaddress">AddMultiSigAddress</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">AddWitnessAddress</td>
+    <td class="tg-b7b8"><a href="#addwitnessaddress">AddWitnessAddress</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">BackupWallet</td>
+    <td class="tg-yw4l"><a href="#backupwallet">BackupWallet</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">BumpFee</td>
+    <td class="tg-b7b8"><a href="#bumpfee">BumpFee</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">DumpHDInfo</td>
+    <td class="tg-yw4l"><a href="#dumphdinfo">DumpHDInfo</a></td>
     <td class="tg-baqh">Y</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">0.12.2</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">DumpPrivKey</td>
+    <td class="tg-b7b8"><a href="#dumpprivkey">DumpPrivKey</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">DumpWallet</td>
+    <td class="tg-yw4l"><a href="#dumpwallet">DumpWallet</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">EncryptWallet</td>
+    <td class="tg-b7b8"><a href="#encryptwallet">EncryptWallet</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">GetAccount</td>
+    <td class="tg-yw4l"><a href="#getaccount">GetAccount</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">GetAccountAddress</td>
+    <td class="tg-b7b8"><a href="#getaccountaddress">GetAccountAddress</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">GetAddressesByAccount</td>
+    <td class="tg-yw4l"><a href="#getaddressesbyaccount">GetAddressesByAccount</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">GetBalance</td>
+    <td class="tg-b7b8"><a href="#getbalance">GetBalance</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">GetNewAddress</td>
+    <td class="tg-yw4l"><a href="#getnewaddress">GetNewAddress</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">GetRawChangeAddress</td>
+    <td class="tg-b7b8"><a href="#getrawchangeaddress">GetRawChangeAddress</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">GetReceivedByAccount</td>
+    <td class="tg-yw4l"><a href="#getreceivedbyaccount">GetReceivedByAccount</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">GetReceivedByAddress</td>
+    <td class="tg-b7b8"><a href="#getreceivedbyaddress">GetReceivedByAddress</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">GetTransaction</td>
+    <td class="tg-yw4l"><a href="#gettransaction">GetTransaction</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">GetUnconfirmedBalance</td>
+    <td class="tg-b7b8"><a href="#getunconfirmedbalance">GetUnconfirmedBalance</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">GetWalletInfo</td>
+    <td class="tg-yw4l"><a href="#getwalletinfo">GetWalletInfo</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ImportAddress</td>
+    <td class="tg-b7b8"><a href="#importaddress">ImportAddress</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">ImportElectrumWallet</td>
+    <td class="tg-yw4l"><a href="#importelectrumwallet">ImportElectrumWallet</a></td>
     <td class="tg-baqh">Y</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">0.12.1</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ImportMulti</td>
+    <td class="tg-b7b8"><a href="#importmulti">ImportMulti</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">ImportPrivKey</td>
+    <td class="tg-yw4l"><a href="#importprivkey">ImportPrivKey</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ImportPrunedFunds</td>
+    <td class="tg-b7b8"><a href="#importprunedfunds">ImportPrunedFunds</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">ImportPubKey</td>
+    <td class="tg-yw4l"><a href="#importpubkey">ImportPubKey</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ImportWallet</td>
+    <td class="tg-b7b8"><a href="#importwallet">ImportWallet</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">InstantSendToAddress</td>
+    <td class="tg-yw4l"><a href="#instantsendtoaddress">InstantSendToAddress</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">KeePass</td>
+    <td class="tg-b7b8"><a href="#keepass">KeePass</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">KeyPoolRefill</td>
+    <td class="tg-yw4l"><a href="#keypoolrefill">KeyPoolRefill</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ListAccounts</td>
+    <td class="tg-b7b8"><a href="#listaccounts">ListAccounts</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">ListAddressGroupings</td>
+    <td class="tg-yw4l"><a href="#listaddressgroupings">ListAddressGroupings</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ListLockUnspent</td>
+    <td class="tg-b7b8"><a href="#listlockunspent">ListLockUnspent</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">ListReceivedByAccount</td>
+    <td class="tg-yw4l"><a href="#listreceivedbyaccount">ListReceivedByAccount</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ListReceivedByAddress</td>
+    <td class="tg-b7b8"><a href="#listreceivedbyaddress">ListReceivedByAddress</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">ListSinceBlock</td>
+    <td class="tg-yw4l"><a href="#listsinceblock">ListSinceBlock</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">ListTransactions</td>
+    <td class="tg-b7b8"><a href="#listtransactions">ListTransactions</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">ListUnspent</td>
+    <td class="tg-yw4l"><a href="#listunspent">ListUnspent</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">LockUnspent</td>
+    <td class="tg-b7b8"><a href="#lockunspent">LockUnspent</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">Move</td>
+    <td class="tg-yw4l"><a href="#move">Move</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">RemovePrunedFunds</td>
+    <td class="tg-b7b8"><a href="#removeprunedfunds">RemovePrunedFunds</a></td>
     <td class="tg-dzk6">N</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">N/A</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">SendFrom</td>
+    <td class="tg-yw4l"><a href="#sendfrom">SendFrom</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">SendMany</td>
+    <td class="tg-b7b8"><a href="#sendmany">SendMany</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">SendToAddress</td>
+    <td class="tg-yw4l"><a href="#sendtoaddress">SendToAddress</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">SetAccount</td>
+    <td class="tg-b7b8"><a href="#setaccount">SetAccount</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">SetTxFee</td>
+    <td class="tg-yw4l"><a href="#settxfee">SetTxFee</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">SignMessage</td>
+    <td class="tg-b7b8"><a href="#signmessage">SignMessage</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">SignMessageWithPrivKey</td>
+    <td class="tg-yw4l"><a href="#signmessagewithprivkey">SignMessageWithPrivKey</a></td>
     <td class="tg-baqh">N</td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">N/A</td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">WalletLock</td>
+    <td class="tg-b7b8"><a href="#walletlock">WalletLock</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
   <tr>
     <td class="tg-yw4l">Wallet</td>
-    <td class="tg-yw4l">WalletPassphrase</td>
+    <td class="tg-yw4l"><a href="#walletpassphrase">WalletPassphrase</a></td>
     <td class="tg-baqh">Y</td>
     <td class="tg-baqh"></td>
   </tr>
   <tr>
     <td class="tg-b7b8">Wallet</td>
-    <td class="tg-b7b8">WalletPassphraseChange</td>
+    <td class="tg-b7b8"><a href="#walletpassphrasechange">WalletPassphraseChange</a></td>
     <td class="tg-dzk6">Y</td>
     <td class="tg-dzk6"></td>
   </tr>
