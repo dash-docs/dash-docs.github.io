@@ -1,0 +1,51 @@
+<map id="CDarksendBroadcastTx::Sign" name="CDarksendBroadcastTx::Sign">
+<area shape="rect" id="node2" href="$d7/db8/class_c_darksend_broadcast_tx.html#a9ad4625dc786673e99999cb0c81842c9" title="CDarksendBroadcastTx\l::CheckSignature" alt="" coords="216,145,379,186"/>
+<area shape="rect" id="node3" href="$df/d43/class_c_transaction.html#a7efd1379de830341417c0bfa23a149aa" title="CTransaction::GetHash" alt="" coords="455,97,615,124"/>
+<area shape="rect" id="node4" href="$db/d50/classbase__blob.html#a7a0d25782830d8b087c4da839f3ccdeb" title="base_blob::ToString" alt="" coords="949,157,1087,184"/>
+<area shape="rect" id="node42" href="$d9/d00/class_c_message_signer.html#a667ae72604fd6a0da8d9d53c55523ff0" title="Sign the message, returns true if successful. " alt="" coords="913,411,1123,437"/>
+<area shape="rect" id="node5" href="$d9/d00/class_c_message_signer.html#ab4189ffcd1472cac33f99a425faa4cec" title="Verify the message signature, returns true if succcessful. " alt="" coords="427,261,644,288"/>
+<area shape="rect" id="node6" href="$df/d56/class_c_hash_signer.html#a941bca56ae42ff938656c805a1ddc78e" title="Verify the hash signature, returns true if succcessful. " alt="" coords="692,261,865,288"/>
+<area shape="rect" id="node39" href="$d2/def/class_c_hash_writer.html#ae94a937211502eabf19477630090093a" title="CHashWriter::GetHash" alt="" coords="1174,360,1333,387"/>
+<area shape="rect" id="node7" href="$da/d4e/class_c_pub_key.html#a169505e735a02db385486b0affeb565c" title="Recover a public key from a compact signature. " alt="" coords="1384,493,1572,520"/>
+<area shape="rect" id="node27" href="$da/d4e/class_c_pub_key.html#a2675f7e6f72eff68e7a5227289feb021" title="Get the KeyID of this public key (hash of its serialization) " alt="" coords="957,259,1079,285"/>
+<area shape="rect" id="node38" href="$da/dd6/utilstrencodings_8cpp.html#a5e074135870a6fdfae4ac02047bc0432" title="EncodeBase64" alt="" coords="963,208,1073,235"/>
+<area shape="rect" id="node8" href="$d9/d84/secp256k1__recovery_8h.html#a6699b45dc75be70f028ac7d8ffaba46e" title="Parse a compact ECDSA signature (64 bytes + recovery id). " alt="" coords="1620,662,1821,703"/>
+<area shape="rect" id="node14" href="$d9/d84/secp256k1__recovery_8h.html#a7e156c6f4be24b07f4a563210dcb1a2e" title="Recover an ECDSA public key from a signature. " alt="" coords="1632,552,1809,579"/>
+<area shape="rect" id="node20" href="$db/d50/classbase__blob.html#aeee68e00ceeacf49086e98b661e017ff" title="base_blob::begin" alt="" coords="1661,728,1781,755"/>
+<area shape="rect" id="node21" href="$d7/dd3/secp256k1_8h.html#a34977bf00322e510e881160c421836d7" title="Serialize a pubkey object into a serialized byte sequence. " alt="" coords="1643,398,1798,439"/>
+<area shape="rect" id="node24" href="$da/d4e/class_c_pub_key.html#af59bc1d3be119c1f8b49d3c1e2c0797b" title="Initialize a public key using begin/end iterators to byte data. " alt="" coords="1667,309,1774,336"/>
+<area shape="rect" id="node9" href="$d6/d5d/recovery_2main__impl_8h.html#a58a8a03b17aeb5cb4daf2940a58663b9" title="secp256k1_ecdsa_recoverable\l_signature_save" alt="" coords="1869,750,2071,791"/>
+<area shape="rect" id="node13" href="$db/d94/scalar_8h.html#a25cc2d45ae1d1765d07c3313cdf46fa0" title="Set a scalar from a big endian byte array. " alt="" coords="2119,669,2299,696"/>
+<area shape="rect" id="node10" href="$d5/d9f/glibc__compat_8cpp.html#a0f46826ab0466591e136db24394923cf" title="memcpy" alt="" coords="2173,405,2245,432"/>
+<area shape="rect" id="node12" href="$db/d94/scalar_8h.html#a4fa08f8af5a23f505b44c9ef1bec1831" title="Convert a scalar to a byte array. " alt="" coords="2119,867,2299,893"/>
+<area shape="rect" id="node11" href="$d5/d9f/glibc__compat_8cpp.html#a9778d49e9029dd75bc53ecbbf9f5e9a1" title="memmove" alt="" coords="2347,405,2429,432"/>
+<area shape="rect" id="node15" href="$d6/d5d/recovery_2main__impl_8h.html#aa3ef0903a865dc9a6e42dfe61f75a9e5" title="secp256k1_ecdsa_recoverable\l_signature_load" alt="" coords="1869,633,2071,674"/>
+<area shape="rect" id="node16" href="$d6/d5d/recovery_2main__impl_8h.html#a1a831ed991717749ed9d200bb9d3f03b" title="secp256k1_ecdsa_sig\l_recover" alt="" coords="1895,918,2045,959"/>
+<area shape="rect" id="node18" href="$d2/d94/ecmult_8h.html#aa4f6f213989d3ec35850c40c8f1b313b" title="secp256k1_ecmult_context\l_is_built" alt="" coords="1879,515,2061,557"/>
+<area shape="rect" id="node19" href="$d1/d8c/secp256k1_8c.html#aa061c9c5c861017bef990e5c4653e0f4" title="secp256k1_pubkey_save" alt="" coords="1885,464,2055,491"/>
+<area shape="rect" id="node17" href="$db/d94/scalar_8h.html#a3f0ac84fe49a1c1f51212582a2c149d4" title="Check whether a scalar equals zero. " alt="" coords="2121,987,2297,1013"/>
+<area shape="rect" id="node22" href="$da/dff/eckey_8h.html#ae1f52342d70928f16c8e606da59e6aa6" title="secp256k1_eckey_pubkey\l_serialize" alt="" coords="1882,398,2058,439"/>
+<area shape="rect" id="node23" href="$d1/d8c/secp256k1_8c.html#a9966ec041e71010d1593ae2211ffb843" title="secp256k1_pubkey_load" alt="" coords="1887,347,2053,373"/>
+<area shape="rect" id="node25" href="$da/d4e/class_c_pub_key.html#a7dc71b3f037c84268dc22de97d7b65fb" title="Compute the length of a pubkey with a given first byte. " alt="" coords="1906,195,2034,221"/>
+<area shape="rect" id="node26" href="$da/d4e/class_c_pub_key.html#a99917e80a362af54a3677ea9cf1328ee" title="Set this key data to be invalid. " alt="" coords="1899,296,2041,323"/>
+<area shape="rect" id="node28" href="$db/dfb/hash_8h.html#a4490f70ddae16e9e48460a0416a48a6b" title="Compute the 160&#45;bit hash an object. " alt="" coords="1216,107,1291,133"/>
+<area shape="rect" id="node37" href="$da/d4e/class_c_pub_key.html#a6bb28fcf0a5f799c69f5b7269363b309" title="Simple read&#45;only vector&#45;like interface to the pubkey data. " alt="" coords="1198,259,1309,285"/>
+<area shape="rect" id="node29" href="$d4/d9c/class_c_hash160.html#a9bb08e1772002ae1a5d85017ba7952ee" title="CHash160::Finalize" alt="" coords="1409,56,1547,83"/>
+<area shape="rect" id="node36" href="$d4/d9c/class_c_hash160.html#af56cdd9443013eb68b246aa8450217f2" title="CHash160::Write" alt="" coords="1417,107,1539,133"/>
+<area shape="rect" id="node30" href="$d7/d2e/class_c_s_h_a256.html#a4259230be0caefa590bc324fc12b9b90" title="CSHA256::Finalize" alt="" coords="1653,56,1788,83"/>
+<area shape="rect" id="node31" href="$dc/d54/common_8h.html#ab960e95bf479af0a88a20800366b6131" title="WriteBE64" alt="" coords="1927,5,2013,32"/>
+<area shape="rect" id="node33" href="$d7/d2e/class_c_s_h_a256.html#a9d7de520a562655da85349372820c883" title="CSHA256::Write" alt="" coords="1910,132,2030,159"/>
+<area shape="rect" id="node34" href="$dc/d54/common_8h.html#aa3a53ff883fd14480eb603d00123a74a" title="WriteBE32" alt="" coords="1927,56,2013,83"/>
+<area shape="rect" id="node32" href="$d1/d84/endian_8h.html#a55844e5fbe9a8ab3e9793335a16e2efc" title="htobe64" alt="" coords="2175,5,2243,32"/>
+<area shape="rect" id="node35" href="$d1/d84/endian_8h.html#a3ca91566984b6dca7a0f6fc2694a203c" title="htobe32" alt="" coords="2175,56,2243,83"/>
+<area shape="rect" id="node40" href="$d4/dec/class_c_hash256.html#aa8a70c1b7cf24ce7d00240a1131cf4e7" title="CHash256::Finalize" alt="" coords="1409,183,1547,209"/>
+<area shape="rect" id="node41" href="$d7/d2e/class_c_s_h_a256.html#a2122395dd5604990eaa0077b43a0e8d4" title="CSHA256::Reset" alt="" coords="1659,208,1783,235"/>
+<area shape="rect" id="node43" href="$df/d56/class_c_hash_signer.html#a283dca9acf09fcfa28cc4541ab211466" title="Sign the hash, returns true if successful. " alt="" coords="1171,577,1336,604"/>
+<area shape="rect" id="node44" href="$d2/d63/class_c_key.html#afe77d80889aa68e92e6882e75424cfb8" title="Create a compact signature (65 bytes), which allows reconstructing the used public key..." alt="" coords="1407,787,1549,813"/>
+<area shape="rect" id="node45" href="$d9/d84/secp256k1__recovery_8h.html#a1b1f4423a232f681e90e5f9d28f3d148" title="Create a recoverable ECDSA signature. " alt="" coords="1641,983,1800,1025"/>
+<area shape="rect" id="node49" href="$d2/d63/class_c_key.html#ab8dee0ad9d933304a22284ee40040847" title="CKey::begin" alt="" coords="1673,845,1768,872"/>
+<area shape="rect" id="node50" href="$d9/d84/secp256k1__recovery_8h.html#a12f08c89ceb61949c6a4ec6eb2511185" title="Serialize an ECDSA signature in compact format (64 bytes + recovery id). " alt="" coords="1620,779,1821,821"/>
+<area shape="rect" id="node46" href="$d5/d5d/ecdsa_8h.html#a5bf6905e00ae8571465a52e3165c6e6e" title="secp256k1_ecdsa_sig_sign" alt="" coords="1879,1151,2061,1177"/>
+<area shape="rect" id="node47" href="$d6/d76/ecmult__gen_8h.html#a9a40662d6ed2cbab43dbddc25f570f97" title="secp256k1_ecmult_gen\l_context_is_built" alt="" coords="1891,983,2049,1025"/>
+<area shape="rect" id="node48" href="$db/d94/scalar_8h.html#ad8fb9bc2a828903963bf37806d8edd11" title="Clear a scalar to prevent the leak of sensitive data. " alt="" coords="1889,1100,2051,1127"/>
+</map>

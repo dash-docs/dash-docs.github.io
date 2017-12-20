@@ -1,0 +1,27 @@
+var spork_8h =
+[
+    [ "CSporkMessage", "de/d81/class_c_spork_message.html", "de/d81/class_c_spork_message" ],
+    [ "CSporkManager", "d2/d5e/class_c_spork_manager.html", "d2/d5e/class_c_spork_manager" ],
+    [ "mapSporks", "d0/d24/spork_8h.html#af58b736428e7bc0e4a7fc590f2da8d2e", null ],
+    [ "SPORK_10_MASTERNODE_PAY_UPDATED_NODES", "d0/d24/spork_8h.html#a27a2386ddd1eff6f97cf23261e662056", null ],
+    [ "SPORK_10_MASTERNODE_PAY_UPDATED_NODES_DEFAULT", "d0/d24/spork_8h.html#aba8b6d53e56262da8aad653ef2eb4796", null ],
+    [ "SPORK_12_RECONSIDER_BLOCKS", "d0/d24/spork_8h.html#a086325671fe52d5d057bc6b9ce1cb138", null ],
+    [ "SPORK_12_RECONSIDER_BLOCKS_DEFAULT", "d0/d24/spork_8h.html#abbce28be6fe2ed0bd9f59b6ddce8f21e", null ],
+    [ "SPORK_13_OLD_SUPERBLOCK_FLAG", "d0/d24/spork_8h.html#aacc5c2947b2443afdbe4f9b0d5dc4a38", null ],
+    [ "SPORK_13_OLD_SUPERBLOCK_FLAG_DEFAULT", "d0/d24/spork_8h.html#a13b655020d2c5bc18f6cffb5f1841a37", null ],
+    [ "SPORK_14_REQUIRE_SENTINEL_FLAG", "d0/d24/spork_8h.html#a0c0bdb5ec8b506b10d6771974f31d8a5", null ],
+    [ "SPORK_14_REQUIRE_SENTINEL_FLAG_DEFAULT", "d0/d24/spork_8h.html#acf5df0891fbdb037f7fe810d0b4ace24", null ],
+    [ "SPORK_2_INSTANTSEND_ENABLED", "d0/d24/spork_8h.html#afe2fc84e25f2a3c6ba8c42c608374baa", null ],
+    [ "SPORK_2_INSTANTSEND_ENABLED_DEFAULT", "d0/d24/spork_8h.html#af659c4c12379ac35336ed51a11e1d93a", null ],
+    [ "SPORK_3_INSTANTSEND_BLOCK_FILTERING", "d0/d24/spork_8h.html#a91cd8b5750d257905deaa10a0223316d", null ],
+    [ "SPORK_3_INSTANTSEND_BLOCK_FILTERING_DEFAULT", "d0/d24/spork_8h.html#ad4f722d5784c9c133aa5300f6f12b8ed", null ],
+    [ "SPORK_5_INSTANTSEND_MAX_VALUE", "d0/d24/spork_8h.html#a6c8f34b96d65df9867e780ff0ca79c22", null ],
+    [ "SPORK_5_INSTANTSEND_MAX_VALUE_DEFAULT", "d0/d24/spork_8h.html#a0635bfcdf4e785dacf05c6f7b7596abc", null ],
+    [ "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT", "d0/d24/spork_8h.html#a0423925069c4f3e09ba5cd5fdab15500", null ],
+    [ "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT_DEFAULT", "d0/d24/spork_8h.html#af1a67b1ca95e614820f4f94f553d216b", null ],
+    [ "SPORK_9_SUPERBLOCKS_ENABLED", "d0/d24/spork_8h.html#a983879de73e00d040010620c6b703bc0", null ],
+    [ "SPORK_9_SUPERBLOCKS_ENABLED_DEFAULT", "d0/d24/spork_8h.html#ad734d61d0c5a89eb3558c2e4efb1b5da", null ],
+    [ "SPORK_END", "d0/d24/spork_8h.html#a78d9f15a300f0da84f53bd51e21fb693", null ],
+    [ "SPORK_START", "d0/d24/spork_8h.html#a2e3fb462fd263cfd1a5b5ab7184fad80", null ],
+    [ "sporkManager", "d0/d24/spork_8h.html#af6873019c3095ea6b554795e4040395c", null ]
+];

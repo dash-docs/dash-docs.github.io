@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['extract_5fstrings_5fqt',['extract_strings_qt',['../namespaceextract__strings__qt.html',1,'']]]
+  ['memusage',['memusage',['../d4/df9/namespacememusage.html',1,'']]]
 ];

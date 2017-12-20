@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['linearize_2ddata',['linearize-data',['../namespacelinearize-data.html',1,'']]],
-  ['linearize_2dhashes',['linearize-hashes',['../namespacelinearize-hashes.html',1,'']]],
-  ['listtransactions',['listtransactions',['../namespacelisttransactions.html',1,'']]]
+  ['ui',['Ui',['../dc/df0/namespace_ui.html',1,'']]]
 ];

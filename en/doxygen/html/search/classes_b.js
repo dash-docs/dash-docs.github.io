@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['last_5fobject_5frec',['last_object_rec',['../structCGovernanceManager_1_1last__object__rec.html',1,'CGovernanceManager']]],
-  ['limitedmap',['limitedmap',['../classlimitedmap.html',1,'']]],
-  ['limitedstring',['LimitedString',['../classLimitedString.html',1,'']]],
-  ['listensocket',['ListenSocket',['../structCConnman_1_1ListenSocket.html',1,'CConnman']]],
-  ['listtransactionstest',['ListTransactionsTest',['../classlisttransactions_1_1ListTransactionsTest.html',1,'listtransactions']]],
-  ['localserviceinfo',['LocalServiceInfo',['../structLocalServiceInfo.html',1,'']]],
-  ['lockedpagemanager',['LockedPageManager',['../classLockedPageManager.html',1,'']]],
-  ['lockedpagemanagerbase',['LockedPageManagerBase',['../classLockedPageManagerBase.html',1,'']]],
-  ['lockedpagemanagerbase_3c_20memorypagelocker_20_3e',['LockedPageManagerBase&lt; MemoryPageLocker &gt;',['../classLockedPageManagerBase.html',1,'']]],
-  ['lockpoints',['LockPoints',['../structLockPoints.html',1,'']]],
-  ['longpollthread',['LongpollThread',['../classgetblocktemplate__longpoll_1_1LongpollThread.html',1,'getblocktemplate_longpoll']]]
+  ['nativesecp256k1',['NativeSecp256k1',['../d0/dff/classorg_1_1bitcoin_1_1_native_secp256k1.html',1,'org::bitcoin']]],
+  ['networkstyle',['NetworkStyle',['../da/dfa/class_network_style.html',1,'']]],
+  ['nodeevictioncandidate',['NodeEvictionCandidate',['../d0/db7/struct_node_eviction_candidate.html',1,'']]],
+  ['nodelessthan',['NodeLessThan',['../dc/d08/class_node_less_than.html',1,'']]],
+  ['notificator',['Notificator',['../da/d97/class_notificator.html',1,'']]],
+  ['nsbundle_28returncorrectidentifier_29',['NSBundle(returnCorrectIdentifier)',['../d8/d26/category_n_s_bundle_07return_correct_identifier_08.html',1,'']]]
 ];

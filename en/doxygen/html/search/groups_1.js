@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mapwallet',['MapWallet',['../group__mapWallet.html',1,'']]]
+  ['mapwallet',['MapWallet',['../de/db0/group__map_wallet.html',1,'']]]
 ];

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['checkpoints',['Checkpoints',['../namespaceCheckpoints.html',1,'']]],
-  ['clang',['clang',['../namespaceclang.html',1,'']]],
-  ['clang_2dformat',['clang-format',['../namespaceclang-format.html',1,'']]],
-  ['consensus',['Consensus',['../namespaceConsensus.html',1,'']]]
+  ['dbwrapper_5fprivate',['dbwrapper_private',['../d1/dbc/namespacedbwrapper__private.html',1,'']]]
 ];
