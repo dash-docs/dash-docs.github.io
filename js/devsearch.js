@@ -173,6 +173,11 @@ uri: "/en/glossary/cpfp",
 category: "Glossary"
 },
 {
+label: "Dark Gravity Wave",
+uri: "/en/glossary/darkgravitywave",
+category: "Glossary"
+},
+{
 label: "Data carrier transaction",
 uri: "/en/glossary/null-data-transaction",
 category: "Glossary"
@@ -183,8 +188,23 @@ uri: "/en/glossary/op-code",
 category: "Glossary"
 },
 {
+label: "Decentralized Governance by Blockchain",
+uri: "/en/glossary/dgbb",
+category: "Glossary"
+},
+{
 label: "Denomination",
 uri: "/en/glossary/denominations",
+category: "Glossary"
+},
+{
+label: "DGBB",
+uri: "/en/glossary/dgbb",
+category: "Glossary"
+},
+{
+label: "DGW",
+uri: "/en/glossary/darkgravitywave",
 category: "Glossary"
 },
 {
@@ -210,6 +230,11 @@ category: "Glossary"
 {
 label: "Escrow contract",
 uri: "/en/glossary/escrow-contract",
+category: "Glossary"
+},
+{
+label: "Evolution",
+uri: "/en/glossary/evolution",
 category: "Glossary"
 },
 {
@@ -308,6 +333,16 @@ uri: "/en/glossary/input",
 category: "Glossary"
 },
 {
+label: "InstantSend",
+uri: "/en/glossary/instantsend",
+category: "Glossary"
+},
+{
+label: "InstantX",
+uri: "/en/glossary/instantsend",
+category: "Glossary"
+},
+{
 label: "Internal byte order",
 uri: "/en/glossary/internal-byte-order",
 category: "Glossary"
@@ -350,6 +385,11 @@ category: "Glossary"
 {
 label: "Master private key",
 uri: "/en/glossary/master-chain-code-and-private-key",
+category: "Glossary"
+},
+{
+label: "Masternode",
+uri: "/en/glossary/masternode",
 category: "Glossary"
 },
 {
@@ -400,6 +440,11 @@ category: "Glossary"
 {
 label: "Mining",
 uri: "/en/glossary/mining",
+category: "Glossary"
+},
+{
+label: "Multi-Phased fork",
+uri: "/en/glossary/spork",
 category: "Glossary"
 },
 {
@@ -543,6 +588,11 @@ uri: "/en/glossary/private-key",
 category: "Glossary"
 },
 {
+label: "PrivateSend",
+uri: "/en/glossary/privatesend",
+category: "Glossary"
+},
+{
 label: "Proof of work",
 uri: "/en/glossary/proof-of-work",
 category: "Glossary"
@@ -628,6 +678,11 @@ uri: "/en/glossary/signature-script",
 category: "Glossary"
 },
 {
+label: "Sentinel",
+uri: "/en/glossary/sentinel",
+category: "Glossary"
+},
+{
 label: "Sequence number",
 uri: "/en/glossary/sequence-number",
 category: "Glossary"
@@ -693,6 +748,11 @@ uri: "/en/glossary/soft-fork",
 category: "Glossary"
 },
 {
+label: "Spork",
+uri: "/en/glossary/spork",
+category: "Glossary"
+},
+{
 label: "SPV",
 uri: "/en/glossary/simplified-payment-verification",
 category: "Glossary"
@@ -713,6 +773,11 @@ uri: "/en/glossary/start-string",
 category: "Glossary"
 },
 {
+label: "Superblock",
+uri: "/en/glossary/superblock",
+category: "Glossary"
+},
+{
 label: "Target",
 uri: "/en/glossary/nbits",
 category: "Glossary"
@@ -730,6 +795,11 @@ category: "Glossary"
 {
 label: "Transaction fee",
 uri: "/en/glossary/transaction-fee",
+category: "Glossary"
+},
+{
+label: "Transaction Lock",
+uri: "/en/glossary/instantsend",
 category: "Glossary"
 },
 {
@@ -795,6 +865,11 @@ category: "Glossary"
 {
 label: "WIF",
 uri: "/en/glossary/wallet-import-format",
+category: "Glossary"
+},
+{
+label: "X11",
+uri: "/en/glossary/x11",
 category: "Glossary"
 },
 
