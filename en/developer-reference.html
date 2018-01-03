@@ -1758,7 +1758,7 @@ please <a href="https://github.com/thephez/dash.org/issues">open an issue</a>.)<
       <tr>
         <td>70208</td>
         <td>Dash Core 0.12.2.x <br />(Nov 2017)</td>
-        <td>• DIP-0001 (2MB <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>)<br />• Fee reduction (10x)<br />• <a href="/en/glossary/instantsend" title="InstantSend is a service that allows for near-instant transactions. Through this system, inputs can be locked to specific transactions and verified by consensus of the masternode network." class="auto-link">InstantSend</a> fix<br />• <a href="/en/glossary/privatesend" title="PrivateSend is a masternode managage, decentralized mixer for creating an on-demand system of removing the history from coins on the network. PrivateSend mixes inputs while allowing each participant to retain control of their coins at all times so the process can be done without trusting a third party." class="auto-link">PrivateSend</a> improvements<br />• <em>Experimental</em> <a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a></td>
+        <td>• DIP-0001 (2MB <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a>)<br />• Fee reduction (10x)<br />• <a href="/en/glossary/instantsend" title="InstantSend is a service that allows for near-instant transactions. Through this system, inputs can be locked to specific transactions and verified by consensus of the masternode network." class="auto-link">InstantSend</a> fix<br />• <a href="/en/glossary/privatesend" title="PrivateSend is a masternode managage, decentralized mixer for creating an on-demand system of removing the history from coins on the network. PrivateSend mixes inputs while allowing each participant to retain control of their coins at all times so the process can be done without trusting a third party." class="auto-link">PrivateSend</a> improvements<br />• <em>Experimental</em> <a href="/en/glossary/hd-protocol" title="The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets." class="auto-link">HD wallet</a><br />• Local <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">Masternode</a> support removed</td>
       </tr>
       <tr>
         <td>70206</td>
@@ -7089,7 +7089,7 @@ th.tg-sort-header::-moz-selection { background:transparent; }th.tg-sort-header::
     <td class="tg-b7b8">Dash</td>
     <td class="tg-b7b8"><a href="#getgovernanceinfo">GetGovernanceInfo</a></td>
     <td class="tg-dzk6">Y</td>
-    <td class="tg-dzk6"></td>
+    <td class="tg-dzk6">Updated in 0.12.2.2</td>
   </tr>
   <tr>
     <td class="tg-yw4l">Dash</td>
@@ -13202,10 +13202,16 @@ information, please see the following resources:</p>
         <td>Required<br />(exactly 1)</td>
         <td>The <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> number of the next <a href="/en/glossary/superblock" title="Special blocks that pay out funded budget proposals approved by masternode votes via the decentralized governance system. Superblocks are issued monthly and have a coinbase that can be much larger than normal. The superblock value is provided by the 10% of block rewards set aside for superblock payouts." class="auto-link">superblock</a></td>
       </tr>
+      <tr>
+        <td>→<br /><code class="highlighter-rouge">maxgovobjdatasize</code></td>
+        <td>number (int)</td>
+        <td>Required<br />(exactly 1)</td>
+        <td><em>Added in Dash Core 0.12.2.2</em><br /><br />The maximum governance object data size in bytes</td>
+      </tr>
     </tbody>
   </table>
 
-  <p><em>Example from Dash Core 0.12.2</em></p>
+  <p><em>Example from Dash Core 0.12.2.2</em></p>
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">dash-cli -testnet getgovernanceinfo</code></pre></figure>
 
@@ -13216,8 +13222,9 @@ information, please see the following resources:</p>
   </span><span class="nt">"masternodewatchdogmaxseconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">7200</span><span class="p">,</span><span class="w">
   </span><span class="nt">"proposalfee"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.00000000</span><span class="p">,</span><span class="w">
   </span><span class="nt">"superblockcycle"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"lastsuperblock"</span><span class="p">:</span><span class="w"> </span><span class="mi">7368</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"nextsuperblock"</span><span class="p">:</span><span class="w"> </span><span class="mi">7392</span><span class="w">
+  </span><span class="nt">"lastsuperblock"</span><span class="p">:</span><span class="w"> </span><span class="mi">52872</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nextsuperblock"</span><span class="p">:</span><span class="w"> </span><span class="mi">52896</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"maxgovobjdatasize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16384</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
   <p><em>See also:</em></p>
@@ -13236,7 +13243,7 @@ information, please see the following resources:</p>
 
   <p><em>Requires <a href="/en/developer-reference#term-wallet-support" title="A Dash Core ./configure option that enables (default) or disables the wallet" class="auto-link">wallet support</a>.</em></p>
 
-  <p><img src="/img/icons/icon_warning.svg" alt="Warning icon" /> The <a href="/en/developer-reference#gethashespersec" class="auto-link"><code class="highlighter-rouge">gethashespersec</code> RPC</a> was removed in <a href="/en/release/v0.11.0" class="auto-link">Bitcoin Core 0.11.0</a> and is not part of Dash..</p>
+  <p><img src="/img/icons/icon_warning.svg" alt="Warning icon" /> The <a href="/en/developer-reference#gethashespersec" class="auto-link"><code class="highlighter-rouge">gethashespersec</code> RPC</a> was removed in <a href="/en/release/v0.11.0" class="auto-link">Bitcoin Core 0.11.0</a> and is not part of Dash.</p>
 
   <p><em>See also</em></p>
 
