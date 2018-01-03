@@ -657,7 +657,7 @@ it never will be.</p>
 divergence doesn’t matter: it could be a bug in your program, it could
 be an <a href="https://github.com/thephez/dash.org/issues?q=is%3Aissue+label%3A%22Dev+Docs%22">error in this documentation</a> which you
 implemented as described, or it could be you do everything right but
-other software on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="https://bitcoin.org/en/alert/2013-03-11-chain-[fork][/en/glossary/fork]{:.auto-link}">behaves unexpectedly</a>
+other software on the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> <a href="https://bitcoin.org/en/alert/2013-03-11-chain-fork">behaves unexpectedly</a>
 as in the case of Bitcoin’s v0.8 chain <a href="/en/glossary/fork" title="When two or more blocks have the same block height, forking the block chain.  Typically occurs when two or more miners find blocks at nearly the same time.  Can also happen as part of an attack." class="auto-link">fork</a>. The specific cause
 will not matter to the users of your software whose wealth is lost.</p>
 
@@ -4130,7 +4130,7 @@ bc8f5e5400000000 ............................ Epoch time: 1415483324
   <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages all help control the <a href="/en/glossary/instantsend" title="InstantSend is a service that allows for near-instant transactions. Through this system, inputs can be locked to specific transactions and verified by consensus of the masternode network." class="auto-link">InstantSend</a> feature of Dash.
 <a href="/en/glossary/instantsend" title="InstantSend is a service that allows for near-instant transactions. Through this system, inputs can be locked to specific transactions and verified by consensus of the masternode network." class="auto-link">InstantSend</a> uses the <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternode</a> <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> to lock transaction <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">inputs</a> and enable
 secure, instantaneous transactions. For additional details, refer to
-the Developer Guide <a href="developer-guide#[instantsend][/en/glossary/instantsend]{:.auto-link}">InstantSend section</a>.</p>
+the Developer Guide <a href="developer-guide#instantsend">InstantSend section</a>.</p>
 
   <p><img src="/img/dev/en-p2p-instantsend-messages.svg" alt="Overview Of P2P Protocol InstantSend Request And Reply Messages" /></p>
 
@@ -4233,7 +4233,7 @@ DarkSend) coin mixing features built in to Dash and facilitated by the
   <p>Since the messages are all related to a single process, this diagram shows them
 sequentially numbered. The <a href="/en/developer-reference#dssu" title="A P2P network message providing a mixing pool status update" class="auto-link"><code class="highlighter-rouge">dssu</code> message</a> (not shown) is sent by the
 <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternode</a> in conjunction with some responses. For additional details, refer to
-the Developer Guide <a href="developer-guide#[privatesend][/en/glossary/privatesend]{:.auto-link}">PrivateSend section</a>.</p>
+the Developer Guide <a href="developer-guide#privatesend">PrivateSend section</a>.</p>
 
   <p><img src="/img/dev/en-p2p-privatesend-messages.svg" alt="Overview Of P2P Protocol PrivateSend Request And Reply Messages" /></p>
 
@@ -5216,8 +5216,8 @@ ece5a95900000000 ..................... Signature Timestamp</code></pre></figure>
 
   <p><img src="/img/dev/en-p2p-masternode-messages.svg" alt="Overview Of P2P Protocol Masternode Request And Reply Messages" /></p>
 
-  <p>For additional details, refer to the Developer Guide <a href="developer-guide#[masternode][/en/glossary/masternode]{:.auto-link}-sync">Masternode Sync</a>
-and <a href="developer-guide#[masternode][/en/glossary/masternode]{:.auto-link}-payment">Masternode Payment</a> sections.</p>
+  <p>For additional details, refer to the Developer Guide <a href="developer-guide#masternode-sync">Masternode Sync</a>
+and <a href="developer-guide#masternode-payment">Masternode Payment</a> sections.</p>
 
   <h4 id="dseg">dseg</h4>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/ref_p2p_networking.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/ref_p2p_networking.md">Edit</a>
@@ -5953,7 +5953,7 @@ bf110000 ................................... Count: 4543</code></pre></figure>
 | <a href="https://www.dash.org/forum/">Discuss</a></div>
 
   <p>The following <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> messages enable the Governance features built in to Dash.
-For additional details on the governance system, see this <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585246/Budget+System+Funding+Voting+[DGBB][/en/glossary/dgbb]{:.auto-link}">Budget System page</a>.</p>
+For additional details on the governance system, see this <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585246/Budget+System+Funding+Voting+DGBB">Budget System page</a>.</p>
 
   <p><img src="/img/dev/en-p2p-governance-messages.svg" alt="Overview Of P2P Protocol Governance Request And Reply Messages" /></p>
 
