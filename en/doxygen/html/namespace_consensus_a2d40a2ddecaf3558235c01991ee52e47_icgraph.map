@@ -1,0 +1,51 @@
+<map id="Consensus::CheckTxInputs" name="Consensus::CheckTxInputs">
+<area shape="rect" id="node2" href="$validation_8h.html#aec29d3e8abda6a014ca910e7c73b4df7" title="Check whether all inputs of this transaction are valid (no double spends, scripts &amp; sigs..." alt="" coords="239,706,335,733"/>
+<area shape="rect" id="node3" href="$validation_8cpp.html#a2771319b8131d6bd0b26cd7de79fd690" title="AcceptToMemoryPoolWorker" alt="" coords="383,505,576,531"/>
+<area shape="rect" id="node42" href="$class_c_tx_mem_pool.html#ab30fadfa811829e79accca41da6a8328" title="If sanity&#45;checking is turned on, check makes sure the pool is consistent (does not contain two transa..." alt="" coords="861,706,1007,733"/>
+<area shape="rect" id="node43" href="$validation_8h.html#a063faa3c9fa2d1733a51fb14cae2a2c6" title="Apply the effects of this block (with given index) on the UTXO set represented by coins..." alt="" coords="647,834,751,861"/>
+<area shape="rect" id="node4" href="$validation_8h.html#a3fccb1390d23df9054d22cbe41f1b7c7" title="(try to) add transaction to memory pool " alt="" coords="624,367,775,394"/>
+<area shape="rect" id="node5" href="$class_c_merkle_tx.html#a6618a127f7e5597c686cec94c16d0bd8" title="CMerkleTx::AcceptToMemoryPool" alt="" coords="823,426,1045,453"/>
+<area shape="rect" id="node12" href="$class_c_private_send_server.html#a332772df161f5d7c60f98634e3c18370" title="Charge fees to bad actors (Charge clients a fee if they&#39;re abusive) " alt="" coords="863,477,1005,519"/>
+<area shape="rect" id="node14" href="$class_c_private_send_server.html#a331ca0c6a5687ecb079b55da6d735bf4" title="Rarely charge fees to pay miners. " alt="" coords="859,243,1009,284"/>
+<area shape="rect" id="node15" href="$class_c_private_send_server.html#a86b29accd11a5ff73ad409e6d29b28c9" title="CPrivateSendServer\l::CommitFinalTransaction" alt="" coords="1130,243,1302,284"/>
+<area shape="rect" id="node17" href="$class_c_private_send_server.html#ad51576edb65312fa566ba6f0351a7b6d" title="CPrivateSendServer\l::ProcessMessage" alt="" coords="1609,213,1751,255"/>
+<area shape="rect" id="node18" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1804,619,1927,646"/>
+<area shape="rect" id="node22" href="$validation_8cpp.html#a6ceb71a20037d3bc1c6208b99b004c12" title="Disconnect chainActive&#39;s tip. " alt="" coords="881,619,987,646"/>
+<area shape="rect" id="node35" href="$class_c_private_send.html#af05e5a0a086e07955bd6c8e79f7765a5" title="If the collateral is valid given by a client. " alt="" coords="845,75,1023,116"/>
+<area shape="rect" id="node39" href="$class_c_private_send_client.html#a5dd3ad9ca84fcc35a3b3f19011494610" title="step 2: send denominated inputs and outputs prepared in step 1 " alt="" coords="865,360,1003,401"/>
+<area shape="rect" id="node41" href="$server_8h.html#a962b2890c7be4b92841eb288e5a2aca5" title="sendrawtransaction" alt="" coords="867,141,1001,167"/>
+<area shape="rect" id="node6" href="$group___actions.html#gad95b72403a23ad9f9079a08b0ed1646a" title="Call after CreateTransaction unless you want to abort. " alt="" coords="1121,426,1311,453"/>
+<area shape="rect" id="node11" href="$group__map_wallet.html#ga796c23450c8482e10e0c75ae5c1fa8ed" title="CWallet::ReacceptWalletTransactions" alt="" coords="1093,375,1339,402"/>
+<area shape="rect" id="node7" href="$class_c_private_send_client.html#a1318eb1f8e5a845036cfe99f0b3f8b36" title="CPrivateSendClient\l::CreateDenominated" alt="" coords="1398,425,1545,467"/>
+<area shape="rect" id="node8" href="$server_8h.html#a0fa637689f8c63fc6adebeb9458430db" title="gobject" alt="" coords="1439,491,1503,518"/>
+<area shape="rect" id="node9" href="$class_c_private_send_client.html#ad603beaa1644f6e6cfb8ca7d1400d46e" title="CPrivateSendClient\l::MakeCollateralAmounts" alt="" coords="1387,308,1556,349"/>
+<area shape="rect" id="node10" href="$class_wallet_model.html#a53443aca544c824550f21e5f87e4ec39" title="WalletModel::sendCoins" alt="" coords="1389,374,1553,401"/>
+<area shape="rect" id="node13" href="$class_c_private_send_server.html#a5bbfc770d9593387302f40281f8fca96" title="CPrivateSendServer\l::CheckTimeout" alt="" coords="1145,477,1287,519"/>
+<area shape="rect" id="node16" href="$class_c_private_send_server.html#ab6d446eb9d4d76982e7a92c8c9529af0" title="Check for process. " alt="" coords="1401,243,1542,284"/>
+<area shape="rect" id="node19" href="$net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" title="Process protocol messages received from a given node. " alt="" coords="1975,619,2105,646"/>
+<area shape="rect" id="node20" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="2159,594,2304,621"/>
+<area shape="rect" id="node21" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="2153,645,2309,671"/>
+<area shape="rect" id="node23" href="$validation_8cpp.html#a345d6616250288efacae87d05528fe8a" title="Try to make some progress towards making pindexMostWork the active block. " alt="" coords="1137,758,1295,785"/>
+<area shape="rect" id="node33" href="$validation_8h.html#a0c1aac3f96687018cb6a1faa3c3933ac" title="Reprocess a number of blocks to try and get on the correct chain again. " alt="" coords="1407,645,1535,671"/>
+<area shape="rect" id="node34" href="$validation_8h.html#a7656efe9edf075c4c629335139ea7e1a" title="Mark a block as invalid. " alt="" coords="1416,594,1527,621"/>
+<area shape="rect" id="node24" href="$validation_8h.html#ab7be3f1b4119e8df383a4332ddbd344a" title="Find the best known block, and make it the tip of the block chain. " alt="" coords="1406,787,1537,814"/>
+<area shape="rect" id="node25" href="$validation_8h.html#aaf2e19311fff6b9cd421a9a9d59f7ff1" title="Initialize a new block tree database + block data on disk. " alt="" coords="1627,949,1733,975"/>
+<area shape="rect" id="node26" href="$init_8cpp.html#a0189c34248cd89bbbe20d4d6045bd7c9" title="ThreadImport" alt="" coords="1816,847,1915,874"/>
+<area shape="rect" id="node27" href="$server_8h.html#a7e43030fb221e28db98accef3fc80232" title="invalidateblock" alt="" coords="1626,594,1734,621"/>
+<area shape="rect" id="node28" href="$validation_8h.html#a2233339a13d09038cf2e46f4d0144be4" title="Import blocks from an external file. " alt="" coords="1604,847,1756,874"/>
+<area shape="rect" id="node29" href="$validation_8h.html#ac880446d7f8833dd498df914ccc816a9" title="Process an incoming block. " alt="" coords="1615,898,1745,925"/>
+<area shape="rect" id="node31" href="$server_8h.html#a29263a4d92c9f0c07c1dfb0a5fad681b" title="reconsiderblock" alt="" coords="1623,797,1737,823"/>
+<area shape="rect" id="node32" href="$validation_8h.html#a6b20cdba297d137a4d7a91691cc4457b" title="ReprocessBlocks" alt="" coords="1617,645,1743,671"/>
+<area shape="rect" id="node30" href="$server_8h.html#afc5f2c0cbe40a2f876b46df2929cf359" title="generate" alt="" coords="1829,949,1901,975"/>
+<area shape="rect" id="node36" href="$class_c_private_send_server.html#aa1d021f6e9df0817b8bee67bd8c90bdc" title="Add a clients entry to the pool. " alt="" coords="1401,125,1542,167"/>
+<area shape="rect" id="node37" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="1123,5,1309,47"/>
+<area shape="rect" id="node38" href="$class_c_private_send_server.html#af7e38b25732fe0532d4a7061badababe" title="Is this nDenom and txCollateral acceptable? " alt="" coords="1103,71,1329,112"/>
+<area shape="rect" id="node40" href="$class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546" title="As a client, submit part of a future mixing transaction to a Masternode to start the process..." alt="" coords="1145,309,1287,351"/>
+<area shape="rect" id="node44" href="$validation_8cpp.html#a9258465a729a68271780a9968e65819a" title="Connect a new block to chainActive. " alt="" coords="889,777,979,803"/>
+<area shape="rect" id="node45" href="$validation_8h.html#a12c39e969c9077605ae8a91730fb78d3" title="Check a block is completely valid from start to finish (only works on top of our current best block..." alt="" coords="872,853,996,879"/>
+<area shape="rect" id="node49" href="$class_c_verify_d_b.html#af12e07230f20d23cf01d417d0e785c49" title="CVerifyDB::VerifyDB" alt="" coords="861,929,1007,955"/>
+<area shape="rect" id="node46" href="$miner_8h.html#ac8f34678ed590db1325b261c708f2626" title="Generate a new block, without valid proof&#45;of&#45;work. " alt="" coords="1155,903,1277,930"/>
+<area shape="rect" id="node48" href="$server_8h.html#a054ca23f5d86a8ca30138464ba10008c" title="getblocktemplate" alt="" coords="1411,859,1532,886"/>
+<area shape="rect" id="node47" href="$miner_8cpp.html#a17c61f964b27cc5060cd7f9b0efb3607" title="BitcoinMiner" alt="" coords="1424,1050,1519,1077"/>
+<area shape="rect" id="node50" href="$server_8h.html#a30b96575c158ca0465dbdb25705c4ca9" title="verifychain" alt="" coords="1173,954,1259,981"/>
+</map>

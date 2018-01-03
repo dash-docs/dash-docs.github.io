@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memusage',['memusage',['../d4/df9/namespacememusage.html',1,'']]]
+  ['netmsgtype',['NetMsgType',['../namespace_net_msg_type.html',1,'']]]
 ];

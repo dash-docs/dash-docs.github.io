@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transactiontablepriv',['TransactionTablePriv',['../d7/dfe/class_transaction_table_model.html#a39d3ddddb3af12905ad5538a91753736',1,'TransactionTableModel']]]
+  ['uinttoarith256',['UintToArith256',['../classarith__uint256.html#a9c9f84c20851f10a8ca5082bec97666a',1,'arith_uint256']]]
 ];

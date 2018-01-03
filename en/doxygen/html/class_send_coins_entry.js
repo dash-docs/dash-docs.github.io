@@ -1,0 +1,27 @@
+var class_send_coins_entry =
+[
+    [ "SendCoinsEntry", "class_send_coins_entry.html#a6eae20cd564011773931fc724f4d787c", null ],
+    [ "~SendCoinsEntry", "class_send_coins_entry.html#a3a6d8d30176c7c79e3bc2af346d2a68b", null ],
+    [ "clear", "class_send_coins_entry.html#abff66fcd456c82144e7a2c410f5082ac", null ],
+    [ "deleteClicked", "class_send_coins_entry.html#aa749b51119d0504f204bbf7c90744e2e", null ],
+    [ "getValue", "class_send_coins_entry.html#af36fb0ed9e2e07079c1a982b31e793c8", null ],
+    [ "isClear", "class_send_coins_entry.html#a1dcce9480364868dfd0bb8782e039e57", null ],
+    [ "on_addressBookButton_clicked", "class_send_coins_entry.html#ac661741d286d9f3db32f78bd22125cb0", null ],
+    [ "on_pasteButton_clicked", "class_send_coins_entry.html#a775de85ffc04da6d9f9f52b3afd41580", null ],
+    [ "on_payTo_textChanged", "class_send_coins_entry.html#a73088d2789e8ced5de3a0597fb1f30c5", null ],
+    [ "payAmountChanged", "class_send_coins_entry.html#a9f4fec53927c3ddd37ccea53f8d1e370", null ],
+    [ "removeEntry", "class_send_coins_entry.html#a9105a4f91781f96b91a1da65da9032bf", null ],
+    [ "setAddress", "class_send_coins_entry.html#a19aa4ce19ff25687203ac0790c241fee", null ],
+    [ "setFocus", "class_send_coins_entry.html#a0dcb8720f234165b37f8b45b035320cc", null ],
+    [ "setModel", "class_send_coins_entry.html#a831f8f9a63acd77b7d66d5393e12310b", null ],
+    [ "setupTabChain", "class_send_coins_entry.html#aa431a0bf53174b3a012fe224e472bc13", null ],
+    [ "setValue", "class_send_coins_entry.html#a513dd22231d0d7c2550c5533e9518cf5", null ],
+    [ "subtractFeeFromAmountChanged", "class_send_coins_entry.html#a2d6a5ed7d9bbccd8b10ae874244b7f57", null ],
+    [ "updateDisplayUnit", "class_send_coins_entry.html#a6ff4bd5b370545bcfd6214e866ee33f3", null ],
+    [ "updateLabel", "class_send_coins_entry.html#a16e0fdd3248cbf32b60fd601dc8d565a", null ],
+    [ "validate", "class_send_coins_entry.html#ab77df95fe77e9a001190cd4dabe0dfec", null ],
+    [ "model", "class_send_coins_entry.html#a04d02e0b273cfcaa96f6fe3b86290d1c", null ],
+    [ "platformStyle", "class_send_coins_entry.html#aa5f35737e7fdb608880b14ec4d21872c", null ],
+    [ "recipient", "class_send_coins_entry.html#a4e85380414804e14b7bd7229d428c8a3", null ],
+    [ "ui", "class_send_coins_entry.html#ae52f7670ee8b6bb4367b9c98041886e1", null ]
+];

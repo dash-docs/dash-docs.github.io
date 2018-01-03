@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['netmsgtype',['NetMsgType',['../d8/d7e/namespace_net_msg_type.html',1,'']]]
+  ['bitcoin',['bitcoin',['../namespaceorg_1_1bitcoin.html',1,'org']]],
+  ['org',['org',['../namespaceorg.html',1,'']]]
 ];

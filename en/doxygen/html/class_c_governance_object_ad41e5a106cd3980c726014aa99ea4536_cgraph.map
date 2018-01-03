@@ -1,0 +1,51 @@
+<map id="CGovernanceObject::CheckSignature" name="CGovernanceObject::CheckSignature">
+<area shape="rect" id="node2" href="$class_c_governance_object.html#a246f8a8323012d783c84d31399836e5e" title="CGovernanceObject::\lGetSignatureMessage" alt="" coords="235,119,385,161"/>
+<area shape="rect" id="node5" href="$class_c_message_signer.html#ab4189ffcd1472cac33f99a425faa4cec" title="Verify the message signature, returns true if succcessful. " alt="" coords="201,185,419,212"/>
+<area shape="rect" id="node3" href="$classbase__blob.html#a7a0d25782830d8b087c4da839f3ccdeb" title="base_blob::ToString" alt="" coords="688,81,827,108"/>
+<area shape="rect" id="node4" href="$class_c_out_point.html#a85f13609edc1f66afe82fb68f28fb8b7" title="COutPoint::ToStringShort" alt="" coords="468,131,639,157"/>
+<area shape="rect" id="node6" href="$class_c_hash_signer.html#a941bca56ae42ff938656c805a1ddc78e" title="Verify the hash signature, returns true if succcessful. " alt="" coords="467,183,640,209"/>
+<area shape="rect" id="node48" href="$class_c_hash_writer.html#ae94a937211502eabf19477630090093a" title="CHashWriter::GetHash" alt="" coords="474,233,633,260"/>
+<area shape="rect" id="node7" href="$class_c_pub_key.html#a169505e735a02db385486b0affeb565c" title="Recover a public key from a compact signature. " alt="" coords="1033,427,1221,453"/>
+<area shape="rect" id="node38" href="$class_c_pub_key.html#a2675f7e6f72eff68e7a5227289feb021" title="Get the KeyID of this public key (hash of its serialization) " alt="" coords="697,132,818,159"/>
+<area shape="rect" id="node47" href="$utilstrencodings_8cpp.html#a5e074135870a6fdfae4ac02047bc0432" title="EncodeBase64" alt="" coords="702,183,813,209"/>
+<area shape="rect" id="node8" href="$secp256k1__recovery_8h.html#a6699b45dc75be70f028ac7d8ffaba46e" title="Parse a compact ECDSA signature (64 bytes + recovery id). " alt="" coords="1269,562,1471,603"/>
+<area shape="rect" id="node13" href="$secp256k1__recovery_8h.html#a7e156c6f4be24b07f4a563210dcb1a2e" title="Recover an ECDSA public key from a signature. " alt="" coords="1281,661,1459,688"/>
+<area shape="rect" id="node31" href="$classbase__blob.html#aeee68e00ceeacf49086e98b661e017ff" title="base_blob::begin" alt="" coords="1310,456,1430,483"/>
+<area shape="rect" id="node32" href="$secp256k1_8h.html#a34977bf00322e510e881160c421836d7" title="Serialize a pubkey object into a serialized byte sequence. " alt="" coords="1293,390,1447,431"/>
+<area shape="rect" id="node35" href="$class_c_pub_key.html#af59bc1d3be119c1f8b49d3c1e2c0797b" title="Initialize a public key using begin/end iterators to byte data. " alt="" coords="1317,284,1423,311"/>
+<area shape="rect" id="node9" href="$recovery_2main__impl_8h.html#a58a8a03b17aeb5cb4daf2940a58663b9" title="secp256k1_ecdsa_recoverable\l_signature_save" alt="" coords="1519,621,1720,662"/>
+<area shape="rect" id="node12" href="$scalar_8h.html#a25cc2d45ae1d1765d07c3313cdf46fa0" title="Set a scalar from a big endian byte array. " alt="" coords="1779,565,1959,592"/>
+<area shape="rect" id="node10" href="$glibc__compat_8cpp.html#a0f46826ab0466591e136db24394923cf" title="memcpy" alt="" coords="1833,452,1905,479"/>
+<area shape="rect" id="node11" href="$scalar_8h.html#a4fa08f8af5a23f505b44c9ef1bec1831" title="Convert a scalar to a byte array. " alt="" coords="1779,616,1959,643"/>
+<area shape="rect" id="node14" href="$recovery_2main__impl_8h.html#aa3ef0903a865dc9a6e42dfe61f75a9e5" title="secp256k1_ecdsa_recoverable\l_signature_load" alt="" coords="1519,503,1720,545"/>
+<area shape="rect" id="node15" href="$recovery_2main__impl_8h.html#a1a831ed991717749ed9d200bb9d3f03b" title="secp256k1_ecdsa_sig\l_recover" alt="" coords="1544,839,1695,881"/>
+<area shape="rect" id="node28" href="$ecmult_8h.html#aa4f6f213989d3ec35850c40c8f1b313b" title="secp256k1_ecmult_context\l_is_built" alt="" coords="1529,686,1710,727"/>
+<area shape="rect" id="node29" href="$secp256k1_8c.html#aa061c9c5c861017bef990e5c4653e0f4" title="secp256k1_pubkey_save" alt="" coords="1535,401,1704,428"/>
+<area shape="rect" id="node16" href="$ecmult_8h.html#aacf8b6ba48671daf24d549adb176366c" title="Double multiply: R = na*A + ng*G. " alt="" coords="1803,768,1934,795"/>
+<area shape="rect" id="node17" href="$field_8h.html#a7512f80b60598e4af89c004890880fc7" title="Adds a field element to another. " alt="" coords="1803,819,1934,845"/>
+<area shape="rect" id="node18" href="$field_8h.html#af372f2088796ef5338bb43dbb6dd5277" title="Compare two field elements. " alt="" coords="1789,869,1949,896"/>
+<area shape="rect" id="node19" href="$field_8h.html#a5c86a65052e3b135919c00fe2233a43d" title="Set a field element equal to 32&#45;byte big endian value. " alt="" coords="1791,507,1947,533"/>
+<area shape="rect" id="node20" href="$group__impl_8h.html#aea803cf52c0f33c2cb3bfb82d5790d71" title="secp256k1_ge_set_gej_var" alt="" coords="1779,920,1959,947"/>
+<area shape="rect" id="node21" href="$group_8h.html#a3c3d9154b093bb4ed48ba55e4c28a0b5" title="Set a group element (affine) equal to the point with the given X coordinate, and given oddness for Y..." alt="" coords="1780,971,1957,997"/>
+<area shape="rect" id="node22" href="$group_8h.html#a33786d5853579c92d46fac51f6a40093" title="Check whether a group element is the point at infinity. " alt="" coords="1783,1021,1954,1048"/>
+<area shape="rect" id="node23" href="$group_8h.html#ad5f813e26afb239f03e83f0e61e05498" title="Set a group element (jacobian) equal to another which is given in affine coordinates. " alt="" coords="1791,1072,1946,1099"/>
+<area shape="rect" id="node24" href="$scalar_8h.html#a58e84d0cabe81139df5c71759f833855" title="Compute the inverse of a scalar (modulo the group order), without constant&#45;time guarantee. " alt="" coords="1768,1123,1969,1149"/>
+<area shape="rect" id="node25" href="$scalar_8h.html#a3f0ac84fe49a1c1f51212582a2c149d4" title="Check whether a scalar equals zero. " alt="" coords="1781,1173,1957,1200"/>
+<area shape="rect" id="node26" href="$scalar_8h.html#a89db15f705c8eafcd10c08181523acd0" title="Multiply two scalars (modulo the group order). " alt="" coords="1791,667,1946,693"/>
+<area shape="rect" id="node27" href="$scalar_8h.html#aa3f1c1d4536adf835ee256878c222968" title="Compute the complement of a scalar (modulo the group order). " alt="" coords="1782,717,1955,744"/>
+<area shape="rect" id="node30" href="$field_8h.html#abb1017649be14b9ac1823be3c573e542" title="Convert a field element to a 32&#45;byte big endian value. " alt="" coords="1791,401,1947,428"/>
+<area shape="rect" id="node33" href="$eckey_8h.html#ae1f52342d70928f16c8e606da59e6aa6" title="secp256k1_eckey_pubkey\l_serialize" alt="" coords="1531,335,1707,377"/>
+<area shape="rect" id="node34" href="$secp256k1_8c.html#a9966ec041e71010d1593ae2211ffb843" title="secp256k1_pubkey_load" alt="" coords="1537,452,1702,479"/>
+<area shape="rect" id="node36" href="$class_c_pub_key.html#a7dc71b3f037c84268dc22de97d7b65fb" title="Compute the length of a pubkey with a given first byte. " alt="" coords="1555,183,1683,209"/>
+<area shape="rect" id="node37" href="$class_c_pub_key.html#a99917e80a362af54a3677ea9cf1328ee" title="Set this key data to be invalid. " alt="" coords="1548,233,1691,260"/>
+<area shape="rect" id="node39" href="$hash_8h.html#a4490f70ddae16e9e48460a0416a48a6b" title="Compute the 160&#45;bit hash an object. " alt="" coords="893,132,967,159"/>
+<area shape="rect" id="node46" href="$class_c_pub_key.html#a6bb28fcf0a5f799c69f5b7269363b309" title="Simple read&#45;only vector&#45;like interface to the pubkey data. " alt="" coords="875,81,985,108"/>
+<area shape="rect" id="node40" href="$class_c_hash160.html#a9bb08e1772002ae1a5d85017ba7952ee" title="CHash160::Finalize" alt="" coords="1059,132,1196,159"/>
+<area shape="rect" id="node45" href="$class_c_hash160.html#af56cdd9443013eb68b246aa8450217f2" title="CHash160::Write" alt="" coords="1066,183,1189,209"/>
+<area shape="rect" id="node41" href="$class_c_s_h_a256.html#a4259230be0caefa590bc324fc12b9b90" title="CSHA256::Finalize" alt="" coords="1303,31,1437,57"/>
+<area shape="rect" id="node42" href="$common_8h.html#ab960e95bf479af0a88a20800366b6131" title="WriteBE64" alt="" coords="1577,5,1662,32"/>
+<area shape="rect" id="node43" href="$class_c_s_h_a256.html#a9d7de520a562655da85349372820c883" title="CSHA256::Write" alt="" coords="1559,132,1679,159"/>
+<area shape="rect" id="node44" href="$common_8h.html#aa3a53ff883fd14480eb603d00123a74a" title="WriteBE32" alt="" coords="1577,56,1662,83"/>
+<area shape="rect" id="node49" href="$class_c_hash256.html#aa8a70c1b7cf24ce7d00240a1131cf4e7" title="CHash256::Finalize" alt="" coords="1059,233,1196,260"/>
+<area shape="rect" id="node50" href="$class_c_s_h_a256.html#a2122395dd5604990eaa0077b43a0e8d4" title="CSHA256::Reset" alt="" coords="1308,233,1432,260"/>
+</map>

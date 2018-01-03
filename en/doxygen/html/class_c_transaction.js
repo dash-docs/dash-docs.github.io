@@ -1,0 +1,26 @@
+var class_c_transaction =
+[
+    [ "CTransaction", "class_c_transaction.html#a41717180530fca69eb0163c1024ae286", null ],
+    [ "CTransaction", "class_c_transaction.html#a6607e95af3e2851ee3b7fe335a05eb4c", null ],
+    [ "CalculateModifiedSize", "class_c_transaction.html#a001aa818efad11751db060dd447dc28b", null ],
+    [ "ComputePriority", "class_c_transaction.html#adccb264c374e4ad57e699947540256f8", null ],
+    [ "GetHash", "class_c_transaction.html#a7efd1379de830341417c0bfa23a149aa", null ],
+    [ "GetTotalSize", "class_c_transaction.html#a937b68067326db6155efb5114ba19faf", null ],
+    [ "GetValueOut", "class_c_transaction.html#aa4ce691dbb2ce32838d94d15801f6644", null ],
+    [ "IsCoinBase", "class_c_transaction.html#a96256e8ac1bf79ad9c057e48c41132dd", null ],
+    [ "IsNull", "class_c_transaction.html#a52965f371d2d3f723e88e60c8e68d6d0", null ],
+    [ "operator=", "class_c_transaction.html#a93a05df7088ebef96adb2ea0442380e8", null ],
+    [ "SerializationOp", "class_c_transaction.html#aa79659fab1e973a058494393209b0a59", null ],
+    [ "ToString", "class_c_transaction.html#a80370923c3ac828de68919295d5d0659", null ],
+    [ "UpdateHash", "class_c_transaction.html#a8f54f9ab821e9ebb04a9ec4941fd47e3", null ],
+    [ "operator!=", "class_c_transaction.html#ab7c00027d7a2622792736f6a3a579d5d", null ],
+    [ "operator==", "class_c_transaction.html#a1afe3b8f0f0daca6f653756ee44c9e44", null ],
+    [ "ADD_SERIALIZE_METHODS", "class_c_transaction.html#a329b40b323445b322ab460c966669944", null ],
+    [ "CURRENT_VERSION", "class_c_transaction.html#afcc5960eab9d35f10c6f8e6675bf2a93", null ],
+    [ "hash", "class_c_transaction.html#af037c2d4f43d54dc15b7d806481d3d03", null ],
+    [ "MAX_STANDARD_VERSION", "class_c_transaction.html#a0c6064a3e33745d62a9ab3efdac349d7", null ],
+    [ "nLockTime", "class_c_transaction.html#a54d5948c11f499b28276eab6bbfdf0c5", null ],
+    [ "nVersion", "class_c_transaction.html#abda727662de83b84dc2ef56d30690cb1", null ],
+    [ "vin", "class_c_transaction.html#ad64447ea044ec850313696fc99412d95", null ],
+    [ "vout", "class_c_transaction.html#a708645274ddfd83829315ffe5c7c5c3e", null ]
+];
