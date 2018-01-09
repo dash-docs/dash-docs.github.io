@@ -165,6 +165,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a23d6f22c3aff80be7665bfc5a77a01ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e670f3dd03055264c05b25335babb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_auto_file.html">CAutoFile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_auto_file.html#a87e670f3dd03055264c05b25335babb4">read</a> (char *pch, size_t nSize)</td></tr>
 <tr class="separator:a87e670f3dd03055264c05b25335babb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0159b896d7ed2574cc32663987bfc0ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_auto_file.html">CAutoFile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_auto_file.html#a0159b896d7ed2574cc32663987bfc0ce">ignore</a> (size_t nSize)</td></tr>
+<tr class="separator:a0159b896d7ed2574cc32663987bfc0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2852b345b75835f883be3732cf826a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_auto_file.html">CAutoFile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_auto_file.html#a7b2852b345b75835f883be3732cf826a">write</a> (const char *pch, size_t nSize)</td></tr>
 <tr class="separator:a7b2852b345b75835f883be3732cf826a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a883a261f0d7d0320f72152ff2167fd24"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -197,7 +199,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Non-refcounted RAII wrapper for FILE*. </p>
 <p>Will automatically close the file when it goes out of scope if not null. If you're returning the file pointer, return file.release(). If you need to close the file early, use file.fclose() instead of fclose(file). </p>
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00346">346</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00350">350</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2d7c38154632735962c24d472c01608c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d7c38154632735962c24d472c01608c">&#9670;&nbsp;</a></span>CAutoFile() <span class="overload">[1/2]</span></h2>
@@ -265,9 +267,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00359">359</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00363">363</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>, <a class="el" href="streams_8h_source.html#l00353">nType</a>, and <a class="el" href="streams_8h_source.html#l00354">nVersion</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>, <a class="el" href="streams_8h_source.html#l00357">nType</a>, and <a class="el" href="streams_8h_source.html#l00358">nVersion</a>.</p>
 
 </div>
 </div>
@@ -294,9 +296,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00366">366</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00370">370</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00371">fclose()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00375">fclose()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -332,11 +334,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00371">371</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00375">375</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00366">~CAutoFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00370">~CAutoFile()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -374,11 +376,11 @@ Private Attributes</h2></td></tr>
 <p>Get wrapped FILE* without transfer of ownership. </p>
 <dl class="section note"><dt>Note</dt><dd>Ownership of the FILE* will remain with this class. Use this only if the scope of the <a class="el" href="class_c_auto_file.html" title="Non-refcounted RAII wrapper for FILE*. ">CAutoFile</a> outlives use of the passed pointer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00389">389</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00393">393</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01080">GetTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01085">GetTransaction()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -416,9 +418,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00424">424</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00442">442</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00353">nType</a>, and <a class="el" href="streams_8h_source.html#l00354">nVersion</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00357">nType</a>, and <a class="el" href="streams_8h_source.html#l00358">nVersion</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -453,9 +455,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00399">399</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00403">403</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00353">nType</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00357">nType</a>.</p>
 
 </div>
 </div>
@@ -482,9 +484,39 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00401">401</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00405">405</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00354">nVersion</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00358">nVersion</a>.</p>
+
+</div>
+</div>
+<a id="a0159b896d7ed2574cc32663987bfc0ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0159b896d7ed2574cc32663987bfc0ce">&#9670;&nbsp;</a></span>ignore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_auto_file.html">CAutoFile</a>&amp; CAutoFile::ignore </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00418">418</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>.</p>
 
 </div>
 </div>
@@ -513,11 +545,11 @@ template&lt;typename T &gt; </div>
 
 <p>Return true if the wrapped FILE* is NULL, false otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00393">393</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00397">397</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="validation_8cpp_source.html#l01080">GetTransaction()</a>, <a class="el" href="init_8cpp_source.html#l00210">PrepareShutdown()</a>, and <a class="el" href="validation_8cpp_source.html#l01171">ReadBlockFromDisk()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="validation_8cpp_source.html#l01085">GetTransaction()</a>, <a class="el" href="init_8cpp_source.html#l00212">PrepareShutdown()</a>, and <a class="el" href="validation_8cpp_source.html#l01172">ReadBlockFromDisk()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -555,9 +587,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00431">431</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00449">449</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>, <a class="el" href="streams_8h_source.html#l00353">nType</a>, <a class="el" href="streams_8h_source.html#l00354">nVersion</a>, and <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>, <a class="el" href="streams_8h_source.html#l00357">nType</a>, <a class="el" href="streams_8h_source.html#l00358">nVersion</a>, and <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -621,9 +653,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00441">441</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00459">459</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>, <a class="el" href="streams_8h_source.html#l00353">nType</a>, <a class="el" href="streams_8h_source.html#l00354">nVersion</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>, <a class="el" href="streams_8h_source.html#l00357">nType</a>, <a class="el" href="streams_8h_source.html#l00358">nVersion</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -669,9 +701,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00405">405</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00409">409</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>.</p>
 
 </div>
 </div>
@@ -698,9 +730,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00402">402</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00406">406</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00354">nVersion</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00358">nVersion</a>.</p>
 
 </div>
 </div>
@@ -730,9 +762,9 @@ template&lt;typename T &gt; </div>
 <p>Get wrapped FILE* with transfer of ownership. </p>
 <dl class="section note"><dt>Note</dt><dd>This will invalidate the <a class="el" href="class_c_auto_file.html" title="Non-refcounted RAII wrapper for FILE*. ">CAutoFile</a> object, and makes it the responsibility of the caller of this function to clean up the returned FILE*. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00383">383</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00387">387</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>.</p>
 
 </div>
 </div>
@@ -760,9 +792,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00398">398</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00402">402</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00353">nType</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00357">nType</a>.</p>
 
 </div>
 </div>
@@ -790,9 +822,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00400">400</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00404">404</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00354">nVersion</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00358">nVersion</a>.</p>
 
 </div>
 </div>
@@ -830,9 +862,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00414">414</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00432">432</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00356">file</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00360">file</a>.</p>
 
 </div>
 </div>
@@ -859,9 +891,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00403">403</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00407">407</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00354">nVersion</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00358">nVersion</a>.</p>
 
 </div>
 </div>
@@ -886,9 +918,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00356">356</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00360">360</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00359">CAutoFile()</a>, <a class="el" href="streams_8h_source.html#l00371">fclose()</a>, <a class="el" href="streams_8h_source.html#l00389">Get()</a>, <a class="el" href="streams_8h_source.html#l00393">IsNull()</a>, <a class="el" href="streams_8h_source.html#l00431">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00441">operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00405">read()</a>, <a class="el" href="streams_8h_source.html#l00383">release()</a>, and <a class="el" href="streams_8h_source.html#l00414">write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00363">CAutoFile()</a>, <a class="el" href="streams_8h_source.html#l00375">fclose()</a>, <a class="el" href="streams_8h_source.html#l00393">Get()</a>, <a class="el" href="streams_8h_source.html#l00418">ignore()</a>, <a class="el" href="streams_8h_source.html#l00397">IsNull()</a>, <a class="el" href="streams_8h_source.html#l00449">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00459">operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00409">read()</a>, <a class="el" href="streams_8h_source.html#l00387">release()</a>, and <a class="el" href="streams_8h_source.html#l00432">write()</a>.</p>
 
 </div>
 </div>
@@ -912,9 +944,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00353">353</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00357">357</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00359">CAutoFile()</a>, <a class="el" href="streams_8h_source.html#l00424">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00399">GetType()</a>, <a class="el" href="streams_8h_source.html#l00431">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00441">operator&gt;&gt;()</a>, and <a class="el" href="streams_8h_source.html#l00398">SetType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00363">CAutoFile()</a>, <a class="el" href="streams_8h_source.html#l00442">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00403">GetType()</a>, <a class="el" href="streams_8h_source.html#l00449">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00459">operator&gt;&gt;()</a>, and <a class="el" href="streams_8h_source.html#l00402">SetType()</a>.</p>
 
 </div>
 </div>
@@ -938,9 +970,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00354">354</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00358">358</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00359">CAutoFile()</a>, <a class="el" href="streams_8h_source.html#l00424">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00401">GetVersion()</a>, <a class="el" href="streams_8h_source.html#l00431">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00441">operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00402">ReadVersion()</a>, <a class="el" href="streams_8h_source.html#l00400">SetVersion()</a>, and <a class="el" href="streams_8h_source.html#l00403">WriteVersion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00363">CAutoFile()</a>, <a class="el" href="streams_8h_source.html#l00442">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00405">GetVersion()</a>, <a class="el" href="streams_8h_source.html#l00449">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00459">operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00406">ReadVersion()</a>, <a class="el" href="streams_8h_source.html#l00404">SetVersion()</a>, and <a class="el" href="streams_8h_source.html#l00407">WriteVersion()</a>.</p>
 
 </div>
 </div>
@@ -954,7 +986,7 @@ template&lt;typename T &gt; </div>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_auto_file.html">CAutoFile</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:23 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:30 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

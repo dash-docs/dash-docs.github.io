@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('functions_func_u.html','');});
 : <a class="el" href="class_r_p_c_console.html#a9a974887c33bf1d4b25eb6aeea002941">RPCConsole</a>
 </li>
 <li>Uncache()
-: <a class="el" href="class_c_coins_view_cache.html#ab0bc342537c7f841bd3e9cf2a4d179dd">CCoinsViewCache</a>
+: <a class="el" href="class_c_coins_view_cache.html#a4251130f7fac0fd8f7c9eb630179e986">CCoinsViewCache</a>
 </li>
 <li>unitChanged()
 : <a class="el" href="class_bitcoin_amount_field.html#a5cee72f97d1a77da3514197aaf2ea6c5">BitcoinAmountField</a>
@@ -201,17 +201,19 @@ $(document).ready(function(){initNavTree('functions_func_u.html','');});
 , <a class="el" href="struct_c_address_index_key.html#a31da9e393f8c79a697357e117ad02c40">CAddressIndexKey</a>
 , <a class="el" href="struct_c_address_unspent_key.html#ac2560c733399f738c33ad11a53ef9b75">CAddressUnspentKey</a>
 , <a class="el" href="class_c_addr_man.html#a68eaf1797ecb8bff380aa7f9fc452e14">CAddrMan</a>
-, <a class="el" href="class_c_coins.html#adaa98cb6d8da3a4d573cd799ddd11051">CCoins</a>
+, <a class="el" href="class_c_compact_size.html#a17a395bf9db7b199f295e962c29e6bb4">CCompactSize</a>
 , <a class="el" href="struct_c_ext_key.html#ac91216c4c37bd7190a88c2452e8b1735">CExtKey</a>
 , <a class="el" href="struct_c_ext_pub_key.html#a929ebe0d428cc3e8d9827568e65038ac">CExtPubKey</a>
 , <a class="el" href="class_c_flat_data.html#a3da79327bf2937113de502182ee227b9">CFlatData</a>
+, <a class="el" href="class_coin.html#a4fb99ed23c5dbfb3cc86f1086f0c3c18">Coin</a>
 , <a class="el" href="class_c_pub_key.html#a1cfd8e3c711f5298eecdacd5979f6e6c">CPubKey</a>
 , <a class="el" href="class_c_script_compressor.html#a016fa6e3d2735d95fcf773271da073d5">CScriptCompressor</a>
 , <a class="el" href="struct_c_timestamp_index_iterator_key.html#a3f47d6a35bfe323058960efdb0bf4f26">CTimestampIndexIteratorKey</a>
 , <a class="el" href="struct_c_timestamp_index_key.html#aeafbd5739644dd4fdbc5d608cca05bd3">CTimestampIndexKey</a>
-, <a class="el" href="class_c_tx_in_undo.html#a0a2b82f03edad7ad85a66e63e4552af9">CTxInUndo</a>
+, <a class="el" href="class_c_tx_undo.html#a3a55807f44a1f54d244fa4ee852734bd">CTxUndo</a>
 , <a class="el" href="class_c_var_int.html#aba87b78443378273b4f335dcd858c29c">CVarInt&lt; I &gt;</a>
 , <a class="el" href="class_limited_string.html#a21ec9b742da8f8ff7b9a8b89131f943b">LimitedString&lt; Limit &gt;</a>
+, <a class="el" href="class_tx_in_undo_deserializer.html#a9af198d62fbb5ac4dc39ab011210138e">TxInUndoDeserializer</a>
 </li>
 <li>unsubscribeFromCoreSignals()
 : <a class="el" href="class_bitcoin_g_u_i.html#a55ff4caf70fce49cd870aca22963404e">BitcoinGUI</a>
@@ -284,6 +286,7 @@ $(document).ready(function(){initNavTree('functions_func_u.html','');});
 , <a class="el" href="class_c_masternode_man.html#a6625124a853d695c11d05218abad2910">CMasternodeMan</a>
 , <a class="el" href="class_c_masternode_payments.html#a83580d8ca468c726d7de57c5bb832b24">CMasternodePayments</a>
 , <a class="el" href="class_c_masternode_sync.html#a95559186ad41a82fe42fd2cfbffca104">CMasternodeSync</a>
+, <a class="el" href="class_c_private_send.html#a1646aca7b3bd38dad47e7a4cf2d2c6d9">CPrivateSend</a>
 , <a class="el" href="class_c_private_send_client.html#a7aa728cc4f11d0986229e35d33486c2e">CPrivateSendClient</a>
 , <a class="el" href="class_c_validation_interface.html#a794911828f9350d82bc1941ba82e7463">CValidationInterface</a>
 , <a class="el" href="class_c_z_m_q_notification_interface.html#a01b29e896bbc4c57af8aa53c48e74367">CZMQNotificationInterface</a>
@@ -479,6 +482,9 @@ $(document).ready(function(){initNavTree('functions_func_u.html','');});
 <li>updateWatchOnlyLabels()
 : <a class="el" href="class_overview_page.html#a55febf9c3251e68a45d258a3e81625ef">OverviewPage</a>
 </li>
+<li>Upgrade()
+: <a class="el" href="class_c_coins_view_d_b.html#a72c1d718a15df89eadab97ce3b34fa56">CCoinsViewDB</a>
+</li>
 <li>UseDescendantScore()
 : <a class="el" href="class_compare_tx_mem_pool_entry_by_descendant_score.html#a257b62cdc4e45c18b2fe092e471a3f50">CompareTxMemPoolEntryByDescendantScore</a>
 </li>
@@ -497,7 +503,7 @@ $(document).ready(function(){initNavTree('functions_func_u.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

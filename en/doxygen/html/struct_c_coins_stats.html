@@ -127,8 +127,6 @@ $(document).ready(function(){initNavTree('struct_c_coins_stats.html','');});
 <div class="title">CCoinsStats Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="coins_8h_source.html">coins.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for CCoinsStats:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -153,16 +151,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0b04da159443c350e9b9e8a39c6a82db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02612be210ba7c628d04ddedd83b9ff0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_coins_stats.html#a02612be210ba7c628d04ddedd83b9ff0">nTransactionOutputs</a></td></tr>
 <tr class="separator:a02612be210ba7c628d04ddedd83b9ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4302ffc2f8be6e62dbc5655f77e4202"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_coins_stats.html#ac4302ffc2f8be6e62dbc5655f77e4202">nSerializedSize</a></td></tr>
-<tr class="separator:ac4302ffc2f8be6e62dbc5655f77e4202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ce8e745d7a62e4ae41f943333c81d7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classuint256.html">uint256</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_coins_stats.html#a0ce8e745d7a62e4ae41f943333c81d7c">hashSerialized</a></td></tr>
 <tr class="separator:a0ce8e745d7a62e4ae41f943333c81d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6119c0cd76d8031d14e261a903f2abfd"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_coins_stats.html#a6119c0cd76d8031d14e261a903f2abfd">nDiskSize</a></td></tr>
+<tr class="separator:a6119c0cd76d8031d14e261a903f2abfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97c76344c650e55377d5f9246a906cc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_coins_stats.html#a97c76344c650e55377d5f9246a906cc4">nTotalAmount</a></td></tr>
 <tr class="separator:a97c76344c650e55377d5f9246a906cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00300">300</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00557">557</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3f68ce1f423e40599c8d3c4bf2d97aa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f68ce1f423e40599c8d3c4bf2d97aa9">&#9670;&nbsp;</a></span>CCoinsStats()</h2>
@@ -187,7 +185,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00310">310</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00567">567</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
 </div>
 </div>
@@ -204,9 +202,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00303">303</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00560">560</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00553">gettxoutsetinfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00587">GetUTXOStats()</a>.</p>
 
 </div>
 </div>
@@ -222,9 +220,27 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00307">307</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00563">563</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00553">gettxoutsetinfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00587">GetUTXOStats()</a>.</p>
+
+</div>
+</div>
+<a id="a6119c0cd76d8031d14e261a903f2abfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6119c0cd76d8031d14e261a903f2abfd">&#9670;&nbsp;</a></span>nDiskSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t CCoinsStats::nDiskSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00564">564</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00587">GetUTXOStats()</a>.</p>
 
 </div>
 </div>
@@ -240,27 +256,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00302">302</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00559">559</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00553">gettxoutsetinfo()</a>.</p>
-
-</div>
-</div>
-<a id="ac4302ffc2f8be6e62dbc5655f77e4202"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4302ffc2f8be6e62dbc5655f77e4202">&#9670;&nbsp;</a></span>nSerializedSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t CCoinsStats::nSerializedSize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00306">306</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00553">gettxoutsetinfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00587">GetUTXOStats()</a>.</p>
 
 </div>
 </div>
@@ -276,9 +274,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00308">308</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00565">565</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00553">gettxoutsetinfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00570">ApplyStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>.</p>
 
 </div>
 </div>
@@ -294,9 +292,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00305">305</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00562">562</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00553">gettxoutsetinfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00570">ApplyStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>.</p>
 
 </div>
 </div>
@@ -312,14 +310,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00304">304</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00561">561</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00553">gettxoutsetinfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00570">ApplyStats()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/<a class="el" href="coins_8h_source.html">coins.h</a></li>
+<li>src/rpc/<a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -328,7 +326,7 @@ Public Attributes</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="struct_c_coins_stats.html">CCoinsStats</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:23 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:30 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

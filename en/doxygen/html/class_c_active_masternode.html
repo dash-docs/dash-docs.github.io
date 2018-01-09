@@ -144,8 +144,7 @@ $(document).ready(function(){initNavTree('class_c_active_masternode.html','');})
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a5fe600c379008561204e609316427bb4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_active_masternode.html#a5fe600c379008561204e609316427bb4">masternode_type_enum_t</a> { <a class="el" href="class_c_active_masternode.html#a5fe600c379008561204e609316427bb4ab4ebeeb59995d51e3e2496f6641368c1">MASTERNODE_UNKNOWN</a> = 0, 
-<a class="el" href="class_c_active_masternode.html#a5fe600c379008561204e609316427bb4a6900162a70bc2be4012ec755701ec373">MASTERNODE_REMOTE</a> = 1, 
-<a class="el" href="class_c_active_masternode.html#a5fe600c379008561204e609316427bb4a481e09274e6ffc3c0d4ebd06e805ad30">MASTERNODE_LOCAL</a> = 2
+<a class="el" href="class_c_active_masternode.html#a5fe600c379008561204e609316427bb4a6900162a70bc2be4012ec755701ec373">MASTERNODE_REMOTE</a> = 1
  }</td></tr>
 <tr class="separator:a5fe600c379008561204e609316427bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -189,8 +188,6 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a74c897543703253e78e74704550d8bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefd004895e9c2ddff987a5d1b027b134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_active_masternode.html#aefd004895e9c2ddff987a5d1b027b134">ManageStateRemote</a> ()</td></tr>
 <tr class="separator:aefd004895e9c2ddff987a5d1b027b134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b4e22d77d7a2670328910848ef498b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_active_masternode.html#a6b4e22d77d7a2670328910848ef498b8">ManageStateLocal</a> (<a class="el" href="class_c_connman.html">CConnman</a> &amp;connman)</td></tr>
-<tr class="separator:a6b4e22d77d7a2670328910848ef498b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -207,7 +204,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00023">23</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00024">24</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5fe600c379008561204e609316427bb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fe600c379008561204e609316427bb4">&#9670;&nbsp;</a></span>masternode_type_enum_t</h2>
@@ -223,10 +220,9 @@ Private Attributes</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5fe600c379008561204e609316427bb4ab4ebeeb59995d51e3e2496f6641368c1"></a>MASTERNODE_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5fe600c379008561204e609316427bb4a6900162a70bc2be4012ec755701ec373"></a>MASTERNODE_REMOTE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5fe600c379008561204e609316427bb4a481e09274e6ffc3c0d4ebd06e805ad30"></a>MASTERNODE_LOCAL&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00026">26</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00027">27</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
 </div>
 </div>
@@ -274,17 +270,17 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00052">52</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00045">45</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00014">ACTIVE_MASTERNODE_INITIAL</a>, <a class="el" href="activemasternode_8h_source.html#l00016">ACTIVE_MASTERNODE_INPUT_TOO_NEW</a>, <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="activemasternode_8h_source.html#l00015">ACTIVE_MASTERNODE_SYNC_IN_PROCESS</a>, and <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>.</p>
+<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00015">ACTIVE_MASTERNODE_INITIAL</a>, <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_INPUT_TOO_NEW</a>, <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00019">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="activemasternode_8h_source.html#l00016">ACTIVE_MASTERNODE_SYNC_IN_PROCESS</a>, and <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_ae213eaf967846069315726ea30120948_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_ae213eaf967846069315726ea30120948_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -305,11 +301,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00064">64</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00057">57</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00014">ACTIVE_MASTERNODE_INITIAL</a>, <a class="el" href="activemasternode_8h_source.html#l00016">ACTIVE_MASTERNODE_INPUT_TOO_NEW</a>, <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="activemasternode_8h_source.html#l00015">ACTIVE_MASTERNODE_SYNC_IN_PROCESS</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, and <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>.</p>
+<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00015">ACTIVE_MASTERNODE_INITIAL</a>, <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_INPUT_TOO_NEW</a>, <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00019">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="activemasternode_8h_source.html#l00016">ACTIVE_MASTERNODE_SYNC_IN_PROCESS</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, and <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, and <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, and <a class="el" href="rpc_2masternode_8cpp_source.html#l00109">masternode()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -323,7 +319,7 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_affe6a1e6ba472a5d368072411e332476_icgraph.svg" width="100%" height="573"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_affe6a1e6ba472a5d368072411e332476_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -344,11 +340,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00076">76</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00069">69</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00036">eType</a>, <a class="el" href="activemasternode_8h_source.html#l00029">MASTERNODE_LOCAL</a>, <a class="el" href="activemasternode_8h_source.html#l00028">MASTERNODE_REMOTE</a>, and <a class="el" href="activemasternode_8h_source.html#l00027">MASTERNODE_UNKNOWN</a>.</p>
+<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00036">eType</a>, and <a class="el" href="activemasternode_8h_source.html#l00029">MASTERNODE_REMOTE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -378,11 +374,11 @@ Private Attributes</h2></td></tr>
 
 <p>Manage state of active Masternode. </p>
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00016">16</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00014">14</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00014">ACTIVE_MASTERNODE_INITIAL</a>, <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="activemasternode_8h_source.html#l00015">ACTIVE_MASTERNODE_SYNC_IN_PROCESS</a>, <a class="el" href="activemasternode_8h_source.html#l00036">eType</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="activemasternode_8cpp_source.html#l00052">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00076">GetTypeString()</a>, <a class="el" href="masternode-sync_8h_source.html#l00060">CMasternodeSync::IsBlockchainSynced()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, <a class="el" href="activemasternode_8h_source.html#l00029">MASTERNODE_LOCAL</a>, <a class="el" href="activemasternode_8h_source.html#l00028">MASTERNODE_REMOTE</a>, <a class="el" href="activemasternode_8h_source.html#l00027">MASTERNODE_UNKNOWN</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00017">masternodeSync</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="chainparamsbase_8h_source.html#l00021">CBaseChainParams::REGTEST</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>.</p>
+<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00015">ACTIVE_MASTERNODE_INITIAL</a>, <a class="el" href="activemasternode_8h_source.html#l00016">ACTIVE_MASTERNODE_SYNC_IN_PROCESS</a>, <a class="el" href="activemasternode_8h_source.html#l00036">eType</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="activemasternode_8cpp_source.html#l00045">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00069">GetTypeString()</a>, <a class="el" href="masternode-sync_8h_source.html#l00060">CMasternodeSync::IsBlockchainSynced()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, <a class="el" href="activemasternode_8h_source.html#l00029">MASTERNODE_REMOTE</a>, <a class="el" href="activemasternode_8h_source.html#l00028">MASTERNODE_UNKNOWN</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00018">masternodeSync</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="chainparamsbase_8h_source.html#l00021">CBaseChainParams::REGTEST</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="masternodeman_8cpp_source.html#l01370">CMasternodeMan::CheckMnbAndUpdateMasternodeList()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00057">CMasternodeSync::SwitchToNextAsset()</a>, <a class="el" href="privatesend_8cpp_source.html#l00421">ThreadCheckPrivateSend()</a>, and <a class="el" href="masternode_8cpp_source.html#l00053">CMasternode::UpdateFromNewBroadcast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="masternodeman_8cpp_source.html#l01351">CMasternodeMan::CheckMnbAndUpdateMasternodeList()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00058">CMasternodeSync::SwitchToNextAsset()</a>, <a class="el" href="privatesend_8cpp_source.html#l00439">ThreadCheckPrivateSend()</a>, and <a class="el" href="masternode_8cpp_source.html#l00058">CMasternode::UpdateFromNewBroadcast()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -426,11 +422,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00141">141</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00128">128</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="net_8h_source.html#l00688">CNode::addr</a>, <a class="el" href="net_8h_source.html#l00160">CConnman::AllNodes</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="net_8cpp_source.html#l00347">CConnman::ConnectNode()</a>, <a class="el" href="activemasternode_8h_source.html#l00036">eType</a>, <a class="el" href="net_8cpp_source.html#l00077">fListen</a>, <a class="el" href="net_8h_source.html#l00205">CConnman::ForEachNodeContinueIf()</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="wallet_8cpp_source.html#l02139">CWallet::GetBalance()</a>, <a class="el" href="chainparams_8h_source.html#l00058">CChainParams::GetDefaultPort()</a>, <a class="el" href="net_8cpp_source.html#l00106">GetLocal()</a>, <a class="el" href="wallet_8cpp_source.html#l02987">CWallet::GetMasternodeOutpointAndKeys()</a>, <a class="el" href="netaddress_8cpp_source.html#l00495">CService::GetPort()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00052">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00076">GetTypeString()</a>, <a class="el" href="netaddress_8cpp_source.html#l00078">CNetAddr::IsIPv4()</a>, <a class="el" href="crypter_8h_source.html#l00166">CCryptoKeyStore::IsLocked()</a>, <a class="el" href="masternode_8cpp_source.html#l00273">CMasternode::IsValidNetAddr()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="chainparamsbase_8h_source.html#l00019">CBaseChainParams::MAIN</a>, <a class="el" href="activemasternode_8h_source.html#l00029">MASTERNODE_LOCAL</a>, <a class="el" href="activemasternode_8h_source.html#l00028">MASTERNODE_REMOTE</a>, <a class="el" href="protocol_8h_source.html#l00259">NODE_NETWORK</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="activemasternode_8h_source.html#l00053">outpoint</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="activemasternode_8h_source.html#l00054">service</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="netaddress_8cpp_source.html#l00568">CService::ToString()</a>.</p>
+<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="net_8h_source.html#l00688">CNode::addr</a>, <a class="el" href="net_8h_source.html#l00160">CConnman::AllNodes</a>, <a class="el" href="net_8cpp_source.html#l00346">CConnman::ConnectNode()</a>, <a class="el" href="activemasternode_8h_source.html#l00036">eType</a>, <a class="el" href="net_8cpp_source.html#l00076">fListen</a>, <a class="el" href="net_8h_source.html#l00205">CConnman::ForEachNodeContinueIf()</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="chainparams_8h_source.html#l00058">CChainParams::GetDefaultPort()</a>, <a class="el" href="net_8cpp_source.html#l00105">GetLocal()</a>, <a class="el" href="netaddress_8cpp_source.html#l00495">CService::GetPort()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00045">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00069">GetTypeString()</a>, <a class="el" href="netaddress_8cpp_source.html#l00078">CNetAddr::IsIPv4()</a>, <a class="el" href="masternode_8cpp_source.html#l00261">CMasternode::IsValidNetAddr()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="chainparamsbase_8h_source.html#l00019">CBaseChainParams::MAIN</a>, <a class="el" href="activemasternode_8h_source.html#l00029">MASTERNODE_REMOTE</a>, <a class="el" href="protocol_8h_source.html#l00259">NODE_NETWORK</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="activemasternode_8h_source.html#l00054">service</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="netaddress_8cpp_source.html#l00568">CService::ToString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -445,54 +441,6 @@ Private Attributes</h2></td></tr>
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_a74c897543703253e78e74704550d8bb8_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a6b4e22d77d7a2670328910848ef498b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b4e22d77d7a2670328910848ef498b8">&#9670;&nbsp;</a></span>ManageStateLocal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CActiveMasternode::ManageStateLocal </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_c_connman.html">CConnman</a> &amp;&#160;</td>
-          <td class="paramname"><em>connman</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00277">277</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="activemasternode_8h_source.html#l00016">ACTIVE_MASTERNODE_INPUT_TOO_NEW</a>, <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="masternode_8cpp_source.html#l00397">CMasternodeBroadcast::Create()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="wallet_8h_source.html#l00672">CWallet::cs_wallet</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="chainparams_8h_source.html#l00055">CChainParams::GetConsensus()</a>, <a class="el" href="wallet_8cpp_source.html#l02987">CWallet::GetMasternodeOutpointAndKeys()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00052">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00076">GetTypeString()</a>, <a class="el" href="validation_8cpp_source.html#l00461">GetUTXOConfirmations()</a>, <a class="el" href="validation_8cpp_source.html#l00454">GetUTXOHeight()</a>, <a class="el" href="activemasternode_8h_source.html#l00050">keyMasternode</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="wallet_8cpp_source.html#l04193">CWallet::LockCoin()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="masternodeman_8cpp_source.html#l00017">mnodeman</a>, <a class="el" href="masternode_8h_source.html#l00159">CMasternode::nCollateralMinConfBlockHash</a>, <a class="el" href="params_8h_source.html#l00058">Consensus::Params::nMasternodeMinimumConfirmations</a>, <a class="el" href="masternodeman_8cpp_source.html#l01575">CMasternodeMan::NotifyMasternodeUpdates()</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="activemasternode_8h_source.html#l00053">outpoint</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="activemasternode_8h_source.html#l00049">pubKeyMasternode</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="masternode_8cpp_source.html#l00665">CMasternodeBroadcast::Relay()</a>, <a class="el" href="activemasternode_8h_source.html#l00054">service</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>, and <a class="el" href="masternodeman_8cpp_source.html#l01348">CMasternodeMan::UpdateMasternodeList()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_a6b4e22d77d7a2670328910848ef498b8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_a6b4e22d77d7a2670328910848ef498b8_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -521,24 +469,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00236">236</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00198">198</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="masternodeman_8cpp_source.html#l01521">CMasternodeMan::CheckMasternode()</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="pubkey_8h_source.html#l00144">CPubKey::GetID()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00440">CMasternodeMan::GetMasternodeInfo()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00052">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00076">GetTypeString()</a>, <a class="el" href="masternode_8h_source.html#l00233">CMasternode::IsValidStateForAutoStart()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="masternodeman_8cpp_source.html#l00017">mnodeman</a>, <a class="el" href="masternode_8h_source.html#l00110">masternode_info_t::nActiveState</a>, <a class="el" href="masternode_8h_source.html#l00111">masternode_info_t::nProtocolVersion</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="activemasternode_8h_source.html#l00053">outpoint</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="activemasternode_8h_source.html#l00049">pubKeyMasternode</a>, <a class="el" href="activemasternode_8h_source.html#l00054">service</a>, <a class="el" href="masternode_8cpp_source.html#l00294">CMasternode::StateToString()</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="uint256_8cpp_source.html#l00065">base_blob&lt; BITS &gt;::ToString()</a>, and <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>.</p>
+<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00019">ACTIVE_MASTERNODE_STARTED</a>, <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="masternodeman_8cpp_source.html#l01502">CMasternodeMan::CheckMasternode()</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="pubkey_8h_source.html#l00144">CPubKey::GetID()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00443">CMasternodeMan::GetMasternodeInfo()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00045">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00069">GetTypeString()</a>, <a class="el" href="masternode_8h_source.html#l00233">CMasternode::IsValidStateForAutoStart()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="masternodeman_8cpp_source.html#l00020">mnodeman</a>, <a class="el" href="masternode_8h_source.html#l00110">masternode_info_t::nActiveState</a>, <a class="el" href="masternode_8h_source.html#l00111">masternode_info_t::nProtocolVersion</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="activemasternode_8h_source.html#l00053">outpoint</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="activemasternode_8h_source.html#l00049">pubKeyMasternode</a>, <a class="el" href="activemasternode_8h_source.html#l00054">service</a>, <a class="el" href="masternode_8cpp_source.html#l00282">CMasternode::StateToString()</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="uint256_8cpp_source.html#l00065">base_blob&lt; BITS &gt;::ToString()</a>, and <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_aefd004895e9c2ddff987a5d1b027b134_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_aefd004895e9c2ddff987a5d1b027b134_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -571,24 +519,24 @@ Private Attributes</h2></td></tr>
 
 <p>Ping Masternode. </p>
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00096">96</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00083">83</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00017">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="masternode_8h_source.html#l00039">CMasternodePing::fSentinelIsCurrent</a>, <a class="el" href="timedata_8cpp_source.html#l00033">GetAdjustedTime()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00052">GetStateString()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00476">CMasternodeMan::Has()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01532">CMasternodeMan::IsMasternodePingedWithin()</a>, <a class="el" href="activemasternode_8h_source.html#l00050">keyMasternode</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="masternode_8h_source.html#l00018">MASTERNODE_MIN_MNP_SECONDS</a>, <a class="el" href="masternode_8h_source.html#l00020">MASTERNODE_WATCHDOG_MAX_SECONDS</a>, <a class="el" href="masternodeman_8cpp_source.html#l00017">mnodeman</a>, <a class="el" href="activemasternode_8h_source.html#l00044">nSentinelPingTime</a>, <a class="el" href="masternode_8h_source.html#l00041">CMasternodePing::nSentinelVersion</a>, <a class="el" href="activemasternode_8h_source.html#l00045">nSentinelVersion</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="activemasternode_8h_source.html#l00053">outpoint</a>, <a class="el" href="activemasternode_8h_source.html#l00049">pubKeyMasternode</a>, <a class="el" href="masternode_8cpp_source.html#l00824">CMasternodePing::Relay()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01539">CMasternodeMan::SetMasternodeLastPing()</a>, <a class="el" href="masternode_8cpp_source.html#l00681">CMasternodePing::Sign()</a>, <a class="el" href="masternode_8h_source.html#l00037">CMasternodePing::sigTime</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, and <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>.</p>
+<p class="reference">References <a class="el" href="activemasternode_8h_source.html#l00018">ACTIVE_MASTERNODE_NOT_CAPABLE</a>, <a class="el" href="activemasternode_8h_source.html#l00038">fPingerEnabled</a>, <a class="el" href="masternode_8h_source.html#l00039">CMasternodePing::fSentinelIsCurrent</a>, <a class="el" href="timedata_8cpp_source.html#l00033">GetAdjustedTime()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00045">GetStateString()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00479">CMasternodeMan::Has()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01513">CMasternodeMan::IsMasternodePingedWithin()</a>, <a class="el" href="activemasternode_8h_source.html#l00050">keyMasternode</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="masternode_8h_source.html#l00018">MASTERNODE_MIN_MNP_SECONDS</a>, <a class="el" href="masternode_8h_source.html#l00020">MASTERNODE_WATCHDOG_MAX_SECONDS</a>, <a class="el" href="masternodeman_8cpp_source.html#l00020">mnodeman</a>, <a class="el" href="activemasternode_8h_source.html#l00044">nSentinelPingTime</a>, <a class="el" href="masternode_8h_source.html#l00041">CMasternodePing::nSentinelVersion</a>, <a class="el" href="activemasternode_8h_source.html#l00045">nSentinelVersion</a>, <a class="el" href="activemasternode_8h_source.html#l00056">nState</a>, <a class="el" href="activemasternode_8h_source.html#l00053">outpoint</a>, <a class="el" href="activemasternode_8h_source.html#l00049">pubKeyMasternode</a>, <a class="el" href="masternode_8cpp_source.html#l00820">CMasternodePing::Relay()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01520">CMasternodeMan::SetMasternodeLastPing()</a>, <a class="el" href="masternode_8cpp_source.html#l00677">CMasternodePing::Sign()</a>, <a class="el" href="masternode_8h_source.html#l00037">CMasternodePing::sigTime</a>, <a class="el" href="activemasternode_8h_source.html#l00057">strNotCapableReason</a>, and <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>.</p>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_a4307b0f6c795d2ed80993824d458aca0_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_a4307b0f6c795d2ed80993824d458aca0_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -611,24 +559,24 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00133">133</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00120">120</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="timedata_8cpp_source.html#l00033">GetAdjustedTime()</a>, <a class="el" href="activemasternode_8h_source.html#l00044">nSentinelPingTime</a>, and <a class="el" href="activemasternode_8h_source.html#l00045">nSentinelVersion</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00836">sentinelping()</a>.</p>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00833">sentinelping()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_a5dadcc0775658c6bcf418d73f5a61cf7_cgraph.svg" width="483" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_c_active_masternode_a5dadcc0775658c6bcf418d73f5a61cf7_icgraph.svg" width="295" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -682,7 +630,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00036">36</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00076">GetTypeString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00069">GetTypeString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>.</p>
 
 </div>
 </div>
@@ -708,7 +656,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00038">38</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>.</p>
 
 </div>
 </div>
@@ -726,7 +674,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00050">50</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00025">gobject()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01125">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01085">CMasternodeMan::SendVerifyReply()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00416">CMasternodePaymentVote::Sign()</a>, <a class="el" href="instantx_8cpp_source.html#l01067">CTxLockVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00048">CDarksendQueue::Sign()</a>, and <a class="el" href="privatesend_8cpp_source.html#l00086">CDarksendBroadcastTx::Sign()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00028">gobject()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01103">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01063">CMasternodeMan::SendVerifyReply()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00418">CMasternodePaymentVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00038">CDarksendQueue::Sign()</a>, <a class="el" href="instantx_8cpp_source.html#l01065">CTxLockVote::Sign()</a>, and <a class="el" href="privatesend_8cpp_source.html#l00076">CDarksendBroadcastTx::Sign()</a>.</p>
 
 </div>
 </div>
@@ -752,7 +700,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00044">44</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00133">UpdateSentinelPing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00120">UpdateSentinelPing()</a>.</p>
 
 </div>
 </div>
@@ -778,7 +726,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00045">45</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00133">UpdateSentinelPing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00120">UpdateSentinelPing()</a>.</p>
 
 </div>
 </div>
@@ -796,7 +744,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00056">56</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00052">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00016">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00045">GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00014">ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>.</p>
 
 </div>
 </div>
@@ -814,7 +762,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00053">53</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00531">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="masternode_8cpp_source.html#l00543">CMasternodeBroadcast::CheckOutpoint()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00331">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00720">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00927">CMasternodeMan::DoFullVerificationStep()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00025">gobject()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00715">CMasternodePayments::ProcessBlock()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00018">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01125">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>, and <a class="el" href="instantx_8cpp_source.html#l00178">CInstantSend::Vote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00520">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="masternode_8cpp_source.html#l00533">CMasternodeBroadcast::CheckOutpoint()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00332">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00708">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00905">CMasternodeMan::DoFullVerificationStep()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00028">gobject()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00109">masternode()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00714">CMasternodePayments::ProcessBlock()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00019">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01103">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>, and <a class="el" href="instantx_8cpp_source.html#l00185">CInstantSend::Vote()</a>.</p>
 
 </div>
 </div>
@@ -832,7 +780,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00049">49</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="masternode_8cpp_source.html#l00139">CMasternode::Check()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01370">CMasternodeMan::CheckMnbAndUpdateMasternodeList()</a>, <a class="el" href="masternode_8cpp_source.html#l00543">CMasternodeBroadcast::CheckOutpoint()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00025">gobject()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01125">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01085">CMasternodeMan::SendVerifyReply()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00416">CMasternodePaymentVote::Sign()</a>, <a class="el" href="instantx_8cpp_source.html#l01067">CTxLockVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00048">CDarksendQueue::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00086">CDarksendBroadcastTx::Sign()</a>, <a class="el" href="masternode_8cpp_source.html#l00491">CMasternodeBroadcast::Update()</a>, and <a class="el" href="masternode_8cpp_source.html#l00053">CMasternode::UpdateFromNewBroadcast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="masternode_8cpp_source.html#l00127">CMasternode::Check()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01351">CMasternodeMan::CheckMnbAndUpdateMasternodeList()</a>, <a class="el" href="masternode_8cpp_source.html#l00533">CMasternodeBroadcast::CheckOutpoint()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00028">gobject()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01103">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01063">CMasternodeMan::SendVerifyReply()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00418">CMasternodePaymentVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00038">CDarksendQueue::Sign()</a>, <a class="el" href="instantx_8cpp_source.html#l01065">CTxLockVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00076">CDarksendBroadcastTx::Sign()</a>, <a class="el" href="masternode_8cpp_source.html#l00481">CMasternodeBroadcast::Update()</a>, and <a class="el" href="masternode_8cpp_source.html#l00058">CMasternode::UpdateFromNewBroadcast()</a>.</p>
 
 </div>
 </div>
@@ -850,7 +798,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00054">54</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>, and <a class="el" href="masternodeman_8cpp_source.html#l01085">CMasternodeMan::SendVerifyReply()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00109">masternode()</a>, and <a class="el" href="masternodeman_8cpp_source.html#l01063">CMasternodeMan::SendVerifyReply()</a>.</p>
 
 </div>
 </div>
@@ -868,7 +816,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00057">57</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00064">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00096">SendMasternodePing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00057">GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00083">SendMasternodePing()</a>.</p>
 
 </div>
 </div>
@@ -883,7 +831,7 @@ Private Attributes</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_active_masternode.html">CActiveMasternode</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:23 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:30 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

@@ -9,479 +9,479 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1214)">
 <title>importprivkey</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-1214 676,-1214 676,4 -4,4"/>
-<!-- Node1224 -->
-<g id="node1" class="node"><title>Node1224</title>
+<!-- Node1220 -->
+<g id="node1" class="node"><title>Node1220</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-342.5 0,-361.5 75,-361.5 75,-342.5 0,-342.5"/>
 <text text-anchor="middle" x="37.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">importprivkey</text>
 </g>
-<!-- Node1225 -->
-<g id="node2" class="node"><title>Node1225</title>
+<!-- Node1221 -->
+<g id="node2" class="node"><title>Node1221</title>
 <g id="a_node2"><a xlink:href="group__map_wallet.html#ga3240da36cd717146296969227a3e0bd5" target="_top" xlink:title="Adds a key to the store, and saves it to disk. ">
 <polygon fill="white" stroke="black" points="137,-608.5 137,-627.5 264,-627.5 264,-608.5 137,-608.5"/>
 <text text-anchor="middle" x="200.5" y="-615.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::AddKeyPubKey</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1225 -->
-<g id="edge1" class="edge"><title>Node1224&#45;&gt;Node1225</title>
+<!-- Node1220&#45;&gt;Node1221 -->
+<g id="edge1" class="edge"><title>Node1220&#45;&gt;Node1221</title>
 <path fill="none" stroke="midnightblue" d="M43.3186,-361.513C54.5679,-383.565 83.6824,-439.747 111,-485 136.404,-527.083 169.051,-574.644 186.736,-599.927"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="183.922,-602.011 192.534,-608.183 189.651,-597.988 183.922,-602.011"/>
 </g>
-<!-- Node1229 -->
-<g id="node7" class="node"><title>Node1229</title>
+<!-- Node1225 -->
+<g id="node7" class="node"><title>Node1225</title>
 <g id="a_node7"><a xlink:href="class_c_pub_key.html#a2675f7e6f72eff68e7a5227289feb021" target="_top" xlink:title="Get the KeyID of this public key (hash of its serialization) ">
 <polygon fill="white" stroke="black" points="365,-684.5 365,-703.5 456,-703.5 456,-684.5 365,-684.5"/>
 <text text-anchor="middle" x="410.5" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::GetID</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1229 -->
-<g id="edge25" class="edge"><title>Node1224&#45;&gt;Node1229</title>
+<!-- Node1220&#45;&gt;Node1225 -->
+<g id="edge25" class="edge"><title>Node1220&#45;&gt;Node1225</title>
 <path fill="none" stroke="midnightblue" d="M39.5921,-361.793C44.8667,-407.31 69.1778,-597.631 111,-637 176.729,-698.873 287.935,-703.502 354.468,-699.767"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.995,-703.24 364.749,-699.103 354.544,-696.255 354.995,-703.24"/>
 </g>
-<!-- Node1291 -->
-<g id="node14" class="node"><title>Node1291</title>
+<!-- Node1287 -->
+<g id="node14" class="node"><title>Node1287</title>
 <g id="a_node14"><a xlink:href="rpcdump_8cpp.html#ac9a5dd7d31080f8d2551dce06d3be0e1" target="_top" xlink:title="EnsureWalletIsAvailable">
 <polygon fill="white" stroke="black" points="139,-1190.5 139,-1209.5 262,-1209.5 262,-1190.5 139,-1190.5"/>
 <text text-anchor="middle" x="200.5" y="-1197.5" font-family="Helvetica,sans-Serif" font-size="10.00">EnsureWalletIsAvailable</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1291 -->
-<g id="edge16" class="edge"><title>Node1224&#45;&gt;Node1291</title>
+<!-- Node1220&#45;&gt;Node1287 -->
+<g id="edge16" class="edge"><title>Node1220&#45;&gt;Node1287</title>
 <path fill="none" stroke="midnightblue" d="M38.6881,-361.548C40.495,-449.065 55.9281,-1110.2 111,-1176 115.917,-1181.88 122.113,-1186.39 128.933,-1189.85"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="127.987,-1193.25 138.559,-1193.94 130.723,-1186.8 127.987,-1193.25"/>
 </g>
-<!-- Node1292 -->
-<g id="node15" class="node"><title>Node1292</title>
+<!-- Node1288 -->
+<g id="node15" class="node"><title>Node1288</title>
 <g id="a_node15"><a xlink:href="rpc_2protocol_8cpp.html#a41a2234c99900304357a44796b2259d5" target="_top" xlink:title="JSONRPCError">
 <polygon fill="white" stroke="black" points="367.5,-1190.5 367.5,-1209.5 453.5,-1209.5 453.5,-1190.5 367.5,-1190.5"/>
 <text text-anchor="middle" x="410.5" y="-1197.5" font-family="Helvetica,sans-Serif" font-size="10.00">JSONRPCError</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1292 -->
-<g id="edge41" class="edge"><title>Node1224&#45;&gt;Node1292</title>
+<!-- Node1220&#45;&gt;Node1288 -->
+<g id="edge41" class="edge"><title>Node1220&#45;&gt;Node1288</title>
 <path fill="none" stroke="midnightblue" d="M38.6956,-361.73C40.5202,-448.122 55.7545,-1082.1 111,-1143 119.263,-1152.11 273.866,-1178.19 357.234,-1191.69"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="356.848,-1195.17 367.278,-1193.31 357.964,-1188.26 356.848,-1195.17"/>
 </g>
-<!-- Node1311 -->
-<g id="node18" class="node"><title>Node1311</title>
+<!-- Node1307 -->
+<g id="node18" class="node"><title>Node1307</title>
 <g id="a_node18"><a xlink:href="rpcdump_8cpp.html#a8f837f6d506b9719cef93188db00fd3c" target="_top" xlink:title="EnsureWalletIsUnlocked">
 <polygon fill="white" stroke="black" points="138,-1114.5 138,-1133.5 263,-1133.5 263,-1114.5 138,-1114.5"/>
 <text text-anchor="middle" x="200.5" y="-1121.5" font-family="Helvetica,sans-Serif" font-size="10.00">EnsureWalletIsUnlocked</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1311 -->
-<g id="edge20" class="edge"><title>Node1224&#45;&gt;Node1311</title>
+<!-- Node1220&#45;&gt;Node1307 -->
+<g id="edge20" class="edge"><title>Node1220&#45;&gt;Node1307</title>
 <path fill="none" stroke="midnightblue" d="M38.5174,-361.587C38.856,-418.113 43.8976,-713.196 111,-941 129.706,-1004.51 168.52,-1073.21 187.927,-1105.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="185.083,-1107.45 193.283,-1114.16 191.057,-1103.8 185.083,-1107.45"/>
 </g>
-<!-- Node1312 -->
-<g id="node19" class="node"><title>Node1312</title>
+<!-- Node1308 -->
+<g id="node19" class="node"><title>Node1308</title>
 <g id="a_node19"><a xlink:href="class_c_chain.html#a0af94042e68f7dbc86260d3a54f08a3f" target="_top" xlink:title="Returns the index entry for the genesis block of this chain, or NULL if none. ">
 <polygon fill="white" stroke="black" points="154.5,-380.5 154.5,-399.5 246.5,-399.5 246.5,-380.5 154.5,-380.5"/>
 <text text-anchor="middle" x="200.5" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Genesis</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1312 -->
-<g id="edge23" class="edge"><title>Node1224&#45;&gt;Node1312</title>
+<!-- Node1220&#45;&gt;Node1308 -->
+<g id="edge23" class="edge"><title>Node1220&#45;&gt;Node1308</title>
 <path fill="none" stroke="midnightblue" d="M73.8208,-361.596C85.6156,-364.709 98.8487,-368.105 111,-371 121.768,-373.565 133.31,-376.158 144.385,-378.567"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="143.877,-382.038 154.39,-380.723 145.351,-375.195 143.877,-382.038"/>
 </g>
-<!-- Node1313 -->
-<g id="node20" class="node"><title>Node1313</title>
+<!-- Node1309 -->
+<g id="node20" class="node"><title>Node1309</title>
 <g id="a_node20"><a xlink:href="class_uni_value.html#ab3730236f6f0ecccda0bd4f095b08258" target="_top" xlink:title="UniValue::get_str">
 <polygon fill="white" stroke="black" points="154.5,-342.5 154.5,-361.5 246.5,-361.5 246.5,-342.5 154.5,-342.5"/>
 <text text-anchor="middle" x="200.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">UniValue::get_str</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1313 -->
-<g id="edge24" class="edge"><title>Node1224&#45;&gt;Node1313</title>
+<!-- Node1220&#45;&gt;Node1309 -->
+<g id="edge24" class="edge"><title>Node1220&#45;&gt;Node1309</title>
 <path fill="none" stroke="midnightblue" d="M75.0334,-352C95.4689,-352 121.357,-352 144.225,-352"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.489,-355.5 154.489,-352 144.489,-348.5 144.489,-355.5"/>
 </g>
-<!-- Node1314 -->
-<g id="node21" class="node"><title>Node1314</title>
+<!-- Node1310 -->
+<g id="node21" class="node"><title>Node1310</title>
 <g id="a_node21"><a xlink:href="class_c_bitcoin_secret.html#a4d6bf559d092e6d47f8001c7171096df" target="_top" xlink:title="CBitcoinSecret::GetKey">
 <polygon fill="white" stroke="black" points="139.5,-304.5 139.5,-323.5 261.5,-323.5 261.5,-304.5 139.5,-304.5"/>
 <text text-anchor="middle" x="200.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBitcoinSecret::GetKey</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1314 -->
-<g id="edge26" class="edge"><title>Node1224&#45;&gt;Node1314</title>
+<!-- Node1220&#45;&gt;Node1310 -->
+<g id="edge26" class="edge"><title>Node1220&#45;&gt;Node1310</title>
 <path fill="none" stroke="midnightblue" d="M73.8208,-342.404C85.6156,-339.291 98.8487,-335.895 111,-333 121.31,-330.544 132.331,-328.063 142.971,-325.741"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="143.986,-329.102 153.021,-323.569 142.508,-322.26 143.986,-329.102"/>
 </g>
-<!-- Node1318 -->
-<g id="node23" class="node"><title>Node1318</title>
+<!-- Node1314 -->
+<g id="node23" class="node"><title>Node1314</title>
 <g id="a_node23"><a xlink:href="class_c_key.html#aa1085c59603a62db6ec776300f250337" target="_top" xlink:title="Compute the public key from a private key. ">
 <polygon fill="white" stroke="black" points="151.5,-456.5 151.5,-475.5 249.5,-475.5 249.5,-456.5 151.5,-456.5"/>
 <text text-anchor="middle" x="200.5" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">CKey::GetPubKey</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1318 -->
-<g id="edge28" class="edge"><title>Node1224&#45;&gt;Node1318</title>
+<!-- Node1220&#45;&gt;Node1314 -->
+<g id="edge28" class="edge"><title>Node1220&#45;&gt;Node1314</title>
 <path fill="none" stroke="midnightblue" d="M42.9217,-361.62C52.4047,-381.104 76.6596,-425.221 111,-447 120.144,-452.8 130.778,-456.854 141.436,-459.682"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="140.657,-463.094 151.19,-461.949 142.242,-456.275 140.657,-463.094"/>
 </g>
-<!-- Node1320 -->
-<g id="node27" class="node"><title>Node1320</title>
+<!-- Node1316 -->
+<g id="node27" class="node"><title>Node1316</title>
 <g id="a_node27"><a xlink:href="group__map_wallet.html#gae290e7a17f18e54ee3352430b745b474" target="_top" xlink:title="HaveKey implementation that also checks the mapHdPubKeys. ">
 <polygon fill="white" stroke="black" points="151.5,-266.5 151.5,-285.5 249.5,-285.5 249.5,-266.5 151.5,-266.5"/>
 <text text-anchor="middle" x="200.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::HaveKey</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1320 -->
-<g id="edge36" class="edge"><title>Node1224&#45;&gt;Node1320</title>
+<!-- Node1220&#45;&gt;Node1316 -->
+<g id="edge36" class="edge"><title>Node1220&#45;&gt;Node1316</title>
 <path fill="none" stroke="midnightblue" d="M47.8419,-342.288C60.7893,-329.425 85.4911,-306.974 111,-295 120.487,-290.547 131.036,-287.125 141.451,-284.498"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="142.398,-287.872 151.357,-282.216 140.826,-281.051 142.398,-287.872"/>
 </g>
-<!-- Node1323 -->
-<g id="node29" class="node"><title>Node1323</title>
+<!-- Node1319 -->
+<g id="node29" class="node"><title>Node1319</title>
 <g id="a_node29"><a xlink:href="server_8cpp.html#a26bafe3d526ee8cbc84b3c0b0dc3a43b" target="_top" xlink:title="HelpExampleCli">
 <polygon fill="white" stroke="black" points="157,-228.5 157,-247.5 244,-247.5 244,-228.5 157,-228.5"/>
 <text text-anchor="middle" x="200.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">HelpExampleCli</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1323 -->
-<g id="edge38" class="edge"><title>Node1224&#45;&gt;Node1323</title>
+<!-- Node1220&#45;&gt;Node1319 -->
+<g id="edge38" class="edge"><title>Node1220&#45;&gt;Node1319</title>
 <path fill="none" stroke="midnightblue" d="M42.9217,-342.38C52.4047,-322.896 76.6596,-278.779 111,-257 121.681,-250.226 134.393,-245.833 146.804,-242.994"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="147.524,-246.42 156.648,-241.035 146.157,-239.554 147.524,-246.42"/>
 </g>
-<!-- Node1324 -->
-<g id="node30" class="node"><title>Node1324</title>
+<!-- Node1320 -->
+<g id="node30" class="node"><title>Node1320</title>
 <g id="a_node30"><a xlink:href="server_8cpp.html#a9ef4f8fb114508ceb861a0e8c3e0d26e" target="_top" xlink:title="HelpExampleRpc">
 <polygon fill="white" stroke="black" points="154,-190.5 154,-209.5 247,-209.5 247,-190.5 154,-190.5"/>
 <text text-anchor="middle" x="200.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">HelpExampleRpc</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1324 -->
-<g id="edge39" class="edge"><title>Node1224&#45;&gt;Node1324</title>
+<!-- Node1220&#45;&gt;Node1320 -->
+<g id="edge39" class="edge"><title>Node1220&#45;&gt;Node1320</title>
 <path fill="none" stroke="midnightblue" d="M40.7498,-342.472C47.1011,-317.785 67.5989,-251.422 111,-219 120.445,-211.944 131.955,-207.392 143.508,-204.482"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.571,-207.834 153.622,-202.326 143.112,-200.988 144.571,-207.834"/>
 </g>
-<!-- Node1325 -->
-<g id="node31" class="node"><title>Node1325</title>
+<!-- Node1321 -->
+<g id="node31" class="node"><title>Node1321</title>
 <g id="a_node31"><a xlink:href="class_c_key.html#a56e06c48d504a1a65e244e5fc35cdecc" target="_top" xlink:title="Check whether this private key is valid. ">
 <polygon fill="white" stroke="black" points="162,-152.5 162,-171.5 239,-171.5 239,-152.5 162,-152.5"/>
 <text text-anchor="middle" x="200.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">CKey::IsValid</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1325 -->
-<g id="edge40" class="edge"><title>Node1224&#45;&gt;Node1325</title>
+<!-- Node1220&#45;&gt;Node1321 -->
+<g id="edge40" class="edge"><title>Node1220&#45;&gt;Node1321</title>
 <path fill="none" stroke="midnightblue" d="M39.519,-342.441C43.1662,-313.24 58.3049,-224.548 111,-181 122.307,-171.656 137.135,-166.6 151.412,-163.947"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="152.282,-167.356 161.653,-162.413 151.245,-160.433 152.282,-167.356"/>
 </g>
-<!-- Node1326 -->
-<g id="node32" class="node"><title>Node1326</title>
+<!-- Node1322 -->
+<g id="node32" class="node"><title>Node1322</title>
 <g id="a_node32"><a xlink:href="group__map_wallet.html#ga26fd9a9f48230daf346500d2afb6115e" target="_top" xlink:title="CWallet::MarkDirty">
 <polygon fill="white" stroke="black" points="150,-114.5 150,-133.5 251,-133.5 251,-114.5 150,-114.5"/>
 <text text-anchor="middle" x="200.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::MarkDirty</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1326 -->
-<g id="edge42" class="edge"><title>Node1224&#45;&gt;Node1326</title>
+<!-- Node1220&#45;&gt;Node1322 -->
+<g id="edge42" class="edge"><title>Node1220&#45;&gt;Node1322</title>
 <path fill="none" stroke="midnightblue" d="M38.7058,-342.312C39.9682,-308.965 48.8623,-197.961 111,-143 119.201,-135.746 129.493,-131.033 140.131,-128.016"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="141.02,-131.402 149.947,-125.697 139.41,-124.59 141.02,-131.402"/>
 </g>
-<!-- Node1328 -->
-<g id="node34" class="node"><title>Node1328</title>
+<!-- Node1324 -->
+<g id="node34" class="node"><title>Node1324</title>
 <g id="a_node34"><a xlink:href="group__map_wallet.html#ga979a17e80e4897ed1f4ae9a4be7c493c" target="_top" xlink:title="Scan the block chain (starting in pindexStart) for transactions from or to us. ">
 <polygon fill="white" stroke="black" points="111,-912.5 111,-931.5 290,-931.5 290,-912.5 111,-912.5"/>
 <text text-anchor="middle" x="200.5" y="-919.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::ScanForWalletTransactions</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1328 -->
-<g id="edge44" class="edge"><title>Node1224&#45;&gt;Node1328</title>
+<!-- Node1220&#45;&gt;Node1324 -->
+<g id="edge44" class="edge"><title>Node1220&#45;&gt;Node1324</title>
 <path fill="none" stroke="midnightblue" d="M40.0036,-361.512C46.4739,-401.729 73.3339,-561.594 111,-689 135.048,-770.343 174.159,-863.731 191.164,-903.022"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="188.053,-904.644 195.255,-912.414 194.47,-901.848 188.053,-904.644"/>
 </g>
-<!-- Node1418 -->
-<g id="node45" class="node"><title>Node1418</title>
+<!-- Node1414 -->
+<g id="node45" class="node"><title>Node1414</title>
 <g id="a_node45"><a xlink:href="group___actions.html#ga53e5528d7005608594e73f500bc5bb8f" target="_top" xlink:title="CWallet::SetAddressBook">
 <polygon fill="white" stroke="red" points="135,-418.5 135,-437.5 266,-437.5 266,-418.5 135,-418.5"/>
 <text text-anchor="middle" x="200.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::SetAddressBook</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1418 -->
-<g id="edge57" class="edge"><title>Node1224&#45;&gt;Node1418</title>
+<!-- Node1220&#45;&gt;Node1414 -->
+<g id="edge57" class="edge"><title>Node1220&#45;&gt;Node1414</title>
 <path fill="none" stroke="midnightblue" d="M47.8419,-361.712C60.7893,-374.575 85.4911,-397.026 111,-409 116.286,-411.481 121.901,-413.642 127.64,-415.524"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="126.793,-418.924 137.377,-418.434 128.798,-412.217 126.793,-418.924"/>
 </g>
-<!-- Node1423 -->
-<g id="node48" class="node"><title>Node1423</title>
+<!-- Node1419 -->
+<g id="node48" class="node"><title>Node1419</title>
 <g id="a_node48"><a xlink:href="class_c_bitcoin_secret.html#a6a8aff02f66099f33f573ad3e6375bb1" target="_top" xlink:title="CBitcoinSecret::SetString">
 <polygon fill="white" stroke="red" points="136,-76.5 136,-95.5 265,-95.5 265,-76.5 136,-76.5"/>
 <text text-anchor="middle" x="200.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBitcoinSecret::SetString</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1423 -->
-<g id="edge62" class="edge"><title>Node1224&#45;&gt;Node1423</title>
+<!-- Node1220&#45;&gt;Node1419 -->
+<g id="edge62" class="edge"><title>Node1220&#45;&gt;Node1419</title>
 <path fill="none" stroke="midnightblue" d="M38.1173,-342.439C37.2018,-305.622 39.1158,-171.751 111,-105 115.5,-100.821 120.688,-97.4756 126.25,-94.806"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="127.934,-97.9013 135.907,-90.9238 125.323,-91.4065 127.934,-97.9013"/>
 </g>
-<!-- Node1431 -->
-<g id="node49" class="node"><title>Node1431</title>
+<!-- Node1427 -->
+<g id="node49" class="node"><title>Node1427</title>
 <g id="a_node49"><a xlink:href="class_uni_value.html#a5a7394aeb8d5584db7a90c2c041726b1" target="_top" xlink:title="UniValue::size">
 <polygon fill="white" stroke="black" points="160.5,-38.5 160.5,-57.5 240.5,-57.5 240.5,-38.5 160.5,-38.5"/>
 <text text-anchor="middle" x="200.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">UniValue::size</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1431 -->
-<g id="edge63" class="edge"><title>Node1224&#45;&gt;Node1431</title>
+<!-- Node1220&#45;&gt;Node1427 -->
+<g id="edge63" class="edge"><title>Node1220&#45;&gt;Node1427</title>
 <path fill="none" stroke="midnightblue" d="M39.6119,-342.227C44.976,-296.805 69.6292,-106.843 111,-67 121.475,-56.9123 135.94,-51.635 150.144,-49.0084"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="150.98,-52.4241 160.378,-47.5334 149.981,-45.4957 150.98,-52.4241"/>
 </g>
-<!-- Node1432 -->
-<g id="node50" class="node"><title>Node1432</title>
+<!-- Node1428 -->
+<g id="node50" class="node"><title>Node1428</title>
 <g id="a_node50"><a xlink:href="class_c_key.html#ac53425b8d0f89067bce781c485101b20" target="_top" xlink:title="Verify thoroughly whether a private key and a public key match. ">
 <polygon fill="white" stroke="red" points="147,-0.5 147,-19.5 254,-19.5 254,-0.5 147,-0.5"/>
 <text text-anchor="middle" x="200.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CKey::VerifyPubKey</text>
 </a>
 </g>
 </g>
-<!-- Node1224&#45;&gt;Node1432 -->
-<g id="edge64" class="edge"><title>Node1224&#45;&gt;Node1432</title>
+<!-- Node1220&#45;&gt;Node1428 -->
+<g id="edge64" class="edge"><title>Node1220&#45;&gt;Node1428</title>
 <path fill="none" stroke="midnightblue" d="M39.2963,-342.272C43.4967,-293.367 64.6608,-74.9094 111,-29 118.201,-21.8663 127.391,-17.1211 137.111,-14.0138"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="138.173,-17.3536 146.953,-11.4247 136.392,-10.5839 138.173,-17.3536"/>
 </g>
-<!-- Node1226 -->
-<g id="node3" class="node"><title>Node1226</title>
+<!-- Node1222 -->
+<g id="node3" class="node"><title>Node1222</title>
 <g id="a_node3"><a xlink:href="class_c_crypto_key_store.html#a340109b8673267676a34664a76ed3274" target="_top" xlink:title="Add a key to the store. ">
 <polygon fill="white" stroke="red" points="326,-722.5 326,-741.5 495,-741.5 495,-722.5 326,-722.5"/>
 <text text-anchor="middle" x="410.5" y="-729.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCryptoKeyStore::AddKeyPubKey</text>
 </a>
 </g>
 </g>
-<!-- Node1225&#45;&gt;Node1226 -->
-<g id="edge2" class="edge"><title>Node1225&#45;&gt;Node1226</title>
+<!-- Node1221&#45;&gt;Node1222 -->
+<g id="edge2" class="edge"><title>Node1221&#45;&gt;Node1222</title>
 <path fill="none" stroke="midnightblue" d="M211.159,-627.783C230.88,-647.169 277.982,-690.525 326,-713 331.262,-715.463 336.863,-717.617 342.577,-719.498"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="341.676,-722.882 352.261,-722.414 343.695,-716.179 341.676,-722.882"/>
 </g>
-<!-- Node1265 -->
-<g id="node6" class="node"><title>Node1265</title>
+<!-- Node1261 -->
+<g id="node6" class="node"><title>Node1261</title>
 <g id="a_node6"><a xlink:href="standard_8cpp.html#ae40f28d3b46c21033f6ee1f1200d0321" target="_top" xlink:title="GetScriptForDestination">
 <polygon fill="white" stroke="black" points="540.5,-322.5 540.5,-341.5 662.5,-341.5 662.5,-322.5 540.5,-322.5"/>
 <text text-anchor="middle" x="601.5" y="-329.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetScriptForDestination</text>
 </a>
 </g>
 </g>
-<!-- Node1225&#45;&gt;Node1265 -->
-<g id="edge5" class="edge"><title>Node1225&#45;&gt;Node1265</title>
+<!-- Node1221&#45;&gt;Node1261 -->
+<g id="edge5" class="edge"><title>Node1221&#45;&gt;Node1261</title>
 <path fill="none" stroke="midnightblue" d="M208.337,-608.426C225.653,-584.749 273.598,-522.645 326,-485 393.035,-436.843 423.613,-449.434 495,-408 526.433,-389.756 560.057,-364.4 580.683,-348.093"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="583.052,-350.68 588.683,-341.706 578.685,-345.21 583.052,-350.68"/>
 </g>
-<!-- Node1225&#45;&gt;Node1229 -->
-<g id="edge6" class="edge"><title>Node1225&#45;&gt;Node1229</title>
+<!-- Node1221&#45;&gt;Node1225 -->
+<g id="edge6" class="edge"><title>Node1221&#45;&gt;Node1225</title>
 <path fill="none" stroke="midnightblue" d="M221.071,-627.559C250.631,-641.894 305.398,-668.023 326,-675 335.197,-678.115 345.136,-680.877 354.84,-683.264"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.291,-686.73 364.827,-685.614 355.895,-679.916 354.291,-686.73"/>
 </g>
-<!-- Node1266 -->
-<g id="node10" class="node"><title>Node1266</title>
+<!-- Node1262 -->
+<g id="node10" class="node"><title>Node1262</title>
 <g id="a_node10"><a xlink:href="standard_8cpp.html#aa376c6e2bc4848cfd4f777f8dd239469" target="_top" xlink:title="GetScriptForRawPubKey">
 <polygon fill="white" stroke="red" points="347,-608.5 347,-627.5 474,-627.5 474,-608.5 347,-608.5"/>
 <text text-anchor="middle" x="410.5" y="-615.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetScriptForRawPubKey</text>
 </a>
 </g>
 </g>
-<!-- Node1225&#45;&gt;Node1266 -->
-<g id="edge9" class="edge"><title>Node1225&#45;&gt;Node1266</title>
+<!-- Node1221&#45;&gt;Node1262 -->
+<g id="edge9" class="edge"><title>Node1221&#45;&gt;Node1262</title>
 <path fill="none" stroke="midnightblue" d="M264.189,-618C287.008,-618 312.996,-618 336.623,-618"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="336.94,-621.5 346.939,-618 336.939,-614.5 336.94,-621.5"/>
 </g>
-<!-- Node1269 -->
-<g id="node12" class="node"><title>Node1269</title>
+<!-- Node1265 -->
+<g id="node12" class="node"><title>Node1265</title>
 <g id="a_node12"><a xlink:href="class_c_wallet_d_b.html#a7ebef5e0c7f604aa2159ba96d527e3a2" target="_top" xlink:title="CWalletDB::WriteKey">
 <polygon fill="white" stroke="red" points="354,-494.5 354,-513.5 467,-513.5 467,-494.5 354,-494.5"/>
 <text text-anchor="middle" x="410.5" y="-501.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWalletDB::WriteKey</text>
 </a>
 </g>
 </g>
-<!-- Node1225&#45;&gt;Node1269 -->
-<g id="edge11" class="edge"><title>Node1225&#45;&gt;Node1269</title>
+<!-- Node1221&#45;&gt;Node1265 -->
+<g id="edge11" class="edge"><title>Node1221&#45;&gt;Node1265</title>
 <path fill="none" stroke="midnightblue" d="M218.876,-608.477C255.353,-588.485 340.088,-542.043 383.236,-518.395"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="384.94,-521.452 392.027,-513.577 381.575,-515.314 384.94,-521.452"/>
 </g>
-<!-- Node1270 -->
-<g id="node13" class="node"><title>Node1270</title>
+<!-- Node1266 -->
+<g id="node13" class="node"><title>Node1266</title>
 <g id="a_node13"><a xlink:href="class_c_key.html#a91b6ecf71cc16e0b05ce79ec9276e729" target="_top" xlink:title="Convert the private key to a CPrivKey (serialized OpenSSL private key data). ">
 <polygon fill="white" stroke="red" points="361.5,-646.5 361.5,-665.5 459.5,-665.5 459.5,-646.5 361.5,-646.5"/>
 <text text-anchor="middle" x="410.5" y="-653.5" font-family="Helvetica,sans-Serif" font-size="10.00">CKey::GetPrivKey</text>
 </a>
 </g>
 </g>
-<!-- Node1225&#45;&gt;Node1270 -->
-<g id="edge14" class="edge"><title>Node1225&#45;&gt;Node1270</title>
+<!-- Node1221&#45;&gt;Node1266 -->
+<g id="edge14" class="edge"><title>Node1221&#45;&gt;Node1266</title>
 <path fill="none" stroke="midnightblue" d="M253.719,-627.54C283.343,-632.952 320.493,-639.739 351.083,-645.328"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="350.719,-648.819 361.185,-647.173 351.977,-641.933 350.719,-648.819"/>
 </g>
-<!-- Node1251 -->
-<g id="node4" class="node"><title>Node1251</title>
+<!-- Node1247 -->
+<g id="node4" class="node"><title>Node1247</title>
 <g id="a_node4"><a xlink:href="class_c_crypto_key_store.html#af9a5bd9adc6d09c3eddbf81e71237994" target="_top" xlink:title="CCryptoKeyStore::IsLocked">
 <polygon fill="white" stroke="red" points="531.5,-1092.5 531.5,-1111.5 671.5,-1111.5 671.5,-1092.5 531.5,-1092.5"/>
 <text text-anchor="middle" x="601.5" y="-1099.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCryptoKeyStore::IsLocked</text>
 </a>
 </g>
 </g>
-<!-- Node1226&#45;&gt;Node1251 -->
-<g id="edge3" class="edge"><title>Node1226&#45;&gt;Node1251</title>
+<!-- Node1222&#45;&gt;Node1247 -->
+<g id="edge3" class="edge"><title>Node1222&#45;&gt;Node1247</title>
 <path fill="none" stroke="midnightblue" d="M483.373,-741.581C487.685,-744.128 491.631,-747.231 495,-751 590.669,-858.038 445.555,-956.636 531,-1072 535.895,-1078.61 542.549,-1083.78 549.811,-1087.82"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="548.718,-1091.18 559.247,-1092.36 551.751,-1084.87 548.718,-1091.18"/>
 </g>
-<!-- Node1252 -->
-<g id="node5" class="node"><title>Node1252</title>
+<!-- Node1248 -->
+<g id="node5" class="node"><title>Node1248</title>
 <g id="a_node5"><a xlink:href="class_c_key.html#ab8dee0ad9d933304a22284ee40040847" target="_top" xlink:title="CKey::begin">
 <polygon fill="white" stroke="black" points="566,-646.5 566,-665.5 637,-665.5 637,-646.5 566,-646.5"/>
 <text text-anchor="middle" x="601.5" y="-653.5" font-family="Helvetica,sans-Serif" font-size="10.00">CKey::begin</text>
 </a>
 </g>
 </g>
-<!-- Node1226&#45;&gt;Node1252 -->
-<g id="edge4" class="edge"><title>Node1226&#45;&gt;Node1252</title>
+<!-- Node1222&#45;&gt;Node1248 -->
+<g id="edge4" class="edge"><title>Node1222&#45;&gt;Node1248</title>
 <path fill="none" stroke="midnightblue" d="M472.832,-722.467C480.564,-720.003 488.154,-716.902 495,-713 515.212,-701.479 511.042,-686.954 531,-675 538.641,-670.424 547.408,-666.923 556.084,-664.254"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="557.066,-667.614 565.775,-661.581 555.204,-660.866 557.066,-667.614"/>
 </g>
-<!-- Node1230 -->
-<g id="node8" class="node"><title>Node1230</title>
+<!-- Node1226 -->
+<g id="node8" class="node"><title>Node1226</title>
 <g id="a_node8"><a xlink:href="hash_8h.html#a4490f70ddae16e9e48460a0416a48a6b" target="_top" xlink:title="Compute the 160&#45;bit hash an object. ">
 <polygon fill="white" stroke="red" points="573.5,-684.5 573.5,-703.5 629.5,-703.5 629.5,-684.5 573.5,-684.5"/>
 <text text-anchor="middle" x="601.5" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">Hash160</text>
 </a>
 </g>
 </g>
-<!-- Node1229&#45;&gt;Node1230 -->
-<g id="edge7" class="edge"><title>Node1229&#45;&gt;Node1230</title>
+<!-- Node1225&#45;&gt;Node1226 -->
+<g id="edge7" class="edge"><title>Node1225&#45;&gt;Node1226</title>
 <path fill="none" stroke="midnightblue" d="M456.29,-694C488.807,-694 532.3,-694 562.992,-694"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="563.275,-697.5 573.275,-694 563.275,-690.5 563.275,-697.5"/>
 </g>
-<!-- Node1249 -->
-<g id="node9" class="node"><title>Node1249</title>
+<!-- Node1245 -->
+<g id="node9" class="node"><title>Node1245</title>
 <g id="a_node9"><a xlink:href="class_c_pub_key.html#a6bb28fcf0a5f799c69f5b7269363b309" target="_top" xlink:title="Simple read&#45;only vector&#45;like interface to the pubkey data. ">
 <polygon fill="white" stroke="red" points="560,-475.5 560,-494.5 643,-494.5 643,-475.5 560,-475.5"/>
 <text text-anchor="middle" x="601.5" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::size</text>
 </a>
 </g>
 </g>
-<!-- Node1229&#45;&gt;Node1249 -->
-<g id="edge8" class="edge"><title>Node1229&#45;&gt;Node1249</title>
+<!-- Node1225&#45;&gt;Node1245 -->
+<g id="edge8" class="edge"><title>Node1225&#45;&gt;Node1245</title>
 <path fill="none" stroke="midnightblue" d="M456.268,-692.865C470.289,-690.339 484.758,-685.152 495,-675 544.307,-626.127 488.902,-578.205 531,-523 538.962,-512.56 550.652,-504.621 562.182,-498.771"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="563.73,-501.911 571.32,-494.518 560.777,-495.564 563.73,-501.911"/>
 </g>
-<!-- Node1267 -->
-<g id="node11" class="node"><title>Node1267</title>
+<!-- Node1263 -->
+<g id="node11" class="node"><title>Node1263</title>
 <g id="a_node11"><a xlink:href="class_c_pub_key.html#a859ab9909d68092d6d4fc739237ab358" target="_top" xlink:title="CPubKey::begin">
 <polygon fill="white" stroke="black" points="557.5,-532.5 557.5,-551.5 645.5,-551.5 645.5,-532.5 557.5,-532.5"/>
 <text text-anchor="middle" x="601.5" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::begin</text>
 </a>
 </g>
 </g>
-<!-- Node1266&#45;&gt;Node1267 -->
-<g id="edge10" class="edge"><title>Node1266&#45;&gt;Node1267</title>
+<!-- Node1262&#45;&gt;Node1263 -->
+<g id="edge10" class="edge"><title>Node1262&#45;&gt;Node1263</title>
 <path fill="none" stroke="midnightblue" d="M435.437,-608.375C468.81,-594.955 529.461,-570.566 567.219,-555.383"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="568.785,-558.525 576.757,-551.547 566.174,-552.031 568.785,-558.525"/>
 </g>
-<!-- Node1269&#45;&gt;Node1249 -->
-<g id="edge12" class="edge"><title>Node1269&#45;&gt;Node1249</title>
+<!-- Node1265&#45;&gt;Node1245 -->
+<g id="edge12" class="edge"><title>Node1265&#45;&gt;Node1245</title>
 <path fill="none" stroke="midnightblue" d="M467.184,-498.402C493.311,-495.776 524.228,-492.668 549.709,-490.106"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="550.304,-493.564 559.904,-489.081 549.604,-486.599 550.304,-493.564"/>
 </g>
-<!-- Node1269&#45;&gt;Node1267 -->
-<g id="edge13" class="edge"><title>Node1269&#45;&gt;Node1267</title>
+<!-- Node1265&#45;&gt;Node1263 -->
+<g id="edge13" class="edge"><title>Node1265&#45;&gt;Node1263</title>
 <path fill="none" stroke="midnightblue" d="M459.193,-513.589C486.073,-518.994 519.714,-525.757 547.428,-531.329"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="546.853,-534.784 557.347,-533.324 548.233,-527.921 546.853,-534.784"/>
 </g>
-<!-- Node1270&#45;&gt;Node1252 -->
-<g id="edge15" class="edge"><title>Node1270&#45;&gt;Node1252</title>
+<!-- Node1266&#45;&gt;Node1248 -->
+<g id="edge15" class="edge"><title>Node1266&#45;&gt;Node1248</title>
 <path fill="none" stroke="midnightblue" d="M459.682,-656C489.195,-656 526.717,-656 555.606,-656"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="555.829,-659.5 565.828,-656 555.828,-652.5 555.829,-659.5"/>
 </g>
-<!-- Node1291&#45;&gt;Node1292 -->
-<g id="edge17" class="edge"><title>Node1291&#45;&gt;Node1292</title>
+<!-- Node1287&#45;&gt;Node1288 -->
+<g id="edge17" class="edge"><title>Node1287&#45;&gt;Node1288</title>
 <path fill="none" stroke="midnightblue" d="M262.221,-1200C292.231,-1200 328.092,-1200 356.913,-1200"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="357.19,-1203.5 367.19,-1200 357.19,-1196.5 357.19,-1203.5"/>
 </g>
-<!-- Node1293 -->
-<g id="node16" class="node"><title>Node1293</title>
+<!-- Node1289 -->
+<g id="node16" class="node"><title>Node1289</title>
 <g id="a_node16"><a xlink:href="util_8h.html#af8985880cf4ef26df0a5aa2ffcb76662" target="_top" xlink:title="error">
 <polygon fill="white" stroke="red" points="583.5,-1152.5 583.5,-1171.5 619.5,-1171.5 619.5,-1152.5 583.5,-1152.5"/>
 <text text-anchor="middle" x="601.5" y="-1159.5" font-family="Helvetica,sans-Serif" font-size="10.00">error</text>
 </a>
 </g>
 </g>
-<!-- Node1292&#45;&gt;Node1293 -->
-<g id="edge18" class="edge"><title>Node1292&#45;&gt;Node1293</title>
+<!-- Node1288&#45;&gt;Node1289 -->
+<g id="edge18" class="edge"><title>Node1288&#45;&gt;Node1289</title>
 <path fill="none" stroke="midnightblue" d="M453.915,-1191.47C490.327,-1184.15 541.74,-1173.81 573.004,-1167.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="574.051,-1170.89 583.165,-1165.49 572.671,-1164.03 574.051,-1170.89"/>
 </g>
-<!-- Node1310 -->
-<g id="node17" class="node"><title>Node1310</title>
+<!-- Node1306 -->
+<g id="node17" class="node"><title>Node1306</title>
 <g id="a_node17"><a xlink:href="univalue_8h.html#a884f0e316157c5d85f6cff80c442bf1a" target="_top" xlink:title="Pair">
 <polygon fill="white" stroke="black" points="584.5,-1190.5 584.5,-1209.5 618.5,-1209.5 618.5,-1190.5 584.5,-1190.5"/>
 <text text-anchor="middle" x="601.5" y="-1197.5" font-family="Helvetica,sans-Serif" font-size="10.00">Pair</text>
 </a>
 </g>
 </g>
-<!-- Node1292&#45;&gt;Node1310 -->
-<g id="edge19" class="edge"><title>Node1292&#45;&gt;Node1310</title>
+<!-- Node1288&#45;&gt;Node1306 -->
+<g id="edge19" class="edge"><title>Node1288&#45;&gt;Node1306</title>
 <path fill="none" stroke="midnightblue" d="M453.915,-1200C490.716,-1200 542.842,-1200 574,-1200"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="574.088,-1203.5 584.088,-1200 574.088,-1196.5 574.088,-1203.5"/>
 </g>
-<!-- Node1311&#45;&gt;Node1251 -->
-<g id="edge21" class="edge"><title>Node1311&#45;&gt;Node1251</title>
+<!-- Node1307&#45;&gt;Node1247 -->
+<g id="edge21" class="edge"><title>Node1307&#45;&gt;Node1247</title>
 <path fill="none" stroke="midnightblue" d="M263.406,-1120.59C332.708,-1116.77 445.202,-1110.56 520.969,-1106.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="521.616,-1109.85 531.408,-1105.81 521.231,-1102.87 521.616,-1109.85"/>
 </g>
-<!-- Node1311&#45;&gt;Node1292 -->
-<g id="edge22" class="edge"><title>Node1311&#45;&gt;Node1292</title>
+<!-- Node1307&#45;&gt;Node1288 -->
+<g id="edge22" class="edge"><title>Node1307&#45;&gt;Node1288</title>
 <path fill="none" stroke="midnightblue" d="M253.192,-1133.59C265.697,-1137.09 278.705,-1141.78 290,-1148 309.013,-1158.47 306.776,-1170.92 326,-1181 335.678,-1186.07 346.682,-1189.8 357.452,-1192.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="356.704,-1195.95 367.233,-1194.78 358.269,-1189.13 356.704,-1195.95"/>
 </g>
-<!-- Node1315 -->
-<g id="node22" class="node"><title>Node1315</title>
+<!-- Node1311 -->
+<g id="node22" class="node"><title>Node1311</title>
 <g id="a_node22"><a xlink:href="class_c_key.html#aaa13d5f08456bba094210c5eeabf64c8" target="_top" xlink:title="Initialize using begin and end iterators to byte data. ">
 <polygon fill="white" stroke="red" points="379.5,-149.5 379.5,-168.5 441.5,-168.5 441.5,-149.5 379.5,-149.5"/>
 <text text-anchor="middle" x="410.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00">CKey::Set</text>
 </a>
 </g>
 </g>
-<!-- Node1314&#45;&gt;Node1315 -->
-<g id="edge27" class="edge"><title>Node1314&#45;&gt;Node1315</title>
+<!-- Node1310&#45;&gt;Node1311 -->
+<g id="edge27" class="edge"><title>Node1310&#45;&gt;Node1311</title>
 <path fill="none" stroke="midnightblue" d="M261.839,-309.991C272.185,-306.945 282.122,-302.22 290,-295 330.108,-258.239 286.118,-215.006 326,-178 337.6,-167.237 353.988,-162.139 369.178,-159.856"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="369.888,-163.298 379.429,-158.691 369.098,-156.343 369.888,-163.298"/>
 </g>
-<!-- Node1318&#45;&gt;Node1252 -->
-<g id="edge30" class="edge"><title>Node1318&#45;&gt;Node1252</title>
+<!-- Node1314&#45;&gt;Node1248 -->
+<g id="edge30" class="edge"><title>Node1314&#45;&gt;Node1248</title>
 <path fill="none" stroke="midnightblue" d="M213.516,-475.649C234.95,-492.451 281.696,-527.264 326,-548 397.059,-581.258 422.561,-568.866 495,-599 524.003,-611.065 555.469,-628.71 576.417,-641.165"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="574.883,-644.327 585.256,-646.484 578.492,-638.329 574.883,-644.327"/>
 </g>
-<!-- Node1318&#45;&gt;Node1249 -->
-<g id="edge33" class="edge"><title>Node1318&#45;&gt;Node1249</title>
+<!-- Node1314&#45;&gt;Node1245 -->
+<g id="edge33" class="edge"><title>Node1314&#45;&gt;Node1245</title>
 <path fill="none" stroke="midnightblue" d="M249.629,-468.292C325.503,-471.905 472.24,-478.892 549.726,-482.582"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="549.576,-486.079 559.731,-483.059 549.909,-479.087 549.576,-486.079"/>
 </g>
-<!-- Node1318&#45;&gt;Node1267 -->
-<g id="edge32" class="edge"><title>Node1318&#45;&gt;Node1267</title>
+<!-- Node1314&#45;&gt;Node1263 -->
+<g id="edge32" class="edge"><title>Node1314&#45;&gt;Node1263</title>
 <path fill="none" stroke="midnightblue" d="M217.322,-475.52C240.324,-488.818 284.762,-512.504 326,-523 401.179,-542.134 491.436,-544.639 547.391,-543.912"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="547.489,-547.411 557.428,-543.742 547.37,-540.412 547.489,-547.411"/>
 </g>
-<!-- Node1272 -->
-<g id="node24" class="node"><title>Node1272</title>
+<!-- Node1268 -->
+<g id="node24" class="node"><title>Node1268</title>
 <g id="a_node24"><a xlink:href="secp256k1_8h.html#a7438071aa8a6dc4697abe4f4659f2161" target="_top" xlink:title="Compute the public key for a secret key. ">
 <polygon fill="white" stroke="red" points="352.5,-369 352.5,-399 468.5,-399 468.5,-369 352.5,-369"/>
 <text text-anchor="start" x="360.5" y="-387" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ec_pubkey</text>
@@ -489,13 +489,13 @@
 </a>
 </g>
 </g>
-<!-- Node1318&#45;&gt;Node1272 -->
-<g id="edge29" class="edge"><title>Node1318&#45;&gt;Node1272</title>
+<!-- Node1314&#45;&gt;Node1268 -->
+<g id="edge29" class="edge"><title>Node1314&#45;&gt;Node1268</title>
 <path fill="none" stroke="midnightblue" d="M249.942,-460.39C263.416,-457.574 277.713,-453.346 290,-447 309.285,-437.04 307.422,-425.223 326,-414 332.843,-409.866 340.343,-406.176 347.952,-402.918"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="349.292,-406.152 357.252,-399.159 346.669,-399.662 349.292,-406.152"/>
 </g>
-<!-- Node1284 -->
-<g id="node25" class="node"><title>Node1284</title>
+<!-- Node1280 -->
+<g id="node25" class="node"><title>Node1280</title>
 <g id="a_node25"><a xlink:href="secp256k1_8h.html#a34977bf00322e510e881160c421836d7" target="_top" xlink:title="Serialize a pubkey object into a serialized byte sequence. ">
 <polygon fill="white" stroke="red" points="352.5,-320 352.5,-350 468.5,-350 468.5,-320 352.5,-320"/>
 <text text-anchor="start" x="360.5" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ec_pubkey</text>
@@ -503,135 +503,135 @@
 </a>
 </g>
 </g>
-<!-- Node1318&#45;&gt;Node1284 -->
-<g id="edge31" class="edge"><title>Node1318&#45;&gt;Node1284</title>
+<!-- Node1314&#45;&gt;Node1280 -->
+<g id="edge31" class="edge"><title>Node1314&#45;&gt;Node1280</title>
 <path fill="none" stroke="midnightblue" d="M249.818,-464.11C264.05,-461.454 278.794,-456.381 290,-447 322.402,-419.875 294.544,-387.217 326,-359 331.054,-354.466 336.913,-350.785 343.137,-347.796"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="344.59,-350.982 352.466,-343.894 341.889,-344.524 344.59,-350.982"/>
 </g>
-<!-- Node1319 -->
-<g id="node26" class="node"><title>Node1319</title>
+<!-- Node1315 -->
+<g id="node26" class="node"><title>Node1315</title>
 <g id="a_node26"><a xlink:href="class_c_pub_key.html#a4fa94293cf8577fd039b9a133f6c7f30" target="_top" xlink:title="CPubKey::IsValid">
 <polygon fill="white" stroke="black" points="363,-281.5 363,-300.5 458,-300.5 458,-281.5 363,-281.5"/>
 <text text-anchor="middle" x="410.5" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::IsValid</text>
 </a>
 </g>
 </g>
-<!-- Node1318&#45;&gt;Node1319 -->
-<g id="edge34" class="edge"><title>Node1318&#45;&gt;Node1319</title>
+<!-- Node1314&#45;&gt;Node1315 -->
+<g id="edge34" class="edge"><title>Node1314&#45;&gt;Node1315</title>
 <path fill="none" stroke="midnightblue" d="M249.676,-465.145C264.236,-462.589 279.206,-457.314 290,-447 335.517,-403.507 280.75,-353.771 326,-310 333.373,-302.868 342.838,-298.2 352.731,-295.186"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="353.852,-298.514 362.705,-292.694 352.155,-291.723 353.852,-298.514"/>
 </g>
-<!-- Node1319&#45;&gt;Node1249 -->
-<g id="edge35" class="edge"><title>Node1319&#45;&gt;Node1249</title>
+<!-- Node1315&#45;&gt;Node1245 -->
+<g id="edge35" class="edge"><title>Node1315&#45;&gt;Node1245</title>
 <path fill="none" stroke="midnightblue" d="M458.051,-294.81C470.918,-297.589 484.277,-302.247 495,-310 523.623,-330.695 571.548,-425.074 591.43,-465.989"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="588.357,-467.674 595.852,-475.162 594.662,-464.634 588.357,-467.674"/>
 </g>
-<!-- Node1321 -->
-<g id="node28" class="node"><title>Node1321</title>
+<!-- Node1317 -->
+<g id="node28" class="node"><title>Node1317</title>
 <g id="a_node28"><a xlink:href="class_c_crypto_key_store.html#a6c115cf1fc4129b43c8846b3d51d8ff5" target="_top" xlink:title="Check whether a key corresponding to a given address is present in the store. ">
 <polygon fill="white" stroke="red" points="340.5,-111.5 340.5,-130.5 480.5,-130.5 480.5,-111.5 340.5,-111.5"/>
 <text text-anchor="middle" x="410.5" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCryptoKeyStore::HaveKey</text>
 </a>
 </g>
 </g>
-<!-- Node1320&#45;&gt;Node1321 -->
-<g id="edge37" class="edge"><title>Node1320&#45;&gt;Node1321</title>
+<!-- Node1316&#45;&gt;Node1317 -->
+<g id="edge37" class="edge"><title>Node1316&#45;&gt;Node1317</title>
 <path fill="none" stroke="midnightblue" d="M249.884,-274.795C264.286,-272.194 279.11,-266.981 290,-257 330.108,-220.239 286.118,-177.006 326,-140 327.727,-138.398 329.559,-136.921 331.479,-135.561"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="333.548,-138.404 340.385,-130.31 329.993,-132.374 333.548,-138.404"/>
 </g>
-<!-- Node1327 -->
-<g id="node33" class="node"><title>Node1327</title>
+<!-- Node1323 -->
+<g id="node33" class="node"><title>Node1323</title>
 <g id="a_node33"><a xlink:href="class_c_wallet_tx.html#ac8a376bcb955e437489504dc596b43cf" target="_top" xlink:title="make sure balances are recalculated ">
 <polygon fill="white" stroke="black" points="354.5,-73.5 354.5,-92.5 466.5,-92.5 466.5,-73.5 354.5,-73.5"/>
 <text text-anchor="middle" x="410.5" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWalletTx::MarkDirty</text>
 </a>
 </g>
 </g>
-<!-- Node1326&#45;&gt;Node1327 -->
-<g id="edge43" class="edge"><title>Node1326&#45;&gt;Node1327</title>
+<!-- Node1322&#45;&gt;Node1323 -->
+<g id="edge43" class="edge"><title>Node1322&#45;&gt;Node1323</title>
 <path fill="none" stroke="midnightblue" d="M249.742,-114.491C279.955,-108.535 319.082,-100.823 351.052,-94.5211"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="352.025,-97.8966 361.16,-92.5286 350.671,-91.0287 352.025,-97.8966"/>
 </g>
-<!-- Node1329 -->
-<g id="node35" class="node"><title>Node1329</title>
+<!-- Node1325 -->
+<g id="node35" class="node"><title>Node1325</title>
 <g id="a_node35"><a xlink:href="utiltime_8cpp.html#a46fac5fba8ba905b5f9acb364f5d8c6f" target="_top" xlink:title="For unit testing. ">
 <polygon fill="white" stroke="black" points="383.5,-988.5 383.5,-1007.5 437.5,-1007.5 437.5,-988.5 383.5,-988.5"/>
 <text text-anchor="middle" x="410.5" y="-995.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetTime</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1329 -->
-<g id="edge45" class="edge"><title>Node1328&#45;&gt;Node1329</title>
+<!-- Node1324&#45;&gt;Node1325 -->
+<g id="edge45" class="edge"><title>Node1324&#45;&gt;Node1325</title>
 <path fill="none" stroke="midnightblue" d="M219.171,-931.5C242.886,-943.919 286.597,-965.656 326,-979 341.217,-984.153 358.465,-988.342 373.319,-991.461"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="372.67,-994.901 383.165,-993.449 374.056,-988.039 372.67,-994.901"/>
 </g>
-<!-- Node1330 -->
-<g id="node36" class="node"><title>Node1330</title>
+<!-- Node1326 -->
+<g id="node36" class="node"><title>Node1326</title>
 <g id="a_node36"><a xlink:href="chainparams_8cpp.html#ace5c5b706d71a324a417dd2db394fd4a" target="_top" xlink:title="Return the currently selected parameters. ">
 <polygon fill="white" stroke="black" points="385.5,-950.5 385.5,-969.5 435.5,-969.5 435.5,-950.5 385.5,-950.5"/>
 <text text-anchor="middle" x="410.5" y="-957.5" font-family="Helvetica,sans-Serif" font-size="10.00">Params</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1330 -->
-<g id="edge46" class="edge"><title>Node1328&#45;&gt;Node1330</title>
+<!-- Node1324&#45;&gt;Node1326 -->
+<g id="edge46" class="edge"><title>Node1324&#45;&gt;Node1326</title>
 <path fill="none" stroke="midnightblue" d="M253.719,-931.54C291.724,-938.483 342.116,-947.689 375.153,-953.725"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="374.766,-957.212 385.232,-955.566 376.024,-950.326 374.766,-957.212"/>
 </g>
-<!-- Node1331 -->
-<g id="node37" class="node"><title>Node1331</title>
+<!-- Node1327 -->
+<g id="node37" class="node"><title>Node1327</title>
 <g id="a_node37"><a xlink:href="class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" target="_top" xlink:title="CBlockIndex::GetBlockTime">
 <polygon fill="white" stroke="black" points="531,-1043.5 531,-1062.5 672,-1062.5 672,-1043.5 531,-1043.5"/>
 <text text-anchor="middle" x="601.5" y="-1050.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBlockIndex::GetBlockTime</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1331 -->
-<g id="edge47" class="edge"><title>Node1328&#45;&gt;Node1331</title>
+<!-- Node1324&#45;&gt;Node1327 -->
+<g id="edge47" class="edge"><title>Node1324&#45;&gt;Node1327</title>
 <path fill="none" stroke="midnightblue" d="M205.982,-931.545C219.468,-958.974 262.685,-1037.91 326,-1067 403.967,-1102.82 507.83,-1081.41 562.747,-1065.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="563.838,-1068.83 572.415,-1062.61 561.831,-1062.12 563.838,-1068.83"/>
 </g>
-<!-- Node1332 -->
-<g id="node38" class="node"><title>Node1332</title>
+<!-- Node1328 -->
+<g id="node38" class="node"><title>Node1328</title>
 <g id="a_node38"><a xlink:href="class_c_chain.html#a3077e83c87e8a974765fa76a57fd040b" target="_top" xlink:title="Find the successor of a block in this chain, or NULL if the given index is not found or is the tip...">
 <polygon fill="white" stroke="red" points="372,-912.5 372,-931.5 449,-931.5 449,-912.5 372,-912.5"/>
 <text text-anchor="middle" x="410.5" y="-919.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Next</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1332 -->
-<g id="edge48" class="edge"><title>Node1328&#45;&gt;Node1332</title>
+<!-- Node1324&#45;&gt;Node1328 -->
+<g id="edge48" class="edge"><title>Node1324&#45;&gt;Node1328</title>
 <path fill="none" stroke="midnightblue" d="M290.012,-922C314.623,-922 340.417,-922 361.715,-922"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="361.784,-925.5 371.784,-922 361.784,-918.5 361.784,-925.5"/>
 </g>
-<!-- Node1334 -->
-<g id="node39" class="node"><title>Node1334</title>
+<!-- Node1330 -->
+<g id="node39" class="node"><title>Node1330</title>
 <g id="a_node39"><a xlink:href="clientmodel_8cpp.html#a2a0f0b996679bcf94acb2c877ee2e497" target="_top" xlink:title="ShowProgress">
 <polygon fill="white" stroke="black" points="370.5,-874.5 370.5,-893.5 450.5,-893.5 450.5,-874.5 370.5,-874.5"/>
 <text text-anchor="middle" x="410.5" y="-881.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowProgress</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1334 -->
-<g id="edge49" class="edge"><title>Node1328&#45;&gt;Node1334</title>
+<!-- Node1324&#45;&gt;Node1330 -->
+<g id="edge49" class="edge"><title>Node1324&#45;&gt;Node1330</title>
 <path fill="none" stroke="midnightblue" d="M253.719,-912.46C286.403,-906.489 328.249,-898.844 360.339,-892.981"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="361.182,-896.385 370.391,-891.145 359.924,-889.499 361.182,-896.385"/>
 </g>
-<!-- Node1335 -->
-<g id="node40" class="node"><title>Node1335</title>
+<!-- Node1331 -->
+<g id="node40" class="node"><title>Node1331</title>
 <g id="a_node40"><a xlink:href="util_8h.html#aad133bb6103b53cebf03fd01e2f11ba1" target="_top" xlink:title="Translation function: Call Translate signal on UI interface, which returns a boost::optional result...">
 <polygon fill="white" stroke="black" points="396,-836.5 396,-855.5 425,-855.5 425,-836.5 396,-836.5"/>
 <text text-anchor="middle" x="410.5" y="-843.5" font-family="Helvetica,sans-Serif" font-size="10.00">_</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1335 -->
-<g id="edge50" class="edge"><title>Node1328&#45;&gt;Node1335</title>
+<!-- Node1324&#45;&gt;Node1331 -->
+<g id="edge50" class="edge"><title>Node1324&#45;&gt;Node1331</title>
 <path fill="none" stroke="midnightblue" d="M219.171,-912.5C242.886,-900.081 286.597,-878.344 326,-865 345.753,-858.31 368.929,-853.247 385.846,-850.037"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="386.749,-853.43 395.961,-848.196 385.495,-846.543 386.749,-853.43"/>
 </g>
-<!-- Node1336 -->
-<g id="node41" class="node"><title>Node1336</title>
+<!-- Node1332 -->
+<g id="node41" class="node"><title>Node1332</title>
 <g id="a_node41"><a xlink:href="namespace_checkpoints.html#aa2e60b5114a431ccaff32a6e1f418af1" target="_top" xlink:title="Guess how far we are in the verification process at the given block index. ">
 <polygon fill="white" stroke="black" points="333,-1027 333,-1057 488,-1057 488,-1027 333,-1027"/>
 <text text-anchor="start" x="341" y="-1045" font-family="Helvetica,sans-Serif" font-size="10.00">Checkpoints::GuessVerification</text>
@@ -639,93 +639,93 @@
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1336 -->
-<g id="edge51" class="edge"><title>Node1328&#45;&gt;Node1336</title>
+<!-- Node1324&#45;&gt;Node1332 -->
+<g id="edge51" class="edge"><title>Node1324&#45;&gt;Node1332</title>
 <path fill="none" stroke="midnightblue" d="M211.292,-931.51C231.252,-950.406 278.764,-992.925 326,-1017 330.519,-1019.3 335.285,-1021.43 340.158,-1023.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="339.028,-1026.71 349.62,-1026.96 341.496,-1020.16 339.028,-1026.71"/>
 </g>
-<!-- Node1337 -->
-<g id="node42" class="node"><title>Node1337</title>
+<!-- Node1333 -->
+<g id="node42" class="node"><title>Node1333</title>
 <g id="a_node42"><a xlink:href="class_c_chain_params.html#a55760ebfb6727f84d98295fa40f08940" target="_top" xlink:title="CChainParams::Checkpoints">
 <polygon fill="white" stroke="black" points="338.5,-798.5 338.5,-817.5 482.5,-817.5 482.5,-798.5 338.5,-798.5"/>
 <text text-anchor="middle" x="410.5" y="-805.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChainParams::Checkpoints</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1337 -->
-<g id="edge53" class="edge"><title>Node1328&#45;&gt;Node1337</title>
+<!-- Node1324&#45;&gt;Node1333 -->
+<g id="edge53" class="edge"><title>Node1324&#45;&gt;Node1333</title>
 <path fill="none" stroke="midnightblue" d="M211.159,-912.217C230.88,-892.831 277.982,-849.475 326,-827 331.262,-824.537 336.863,-822.383 342.577,-820.502"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="343.695,-823.821 352.261,-817.586 341.676,-817.118 343.695,-823.821"/>
 </g>
-<!-- Node1338 -->
-<g id="node43" class="node"><title>Node1338</title>
+<!-- Node1334 -->
+<g id="node43" class="node"><title>Node1334</title>
 <g id="a_node43"><a xlink:href="class_c_chain.html#a578545bde95163bee37b1be28e7b2755" target="_top" xlink:title="Returns the index entry for the tip of this chain, or NULL if none. ">
 <polygon fill="white" stroke="black" points="376,-760.5 376,-779.5 445,-779.5 445,-760.5 376,-760.5"/>
 <text text-anchor="middle" x="410.5" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Tip</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1338 -->
-<g id="edge54" class="edge"><title>Node1328&#45;&gt;Node1338</title>
+<!-- Node1324&#45;&gt;Node1334 -->
+<g id="edge54" class="edge"><title>Node1324&#45;&gt;Node1334</title>
 <path fill="none" stroke="midnightblue" d="M207.426,-912.473C223.31,-887.79 269.492,-821.434 326,-789 338.022,-782.1 352.362,-777.706 365.738,-774.907"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="366.526,-778.321 375.724,-773.063 365.255,-771.437 366.526,-778.321"/>
 </g>
-<!-- Node1339 -->
-<g id="node44" class="node"><title>Node1339</title>
+<!-- Node1335 -->
+<g id="node44" class="node"><title>Node1335</title>
 <g id="a_node44"><a xlink:href="validation_8cpp.html#a578c1df234b05798180f0235d469a5ba" target="_top" xlink:title="ReadBlockFromDisk">
 <polygon fill="white" stroke="red" points="357,-1152.5 357,-1171.5 464,-1171.5 464,-1152.5 357,-1152.5"/>
 <text text-anchor="middle" x="410.5" y="-1159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ReadBlockFromDisk</text>
 </a>
 </g>
 </g>
-<!-- Node1328&#45;&gt;Node1339 -->
-<g id="edge55" class="edge"><title>Node1328&#45;&gt;Node1339</title>
+<!-- Node1324&#45;&gt;Node1335 -->
+<g id="edge55" class="edge"><title>Node1324&#45;&gt;Node1335</title>
 <path fill="none" stroke="midnightblue" d="M206.768,-931.676C222.385,-959.814 270.8,-1043.21 326,-1100 343.79,-1118.3 367.393,-1135.3 384.965,-1146.85"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="383.239,-1149.9 393.542,-1152.37 387.029,-1144.01 383.239,-1149.9"/>
 </g>
-<!-- Node1336&#45;&gt;Node1331 -->
-<g id="edge52" class="edge"><title>Node1336&#45;&gt;Node1331</title>
+<!-- Node1332&#45;&gt;Node1327 -->
+<g id="edge52" class="edge"><title>Node1332&#45;&gt;Node1327</title>
 <path fill="none" stroke="midnightblue" d="M488.101,-1046.46C498.802,-1047.08 509.821,-1047.72 520.581,-1048.35"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="520.613,-1051.86 530.8,-1048.94 521.02,-1044.87 520.613,-1051.86"/>
 </g>
-<!-- Node1339&#45;&gt;Node1293 -->
-<g id="edge56" class="edge"><title>Node1339&#45;&gt;Node1293</title>
+<!-- Node1335&#45;&gt;Node1289 -->
+<g id="edge56" class="edge"><title>Node1335&#45;&gt;Node1289</title>
 <path fill="none" stroke="midnightblue" d="M464.147,-1162C499.595,-1162 544.889,-1162 573.305,-1162"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="573.313,-1165.5 583.313,-1162 573.313,-1158.5 573.313,-1165.5"/>
 </g>
-<!-- Node1419 -->
-<g id="node46" class="node"><title>Node1419</title>
+<!-- Node1415 -->
+<g id="node46" class="node"><title>Node1415</title>
 <g id="a_node46"><a xlink:href="walletmodel_8cpp.html#a3bb83e84ffdc22a5e9ea4e5b26697805" target="_top" xlink:title="NotifyAddressBookChanged">
 <polygon fill="white" stroke="black" points="340.5,-187.5 340.5,-206.5 480.5,-206.5 480.5,-187.5 340.5,-187.5"/>
 <text text-anchor="middle" x="410.5" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">NotifyAddressBookChanged</text>
 </a>
 </g>
 </g>
-<!-- Node1418&#45;&gt;Node1419 -->
-<g id="edge58" class="edge"><title>Node1418&#45;&gt;Node1419</title>
+<!-- Node1414&#45;&gt;Node1415 -->
+<g id="edge58" class="edge"><title>Node1414&#45;&gt;Node1415</title>
 <path fill="none" stroke="midnightblue" d="M266.13,-423.524C275.069,-420.39 283.424,-415.757 290,-409 350.859,-346.47 265.525,-278.901 326,-216 327.674,-214.258 329.473,-212.661 331.372,-211.198"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="333.678,-213.883 340.281,-205.598 329.952,-207.956 333.678,-213.883"/>
 </g>
-<!-- Node1420 -->
-<g id="node47" class="node"><title>Node1420</title>
+<!-- Node1416 -->
+<g id="node47" class="node"><title>Node1416</title>
 <g id="a_node47"><a xlink:href="wallet__ismine_8cpp.html#adc59cf67d903c1ba1ef225561b85bfce" target="_top" xlink:title="IsMine">
 <polygon fill="white" stroke="black" points="387.5,-225.5 387.5,-244.5 433.5,-244.5 433.5,-225.5 387.5,-225.5"/>
 <text text-anchor="middle" x="410.5" y="-232.5" font-family="Helvetica,sans-Serif" font-size="10.00">IsMine</text>
 </a>
 </g>
 </g>
-<!-- Node1418&#45;&gt;Node1420 -->
-<g id="edge59" class="edge"><title>Node1418&#45;&gt;Node1420</title>
+<!-- Node1414&#45;&gt;Node1416 -->
+<g id="edge59" class="edge"><title>Node1414&#45;&gt;Node1416</title>
 <path fill="none" stroke="midnightblue" d="M266.156,-422.942C274.982,-419.867 283.297,-415.405 290,-409 335.517,-365.507 285.187,-319.935 326,-272 339.147,-256.559 359.999,-247.312 377.576,-241.923"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="378.764,-245.226 387.464,-239.179 376.892,-238.481 378.764,-245.226"/>
 </g>
-<!-- Node1420&#45;&gt;Node1265 -->
-<g id="edge60" class="edge"><title>Node1420&#45;&gt;Node1265</title>
+<!-- Node1416&#45;&gt;Node1261 -->
+<g id="edge60" class="edge"><title>Node1416&#45;&gt;Node1261</title>
 <path fill="none" stroke="midnightblue" d="M433.756,-244.145C450.742,-251.297 474.613,-261.718 495,-272 523.352,-286.299 554.883,-304.555 576.026,-317.154"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="574.309,-320.206 584.685,-322.345 577.908,-314.202 574.309,-320.206"/>
 </g>
-<!-- Node1420&#45;&gt;Node1420 -->
-<g id="edge61" class="edge"><title>Node1420&#45;&gt;Node1420</title>
+<!-- Node1416&#45;&gt;Node1416 -->
+<g id="edge61" class="edge"><title>Node1416&#45;&gt;Node1416</title>
 <path fill="none" stroke="midnightblue" d="M387.434,-241.608C364.96,-251.146 372.648,-263 410.5,-263 441.846,-263 452.506,-254.871 442.481,-246.66"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="443.992,-243.493 433.566,-241.608 440.541,-249.583 443.992,-243.493"/>
 </g>

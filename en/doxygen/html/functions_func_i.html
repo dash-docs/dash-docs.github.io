@@ -123,7 +123,9 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>ignore()
-: <a class="el" href="class_c_data_stream.html#aebfcaa009d328a208dbbcd13db846dd6">CDataStream</a>
+: <a class="el" href="class_c_auto_file.html#a0159b896d7ed2574cc32663987bfc0ce">CAutoFile</a>
+, <a class="el" href="class_c_data_stream.html#aebfcaa009d328a208dbbcd13db846dd6">CDataStream</a>
+, <a class="el" href="class_c_hash_verifier.html#a773ceef69a4dbcfde85c07e43ccbb589">CHashVerifier&lt; Source &gt;</a>
 </li>
 <li>in_avail()
 : <a class="el" href="class_c_data_stream.html#a0483fe7bccf16aa88bf7272f18a0a7b0">CDataStream</a>
@@ -149,7 +151,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 , <a class="el" href="class_transaction_table_priv.html#ac692aa6aa7820e80accc971c70e0fae5">TransactionTablePriv</a>
 </li>
 <li>indirect_ptr()
-: <a class="el" href="classprevector.html#a50726bfa612cd65bb8bbee9a22942ced">prevector&lt; N, T, Size, Diff &gt;</a>
+: <a class="el" href="classprevector.html#ae3343cc65be9fd678b4a6f8305624de6">prevector&lt; N, T, Size, Diff &gt;</a>
 </li>
 <li>inInitialBlockDownload()
 : <a class="el" href="class_client_model.html#af9798c364463ada09be477b15daf0fbe">ClientModel</a>
@@ -277,9 +279,6 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 <li>isArray()
 : <a class="el" href="class_uni_value.html#a1d2e9479d4fb330a73e0fd41197aec35">UniValue</a>
 </li>
-<li>IsAvailable()
-: <a class="el" href="class_c_coins.html#aa645bc3d18f74e91430ac178a9d28ee4">CCoins</a>
-</li>
 <li>IsBanned()
 : <a class="el" href="class_c_connman.html#aa014a4c7bbfc843aa4fff786a2aa8c96">CConnman</a>
 </li>
@@ -302,11 +301,11 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 : <a class="el" href="class_send_coins_entry.html#a1dcce9480364868dfd0bb8782e039e57">SendCoinsEntry</a>
 </li>
 <li>IsCoinBase()
-: <a class="el" href="class_c_coins.html#a976c1374c3398e1ee23b1110f1663895">CCoins</a>
+: <a class="el" href="class_coin.html#a2da55fc574a7346d11447133832f23e0">Coin</a>
 , <a class="el" href="class_c_transaction.html#a96256e8ac1bf79ad9c057e48c41132dd">CTransaction</a>
 </li>
 <li>IsCollateralAmount()
-: <a class="el" href="group___actions.html#gaea356cdf45e0ec83056ca5b0576add2b">CWallet</a>
+: <a class="el" href="class_c_private_send.html#a529046deea87098dabcba937527f9c20">CPrivateSend</a>
 </li>
 <li>IsCollateralValid()
 : <a class="el" href="class_c_governance_object.html#ad7b40d80dd274eb61a34149b059704d0">CGovernanceObject</a>
@@ -324,7 +323,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 : <a class="el" href="group__map_wallet.html#gaa19d4251c40cfd00f55c0895891d5028">CWallet</a>
 </li>
 <li>IsDenominatedAmount()
-: <a class="el" href="group__map_wallet.html#ga070aa9135ca31d630fa798a868c0b59c">CWallet</a>
+: <a class="el" href="class_c_private_send.html#a7fad1aa9fb6672932a4d908a3e859c22">CPrivateSend</a>
 </li>
 <li>IsDenomSkipped()
 : <a class="el" href="class_c_private_send_client.html#a39479063476c18d9faf8531867d522d5">CPrivateSendClient</a>
@@ -447,6 +446,9 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 <li>IsMine()
 : <a class="el" href="group__map_wallet.html#ga4eada57edc1c443564b8cc9b853d955c">CWallet</a>
 </li>
+<li>IsMixingMasternode()
+: <a class="el" href="class_c_private_send_client.html#a8343b61f5df92c7d9080273f44174685">CPrivateSendClient</a>
+</li>
 <li>IsMnbRecoveryRequested()
 : <a class="el" href="class_c_masternode_man.html#a52f953e116c5b4196b12831354fd0a4d">CMasternodeMan</a>
 </li>
@@ -458,9 +460,6 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 </li>
 <li>IsNewStartRequired()
 : <a class="el" href="class_c_masternode.html#a992b914fa9ffdecc626320ef0923f0a3">CMasternode</a>
-</li>
-<li>IsNormalPaymentScript()
-: <a class="el" href="class_c_script.html#a4bebedf75cc256220cd7be25a6c95fe7">CScript</a>
 </li>
 <li>IsNull()
 : <a class="el" href="classbase__blob.html#aba89c6722866a5850882a509d27d7bbd">base_blob&lt; BITS &gt;</a>
@@ -490,7 +489,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 : <a class="el" href="class_c_masternode.html#aed1070b99fd2948d7d914ee14f138466">CMasternode</a>
 </li>
 <li>IsOutputsCompatibleWithSessionDenom()
-: <a class="el" href="class_c_private_send_server.html#a9db6664e7c755680654305aa31d918de">CPrivateSendServer</a>
+: <a class="el" href="class_c_private_send_server.html#a5469414252144e4af89ed0002db1c30b">CPrivateSendServer</a>
 </li>
 <li>IsPayToPublicKeyHash()
 : <a class="el" href="class_c_script.html#abd0d9370d4d4e7b7503d680410752b2b">CScript</a>
@@ -512,9 +511,6 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 </li>
 <li>isPriDataPoint()
 : <a class="el" href="class_c_block_policy_estimator.html#a9ac58339877c62a144679caa349c414a">CBlockPolicyEstimator</a>
-</li>
-<li>IsPruned()
-: <a class="el" href="class_c_coins.html#a597a7cb8830fc29565918ce1823b2244">CCoins</a>
 </li>
 <li>IsPushOnly()
 : <a class="el" href="class_c_script.html#a090905f875fa5a40e616b319de8e973f">CScript</a>
@@ -607,6 +603,12 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 : <a class="el" href="class_c_private_send_server.html#a24be951a12edb94519674585dd211eee">CPrivateSendServer</a>
 </li>
 <li>IsSpent()
+: <a class="el" href="class_coin.html#ad900ffd083fd31e3b52adf3dc4092953">Coin</a>
+</li>
+<li>isSpent()
+: <a class="el" href="class_c_tx_mem_pool.html#ae66490bba04260f9779873d2b8ca602a">CTxMemPool</a>
+</li>
+<li>IsSpent()
 : <a class="el" href="group__map_wallet.html#ga6adcf1c224ed3c3fe4b0b19f6fca75d8">CWallet</a>
 </li>
 <li>isSpent()
@@ -664,7 +666,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 : <a class="el" href="class_c_masternode.html#a1b66eca7ab7dafe127beb09d9380d692">CMasternode</a>
 </li>
 <li>IsValid()
-: <a class="el" href="class_c_bitcoin_address.html#a0c6030891dae71881944f93774fa907e">CBitcoinAddress</a>
+: <a class="el" href="class_c_bitcoin_address.html#ab39907ce6895062a8f8bf585270ef13b">CBitcoinAddress</a>
 , <a class="el" href="class_c_bitcoin_secret.html#a2a93fa8a09826ff63498cb3e4370c154">CBitcoinSecret</a>
 , <a class="el" href="class_c_block_index.html#ad8b5a6560e7c0d4222066e2922178683">CBlockIndex</a>
 , <a class="el" href="class_c_governance_payment.html#aef5866ad766328aa36ad20e020c454f1">CGovernancePayment</a>
@@ -696,7 +698,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 : <a class="el" href="class_c_governance_object.html#a87299fa8b8e08bc0c31071960a8ba9fe">CGovernanceObject</a>
 </li>
 <li>IsValidNetAddr()
-: <a class="el" href="class_c_masternode.html#a70f120b4964fdd802a6975bfb9017a23">CMasternode</a>
+: <a class="el" href="class_c_masternode.html#a8e2f73e4c9d366b688c088e861534cfd">CMasternode</a>
 </li>
 <li>IsValidStateForAutoStart()
 : <a class="el" href="class_c_masternode.html#ae509fc0a2f845695fd9f894433c9534f">CMasternode</a>
@@ -720,7 +722,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 : <a class="el" href="class_c_bloom_filter.html#a06f2094da8e7d9c6ad4ea426858e32de">CBloomFilter</a>
 </li>
 <li>item_ptr()
-: <a class="el" href="classprevector.html#a519b06f5a6fc5c9dce4c0bb1b0d985b7">prevector&lt; N, T, Size, Diff &gt;</a>
+: <a class="el" href="classprevector.html#a59f1d7bcbc751cfa0faddd7ffa184846">prevector&lt; N, T, Size, Diff &gt;</a>
 </li>
 <li>iterator()
 : <a class="el" href="classprevector_1_1iterator.html#ae9dd2b5e8d96f866e4b05d6b7535f285">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
@@ -732,7 +734,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

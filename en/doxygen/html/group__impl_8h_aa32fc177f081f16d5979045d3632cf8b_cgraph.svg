@@ -9,60 +9,60 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 138)">
 <title>secp256k1_gej_eq_x_var</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-138 320,-138 320,4 -4,4"/>
-<!-- Node272 -->
-<g id="node1" class="node"><title>Node272</title>
+<!-- Node260 -->
+<g id="node1" class="node"><title>Node260</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-57.5 0,-76.5 127,-76.5 127,-57.5 0,-57.5"/>
 <text text-anchor="middle" x="63.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_gej_eq_x_var</text>
 </g>
-<!-- Node273 -->
-<g id="node2" class="node"><title>Node273</title>
+<!-- Node261 -->
+<g id="node2" class="node"><title>Node261</title>
 <g id="a_node2"><a xlink:href="field_8h.html#a16ab4d0dd8bcb5da1b888288063014f3" target="_top" xlink:title="Compare two field elements. ">
 <polygon fill="white" stroke="black" points="177,-114.5 177,-133.5 302,-133.5 302,-114.5 177,-114.5"/>
 <text text-anchor="middle" x="239.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_equal_var</text>
 </a>
 </g>
 </g>
-<!-- Node272&#45;&gt;Node273 -->
-<g id="edge1" class="edge"><title>Node272&#45;&gt;Node273</title>
+<!-- Node260&#45;&gt;Node261 -->
+<g id="edge1" class="edge"><title>Node260&#45;&gt;Node261</title>
 <path fill="none" stroke="midnightblue" d="M86.9131,-76.5455C106.699,-84.7549 136.445,-96.5709 163,-105 170.693,-107.442 178.906,-109.779 186.977,-111.926"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="186.149,-115.327 196.707,-114.446 187.904,-108.551 186.149,-115.327"/>
 </g>
-<!-- Node274 -->
-<g id="node3" class="node"><title>Node274</title>
+<!-- Node262 -->
+<g id="node3" class="node"><title>Node262</title>
 <g id="a_node3"><a xlink:href="field_8h.html#a542b97d2574d9687c563d002587cf9a2" target="_top" xlink:title="Sets a field element to be the product of two others. ">
 <polygon fill="white" stroke="black" points="190.5,-76.5 190.5,-95.5 288.5,-95.5 288.5,-76.5 190.5,-76.5"/>
 <text text-anchor="middle" x="239.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_mul</text>
 </a>
 </g>
 </g>
-<!-- Node272&#45;&gt;Node274 -->
-<g id="edge2" class="edge"><title>Node272&#45;&gt;Node274</title>
+<!-- Node260&#45;&gt;Node262 -->
+<g id="edge2" class="edge"><title>Node260&#45;&gt;Node262</title>
 <path fill="none" stroke="midnightblue" d="M127.318,-73.8594C144.489,-75.7344 163.024,-77.7584 179.947,-79.6062"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="179.927,-83.1248 190.248,-80.7311 180.687,-76.1662 179.927,-83.1248"/>
 </g>
-<!-- Node275 -->
-<g id="node4" class="node"><title>Node275</title>
+<!-- Node263 -->
+<g id="node4" class="node"><title>Node263</title>
 <g id="a_node4"><a xlink:href="field_8h.html#a0aaec7df2f708a451a8e1f41a943d8b1" target="_top" xlink:title="Weakly normalize a field element: reduce it magnitude to 1, but don&#39;t fully normalize. ">
 <polygon fill="white" stroke="black" points="163,-38.5 163,-57.5 316,-57.5 316,-38.5 163,-38.5"/>
 <text text-anchor="middle" x="239.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_normalize_weak</text>
 </a>
 </g>
 </g>
-<!-- Node272&#45;&gt;Node275 -->
-<g id="edge3" class="edge"><title>Node272&#45;&gt;Node275</title>
+<!-- Node260&#45;&gt;Node263 -->
+<g id="edge3" class="edge"><title>Node260&#45;&gt;Node263</title>
 <path fill="none" stroke="midnightblue" d="M127.318,-60.1406C135.574,-59.239 144.146,-58.3031 152.702,-57.3688"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="153.158,-60.8399 162.719,-56.275 152.398,-53.8812 153.158,-60.8399"/>
 </g>
-<!-- Node276 -->
-<g id="node5" class="node"><title>Node276</title>
+<!-- Node264 -->
+<g id="node5" class="node"><title>Node264</title>
 <g id="a_node5"><a xlink:href="field_8h.html#a6cbe550ca5eb35e683b1c8d68d8de26b" target="_top" xlink:title="Sets a field element to be the square of another. ">
 <polygon fill="white" stroke="black" points="191.5,-0.5 191.5,-19.5 287.5,-19.5 287.5,-0.5 191.5,-0.5"/>
 <text text-anchor="middle" x="239.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_sqr</text>
 </a>
 </g>
 </g>
-<!-- Node272&#45;&gt;Node276 -->
-<g id="edge4" class="edge"><title>Node272&#45;&gt;Node276</title>
+<!-- Node260&#45;&gt;Node264 -->
+<g id="edge4" class="edge"><title>Node260&#45;&gt;Node264</title>
 <path fill="none" stroke="midnightblue" d="M86.9131,-57.4545C106.699,-49.2451 136.445,-37.4291 163,-29 170.693,-26.5579 178.906,-24.2212 186.977,-22.0737"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="187.904,-25.4492 196.707,-19.5536 186.149,-18.6728 187.904,-25.4492"/>
 </g>

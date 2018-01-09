@@ -1,11 +1,10 @@
 var searchData=
 [
   ['offline',['Offline',['../class_transaction_status.html#aaa6cc19ca3509bbae72d0df1661f85cbaf8b9ab6fc1d08781bb94301e358171b6',1,'TransactionStatus']]],
-  ['ok',['Ok',['../class_c_flat_d_b.html#a6331371ac089e2c46cf258ac0c8e6db0a685ed48e5731b256c303dbdd5195b331',1,'CFlatDB::Ok()'],['../class_address_table_model.html#a3d502b85fc09461e779dae4589c29956af4012fcd28039528046c825a7370ad95',1,'AddressTableModel::OK()'],['../class_wallet_model.html#afb93f64411320dce4692c2190b7d35ccae8b83ccd04b2460f6ec5797b92776968',1,'WalletModel::OK()']]],
+  ['ok',['OK',['../class_address_table_model.html#a3d502b85fc09461e779dae4589c29956af4012fcd28039528046c825a7370ad95',1,'AddressTableModel::OK()'],['../class_wallet_model.html#afb93f64411320dce4692c2190b7d35ccae8b83ccd04b2460f6ec5797b92776968',1,'WalletModel::OK()'],['../class_c_flat_d_b.html#a6331371ac089e2c46cf258ac0c8e6db0a685ed48e5731b256c303dbdd5195b331',1,'CFlatDB::Ok()']]],
   ['only_5f1000',['ONLY_1000',['../wallet_8h.html#a90b09b05f289ac32704a6446a94566cea3eec6f6b31b59d32f5dc13c63bae582d',1,'wallet.h']]],
   ['only_5fdenominated',['ONLY_DENOMINATED',['../wallet_8h.html#a90b09b05f289ac32704a6446a94566ceaab4c4a7abab40ebdb2706c1708fff22e',1,'wallet.h']]],
-  ['only_5fnondenominated_5fnot1000ifmn',['ONLY_NONDENOMINATED_NOT1000IFMN',['../wallet_8h.html#a90b09b05f289ac32704a6446a94566cea35c9bedf196c5d09731928695c969b70',1,'wallet.h']]],
-  ['only_5fnot1000ifmn',['ONLY_NOT1000IFMN',['../wallet_8h.html#a90b09b05f289ac32704a6446a94566ceab6264c785b1784dcb35ee9ddb84b8583',1,'wallet.h']]],
+  ['only_5fnondenominated',['ONLY_NONDENOMINATED',['../wallet_8h.html#a90b09b05f289ac32704a6446a94566cea009b510e2a783d13c11717045cb06fe2',1,'wallet.h']]],
   ['only_5fprivatesend_5fcollateral',['ONLY_PRIVATESEND_COLLATERAL',['../wallet_8h.html#a90b09b05f289ac32704a6446a94566cea8454489afd757a138dd833cb00cf7aab',1,'wallet.h']]],
   ['op_5f0',['OP_0',['../script_8h.html#a63e349a6089a54da9fe09a3d858648bdaccd484dad2223fffdbdc2637c4f1e40e',1,'script.h']]],
   ['op_5f0notequal',['OP_0NOTEQUAL',['../script_8h.html#a63e349a6089a54da9fe09a3d858648bdab0bd0f4a5f20026157c1e8f7851e9c73',1,'script.h']]],

@@ -90,6 +90,7 @@ var searchData=
   ['rol64_5fodd',['ROL64_odd',['../keccak_8c.html#a196769de5816b451233a29da6d66173b',1,'keccak.c']]],
   ['rol64_5fodd1',['ROL64_odd1',['../keccak_8c.html#a55f7290d48864a242e6b0e0f7077e52e',1,'keccak.c']]],
   ['rol64_5fodd63',['ROL64_odd63',['../keccak_8c.html#a32656d60efb25297b86069fb6a527742',1,'keccak.c']]],
+  ['rotl',['ROTL',['../hash_8cpp.html#addd42b95ef425979d1d0dca095dec800',1,'hash.cpp']]],
   ['rotl32',['ROTL32',['../cubehash_8c.html#a6e257f743c235883c0a716124859dde4',1,'cubehash.c']]],
   ['round',['Round',['../hash__impl_8h.html#a4a6398f77b0cf603722649d4fd67260f',1,'hash_impl.h']]],
   ['round_5fbig_5fp',['ROUND_BIG_P',['../groestl_8c.html#ad99b749925534e53b0e153e45cf47360',1,'groestl.c']]],

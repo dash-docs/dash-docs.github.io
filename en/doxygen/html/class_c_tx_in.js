@@ -11,7 +11,6 @@ var class_c_tx_in =
     [ "ADD_SERIALIZE_METHODS", "class_c_tx_in.html#aad2fd3fef5ad4ebe7e54c0db0cc34be4", null ],
     [ "nSequence", "class_c_tx_in.html#a635deeaf3ca4e8b3e1a97054607211b9", null ],
     [ "prevout", "class_c_tx_in.html#aed9312051a25380cbd7f123408ab7c20", null ],
-    [ "prevPubKey", "class_c_tx_in.html#a91732c5ffb13520a6989b162ff6683fc", null ],
     [ "scriptSig", "class_c_tx_in.html#aba540fd902366210a6ad6cd9a18fe763", null ],
     [ "SEQUENCE_FINAL", "class_c_tx_in.html#a70adafa744d8baaf36957291c850b29d", null ],
     [ "SEQUENCE_LOCKTIME_DISABLE_FLAG", "class_c_tx_in.html#a21b493d79f5655b11277c032ac8c4d92", null ],

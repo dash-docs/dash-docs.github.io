@@ -26,6 +26,7 @@ var searchData=
   ['color_5ftx_5fstatus_5foffline',['COLOR_TX_STATUS_OFFLINE',['../guiconstants_8h.html#a63c2f5fd5f1780fb3a77e6fdd9f33427',1,'guiconstants.h']]],
   ['color_5ftx_5fstatus_5fopenuntildate',['COLOR_TX_STATUS_OPENUNTILDATE',['../guiconstants_8h.html#a4828579cf1a85e087452ef6d828bf175',1,'guiconstants.h']]],
   ['color_5funconfirmed',['COLOR_UNCONFIRMED',['../guiconstants_8h.html#a3a7798e924111d2de3ca86ab4dbec5bf',1,'guiconstants.h']]],
+  ['compactsize',['COMPACTSIZE',['../serialize_8h.html#abea2415cbb9469ff5b90adf057d7e440',1,'serialize.h']]],
   ['compress32',['COMPRESS32',['../blake_8c.html#ac50ef65bcccd0bb61df27199f4265dc3',1,'blake.c']]],
   ['compress_5fbig',['COMPRESS_BIG',['../echo_8c.html#a0816a15f9fb16bf0dfc673c89462ea56',1,'COMPRESS_BIG():&#160;echo.c'],['../groestl_8c.html#a1353c3f1c75ca3193dde4fae1379d1f4',1,'COMPRESS_BIG():&#160;groestl.c']]],
   ['compress_5fsmall',['COMPRESS_SMALL',['../echo_8c.html#af0d792cfab361c763a2fa806ed128b6a',1,'COMPRESS_SMALL():&#160;echo.c'],['../groestl_8c.html#a7ba76c07289d57d870f78be18a98ee9d',1,'COMPRESS_SMALL():&#160;groestl.c']]],

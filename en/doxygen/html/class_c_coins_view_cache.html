@@ -123,7 +123,6 @@ $(document).ready(function(){initNavTree('class_c_coins_view_cache.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="class_c_coins_view_cache-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CCoinsViewCache Class Reference</div>  </div>
@@ -155,42 +154,43 @@ $(document).ready(function(){initNavTree('class_c_coins_view_cache.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a515a6f259af607fb3394b560d9c063c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a515a6f259af607fb3394b560d9c063c9">CCoinsViewCache</a> (<a class="el" href="class_c_coins_view.html">CCoinsView</a> *baseIn)</td></tr>
 <tr class="separator:a515a6f259af607fb3394b560d9c063c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6148421cb7605fb434f6c8622f39430b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a6148421cb7605fb434f6c8622f39430b">~CCoinsViewCache</a> ()</td></tr>
-<tr class="separator:a6148421cb7605fb434f6c8622f39430b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b62444593fdb580bfa4bd6fab41fafa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a1b62444593fdb580bfa4bd6fab41fafa">GetCoins</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid, <a class="el" href="class_c_coins.html">CCoins</a> &amp;coins) const</td></tr>
-<tr class="memdesc:a1b62444593fdb580bfa4bd6fab41fafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> (unspent transaction outputs) for a given txid.  <a href="#a1b62444593fdb580bfa4bd6fab41fafa">More...</a><br /></td></tr>
-<tr class="separator:a1b62444593fdb580bfa4bd6fab41fafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8f0c55b6fc207d2188948a565125ab7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#aa8f0c55b6fc207d2188948a565125ab7">HaveCoins</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid) const</td></tr>
-<tr class="memdesc:aa8f0c55b6fc207d2188948a565125ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just check whether we have data for a given txid.  <a href="#aa8f0c55b6fc207d2188948a565125ab7">More...</a><br /></td></tr>
-<tr class="separator:aa8f0c55b6fc207d2188948a565125ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1190c94a943c067d13211179ef06470b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classuint256.html">uint256</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a1190c94a943c067d13211179ef06470b">GetBestBlock</a> () const</td></tr>
-<tr class="memdesc:a1190c94a943c067d13211179ef06470b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the block hash whose state this <a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a> currently represents.  <a href="#a1190c94a943c067d13211179ef06470b">More...</a><br /></td></tr>
-<tr class="separator:a1190c94a943c067d13211179ef06470b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb452bec99d4fa667fec4c0df25dedf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#aaeb452bec99d4fa667fec4c0df25dedf">GetCoin</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;outpoint, <a class="el" href="class_coin.html">Coin</a> &amp;coin) const override</td></tr>
+<tr class="memdesc:aaeb452bec99d4fa667fec4c0df25dedf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> (unspent transaction output) for a given outpoint.  <a href="#aaeb452bec99d4fa667fec4c0df25dedf">More...</a><br /></td></tr>
+<tr class="separator:aaeb452bec99d4fa667fec4c0df25dedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af097128dca85eb8f94b864015d839d46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#af097128dca85eb8f94b864015d839d46">HaveCoin</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;outpoint) const override</td></tr>
+<tr class="memdesc:af097128dca85eb8f94b864015d839d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just check whether a given outpoint is unspent.  <a href="#af097128dca85eb8f94b864015d839d46">More...</a><br /></td></tr>
+<tr class="separator:af097128dca85eb8f94b864015d839d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943a3d13f2ba6936002d7a87b969edba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classuint256.html">uint256</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a943a3d13f2ba6936002d7a87b969edba">GetBestBlock</a> () const override</td></tr>
+<tr class="memdesc:a943a3d13f2ba6936002d7a87b969edba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the block hash whose state this <a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a> currently represents.  <a href="#a943a3d13f2ba6936002d7a87b969edba">More...</a><br /></td></tr>
+<tr class="separator:a943a3d13f2ba6936002d7a87b969edba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3f787f77b123f0fd340fbe4e458b4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#aa3f787f77b123f0fd340fbe4e458b4ad">SetBestBlock</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;<a class="el" href="class_c_coins_view_cache.html#a229dddddbc5501edc250209a2ce5df8b">hashBlock</a>)</td></tr>
 <tr class="separator:aa3f787f77b123f0fd340fbe4e458b4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a561bb7c6c97701b12c48fbbb563d0a91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a561bb7c6c97701b12c48fbbb563d0a91">BatchWrite</a> (<a class="el" href="coins_8h.html#a2886ba2fd0428bae777e1cbcabc02834">CCoinsMap</a> &amp;mapCoins, const <a class="el" href="classuint256.html">uint256</a> &amp;<a class="el" href="class_c_coins_view_cache.html#a229dddddbc5501edc250209a2ce5df8b">hashBlock</a>)</td></tr>
-<tr class="memdesc:a561bb7c6c97701b12c48fbbb563d0a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a bulk modification (multiple <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> changes + BestBlock change).  <a href="#a561bb7c6c97701b12c48fbbb563d0a91">More...</a><br /></td></tr>
-<tr class="separator:a561bb7c6c97701b12c48fbbb563d0a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eef8cd21bc594b53a72bf5161dfd95b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a5eef8cd21bc594b53a72bf5161dfd95b">HaveCoinsInCache</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid) const</td></tr>
-<tr class="memdesc:a5eef8cd21bc594b53a72bf5161dfd95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we have the given tx already loaded in this cache.  <a href="#a5eef8cd21bc594b53a72bf5161dfd95b">More...</a><br /></td></tr>
-<tr class="separator:a5eef8cd21bc594b53a72bf5161dfd95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e5341e8b01233949d6170dd4d1fd75d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_coins.html">CCoins</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a8e5341e8b01233949d6170dd4d1fd75d">AccessCoins</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid) const</td></tr>
-<tr class="memdesc:a8e5341e8b01233949d6170dd4d1fd75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> in the cache, or NULL if not found.  <a href="#a8e5341e8b01233949d6170dd4d1fd75d">More...</a><br /></td></tr>
-<tr class="separator:a8e5341e8b01233949d6170dd4d1fd75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab67c0d489873ed735c4fc52aa66f0830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_coins_modifier.html">CCoinsModifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#ab67c0d489873ed735c4fc52aa66f0830">ModifyCoins</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid)</td></tr>
-<tr class="memdesc:ab67c0d489873ed735c4fc52aa66f0830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a modifiable reference to a <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a>.  <a href="#ab67c0d489873ed735c4fc52aa66f0830">More...</a><br /></td></tr>
-<tr class="separator:ab67c0d489873ed735c4fc52aa66f0830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b0bd2eb9dce2fa7a6c87db0e16c8b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_coins_modifier.html">CCoinsModifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a27b0bd2eb9dce2fa7a6c87db0e16c8b4">ModifyNewCoins</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid)</td></tr>
-<tr class="memdesc:a27b0bd2eb9dce2fa7a6c87db0e16c8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a modifiable reference to a <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a>.  <a href="#a27b0bd2eb9dce2fa7a6c87db0e16c8b4">More...</a><br /></td></tr>
-<tr class="separator:a27b0bd2eb9dce2fa7a6c87db0e16c8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0858749f05c75450e3575ec666f3f94a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a0858749f05c75450e3575ec666f3f94a">BatchWrite</a> (<a class="el" href="coins_8h.html#a6d9207327f736296422186c8192d3d30">CCoinsMap</a> &amp;mapCoins, const <a class="el" href="classuint256.html">uint256</a> &amp;<a class="el" href="class_c_coins_view_cache.html#a229dddddbc5501edc250209a2ce5df8b">hashBlock</a>) override</td></tr>
+<tr class="memdesc:a0858749f05c75450e3575ec666f3f94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a bulk modification (multiple <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> changes + BestBlock change).  <a href="#a0858749f05c75450e3575ec666f3f94a">More...</a><br /></td></tr>
+<tr class="separator:a0858749f05c75450e3575ec666f3f94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4533d27d1d8d744080545f7cea5b8e7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_coins_view_cursor.html">CCoinsViewCursor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a4533d27d1d8d744080545f7cea5b8e7c">Cursor</a> () const override</td></tr>
+<tr class="memdesc:a4533d27d1d8d744080545f7cea5b8e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a cursor to iterate over the whole state.  <a href="#a4533d27d1d8d744080545f7cea5b8e7c">More...</a><br /></td></tr>
+<tr class="separator:a4533d27d1d8d744080545f7cea5b8e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e11ee063c40be4a6bc620fd98149a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#ab2e11ee063c40be4a6bc620fd98149a0">HaveCoinInCache</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;outpoint) const</td></tr>
+<tr class="memdesc:ab2e11ee063c40be4a6bc620fd98149a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we have the given utxo already loaded in this cache.  <a href="#ab2e11ee063c40be4a6bc620fd98149a0">More...</a><br /></td></tr>
+<tr class="separator:ab2e11ee063c40be4a6bc620fd98149a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd0144ded5ce891084aabff29141f8b2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_coin.html">Coin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#afd0144ded5ce891084aabff29141f8b2">AccessCoin</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;output) const</td></tr>
+<tr class="memdesc:afd0144ded5ce891084aabff29141f8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> in the cache, or a pruned one if not found.  <a href="#afd0144ded5ce891084aabff29141f8b2">More...</a><br /></td></tr>
+<tr class="separator:afd0144ded5ce891084aabff29141f8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81968ae5f809c461f1d537c5feb84c5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a81968ae5f809c461f1d537c5feb84c5c">AddCoin</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;outpoint, <a class="el" href="class_coin.html">Coin</a> &amp;&amp;coin, bool potential_overwrite)</td></tr>
+<tr class="memdesc:a81968ae5f809c461f1d537c5feb84c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a coin.  <a href="#a81968ae5f809c461f1d537c5feb84c5c">More...</a><br /></td></tr>
+<tr class="separator:a81968ae5f809c461f1d537c5feb84c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fae5769fb3795407bcd16156274c152"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a2fae5769fb3795407bcd16156274c152">SpendCoin</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;outpoint, <a class="el" href="class_coin.html">Coin</a> *moveto=nullptr)</td></tr>
+<tr class="memdesc:a2fae5769fb3795407bcd16156274c152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spend a coin.  <a href="#a2fae5769fb3795407bcd16156274c152">More...</a><br /></td></tr>
+<tr class="separator:a2fae5769fb3795407bcd16156274c152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9888d4feaa46666d03871cd7cd1c01d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#ac9888d4feaa46666d03871cd7cd1c01d">Flush</a> ()</td></tr>
 <tr class="memdesc:ac9888d4feaa46666d03871cd7cd1c01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the modifications applied to this cache to its base.  <a href="#ac9888d4feaa46666d03871cd7cd1c01d">More...</a><br /></td></tr>
 <tr class="separator:ac9888d4feaa46666d03871cd7cd1c01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0bc342537c7f841bd3e9cf2a4d179dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#ab0bc342537c7f841bd3e9cf2a4d179dd">Uncache</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid)</td></tr>
-<tr class="memdesc:ab0bc342537c7f841bd3e9cf2a4d179dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the transaction with the given hash from the cache, if it is not modified.  <a href="#ab0bc342537c7f841bd3e9cf2a4d179dd">More...</a><br /></td></tr>
-<tr class="separator:ab0bc342537c7f841bd3e9cf2a4d179dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4251130f7fac0fd8f7c9eb630179e986"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a4251130f7fac0fd8f7c9eb630179e986">Uncache</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;outpoint)</td></tr>
+<tr class="memdesc:a4251130f7fac0fd8f7c9eb630179e986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the UTXO with the given outpoint from the cache, if it is not modified.  <a href="#a4251130f7fac0fd8f7c9eb630179e986">More...</a><br /></td></tr>
+<tr class="separator:a4251130f7fac0fd8f7c9eb630179e986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a937e30d96fd43e403c862b193cf5b942"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a937e30d96fd43e403c862b193cf5b942">GetCacheSize</a> () const</td></tr>
-<tr class="memdesc:a937e30d96fd43e403c862b193cf5b942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the size of the cache (in number of transactions)  <a href="#a937e30d96fd43e403c862b193cf5b942">More...</a><br /></td></tr>
+<tr class="memdesc:a937e30d96fd43e403c862b193cf5b942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the size of the cache (in number of transaction outputs)  <a href="#a937e30d96fd43e403c862b193cf5b942">More...</a><br /></td></tr>
 <tr class="separator:a937e30d96fd43e403c862b193cf5b942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc01927480b99814280a4388e738d8b9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#adc01927480b99814280a4388e738d8b9">DynamicMemoryUsage</a> () const</td></tr>
 <tr class="memdesc:adc01927480b99814280a4388e738d8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the size of the cache (in bytes)  <a href="#adc01927480b99814280a4388e738d8b9">More...</a><br /></td></tr>
@@ -204,16 +204,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a99f63e73d2fde26d7109c2ba5027a1ad"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a99f63e73d2fde26d7109c2ba5027a1ad">GetPriority</a> (const <a class="el" href="class_c_transaction.html">CTransaction</a> &amp;tx, int nHeight, <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> &amp;inChainInputValue) const</td></tr>
 <tr class="memdesc:a99f63e73d2fde26d7109c2ba5027a1ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return priority of tx at height nHeight.  <a href="#a99f63e73d2fde26d7109c2ba5027a1ad">More...</a><br /></td></tr>
 <tr class="separator:a99f63e73d2fde26d7109c2ba5027a1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a0de51586fa92d83cfa321fb8936c5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_tx_out.html">CTxOut</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a54a0de51586fa92d83cfa321fb8936c5">GetOutputFor</a> (const <a class="el" href="class_c_tx_in.html">CTxIn</a> &amp;input) const</td></tr>
-<tr class="separator:a54a0de51586fa92d83cfa321fb8936c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_coins_view_backed"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_coins_view_backed')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_c_coins_view_backed.html">CCoinsViewBacked</a></td></tr>
 <tr class="memitem:af86a3b07433e8d84678772411791125e inherit pub_methods_class_c_coins_view_backed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_backed.html#af86a3b07433e8d84678772411791125e">CCoinsViewBacked</a> (<a class="el" href="class_c_coins_view.html">CCoinsView</a> *viewIn)</td></tr>
 <tr class="separator:af86a3b07433e8d84678772411791125e inherit pub_methods_class_c_coins_view_backed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eaddfbfd401a95c2fda2a8d8feaaf73 inherit pub_methods_class_c_coins_view_backed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_backed.html#a7eaddfbfd401a95c2fda2a8d8feaaf73">SetBackend</a> (<a class="el" href="class_c_coins_view.html">CCoinsView</a> &amp;viewIn)</td></tr>
 <tr class="separator:a7eaddfbfd401a95c2fda2a8d8feaaf73 inherit pub_methods_class_c_coins_view_backed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa787da5760afa843d32764b70420b2d6 inherit pub_methods_class_c_coins_view_backed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_backed.html#aa787da5760afa843d32764b70420b2d6">GetStats</a> (<a class="el" href="struct_c_coins_stats.html">CCoinsStats</a> &amp;stats) const</td></tr>
-<tr class="memdesc:aa787da5760afa843d32764b70420b2d6 inherit pub_methods_class_c_coins_view_backed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate statistics about the unspent transaction output set.  <a href="class_c_coins_view_backed.html#aa787da5760afa843d32764b70420b2d6">More...</a><br /></td></tr>
-<tr class="separator:aa787da5760afa843d32764b70420b2d6 inherit pub_methods_class_c_coins_view_backed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442c8406941171ad4bc0f18ad9ca56fe inherit pub_methods_class_c_coins_view_backed"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_backed.html#a442c8406941171ad4bc0f18ad9ca56fe">EstimateSize</a> () const override</td></tr>
+<tr class="memdesc:a442c8406941171ad4bc0f18ad9ca56fe inherit pub_methods_class_c_coins_view_backed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate database size (0 if not implemented)  <a href="class_c_coins_view_backed.html#a442c8406941171ad4bc0f18ad9ca56fe">More...</a><br /></td></tr>
+<tr class="separator:a442c8406941171ad4bc0f18ad9ca56fe inherit pub_methods_class_c_coins_view_backed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_coins_view"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_coins_view')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_c_coins_view.html">CCoinsView</a></td></tr>
 <tr class="memitem:a7ffb4218bf991ddff47339e44c8710da inherit pub_methods_class_c_coins_view"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view.html#a7ffb4218bf991ddff47339e44c8710da">~CCoinsView</a> ()</td></tr>
 <tr class="memdesc:a7ffb4218bf991ddff47339e44c8710da inherit pub_methods_class_c_coins_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">As we use CCoinsViews polymorphically, have a virtual destructor.  <a href="class_c_coins_view.html#a7ffb4218bf991ddff47339e44c8710da">More...</a><br /></td></tr>
@@ -221,12 +219,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a363e27234d36bb0fc533d60cd64d1bc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a363e27234d36bb0fc533d60cd64d1bc3">hasModifier</a></td></tr>
-<tr class="separator:a363e27234d36bb0fc533d60cd64d1bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a229dddddbc5501edc250209a2ce5df8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classuint256.html">uint256</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a229dddddbc5501edc250209a2ce5df8b">hashBlock</a></td></tr>
 <tr class="memdesc:a229dddddbc5501edc250209a2ce5df8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make mutable so that we can "fill the cache" even from Get-methods declared as "const".  <a href="#a229dddddbc5501edc250209a2ce5df8b">More...</a><br /></td></tr>
 <tr class="separator:a229dddddbc5501edc250209a2ce5df8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af33cc2c6d38af65ac833d4d13c8e3764"><td class="memItemLeft" align="right" valign="top"><a class="el" href="coins_8h.html#a2886ba2fd0428bae777e1cbcabc02834">CCoinsMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#af33cc2c6d38af65ac833d4d13c8e3764">cacheCoins</a></td></tr>
+<tr class="memitem:af33cc2c6d38af65ac833d4d13c8e3764"><td class="memItemLeft" align="right" valign="top"><a class="el" href="coins_8h.html#a6d9207327f736296422186c8192d3d30">CCoinsMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#af33cc2c6d38af65ac833d4d13c8e3764">cacheCoins</a></td></tr>
 <tr class="separator:af33cc2c6d38af65ac833d4d13c8e3764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a980e94152512be71f2aa51e600132ef9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a980e94152512be71f2aa51e600132ef9">cachedCoinsUsage</a></td></tr>
 <tr class="separator:a980e94152512be71f2aa51e600132ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,23 +232,16 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a7d385628b7d821d2d5b6c5aaf1734616"><td class="memItemLeft" align="right" valign="top">CCoinsMap::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a7d385628b7d821d2d5b6c5aaf1734616">FetchCoins</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid)</td></tr>
-<tr class="separator:a7d385628b7d821d2d5b6c5aaf1734616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a964e8bc4a5f8131eab430d356a25fc6d"><td class="memItemLeft" align="right" valign="top">CCoinsMap::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#a964e8bc4a5f8131eab430d356a25fc6d">FetchCoins</a> (const <a class="el" href="classuint256.html">uint256</a> &amp;txid) const</td></tr>
-<tr class="separator:a964e8bc4a5f8131eab430d356a25fc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad44dd0b312871702e46ddfb449cecba"><td class="memItemLeft" align="right" valign="top">CCoinsMap::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#aad44dd0b312871702e46ddfb449cecba">FetchCoin</a> (const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;outpoint) const</td></tr>
+<tr class="separator:aad44dd0b312871702e46ddfb449cecba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae984d8a03ff13d03abf11874c227eaf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#ae984d8a03ff13d03abf11874c227eaf1">CCoinsViewCache</a> (const <a class="el" href="class_c_coins_view_cache.html">CCoinsViewCache</a> &amp;)</td></tr>
 <tr class="memdesc:ae984d8a03ff13d03abf11874c227eaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">By making the copy constructor private, we prevent accidentally using it when one intends to create a cache on top of a base cache.  <a href="#ae984d8a03ff13d03abf11874c227eaf1">More...</a><br /></td></tr>
 <tr class="separator:ae984d8a03ff13d03abf11874c227eaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:ae6ce8219acb79950bced74cb108acacf"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_cache.html#ae6ce8219acb79950bced74cb108acacf">CCoinsModifier</a></td></tr>
-<tr class="separator:ae6ce8219acb79950bced74cb108acacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a> that adds a memory cache for transactions to another <a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00380">380</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00195">195</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a515a6f259af607fb3394b560d9c063c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a515a6f259af607fb3394b560d9c063c9">&#9670;&nbsp;</a></span>CCoinsViewCache() <span class="overload">[1/2]</span></h2>
@@ -270,28 +259,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00061">61</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a6148421cb7605fb434f6c8622f39430b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6148421cb7605fb434f6c8622f39430b">&#9670;&nbsp;</a></span>~CCoinsViewCache()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CCoinsViewCache::~CCoinsViewCache </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00063">63</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00384">hasModifier</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00035">35</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
 </div>
 </div>
@@ -324,36 +292,37 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8e5341e8b01233949d6170dd4d1fd75d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e5341e8b01233949d6170dd4d1fd75d">&#9670;&nbsp;</a></span>AccessCoins()</h2>
+<a id="afd0144ded5ce891084aabff29141f8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd0144ded5ce891084aabff29141f8b2">&#9670;&nbsp;</a></span>AccessCoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_c_coins.html">CCoins</a> * CCoinsViewCache::AccessCoins </td>
+          <td class="memname">const <a class="el" href="class_coin.html">Coin</a> &amp; CCoinsViewCache::AccessCoin </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>output</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return a pointer to <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> in the cache, or NULL if not found. </p>
-<p>This is more efficient than GetCoins. Modifications to other cache entries are allowed while accessing the returned pointer. </p>
+<p>Return a reference to <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> in the cache, or a pruned one if not found. </p>
+<p>This is more efficient than GetCoin.</p>
+<p>Generally, do not hold the reference returned for more than a short scope. While the current implementation allows for modifications to the contents of the cache while holding the reference, this behavior should not be relied on! To be safe, best to not hold the returned reference through any other calls to this cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00129">129</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00116">116</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, and <a class="el" href="class_c_coins_view_cache.html#a7d385628b7d821d2d5b6c5aaf1734616">FetchCoins()</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8cpp_source.html#l00114">coinEmpty</a>, and <a class="el" href="coins_8cpp_source.html#l00041">FetchCoin()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="txmempool_8cpp_source.html#l00751">CTxMemPool::check()</a>, <a class="el" href="validation_8cpp_source.html#l01528">CheckInputs()</a>, <a class="el" href="validation_8cpp_source.html#l01483">Consensus::CheckTxInputs()</a>, <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>, <a class="el" href="coins_8cpp_source.html#l00227">GetOutputFor()</a>, <a class="el" href="coins_8cpp_source.html#l00260">GetPriority()</a>, <a class="el" href="validation_8cpp_source.html#l01080">GetTransaction()</a>, <a class="el" href="coins_8cpp_source.html#l00246">HaveInputs()</a>, <a class="el" href="dash-tx_8cpp_source.html#l00366">MutateTxSign()</a>, <a class="el" href="txmempool_8cpp_source.html#l00649">CTxMemPool::removeForReorg()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00830">sendrawtransaction()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00588">signrawtransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="coins_8cpp_source.html#l00265">AccessByTxid()</a>, <a class="el" href="txmempool_8cpp_source.html#l00419">CTxMemPool::addAddressIndex()</a>, <a class="el" href="txmempool_8cpp_source.html#l00494">CTxMemPool::addSpentIndex()</a>, <a class="el" href="policy_8cpp_source.html#l00123">AreInputsStandard()</a>, <a class="el" href="validation_8cpp_source.html#l01510">CheckInputs()</a>, <a class="el" href="validation_8cpp_source.html#l01465">Consensus::CheckTxInputs()</a>, <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l01691">DisconnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00432">GetP2SHSigOpCount()</a>, <a class="el" href="coins_8cpp_source.html#l00245">GetPriority()</a>, <a class="el" href="coins_8cpp_source.html#l00221">GetValueIn()</a>, <a class="el" href="dash-tx_8cpp_source.html#l00366">MutateTxSign()</a>, <a class="el" href="txmempool_8cpp_source.html#l00644">CTxMemPool::removeForReorg()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00831">sendrawtransaction()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00589">signrawtransaction()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a8e5341e8b01233949d6170dd4d1fd75d_cgraph.svg" width="486" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_afd0144ded5ce891084aabff29141f8b2_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -361,14 +330,65 @@ Friends</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a8e5341e8b01233949d6170dd4d1fd75d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_afd0144ded5ce891084aabff29141f8b2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a561bb7c6c97701b12c48fbbb563d0a91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561bb7c6c97701b12c48fbbb563d0a91">&#9670;&nbsp;</a></span>BatchWrite()</h2>
+<a id="a81968ae5f809c461f1d537c5feb84c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81968ae5f809c461f1d537c5feb84c5c">&#9670;&nbsp;</a></span>AddCoin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCoinsViewCache::AddCoin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>outpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_coin.html">Coin</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>coin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>potential_overwrite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a coin. </p>
+<p>Set potential_overwrite to true if a non-pruned version may already exist. </p>
+
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00067">67</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00206">cachedCoinsUsage</a>, <a class="el" href="coins_8h_source.html#l00109">CCoinsCacheEntry::DIRTY</a>, and <a class="el" href="coins_8h_source.html#l00110">CCoinsCacheEntry::FRESH</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00088">AddCoins()</a>, <a class="el" href="validation_8cpp_source.html#l01666">ApplyTxInUndo()</a>, <a class="el" href="dash-tx_8cpp_source.html#l00366">MutateTxSign()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00589">signrawtransaction()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a81968ae5f809c461f1d537c5feb84c5c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0858749f05c75450e3575ec666f3f94a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0858749f05c75450e3575ec666f3f94a">&#9670;&nbsp;</a></span>BatchWrite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +399,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">bool CCoinsViewCache::BatchWrite </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="coins_8h.html#a2886ba2fd0428bae777e1cbcabc02834">CCoinsMap</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="coins_8h.html#a6d9207327f736296422186c8192d3d30">CCoinsMap</a> &amp;&#160;</td>
           <td class="paramname"><em>mapCoins</em>, </td>
         </tr>
         <tr>
@@ -396,27 +416,58 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Do a bulk modification (multiple <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> changes + BestBlock change). </p>
+<p>Do a bulk modification (multiple <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> changes + BestBlock change). </p>
 <p>The passed mapCoins can be modified. </p>
 
-<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#ace15da3934c9d7a9cb9c7a787f92f764">CCoinsViewBacked</a>.</p>
+<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#a81ecc3121e837ed6c99ba8cd7d36e6c9">CCoinsViewBacked</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00162">162</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00145">145</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00395">cachedCoinsUsage</a>, <a class="el" href="coins_8h_source.html#l00287">CCoinsCacheEntry::coins</a>, <a class="el" href="coins_8h_source.html#l00291">CCoinsCacheEntry::DIRTY</a>, <a class="el" href="coins_8h_source.html#l00258">CCoins::DynamicMemoryUsage()</a>, <a class="el" href="coins_8h_source.html#l00288">CCoinsCacheEntry::flags</a>, <a class="el" href="coins_8h_source.html#l00292">CCoinsCacheEntry::FRESH</a>, <a class="el" href="coins_8h_source.html#l00391">hashBlock</a>, <a class="el" href="coins_8h_source.html#l00384">hasModifier</a>, and <a class="el" href="coins_8h_source.html#l00128">CCoins::swap()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00206">cachedCoinsUsage</a>, <a class="el" href="coins_8h_source.html#l00105">CCoinsCacheEntry::coin</a>, <a class="el" href="coins_8h_source.html#l00109">CCoinsCacheEntry::DIRTY</a>, <a class="el" href="coins_8h_source.html#l00079">Coin::DynamicMemoryUsage()</a>, <a class="el" href="coins_8h_source.html#l00106">CCoinsCacheEntry::flags</a>, <a class="el" href="coins_8h_source.html#l00110">CCoinsCacheEntry::FRESH</a>, and <a class="el" href="coins_8h_source.html#l00202">hashBlock</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a561bb7c6c97701b12c48fbbb563d0a91_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a0858749f05c75450e3575ec666f3f94a_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
+
+</div>
+</div>
+<a id="a4533d27d1d8d744080545f7cea5b8e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4533d27d1d8d744080545f7cea5b8e7c">&#9670;&nbsp;</a></span>Cursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_coins_view_cursor.html">CCoinsViewCursor</a>* CCoinsViewCache::Cursor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a cursor to iterate over the whole state. </p>
+
+<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#a3362d639de170d24c7118d4dc863c83d">CCoinsViewBacked</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00217">217</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
 
 </div>
 </div>
@@ -437,32 +488,32 @@ Friends</h2></td></tr>
 
 <p>Calculate the size of the cache (in bytes) </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00068">68</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00037">37</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00395">cachedCoinsUsage</a>, and <a class="el" href="memusage_8h_source.html#l00025">memusage::DynamicUsage()</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00206">cachedCoinsUsage</a>, and <a class="el" href="memusage_8h_source.html#l00027">memusage::DynamicUsage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>, <a class="el" href="validation_8cpp_source.html#l02420">UpdateTip()</a>, and <a class="el" href="validation_8cpp_source.html#l03841">CVerifyDB::VerifyDB()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_adc01927480b99814280a4388e738d8b9_cgraph.svg" width="436" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>, <a class="el" href="validation_8cpp_source.html#l02423">UpdateTip()</a>, and <a class="el" href="validation_8cpp_source.html#l03844">CVerifyDB::VerifyDB()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_adc01927480b99814280a4388e738d8b9_cgraph.svg" width="436" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_adc01927480b99814280a4388e738d8b9_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a7d385628b7d821d2d5b6c5aaf1734616"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d385628b7d821d2d5b6c5aaf1734616">&#9670;&nbsp;</a></span>FetchCoins() <span class="overload">[1/2]</span></h2>
+<a id="aad44dd0b312871702e46ddfb449cecba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad44dd0b312871702e46ddfb449cecba">&#9670;&nbsp;</a></span>FetchCoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -471,46 +522,10 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CCoinsMap::iterator CCoinsViewCache::FetchCoins </td>
+          <td class="memname">CCoinsMap::iterator CCoinsViewCache::FetchCoin </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00129">AccessCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00090">GetCoins()</a>, and <a class="el" href="coins_8cpp_source.html#l00138">HaveCoins()</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a7d385628b7d821d2d5b6c5aaf1734616_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a964e8bc4a5f8131eab430d356a25fc6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a964e8bc4a5f8131eab430d356a25fc6d">&#9670;&nbsp;</a></span>FetchCoins() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">CCoinsMap::const_iterator CCoinsViewCache::FetchCoins </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>outpoint</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -521,15 +536,25 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00072">72</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00041">41</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00344">CCoinsViewBacked::base</a>, <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00395">cachedCoinsUsage</a>, <a class="el" href="coins_8h_source.html#l00292">CCoinsCacheEntry::FRESH</a>, <a class="el" href="coins_8cpp_source.html#l00044">CCoinsView::GetCoins()</a>, and <a class="el" href="coins_8h_source.html#l00128">CCoins::swap()</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00180">CCoinsViewBacked::base</a>, <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00206">cachedCoinsUsage</a>, <a class="el" href="coins_8h_source.html#l00110">CCoinsCacheEntry::FRESH</a>, and <a class="el" href="coins_8cpp_source.html#l00013">CCoinsView::GetCoin()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00116">AccessCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00058">GetCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00125">HaveCoin()</a>, and <a class="el" href="coins_8cpp_source.html#l00098">SpendCoin()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a964e8bc4a5f8131eab430d356a25fc6d_cgraph.svg" width="426" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_aad44dd0b312871702e46ddfb449cecba_cgraph.svg" width="411" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_aad44dd0b312871702e46ddfb449cecba_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -553,32 +578,32 @@ Friends</h2></td></tr>
 <p>Push the modifications applied to this cache to its base. </p>
 <p>Failure to call this method before destruction will cause the changes to be forgotten. If false is returned, the state of this cache (and its backing view) will be undefined. </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00207">207</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00201">201</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00344">CCoinsViewBacked::base</a>, <a class="el" href="coins_8cpp_source.html#l00047">CCoinsView::BatchWrite()</a>, <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00395">cachedCoinsUsage</a>, and <a class="el" href="coins_8h_source.html#l00391">hashBlock</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00180">CCoinsViewBacked::base</a>, <a class="el" href="coins_8cpp_source.html#l00015">CCoinsView::BatchWrite()</a>, <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00206">cachedCoinsUsage</a>, and <a class="el" href="coins_8h_source.html#l00202">hashBlock</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02535">ConnectTip()</a>, <a class="el" href="validation_8cpp_source.html#l02477">DisconnectTip()</a>, and <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_ac9888d4feaa46666d03871cd7cd1c01d_cgraph.svg" width="400" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02538">ConnectTip()</a>, <a class="el" href="validation_8cpp_source.html#l02480">DisconnectTip()</a>, and <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_ac9888d4feaa46666d03871cd7cd1c01d_cgraph.svg" width="400" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_ac9888d4feaa46666d03871cd7cd1c01d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a1190c94a943c067d13211179ef06470b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1190c94a943c067d13211179ef06470b">&#9670;&nbsp;</a></span>GetBestBlock()</h2>
+<a id="a943a3d13f2ba6936002d7a87b969edba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943a3d13f2ba6936002d7a87b969edba">&#9670;&nbsp;</a></span>GetBestBlock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -595,34 +620,34 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Retrieve the block hash whose state this <a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a> currently represents. </p>
 
-<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#a39bca41ae922d0ce7f40e8aeab289280">CCoinsViewBacked</a>.</p>
+<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#a4d5c20ed1db1449be6e4b1b01001e3f0">CCoinsViewBacked</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00152">152</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00135">135</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00344">CCoinsViewBacked::base</a>, <a class="el" href="coins_8cpp_source.html#l00046">CCoinsView::GetBestBlock()</a>, <a class="el" href="coins_8h_source.html#l00391">hashBlock</a>, and <a class="el" href="uint256_8h_source.html#l00033">base_blob&lt; BITS &gt;::IsNull()</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00180">CCoinsViewBacked::base</a>, <a class="el" href="coins_8cpp_source.html#l00014">CCoinsView::GetBestBlock()</a>, <a class="el" href="coins_8h_source.html#l00202">hashBlock</a>, and <a class="el" href="uint256_8h_source.html#l00033">base_blob&lt; BITS &gt;::IsNull()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l01696">DisconnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l01475">GetSpendHeight()</a>, <a class="el" href="blockchain_8cpp_source.html#l00591">gettxout()</a>, and <a class="el" href="validation_8cpp_source.html#l03709">LoadBlockIndexDB()</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a1190c94a943c067d13211179ef06470b_cgraph.svg" width="432" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l01691">DisconnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l01457">GetSpendHeight()</a>, <a class="el" href="blockchain_8cpp_source.html#l00662">gettxout()</a>, and <a class="el" href="validation_8cpp_source.html#l03712">LoadBlockIndexDB()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a1190c94a943c067d13211179ef06470b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a943a3d13f2ba6936002d7a87b969edba_cgraph.svg" width="432" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a943a3d13f2ba6936002d7a87b969edba_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -643,26 +668,26 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculate the size of the cache (in number of transactions) </p>
+<p>Calculate the size of the cache (in number of transaction outputs) </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00223">223</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00217">217</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>, and <a class="el" href="validation_8cpp_source.html#l02420">UpdateTip()</a>.</p>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>, and <a class="el" href="validation_8cpp_source.html#l02423">UpdateTip()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a937e30d96fd43e403c862b193cf5b942_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a1b62444593fdb580bfa4bd6fab41fafa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b62444593fdb580bfa4bd6fab41fafa">&#9670;&nbsp;</a></span>GetCoins()</h2>
+<a id="aaeb452bec99d4fa667fec4c0df25dedf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb452bec99d4fa667fec4c0df25dedf">&#9670;&nbsp;</a></span>GetCoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -671,16 +696,16 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool CCoinsViewCache::GetCoins </td>
+          <td class="memname">bool CCoinsViewCache::GetCoin </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>outpoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_c_coins.html">CCoins</a> &amp;&#160;</td>
-          <td class="paramname"><em>coins</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_coin.html">Coin</a> &amp;&#160;</td>
+          <td class="paramname"><em>coin</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -690,74 +715,35 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieve the <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> (unspent transaction outputs) for a given txid. </p>
+<p>Retrieve the <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> (unspent transaction output) for a given outpoint. </p>
+<p>Returns true only when an unspent coin was found, which is returned in coin. When false is returned, coin's value is unspecified. </p>
 
-<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#a456f9e85817556329a959c120998df5b">CCoinsViewBacked</a>.</p>
+<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#a370e54c9cd9f89753666fc06bcb5d5a3">CCoinsViewBacked</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00090">90</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00058">58</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, and <a class="el" href="class_c_coins_view_cache.html#a7d385628b7d821d2d5b6c5aaf1734616">FetchCoins()</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8cpp_source.html#l00041">FetchCoin()</a>, and <a class="el" href="coins_8h_source.html#l00075">Coin::IsSpent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00591">gettxout()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00235">gettxoutproof()</a>, <a class="el" href="validation_8cpp_source.html#l00446">GetUTXOCoins()</a>, <a class="el" href="rest_8cpp_source.html#l00403">rest_getutxos()</a>, and <a class="el" href="transactiondesc_8cpp_source.html#l00074">TransactionDesc::toHTML()</a>.</p>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a1b62444593fdb580bfa4bd6fab41fafa_cgraph.svg" width="463" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00662">gettxout()</a>, <a class="el" href="validation_8cpp_source.html#l00449">GetUTXOCoin()</a>, <a class="el" href="rest_8cpp_source.html#l00406">rest_getutxos()</a>, and <a class="el" href="transactiondesc_8cpp_source.html#l00074">TransactionDesc::toHTML()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a1b62444593fdb580bfa4bd6fab41fafa_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_aaeb452bec99d4fa667fec4c0df25dedf_cgraph.svg" width="648" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-
-</div>
-</div>
-<a id="a54a0de51586fa92d83cfa321fb8936c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a0de51586fa92d83cfa321fb8936c5">&#9670;&nbsp;</a></span>GetOutputFor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="class_c_tx_out.html">CTxOut</a> &amp; CCoinsViewCache::GetOutputFor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_c_tx_in.html">CTxIn</a> &amp;&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00227">227</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00129">AccessCoins()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="coins_8h_source.html#l00245">CCoins::IsAvailable()</a>, <a class="el" href="transaction_8h_source.html#l00019">COutPoint::n</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, and <a class="el" href="coins_8h_source.html#l00080">CCoins::vout</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="txmempool_8cpp_source.html#l00426">CTxMemPool::addAddressIndex()</a>, <a class="el" href="txmempool_8cpp_source.html#l00500">CTxMemPool::addSpentIndex()</a>, <a class="el" href="policy_8cpp_source.html#l00123">AreInputsStandard()</a>, <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l01696">DisconnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00431">GetP2SHSigOpCount()</a>, and <a class="el" href="coins_8cpp_source.html#l00234">GetValueIn()</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a54a0de51586fa92d83cfa321fb8936c5_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a54a0de51586fa92d83cfa321fb8936c5_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_aaeb452bec99d4fa667fec4c0df25dedf_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -798,24 +784,24 @@ Friends</h2></td></tr>
 <p>Return priority of tx at height nHeight. </p>
 <p>Also calculate the sum of the values of the inputs that are already in the chain. These are the inputs that will age and increase priority as new blocks are added to the chain. </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00260">260</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00245">245</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00129">AccessCoins()</a>, <a class="el" href="transaction_8cpp_source.html#l00124">CTransaction::ComputePriority()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="coins_8h_source.html#l00245">CCoins::IsAvailable()</a>, <a class="el" href="transaction_8h_source.html#l00284">CTransaction::IsCoinBase()</a>, <a class="el" href="transaction_8h_source.html#l00019">COutPoint::n</a>, <a class="el" href="coins_8h_source.html#l00083">CCoins::nHeight</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>, and <a class="el" href="coins_8h_source.html#l00080">CCoins::vout</a>.</p>
+<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00116">AccessCoin()</a>, <a class="el" href="transaction_8cpp_source.html#l00124">CTransaction::ComputePriority()</a>, <a class="el" href="transaction_8h_source.html#l00283">CTransaction::IsCoinBase()</a>, <a class="el" href="coins_8h_source.html#l00075">Coin::IsSpent()</a>, <a class="el" href="coins_8h_source.html#l00039">Coin::nHeight</a>, <a class="el" href="transaction_8h_source.html#l00135">CTxOut::nValue</a>, <a class="el" href="coins_8h_source.html#l00033">Coin::out</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, and <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>.</p>
-<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>.</p>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a99f63e73d2fde26d7109c2ba5027a1ad_cgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a99f63e73d2fde26d7109c2ba5027a1ad_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -847,32 +833,32 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Sum of value of all inputs (scriptSigs) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00234">234</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00221">221</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00227">GetOutputFor()</a>, <a class="el" href="transaction_8h_source.html#l00284">CTransaction::IsCoinBase()</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::nValue</a>, and <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>.</p>
+<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00116">AccessCoin()</a>, <a class="el" href="transaction_8h_source.html#l00283">CTransaction::IsCoinBase()</a>, <a class="el" href="transaction_8h_source.html#l00135">CTxOut::nValue</a>, <a class="el" href="coins_8h_source.html#l00033">Coin::out</a>, and <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, and <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, and <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>.</p>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a1a8cd6069fba96939ffcb1bd36ffb921_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 <div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-20-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a1a8cd6069fba96939ffcb1bd36ffb921_cgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-21-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a1a8cd6069fba96939ffcb1bd36ffb921_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="aa8f0c55b6fc207d2188948a565125ab7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8f0c55b6fc207d2188948a565125ab7">&#9670;&nbsp;</a></span>HaveCoins()</h2>
+<a id="af097128dca85eb8f94b864015d839d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af097128dca85eb8f94b864015d839d46">&#9670;&nbsp;</a></span>HaveCoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -881,79 +867,78 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool CCoinsViewCache::HaveCoins </td>
+          <td class="memname">bool CCoinsViewCache::HaveCoin </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>outpoint</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Just check whether we have data for a given txid. </p>
-<p>This may (but cannot always) return true for fully spent transactions </p>
+<p>Just check whether a given outpoint is unspent. </p>
 
-<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#ad49041658bdec807d556e080476e6543">CCoinsViewBacked</a>.</p>
+<p>Reimplemented from <a class="el" href="class_c_coins_view_backed.html#a14265b7d1864f2817d23b257d8342a38">CCoinsViewBacked</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00138">138</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00125">125</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, and <a class="el" href="class_c_coins_view_cache.html#a7d385628b7d821d2d5b6c5aaf1734616">FetchCoins()</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, and <a class="el" href="coins_8cpp_source.html#l00041">FetchCoin()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, and <a class="el" href="net__processing_8cpp_source.html#l00677">AlreadyHave()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="validation_8cpp_source.html#l01666">ApplyTxInUndo()</a>, <a class="el" href="txmempool_8cpp_source.html#l00746">CTxMemPool::check()</a>, <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>, and <a class="el" href="coins_8cpp_source.html#l00233">HaveInputs()</a>.</p>
+<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_af097128dca85eb8f94b864015d839d46_cgraph.svg" width="658" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-22-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_aa8f0c55b6fc207d2188948a565125ab7_cgraph.svg" width="474" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-23-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_aa8f0c55b6fc207d2188948a565125ab7_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_af097128dca85eb8f94b864015d839d46_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a5eef8cd21bc594b53a72bf5161dfd95b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5eef8cd21bc594b53a72bf5161dfd95b">&#9670;&nbsp;</a></span>HaveCoinsInCache()</h2>
+<a id="ab2e11ee063c40be4a6bc620fd98149a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e11ee063c40be4a6bc620fd98149a0">&#9670;&nbsp;</a></span>HaveCoinInCache()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool CCoinsViewCache::HaveCoinsInCache </td>
+          <td class="memname">bool CCoinsViewCache::HaveCoinInCache </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>outpoint</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check if we have the given tx already loaded in this cache. </p>
-<p>The semantics are the same as <a class="el" href="class_c_coins_view_cache.html#aa8f0c55b6fc207d2188948a565125ab7" title="Just check whether we have data for a given txid. ">HaveCoins()</a>, but no calls to the backing <a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a> are made. </p>
+<p>Check if we have the given utxo already loaded in this cache. </p>
+<p>The semantics are the same as <a class="el" href="class_c_coins_view_cache.html#af097128dca85eb8f94b864015d839d46" title="Just check whether a given outpoint is unspent. ">HaveCoin()</a>, but no calls to the backing <a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a> are made. </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00147">147</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00130">130</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>.</p>
-<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, and <a class="el" href="net__processing_8cpp_source.html#l00679">AlreadyHave()</a>.</p>
+<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-24-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a5eef8cd21bc594b53a72bf5161dfd95b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_ab2e11ee063c40be4a6bc620fd98149a0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -977,103 +962,25 @@ Friends</h2></td></tr>
 
 <p>Check whether all prevouts of the transaction are present in the UTXO set represented by this view. </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00246">246</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00233">233</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00129">AccessCoins()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="coins_8h_source.html#l00245">CCoins::IsAvailable()</a>, <a class="el" href="transaction_8h_source.html#l00284">CTransaction::IsCoinBase()</a>, <a class="el" href="transaction_8h_source.html#l00019">COutPoint::n</a>, and <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>.</p>
+<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00125">HaveCoin()</a>, <a class="el" href="transaction_8h_source.html#l00283">CTransaction::IsCoinBase()</a>, and <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="txmempool_8cpp_source.html#l00751">CTxMemPool::check()</a>, <a class="el" href="validation_8cpp_source.html#l01483">Consensus::CheckTxInputs()</a>, and <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txmempool_8cpp_source.html#l00746">CTxMemPool::check()</a>, <a class="el" href="validation_8cpp_source.html#l01465">Consensus::CheckTxInputs()</a>, and <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>.</p>
+<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a5b1abd71c95dc7be2523b9c28839ec29_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 <div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-25-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-25-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a5b1abd71c95dc7be2523b9c28839ec29_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-26-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a5b1abd71c95dc7be2523b9c28839ec29_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="ab67c0d489873ed735c4fc52aa66f0830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab67c0d489873ed735c4fc52aa66f0830">&#9670;&nbsp;</a></span>ModifyCoins()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_coins_modifier.html">CCoinsModifier</a> CCoinsViewCache::ModifyCoins </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return a modifiable reference to a <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a>. </p>
-<p>If no entry with the given txid exists, a new one is created. Simultaneous modifications are not allowed. </p>
-
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00099">99</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00344">CCoinsViewBacked::base</a>, <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00481">CCoinsModifier</a>, <a class="el" href="coins_8h_source.html#l00291">CCoinsCacheEntry::DIRTY</a>, <a class="el" href="coins_8h_source.html#l00292">CCoinsCacheEntry::FRESH</a>, <a class="el" href="coins_8cpp_source.html#l00044">CCoinsView::GetCoins()</a>, and <a class="el" href="coins_8h_source.html#l00384">hasModifier</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01670">ApplyTxInUndo()</a>, <a class="el" href="validation_8cpp_source.html#l01696">DisconnectBlock()</a>, <a class="el" href="dash-tx_8cpp_source.html#l00366">MutateTxSign()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00588">signrawtransaction()</a>, and <a class="el" href="validation_8cpp_source.html#l01427">UpdateCoins()</a>.</p>
-<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-27-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_ab67c0d489873ed735c4fc52aa66f0830_cgraph.svg" width="432" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-28-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_ab67c0d489873ed735c4fc52aa66f0830_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a27b0bd2eb9dce2fa7a6c87db0e16c8b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27b0bd2eb9dce2fa7a6c87db0e16c8b4">&#9670;&nbsp;</a></span>ModifyNewCoins()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_coins_modifier.html">CCoinsModifier</a> CCoinsViewCache::ModifyNewCoins </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return a modifiable reference to a <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a>. </p>
-<p>Assumes that no entry with the given txid exists and creates a new one. This saves a database access in the case where the coins were to be wiped out by FromTx anyway. This should not be called with the 2 historical coinbase duplicate pairs because the new coins are marked fresh, and in the event the duplicate coinbase was spent before a flush, the now pruned coins would not properly overwrite the first coinbase of the pair. Simultaneous modifications are not allowed. </p>
-
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00120">120</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00481">CCoinsModifier</a>, <a class="el" href="coins_8h_source.html#l00291">CCoinsCacheEntry::DIRTY</a>, <a class="el" href="coins_8h_source.html#l00292">CCoinsCacheEntry::FRESH</a>, and <a class="el" href="coins_8h_source.html#l00384">hasModifier</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01427">UpdateCoins()</a>.</p>
-<div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-29-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a27b0bd2eb9dce2fa7a6c87db0e16c8b4_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1095,24 +1002,77 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00158">158</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00141">141</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00391">hashBlock</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00202">hashBlock</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>, and <a class="el" href="validation_8cpp_source.html#l01696">DisconnectBlock()</a>.</p>
-<div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>, and <a class="el" href="validation_8cpp_source.html#l01691">DisconnectBlock()</a>.</p>
+<div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-30-content" class="dyncontent" style="display:none;">
+<div id="dynsection-26-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_aa3f787f77b123f0fd340fbe4e458b4ad_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ab0bc342537c7f841bd3e9cf2a4d179dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0bc342537c7f841bd3e9cf2a4d179dd">&#9670;&nbsp;</a></span>Uncache()</h2>
+<a id="a2fae5769fb3795407bcd16156274c152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fae5769fb3795407bcd16156274c152">&#9670;&nbsp;</a></span>SpendCoin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CCoinsViewCache::SpendCoin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>outpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_coin.html">Coin</a> *&#160;</td>
+          <td class="paramname"><em>moveto</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spend a coin. </p>
+<p>Pass moveto in order to get the deleted data. If no unspent output exists for the passed outpoint, this call has no effect. </p>
+
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00098">98</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, <a class="el" href="coins_8h_source.html#l00206">cachedCoinsUsage</a>, <a class="el" href="coins_8h_source.html#l00109">CCoinsCacheEntry::DIRTY</a>, <a class="el" href="coins_8cpp_source.html#l00041">FetchCoin()</a>, and <a class="el" href="coins_8h_source.html#l00110">CCoinsCacheEntry::FRESH</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01691">DisconnectBlock()</a>, and <a class="el" href="validation_8cpp_source.html#l01428">UpdateCoins()</a>.</p>
+<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a2fae5769fb3795407bcd16156274c152_cgraph.svg" width="664" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a2fae5769fb3795407bcd16156274c152_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4251130f7fac0fd8f7c9eb630179e986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4251130f7fac0fd8f7c9eb630179e986">&#9670;&nbsp;</a></span>Uncache()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1120,55 +1080,28 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void CCoinsViewCache::Uncache </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
-          <td class="paramname"><em>txid</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_c_out_point.html">COutPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>outpoint</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removes the transaction with the given hash from the cache, if it is not modified. </p>
+<p>Removes the UTXO with the given outpoint from the cache, if it is not modified. </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00214">214</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8cpp_source.html#l00208">208</a> of file <a class="el" href="coins_8cpp_source.html">coins.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="coins_8h_source.html#l00392">cacheCoins</a>, and <a class="el" href="coins_8h_source.html#l00395">cachedCoinsUsage</a>.</p>
+<p class="reference">References <a class="el" href="coins_8h_source.html#l00203">cacheCoins</a>, and <a class="el" href="coins_8h_source.html#l00206">cachedCoinsUsage</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01014">AcceptToMemoryPool()</a>, and <a class="el" href="validation_8cpp_source.html#l00529">LimitMempoolSize()</a>.</p>
-<div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01019">AcceptToMemoryPool()</a>, and <a class="el" href="validation_8cpp_source.html#l00534">LimitMempoolSize()</a>.</p>
+<div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-31-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_ab0bc342537c7f841bd3e9cf2a4d179dd_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
+<div id="dynsection-29-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_coins_view_cache_a4251130f7fac0fd8f7c9eb630179e986_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="ae6ce8219acb79950bced74cb108acacf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6ce8219acb79950bced74cb108acacf">&#9670;&nbsp;</a></span>CCoinsModifier</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="class_c_coins_modifier.html">CCoinsModifier</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00481">481</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00099">ModifyCoins()</a>, and <a class="el" href="coins_8cpp_source.html#l00120">ModifyNewCoins()</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1116,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="coins_8h.html#a2886ba2fd0428bae777e1cbcabc02834">CCoinsMap</a> CCoinsViewCache::cacheCoins</td>
+          <td class="memname"><a class="el" href="coins_8h.html#a6d9207327f736296422186c8192d3d30">CCoinsMap</a> CCoinsViewCache::cacheCoins</td>
         </tr>
       </table>
   </td>
@@ -1193,9 +1126,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00392">392</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00203">203</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00129">AccessCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00162">BatchWrite()</a>, <a class="el" href="coins_8cpp_source.html#l00068">DynamicMemoryUsage()</a>, <a class="el" href="coins_8cpp_source.html#l00072">FetchCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00207">Flush()</a>, <a class="el" href="coins_8cpp_source.html#l00223">GetCacheSize()</a>, <a class="el" href="coins_8cpp_source.html#l00090">GetCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00138">HaveCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00147">HaveCoinsInCache()</a>, <a class="el" href="coins_8cpp_source.html#l00099">ModifyCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00120">ModifyNewCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00214">Uncache()</a>, and <a class="el" href="coins_8cpp_source.html#l00284">CCoinsModifier::~CCoinsModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00116">AccessCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00067">AddCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00145">BatchWrite()</a>, <a class="el" href="coins_8cpp_source.html#l00037">DynamicMemoryUsage()</a>, <a class="el" href="coins_8cpp_source.html#l00041">FetchCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00201">Flush()</a>, <a class="el" href="coins_8cpp_source.html#l00217">GetCacheSize()</a>, <a class="el" href="coins_8cpp_source.html#l00058">GetCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00125">HaveCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00130">HaveCoinInCache()</a>, <a class="el" href="coins_8cpp_source.html#l00098">SpendCoin()</a>, and <a class="el" href="coins_8cpp_source.html#l00208">Uncache()</a>.</p>
 
 </div>
 </div>
@@ -1219,9 +1152,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00395">395</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00206">206</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00162">BatchWrite()</a>, <a class="el" href="coins_8cpp_source.html#l00068">DynamicMemoryUsage()</a>, <a class="el" href="coins_8cpp_source.html#l00072">FetchCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00207">Flush()</a>, <a class="el" href="coins_8cpp_source.html#l00214">Uncache()</a>, and <a class="el" href="coins_8cpp_source.html#l00284">CCoinsModifier::~CCoinsModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00067">AddCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00145">BatchWrite()</a>, <a class="el" href="coins_8cpp_source.html#l00037">DynamicMemoryUsage()</a>, <a class="el" href="coins_8cpp_source.html#l00041">FetchCoin()</a>, <a class="el" href="coins_8cpp_source.html#l00201">Flush()</a>, <a class="el" href="coins_8cpp_source.html#l00098">SpendCoin()</a>, and <a class="el" href="coins_8cpp_source.html#l00208">Uncache()</a>.</p>
 
 </div>
 </div>
@@ -1247,35 +1180,9 @@ Friends</h2></td></tr>
 
 <p>Make mutable so that we can "fill the cache" even from Get-methods declared as "const". </p>
 
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00391">391</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00202">202</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00162">BatchWrite()</a>, <a class="el" href="coins_8cpp_source.html#l00207">Flush()</a>, <a class="el" href="coins_8cpp_source.html#l00152">GetBestBlock()</a>, and <a class="el" href="coins_8cpp_source.html#l00158">SetBestBlock()</a>.</p>
-
-</div>
-</div>
-<a id="a363e27234d36bb0fc533d60cd64d1bc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a363e27234d36bb0fc533d60cd64d1bc3">&#9670;&nbsp;</a></span>hasModifier</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CCoinsViewCache::hasModifier</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="coins_8h_source.html#l00384">384</a> of file <a class="el" href="coins_8h_source.html">coins.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00162">BatchWrite()</a>, <a class="el" href="coins_8cpp_source.html#l00279">CCoinsModifier::CCoinsModifier()</a>, <a class="el" href="coins_8cpp_source.html#l00099">ModifyCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00120">ModifyNewCoins()</a>, <a class="el" href="coins_8cpp_source.html#l00284">CCoinsModifier::~CCoinsModifier()</a>, and <a class="el" href="coins_8cpp_source.html#l00063">~CCoinsViewCache()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coins_8cpp_source.html#l00145">BatchWrite()</a>, <a class="el" href="coins_8cpp_source.html#l00201">Flush()</a>, <a class="el" href="coins_8cpp_source.html#l00135">GetBestBlock()</a>, and <a class="el" href="coins_8cpp_source.html#l00141">SetBestBlock()</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1197,7 @@ Friends</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_coins_view_cache.html">CCoinsViewCache</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:23 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:31 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

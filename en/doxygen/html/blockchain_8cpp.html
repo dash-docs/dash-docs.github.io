@@ -138,11 +138,14 @@ $(document).ready(function(){initNavTree('blockchain_8cpp.html','');});
 <code>#include &quot;<a class="el" href="server_8h_source.html">rpc/server.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="streams_8h_source.html">streams.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sync_8h_source.html">sync.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="txdb_8h_source.html">txdb.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="txmempool_8h_source.html">txmempool.h</a>&quot;</code><br />
 <code>#include &quot;util.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="utilstrencodings_8h_source.html">utilstrencodings.h</a>&quot;</code><br />
+<code>#include &quot;hash.h&quot;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="univalue_8h_source.html">univalue.h</a>&gt;</code><br />
+<code>#include &lt;boost/thread/thread.hpp&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for blockchain.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -156,6 +159,8 @@ $(document).ready(function(){initNavTree('blockchain_8cpp.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_coins_stats.html">CCoinsStats</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compare_blocks_by_height.html">CompareBlocksByHeight</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison function for sorting the getchaintips heads.  <a href="struct_compare_blocks_by_height.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +197,11 @@ Functions</h2></td></tr>
 <tr class="separator:a19b979ff4a0ba17c22baf73d950ed5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdd7f5b03a6ab23f3627721b074ef606"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_value.html">UniValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="blockchain_8cpp.html#afdd7f5b03a6ab23f3627721b074ef606">getblock</a> (const <a class="el" href="class_uni_value.html">UniValue</a> &amp;params, bool fHelp)</td></tr>
 <tr class="separator:afdd7f5b03a6ab23f3627721b074ef606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20f641f3dc069e77a73c3ef08135cac"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="blockchain_8cpp.html#ac20f641f3dc069e77a73c3ef08135cac">ApplyStats</a> (<a class="el" href="struct_c_coins_stats.html">CCoinsStats</a> &amp;stats, <a class="el" href="class_c_hash_writer.html">CHashWriter</a> &amp;ss, const <a class="el" href="classuint256.html">uint256</a> &amp;hash, const std::map&lt; uint32_t, <a class="el" href="class_coin.html">Coin</a> &gt; &amp;outputs)</td></tr>
+<tr class="separator:ac20f641f3dc069e77a73c3ef08135cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5144afc19a0e8bafb934ebfd145671"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="blockchain_8cpp.html#a2d5144afc19a0e8bafb934ebfd145671">GetUTXOStats</a> (<a class="el" href="class_c_coins_view.html">CCoinsView</a> *view, <a class="el" href="struct_c_coins_stats.html">CCoinsStats</a> &amp;stats)</td></tr>
+<tr class="memdesc:a2d5144afc19a0e8bafb934ebfd145671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate statistics about the unspent transaction output set.  <a href="#a2d5144afc19a0e8bafb934ebfd145671">More...</a><br /></td></tr>
+<tr class="separator:a2d5144afc19a0e8bafb934ebfd145671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afba3c21535e88135f386a12e40199da2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_value.html">UniValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="blockchain_8cpp.html#afba3c21535e88135f386a12e40199da2">gettxoutsetinfo</a> (const <a class="el" href="class_uni_value.html">UniValue</a> &amp;params, bool fHelp)</td></tr>
 <tr class="separator:afba3c21535e88135f386a12e40199da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d2241797e79623e7a558ab617415652"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_value.html">UniValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="blockchain_8cpp.html#a5d2241797e79623e7a558ab617415652">gettxout</a> (const <a class="el" href="class_uni_value.html">UniValue</a> &amp;params, bool fHelp)</td></tr>
@@ -219,6 +229,68 @@ Functions</h2></td></tr>
 <tr class="separator:a29263a4d92c9f0c07c1dfb0a5fad681b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ac20f641f3dc069e77a73c3ef08135cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac20f641f3dc069e77a73c3ef08135cac">&#9670;&nbsp;</a></span>ApplyStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ApplyStats </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_c_coins_stats.html">CCoinsStats</a> &amp;&#160;</td>
+          <td class="paramname"><em>stats</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_hash_writer.html">CHashWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>ss</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; uint32_t, <a class="el" href="class_coin.html">Coin</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00570">570</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="blockchain_8cpp_source.html#l00565">CCoinsStats::nTotalAmount</a>, <a class="el" href="blockchain_8cpp_source.html#l00562">CCoinsStats::nTransactionOutputs</a>, <a class="el" href="blockchain_8cpp_source.html#l00561">CCoinsStats::nTransactions</a>, and <a class="el" href="serialize_8h_source.html#l00388">VARINT</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00587">GetUTXOStats()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_ac20f641f3dc069e77a73c3ef08135cac_icgraph.svg" width="412" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a0de028dbae097fe1fa0e09fa520466a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0de028dbae097fe1fa0e09fa520466a6">&#9670;&nbsp;</a></span>BIP9SoftForkDesc()</h2>
 
@@ -259,24 +331,24 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00729">729</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00800">800</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rest_8cpp_source.html#l00037">name</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="versionbits_8h_source.html#l00024">THRESHOLD_ACTIVE</a>, <a class="el" href="versionbits_8h_source.html#l00021">THRESHOLD_DEFINED</a>, <a class="el" href="versionbits_8h_source.html#l00025">THRESHOLD_FAILED</a>, <a class="el" href="versionbits_8h_source.html#l00023">THRESHOLD_LOCKED_IN</a>, <a class="el" href="versionbits_8h_source.html#l00022">THRESHOLD_STARTED</a>, <a class="el" href="validation_8cpp_source.html#l04375">VersionBitsTipState()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<p class="reference">References <a class="el" href="rest_8cpp_source.html#l00037">name</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="versionbits_8h_source.html#l00024">THRESHOLD_ACTIVE</a>, <a class="el" href="versionbits_8h_source.html#l00021">THRESHOLD_DEFINED</a>, <a class="el" href="versionbits_8h_source.html#l00025">THRESHOLD_FAILED</a>, <a class="el" href="versionbits_8h_source.html#l00023">THRESHOLD_LOCKED_IN</a>, <a class="el" href="versionbits_8h_source.html#l00022">THRESHOLD_STARTED</a>, <a class="el" href="validation_8cpp_source.html#l04380">VersionBitsTipState()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00743">getblockchaininfo()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a0de028dbae097fe1fa0e09fa520466a6_cgraph.svg" width="506" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00814">getblockchaininfo()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a0de028dbae097fe1fa0e09fa520466a6_cgraph.svg" width="506" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a0de028dbae097fe1fa0e09fa520466a6_icgraph.svg" width="464" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -299,24 +371,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00063">63</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00067">67</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00384">CChain::Contains()</a>, <a class="el" href="chain_8h_source.html#l00218">CBlockIndex::GetBlockHash()</a>, <a class="el" href="blockchain_8cpp_source.html#l00032">GetDifficulty()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00230">CBlockIndex::GetMedianTimePast()</a>, <a class="el" href="chain_8h_source.html#l00141">CBlockIndex::hashMerkleRoot</a>, <a class="el" href="chain_8h_source.html#l00397">CChain::Height()</a>, <a class="el" href="chain_8h_source.html#l00143">CBlockIndex::nBits</a>, <a class="el" href="chain_8h_source.html#l00125">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00389">CChain::Next()</a>, <a class="el" href="chain_8h_source.html#l00113">CBlockIndex::nHeight</a>, <a class="el" href="chain_8h_source.html#l00144">CBlockIndex::nNonce</a>, <a class="el" href="chain_8h_source.html#l00142">CBlockIndex::nTime</a>, <a class="el" href="chain_8h_source.html#l00140">CBlockIndex::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chain_8h_source.html#l00107">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00438">CChain::Contains()</a>, <a class="el" href="chain_8h_source.html#l00272">CBlockIndex::GetBlockHash()</a>, <a class="el" href="blockchain_8cpp_source.html#l00036">GetDifficulty()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00284">CBlockIndex::GetMedianTimePast()</a>, <a class="el" href="chain_8h_source.html#l00195">CBlockIndex::hashMerkleRoot</a>, <a class="el" href="chain_8h_source.html#l00451">CChain::Height()</a>, <a class="el" href="chain_8h_source.html#l00197">CBlockIndex::nBits</a>, <a class="el" href="chain_8h_source.html#l00179">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00443">CChain::Next()</a>, <a class="el" href="chain_8h_source.html#l00167">CBlockIndex::nHeight</a>, <a class="el" href="chain_8h_source.html#l00198">CBlockIndex::nNonce</a>, <a class="el" href="chain_8h_source.html#l00196">CBlockIndex::nTime</a>, <a class="el" href="chain_8h_source.html#l00194">CBlockIndex::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chain_8h_source.html#l00161">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00336">getblockheader()</a>, <a class="el" href="blockchain_8cpp_source.html#l00394">getblockheaders()</a>, and <a class="el" href="rest_8cpp_source.html#l00129">rest_headers()</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_aa1e97ce578bfdae0125555bda5a2d48d_cgraph.svg" width="662" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00340">getblockheader()</a>, <a class="el" href="blockchain_8cpp_source.html#l00398">getblockheaders()</a>, and <a class="el" href="rest_8cpp_source.html#l00132">rest_headers()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_aa1e97ce578bfdae0125555bda5a2d48d_cgraph.svg" width="662" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_aa1e97ce578bfdae0125555bda5a2d48d_icgraph.svg" width="319" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -355,24 +427,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00090">90</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00094">94</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00384">CChain::Contains()</a>, <a class="el" href="chain_8h_source.html#l00218">CBlockIndex::GetBlockHash()</a>, <a class="el" href="block_8h_source.html#l00066">CBlockHeader::GetBlockTime()</a>, <a class="el" href="blockchain_8cpp_source.html#l00032">GetDifficulty()</a>, <a class="el" href="block_8cpp_source.html#l00013">CBlockHeader::GetHash()</a>, <a class="el" href="transaction_8h_source.html#l00262">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00230">CBlockIndex::GetMedianTimePast()</a>, <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="block_8h_source.html#l00026">CBlockHeader::hashMerkleRoot</a>, <a class="el" href="chain_8h_source.html#l00397">CChain::Height()</a>, <a class="el" href="block_8h_source.html#l00028">CBlockHeader::nBits</a>, <a class="el" href="chain_8h_source.html#l00125">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00389">CChain::Next()</a>, <a class="el" href="chain_8h_source.html#l00113">CBlockIndex::nHeight</a>, <a class="el" href="block_8h_source.html#l00029">CBlockHeader::nNonce</a>, <a class="el" href="block_8h_source.html#l00024">CBlockHeader::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chain_8h_source.html#l00107">CBlockIndex::pprev</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00064">TxToJSON()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>, and <a class="el" href="block_8h_source.html#l00077">CBlock::vtx</a>.</p>
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00438">CChain::Contains()</a>, <a class="el" href="chain_8h_source.html#l00272">CBlockIndex::GetBlockHash()</a>, <a class="el" href="block_8h_source.html#l00066">CBlockHeader::GetBlockTime()</a>, <a class="el" href="blockchain_8cpp_source.html#l00036">GetDifficulty()</a>, <a class="el" href="block_8cpp_source.html#l00013">CBlockHeader::GetHash()</a>, <a class="el" href="transaction_8h_source.html#l00261">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00284">CBlockIndex::GetMedianTimePast()</a>, <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="block_8h_source.html#l00026">CBlockHeader::hashMerkleRoot</a>, <a class="el" href="chain_8h_source.html#l00451">CChain::Height()</a>, <a class="el" href="block_8h_source.html#l00028">CBlockHeader::nBits</a>, <a class="el" href="chain_8h_source.html#l00179">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00443">CChain::Next()</a>, <a class="el" href="chain_8h_source.html#l00167">CBlockIndex::nHeight</a>, <a class="el" href="block_8h_source.html#l00029">CBlockHeader::nNonce</a>, <a class="el" href="block_8h_source.html#l00024">CBlockHeader::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chain_8h_source.html#l00161">CBlockIndex::pprev</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00064">TxToJSON()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>, and <a class="el" href="block_8h_source.html#l00077">CBlock::vtx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00483">getblock()</a>, and <a class="el" href="rest_8cpp_source.html#l00203">rest_block()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a6b596f07acd85fe676c798170fd8ddbe_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00487">getblock()</a>, and <a class="el" href="rest_8cpp_source.html#l00206">rest_block()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a6b596f07acd85fe676c798170fd8ddbe_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a6b596f07acd85fe676c798170fd8ddbe_icgraph.svg" width="446" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -405,14 +477,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00148">148</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00152">152</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="chain_8h_source.html#l00218">CBlockIndex::GetBlockHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="chain_8h_source.html#l00366">CChain::Tip()</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="chain_8h_source.html#l00272">CBlockIndex::GetBlockHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="chain_8h_source.html#l00420">CChain::Tip()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a155137bbf47706bd55a07821025e9b6d_cgraph.svg" width="374" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -445,14 +517,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00483">483</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00487">487</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00118">CDataStream::begin()</a>, <a class="el" href="chain_8h_source.html#l00086">BLOCK_HAVE_DATA</a>, <a class="el" href="blockchain_8cpp_source.html#l00090">blockToJSON()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="streams_8h_source.html#l00120">CDataStream::end()</a>, <a class="el" href="validation_8cpp_source.html#l00076">fHavePruned</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="chain_8h_source.html#l00137">CBlockIndex::nStatus</a>, <a class="el" href="chain_8h_source.html#l00129">CBlockIndex::nTx</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l01171">ReadBlockFromDisk()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00037">RPC_INTERNAL_ERROR</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00140">uint256S()</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00116">CDataStream::begin()</a>, <a class="el" href="chain_8h_source.html#l00140">BLOCK_HAVE_DATA</a>, <a class="el" href="blockchain_8cpp_source.html#l00094">blockToJSON()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="streams_8h_source.html#l00118">CDataStream::end()</a>, <a class="el" href="validation_8cpp_source.html#l00076">fHavePruned</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="chain_8h_source.html#l00191">CBlockIndex::nStatus</a>, <a class="el" href="chain_8h_source.html#l00183">CBlockIndex::nTx</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l01172">ReadBlockFromDisk()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00037">RPC_INTERNAL_ERROR</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00148">uint256S()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_afdd7f5b03a6ab23f3627721b074ef606_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -485,24 +557,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00743">743</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00814">814</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="blockchain_8cpp_source.html#l00729">BIP9SoftForkDesc()</a>, <a class="el" href="chain_8h_source.html#l00086">BLOCK_HAVE_DATA</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="params_8h_source.html#l00018">Consensus::DEPLOYMENT_CSV</a>, <a class="el" href="params_8h_source.html#l00019">Consensus::DEPLOYMENT_DIP0001</a>, <a class="el" href="validation_8cpp_source.html#l00077">fPruneMode</a>, <a class="el" href="chain_8h_source.html#l00218">CBlockIndex::GetBlockHash()</a>, <a class="el" href="chainparams_8h_source.html#l00055">CChainParams::GetConsensus()</a>, <a class="el" href="blockchain_8cpp_source.html#l00032">GetDifficulty()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00230">CBlockIndex::GetMedianTimePast()</a>, <a class="el" href="checkpoints_8cpp_source.html#l00030">Checkpoints::GuessVerificationProgress()</a>, <a class="el" href="chain_8h_source.html#l00397">CChain::Height()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="chain_8h_source.html#l00125">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00113">CBlockIndex::nHeight</a>, <a class="el" href="chain_8h_source.html#l00137">CBlockIndex::nStatus</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="validation_8cpp_source.html#l00066">pindexBestHeader</a>, <a class="el" href="chain_8h_source.html#l00107">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="blockchain_8cpp_source.html#l00719">SoftForkDesc()</a>, <a class="el" href="chain_8h_source.html#l00366">CChain::Tip()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<p class="reference">References <a class="el" href="blockchain_8cpp_source.html#l00800">BIP9SoftForkDesc()</a>, <a class="el" href="chain_8h_source.html#l00140">BLOCK_HAVE_DATA</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="params_8h_source.html#l00018">Consensus::DEPLOYMENT_CSV</a>, <a class="el" href="params_8h_source.html#l00019">Consensus::DEPLOYMENT_DIP0001</a>, <a class="el" href="validation_8cpp_source.html#l00077">fPruneMode</a>, <a class="el" href="chain_8h_source.html#l00272">CBlockIndex::GetBlockHash()</a>, <a class="el" href="chainparams_8h_source.html#l00055">CChainParams::GetConsensus()</a>, <a class="el" href="blockchain_8cpp_source.html#l00036">GetDifficulty()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00284">CBlockIndex::GetMedianTimePast()</a>, <a class="el" href="checkpoints_8cpp_source.html#l00030">Checkpoints::GuessVerificationProgress()</a>, <a class="el" href="chain_8h_source.html#l00451">CChain::Height()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="chain_8h_source.html#l00179">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00167">CBlockIndex::nHeight</a>, <a class="el" href="chain_8h_source.html#l00191">CBlockIndex::nStatus</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="validation_8cpp_source.html#l00066">pindexBestHeader</a>, <a class="el" href="chain_8h_source.html#l00161">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="blockchain_8cpp_source.html#l00790">SoftForkDesc()</a>, <a class="el" href="chain_8h_source.html#l00420">CChain::Tip()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rest_8cpp_source.html#l00276">rest_chaininfo()</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a85d3a2a7f9202d1413ce29fecf0074cd_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="rest_8cpp_source.html#l00279">rest_chaininfo()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a85d3a2a7f9202d1413ce29fecf0074cd_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a85d3a2a7f9202d1413ce29fecf0074cd_icgraph.svg" width="284" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -535,14 +607,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00131">131</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00135">135</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="chain_8h_source.html#l00397">CChain::Height()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="chain_8h_source.html#l00451">CChain::Height()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_ae0f8b6c1a99fcf8a0e786df27a41a40d_cgraph.svg" width="286" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -575,14 +647,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00311">311</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00315">315</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="univalue_8cpp_source.html#l00317">UniValue::get_int()</a>, <a class="el" href="chain_8h_source.html#l00218">CBlockIndex::GetBlockHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00397">CChain::Height()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00046">RPC_INVALID_PARAMETER</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="univalue_8cpp_source.html#l00317">UniValue::get_int()</a>, <a class="el" href="chain_8h_source.html#l00272">CBlockIndex::GetBlockHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="chain_8h_source.html#l00451">CChain::Height()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00046">RPC_INVALID_PARAMETER</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_ac1ec45e4b8f71fd32a1a3a984c62429f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -615,14 +687,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00277">277</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00281">281</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="univalue_8cpp_source.html#l00317">UniValue::get_int()</a>, <a class="el" href="validation_8cpp_source.html#l01030">GetTimestampIndex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="keccak_8c_source.html#l00370">high</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="keccak_8c_source.html#l00370">low</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>.</p>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="univalue_8cpp_source.html#l00317">UniValue::get_int()</a>, <a class="el" href="validation_8cpp_source.html#l01035">GetTimestampIndex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="keccak_8c_source.html#l00370">high</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="keccak_8c_source.html#l00370">low</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a077683eedbf989d18fd1d552eecdbc43_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -655,14 +727,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00336">336</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00340">340</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00118">CDataStream::begin()</a>, <a class="el" href="blockchain_8cpp_source.html#l00063">blockheaderToJSON()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="streams_8h_source.html#l00120">CDataStream::end()</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="chain_8h_source.html#l00205">CBlockIndex::GetBlockHeader()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00140">uint256S()</a>.</p>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00116">CDataStream::begin()</a>, <a class="el" href="blockchain_8cpp_source.html#l00067">blockheaderToJSON()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="streams_8h_source.html#l00118">CDataStream::end()</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="chain_8h_source.html#l00259">CBlockIndex::GetBlockHeader()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00148">uint256S()</a>.</p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_ac61335dee09545c4069daba061dfc780_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -695,14 +767,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00394">394</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00398">398</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00118">CDataStream::begin()</a>, <a class="el" href="blockchain_8cpp_source.html#l00063">blockheaderToJSON()</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="streams_8h_source.html#l00120">CDataStream::end()</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="chain_8h_source.html#l00205">CBlockIndex::GetBlockHeader()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="validation_8h_source.html#l00092">MAX_HEADERS_RESULTS</a>, <a class="el" href="chain_8h_source.html#l00389">CChain::Next()</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00046">RPC_INVALID_PARAMETER</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="uint256_8h_source.html#l00140">uint256S()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>.</p>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00116">CDataStream::begin()</a>, <a class="el" href="blockchain_8cpp_source.html#l00067">blockheaderToJSON()</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="streams_8h_source.html#l00118">CDataStream::end()</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="chain_8h_source.html#l00259">CBlockIndex::GetBlockHeader()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="validation_8h_source.html#l00088">MAX_HEADERS_RESULTS</a>, <a class="el" href="chain_8h_source.html#l00443">CChain::Next()</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00046">RPC_INVALID_PARAMETER</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="uint256_8h_source.html#l00148">uint256S()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>.</p>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a19b979ff4a0ba17c22baf73d950ed5f1_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -735,14 +807,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00837">837</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00908">908</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="chain_8h_source.html#l00092">BLOCK_FAILED_MASK</a>, <a class="el" href="chain_8h_source.html#l00080">BLOCK_VALID_SCRIPTS</a>, <a class="el" href="chain_8h_source.html#l00066">BLOCK_VALID_TREE</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00384">CChain::Contains()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="chain_8cpp_source.html#l00053">CChain::FindFork()</a>, <a class="el" href="blockchain_8cpp_source.html#l00032">GetDifficulty()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="chain_8h_source.html#l00253">CBlockIndex::IsValid()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="chain_8h_source.html#l00134">CBlockIndex::nChainTx</a>, <a class="el" href="chain_8h_source.html#l00125">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00113">CBlockIndex::nHeight</a>, <a class="el" href="chain_8h_source.html#l00137">CBlockIndex::nStatus</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00023">PAIRTYPE</a>, <a class="el" href="chain_8h_source.html#l00104">CBlockIndex::phashBlock</a>, <a class="el" href="chain_8h_source.html#l00107">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="chain_8h_source.html#l00366">CChain::Tip()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
-<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="chain_8h_source.html#l00146">BLOCK_FAILED_MASK</a>, <a class="el" href="chain_8h_source.html#l00134">BLOCK_VALID_SCRIPTS</a>, <a class="el" href="chain_8h_source.html#l00120">BLOCK_VALID_TREE</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00438">CChain::Contains()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="chain_8cpp_source.html#l00053">CChain::FindFork()</a>, <a class="el" href="blockchain_8cpp_source.html#l00036">GetDifficulty()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="arith__uint256_8cpp_source.html#l00148">base_uint&lt; BITS &gt;::GetHex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="chain_8h_source.html#l00307">CBlockIndex::IsValid()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="chain_8h_source.html#l00188">CBlockIndex::nChainTx</a>, <a class="el" href="chain_8h_source.html#l00179">CBlockIndex::nChainWork</a>, <a class="el" href="chain_8h_source.html#l00167">CBlockIndex::nHeight</a>, <a class="el" href="chain_8h_source.html#l00191">CBlockIndex::nStatus</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00023">PAIRTYPE</a>, <a class="el" href="chain_8h_source.html#l00158">CBlockIndex::phashBlock</a>, <a class="el" href="chain_8h_source.html#l00161">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="chain_8h_source.html#l00420">CChain::Tip()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_ae98cf999ad47629eed902b8b9c3f066d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -765,24 +837,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00032">32</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00036">36</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00143">CBlockIndex::nBits</a>, and <a class="el" href="chain_8h_source.html#l00366">CChain::Tip()</a>.</p>
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00197">CBlockIndex::nBits</a>, and <a class="el" href="chain_8h_source.html#l00420">CChain::Tip()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00063">blockheaderToJSON()</a>, <a class="el" href="blockchain_8cpp_source.html#l00090">blockToJSON()</a>, <a class="el" href="blockchain_8cpp_source.html#l00743">getblockchaininfo()</a>, <a class="el" href="blockchain_8cpp_source.html#l00837">getchaintips()</a>, <a class="el" href="blockchain_8cpp_source.html#l00165">getdifficulty()</a>, <a class="el" href="misc_8cpp_source.html#l00047">getinfo()</a>, and <a class="el" href="mining_8cpp_source.html#l00235">getmininginfo()</a>.</p>
-<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a65a78b16d228932a6142656509a8bce4_cgraph.svg" width="246" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00067">blockheaderToJSON()</a>, <a class="el" href="blockchain_8cpp_source.html#l00094">blockToJSON()</a>, <a class="el" href="blockchain_8cpp_source.html#l00814">getblockchaininfo()</a>, <a class="el" href="blockchain_8cpp_source.html#l00908">getchaintips()</a>, <a class="el" href="blockchain_8cpp_source.html#l00169">getdifficulty()</a>, <a class="el" href="misc_8cpp_source.html#l00048">getinfo()</a>, and <a class="el" href="mining_8cpp_source.html#l00236">getmininginfo()</a>.</p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a65a78b16d228932a6142656509a8bce4_cgraph.svg" width="246" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a65a78b16d228932a6142656509a8bce4_icgraph.svg" width="662" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -815,14 +887,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00165">165</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00169">169</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="blockchain_8cpp_source.html#l00032">GetDifficulty()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
-<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="blockchain_8cpp_source.html#l00036">GetDifficulty()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
+<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_aa46e23107c69ef15b3ad58ae330c5c73_cgraph.svg" width="412" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -855,14 +927,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00961">961</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l01032">1032</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="blockchain_8cpp_source.html#l00948">mempoolInfoToJSON()</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
-<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="blockchain_8cpp_source.html#l01019">mempoolInfoToJSON()</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
+<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a29c9c6e3c2c8c53e489b47348419905e_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -895,14 +967,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00234">234</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00238">238</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="amount_8cpp_source.html#l00010">CURRENCY_UNIT</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="blockchain_8cpp_source.html#l00182">mempoolToJSON()</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
-<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="amount_8cpp_source.html#l00010">CURRENCY_UNIT</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="blockchain_8cpp_source.html#l00186">mempoolToJSON()</a>, and <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>.</p>
+<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a44f5bbe5b8c41540712ec39d2ece88a9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -935,14 +1007,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00591">591</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00662">662</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="txmempool_8h_source.html#l00402">CTxMemPool::cs</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="amount_8cpp_source.html#l00010">CURRENCY_UNIT</a>, <a class="el" href="coins_8h_source.html#l00077">CCoins::fCoinBase</a>, <a class="el" href="univalue_8cpp_source.html#l00317">UniValue::get_int()</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="coins_8cpp_source.html#l00152">CCoinsViewCache::GetBestBlock()</a>, <a class="el" href="chain_8h_source.html#l00218">CBlockIndex::GetBlockHash()</a>, <a class="el" href="coins_8cpp_source.html#l00090">CCoinsViewCache::GetCoins()</a>, <a class="el" href="txmempool_8cpp_source.html#l00984">CCoinsViewMemPool::GetCoins()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="txmempool_8h_source.html#l00040">MEMPOOL_HEIGHT</a>, <a class="el" href="coins_8h_source.html#l00083">CCoins::nHeight</a>, <a class="el" href="chain_8h_source.html#l00113">CBlockIndex::nHeight</a>, <a class="el" href="univalue_8cpp_source.html#l00078">NullUniValue</a>, <a class="el" href="coins_8h_source.html#l00087">CCoins::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="validation_8cpp_source.html#l00187">pcoinsTip</a>, <a class="el" href="txmempool_8cpp_source.html#l00347">CTxMemPool::pruneSpent()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00040">ScriptPubKeyToJSON()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="uint256_8h_source.html#l00140">uint256S()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>, and <a class="el" href="coins_8h_source.html#l00080">CCoins::vout</a>.</p>
-<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="txmempool_8h_source.html#l00416">CTxMemPool::cs</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="amount_8cpp_source.html#l00010">CURRENCY_UNIT</a>, <a class="el" href="coins_8h_source.html#l00036">Coin::fCoinBase</a>, <a class="el" href="univalue_8cpp_source.html#l00317">UniValue::get_int()</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="coins_8cpp_source.html#l00135">CCoinsViewCache::GetBestBlock()</a>, <a class="el" href="chain_8h_source.html#l00272">CBlockIndex::GetBlockHash()</a>, <a class="el" href="coins_8cpp_source.html#l00058">CCoinsViewCache::GetCoin()</a>, <a class="el" href="txmempool_8cpp_source.html#l00978">CCoinsViewMemPool::GetCoin()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="txmempool_8cpp_source.html#l00347">CTxMemPool::isSpent()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="txmempool_8h_source.html#l00040">MEMPOOL_HEIGHT</a>, <a class="el" href="coins_8h_source.html#l00039">Coin::nHeight</a>, <a class="el" href="chain_8h_source.html#l00167">CBlockIndex::nHeight</a>, <a class="el" href="univalue_8cpp_source.html#l00078">NullUniValue</a>, <a class="el" href="transaction_8h_source.html#l00135">CTxOut::nValue</a>, <a class="el" href="coins_8h_source.html#l00033">Coin::out</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="validation_8cpp_source.html#l00188">pcoinsTip</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::scriptPubKey</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00040">ScriptPubKeyToJSON()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="uint256_8h_source.html#l00148">uint256S()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a5d2241797e79623e7a558ab617415652_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -975,15 +1047,75 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00553">553</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00624">624</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="coins_8cpp_source.html#l00057">CCoinsViewBacked::GetStats()</a>, <a class="el" href="coins_8h_source.html#l00303">CCoinsStats::hashBlock</a>, <a class="el" href="coins_8h_source.html#l00307">CCoinsStats::hashSerialized</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="coins_8h_source.html#l00302">CCoinsStats::nHeight</a>, <a class="el" href="coins_8h_source.html#l00306">CCoinsStats::nSerializedSize</a>, <a class="el" href="coins_8h_source.html#l00308">CCoinsStats::nTotalAmount</a>, <a class="el" href="coins_8h_source.html#l00305">CCoinsStats::nTransactionOutputs</a>, <a class="el" href="coins_8h_source.html#l00304">CCoinsStats::nTransactions</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="validation_8cpp_source.html#l00187">pcoinsTip</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
-<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="blockchain_8cpp_source.html#l00587">GetUTXOStats()</a>, <a class="el" href="blockchain_8cpp_source.html#l00560">CCoinsStats::hashBlock</a>, <a class="el" href="blockchain_8cpp_source.html#l00563">CCoinsStats::hashSerialized</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="blockchain_8cpp_source.html#l00564">CCoinsStats::nDiskSize</a>, <a class="el" href="blockchain_8cpp_source.html#l00559">CCoinsStats::nHeight</a>, <a class="el" href="blockchain_8cpp_source.html#l00565">CCoinsStats::nTotalAmount</a>, <a class="el" href="blockchain_8cpp_source.html#l00562">CCoinsStats::nTransactionOutputs</a>, <a class="el" href="blockchain_8cpp_source.html#l00561">CCoinsStats::nTransactions</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="validation_8cpp_source.html#l00187">pcoinsdbview</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_afba3c21535e88135f386a12e40199da2_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2d5144afc19a0e8bafb934ebfd145671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5144afc19a0e8bafb934ebfd145671">&#9670;&nbsp;</a></span>GetUTXOStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool GetUTXOStats </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_coins_view.html">CCoinsView</a> *&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_c_coins_stats.html">CCoinsStats</a> &amp;&#160;</td>
+          <td class="paramname"><em>stats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate statistics about the unspent transaction output set. </p>
+
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00587">587</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="blockchain_8cpp_source.html#l00570">ApplyStats()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="coins_8cpp_source.html#l00016">CCoinsView::Cursor()</a>, <a class="el" href="util_8h_source.html#l00131">error()</a>, <a class="el" href="coins_8h_source.html#l00172">CCoinsView::EstimateSize()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="blockchain_8cpp_source.html#l00560">CCoinsStats::hashBlock</a>, <a class="el" href="blockchain_8cpp_source.html#l00563">CCoinsStats::hashSerialized</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="transaction_8h_source.html#l00019">COutPoint::n</a>, <a class="el" href="blockchain_8cpp_source.html#l00564">CCoinsStats::nDiskSize</a>, <a class="el" href="blockchain_8cpp_source.html#l00559">CCoinsStats::nHeight</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, and <a class="el" href="serialize_8h_source.html#l00172">SER_GETHASH</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00624">gettxoutsetinfo()</a>.</p>
+<div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a2d5144afc19a0e8bafb934ebfd145671_cgraph.svg" width="100%" height="578"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a2d5144afc19a0e8bafb934ebfd145671_icgraph.svg" width="278" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1015,14 +1147,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00983">983</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l01054">1054</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l02808">ActivateBestChain()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00081">CValidationState::GetRejectReason()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="validation_8cpp_source.html#l02863">InvalidateBlock()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00061">CValidationState::IsValid()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="univalue_8cpp_source.html#l00078">NullUniValue</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00047">RPC_DATABASE_ERROR</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00140">uint256S()</a>.</p>
-<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l02811">ActivateBestChain()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00081">CValidationState::GetRejectReason()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="validation_8cpp_source.html#l02866">InvalidateBlock()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00061">CValidationState::IsValid()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="univalue_8cpp_source.html#l00078">NullUniValue</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00047">RPC_DATABASE_ERROR</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00148">uint256S()</a>.</p>
+<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div id="dynsection-27-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a7e43030fb221e28db98accef3fc80232_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1044,24 +1176,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00948">948</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l01019">1019</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="policy_8h_source.html#l00029">DEFAULT_MAX_MEMPOOL_SIZE</a>, <a class="el" href="txmempool_8cpp_source.html#l01000">CTxMemPool::DynamicMemoryUsage()</a>, <a class="el" href="util_8cpp_source.html#l00441">GetArg()</a>, <a class="el" href="amount_8h_source.html#l00047">CFeeRate::GetFeePerK()</a>, <a class="el" href="txmempool_8cpp_source.html#l01076">CTxMemPool::GetMinFee()</a>, <a class="el" href="txmempool_8h_source.html#l00557">CTxMemPool::GetTotalTxSize()</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="txmempool_8h_source.html#l00551">CTxMemPool::size()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<p class="reference">References <a class="el" href="policy_8h_source.html#l00029">DEFAULT_MAX_MEMPOOL_SIZE</a>, <a class="el" href="txmempool_8cpp_source.html#l00994">CTxMemPool::DynamicMemoryUsage()</a>, <a class="el" href="util_8cpp_source.html#l00441">GetArg()</a>, <a class="el" href="amount_8h_source.html#l00047">CFeeRate::GetFeePerK()</a>, <a class="el" href="txmempool_8cpp_source.html#l01070">CTxMemPool::GetMinFee()</a>, <a class="el" href="txmempool_8h_source.html#l00571">CTxMemPool::GetTotalTxSize()</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="txmempool_8h_source.html#l00565">CTxMemPool::size()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00961">getmempoolinfo()</a>, and <a class="el" href="rest_8cpp_source.html#l00301">rest_mempool_info()</a>.</p>
-<div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l01032">getmempoolinfo()</a>, and <a class="el" href="rest_8cpp_source.html#l00304">rest_mempool_info()</a>.</p>
+<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a7305038a43cc5f399ca00e00c6f07186_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div id="dynsection-29-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a7305038a43cc5f399ca00e00c6f07186_icgraph.svg" width="339" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -1084,24 +1216,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00182">182</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00186">186</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="txmempool_8h_source.html#l00402">CTxMemPool::cs</a>, <a class="el" href="txmempool_8h_source.html#l00563">CTxMemPool::exists()</a>, <a class="el" href="txmempool_8h_source.html#l00141">CTxMemPoolEntry::GetCountWithDescendants()</a>, <a class="el" href="txmempool_8h_source.html#l00116">CTxMemPoolEntry::GetFee()</a>, <a class="el" href="transaction_8h_source.html#l00262">CTransaction::GetHash()</a>, <a class="el" href="txmempool_8h_source.html#l00119">CTxMemPoolEntry::GetHeight()</a>, <a class="el" href="txmempool_8h_source.html#l00143">CTxMemPoolEntry::GetModFeesWithDescendants()</a>, <a class="el" href="txmempool_8h_source.html#l00122">CTxMemPoolEntry::GetModifiedFee()</a>, <a class="el" href="txmempool_8cpp_source.html#l00050">CTxMemPoolEntry::GetPriority()</a>, <a class="el" href="txmempool_8h_source.html#l00142">CTxMemPoolEntry::GetSizeWithDescendants()</a>, <a class="el" href="txmempool_8h_source.html#l00118">CTxMemPoolEntry::GetTime()</a>, <a class="el" href="txmempool_8h_source.html#l00110">CTxMemPoolEntry::GetTx()</a>, <a class="el" href="txmempool_8h_source.html#l00117">CTxMemPoolEntry::GetTxSize()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="chain_8h_source.html#l00397">CChain::Height()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="txmempool_8h_source.html#l00403">CTxMemPool::mapTx</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="txmempool_8cpp_source.html#l00859">CTxMemPool::queryHashes()</a>, <a class="el" href="uint256_8cpp_source.html#l00065">base_blob&lt; BITS &gt;::ToString()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="txmempool_8h_source.html#l00416">CTxMemPool::cs</a>, <a class="el" href="txmempool_8h_source.html#l00577">CTxMemPool::exists()</a>, <a class="el" href="txmempool_8h_source.html#l00141">CTxMemPoolEntry::GetCountWithDescendants()</a>, <a class="el" href="txmempool_8h_source.html#l00116">CTxMemPoolEntry::GetFee()</a>, <a class="el" href="transaction_8h_source.html#l00261">CTransaction::GetHash()</a>, <a class="el" href="txmempool_8h_source.html#l00119">CTxMemPoolEntry::GetHeight()</a>, <a class="el" href="txmempool_8h_source.html#l00143">CTxMemPoolEntry::GetModFeesWithDescendants()</a>, <a class="el" href="txmempool_8h_source.html#l00122">CTxMemPoolEntry::GetModifiedFee()</a>, <a class="el" href="txmempool_8cpp_source.html#l00050">CTxMemPoolEntry::GetPriority()</a>, <a class="el" href="txmempool_8h_source.html#l00142">CTxMemPoolEntry::GetSizeWithDescendants()</a>, <a class="el" href="txmempool_8h_source.html#l00118">CTxMemPoolEntry::GetTime()</a>, <a class="el" href="txmempool_8h_source.html#l00110">CTxMemPoolEntry::GetTx()</a>, <a class="el" href="txmempool_8h_source.html#l00117">CTxMemPoolEntry::GetTxSize()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="chain_8h_source.html#l00451">CChain::Height()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="txmempool_8h_source.html#l00417">CTxMemPool::mapTx</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="txmempool_8cpp_source.html#l00853">CTxMemPool::queryHashes()</a>, <a class="el" href="uint256_8cpp_source.html#l00065">base_blob&lt; BITS &gt;::ToString()</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00234">getrawmempool()</a>, and <a class="el" href="rest_8cpp_source.html#l00326">rest_mempool_contents()</a>.</p>
-<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00238">getrawmempool()</a>, and <a class="el" href="rest_8cpp_source.html#l00329">rest_mempool_contents()</a>.</p>
+<div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div id="dynsection-30-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a3b8a8939a31de29ceb0ea581341eeb92_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-28-content" class="dyncontent" style="display:none;">
+<div id="dynsection-31-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a3b8a8939a31de29ceb0ea581341eeb92_icgraph.svg" width="347" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -1134,14 +1266,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l01021">1021</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l01092">1092</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l02808">ActivateBestChain()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00081">CValidationState::GetRejectReason()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00061">CValidationState::IsValid()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="univalue_8cpp_source.html#l00078">NullUniValue</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="validation_8cpp_source.html#l02903">ReconsiderBlock()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00047">RPC_DATABASE_ERROR</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00140">uint256S()</a>.</p>
-<div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l02811">ActivateBestChain()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="univalue_8cpp_source.html#l00310">UniValue::get_str()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00081">CValidationState::GetRejectReason()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="consensus_2validation_8h_source.html#l00061">CValidationState::IsValid()</a>, <a class="el" href="rpc_2protocol_8cpp_source.html#l00057">JSONRPCError()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="univalue_8cpp_source.html#l00078">NullUniValue</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="validation_8cpp_source.html#l02906">ReconsiderBlock()</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00047">RPC_DATABASE_ERROR</a>, <a class="el" href="rpc_2protocol_8h_source.html#l00044">RPC_INVALID_ADDRESS_OR_KEY</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, and <a class="el" href="uint256_8h_source.html#l00148">uint256S()</a>.</p>
+<div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-29-content" class="dyncontent" style="display:none;">
+<div id="dynsection-32-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a29263a4d92c9f0c07c1dfb0a5fad681b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1184,20 +1316,20 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="prevector_8h_source.html#l00270">prevector&lt; N, T, Size, Diff &gt;::begin()</a>, <a class="el" href="prevector_8h_source.html#l00272">prevector&lt; N, T, Size, Diff &gt;::end()</a>, <a class="el" href="standard_8cpp_source.html#l00194">ExtractDestinations()</a>, <a class="el" href="standard_8cpp_source.html#l00024">GetTxnOutputType()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="core__write_8cpp_source.html#l00075">ScriptToAsmStr()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rawtransaction_8cpp_source.html#l00526">decodescript()</a>, <a class="el" href="blockchain_8cpp_source.html#l00591">gettxout()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00064">TxToJSON()</a>.</p>
-<div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="rawtransaction_8cpp_source.html#l00527">decodescript()</a>, <a class="el" href="blockchain_8cpp_source.html#l00662">gettxout()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00064">TxToJSON()</a>.</p>
+<div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-30-content" class="dyncontent" style="display:none;">
+<div id="dynsection-33-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a6e621b4ad486c6d716873ee3f16919ad_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-31-content" class="dyncontent" style="display:none;">
+<div id="dynsection-34-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a6e621b4ad486c6d716873ee3f16919ad_icgraph.svg" width="100%" height="461"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1250,24 +1382,24 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00719">719</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00790">790</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="rest_8cpp_source.html#l00037">name</a>, <a class="el" href="params_8h_source.html#l00060">Consensus::Params::nMajorityEnforceBlockUpgrade</a>, <a class="el" href="params_8h_source.html#l00061">Consensus::Params::nMajorityRejectBlockOutdated</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="blockchain_8cpp_source.html#l00700">SoftForkMajorityDesc()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<p class="reference">References <a class="el" href="rest_8cpp_source.html#l00037">name</a>, <a class="el" href="params_8h_source.html#l00060">Consensus::Params::nMajorityEnforceBlockUpgrade</a>, <a class="el" href="params_8h_source.html#l00061">Consensus::Params::nMajorityRejectBlockOutdated</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="blockchain_8cpp_source.html#l00771">SoftForkMajorityDesc()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00743">getblockchaininfo()</a>.</p>
-<div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00814">getblockchaininfo()</a>.</p>
+<div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-32-content" class="dyncontent" style="display:none;">
+<div id="dynsection-35-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_aa88472bd8d81aa0ced772b17b4de24b1_cgraph.svg" width="506" height="100"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-36-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-33-content" class="dyncontent" style="display:none;">
+<div id="dynsection-36-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_aa88472bd8d81aa0ced772b17b4de24b1_icgraph.svg" width="435" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -1322,24 +1454,24 @@ Functions</h2></td></tr>
 
 <p>Implementation of IsSuperMajority with better feedback. </p>
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00700">700</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00771">771</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="params_8h_source.html#l00062">Consensus::Params::nMajorityWindow</a>, <a class="el" href="chain_8h_source.html#l00140">CBlockIndex::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chain_8h_source.html#l00107">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
+<p class="reference">References <a class="el" href="params_8h_source.html#l00062">Consensus::Params::nMajorityWindow</a>, <a class="el" href="chain_8h_source.html#l00194">CBlockIndex::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="chain_8h_source.html#l00161">CBlockIndex::pprev</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, and <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00719">SoftForkDesc()</a>.</p>
-<div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00790">SoftForkDesc()</a>.</p>
+<div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-37-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-34-content" class="dyncontent" style="display:none;">
+<div id="dynsection-37-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a2dc3ddb809ae1f6efae0941160b8943b_cgraph.svg" width="355" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-38-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-38-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-35-content" class="dyncontent" style="display:none;">
+<div id="dynsection-38-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a2dc3ddb809ae1f6efae0941160b8943b_icgraph.svg" width="632" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -1380,22 +1512,22 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="rawtransaction_8cpp_source.html#l00064">64</a> of file <a class="el" href="rawtransaction_8cpp_source.html">rawtransaction.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spentindex_8h_source.html#l00046">CSpentIndexValue::addressHash</a>, <a class="el" href="spentindex_8h_source.html#l00045">CSpentIndexValue::addressType</a>, <a class="el" href="prevector_8h_source.html#l00270">prevector&lt; N, T, Size, Diff &gt;::begin()</a>, <a class="el" href="spentindex_8h_source.html#l00043">CSpentIndexValue::blockHeight</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00384">CChain::Contains()</a>, <a class="el" href="prevector_8h_source.html#l00272">prevector&lt; N, T, Size, Diff &gt;::end()</a>, <a class="el" href="chain_8h_source.html#l00223">CBlockIndex::GetBlockTime()</a>, <a class="el" href="transaction_8h_source.html#l00262">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="validation_8cpp_source.html#l01041">GetSpentIndex()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="chain_8h_source.html#l00397">CChain::Height()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="spentindex_8h_source.html#l00042">CSpentIndexValue::inputIndex</a>, <a class="el" href="transaction_8h_source.html#l00284">CTransaction::IsCoinBase()</a>, <a class="el" href="uint256_8h_source.html#l00033">base_blob&lt; BITS &gt;::IsNull()</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="transaction_8h_source.html#l00019">COutPoint::n</a>, <a class="el" href="chain_8h_source.html#l00113">CBlockIndex::nHeight</a>, <a class="el" href="transaction_8h_source.html#l00235">CTransaction::nLockTime</a>, <a class="el" href="transaction_8h_source.html#l00063">CTxIn::nSequence</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::nValue</a>, <a class="el" href="transaction_8h_source.html#l00232">CTransaction::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="spentindex_8h_source.html#l00044">CSpentIndexValue::satoshis</a>, <a class="el" href="transaction_8h_source.html#l00137">CTxOut::scriptPubKey</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00040">ScriptPubKeyToJSON()</a>, <a class="el" href="transaction_8h_source.html#l00062">CTxIn::scriptSig</a>, <a class="el" href="core__write_8cpp_source.html#l00075">ScriptToAsmStr()</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="base58_8cpp_source.html#l00193">CBase58Data::ToString()</a>, <a class="el" href="spentindex_8h_source.html#l00041">CSpentIndexValue::txid</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>, and <a class="el" href="transaction_8h_source.html#l00234">CTransaction::vout</a>.</p>
+<p class="reference">References <a class="el" href="spentindex_8h_source.html#l00047">CSpentIndexValue::addressHash</a>, <a class="el" href="spentindex_8h_source.html#l00046">CSpentIndexValue::addressType</a>, <a class="el" href="prevector_8h_source.html#l00270">prevector&lt; N, T, Size, Diff &gt;::begin()</a>, <a class="el" href="spentindex_8h_source.html#l00044">CSpentIndexValue::blockHeight</a>, <a class="el" href="validation_8cpp_source.html#l00065">chainActive</a>, <a class="el" href="chain_8h_source.html#l00438">CChain::Contains()</a>, <a class="el" href="prevector_8h_source.html#l00272">prevector&lt; N, T, Size, Diff &gt;::end()</a>, <a class="el" href="chain_8h_source.html#l00277">CBlockIndex::GetBlockTime()</a>, <a class="el" href="transaction_8h_source.html#l00261">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="validation_8cpp_source.html#l01046">GetSpentIndex()</a>, <a class="el" href="transaction_8h_source.html#l00018">COutPoint::hash</a>, <a class="el" href="chain_8h_source.html#l00451">CChain::Height()</a>, <a class="el" href="utilstrencodings_8h_source.html#l00081">HexStr()</a>, <a class="el" href="spentindex_8h_source.html#l00043">CSpentIndexValue::inputIndex</a>, <a class="el" href="transaction_8h_source.html#l00283">CTransaction::IsCoinBase()</a>, <a class="el" href="uint256_8h_source.html#l00033">base_blob&lt; BITS &gt;::IsNull()</a>, <a class="el" href="validation_8cpp_source.html#l00064">mapBlockIndex</a>, <a class="el" href="transaction_8h_source.html#l00019">COutPoint::n</a>, <a class="el" href="chain_8h_source.html#l00167">CBlockIndex::nHeight</a>, <a class="el" href="transaction_8h_source.html#l00234">CTransaction::nLockTime</a>, <a class="el" href="transaction_8h_source.html#l00063">CTxIn::nSequence</a>, <a class="el" href="transaction_8h_source.html#l00135">CTxOut::nValue</a>, <a class="el" href="transaction_8h_source.html#l00231">CTransaction::nVersion</a>, <a class="el" href="univalue_8h_source.html#l00166">Pair()</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="version_8h_source.html#l00013">PROTOCOL_VERSION</a>, <a class="el" href="univalue_8cpp_source.html#l00176">UniValue::push_back()</a>, <a class="el" href="spentindex_8h_source.html#l00045">CSpentIndexValue::satoshis</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::scriptPubKey</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00040">ScriptPubKeyToJSON()</a>, <a class="el" href="transaction_8h_source.html#l00062">CTxIn::scriptSig</a>, <a class="el" href="core__write_8cpp_source.html#l00075">ScriptToAsmStr()</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="base58_8cpp_source.html#l00193">CBase58Data::ToString()</a>, <a class="el" href="spentindex_8h_source.html#l00042">CSpentIndexValue::txid</a>, <a class="el" href="server_8cpp_source.html#l00122">ValueFromAmount()</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VARR</a>, <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>, <a class="el" href="univalue_8h_source.html#l00021">UniValue::VOBJ</a>, and <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vout</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00090">blockToJSON()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00460">decoderawtransaction()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00144">getrawtransaction()</a>.</p>
-<div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-36-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00094">blockToJSON()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00461">decoderawtransaction()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00144">getrawtransaction()</a>.</p>
+<div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-39-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-39-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-36-content" class="dyncontent" style="display:none;">
+<div id="dynsection-39-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a719639f5d779706aae5c283784b3fd66_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-37-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-40-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-40-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-37-content" class="dyncontent" style="display:none;">
+<div id="dynsection-40-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a719639f5d779706aae5c283784b3fd66_icgraph.svg" width="627" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -1428,14 +1560,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00671">671</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="blockchain_8cpp_source.html#l00742">742</a> of file <a class="el" href="blockchain_8cpp_source.html">blockchain.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="validation_8h_source.html#l00190">DEFAULT_CHECKBLOCKS</a>, <a class="el" href="validation_8h_source.html#l00191">DEFAULT_CHECKLEVEL</a>, <a class="el" href="util_8cpp_source.html#l00441">GetArg()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="chainparams_8cpp_source.html#l00424">Params()</a>, <a class="el" href="validation_8cpp_source.html#l00187">pcoinsTip</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="validation_8cpp_source.html#l03841">CVerifyDB::VerifyDB()</a>.</p>
-<div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-38-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-38-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="validation_8h_source.html#l00188">DEFAULT_CHECKBLOCKS</a>, <a class="el" href="validation_8h_source.html#l00189">DEFAULT_CHECKLEVEL</a>, <a class="el" href="util_8cpp_source.html#l00441">GetArg()</a>, <a class="el" href="server_8cpp_source.html#l00581">HelpExampleCli()</a>, <a class="el" href="server_8cpp_source.html#l00586">HelpExampleRpc()</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="chainparams_8cpp_source.html#l00430">Params()</a>, <a class="el" href="validation_8cpp_source.html#l00188">pcoinsTip</a>, <a class="el" href="univalue_8h_source.html#l00069">UniValue::size()</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="validation_8cpp_source.html#l03844">CVerifyDB::VerifyDB()</a>.</p>
+<div id="dynsection-41" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-41-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-41-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-38-content" class="dyncontent" style="display:none;">
+<div id="dynsection-41-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="blockchain_8cpp_a30b96575c158ca0465dbdb25705c4ca9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1449,7 +1581,7 @@ Functions</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1d8fd1f10602b1b3ec6e7b702d4ec182.html">rpc</a></li><li class="navelem"><a class="el" href="blockchain_8cpp.html">blockchain.cpp</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:20 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:27 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

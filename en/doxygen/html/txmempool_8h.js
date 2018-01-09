@@ -11,6 +11,7 @@ var txmempool_8h =
     [ "CompareTxMemPoolEntryByScore", "class_compare_tx_mem_pool_entry_by_score.html", "class_compare_tx_mem_pool_entry_by_score" ],
     [ "CompareTxMemPoolEntryByEntryTime", "class_compare_tx_mem_pool_entry_by_entry_time.html", "class_compare_tx_mem_pool_entry_by_entry_time" ],
     [ "CInPoint", "class_c_in_point.html", "class_c_in_point" ],
+    [ "SaltedTxidHasher", "class_salted_txid_hasher.html", "class_salted_txid_hasher" ],
     [ "CTxMemPool", "class_c_tx_mem_pool.html", "class_c_tx_mem_pool" ],
     [ "CompareIteratorByHash", "struct_c_tx_mem_pool_1_1_compare_iterator_by_hash.html", "struct_c_tx_mem_pool_1_1_compare_iterator_by_hash" ],
     [ "TxLinks", "struct_c_tx_mem_pool_1_1_tx_links.html", "struct_c_tx_mem_pool_1_1_tx_links" ],
@@ -19,5 +20,5 @@ var txmempool_8h =
     [ "TxCoinAgePriority", "txmempool_8h.html#aeaaac2108576e7c8d4c8960abdd7f153", null ],
     [ "AllowFree", "txmempool_8h.html#ae6c67bac023a01f1ae29b7f2f4505bba", null ],
     [ "AllowFreeThreshold", "txmempool_8h.html#a51bd4734f99121bdc24323fd5aebacc3", null ],
-    [ "MEMPOOL_HEIGHT", "txmempool_8h.html#ac18cc9fcf96dcd34beef99424c12b268", null ]
+    [ "MEMPOOL_HEIGHT", "txmempool_8h.html#ab27e8af2886c474496561a6c0cfbfaf8", null ]
 ];

@@ -1,45 +1,46 @@
 <map id="GetSizeOfCompactSize" name="GetSizeOfCompactSize">
-<area shape="rect" id="node2" href="$validation_8h.html#a063faa3c9fa2d1733a51fb14cae2a2c6" title="Apply the effects of this block (with given index) on the UTXO set represented by coins..." alt="" coords="265,271,369,297"/>
-<area shape="rect" id="node41" href="$class_limited_string.html#a9b5f6a92ed889442a212444ed51fcea9" title="LimitedString::GetSerializeSize" alt="" coords="216,321,419,348"/>
-<area shape="rect" id="node42" href="$serialize_8h.html#af2f7bd0287726e890b7d465e09fd7f73" title="Forward declarations. " alt="" coords="258,372,377,399"/>
-<area shape="rect" id="node43" href="$serialize_8h.html#a4854d243367fb78caa539f76a9606d7b" title="prevector prevectors of unsigned char are a special case and are intended to be serialized as a singl..." alt="" coords="242,423,393,449"/>
-<area shape="rect" id="node3" href="$validation_8cpp.html#a9258465a729a68271780a9968e65819a" title="Connect a new block to chainActive. " alt="" coords="495,271,585,297"/>
-<area shape="rect" id="node36" href="$validation_8h.html#a12c39e969c9077605ae8a91730fb78d3" title="Check a block is completely valid from start to finish (only works on top of our current best block..." alt="" coords="871,461,995,488"/>
-<area shape="rect" id="node39" href="$class_c_verify_d_b.html#af12e07230f20d23cf01d417d0e785c49" title="CVerifyDB::VerifyDB" alt="" coords="467,220,613,247"/>
-<area shape="rect" id="node4" href="$validation_8cpp.html#a345d6616250288efacae87d05528fe8a" title="Try to make some progress towards making pindexMostWork the active block. " alt="" coords="661,271,820,297"/>
-<area shape="rect" id="node5" href="$validation_8h.html#ab7be3f1b4119e8df383a4332ddbd344a" title="Find the best known block, and make it the tip of the block chain. " alt="" coords="868,183,999,209"/>
-<area shape="rect" id="node6" href="$validation_8h.html#aaf2e19311fff6b9cd421a9a9d59f7ff1" title="Initialize a new block tree database + block data on disk. " alt="" coords="1070,157,1175,184"/>
-<area shape="rect" id="node11" href="$init_8cpp.html#a0189c34248cd89bbbe20d4d6045bd7c9" title="ThreadImport" alt="" coords="1301,208,1399,235"/>
-<area shape="rect" id="node12" href="$server_8h.html#a7e43030fb221e28db98accef3fc80232" title="invalidateblock" alt="" coords="1069,5,1177,32"/>
-<area shape="rect" id="node13" href="$validation_8h.html#a2233339a13d09038cf2e46f4d0144be4" title="Import blocks from an external file. " alt="" coords="1047,259,1199,285"/>
-<area shape="rect" id="node14" href="$validation_8h.html#ac880446d7f8833dd498df914ccc816a9" title="Process an incoming block. " alt="" coords="1057,309,1188,336"/>
-<area shape="rect" id="node29" href="$server_8h.html#a29263a4d92c9f0c07c1dfb0a5fad681b" title="reconsiderblock" alt="" coords="1066,56,1179,83"/>
-<area shape="rect" id="node30" href="$validation_8h.html#a6b20cdba297d137a4d7a91691cc4457b" title="ReprocessBlocks" alt="" coords="1060,107,1185,133"/>
-<area shape="rect" id="node7" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="2547,208,2618,235"/>
-<area shape="rect" id="node8" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2933,233,2995,260"/>
-<area shape="rect" id="node10" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="2693,259,2839,285"/>
-<area shape="rect" id="node9" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="3089,233,3140,260"/>
-<area shape="rect" id="node15" href="$server_8h.html#afc5f2c0cbe40a2f876b46df2929cf359" title="generate" alt="" coords="1314,411,1386,437"/>
-<area shape="rect" id="node16" href="$miner_8cpp.html#abfbc96f613381f93c13c00ebc2f25139" title="ProcessBlockFound" alt="" coords="1281,360,1419,387"/>
-<area shape="rect" id="node24" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1933,208,2055,235"/>
-<area shape="rect" id="node28" href="$server_8h.html#a220fade8a685be34364aad455f99f6d6" title="submitblock" alt="" coords="1304,309,1396,336"/>
-<area shape="rect" id="node17" href="$miner_8cpp.html#a17c61f964b27cc5060cd7f9b0efb3607" title="BitcoinMiner" alt="" coords="1501,360,1596,387"/>
-<area shape="rect" id="node18" href="$miner_8h.html#a5dd1df3c97c260735ad08a808db2115c" title="Run the miner threads. " alt="" coords="2333,360,2455,387"/>
-<area shape="rect" id="node19" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="2520,309,2645,336"/>
-<area shape="rect" id="node23" href="$server_8h.html#ae13fce5b0e4a07b7d116242b3a0e39b8" title="setgenerate" alt="" coords="2537,360,2628,387"/>
-<area shape="rect" id="node20" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2699,360,2833,387"/>
-<area shape="rect" id="node21" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2726,309,2806,336"/>
-<area shape="rect" id="node22" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2887,309,3041,336"/>
-<area shape="rect" id="node25" href="$net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" title="Process protocol messages received from a given node. " alt="" coords="2137,208,2268,235"/>
-<area shape="rect" id="node26" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="2321,208,2467,235"/>
-<area shape="rect" id="node27" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="2316,309,2472,336"/>
-<area shape="rect" id="node31" href="$class_c_spork_manager.html#ade3cee4d73664c03ceaa900efeedc395" title="CSporkManager::ExecuteSpork" alt="" coords="1247,107,1453,133"/>
-<area shape="rect" id="node32" href="$server_8h.html#a8f5eff6dda04d2f984da8bafd567f140" title="spork" alt="" coords="1521,107,1576,133"/>
-<area shape="rect" id="node33" href="$class_c_spork_manager.html#a73b217ee4057d273648c54fee3a702c5" title="CSporkManager::ProcessSpork" alt="" coords="1644,157,1851,184"/>
-<area shape="rect" id="node34" href="$class_c_spork_manager.html#a599d088218de9d242e4dc5cb17dd310b" title="CSporkManager::SetPrivKey" alt="" coords="1899,107,2089,133"/>
-<area shape="rect" id="node35" href="$class_c_spork_manager.html#a1277aeae7d50a0473c85a5a062d364cb" title="CSporkManager::UpdateSpork" alt="" coords="1647,107,1847,133"/>
-<area shape="rect" id="node37" href="$miner_8h.html#ac8f34678ed590db1325b261c708f2626" title="Generate a new block, without valid proof&#45;of&#45;work. " alt="" coords="1062,461,1183,488"/>
-<area shape="rect" id="node38" href="$server_8h.html#a054ca23f5d86a8ca30138464ba10008c" title="getblocktemplate" alt="" coords="1289,512,1411,539"/>
-<area shape="rect" id="node40" href="$server_8h.html#a30b96575c158ca0465dbdb25705c4ca9" title="verifychain" alt="" coords="698,220,783,247"/>
-<area shape="rect" id="node44" href="$serialize_8h.html#a6490b16e80dcab7850346df9f1c6d956" title="GetSerializeSize" alt="" coords="481,423,599,449"/>
+<area shape="rect" id="node2" href="$validation_8cpp.html#aaa0f986172f6a63a3f5dde9bc69f93cb" title="Apply the effects of this block (with given index) on the UTXO set represented by coins..." alt="" coords="272,259,376,285"/>
+<area shape="rect" id="node41" href="$class_c_compact_size.html#a89a22cfad00380e39facc475e5228f88" title="CCompactSize::GetSerializeSize" alt="" coords="216,309,432,336"/>
+<area shape="rect" id="node42" href="$class_limited_string.html#a9b5f6a92ed889442a212444ed51fcea9" title="LimitedString::GetSerializeSize" alt="" coords="223,360,425,387"/>
+<area shape="rect" id="node43" href="$serialize_8h.html#af2f7bd0287726e890b7d465e09fd7f73" title="Forward declarations. " alt="" coords="265,411,383,437"/>
+<area shape="rect" id="node44" href="$serialize_8h.html#a4854d243367fb78caa539f76a9606d7b" title="prevector prevectors of unsigned char are a special case and are intended to be serialized as a singl..." alt="" coords="249,461,399,488"/>
+<area shape="rect" id="node3" href="$validation_8cpp.html#a9258465a729a68271780a9968e65819a" title="Connect a new block to chainActive. " alt="" coords="509,259,598,285"/>
+<area shape="rect" id="node36" href="$validation_8h.html#a12c39e969c9077605ae8a91730fb78d3" title="Check a block is completely valid from start to finish (only works on top of our current best block..." alt="" coords="885,461,1009,488"/>
+<area shape="rect" id="node39" href="$class_c_verify_d_b.html#af12e07230f20d23cf01d417d0e785c49" title="CVerifyDB::VerifyDB" alt="" coords="480,208,627,235"/>
+<area shape="rect" id="node4" href="$validation_8cpp.html#a345d6616250288efacae87d05528fe8a" title="Try to make some progress towards making pindexMostWork the active block. " alt="" coords="675,259,833,285"/>
+<area shape="rect" id="node5" href="$validation_8h.html#ab7be3f1b4119e8df383a4332ddbd344a" title="Find the best known block, and make it the tip of the block chain. " alt="" coords="881,183,1012,209"/>
+<area shape="rect" id="node6" href="$validation_8h.html#aaf2e19311fff6b9cd421a9a9d59f7ff1" title="Initialize a new block tree database + block data on disk. " alt="" coords="1083,157,1189,184"/>
+<area shape="rect" id="node11" href="$init_8cpp.html#a0189c34248cd89bbbe20d4d6045bd7c9" title="ThreadImport" alt="" coords="1314,208,1413,235"/>
+<area shape="rect" id="node12" href="$server_8h.html#a7e43030fb221e28db98accef3fc80232" title="invalidateblock" alt="" coords="1082,5,1190,32"/>
+<area shape="rect" id="node13" href="$validation_8h.html#a2233339a13d09038cf2e46f4d0144be4" title="Import blocks from an external file. " alt="" coords="1060,259,1212,285"/>
+<area shape="rect" id="node14" href="$validation_8h.html#ac880446d7f8833dd498df914ccc816a9" title="Process an incoming block. " alt="" coords="1071,309,1201,336"/>
+<area shape="rect" id="node29" href="$server_8h.html#a29263a4d92c9f0c07c1dfb0a5fad681b" title="reconsiderblock" alt="" coords="1079,56,1193,83"/>
+<area shape="rect" id="node30" href="$validation_8h.html#a6b20cdba297d137a4d7a91691cc4457b" title="ReprocessBlocks" alt="" coords="1073,107,1199,133"/>
+<area shape="rect" id="node7" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="2561,208,2631,235"/>
+<area shape="rect" id="node8" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2946,233,3009,260"/>
+<area shape="rect" id="node10" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="2707,259,2852,285"/>
+<area shape="rect" id="node9" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="3103,233,3153,260"/>
+<area shape="rect" id="node15" href="$server_8h.html#afc5f2c0cbe40a2f876b46df2929cf359" title="generate" alt="" coords="1327,411,1399,437"/>
+<area shape="rect" id="node16" href="$miner_8cpp.html#abfbc96f613381f93c13c00ebc2f25139" title="ProcessBlockFound" alt="" coords="1294,360,1433,387"/>
+<area shape="rect" id="node24" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1946,208,2069,235"/>
+<area shape="rect" id="node28" href="$server_8h.html#a220fade8a685be34364aad455f99f6d6" title="submitblock" alt="" coords="1317,309,1409,336"/>
+<area shape="rect" id="node17" href="$miner_8cpp.html#a17c61f964b27cc5060cd7f9b0efb3607" title="BitcoinMiner" alt="" coords="1515,360,1609,387"/>
+<area shape="rect" id="node18" href="$miner_8h.html#a5dd1df3c97c260735ad08a808db2115c" title="Run the miner threads. " alt="" coords="2346,360,2469,387"/>
+<area shape="rect" id="node19" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="2533,309,2659,336"/>
+<area shape="rect" id="node23" href="$server_8h.html#ae13fce5b0e4a07b7d116242b3a0e39b8" title="setgenerate" alt="" coords="2551,360,2641,387"/>
+<area shape="rect" id="node20" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2712,360,2847,387"/>
+<area shape="rect" id="node21" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2739,309,2819,336"/>
+<area shape="rect" id="node22" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2900,309,3055,336"/>
+<area shape="rect" id="node25" href="$net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" title="Process protocol messages received from a given node. " alt="" coords="2151,208,2281,235"/>
+<area shape="rect" id="node26" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="2335,208,2480,235"/>
+<area shape="rect" id="node27" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="2329,309,2485,336"/>
+<area shape="rect" id="node31" href="$class_c_spork_manager.html#ade3cee4d73664c03ceaa900efeedc395" title="CSporkManager::ExecuteSpork" alt="" coords="1260,107,1467,133"/>
+<area shape="rect" id="node32" href="$server_8h.html#a8f5eff6dda04d2f984da8bafd567f140" title="spork" alt="" coords="1535,107,1589,133"/>
+<area shape="rect" id="node33" href="$class_c_spork_manager.html#a73b217ee4057d273648c54fee3a702c5" title="CSporkManager::ProcessSpork" alt="" coords="1657,157,1864,184"/>
+<area shape="rect" id="node34" href="$class_c_spork_manager.html#a599d088218de9d242e4dc5cb17dd310b" title="CSporkManager::SetPrivKey" alt="" coords="1912,107,2103,133"/>
+<area shape="rect" id="node35" href="$class_c_spork_manager.html#a1277aeae7d50a0473c85a5a062d364cb" title="CSporkManager::UpdateSpork" alt="" coords="1661,107,1861,133"/>
+<area shape="rect" id="node37" href="$miner_8h.html#ac8f34678ed590db1325b261c708f2626" title="Generate a new block, without valid proof&#45;of&#45;work. " alt="" coords="1075,461,1197,488"/>
+<area shape="rect" id="node38" href="$server_8h.html#a054ca23f5d86a8ca30138464ba10008c" title="getblocktemplate" alt="" coords="1303,512,1424,539"/>
+<area shape="rect" id="node40" href="$server_8h.html#a30b96575c158ca0465dbdb25705c4ca9" title="verifychain" alt="" coords="711,208,797,235"/>
+<area shape="rect" id="node45" href="$serialize_8h.html#a6490b16e80dcab7850346df9f1c6d956" title="GetSerializeSize" alt="" coords="494,461,613,488"/>
 </map>

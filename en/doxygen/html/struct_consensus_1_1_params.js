@@ -23,6 +23,8 @@ var struct_consensus_1_1_params =
     [ "nMasternodePaymentsStartBlock", "struct_consensus_1_1_params.html#ad424c3ab43a1170a117ad90f170e2e59", null ],
     [ "nMinerConfirmationWindow", "struct_consensus_1_1_params.html#a2ec523fd3e929c1a9f60756fa9611d4c", null ],
     [ "nMinimumChainWork", "struct_consensus_1_1_params.html#a85eafe7f37215d1b228b47d75e534cef", null ],
+    [ "nPowDGWHeight", "struct_consensus_1_1_params.html#a2aea81ea712e695f72165f9e50d190bd", null ],
+    [ "nPowKGWHeight", "struct_consensus_1_1_params.html#a523199d1219c335696545d3a969570d6", null ],
     [ "nPowTargetSpacing", "struct_consensus_1_1_params.html#aea6ebb563ceffd026cc7c11d3e9b192e", null ],
     [ "nPowTargetTimespan", "struct_consensus_1_1_params.html#a8b9343e945d8f51e5706511dea99a63d", null ],
     [ "nRuleChangeActivationThreshold", "struct_consensus_1_1_params.html#a88fd32c1ea70c23b54809867c6bc8a27", null ],

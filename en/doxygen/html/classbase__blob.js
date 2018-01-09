@@ -9,6 +9,7 @@ var classbase__blob =
     [ "end", "classbase__blob.html#aebe1b6351e492a8f488bffda9608b8ad", null ],
     [ "GetHex", "classbase__blob.html#ad7263503f949fb3c6c520ebb1f28e378", null ],
     [ "GetSerializeSize", "classbase__blob.html#ac618a70a74f5428c84d8a7f2cf080037", null ],
+    [ "GetUint64", "classbase__blob.html#aef132fbab984fad8e643d006946172cf", null ],
     [ "IsNull", "classbase__blob.html#aba89c6722866a5850882a509d27d7bbd", null ],
     [ "Serialize", "classbase__blob.html#a139e37d05d7f40a39497485a4b8301dc", null ],
     [ "SetHex", "classbase__blob.html#a5ec1f681a2830f4e180fe664c0eb4dd0", null ],

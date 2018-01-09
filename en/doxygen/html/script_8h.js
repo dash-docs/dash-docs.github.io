@@ -132,5 +132,6 @@ var script_8h =
     [ "LOCKTIME_THRESHOLD", "script_8h.html#a18113899ca9e7ef7a1938b0209fd62b5", null ],
     [ "MAX_OPS_PER_SCRIPT", "script_8h.html#aa2e03e7ffac0e9ee78e08c327b65ab9a", null ],
     [ "MAX_PUBKEYS_PER_MULTISIG", "script_8h.html#ac172ffb11c421cdf4229c007107aa6f6", null ],
-    [ "MAX_SCRIPT_ELEMENT_SIZE", "script_8h.html#a4e2e7158597de76ecbb03d866ec4c693", null ]
+    [ "MAX_SCRIPT_ELEMENT_SIZE", "script_8h.html#a4e2e7158597de76ecbb03d866ec4c693", null ],
+    [ "MAX_SCRIPT_SIZE", "script_8h.html#a5bad6a9848b20f7bf22e773e0856f642", null ]
 ];

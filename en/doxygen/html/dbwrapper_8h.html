@@ -121,7 +121,9 @@ $(document).ready(function(){initNavTree('dbwrapper_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">dbwrapper.h File Reference</div>  </div>
 </div><!--header-->
@@ -166,47 +168,78 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_d_b_wrapper.html">CDBWrapper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedbwrapper__private"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedbwrapper__private.html">dbwrapper_private</a></td></tr>
+<tr class="memdesc:namespacedbwrapper__private"><td class="mdescLeft">&#160;</td><td class="mdescRight">These should be considered an implementation detail of the specific database. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aea36eb5fddb6266b14ea8cb15e183486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dbwrapper_8h.html#aea36eb5fddb6266b14ea8cb15e183486">HandleError</a> (const leveldb::Status &amp;status)  throw (dbwrapper_error)</td></tr>
-<tr class="separator:aea36eb5fddb6266b14ea8cb15e183486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69015f423e1a3c2bcf387e4a208c3c36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedbwrapper__private.html#a69015f423e1a3c2bcf387e4a208c3c36">dbwrapper_private::HandleError</a> (const leveldb::Status &amp;status)</td></tr>
+<tr class="memdesc:a69015f423e1a3c2bcf387e4a208c3c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle database error by throwing <a class="el" href="classdbwrapper__error.html">dbwrapper_error</a> exception.  <a href="namespacedbwrapper__private.html#a69015f423e1a3c2bcf387e4a208c3c36">More...</a><br /></td></tr>
+<tr class="separator:a69015f423e1a3c2bcf387e4a208c3c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98d46ebc2a1c16becdf271f913b33a3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; unsigned char &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedbwrapper__private.html#ab98d46ebc2a1c16becdf271f913b33a3">dbwrapper_private::GetObfuscateKey</a> (const <a class="el" href="class_c_d_b_wrapper.html">CDBWrapper</a> &amp;w)</td></tr>
+<tr class="memdesc:ab98d46ebc2a1c16becdf271f913b33a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Work around circular dependency, as well as for testing in dbwrapper_tests.  <a href="namespacedbwrapper__private.html#ab98d46ebc2a1c16becdf271f913b33a3">More...</a><br /></td></tr>
+<tr class="separator:ab98d46ebc2a1c16becdf271f913b33a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3334bbfc9921bdd717e4c842198bfa0b"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dbwrapper_8h.html#a3334bbfc9921bdd717e4c842198bfa0b">DBWRAPPER_PREALLOC_KEY_SIZE</a> = 64</td></tr>
+<tr class="separator:a3334bbfc9921bdd717e4c842198bfa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668819330040ab879f607ab143e9866f"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dbwrapper_8h.html#a668819330040ab879f607ab143e9866f">DBWRAPPER_PREALLOC_VALUE_SIZE</a> = 1024</td></tr>
+<tr class="separator:a668819330040ab879f607ab143e9866f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aea36eb5fddb6266b14ea8cb15e183486"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea36eb5fddb6266b14ea8cb15e183486">&#9670;&nbsp;</a></span>HandleError()</h2>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a3334bbfc9921bdd717e4c842198bfa0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3334bbfc9921bdd717e4c842198bfa0b">&#9670;&nbsp;</a></span>DBWRAPPER_PREALLOC_KEY_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void HandleError </td>
-          <td>(</td>
-          <td class="paramtype">const leveldb::Status &amp;&#160;</td>
-          <td class="paramname"><em>status</em></td><td>)</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="classdbwrapper__error.html">dbwrapper_error</a></td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
+          <td class="memname">const size_t DBWRAPPER_PREALLOC_KEY_SIZE = 64</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dbwrapper_8cpp_source.html#l00018">18</a> of file <a class="el" href="dbwrapper_8cpp_source.html">dbwrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dbwrapper_8h_source.html#l00020">20</a> of file <a class="el" href="dbwrapper_8h_source.html">dbwrapper.h</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00331">CDBWrapper::CompactRange()</a>, <a class="el" href="dbwrapper_8h_source.html#l00097">CDBBatch::Erase()</a>, <a class="el" href="dbwrapper_8h_source.html#l00312">CDBWrapper::EstimateSize()</a>, <a class="el" href="dbwrapper_8h_source.html#l00261">CDBWrapper::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00227">CDBWrapper::Read()</a>, <a class="el" href="dbwrapper_8h_source.html#l00135">CDBIterator::Seek()</a>, and <a class="el" href="dbwrapper_8h_source.html#l00074">CDBBatch::Write()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dbwrapper_8cpp_source.html#l00048">CDBWrapper::CDBWrapper()</a>, <a class="el" href="dbwrapper_8h_source.html#l00217">CDBWrapper::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00183">CDBWrapper::Read()</a>, and <a class="el" href="dbwrapper_8cpp_source.html#l00105">CDBWrapper::WriteBatch()</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="dbwrapper_8h_aea36eb5fddb6266b14ea8cb15e183486_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
+<a id="a668819330040ab879f607ab143e9866f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668819330040ab879f607ab143e9866f">&#9670;&nbsp;</a></span>DBWRAPPER_PREALLOC_VALUE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t DBWRAPPER_PREALLOC_VALUE_SIZE = 1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dbwrapper_8h_source.html#l00021">21</a> of file <a class="el" href="dbwrapper_8h_source.html">dbwrapper.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00074">CDBBatch::Write()</a>.</p>
 
 </div>
 </div>
@@ -217,7 +250,7 @@ Functions</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dbwrapper_8h.html">dbwrapper.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:19 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:26 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

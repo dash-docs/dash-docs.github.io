@@ -314,7 +314,6 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 , <a class="el" href="class_banned_node_less_than.html#a9ab20cdbaf3357bff0d7b33122f8c900">BannedNodeLessThan</a>
 , <a class="el" href="struct_block_hasher.html#a10db0b419e8c9d86e848655a13b83490">BlockHasher</a>
 , <a class="el" href="class_c_affected_keys_visitor.html#abc13269c85eb964555cfe23c60b8c9b1">CAffectedKeysVisitor</a>
-, <a class="el" href="class_c_coins_key_hasher.html#abf805e5472a1a3c9c29f8f3f1dd013b3">CCoinsKeyHasher</a>
 , <a class="el" href="struct_c_connman_1_1_c_all_nodes.html#a5dd062f67f1006b7b48993246f2bf709">CConnman::CAllNodes</a>
 , <a class="el" href="struct_c_connman_1_1_c_fully_connected_only.html#ab1d29fa97c380b4701c7953ac0c391d6">CConnman::CFullyConnectedOnly</a>
 , <a class="el" href="struct_c_mempool_address_delta_key_compare.html#ab716136d31a2e7de5d7faebb31d1e1a1">CMempoolAddressDeltaKeyCompare</a>
@@ -341,6 +340,8 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 , <a class="el" href="structmempoolentry__txid.html#a37425be6b24c83f6b4d3aeb37e014f16">mempoolentry_txid</a>
 , <a class="el" href="class_node_less_than.html#a001e114bc5defaaec4feb1be3c71a327">NodeLessThan</a>
 , <a class="el" href="class_recent_request_entry_less_than.html#ae81233db157bd5d494dc5b98de6be7dd">RecentRequestEntryLessThan</a>
+, <a class="el" href="class_salted_outpoint_hasher.html#ae36e3869d85cb6a5574f8db30dc5026a">SaltedOutpointHasher</a>
+, <a class="el" href="class_salted_txid_hasher.html#ac66539b5e3deb84e09f273a7ed543347">SaltedTxidHasher</a>
 , <a class="el" href="class_score_compare.html#a34e572e801d371b3c4c22bc9fb72d95b">ScoreCompare</a>
 , <a class="el" href="structset__dirty.html#a97665b215fbe40eaeb340099e0ad4dcc">set_dirty</a>
 , <a class="el" href="structsort_proposals_by_votes.html#a07372dba898988fda0bd783acf2b9c35">sortProposalsByVotes</a>
@@ -353,8 +354,7 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 , <a class="el" href="struct_x509_store_deleter.html#aa51f4b04eb2cb5728e83d732f672c363">X509StoreDeleter</a>
 </li>
 <li>operator*()
-: <a class="el" href="class_c_coins_modifier.html#a403cd7eb708f8c744598ad890bcce1b5">CCoinsModifier</a>
-, <a class="el" href="classprevector_1_1const__iterator.html#abb156920ba8f36757925eb258be080d4">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
+: <a class="el" href="classprevector_1_1const__iterator.html#abb156920ba8f36757925eb258be080d4">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1const__reverse__iterator.html#a1bb2c8ee18fc05421f6fa6d1026d4555">prevector&lt; N, T, Size, Diff &gt;::const_reverse_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#a7f81fb12a0dd106f93629367cdd1be39">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
 , <a class="el" href="classprevector_1_1reverse__iterator.html#a9ab6a3cb472b0d62c0c940c269c01498">prevector&lt; N, T, Size, Diff &gt;::reverse_iterator</a>
@@ -388,7 +388,7 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 <li>operator-()
 : <a class="el" href="classbase__uint.html#a3b758876b828c6faffdc2a2880122595">base_uint&lt; BITS &gt;</a>
 , <a class="el" href="class_c_script_num.html#a122e2f08776cec4d618762f2de3dca69">CScriptNum</a>
-, <a class="el" href="classprevector_1_1const__iterator.html#ab053b2e3b60b800249ae81c0e3cb6583">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
+, <a class="el" href="classprevector_1_1const__iterator.html#a73e83a22f94bc5b9c48f25ef0bd27ce3">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#a42797a407d87e273e4ff450ac7db068a">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
 </li>
 <li>operator--()
@@ -405,18 +405,17 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 , <a class="el" href="classprevector_1_1iterator.html#a979c36f0f892be45415f70ca65f325b4">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
 </li>
 <li>operator-&gt;()
-: <a class="el" href="class_c_coins_modifier.html#a5831f586921460e6ec26635cb92c12f6">CCoinsModifier</a>
-, <a class="el" href="classprevector_1_1const__iterator.html#ae3f7014dba7dfa630b1f094bb53074ac">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
+: <a class="el" href="classprevector_1_1const__iterator.html#ae3f7014dba7dfa630b1f094bb53074ac">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1const__reverse__iterator.html#a3f9ff7d9e7dcb7cc11e1a7eb37f4e328">prevector&lt; N, T, Size, Diff &gt;::const_reverse_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#a2d71176663fdf1736d59419d8016b652">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
-, <a class="el" href="classprevector_1_1reverse__iterator.html#a20b6d44e5c7788fdc906b50c926acfb0">prevector&lt; N, T, Size, Diff &gt;::reverse_iterator</a>
+, <a class="el" href="classprevector_1_1reverse__iterator.html#a453be8c12070833336dbcd0187893492">prevector&lt; N, T, Size, Diff &gt;::reverse_iterator</a>
 </li>
 <li>operator/=()
 : <a class="el" href="classbase__uint.html#ad6fa7e22ab995247c0bf298069732e1d">base_uint&lt; BITS &gt;</a>
 </li>
 <li>operator&lt;()
 : <a class="el" href="class_c_base58_data.html#a7377c5628c43551ca22af1c0dfbaebae">CBase58Data</a>
-, <a class="el" href="class_c_script_num.html#a2979a7042ac68a122f971b4b13c66fed">CScriptNum</a>
+, <a class="el" href="class_c_script_num.html#a68591f04a5967fcdfc41745d61e2c178">CScriptNum</a>
 , <a class="el" href="classprevector_1_1const__iterator.html#a2cdb51fc23c60a20dc5e954f6cc2a127">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#a21c9ead8f23f691204d0e1b58c8de636">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
 , <a class="el" href="classprevector.html#aa599ca1a3ab1fef2736b831ffed19d04">prevector&lt; N, T, Size, Diff &gt;</a>
@@ -425,7 +424,7 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 : <a class="el" href="class_c_auto_file.html#a8e194596d1f8f64059247724b25df82c">CAutoFile</a>
 , <a class="el" href="class_c_data_stream.html#af47c6d4051064a226f529ee4d7c13ad7">CDataStream</a>
 , <a class="el" href="class_c_hash_writer.html#a6551aed7315be5ba750680df18562f3a">CHashWriter</a>
-, <a class="el" href="class_c_script.html#a3324c3ce4a32c0f76b45c791a039b6fd">CScript</a>
+, <a class="el" href="class_c_script.html#aa47d739da94465950b3977c04a49f089">CScript</a>
 , <a class="el" href="class_c_size_computer.html#a03a29c76f82dca1559e7922b35bebd0d">CSizeComputer</a>
 </li>
 <li>operator&lt;&lt;=()
@@ -463,7 +462,7 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 </li>
 <li>operator==()
 : <a class="el" href="class_c_base58_data.html#a2e7a634c3a008adf3f74d72ed9dbd68c">CBase58Data</a>
-, <a class="el" href="class_c_script_num.html#a5ed52a7810c9ce73d87a6017f9c43db9">CScriptNum</a>
+, <a class="el" href="class_c_script_num.html#a4217b9080a6cb42ff3d88da41b2c32bf">CScriptNum</a>
 , <a class="el" href="classprevector_1_1const__iterator.html#a01bdd619167613fae83f13ab6c414b7c">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1const__reverse__iterator.html#adde47c930cc199ee6432405f1f376c14">prevector&lt; N, T, Size, Diff &gt;::const_reverse_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#a2c296e13ae8e71c99d9efa6af596fcf8">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
@@ -472,13 +471,13 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 </li>
 <li>operator&gt;()
 : <a class="el" href="class_c_base58_data.html#a7d8052eacc8de55a0f4ec91306dfbec3">CBase58Data</a>
-, <a class="el" href="class_c_script_num.html#a3d8a4d932520620b479a39011c3d752a">CScriptNum</a>
+, <a class="el" href="class_c_script_num.html#ad92247f54bac8a6b797b2c0dc16bbd6f">CScriptNum</a>
 , <a class="el" href="classprevector_1_1const__iterator.html#aed6699768819221696f4e2b6db2b9a0f">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#abf1cd6daede5b7f4fbe6e78f409754c1">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
 </li>
 <li>operator&gt;=()
 : <a class="el" href="class_c_base58_data.html#a0cac1805398e2b09a498ba884c7a0057">CBase58Data</a>
-, <a class="el" href="class_c_script_num.html#ad3ee026308eff5c3b3c09e443bfaf3fb">CScriptNum</a>
+, <a class="el" href="class_c_script_num.html#aa3f57625dfa70ceda94a3017efc57838">CScriptNum</a>
 , <a class="el" href="classprevector_1_1const__iterator.html#a9312691e9a5a8097034ffb23b6b6745c">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#a835326570dd75d27fb9a30fd8ba2d1c3">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
 </li>
@@ -486,19 +485,20 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 : <a class="el" href="class_c_auto_file.html#ae6826219322626d2ac8229e022c41dd7">CAutoFile</a>
 , <a class="el" href="class_c_buffered_file.html#ab570d5f1a173a41100e7b42b4aacbbc5">CBufferedFile</a>
 , <a class="el" href="class_c_data_stream.html#ac80cfc65569416f8c23e328edb4cadae">CDataStream</a>
+, <a class="el" href="class_c_hash_verifier.html#a8aa7c2e016419a36ef07d6094e72876a">CHashVerifier&lt; Source &gt;</a>
 </li>
 <li>operator&gt;&gt;=()
 : <a class="el" href="classbase__uint.html#a4e0344432bbcce79525fd2c182173b3b">base_uint&lt; BITS &gt;</a>
 </li>
 <li>operator[]()
 : <a class="el" href="class_c_chain.html#a13c4493c833ffb8d1725fde05e42b28a">CChain</a>
-, <a class="el" href="class_c_data_stream.html#a7f242ea28a90db31d8f1b391cc6e3927">CDataStream</a>
+, <a class="el" href="class_c_data_stream.html#a91a057dd6e866137a7d526bd253fa8e9">CDataStream</a>
 , <a class="el" href="class_c_pub_key.html#ab94321a511874f4a3cdf21f889d30144">CPubKey</a>
 , <a class="el" href="class_c_r_p_c_table.html#aa06a59b1f7fe34668eab9a6a4a2491fa">CRPCTable</a>
 , <a class="el" href="classprevector_1_1const__iterator.html#ac15fe13f4a08c2c76fc1ee45ec73db51">prevector&lt; N, T, Size, Diff &gt;::const_iterator</a>
 , <a class="el" href="classprevector_1_1iterator.html#ad2061d89001f5888618c29cf2f82ceae">prevector&lt; N, T, Size, Diff &gt;::iterator</a>
 , <a class="el" href="classprevector.html#a2aa1d5299104878a9e5441459927df72">prevector&lt; N, T, Size, Diff &gt;</a>
-, <a class="el" href="class_uni_value.html#a998b72bd7f758e01416e1b53eaa6d94c">UniValue</a>
+, <a class="el" href="class_uni_value.html#a915422bee4d386f7028b9d08a836a2cb">UniValue</a>
 </li>
 <li>operator^=()
 : <a class="el" href="classbase__uint.html#ad5ec10977ebeab115fe857637990e267">base_uint&lt; BITS &gt;</a>
@@ -536,7 +536,7 @@ $(document).ready(function(){initNavTree('functions_func_o.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

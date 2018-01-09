@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memusage',['memusage',['../namespacememusage.html',1,'']]]
+  ['guiutil',['GUIUtil',['../namespace_g_u_i_util.html',1,'']]]
 ];

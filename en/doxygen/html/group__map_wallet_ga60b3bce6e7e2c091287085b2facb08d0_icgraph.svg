@@ -48,150 +48,150 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 884;
 var viewHeight = 104;
-var sectionId = 'dynsection-106';
+var sectionId = 'dynsection-105';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>CWallet::SetCryptedHDChain</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-100 880,-100 880,4 -4,4"/>
-<!-- Node3270 -->
-<g id="node1" class="node"><title>Node3270</title>
+<!-- Node3203 -->
+<g id="node1" class="node"><title>Node3203</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-57.5 0,-76.5 148,-76.5 148,-57.5 0,-57.5"/>
 <text text-anchor="middle" x="74" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::SetCryptedHDChain</text>
 </g>
-<!-- Node3271 -->
-<g id="node2" class="node"><title>Node3271</title>
+<!-- Node3204 -->
+<g id="node2" class="node"><title>Node3204</title>
 <g id="a_node2"><a xlink:href="walletdb_8cpp.html#ad1f171cf096f5479805a06fc20480343" target="_top" xlink:title="ReadKeyValue">
 <polygon fill="white" stroke="black" points="184,-57.5 184,-76.5 266,-76.5 266,-57.5 184,-57.5"/>
 <text text-anchor="middle" x="225" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ReadKeyValue</text>
 </a>
 </g>
 </g>
-<!-- Node3270&#45;&gt;Node3271 -->
-<g id="edge1" class="edge"><title>Node3270&#45;&gt;Node3271</title>
+<!-- Node3203&#45;&gt;Node3204 -->
+<g id="edge1" class="edge"><title>Node3203&#45;&gt;Node3204</title>
 <path fill="none" stroke="midnightblue" d="M158.196,-67C167.02,-67 175.678,-67 183.668,-67"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="158.191,-63.5001 148.19,-67 158.19,-70.5001 158.191,-63.5001"/>
 </g>
-<!-- Node3272 -->
-<g id="node3" class="node"><title>Node3272</title>
+<!-- Node3205 -->
+<g id="node3" class="node"><title>Node3205</title>
 <g id="a_node3"><a xlink:href="class_c_wallet_d_b.html#a14f26e53502d1a60dd2b034f830acf03" target="_top" xlink:title="CWalletDB::LoadWallet">
 <polygon fill="white" stroke="black" points="302,-76.5 302,-95.5 423,-95.5 423,-76.5 302,-76.5"/>
 <text text-anchor="middle" x="362.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWalletDB::LoadWallet</text>
 </a>
 </g>
 </g>
-<!-- Node3271&#45;&gt;Node3272 -->
-<g id="edge2" class="edge"><title>Node3271&#45;&gt;Node3272</title>
+<!-- Node3204&#45;&gt;Node3205 -->
+<g id="edge2" class="edge"><title>Node3204&#45;&gt;Node3205</title>
 <path fill="none" stroke="midnightblue" d="M276.224,-74.0425C284.555,-75.2107 293.266,-76.4321 301.804,-77.6293"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="276.677,-70.5718 266.288,-72.6492 275.705,-77.504 276.677,-70.5718"/>
 </g>
-<!-- Node3278 -->
-<g id="node9" class="node"><title>Node3278</title>
+<!-- Node3211 -->
+<g id="node9" class="node"><title>Node3211</title>
 <g id="a_node9"><a xlink:href="class_c_wallet_d_b.html#af9fa539659473e1484dc280ec01c0b70" target="_top" xlink:title="CWalletDB::Recover">
 <polygon fill="white" stroke="black" points="308,-38.5 308,-57.5 417,-57.5 417,-38.5 308,-38.5"/>
 <text text-anchor="middle" x="362.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWalletDB::Recover</text>
 </a>
 </g>
 </g>
-<!-- Node3271&#45;&gt;Node3278 -->
-<g id="edge8" class="edge"><title>Node3271&#45;&gt;Node3278</title>
+<!-- Node3204&#45;&gt;Node3211 -->
+<g id="edge8" class="edge"><title>Node3204&#45;&gt;Node3211</title>
 <path fill="none" stroke="midnightblue" d="M276.265,-59.9518C286.468,-58.521 297.24,-57.0106 307.565,-55.5628"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="275.705,-56.496 266.288,-61.3508 276.677,-63.4282 275.705,-56.496"/>
 </g>
-<!-- Node3273 -->
-<g id="node4" class="node"><title>Node3273</title>
+<!-- Node3206 -->
+<g id="node4" class="node"><title>Node3206</title>
 <g id="a_node4"><a xlink:href="group___actions.html#ga5d7b244b8ed0cbe24233ee0b6ca3cae0" target="_top" xlink:title="CWallet::LoadWallet">
 <polygon fill="white" stroke="black" points="460,-76.5 460,-95.5 567,-95.5 567,-76.5 460,-76.5"/>
 <text text-anchor="middle" x="513.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::LoadWallet</text>
 </a>
 </g>
 </g>
-<!-- Node3272&#45;&gt;Node3273 -->
-<g id="edge3" class="edge"><title>Node3272&#45;&gt;Node3273</title>
+<!-- Node3205&#45;&gt;Node3206 -->
+<g id="edge3" class="edge"><title>Node3205&#45;&gt;Node3206</title>
 <path fill="none" stroke="midnightblue" d="M433.302,-86C442.268,-86 451.326,-86 459.952,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="433.246,-82.5001 423.245,-86 433.245,-89.5001 433.246,-82.5001"/>
 </g>
-<!-- Node3274 -->
-<g id="node5" class="node"><title>Node3274</title>
+<!-- Node3207 -->
+<g id="node5" class="node"><title>Node3207</title>
 <g id="a_node5"><a xlink:href="init_8h.html#a6f0784aa332573f949b0975205572b28" target="_top" xlink:title="Initialize Dash Core. ">
 <polygon fill="white" stroke="black" points="604,-57.5 604,-76.5 657,-76.5 657,-57.5 604,-57.5"/>
 <text text-anchor="middle" x="630.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">AppInit2</text>
 </a>
 </g>
 </g>
-<!-- Node3273&#45;&gt;Node3274 -->
-<g id="edge4" class="edge"><title>Node3273&#45;&gt;Node3274</title>
+<!-- Node3206&#45;&gt;Node3207 -->
+<g id="edge4" class="edge"><title>Node3206&#45;&gt;Node3207</title>
 <path fill="none" stroke="midnightblue" d="M577.171,-75.6457C586.631,-74.0827 595.903,-72.5508 603.951,-71.2211"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="576.584,-72.1952 567.288,-77.2785 577.725,-79.1015 576.584,-72.1952"/>
 </g>
-<!-- Node3275 -->
-<g id="node6" class="node"><title>Node3275</title>
+<!-- Node3208 -->
+<g id="node6" class="node"><title>Node3208</title>
 <g id="a_node6"><a xlink:href="dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" target="_top" xlink:title="AppInit">
 <polygon fill="white" stroke="black" points="724,-76.5 724,-95.5 771,-95.5 771,-76.5 724,-76.5"/>
 <text text-anchor="middle" x="747.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">AppInit</text>
 </a>
 </g>
 </g>
-<!-- Node3274&#45;&gt;Node3275 -->
-<g id="edge5" class="edge"><title>Node3274&#45;&gt;Node3275</title>
+<!-- Node3207&#45;&gt;Node3208 -->
+<g id="edge5" class="edge"><title>Node3207&#45;&gt;Node3208</title>
 <path fill="none" stroke="midnightblue" d="M667.14,-72.8884C685.614,-75.9406 707.626,-79.5773 723.775,-82.2455"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="667.459,-69.3937 657.022,-71.2167 666.318,-76.3001 667.459,-69.3937"/>
 </g>
-<!-- Node3277 -->
-<g id="node8" class="node"><title>Node3277</title>
+<!-- Node3210 -->
+<g id="node8" class="node"><title>Node3210</title>
 <g id="a_node8"><a xlink:href="class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" target="_top" xlink:title="BitcoinCore::initialize">
 <polygon fill="white" stroke="black" points="693,-38.5 693,-57.5 802,-57.5 802,-38.5 693,-38.5"/>
 <text text-anchor="middle" x="747.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">BitcoinCore::initialize</text>
 </a>
 </g>
 </g>
-<!-- Node3274&#45;&gt;Node3277 -->
-<g id="edge7" class="edge"><title>Node3274&#45;&gt;Node3277</title>
+<!-- Node3207&#45;&gt;Node3210 -->
+<g id="edge7" class="edge"><title>Node3207&#45;&gt;Node3210</title>
 <path fill="none" stroke="midnightblue" d="M666.951,-61.1429C675.134,-59.7909 684.02,-58.3228 692.788,-56.8742"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="666.318,-57.6999 657.022,-62.7833 667.459,-64.6063 666.318,-57.6999"/>
 </g>
-<!-- Node3276 -->
-<g id="node7" class="node"><title>Node3276</title>
+<!-- Node3209 -->
+<g id="node7" class="node"><title>Node3209</title>
 <g id="a_node7"><a xlink:href="dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" target="_top" xlink:title="main">
 <polygon fill="white" stroke="black" points="838,-76.5 838,-95.5 876,-95.5 876,-76.5 838,-76.5"/>
 <text text-anchor="middle" x="857" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node3275&#45;&gt;Node3276 -->
-<g id="edge6" class="edge"><title>Node3275&#45;&gt;Node3276</title>
+<!-- Node3208&#45;&gt;Node3209 -->
+<g id="edge6" class="edge"><title>Node3208&#45;&gt;Node3209</title>
 <path fill="none" stroke="midnightblue" d="M781.151,-86C799.729,-86 822.304,-86 837.773,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="781.036,-82.5001 771.036,-86 781.035,-89.5001 781.036,-82.5001"/>
 </g>
-<!-- Node3279 -->
-<g id="node10" class="node"><title>Node3279</title>
+<!-- Node3212 -->
+<g id="node10" class="node"><title>Node3212</title>
 <g id="a_node10"><a xlink:href="group__map_wallet.html#ga2ed6fec1e8e0076d380351d5a469e4c8" target="_top" xlink:title="Verify the wallet database and perform salvage if required. ">
 <polygon fill="white" stroke="black" points="472,-38.5 472,-57.5 555,-57.5 555,-38.5 472,-38.5"/>
 <text text-anchor="middle" x="513.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::Verify</text>
 </a>
 </g>
 </g>
-<!-- Node3278&#45;&gt;Node3279 -->
-<g id="edge9" class="edge"><title>Node3278&#45;&gt;Node3279</title>
+<!-- Node3211&#45;&gt;Node3212 -->
+<g id="edge9" class="edge"><title>Node3211&#45;&gt;Node3212</title>
 <path fill="none" stroke="midnightblue" d="M427.574,-48C442.604,-48 458.211,-48 471.884,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="427.292,-44.5001 417.292,-48 427.292,-51.5001 427.292,-44.5001"/>
 </g>
-<!-- Node3280 -->
-<g id="node11" class="node"><title>Node3280</title>
+<!-- Node3213 -->
+<g id="node11" class="node"><title>Node3213</title>
 <g id="a_node11"><a xlink:href="class_c_wallet_d_b.html#ad6efdef4b446547fe9ea745c98609695" target="_top" xlink:title="CWalletDB::Recover">
 <polygon fill="white" stroke="black" points="459,-0.5 459,-19.5 568,-19.5 568,-0.5 459,-0.5"/>
 <text text-anchor="middle" x="513.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWalletDB::Recover</text>
 </a>
 </g>
 </g>
-<!-- Node3278&#45;&gt;Node3280 -->
-<g id="edge11" class="edge"><title>Node3278&#45;&gt;Node3280</title>
+<!-- Node3211&#45;&gt;Node3213 -->
+<g id="edge11" class="edge"><title>Node3211&#45;&gt;Node3213</title>
 <path fill="none" stroke="midnightblue" d="M410.992,-35.8879C431.744,-30.5956 455.728,-24.4787 475.171,-19.5201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="409.924,-32.5482 401.099,-38.411 411.654,-39.3311 409.924,-32.5482"/>
 </g>
-<!-- Node3279&#45;&gt;Node3274 -->
-<g id="edge10" class="edge"><title>Node3279&#45;&gt;Node3274</title>
+<!-- Node3212&#45;&gt;Node3207 -->
+<g id="edge10" class="edge"><title>Node3212&#45;&gt;Node3207</title>
 <path fill="none" stroke="midnightblue" d="M565.091,-56.3585C578.42,-58.5606 592.251,-60.8458 603.664,-62.7314"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="565.482,-52.8757 555.045,-54.6987 564.34,-59.782 565.482,-52.8757"/>
 </g>

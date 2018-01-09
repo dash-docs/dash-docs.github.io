@@ -3,7 +3,7 @@ var class_c_block_tree_d_b =
     [ "CBlockTreeDB", "class_c_block_tree_d_b.html#a52fd1b1dc02c2a4e977099e2c2c50424", null ],
     [ "CBlockTreeDB", "class_c_block_tree_d_b.html#a7e3d4632e9374e652bc008163bb9e2b1", null ],
     [ "EraseAddressIndex", "class_c_block_tree_d_b.html#a9b1f363ba4ccda69cb006d21af8a4803", null ],
-    [ "LoadBlockIndexGuts", "class_c_block_tree_d_b.html#a12be19bb1d7253eeb40e1aa88b032346", null ],
+    [ "LoadBlockIndexGuts", "class_c_block_tree_d_b.html#a8f21cec56f3e4c8025726c39522a1ec5", null ],
     [ "operator=", "class_c_block_tree_d_b.html#a93fa0b87d518a1142f3fbfe65ab07cd2", null ],
     [ "ReadAddressIndex", "class_c_block_tree_d_b.html#a37f8c135b1b6aaf751694f0747913d96", null ],
     [ "ReadAddressUnspentIndex", "class_c_block_tree_d_b.html#a07a11ab4188e7ee7b3b69faa64406a16", null ],

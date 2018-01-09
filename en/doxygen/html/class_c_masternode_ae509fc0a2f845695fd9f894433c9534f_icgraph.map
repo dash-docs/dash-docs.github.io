@@ -1,6 +1,6 @@
 <map id="CMasternode::IsValidStateForAutoStart" name="CMasternode::IsValidStateForAutoStart">
 <area shape="rect" id="node2" href="$class_c_masternode_man.html#a66994623de992c0c4680a95096f3936c" title="Perform complete check and only then update list and maps. " alt="" coords="1080,53,1276,94"/>
-<area shape="rect" id="node19" href="$class_c_active_masternode.html#aefd004895e9c2ddff987a5d1b027b134" title="CActiveMasternode::\lManageStateRemote" alt="" coords="232,111,377,153"/>
+<area shape="rect" id="node19" href="$class_c_active_masternode.html#aefd004895e9c2ddff987a5d1b027b134" title="CActiveMasternode::\lManageStateRemote" alt="" coords="232,86,377,127"/>
 <area shape="rect" id="node3" href="$server_8h.html#a7ae813efd78b542bd5e3cddb01174777" title="masternodebroadcast" alt="" coords="1368,56,1515,83"/>
 <area shape="rect" id="node4" href="$class_c_masternode_man.html#a09302023fe1dca8be33e34d1ece9d27f" title="Check all Masternodes and remove inactive. " alt="" coords="1344,107,1539,149"/>
 <area shape="rect" id="node10" href="$class_c_masternode_man.html#ae8534b13438b5a2166854a6d35d99bac" title="CMasternodeMan::ProcessMessage" alt="" coords="1324,5,1559,32"/>
@@ -17,14 +17,13 @@
 <area shape="rect" id="node16" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2428,35,2563,61"/>
 <area shape="rect" id="node17" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2455,85,2535,112"/>
 <area shape="rect" id="node18" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2616,85,2771,112"/>
-<area shape="rect" id="node20" href="$class_c_active_masternode.html#aa34e5cadd8539d8be6f7a606aa1407c6" title="Manage state of active Masternode. " alt="" coords="425,141,571,182"/>
-<area shape="rect" id="node21" href="$server_8h.html#adc51a168fd3ea207996ae4f8d9d6c6ea" title="masternode" alt="" coords="677,224,767,251"/>
-<area shape="rect" id="node22" href="$class_c_masternode_sync.html#aeb86906ef4095e9f55b2d672ad6bf491" title="CMasternodeSync::SwitchTo\lNextAsset" alt="" coords="1081,267,1275,309"/>
-<area shape="rect" id="node28" href="$class_c_masternode.html#aaa6d2de9c88179cd210f956ec72b1b6b" title="CMasternode::UpdateFromNew\lBroadcast" alt="" coords="619,57,825,98"/>
-<area shape="rect" id="node23" href="$class_c_masternode_sync.html#a3ac3b4bbb888145fb62f28bcf92d1b70" title="CMasternodeSync::ProcessTick" alt="" coords="1336,275,1547,301"/>
-<area shape="rect" id="node24" href="$class_c_masternode_sync.html#a95559186ad41a82fe42fd2cfbffca104" title="CMasternodeSync::Updated\lBlockTip" alt="" coords="1348,326,1535,367"/>
-<area shape="rect" id="node27" href="$server_8h.html#a2c332caf1997f143fc4477ca91df441d" title="mnsync" alt="" coords="1407,224,1475,251"/>
-<area shape="rect" id="node25" href="$class_c_d_s_notification_interface.html#ac2ced383b75336649c5694e580b18164" title="CDSNotificationInterface\l::UpdatedBlockTip" alt="" coords="1608,313,1776,354"/>
-<area shape="rect" id="node26" href="$class_c_d_s_notification_interface.html#a2e9dff307e1373bda9ac9445f7f5a3d7" title="CDSNotificationInterface\l::InitializeCurrentBlockTip" alt="" coords="1825,286,1997,327"/>
-<area shape="rect" id="node29" href="$class_c_masternode_broadcast.html#a42077f16c601f9804bc3b24fd602993c" title="CMasternodeBroadcast\l::Update" alt="" coords="873,57,1032,98"/>
+<area shape="rect" id="node20" href="$class_c_active_masternode.html#aa34e5cadd8539d8be6f7a606aa1407c6" title="Manage state of active Masternode. " alt="" coords="425,115,571,157"/>
+<area shape="rect" id="node21" href="$class_c_masternode_sync.html#aeb86906ef4095e9f55b2d672ad6bf491" title="CMasternodeSync::SwitchTo\lNextAsset" alt="" coords="1081,246,1275,287"/>
+<area shape="rect" id="node27" href="$class_c_masternode.html#aaa6d2de9c88179cd210f956ec72b1b6b" title="CMasternode::UpdateFromNew\lBroadcast" alt="" coords="619,57,825,98"/>
+<area shape="rect" id="node22" href="$class_c_masternode_sync.html#a3ac3b4bbb888145fb62f28bcf92d1b70" title="CMasternodeSync::ProcessTick" alt="" coords="1336,275,1547,301"/>
+<area shape="rect" id="node23" href="$class_c_masternode_sync.html#a95559186ad41a82fe42fd2cfbffca104" title="CMasternodeSync::Updated\lBlockTip" alt="" coords="1348,326,1535,367"/>
+<area shape="rect" id="node26" href="$server_8h.html#a2c332caf1997f143fc4477ca91df441d" title="mnsync" alt="" coords="1407,224,1475,251"/>
+<area shape="rect" id="node24" href="$class_c_d_s_notification_interface.html#ac2ced383b75336649c5694e580b18164" title="CDSNotificationInterface\l::UpdatedBlockTip" alt="" coords="1608,313,1776,354"/>
+<area shape="rect" id="node25" href="$class_c_d_s_notification_interface.html#a2e9dff307e1373bda9ac9445f7f5a3d7" title="CDSNotificationInterface\l::InitializeCurrentBlockTip" alt="" coords="1825,286,1997,327"/>
+<area shape="rect" id="node28" href="$class_c_masternode_broadcast.html#a42077f16c601f9804bc3b24fd602993c" title="CMasternodeBroadcast\l::Update" alt="" coords="873,57,1032,98"/>
 </map>

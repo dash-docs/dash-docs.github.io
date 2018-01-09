@@ -62,7 +62,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node4 -->
 <g id="node2" class="node"><title>Node4</title>
-<g id="a_node2"><a xlink:href="class_c_coins_view_backed.html#ace15da3934c9d7a9cb9c7a787f92f764" target="_top" xlink:title="Do a bulk modification (multiple CCoins changes + BestBlock change). ">
+<g id="a_node2"><a xlink:href="class_c_coins_view_backed.html#a81ecc3121e837ed6c99ba8cd7d36e6c9" target="_top" xlink:title="Do a bulk modification (multiple Coin changes + BestBlock change). ">
 <polygon fill="white" stroke="black" points="162,-60.0683 162,-79.0683 321,-79.0683 321,-60.0683 162,-60.0683"/>
 <text text-anchor="middle" x="241.5" y="-67.0683" font-family="Helvetica,sans-Serif" font-size="10.00">CCoinsViewBacked::BatchWrite</text>
 </a>
@@ -112,16 +112,16 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M294.207,-20.0385C364.577,-6.32658 493.995,11.8293 601,-12.5683 641.064,-21.7031 683.373,-46.172 704.962,-59.8953"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="293.384,-16.6336 284.263,-22.0237 294.755,-23.4982 293.384,-16.6336"/>
 </g>
-<!-- Node83 -->
-<g id="node44" class="node"><title>Node83</title>
+<!-- Node82 -->
+<g id="node44" class="node"><title>Node82</title>
 <g id="a_node44"><a xlink:href="validation_8cpp.html#a9258465a729a68271780a9968e65819a" target="_top" xlink:title="Connect a new block to chainActive. ">
 <polygon fill="white" stroke="black" points="511,-22.0683 511,-41.0683 578,-41.0683 578,-22.0683 511,-22.0683"/>
 <text text-anchor="middle" x="544.5" y="-29.0683" font-family="Helvetica,sans-Serif" font-size="10.00">ConnectTip</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node83 -->
-<g id="edge70" class="edge"><title>Node5&#45;&gt;Node83</title>
+<!-- Node5&#45;&gt;Node82 -->
+<g id="edge70" class="edge"><title>Node5&#45;&gt;Node82</title>
 <path fill="none" stroke="midnightblue" d="M316.859,-31.5683C379.046,-31.5683 464.779,-31.5683 510.933,-31.5683"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="316.703,-28.0684 306.703,-31.5683 316.703,-35.0684 316.703,-28.0684"/>
 </g>
@@ -182,34 +182,34 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M462.177,-194.595C524.866,-205.816 628.992,-221.568 719.5,-221.568 719.5,-221.568 719.5,-221.568 926,-221.568 1057.57,-221.568 1212.61,-200.526 1283.33,-189.758"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="462.566,-191.109 452.101,-192.767 461.316,-197.996 462.566,-191.109"/>
 </g>
-<!-- Node6&#45;&gt;Node83 -->
-<g id="edge57" class="edge"><title>Node6&#45;&gt;Node83</title>
+<!-- Node6&#45;&gt;Node82 -->
+<g id="edge57" class="edge"><title>Node6&#45;&gt;Node82</title>
 <path fill="none" stroke="midnightblue" d="M413.398,-164.561C425.66,-137.124 451.7,-86.3431 488,-55.5683 495.127,-49.5265 504.006,-44.7848 512.558,-41.1696"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="410.14,-163.276 409.38,-173.844 416.564,-166.057 410.14,-163.276"/>
 </g>
-<!-- Node84 -->
-<g id="node45" class="node"><title>Node84</title>
+<!-- Node83 -->
+<g id="node45" class="node"><title>Node83</title>
 <g id="a_node45"><a xlink:href="validation_8h.html#a0d01c135cc5a05475e3dc3910c9888da" target="_top" xlink:title="Flush all state, indexes and buffers to disk. ">
 <polygon fill="white" stroke="black" points="497,-136.068 497,-155.068 592,-155.068 592,-136.068 497,-136.068"/>
 <text text-anchor="middle" x="544.5" y="-143.068" font-family="Helvetica,sans-Serif" font-size="10.00">FlushStateToDisk</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node84 -->
-<g id="edge60" class="edge"><title>Node6&#45;&gt;Node84</title>
+<!-- Node6&#45;&gt;Node83 -->
+<g id="edge60" class="edge"><title>Node6&#45;&gt;Node83</title>
 <path fill="none" stroke="midnightblue" d="M449.973,-171.322C468.995,-166.084 490.875,-160.059 508.688,-155.154"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="449.035,-167.95 440.323,-173.979 450.894,-174.699 449.035,-167.95"/>
 </g>
-<!-- Node85 -->
-<g id="node46" class="node"><title>Node85</title>
+<!-- Node84 -->
+<g id="node46" class="node"><title>Node84</title>
 <g id="a_node46"><a xlink:href="server_8h.html#afba3c21535e88135f386a12e40199da2" target="_top" xlink:title="gettxoutsetinfo">
 <polygon fill="white" stroke="black" points="504,-98.0683 504,-117.068 585,-117.068 585,-98.0683 504,-98.0683"/>
 <text text-anchor="middle" x="544.5" y="-105.068" font-family="Helvetica,sans-Serif" font-size="10.00">gettxoutsetinfo</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node85 -->
-<g id="edge61" class="edge"><title>Node6&#45;&gt;Node85</title>
+<!-- Node6&#45;&gt;Node84 -->
+<g id="edge61" class="edge"><title>Node6&#45;&gt;Node84</title>
 <path fill="none" stroke="midnightblue" d="M425.268,-167.589C441.401,-155.135 465.181,-138.08 488,-126.568 495.092,-122.99 503.015,-119.829 510.604,-117.162"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="422.847,-165.039 417.146,-173.97 427.172,-170.544 422.847,-165.039"/>
 </g>
@@ -226,16 +226,16 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M410.085,-203.172C431.982,-296.787 525.489,-696.566 541.243,-763.917"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="413.466,-202.257 407.78,-193.317 406.65,-203.851 413.466,-202.257"/>
 </g>
-<!-- Node86 -->
-<g id="node50" class="node"><title>Node86</title>
+<!-- Node85 -->
+<g id="node50" class="node"><title>Node85</title>
 <g id="a_node50"><a xlink:href="validation_8h.html#afccc404d3f648d7834ee7522ca348b41" target="_top" xlink:title="Prune block files and flush state to disk. ">
 <polygon fill="white" stroke="black" points="503,-288.068 503,-307.068 586,-307.068 586,-288.068 503,-288.068"/>
 <text text-anchor="middle" x="544.5" y="-295.068" font-family="Helvetica,sans-Serif" font-size="10.00">PruneAndFlush</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node86 -->
-<g id="edge67" class="edge"><title>Node6&#45;&gt;Node86</title>
+<!-- Node6&#45;&gt;Node85 -->
+<g id="edge67" class="edge"><title>Node6&#45;&gt;Node85</title>
 <path fill="none" stroke="midnightblue" d="M418.157,-201.375C432.996,-221.19 459.246,-253.106 488,-273.568 496.211,-279.412 506.068,-284.247 515.183,-288.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="420.906,-199.205 412.174,-193.206 415.259,-203.342 420.906,-199.205"/>
 </g>
@@ -475,30 +475,30 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M568.946,-482.66C602.196,-504.063 662.702,-543.008 695.988,-564.434"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="570.638,-479.587 560.335,-477.117 566.849,-485.473 570.638,-479.587"/>
 </g>
-<!-- Node79 -->
-<g id="node41" class="node"><title>Node79</title>
-<g id="a_node41"><a xlink:href="class_c_private_send_client.html#a5dd3ad9ca84fcc35a3b3f19011494610" target="_top" xlink:title="step 2: send denominated inputs and outputs prepared in step 1 ">
+<!-- Node78 -->
+<g id="node41" class="node"><title>Node78</title>
+<g id="a_node41"><a xlink:href="class_c_private_send_client.html#a7e01fd502c2377024e5b858bb7f59337" target="_top" xlink:title="step 2: send denominated inputs and outputs prepared in step 1 ">
 <polygon fill="white" stroke="black" points="669,-452.568 669,-482.568 772,-482.568 772,-452.568 669,-452.568"/>
 <text text-anchor="start" x="677" y="-470.568" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
 <text text-anchor="middle" x="720.5" y="-459.568" font-family="Helvetica,sans-Serif" font-size="10.00">::SendDenominate</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node79 -->
-<g id="edge53" class="edge"><title>Node29&#45;&gt;Node79</title>
+<!-- Node29&#45;&gt;Node78 -->
+<g id="edge53" class="edge"><title>Node29&#45;&gt;Node78</title>
 <path fill="none" stroke="midnightblue" d="M611.176,-467.568C630.295,-467.568 650.878,-467.568 668.914,-467.568"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="611.033,-464.068 601.033,-467.568 611.033,-471.068 611.033,-464.068"/>
 </g>
-<!-- Node82 -->
-<g id="node43" class="node"><title>Node82</title>
+<!-- Node81 -->
+<g id="node43" class="node"><title>Node81</title>
 <g id="a_node43"><a xlink:href="server_8h.html#a962b2890c7be4b92841eb288e5a2aca5" target="_top" xlink:title="sendrawtransaction">
 <polygon fill="white" stroke="black" points="670,-414.068 670,-433.068 771,-433.068 771,-414.068 670,-414.068"/>
 <text text-anchor="middle" x="720.5" y="-421.068" font-family="Helvetica,sans-Serif" font-size="10.00">sendrawtransaction</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node82 -->
-<g id="edge55" class="edge"><title>Node29&#45;&gt;Node82</title>
+<!-- Node29&#45;&gt;Node81 -->
+<g id="edge55" class="edge"><title>Node29&#45;&gt;Node81</title>
 <path fill="none" stroke="midnightblue" d="M588.952,-455.311C604.12,-451.134 621.28,-446.524 637,-442.568 649.828,-439.34 663.833,-436.033 676.602,-433.102"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="588.011,-451.94 579.308,-457.981 589.879,-458.686 588.011,-451.94"/>
 </g>
@@ -591,7 +591,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node65 -->
 <g id="node35" class="node"><title>Node65</title>
-<g id="a_node35"><a xlink:href="validation_8h.html#a0c1aac3f96687018cb6a1faa3c3933ac" target="_top" xlink:title="Reprocess a number of blocks to try and get on the correct chain again. ">
+<g id="a_node35"><a xlink:href="validation_8h.html#a0c1aac3f96687018cb6a1faa3c3933ac" target="_top" xlink:title="Functions for validating blocks and updating the block tree. ">
 <polygon fill="white" stroke="black" points="1090,-22.0683 1090,-41.0683 1186,-41.0683 1186,-22.0683 1090,-22.0683"/>
 <text text-anchor="middle" x="1138" y="-29.0683" font-family="Helvetica,sans-Serif" font-size="10.00">DisconnectBlocks</text>
 </a>
@@ -726,8 +726,8 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M797.271,-570.214C816.122,-567.887 836.233,-565.404 854.752,-563.117"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="796.742,-566.753 787.246,-571.452 797.599,-573.7 796.742,-566.753"/>
 </g>
-<!-- Node75 -->
-<g id="node39" class="node"><title>Node75</title>
+<!-- Node74 -->
+<g id="node39" class="node"><title>Node74</title>
 <g id="a_node39"><a xlink:href="class_c_private_send_server.html#aa1d021f6e9df0817b8bee67bd8c90bdc" target="_top" xlink:title="Add a clients entry to the pool. ">
 <polygon fill="white" stroke="black" points="1085,-627.568 1085,-657.568 1191,-657.568 1191,-627.568 1085,-627.568"/>
 <text text-anchor="start" x="1093" y="-645.568" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendServer</text>
@@ -735,13 +735,13 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node67&#45;&gt;Node75 -->
-<g id="edge48" class="edge"><title>Node67&#45;&gt;Node75</title>
+<!-- Node67&#45;&gt;Node74 -->
+<g id="edge48" class="edge"><title>Node67&#45;&gt;Node74</title>
 <path fill="none" stroke="midnightblue" d="M760.077,-599.028C782.749,-609.48 812.313,-621.445 840,-627.568 924.185,-646.187 1024.92,-646.898 1084.79,-645.141"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="761.346,-595.757 750.808,-594.663 758.364,-602.09 761.346,-595.757"/>
 </g>
-<!-- Node76 -->
-<g id="node40" class="node"><title>Node76</title>
+<!-- Node75 -->
+<g id="node40" class="node"><title>Node75</title>
 <g id="a_node40"><a xlink:href="class_c_private_send_server.html#af7e38b25732fe0532d4a7061badababe" target="_top" xlink:title="Is this nDenom and txCollateral acceptable? ">
 <polygon fill="white" stroke="red" points="840,-588.568 840,-618.568 1010,-618.568 1010,-588.568 840,-588.568"/>
 <text text-anchor="start" x="848" y="-606.568" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendServer</text>
@@ -749,18 +749,18 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node67&#45;&gt;Node76 -->
-<g id="edge50" class="edge"><title>Node67&#45;&gt;Node76</title>
+<!-- Node67&#45;&gt;Node75 -->
+<g id="edge50" class="edge"><title>Node67&#45;&gt;Node75</title>
 <path fill="none" stroke="midnightblue" d="M797.211,-588.541C811.085,-590.186 825.644,-591.911 839.749,-593.583"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="797.588,-585.062 787.246,-587.36 796.764,-592.013 797.588,-585.062"/>
 </g>
-<!-- Node75&#45;&gt;Node52 -->
-<g id="edge49" class="edge"><title>Node75&#45;&gt;Node52</title>
+<!-- Node74&#45;&gt;Node52 -->
+<g id="edge49" class="edge"><title>Node74&#45;&gt;Node52</title>
 <path fill="none" stroke="midnightblue" d="M1201.47,-651.102C1223.74,-654.144 1248.56,-657.536 1269.87,-660.447"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1201.82,-647.618 1191.44,-649.732 1200.87,-654.554 1201.82,-647.618"/>
 </g>
-<!-- Node80 -->
-<g id="node42" class="node"><title>Node80</title>
+<!-- Node79 -->
+<g id="node42" class="node"><title>Node79</title>
 <g id="a_node42"><a xlink:href="class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546" target="_top" xlink:title="As a client, submit part of a future mixing transaction to a Masternode to start the process...">
 <polygon fill="white" stroke="red" points="872,-451.568 872,-481.568 978,-481.568 978,-451.568 872,-451.568"/>
 <text text-anchor="start" x="880" y="-469.568" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
@@ -768,13 +768,13 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node79&#45;&gt;Node80 -->
-<g id="edge54" class="edge"><title>Node79&#45;&gt;Node80</title>
+<!-- Node78&#45;&gt;Node79 -->
+<g id="edge54" class="edge"><title>Node78&#45;&gt;Node79</title>
 <path fill="none" stroke="midnightblue" d="M782.346,-467.268C810.905,-467.127 844.596,-466.96 871.954,-466.825"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="782.06,-463.769 772.077,-467.319 782.094,-470.769 782.06,-463.769"/>
 </g>
-<!-- Node83&#45;&gt;Node54 -->
-<g id="edge58" class="edge"><title>Node83&#45;&gt;Node54</title>
+<!-- Node82&#45;&gt;Node54 -->
+<g id="edge58" class="edge"><title>Node82&#45;&gt;Node54</title>
 <path fill="none" stroke="midnightblue" d="M564.978,-47.7133C582.588,-61.2825 609.846,-79.8217 637,-88.5683 713.049,-113.064 806.146,-114.362 865.275,-111.891"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="566.71,-44.6198 556.7,-41.1487 562.36,-50.1046 566.71,-44.6198"/>
 </g>
@@ -809,8 +809,8 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M1672.56,-662.254C1701.62,-629.92 1763.24,-561.354 1785.9,-536.136"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1669.68,-660.22 1665.6,-669.997 1674.89,-664.899 1669.68,-660.22"/>
 </g>
-<!-- Node86&#45;&gt;Node10 -->
-<g id="edge68" class="edge"><title>Node86&#45;&gt;Node10</title>
+<!-- Node85&#45;&gt;Node10 -->
+<g id="edge68" class="edge"><title>Node85&#45;&gt;Node10</title>
 <path fill="none" stroke="midnightblue" d="M596.561,-299.317C791.702,-306.001 1486.54,-329.799 1629.26,-334.687"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="596.418,-295.81 586.304,-298.966 596.178,-302.806 596.418,-295.81"/>
 </g>

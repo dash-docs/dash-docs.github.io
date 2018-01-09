@@ -128,10 +128,13 @@ $(document).ready(function(){initNavTree('txdb_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="coins_8h_source.html">coins.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dbwrapper_8h_source.html">dbwrapper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="chain_8h_source.html">chain.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spentindex_8h_source.html">spentindex.h</a>&quot;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;boost/function.hpp&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for txdb.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -153,8 +156,13 @@ $(document).ready(function(){initNavTree('txdb_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_disk_tx_pos.html">CDiskTxPos</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_d_b.html">CCoinsViewDB</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_coins_view.html" title="Abstract view on the open txout dataset. ">CCoinsView</a> backed by the coin database (chainstate/)  <a href="class_c_coins_view_d_b.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_coins_view_d_b_cursor.html">CCoinsViewDBCursor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <a class="el" href="class_c_coins_view_cursor.html" title="Cursor for iterating over CoinsView state. ">CCoinsViewCursor</a> to iterate over a <a class="el" href="class_c_coins_view_d_b.html" title="CCoinsView backed by the coin database (chainstate/) ">CCoinsViewDB</a>.  <a href="class_c_coins_view_d_b_cursor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_block_tree_d_b.html">CBlockTreeDB</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to the block database (blocks/index/)  <a href="class_c_block_tree_d_b.html#details">More...</a><br /></td></tr>
@@ -162,17 +170,88 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9585a8b98ac35480fe7a0d7b2e4217ac"><td class="memItemLeft" align="right" valign="top">static const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a9585a8b98ac35480fe7a0d7b2e4217ac">nDefaultDbCache</a> = 100</td></tr>
+<tr class="memitem:a76b7b94f5239f4941d6fe40738904217"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a76b7b94f5239f4941d6fe40738904217">DB_PEAK_USAGE_FACTOR</a> = 2</td></tr>
+<tr class="memdesc:a76b7b94f5239f4941d6fe40738904217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compensate for extra memory peak (x1.5-x1.9) at flush time.  <a href="#a76b7b94f5239f4941d6fe40738904217">More...</a><br /></td></tr>
+<tr class="separator:a76b7b94f5239f4941d6fe40738904217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77966c048b999e00809f33dd45ad83b"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#ad77966c048b999e00809f33dd45ad83b">MAX_BLOCK_COINSDB_USAGE</a> = 10 * <a class="el" href="txdb_8h.html#a76b7b94f5239f4941d6fe40738904217">DB_PEAK_USAGE_FACTOR</a></td></tr>
+<tr class="memdesc:ad77966c048b999e00809f33dd45ad83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">No need to periodic flush if at least this much space still available.  <a href="#ad77966c048b999e00809f33dd45ad83b">More...</a><br /></td></tr>
+<tr class="separator:ad77966c048b999e00809f33dd45ad83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9585a8b98ac35480fe7a0d7b2e4217ac"><td class="memItemLeft" align="right" valign="top">static const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a9585a8b98ac35480fe7a0d7b2e4217ac">nDefaultDbCache</a> = 300</td></tr>
 <tr class="memdesc:a9585a8b98ac35480fe7a0d7b2e4217ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">-dbcache default (MiB)  <a href="#a9585a8b98ac35480fe7a0d7b2e4217ac">More...</a><br /></td></tr>
 <tr class="separator:a9585a8b98ac35480fe7a0d7b2e4217ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95201d552fa6feb665926d2f01417866"><td class="memItemLeft" align="right" valign="top">static const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a95201d552fa6feb665926d2f01417866">nMaxDbCache</a> = sizeof(void*) &gt; 4 ? 16384 : 1024</td></tr>
-<tr class="memdesc:a95201d552fa6feb665926d2f01417866"><td class="mdescLeft">&#160;</td><td class="mdescRight">max. -dbcache in (MiB)  <a href="#a95201d552fa6feb665926d2f01417866">More...</a><br /></td></tr>
+<tr class="memdesc:a95201d552fa6feb665926d2f01417866"><td class="mdescLeft">&#160;</td><td class="mdescRight">max. -dbcache (MiB)  <a href="#a95201d552fa6feb665926d2f01417866">More...</a><br /></td></tr>
 <tr class="separator:a95201d552fa6feb665926d2f01417866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ba1527a96763eb82128dd7d6207f46e"><td class="memItemLeft" align="right" valign="top">static const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a1ba1527a96763eb82128dd7d6207f46e">nMinDbCache</a> = 4</td></tr>
-<tr class="memdesc:a1ba1527a96763eb82128dd7d6207f46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">min. -dbcache in (MiB)  <a href="#a1ba1527a96763eb82128dd7d6207f46e">More...</a><br /></td></tr>
+<tr class="memdesc:a1ba1527a96763eb82128dd7d6207f46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">min. -dbcache (MiB)  <a href="#a1ba1527a96763eb82128dd7d6207f46e">More...</a><br /></td></tr>
 <tr class="separator:a1ba1527a96763eb82128dd7d6207f46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639326a51cf188ad174471292fd1ed52"><td class="memItemLeft" align="right" valign="top">static const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a639326a51cf188ad174471292fd1ed52">nMaxBlockDBCache</a> = 2</td></tr>
+<tr class="memdesc:a639326a51cf188ad174471292fd1ed52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max memory allocated to block tree DB specific cache, if no -txindex (MiB)  <a href="#a639326a51cf188ad174471292fd1ed52">More...</a><br /></td></tr>
+<tr class="separator:a639326a51cf188ad174471292fd1ed52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df074316bed5b857c296aa3e95915eb"><td class="memItemLeft" align="right" valign="top">static const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a0df074316bed5b857c296aa3e95915eb">nMaxBlockDBAndTxIndexCache</a> = 1024</td></tr>
+<tr class="memdesc:a0df074316bed5b857c296aa3e95915eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max memory allocated to block tree DB specific cache, if -txindex (MiB)  <a href="#a0df074316bed5b857c296aa3e95915eb">More...</a><br /></td></tr>
+<tr class="separator:a0df074316bed5b857c296aa3e95915eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad1dd45029dda5a1374bba800f14bda"><td class="memItemLeft" align="right" valign="top">static const int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8h.html#a5ad1dd45029dda5a1374bba800f14bda">nMaxCoinsDBCache</a> = 8</td></tr>
+<tr class="memdesc:a5ad1dd45029dda5a1374bba800f14bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max memory allocated to coin DB specific cache (MiB)  <a href="#a5ad1dd45029dda5a1374bba800f14bda">More...</a><br /></td></tr>
+<tr class="separator:a5ad1dd45029dda5a1374bba800f14bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a76b7b94f5239f4941d6fe40738904217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b7b94f5239f4941d6fe40738904217">&#9670;&nbsp;</a></span>DB_PEAK_USAGE_FACTOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int DB_PEAK_USAGE_FACTOR = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compensate for extra memory peak (x1.5-x1.9) at flush time. </p>
+
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00026">26</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>.</p>
+
+</div>
+</div>
+<a id="ad77966c048b999e00809f33dd45ad83b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77966c048b999e00809f33dd45ad83b">&#9670;&nbsp;</a></span>MAX_BLOCK_COINSDB_USAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int MAX_BLOCK_COINSDB_USAGE = 10 * <a class="el" href="txdb_8h.html#a76b7b94f5239f4941d6fe40738904217">DB_PEAK_USAGE_FACTOR</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>No need to periodic flush if at least this much space still available. </p>
+
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00028">28</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>.</p>
+
+</div>
+</div>
 <a id="a9585a8b98ac35480fe7a0d7b2e4217ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9585a8b98ac35480fe7a0d7b2e4217ac">&#9670;&nbsp;</a></span>nDefaultDbCache</h2>
 
@@ -183,7 +262,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int64_t nDefaultDbCache = 100</td>
+          <td class="memname">const int64_t nDefaultDbCache = 300</td>
         </tr>
       </table>
   </td>
@@ -195,9 +274,93 @@ Variables</h2></td></tr>
 
 <p>-dbcache default (MiB) </p>
 
-<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00032">32</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00030">30</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, and <a class="el" href="optionsmodel_8cpp_source.html#l00048">OptionsModel::Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>, and <a class="el" href="optionsmodel_8cpp_source.html#l00046">OptionsModel::Init()</a>.</p>
+
+</div>
+</div>
+<a id="a0df074316bed5b857c296aa3e95915eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df074316bed5b857c296aa3e95915eb">&#9670;&nbsp;</a></span>nMaxBlockDBAndTxIndexCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int64_t nMaxBlockDBAndTxIndexCache = 1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Max memory allocated to block tree DB specific cache, if -txindex (MiB) </p>
+
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00040">40</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>.</p>
+
+</div>
+</div>
+<a id="a639326a51cf188ad174471292fd1ed52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639326a51cf188ad174471292fd1ed52">&#9670;&nbsp;</a></span>nMaxBlockDBCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int64_t nMaxBlockDBCache = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Max memory allocated to block tree DB specific cache, if no -txindex (MiB) </p>
+
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00036">36</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>.</p>
+
+</div>
+</div>
+<a id="a5ad1dd45029dda5a1374bba800f14bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad1dd45029dda5a1374bba800f14bda">&#9670;&nbsp;</a></span>nMaxCoinsDBCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int64_t nMaxCoinsDBCache = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Max memory allocated to coin DB specific cache (MiB) </p>
+
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00042">42</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>.</p>
 
 </div>
 </div>
@@ -221,11 +384,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>max. -dbcache in (MiB) </p>
+<p>max. -dbcache (MiB) </p>
 
-<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00034">34</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00032">32</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, and <a class="el" href="optionsdialog_8cpp_source.html#l00037">OptionsDialog::OptionsDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>, and <a class="el" href="optionsdialog_8cpp_source.html#l00039">OptionsDialog::OptionsDialog()</a>.</p>
 
 </div>
 </div>
@@ -249,11 +412,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>min. -dbcache in (MiB) </p>
+<p>min. -dbcache (MiB) </p>
 
-<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00036">36</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8h_source.html#l00034">34</a> of file <a class="el" href="txdb_8h_source.html">txdb.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, and <a class="el" href="optionsdialog_8cpp_source.html#l00037">OptionsDialog::OptionsDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>, and <a class="el" href="optionsdialog_8cpp_source.html#l00039">OptionsDialog::OptionsDialog()</a>.</p>
 
 </div>
 </div>
@@ -264,7 +427,7 @@ Variables</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="txdb_8h.html">txdb.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:21 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:29 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

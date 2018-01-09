@@ -2,11 +2,13 @@ var serialize_8h =
 [
     [ "CFlatData", "class_c_flat_data.html", "class_c_flat_data" ],
     [ "CVarInt", "class_c_var_int.html", "class_c_var_int" ],
+    [ "CCompactSize", "class_c_compact_size.html", "class_c_compact_size" ],
     [ "LimitedString", "class_limited_string.html", "class_limited_string" ],
     [ "CSerActionSerialize", "struct_c_ser_action_serialize.html", "struct_c_ser_action_serialize" ],
     [ "CSerActionUnserialize", "struct_c_ser_action_unserialize.html", "struct_c_ser_action_unserialize" ],
     [ "CSizeComputer", "class_c_size_computer.html", "class_c_size_computer" ],
     [ "ADD_SERIALIZE_METHODS", "serialize_8h.html#ae3f1f459edee39316fb42da787e2d266", null ],
+    [ "COMPACTSIZE", "serialize_8h.html#abea2415cbb9469ff5b90adf057d7e440", null ],
     [ "FLATDATA", "serialize_8h.html#a9393dd1b6a30ae7fe9cc42240241f741", null ],
     [ "LIMITED_STRING", "serialize_8h.html#a78e63691a056ce2368984400605e4f6e", null ],
     [ "READWRITE", "serialize_8h.html#a4d7fc7040e01003a01f367b8d90324f1", null ],

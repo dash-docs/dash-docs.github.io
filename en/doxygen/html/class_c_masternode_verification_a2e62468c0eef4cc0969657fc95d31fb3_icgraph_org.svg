@@ -11,9 +11,9 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-112.97 1613,-112.97 1613,4 -4,4"/>
 <!-- Node18 -->
 <g id="node1" class="node"><title>Node18</title>
-<polygon fill="#bfbfbf" stroke="black" points="0,-55 0,-85 124,-85 124,-55 0,-55"/>
-<text text-anchor="start" x="8" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">CMasternodeVerification</text>
-<text text-anchor="middle" x="62" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">::GetHash</text>
+<polygon fill="#bfbfbf" stroke="black" points="0,-53 0,-83 124,-83 124,-53 0,-53"/>
+<text text-anchor="start" x="8" y="-71" font-family="Helvetica,sans-Serif" font-size="10.00">CMasternodeVerification</text>
+<text text-anchor="middle" x="62" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">::GetHash</text>
 </g>
 <!-- Node19 -->
 <g id="node2" class="node"><title>Node19</title>
@@ -26,22 +26,36 @@
 </g>
 <!-- Node18&#45;&gt;Node19 -->
 <g id="edge1" class="edge"><title>Node18&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M134.571,-74.6792C188.914,-78.2321 263.626,-83.1167 319.859,-86.7931"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="134.535,-71.1695 124.328,-74.0096 134.078,-78.1546 134.535,-71.1695"/>
+<path fill="none" stroke="midnightblue" d="M123.768,-85.421C135.685,-88.1583 148.161,-90.5571 160,-92 213.038,-98.4639 273.174,-98.4387 319.92,-96.8101"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="124.456,-81.9869 113.915,-83.0557 122.822,-88.7935 124.456,-81.9869"/>
 </g>
 <!-- Node33 -->
 <g id="node16" class="node"><title>Node33</title>
-<g id="a_node16"><a xlink:href="class_c_masternode_verification.html#a66ce53bba99e770bdf47a5391a243c8c" target="_top" xlink:title="CMasternodeVerification\l::Relay">
-<polygon fill="white" stroke="black" points="160,-33 160,-63 284,-63 284,-33 160,-33"/>
-<text text-anchor="start" x="168" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">CMasternodeVerification</text>
-<text text-anchor="middle" x="222" y="-40" font-family="Helvetica,sans-Serif" font-size="10.00">::Relay</text>
+<g id="a_node16"><a xlink:href="class_c_masternode_man.html#a9a96a97210dd939754ef496efdf7fe70" target="_top" xlink:title="CMasternodeMan::ProcessVerify\lReply">
+<polygon fill="white" stroke="black" points="320,-28 320,-58 481,-58 481,-28 320,-28"/>
+<text text-anchor="start" x="328" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">CMasternodeMan::ProcessVerify</text>
+<text text-anchor="middle" x="400.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">Reply</text>
 </a>
 </g>
 </g>
 <!-- Node18&#45;&gt;Node33 -->
 <g id="edge16" class="edge"><title>Node18&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M134.086,-60.102C142.673,-58.9063 151.387,-57.693 159.815,-56.5194"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="133.509,-56.6485 124.087,-61.4942 134.474,-63.5816 133.509,-56.6485"/>
+<path fill="none" stroke="midnightblue" d="M121.331,-50.4356C133.967,-47.3444 147.34,-44.6053 160,-43 213.006,-36.2792 273.142,-36.3054 319.896,-37.9987"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="120.206,-47.1104 111.383,-52.9751 121.938,-53.8929 120.206,-47.1104"/>
+</g>
+<!-- Node34 -->
+<g id="node17" class="node"><title>Node34</title>
+<g id="a_node17"><a xlink:href="class_c_masternode_verification.html#a66ce53bba99e770bdf47a5391a243c8c" target="_top" xlink:title="CMasternodeVerification\l::Relay">
+<polygon fill="white" stroke="black" points="160,-53 160,-83 284,-83 284,-53 160,-53"/>
+<text text-anchor="start" x="168" y="-71" font-family="Helvetica,sans-Serif" font-size="10.00">CMasternodeVerification</text>
+<text text-anchor="middle" x="222" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">::Relay</text>
+</a>
+</g>
+</g>
+<!-- Node18&#45;&gt;Node34 -->
+<g id="edge18" class="edge"><title>Node18&#45;&gt;Node34</title>
+<path fill="none" stroke="midnightblue" d="M134.366,-68C142.863,-68 151.478,-68 159.815,-68"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="134.087,-64.5001 124.087,-68 134.087,-71.5001 134.087,-64.5001"/>
 </g>
 <!-- Node20 -->
 <g id="node3" class="node"><title>Node20</title>
@@ -217,29 +231,20 @@
 <path fill="none" stroke="midnightblue" d="M1368.97,-10C1384.31,-10 1402.18,-10 1418.88,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1368.79,-6.5001 1358.79,-10 1368.79,-13.5001 1368.79,-6.5001"/>
 </g>
-<!-- Node33&#45;&gt;Node19 -->
-<g id="edge19" class="edge"><title>Node33&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M293.141,-65.4855C308.391,-69.2873 324.395,-73.277 339.224,-76.9738"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="293.797,-62.0421 283.248,-63.0192 292.104,-68.8343 293.797,-62.0421"/>
-</g>
-<!-- Node34 -->
-<g id="node17" class="node"><title>Node34</title>
-<g id="a_node17"><a xlink:href="class_c_masternode_man.html#a9a96a97210dd939754ef496efdf7fe70" target="_top" xlink:title="CMasternodeMan::ProcessVerify\lReply">
-<polygon fill="white" stroke="black" points="320,-28 320,-58 481,-58 481,-28 320,-28"/>
-<text text-anchor="start" x="328" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">CMasternodeMan::ProcessVerify</text>
-<text text-anchor="middle" x="400.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">Reply</text>
-</a>
-</g>
-</g>
-<!-- Node33&#45;&gt;Node34 -->
-<g id="edge17" class="edge"><title>Node33&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M294.312,-45.9798C302.676,-45.7429 311.251,-45.5 319.721,-45.26"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="294.133,-42.4834 284.236,-46.2653 294.331,-49.4806 294.133,-42.4834"/>
-</g>
-<!-- Node34&#45;&gt;Node20 -->
-<g id="edge18" class="edge"><title>Node34&#45;&gt;Node20</title>
+<!-- Node33&#45;&gt;Node20 -->
+<g id="edge17" class="edge"><title>Node33&#45;&gt;Node20</title>
 <path fill="none" stroke="midnightblue" d="M491.459,-53.6618C502.187,-54.9333 513.085,-56.2249 523.666,-57.4789"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="491.585,-50.1523 481.243,-52.451 490.761,-57.1037 491.585,-50.1523"/>
+</g>
+<!-- Node34&#45;&gt;Node19 -->
+<g id="edge20" class="edge"><title>Node34&#45;&gt;Node19</title>
+<path fill="none" stroke="midnightblue" d="M294.312,-77.6968C302.676,-78.8342 311.251,-80.0001 319.721,-81.1518"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="294.616,-74.2061 284.236,-76.3267 293.673,-81.1422 294.616,-74.2061"/>
+</g>
+<!-- Node34&#45;&gt;Node33 -->
+<g id="edge19" class="edge"><title>Node34&#45;&gt;Node33</title>
+<path fill="none" stroke="midnightblue" d="M294.312,-57.8991C302.676,-56.7144 311.251,-55.4999 319.721,-54.3002"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="293.646,-54.4584 284.236,-59.3264 294.628,-61.3893 293.646,-54.4584"/>
 </g>
 </g>
 </svg>

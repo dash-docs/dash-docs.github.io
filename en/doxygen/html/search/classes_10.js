@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['saltedoutpointhasher',['SaltedOutpointHasher',['../class_salted_outpoint_hasher.html',1,'']]],
+  ['saltedtxidhasher',['SaltedTxidHasher',['../class_salted_txid_hasher.html',1,'']]],
   ['scopedlockbool',['ScopedLockBool',['../class_c_governance_manager_1_1_scoped_lock_bool.html',1,'CGovernanceManager']]],
   ['scorecompare',['ScoreCompare',['../class_score_compare.html',1,'']]],
   ['scriptnum_5ferror',['scriptnum_error',['../classscriptnum__error.html',1,'']]],

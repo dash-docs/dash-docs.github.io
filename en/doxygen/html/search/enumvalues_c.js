@@ -3,7 +3,6 @@ var searchData=
   ['mapportupnp',['MapPortUPnP',['../class_options_model.html#a5c6c9ca8a01aca9f53e91f118e4878d2adebfbde1e6e83a85acc14c15bb9309ed',1,'OptionsModel']]],
   ['masternode_5fenabled',['MASTERNODE_ENABLED',['../class_c_masternode.html#a958e9e8587729e417d1a529c81bf2eb0a479f2643df0b7f7e70c9389ec4b42923',1,'CMasternode']]],
   ['masternode_5fexpired',['MASTERNODE_EXPIRED',['../class_c_masternode.html#a958e9e8587729e417d1a529c81bf2eb0aaa88be848b79bb399e3538c452d7fd87',1,'CMasternode']]],
-  ['masternode_5flocal',['MASTERNODE_LOCAL',['../class_c_active_masternode.html#a5fe600c379008561204e609316427bb4a481e09274e6ffc3c0d4ebd06e805ad30',1,'CActiveMasternode']]],
   ['masternode_5fnew_5fstart_5frequired',['MASTERNODE_NEW_START_REQUIRED',['../class_c_masternode.html#a958e9e8587729e417d1a529c81bf2eb0a4e4ec255452c84058752500b7d5096da',1,'CMasternode']]],
   ['masternode_5foutpoint_5fspent',['MASTERNODE_OUTPOINT_SPENT',['../class_c_masternode.html#a958e9e8587729e417d1a529c81bf2eb0af148b4257f0c54f510c41e91ce4bfc86',1,'CMasternode']]],
   ['masternode_5fpose_5fban',['MASTERNODE_POSE_BAN',['../class_c_masternode.html#a958e9e8587729e417d1a529c81bf2eb0ac9f064d96812c163750fee8d1de26d74',1,'CMasternode']]],

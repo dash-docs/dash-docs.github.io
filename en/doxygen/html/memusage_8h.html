@@ -131,6 +131,8 @@ $(document).ready(function(){initNavTree('memusage_8h.html','');});
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;set&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
 <code>#include &lt;boost/foreach.hpp&gt;</code><br />
 <code>#include &lt;boost/unordered_set.hpp&gt;</code><br />
 <code>#include &lt;boost/unordered_map.hpp&gt;</code><br />
@@ -157,7 +159,7 @@ $(document).ready(function(){initNavTree('memusage_8h.html','');});
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmemusage_1_1stl__tree__node.html">memusage::stl_tree_node&lt; X &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmemusage_1_1boost__unordered__node.html">memusage::boost_unordered_node&lt; X &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmemusage_1_1unordered__node.html">memusage::unordered_node&lt; X &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -221,6 +223,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a6ad91da241c7c9802976b38e60091967"><td class="memTemplParams" colspan="2">template&lt;typename X , typename Y , typename Z &gt; </td></tr>
 <tr class="memitem:a6ad91da241c7c9802976b38e60091967"><td class="memTemplItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacememusage.html#a6ad91da241c7c9802976b38e60091967">memusage::DynamicUsage</a> (const boost::unordered_map&lt; <a class="el" href="net_8cpp.html#a826edd40636cbaa44266b97c8c6a4fa3">X</a>, Y, Z &gt; &amp;m)</td></tr>
 <tr class="separator:a6ad91da241c7c9802976b38e60091967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a556d14952f53269ce62f5965b90f1"><td class="memTemplParams" colspan="2">template&lt;typename X , typename Y &gt; </td></tr>
+<tr class="memitem:a07a556d14952f53269ce62f5965b90f1"><td class="memTemplItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacememusage.html#a07a556d14952f53269ce62f5965b90f1">memusage::DynamicUsage</a> (const std::unordered_set&lt; <a class="el" href="net_8cpp.html#a826edd40636cbaa44266b97c8c6a4fa3">X</a>, Y &gt; &amp;s)</td></tr>
+<tr class="separator:a07a556d14952f53269ce62f5965b90f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9abf7c55e82f4bb2a6eaa86e1f4f7ee"><td class="memTemplParams" colspan="2">template&lt;typename X , typename Y , typename Z &gt; </td></tr>
+<tr class="memitem:ad9abf7c55e82f4bb2a6eaa86e1f4f7ee"><td class="memTemplItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacememusage.html#ad9abf7c55e82f4bb2a6eaa86e1f4f7ee">memusage::DynamicUsage</a> (const std::unordered_map&lt; <a class="el" href="net_8cpp.html#a826edd40636cbaa44266b97c8c6a4fa3">X</a>, Y, Z &gt; &amp;m)</td></tr>
+<tr class="separator:ad9abf7c55e82f4bb2a6eaa86e1f4f7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -229,7 +237,7 @@ Functions</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="memusage_8h.html">memusage.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:19 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:27 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

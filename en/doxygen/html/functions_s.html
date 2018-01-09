@@ -132,8 +132,11 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>S
 : <a class="el" href="structsph__blake__small__context.html#ab61df4e8f58da409a243f225237aa6c2">sph_blake_small_context</a>
 </li>
-<li>salt
-: <a class="el" href="class_c_coins_key_hasher.html#a142ac561b457a4d2df4506f5695a9adb">CCoinsKeyHasher</a>
+<li>SaltedOutpointHasher()
+: <a class="el" href="class_salted_outpoint_hasher.html#ad347e9f3fcb51173131ebeb962e5063d">SaltedOutpointHasher</a>
+</li>
+<li>SaltedTxidHasher()
+: <a class="el" href="class_salted_txid_hasher.html#a4e8352efeb9f5bbbca0e5abdefd16322">SaltedTxidHasher</a>
 </li>
 <li>Salvage()
 : <a class="el" href="class_c_d_b_env.html#ad1a7c8aabbea282347acece998883905">CDBEnv</a>
@@ -270,7 +273,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="group___actions.html#ga7dfe1a401b486f3a36fd3b3b94a803d3">CWallet</a>
 </li>
 <li>SelectCoinsByDenominations()
-: <a class="el" href="group___actions.html#ga416c2796c5ecb9836d4f6407fcdbb42c">CWallet</a>
+: <a class="el" href="group___actions.html#ga77fb1b6a32b2df185ba40fdbb8c7173e">CWallet</a>
 </li>
 <li>SelectCoinsDark()
 : <a class="el" href="group___actions.html#ga099c7618f04c56b4bf592eafd1362489">CWallet</a>
@@ -334,7 +337,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="struct_wallet_model_1_1_send_coins_return.html#a90535f802fe84b050ad71db600b11fd7">WalletModel::SendCoinsReturn</a>
 </li>
 <li>SendDenominate()
-: <a class="el" href="class_c_private_send_client.html#a5dd3ad9ca84fcc35a3b3f19011494610">CPrivateSendClient</a>
+: <a class="el" href="class_c_private_send_client.html#a7e01fd502c2377024e5b858bb7f59337">CPrivateSendClient</a>
 </li>
 <li>SendGovernanceSyncRequest()
 : <a class="el" href="class_c_masternode_sync.html#a8224921ed12c70d5e7521cf43c5fa125">CMasternodeSync</a>
@@ -421,7 +424,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="class_c_darksend_broadcast_tx.html#adeea1780b372daba88dc15feb8c3e145">CDarksendBroadcastTx</a>
 , <a class="el" href="class_c_dark_send_entry.html#aadd8b26a9d45ec9b256a4a98ec007382">CDarkSendEntry</a>
 , <a class="el" href="class_c_darksend_queue.html#a51dbeaf532a353e2e9fb79c746ba5b4d">CDarksendQueue</a>
-, <a class="el" href="class_c_dark_send_relay.html#aa80483bf7e8c6c4feb992cc6753dad07">CDarkSendRelay</a>
 , <a class="el" href="class_c_dash_network.html#ae2ebca39c38420890f25ff8fb070c176">CDashNetwork</a>
 , <a class="el" href="class_c_disk_block_index.html#a2ef7b51f2777fcc1b9625a0ee000f9b5">CDiskBlockIndex</a>
 , <a class="el" href="struct_c_disk_block_pos.html#a821bb4eebc99ae39c20133d80244325f">CDiskBlockPos</a>
@@ -467,7 +469,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="class_c_tx_lock_vote.html#ae287a33e8eca62e56de0042885a880de">CTxLockVote</a>
 , <a class="el" href="class_c_tx_out.html#a88e5e2f069325d6bb1936ee75935f121">CTxOut</a>
 , <a class="el" href="class_c_tx_out_compressor.html#aad933ec09f7d6a764bd49da399f9083b">CTxOutCompressor</a>
-, <a class="el" href="class_c_tx_undo.html#acded3ea0adf0309c160ea756a2361bf2">CTxUndo</a>
 , <a class="el" href="class_c_unsigned_alert.html#acdf81abb731f9fc8d2c04618f2f4d79d">CUnsignedAlert</a>
 , <a class="el" href="class_c_wallet_key.html#aa91831d60fc789bddcd7ea7339fef316">CWalletKey</a>
 , <a class="el" href="class_c_wallet_tx.html#a94e65d0105f2a75a627e374b0bbefe06">CWalletTx</a>
@@ -483,11 +484,12 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="struct_c_address_index_key.html#ac793cb952780abc902edaf061dd185b2">CAddressIndexKey</a>
 , <a class="el" href="struct_c_address_unspent_key.html#a59c7a0de19ed642dce3720d118a7c978">CAddressUnspentKey</a>
 , <a class="el" href="class_c_addr_man.html#a08668d8cf435750a80316b4708bbc9eb">CAddrMan</a>
-, <a class="el" href="class_c_coins.html#a7adea91f27b75755e8cfbc7c46fe3848">CCoins</a>
+, <a class="el" href="class_c_compact_size.html#a13ae1c080f51697b274db050478402f7">CCompactSize</a>
 , <a class="el" href="class_c_data_stream.html#aea93472150507d03dff6dedda4a8208c">CDataStream</a>
 , <a class="el" href="struct_c_ext_key.html#a0105197b22de9e58c888144e6b1dc51d">CExtKey</a>
 , <a class="el" href="struct_c_ext_pub_key.html#ac76fd12e27fab7bbab7130f45a58b112">CExtPubKey</a>
 , <a class="el" href="class_c_flat_data.html#a97449211175d7fbbb88830cbba808132">CFlatData</a>
+, <a class="el" href="class_coin.html#a887fd07283d1148bc7e37235e60ef285">Coin</a>
 , <a class="el" href="class_c_pub_key.html#a6003c13fc0a48bae69c2a7ddb1fecc21">CPubKey</a>
 , <a class="el" href="class_c_script_compressor.html#a5702b644df500ddd11c56d0490e8be44">CScriptCompressor</a>
 </li>
@@ -497,9 +499,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>Serialize()
 : <a class="el" href="struct_c_timestamp_index_iterator_key.html#afa5a4c352cf42da8f3763ee0ca8362cd">CTimestampIndexIteratorKey</a>
 , <a class="el" href="struct_c_timestamp_index_key.html#af08cb17ed40232b5708b862f86aaffec">CTimestampIndexKey</a>
-, <a class="el" href="class_c_tx_in_undo.html#a7a4e1cf026b5308fdca471bada9cebaf">CTxInUndo</a>
+, <a class="el" href="class_c_tx_undo.html#aac256a1979c58a66a02275b34658571e">CTxUndo</a>
 , <a class="el" href="class_c_var_int.html#a3b772eba5c6cd5b9ad7cec9cb45f7cb2">CVarInt&lt; I &gt;</a>
 , <a class="el" href="class_limited_string.html#acb90369fef0efc1d51b730baa23307d8">LimitedString&lt; Limit &gt;</a>
+, <a class="el" href="class_tx_in_undo_serializer.html#a314840bc70b200e8bd251902105bc873">TxInUndoSerializer</a>
 </li>
 <li>SerializeObjectForHash()
 : <a class="el" href="class_c_governance_manager.html#af4894b5690dce1dbebc816e1ae385b33">CGovernanceManager</a>
@@ -604,6 +607,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>setBool()
 : <a class="el" href="class_uni_value.html#afd5b112dc63426ca6b0a6137041e0809">UniValue</a>
+</li>
+<li>setBreakAction()
+: <a class="el" href="class_splash_screen.html#a0279b8c3cde057e85a121d282482396f">SplashScreen</a>
 </li>
 <li>SetBroadcastTransactions()
 : <a class="el" href="class_c_wallet.html#a66b6c2139722e41620b827d99736fb25">CWallet</a>
@@ -906,6 +912,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setProcessingQueuedTransactions()
 : <a class="el" href="class_transaction_table_model.html#a9f8f2cdb61517ab04f880d416aa927c7">TransactionTableModel</a>
 </li>
+<li>SetProgressBreakAction
+: <a class="el" href="class_c_client_u_i_interface.html#a1d8154bacd2d3b4d49c10d6b690e25ae">CClientUIInterface</a>
+</li>
 <li>SetRaw()
 : <a class="el" href="class_c_net_addr.html#a1f0b23aca4ca78c11735d13f3583b7ad">CNetAddr</a>
 </li>
@@ -977,7 +986,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>SetString()
 : <a class="el" href="class_c_base58_data.html#a250fa3bc97d03c7d87de5485c8b49b57">CBase58Data</a>
-, <a class="el" href="class_c_bitcoin_secret.html#a6a8aff02f66099f33f573ad3e6375bb1">CBitcoinSecret</a>
+, <a class="el" href="class_c_bitcoin_secret.html#a83cfc3b34aac494efdd6e316cd08626d">CBitcoinSecret</a>
 </li>
 <li>setSubVer
 : <a class="el" href="class_c_unsigned_alert.html#a1b7148c413e1781222c5748935cad200">CUnsignedAlert</a>
@@ -1233,7 +1242,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="class_c_alert.html#ab1ca9ece010b37dd4dd1d1514a316bf8">CAlert</a>
 , <a class="el" href="class_c_darksend_broadcast_tx.html#a32311f7649758f709e1aae4ed7d64953">CDarksendBroadcastTx</a>
 , <a class="el" href="class_c_darksend_queue.html#a8bc4c6d19ac1aca978cfe4342be729ed">CDarksendQueue</a>
-, <a class="el" href="class_c_dark_send_relay.html#a92b95682e2acbe5570b79cb7c3793388">CDarkSendRelay</a>
 , <a class="el" href="class_c_governance_object.html#a1ac3561fed7eb1837d55516a8a2646ba">CGovernanceObject</a>
 , <a class="el" href="class_c_governance_vote.html#ad8c4ed6faefac545b39e208debd36b9b">CGovernanceVote</a>
 , <a class="el" href="class_c_key.html#aa9b184a4a71d3e1a40aab360cf68e86c">CKey</a>
@@ -1322,6 +1330,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="class_transaction_table_priv.html#acc5c85ae550eca3a35b7b4d68d0994bf">TransactionTablePriv</a>
 , <a class="el" href="class_uni_value.html#a5a7394aeb8d5584db7a90c2c041726b1">UniValue</a>
 </li>
+<li>size_estimate
+: <a class="el" href="class_c_d_b_batch.html#a8f17ab2447a944902d5a10bb052b9c8e">CDBBatch</a>
+</li>
 <li>size_threshold
 : <a class="el" href="class_g_u_i_util_1_1_tool_tip_to_rich_text_filter.html#a4cbb7e960e5fbadf5450c6097e39f58f">GUIUtil::ToolTipToRichTextFilter</a>
 </li>
@@ -1334,6 +1345,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="classprevector.html#a7e0da95e6d1c878f6eeb572f4fc12524">prevector&lt; N, T, Size, Diff &gt;</a>
 , <a class="el" href="structsecure__allocator.html#aa9db67804b069d61983213bded98c08f">secure_allocator&lt; T &gt;</a>
 , <a class="el" href="structzero__after__free__allocator.html#a85f5f3250c0519ea82ff33d980e73994">zero_after_free_allocator&lt; T &gt;</a>
+</li>
+<li>SizeEstimate()
+: <a class="el" href="class_c_d_b_batch.html#a37b8c5627a0d3de921ce422c43b04e73">CDBBatch</a>
 </li>
 <li>sizeHint()
 : <a class="el" href="class_tx_view_delegate.html#aff22f5cc2236638043688dbc1644c44e">TxViewDelegate</a>
@@ -1393,12 +1407,13 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>source
 : <a class="el" href="class_c_addr_info.html#adf38b9b84f6e9ec5f16bc265c5fcd2dd">CAddrInfo</a>
+, <a class="el" href="class_c_hash_verifier.html#a063d450cd6d729a854cd7d2a82cb8fad">CHashVerifier&lt; Source &gt;</a>
 </li>
 <li>sPassword
 : <a class="el" href="class_c_kee_pass_integrator_1_1_c_kee_pass_entry.html#a9a03058ddf9dcd2635f1d0bacd58d446">CKeePassIntegrator::CKeePassEntry</a>
 </li>
-<li>Spend()
-: <a class="el" href="class_c_coins.html#a0acc5f3849c1c41386d9450a3ee3a3c8">CCoins</a>
+<li>SpendCoin()
+: <a class="el" href="class_c_coins_view_cache.html#a2fae5769fb3795407bcd16156274c152">CCoinsViewCache</a>
 </li>
 <li>spending
 : <a class="el" href="struct_c_address_index_key.html#a7538f16defec54ae64064a500f47a55a">CAddressIndexKey</a>
@@ -1428,8 +1443,14 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>src
 : <a class="el" href="class_c_buffered_file.html#a85ed820b4e1a4c2d1ca983749044f172">CBufferedFile</a>
 </li>
+<li>ssKey
+: <a class="el" href="class_c_d_b_batch.html#a735e5e9c18084a91fc3b2798a1b7cba7">CDBBatch</a>
+</li>
 <li>SSLVerifyError()
 : <a class="el" href="class_s_s_l_verify_error.html#a3183bdade1e32616a651654ed921baba">SSLVerifyError</a>
+</li>
+<li>ssValue
+: <a class="el" href="class_c_d_b_batch.html#a75cb5c83e5100dc83a21f1e56a0a24f6">CDBBatch</a>
 </li>
 <li>ST_ERROR
 : <a class="el" href="class_freespace_checker.html#ac049779e76e197b16694f783eea84704a0ebcee3a1c4b86e1fbd8fc05c2af77c4">FreespaceChecker</a>
@@ -1492,15 +1513,11 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="struct_h_t_t_p_reply.html#a2aabf3d54afbcf87fa91542fd9024838">HTTPReply</a>
 , <a class="el" href="struct_transaction_notification.html#ad499a6f6867e8df5d851f98965376ee1">TransactionNotification</a>
 , <a class="el" href="class_transaction_record.html#a50342213092284a9994f2903991134c0">TransactionRecord</a>
+, <a class="el" href="class_transaction_status.html#aa7d0dbec0880ccd8539d7e332f847451">TransactionStatus</a>
 </li>
 <li>Status
 : <a class="el" href="class_transaction_status.html#aaa6cc19ca3509bbae72d0df1661f85cb">TransactionStatus</a>
-</li>
-<li>status
-: <a class="el" href="class_transaction_status.html#aa7d0dbec0880ccd8539d7e332f847451">TransactionStatus</a>
-</li>
-<li>Status
-: <a class="el" href="class_transaction_table_model.html#aca9d1efb507b6e471b31dc8c73c5bb43a33e6cfb6b9321da77974a1989dd35ca8">TransactionTableModel</a>
+, <a class="el" href="class_transaction_table_model.html#aca9d1efb507b6e471b31dc8c73c5bb43a33e6cfb6b9321da77974a1989dd35ca8">TransactionTableModel</a>
 </li>
 <li>status
 : <a class="el" href="struct_wallet_model_1_1_send_coins_return.html#af7d485f3ae8e2baef7439c53c2adbd35">WalletModel::SendCoinsReturn</a>
@@ -1750,8 +1767,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="class_c_kee_pass_integrator_1_1_c_kee_pass_entry.html#af1161c2a1e8ce7e77f0cbf4f48953f0c">CKeePassIntegrator::CKeePassEntry</a>
 </li>
 <li>swap()
-: <a class="el" href="class_c_coins.html#a9581324a74e9500b3d2cad472c0a830f">CCoins</a>
-, <a class="el" href="class_c_governance_object.html#a99712fbaeb0f6ebf603cd15089e33142">CGovernanceObject</a>
+: <a class="el" href="class_c_governance_object.html#a99712fbaeb0f6ebf603cd15089e33142">CGovernanceObject</a>
 , <a class="el" href="class_c_h_d_chain.html#aa08828984d8c27d2ebd324be8333e826">CHDChain</a>
 , <a class="el" href="class_c_script_check.html#a69fbde608ff29c1885b8b9caf0fd40a0">CScriptCheck</a>
 , <a class="el" href="classprevector.html#a30e25ab1782f4a6258688334e5d1b817">prevector&lt; N, T, Size, Diff &gt;</a>
@@ -1795,7 +1811,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

@@ -146,6 +146,9 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 <li>DB_BLOCK_INDEX
 : <a class="el" href="txdb_8cpp.html#a85d0146a00e244755e0969d116fb079c">txdb.cpp</a>
 </li>
+<li>DB_COIN
+: <a class="el" href="txdb_8cpp.html#a9ae84a664ab2bfc0835666acd523fd45">txdb.cpp</a>
+</li>
 <li>DB_COINS
 : <a class="el" href="txdb_8cpp.html#a39905dcbdcbf070340a290b28d813b09">txdb.cpp</a>
 </li>
@@ -154,6 +157,9 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 </li>
 <li>DB_LAST_BLOCK
 : <a class="el" href="txdb_8cpp.html#a7969649b291abcdde50191c27b820203">txdb.cpp</a>
+</li>
+<li>DB_PEAK_USAGE_FACTOR
+: <a class="el" href="txdb_8h.html#a76b7b94f5239f4941d6fe40738904217">txdb.h</a>
 </li>
 <li>DB_REINDEX_FLAG
 : <a class="el" href="txdb_8cpp.html#a2c35038ffc08de69b6fec4460546ad52">txdb.cpp</a>
@@ -166,6 +172,12 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 </li>
 <li>DB_TXINDEX
 : <a class="el" href="txdb_8cpp.html#ac7b890c87d9356d9fb0bd3b04440e1ea">txdb.cpp</a>
+</li>
+<li>DBWRAPPER_PREALLOC_KEY_SIZE
+: <a class="el" href="dbwrapper_8h.html#a3334bbfc9921bdd717e4c842198bfa0b">dbwrapper.h</a>
+</li>
+<li>DBWRAPPER_PREALLOC_VALUE_SIZE
+: <a class="el" href="dbwrapper_8h.html#a668819330040ab879f607ab143e9866f">dbwrapper.h</a>
 </li>
 <li>deadlineTimers
 : <a class="el" href="server_8cpp.html#af36de702271bb330049a08c7bfef486e">server.cpp</a>
@@ -230,15 +242,6 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 <li>DEFAULT_DESCENDANT_SIZE_LIMIT
 : <a class="el" href="validation_8h.html#a4d4ecf661ddd26f7de646dc932f296b5">validation.h</a>
 </li>
-<li>DEFAULT_DIP0001_FALLBACK_FEE
-: <a class="el" href="wallet_8h.html#a9fb35823b2c8be3b410a8d2489ecb044">wallet.h</a>
-</li>
-<li>DEFAULT_DIP0001_MIN_RELAY_TX_FEE
-: <a class="el" href="validation_8h.html#ac80824f326be59f7f3d72335328bc567">validation.h</a>
-</li>
-<li>DEFAULT_DIP0001_TRANSACTION_MINFEE
-: <a class="el" href="wallet_8h.html#a5c0bc895e90264261366c68c61d69a2b">wallet.h</a>
-</li>
 <li>DEFAULT_DISABLE_SAFEMODE
 : <a class="el" href="init_8cpp.html#a0963fb7f5db48d011a2a8983073c0ed7">init.cpp</a>
 </li>
@@ -248,6 +251,9 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 <li>default_error_callback
 : <a class="el" href="gen__context_8c.html#a792961430f27e8b9178105a7ec023019">gen_context.c</a>
 , <a class="el" href="secp256k1_8c.html#a792961430f27e8b9178105a7ec023019">secp256k1.c</a>
+</li>
+<li>DEFAULT_FALLBACK_FEE
+: <a class="el" href="wallet_8h.html#ad4cf5f5a7eb0862635c685dac1ecf5cc">wallet.h</a>
 </li>
 <li>DEFAULT_FLUSHWALLET
 : <a class="el" href="walletdb_8h.html#aa41a7b76448a7dc0022f0a2c8e812d4a">walletdb.h</a>
@@ -284,15 +290,6 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 </li>
 <li>DEFAULT_KEYPOOL_SIZE
 : <a class="el" href="wallet_8h.html#a63da8d3877972e02968c9d7f7156cf44">wallet.h</a>
-</li>
-<li>DEFAULT_LEGACY_FALLBACK_FEE
-: <a class="el" href="wallet_8h.html#a2e1ad8571f6e40aa90375ad63fe47a92">wallet.h</a>
-</li>
-<li>DEFAULT_LEGACY_MIN_RELAY_TX_FEE
-: <a class="el" href="validation_8h.html#ae3483f3a59426cc2128082a3f2f3ede0">validation.h</a>
-</li>
-<li>DEFAULT_LEGACY_TRANSACTION_MINFEE
-: <a class="el" href="wallet_8h.html#a91574d7e11957e02e07206d769a4e829">wallet.h</a>
 </li>
 <li>DEFAULT_LIMITFREERELAY
 : <a class="el" href="validation_8h.html#a98136b6db1d65fc0774d28b821cfea1a">validation.h</a>
@@ -338,6 +335,9 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 </li>
 <li>DEFAULT_MEMPOOL_EXPIRY
 : <a class="el" href="validation_8h.html#a90b905d0fe6143ea605a4b09ff0eed6a">validation.h</a>
+</li>
+<li>DEFAULT_MIN_RELAY_TX_FEE
+: <a class="el" href="validation_8h.html#a6f0b300ef73713f3150ec3dcf2ac23ce">validation.h</a>
 </li>
 <li>DEFAULT_MISBEHAVING_BANTIME
 : <a class="el" href="net_8h.html#abb358e6d9aa1383e5196cb61f9357265">net.h</a>
@@ -412,6 +412,9 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 <li>DEFAULT_TRANSACTION_MAXFEE
 : <a class="el" href="wallet_8h.html#a08e44dbb6db8502639f09f72737afd19">wallet.h</a>
 </li>
+<li>DEFAULT_TRANSACTION_MINFEE
+: <a class="el" href="wallet_8h.html#af9d05123d114452e43aa8cb750ab1758">wallet.h</a>
+</li>
 <li>DEFAULT_TX_CONFIRM_TARGET
 : <a class="el" href="wallet_8h.html#a31d13bcc9bac14a52ca62a93088f115d">wallet.h</a>
 </li>
@@ -446,7 +449,7 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 : <a class="el" href="privatesend-client_8h.html#a55ca740226fbe78510829ed18f5e3480">privatesend-client.h</a>
 </li>
 <li>DIP0001_PROTOCOL_VERSION
-: <a class="el" href="validation_8h.html#aaf035b59a3afc03d6b551f1b1537a0db">validation.h</a>
+: <a class="el" href="version_8h.html#aaf035b59a3afc03d6b551f1b1537a0db">version.h</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -455,7 +458,7 @@ $(document).ready(function(){initNavTree('globals_vars_d.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

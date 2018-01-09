@@ -1,8 +1,8 @@
 <map id="CScriptCheck::GetScriptError" name="CScriptCheck::GetScriptError">
 <area shape="rect" id="node2" href="$validation_8h.html#aec29d3e8abda6a014ca910e7c73b4df7" title="Check whether all inputs of this transaction are valid (no double spends, scripts &amp; sigs..." alt="" coords="248,706,344,733"/>
-<area shape="rect" id="node3" href="$validation_8cpp.html#a2771319b8131d6bd0b26cd7de79fd690" title="AcceptToMemoryPoolWorker" alt="" coords="392,505,585,531"/>
+<area shape="rect" id="node3" href="$validation_8cpp.html#a1888cf6244e5b79b00f3f9f6c9804602" title="AcceptToMemoryPoolWorker" alt="" coords="392,505,585,531"/>
 <area shape="rect" id="node42" href="$class_c_tx_mem_pool.html#ab30fadfa811829e79accca41da6a8328" title="If sanity&#45;checking is turned on, check makes sure the pool is consistent (does not contain two transa..." alt="" coords="871,706,1016,733"/>
-<area shape="rect" id="node43" href="$validation_8h.html#a063faa3c9fa2d1733a51fb14cae2a2c6" title="Apply the effects of this block (with given index) on the UTXO set represented by coins..." alt="" coords="657,834,761,861"/>
+<area shape="rect" id="node43" href="$validation_8cpp.html#aaa0f986172f6a63a3f5dde9bc69f93cb" title="Apply the effects of this block (with given index) on the UTXO set represented by coins..." alt="" coords="657,834,761,861"/>
 <area shape="rect" id="node4" href="$validation_8h.html#a3fccb1390d23df9054d22cbe41f1b7c7" title="(try to) add transaction to memory pool " alt="" coords="633,367,784,394"/>
 <area shape="rect" id="node5" href="$class_c_merkle_tx.html#a6618a127f7e5597c686cec94c16d0bd8" title="CMerkleTx::AcceptToMemoryPool" alt="" coords="832,426,1055,453"/>
 <area shape="rect" id="node12" href="$class_c_private_send_server.html#a332772df161f5d7c60f98634e3c18370" title="Charge fees to bad actors (Charge clients a fee if they&#39;re abusive) " alt="" coords="873,477,1014,519"/>
@@ -12,7 +12,7 @@
 <area shape="rect" id="node18" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1813,619,1936,646"/>
 <area shape="rect" id="node22" href="$validation_8cpp.html#a6ceb71a20037d3bc1c6208b99b004c12" title="Disconnect chainActive&#39;s tip. " alt="" coords="890,619,997,646"/>
 <area shape="rect" id="node35" href="$class_c_private_send.html#af05e5a0a086e07955bd6c8e79f7765a5" title="If the collateral is valid given by a client. " alt="" coords="855,75,1032,116"/>
-<area shape="rect" id="node39" href="$class_c_private_send_client.html#a5dd3ad9ca84fcc35a3b3f19011494610" title="step 2: send denominated inputs and outputs prepared in step 1 " alt="" coords="875,360,1012,401"/>
+<area shape="rect" id="node39" href="$class_c_private_send_client.html#a7e01fd502c2377024e5b858bb7f59337" title="step 2: send denominated inputs and outputs prepared in step 1 " alt="" coords="875,360,1012,401"/>
 <area shape="rect" id="node41" href="$server_8h.html#a962b2890c7be4b92841eb288e5a2aca5" title="sendrawtransaction" alt="" coords="876,141,1011,167"/>
 <area shape="rect" id="node6" href="$group___actions.html#gad95b72403a23ad9f9079a08b0ed1646a" title="Call after CreateTransaction unless you want to abort. " alt="" coords="1130,426,1321,453"/>
 <area shape="rect" id="node11" href="$group__map_wallet.html#ga796c23450c8482e10e0c75ae5c1fa8ed" title="CWallet::ReacceptWalletTransactions" alt="" coords="1103,375,1348,402"/>
@@ -26,7 +26,7 @@
 <area shape="rect" id="node20" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="2168,594,2313,621"/>
 <area shape="rect" id="node21" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="2163,645,2319,671"/>
 <area shape="rect" id="node23" href="$validation_8cpp.html#a345d6616250288efacae87d05528fe8a" title="Try to make some progress towards making pindexMostWork the active block. " alt="" coords="1146,758,1305,785"/>
-<area shape="rect" id="node33" href="$validation_8h.html#a0c1aac3f96687018cb6a1faa3c3933ac" title="Reprocess a number of blocks to try and get on the correct chain again. " alt="" coords="1417,645,1545,671"/>
+<area shape="rect" id="node33" href="$validation_8h.html#a0c1aac3f96687018cb6a1faa3c3933ac" title="Functions for validating blocks and updating the block tree. " alt="" coords="1417,645,1545,671"/>
 <area shape="rect" id="node34" href="$validation_8h.html#a7656efe9edf075c4c629335139ea7e1a" title="Mark a block as invalid. " alt="" coords="1425,594,1536,621"/>
 <area shape="rect" id="node24" href="$validation_8h.html#ab7be3f1b4119e8df383a4332ddbd344a" title="Find the best known block, and make it the tip of the block chain. " alt="" coords="1415,787,1546,814"/>
 <area shape="rect" id="node25" href="$validation_8h.html#aaf2e19311fff6b9cd421a9a9d59f7ff1" title="Initialize a new block tree database + block data on disk. " alt="" coords="1637,949,1742,975"/>

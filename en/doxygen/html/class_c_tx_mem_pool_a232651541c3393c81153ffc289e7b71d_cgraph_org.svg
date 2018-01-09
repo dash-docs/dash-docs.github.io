@@ -9,13 +9,13 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 141)">
 <title>CTxMemPool::GetMinFee</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-141 502,-141 502,4 -4,4"/>
-<!-- Node1553 -->
-<g id="node1" class="node"><title>Node1553</title>
+<!-- Node1542 -->
+<g id="node1" class="node"><title>Node1542</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-38.5 0,-57.5 131,-57.5 131,-38.5 0,-38.5"/>
 <text text-anchor="middle" x="65.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::GetMinFee</text>
 </g>
-<!-- Node1554 -->
-<g id="node2" class="node"><title>Node1554</title>
+<!-- Node1543 -->
+<g id="node2" class="node"><title>Node1543</title>
 <g id="a_node2"><a xlink:href="class_c_tx_mem_pool.html#a4fcf05ad5f15a565c4b43c4b9f29906e" target="_top" xlink:title="CTxMemPool::DynamicMemory\lUsage">
 <polygon fill="white" stroke="black" points="167,-77 167,-107 324,-107 324,-77 167,-77"/>
 <text text-anchor="start" x="175" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::DynamicMemory</text>
@@ -23,73 +23,73 @@
 </a>
 </g>
 </g>
-<!-- Node1553&#45;&gt;Node1554 -->
-<g id="edge1" class="edge"><title>Node1553&#45;&gt;Node1554</title>
+<!-- Node1542&#45;&gt;Node1543 -->
+<g id="edge1" class="edge"><title>Node1542&#45;&gt;Node1543</title>
 <path fill="none" stroke="midnightblue" d="M105.123,-57.5473C125.164,-62.5012 150.286,-68.7112 173.662,-74.4895"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="173.006,-77.9326 183.554,-76.9346 174.686,-71.1371 173.006,-77.9326"/>
 </g>
-<!-- Node1557 -->
-<g id="node5" class="node"><title>Node1557</title>
+<!-- Node1546 -->
+<g id="node5" class="node"><title>Node1546</title>
 <g id="a_node5"><a xlink:href="class_c_fee_rate.html#ac772be79983433d442d6b871d2fb6e11" target="_top" xlink:title="CFeeRate::GetFeePerK">
 <polygon fill="white" stroke="black" points="184.5,-38.5 184.5,-57.5 306.5,-57.5 306.5,-38.5 184.5,-38.5"/>
 <text text-anchor="middle" x="245.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CFeeRate::GetFeePerK</text>
 </a>
 </g>
 </g>
-<!-- Node1553&#45;&gt;Node1557 -->
-<g id="edge4" class="edge"><title>Node1553&#45;&gt;Node1557</title>
+<!-- Node1542&#45;&gt;Node1546 -->
+<g id="edge4" class="edge"><title>Node1542&#45;&gt;Node1546</title>
 <path fill="none" stroke="midnightblue" d="M131.014,-48C145.024,-48 159.913,-48 174.137,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="174.354,-51.5001 184.354,-48 174.354,-44.5001 174.354,-51.5001"/>
 </g>
-<!-- Node1559 -->
-<g id="node7" class="node"><title>Node1559</title>
+<!-- Node1548 -->
+<g id="node7" class="node"><title>Node1548</title>
 <g id="a_node7"><a xlink:href="utiltime_8cpp.html#a46fac5fba8ba905b5f9acb364f5d8c6f" target="_top" xlink:title="For unit testing. ">
 <polygon fill="white" stroke="black" points="218.5,-0.5 218.5,-19.5 272.5,-19.5 272.5,-0.5 218.5,-0.5"/>
 <text text-anchor="middle" x="245.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetTime</text>
 </a>
 </g>
 </g>
-<!-- Node1553&#45;&gt;Node1559 -->
-<g id="edge6" class="edge"><title>Node1553&#45;&gt;Node1559</title>
+<!-- Node1542&#45;&gt;Node1548 -->
+<g id="edge6" class="edge"><title>Node1542&#45;&gt;Node1548</title>
 <path fill="none" stroke="midnightblue" d="M111.417,-38.411C141.503,-31.9881 180.581,-23.6457 208.595,-17.665"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="209.33,-21.0872 218.379,-15.5764 207.869,-14.2414 209.33,-21.0872"/>
 </g>
-<!-- Node1555 -->
-<g id="node3" class="node"><title>Node1555</title>
+<!-- Node1544 -->
+<g id="node3" class="node"><title>Node1544</title>
 <g id="a_node3"><a xlink:href="namespacememusage.html#a24d4e7ba4b087b7c854e819c37e20ea0" target="_top" xlink:title="Dynamic memory usage for built&#45;in types is zero. ">
 <polygon fill="white" stroke="black" points="360,-117.5 360,-136.5 498,-136.5 498,-117.5 360,-117.5"/>
 <text text-anchor="middle" x="429" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">memusage::DynamicUsage</text>
 </a>
 </g>
 </g>
-<!-- Node1554&#45;&gt;Node1555 -->
-<g id="edge2" class="edge"><title>Node1554&#45;&gt;Node1555</title>
+<!-- Node1543&#45;&gt;Node1544 -->
+<g id="edge2" class="edge"><title>Node1543&#45;&gt;Node1544</title>
 <path fill="none" stroke="midnightblue" d="M324.262,-106.995C339.127,-109.862 354.467,-112.82 368.642,-115.554"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="368.252,-119.043 378.734,-117.5 369.578,-112.169 368.252,-119.043"/>
 </g>
-<!-- Node1556 -->
-<g id="node4" class="node"><title>Node1556</title>
+<!-- Node1545 -->
+<g id="node4" class="node"><title>Node1545</title>
 <g id="a_node4"><a xlink:href="namespacememusage.html#ae8ade104f83bf4c608c282adc365bf90" target="_top" xlink:title="Compute the total memory used by allocating alloc bytes. ">
 <polygon fill="white" stroke="black" points="365,-79.5 365,-98.5 493,-98.5 493,-79.5 365,-79.5"/>
 <text text-anchor="middle" x="429" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">memusage::MallocUsage</text>
 </a>
 </g>
 </g>
-<!-- Node1554&#45;&gt;Node1556 -->
-<g id="edge3" class="edge"><title>Node1554&#45;&gt;Node1556</title>
+<!-- Node1543&#45;&gt;Node1545 -->
+<g id="edge3" class="edge"><title>Node1543&#45;&gt;Node1545</title>
 <path fill="none" stroke="midnightblue" d="M324.262,-90.7147C334.331,-90.5482 344.618,-90.3782 354.612,-90.213"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.96,-93.7078 364.901,-90.043 354.844,-86.7088 354.96,-93.7078"/>
 </g>
-<!-- Node1558 -->
-<g id="node6" class="node"><title>Node1558</title>
+<!-- Node1547 -->
+<g id="node6" class="node"><title>Node1547</title>
 <g id="a_node6"><a xlink:href="class_c_fee_rate.html#a6a3aef64120ef51ac921318282404b0e" target="_top" xlink:title="CFeeRate::GetFee">
 <polygon fill="white" stroke="black" points="379,-38.5 379,-57.5 479,-57.5 479,-38.5 379,-38.5"/>
 <text text-anchor="middle" x="429" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CFeeRate::GetFee</text>
 </a>
 </g>
 </g>
-<!-- Node1557&#45;&gt;Node1558 -->
-<g id="edge5" class="edge"><title>Node1557&#45;&gt;Node1558</title>
+<!-- Node1546&#45;&gt;Node1547 -->
+<g id="edge5" class="edge"><title>Node1546&#45;&gt;Node1547</title>
 <path fill="none" stroke="midnightblue" d="M306.685,-48C326.632,-48 348.809,-48 368.69,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="368.853,-51.5001 378.853,-48 368.853,-44.5001 368.853,-51.5001"/>
 </g>

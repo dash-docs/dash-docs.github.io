@@ -34,6 +34,7 @@ var class_c_client_u_i_interface =
     [ "NotifyNetworkActiveChanged", "class_c_client_u_i_interface.html#addd7f774fd2ffc49b3c1b903f12aa4a0", null ],
     [ "NotifyNumConnectionsChanged", "class_c_client_u_i_interface.html#a496995d44db8dc3e3ef84d345e25967d", null ],
     [ "NotifyStrMasternodeCountChanged", "class_c_client_u_i_interface.html#ac9351da3add0c57b11745b288bf6d207", null ],
+    [ "SetProgressBreakAction", "class_c_client_u_i_interface.html#a1d8154bacd2d3b4d49c10d6b690e25ae", null ],
     [ "ShowProgress", "class_c_client_u_i_interface.html#a64e516e507dd74f3639c51dffa645af2", null ],
     [ "ThreadSafeMessageBox", "class_c_client_u_i_interface.html#a9d328cc06777490e90e8c6a9cb31335f", null ],
     [ "ThreadSafeQuestion", "class_c_client_u_i_interface.html#aa4db099ecd0f43e4524b9be0ec922b61", null ]

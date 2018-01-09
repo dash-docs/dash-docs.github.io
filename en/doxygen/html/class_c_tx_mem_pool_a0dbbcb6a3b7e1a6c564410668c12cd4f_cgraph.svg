@@ -48,33 +48,33 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 1158;
 var viewHeight = 278;
-var sectionId = 'dynsection-51';
+var sectionId = 'dynsection-50';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>CTxMemPool::ReadFeeEstimates</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-274 1154,-274 1154,4 -4,4"/>
-<!-- Node1946 -->
-<g id="node1" class="node"><title>Node1946</title>
+<!-- Node1930 -->
+<g id="node1" class="node"><title>Node1930</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-114.5 0,-133.5 167,-133.5 167,-114.5 0,-114.5"/>
 <text text-anchor="middle" x="83.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::ReadFeeEstimates</text>
 </g>
-<!-- Node1947 -->
-<g id="node2" class="node"><title>Node1947</title>
+<!-- Node1931 -->
+<g id="node2" class="node"><title>Node1931</title>
 <g id="a_node2"><a xlink:href="util_8h.html#af8985880cf4ef26df0a5aa2ffcb76662" target="_top" xlink:title="error">
 <polygon fill="white" stroke="black" points="516.5,-92.5 516.5,-111.5 552.5,-111.5 552.5,-92.5 516.5,-92.5"/>
 <text text-anchor="middle" x="534.5" y="-99.5" font-family="Helvetica,sans-Serif" font-size="10.00">error</text>
 </a>
 </g>
 </g>
-<!-- Node1946&#45;&gt;Node1947 -->
-<g id="edge1" class="edge"><title>Node1946&#45;&gt;Node1947</title>
+<!-- Node1930&#45;&gt;Node1931 -->
+<g id="edge1" class="edge"><title>Node1930&#45;&gt;Node1931</title>
 <path fill="none" stroke="midnightblue" d="M167.115,-119.952C270.042,-114.909 440.392,-106.562 506.297,-103.333"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="506.486,-106.828 516.303,-102.843 506.144,-99.8363 506.486,-106.828"/>
 </g>
-<!-- Node1964 -->
-<g id="node19" class="node"><title>Node1964</title>
+<!-- Node1948 -->
+<g id="node19" class="node"><title>Node1948</title>
 <g id="a_node19"><a xlink:href="class_c_block_policy_estimator.html#a3d6a47569d0677f8c40a6a170e8abf4d" target="_top" xlink:title="Read estimation data from a file. ">
 <polygon fill="white" stroke="black" points="203,-131 203,-161 321,-161 321,-131 203,-131"/>
 <text text-anchor="start" x="211" y="-149" font-family="Helvetica,sans-Serif" font-size="10.00">CBlockPolicyEstimator</text>
@@ -82,13 +82,13 @@ var sectionId = 'dynsection-51';
 </a>
 </g>
 </g>
-<!-- Node1946&#45;&gt;Node1964 -->
-<g id="edge18" class="edge"><title>Node1946&#45;&gt;Node1964</title>
+<!-- Node1930&#45;&gt;Node1948 -->
+<g id="edge18" class="edge"><title>Node1930&#45;&gt;Node1948</title>
 <path fill="none" stroke="midnightblue" d="M160.889,-133.522C171.44,-134.837 182.221,-136.181 192.615,-137.476"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="192.501,-140.989 202.857,-138.753 193.366,-134.043 192.501,-140.989"/>
 </g>
-<!-- Node1948 -->
-<g id="node3" class="node"><title>Node1948</title>
+<!-- Node1932 -->
+<g id="node3" class="node"><title>Node1932</title>
 <g id="a_node3"><a xlink:href="namespacetinyformat_1_1detail.html#aa4b0590b3e34562c2d252a2086cec7ba" target="_top" xlink:title="tinyformat::detail\l::format">
 <polygon fill="white" stroke="black" points="604,-87 604,-117 693,-117 693,-87 604,-87"/>
 <text text-anchor="start" x="612" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00">tinyformat::detail</text>
@@ -96,26 +96,26 @@ var sectionId = 'dynsection-51';
 </a>
 </g>
 </g>
-<!-- Node1947&#45;&gt;Node1948 -->
-<g id="edge2" class="edge"><title>Node1947&#45;&gt;Node1948</title>
+<!-- Node1931&#45;&gt;Node1932 -->
+<g id="edge2" class="edge"><title>Node1931&#45;&gt;Node1932</title>
 <path fill="none" stroke="midnightblue" d="M552.51,-102C563.548,-102 578.598,-102 593.464,-102"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.674,-105.5 603.674,-102 593.674,-98.5001 593.674,-105.5"/>
 </g>
-<!-- Node1951 -->
-<g id="node6" class="node"><title>Node1951</title>
+<!-- Node1935 -->
+<g id="node6" class="node"><title>Node1935</title>
 <g id="a_node6"><a xlink:href="util_8h.html#afd4c3002b2797c0560adddb6af3ca1da" target="_top" xlink:title="Send a string to the log output. ">
 <polygon fill="white" stroke="black" points="616,-136.5 616,-155.5 681,-155.5 681,-136.5 616,-136.5"/>
 <text text-anchor="middle" x="648.5" y="-143.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogPrintStr</text>
 </a>
 </g>
 </g>
-<!-- Node1947&#45;&gt;Node1951 -->
-<g id="edge5" class="edge"><title>Node1947&#45;&gt;Node1951</title>
+<!-- Node1931&#45;&gt;Node1935 -->
+<g id="edge5" class="edge"><title>Node1931&#45;&gt;Node1935</title>
 <path fill="none" stroke="midnightblue" d="M552.51,-108.683C568.708,-115.046 593.545,-124.803 613.759,-132.745"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="612.666,-136.076 623.254,-136.475 615.226,-129.56 612.666,-136.076"/>
 </g>
-<!-- Node1949 -->
-<g id="node4" class="node"><title>Node1949</title>
+<!-- Node1933 -->
+<g id="node4" class="node"><title>Node1933</title>
 <g id="a_node4"><a xlink:href="classtinyformat_1_1detail_1_1_format_iterator.html#a46377a804f72dbad1e508d2fbaa18ce9" target="_top" xlink:title="tinyformat::detail\l::FormatIterator::finish">
 <polygon fill="white" stroke="black" points="736,-8 736,-38 849,-38 849,-8 736,-8"/>
 <text text-anchor="start" x="744" y="-26" font-family="Helvetica,sans-Serif" font-size="10.00">tinyformat::detail</text>
@@ -123,13 +123,13 @@ var sectionId = 'dynsection-51';
 </a>
 </g>
 </g>
-<!-- Node1948&#45;&gt;Node1949 -->
-<g id="edge3" class="edge"><title>Node1948&#45;&gt;Node1949</title>
+<!-- Node1932&#45;&gt;Node1933 -->
+<g id="edge3" class="edge"><title>Node1932&#45;&gt;Node1933</title>
 <path fill="none" stroke="midnightblue" d="M674.235,-86.8337C691.401,-76.4527 714.887,-62.5337 736,-51 741.097,-48.2158 746.503,-45.3648 751.863,-42.5983"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="753.463,-45.7117 760.779,-38.0487 750.281,-39.4766 753.463,-45.7117"/>
 </g>
-<!-- Node1950 -->
-<g id="node5" class="node"><title>Node1950</title>
+<!-- Node1934 -->
+<g id="node5" class="node"><title>Node1934</title>
 <g id="a_node5"><a xlink:href="classtinyformat_1_1detail_1_1_format_iterator.html#af3bbb8259ac0593ec2268ef5863311d5" target="_top" xlink:title="tinyformat::detail\l::FormatIterator::printFormat\lStringLiteral">
 <polygon fill="white" stroke="black" points="888,-0.5 888,-41.5 1028,-41.5 1028,-0.5 888,-0.5"/>
 <text text-anchor="start" x="896" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">tinyformat::detail</text>
@@ -138,218 +138,218 @@ var sectionId = 'dynsection-51';
 </a>
 </g>
 </g>
-<!-- Node1949&#45;&gt;Node1950 -->
-<g id="edge4" class="edge"><title>Node1949&#45;&gt;Node1950</title>
+<!-- Node1933&#45;&gt;Node1934 -->
+<g id="edge4" class="edge"><title>Node1933&#45;&gt;Node1934</title>
 <path fill="none" stroke="midnightblue" d="M849.31,-22.3173C858.51,-22.2048 868.2,-22.0862 877.841,-21.9683"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="877.892,-25.468 887.848,-21.8459 877.806,-18.4686 877.892,-25.468"/>
 </g>
-<!-- Node1952 -->
-<g id="node7" class="node"><title>Node1952</title>
+<!-- Node1936 -->
+<g id="node7" class="node"><title>Node1936</title>
 <g id="a_node7"><a xlink:href="util_8cpp.html#a751ff5f21d880737811136b5e0bcea12" target="_top" xlink:title="DebugPrintInit">
 <polygon fill="white" stroke="black" points="753,-60.5 753,-79.5 832,-79.5 832,-60.5 753,-60.5"/>
 <text text-anchor="middle" x="792.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">DebugPrintInit</text>
 </a>
 </g>
 </g>
-<!-- Node1951&#45;&gt;Node1952 -->
-<g id="edge6" class="edge"><title>Node1951&#45;&gt;Node1952</title>
+<!-- Node1935&#45;&gt;Node1936 -->
+<g id="edge6" class="edge"><title>Node1935&#45;&gt;Node1936</title>
 <path fill="none" stroke="midnightblue" d="M679.652,-136.465C686.62,-133.62 693.802,-130.133 700,-126 719.089,-113.271 716.615,-101.274 736,-89 739.154,-87.0029 742.543,-85.1881 746.034,-83.5444"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="747.571,-86.695 755.426,-79.5854 744.852,-80.2447 747.571,-86.695"/>
 </g>
-<!-- Node1953 -->
-<g id="node8" class="node"><title>Node1953</title>
+<!-- Node1937 -->
+<g id="node8" class="node"><title>Node1937</title>
 <g id="a_node8"><a xlink:href="util_8cpp.html#a7c125ce70fa6b09e1de0c4a404fc2b6f" target="_top" xlink:title="FileWriteStr">
 <polygon fill="white" stroke="black" points="758.5,-174.5 758.5,-193.5 826.5,-193.5 826.5,-174.5 758.5,-174.5"/>
 <text text-anchor="middle" x="792.5" y="-181.5" font-family="Helvetica,sans-Serif" font-size="10.00">FileWriteStr</text>
 </a>
 </g>
 </g>
-<!-- Node1951&#45;&gt;Node1953 -->
-<g id="edge7" class="edge"><title>Node1951&#45;&gt;Node1953</title>
+<!-- Node1935&#45;&gt;Node1937 -->
+<g id="edge7" class="edge"><title>Node1935&#45;&gt;Node1937</title>
 <path fill="none" stroke="midnightblue" d="M681.014,-154.433C700.765,-159.719 726.492,-166.604 748.151,-172.4"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="747.53,-175.857 758.095,-175.061 749.34,-169.094 747.53,-175.857"/>
 </g>
-<!-- Node1954 -->
-<g id="node9" class="node"><title>Node1954</title>
+<!-- Node1938 -->
+<g id="node9" class="node"><title>Node1938</title>
 <g id="a_node9"><a xlink:href="util_8cpp.html#ab83866a054745d4b30a3948a1b44beba" target="_top" xlink:title="GetDataDir">
 <polygon fill="white" stroke="black" points="759.5,-136.5 759.5,-155.5 825.5,-155.5 825.5,-136.5 759.5,-136.5"/>
 <text text-anchor="middle" x="792.5" y="-143.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetDataDir</text>
 </a>
 </g>
 </g>
-<!-- Node1951&#45;&gt;Node1954 -->
-<g id="edge8" class="edge"><title>Node1951&#45;&gt;Node1954</title>
+<!-- Node1935&#45;&gt;Node1938 -->
+<g id="edge8" class="edge"><title>Node1935&#45;&gt;Node1938</title>
 <path fill="none" stroke="midnightblue" d="M681.014,-146C701.047,-146 727.228,-146 749.077,-146"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="749.089,-149.5 759.089,-146 749.089,-142.5 749.089,-149.5"/>
 </g>
-<!-- Node1958 -->
-<g id="node13" class="node"><title>Node1958</title>
+<!-- Node1942 -->
+<g id="node13" class="node"><title>Node1942</title>
 <g id="a_node13"><a xlink:href="util_8cpp.html#af0c31e37a5891e021f9b339696398a28" target="_top" xlink:title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the th...">
 <polygon fill="white" stroke="black" points="742,-212.5 742,-231.5 843,-231.5 843,-212.5 742,-212.5"/>
 <text text-anchor="middle" x="792.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogThreadNameStr</text>
 </a>
 </g>
 </g>
-<!-- Node1951&#45;&gt;Node1958 -->
-<g id="edge12" class="edge"><title>Node1951&#45;&gt;Node1958</title>
+<!-- Node1935&#45;&gt;Node1942 -->
+<g id="edge12" class="edge"><title>Node1935&#45;&gt;Node1942</title>
 <path fill="none" stroke="midnightblue" d="M661.792,-155.554C678.042,-167.835 707.908,-189.213 736,-203 740.343,-205.131 744.985,-207.126 749.665,-208.961"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="748.65,-212.317 759.244,-212.497 751.074,-205.75 748.65,-212.317"/>
 </g>
-<!-- Node1960 -->
-<g id="node15" class="node"><title>Node1960</title>
+<!-- Node1944 -->
+<g id="node15" class="node"><title>Node1944</title>
 <g id="a_node15"><a xlink:href="util_8cpp.html#a8e80ae045580407e9f2028dc5f7b954c" target="_top" xlink:title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the ti...">
 <polygon fill="white" stroke="black" points="745.5,-98.5 745.5,-117.5 839.5,-117.5 839.5,-98.5 745.5,-98.5"/>
 <text text-anchor="middle" x="792.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogTimestampStr</text>
 </a>
 </g>
 </g>
-<!-- Node1951&#45;&gt;Node1960 -->
-<g id="edge14" class="edge"><title>Node1951&#45;&gt;Node1960</title>
+<!-- Node1935&#45;&gt;Node1944 -->
+<g id="edge14" class="edge"><title>Node1935&#45;&gt;Node1944</title>
 <path fill="none" stroke="midnightblue" d="M681.014,-137.567C700.13,-132.451 724.844,-125.837 746.05,-120.163"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="747.07,-123.513 755.825,-117.547 745.26,-116.751 747.07,-123.513"/>
 </g>
-<!-- Node1955 -->
-<g id="node10" class="node"><title>Node1955</title>
+<!-- Node1939 -->
+<g id="node10" class="node"><title>Node1939</title>
 <g id="a_node10"><a xlink:href="chainparamsbase_8cpp.html#a06ef5bfd0efb53d13bbf4276726e84ab" target="_top" xlink:title="Return the currently selected parameters. ">
 <polygon fill="white" stroke="black" points="921.5,-174.5 921.5,-193.5 994.5,-193.5 994.5,-174.5 921.5,-174.5"/>
 <text text-anchor="middle" x="958" y="-181.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseParams</text>
 </a>
 </g>
 </g>
-<!-- Node1954&#45;&gt;Node1955 -->
-<g id="edge9" class="edge"><title>Node1954&#45;&gt;Node1955</title>
+<!-- Node1938&#45;&gt;Node1939 -->
+<g id="edge9" class="edge"><title>Node1938&#45;&gt;Node1939</title>
 <path fill="none" stroke="midnightblue" d="M825.802,-153.508C850.229,-159.185 884.09,-167.054 911.293,-173.377"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="910.826,-176.862 921.359,-175.716 912.411,-170.043 910.826,-176.862"/>
 </g>
-<!-- Node1956 -->
-<g id="node11" class="node"><title>Node1956</title>
+<!-- Node1940 -->
+<g id="node11" class="node"><title>Node1940</title>
 <g id="a_node11"><a xlink:href="class_c_base_chain_params.html#a4b142e94ae27f860522dd5efef41fb67" target="_top" xlink:title="CBaseChainParams::DataDir">
 <polygon fill="white" stroke="black" points="885,-136.5 885,-155.5 1031,-155.5 1031,-136.5 885,-136.5"/>
 <text text-anchor="middle" x="958" y="-143.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBaseChainParams::DataDir</text>
 </a>
 </g>
 </g>
-<!-- Node1954&#45;&gt;Node1956 -->
-<g id="edge10" class="edge"><title>Node1954&#45;&gt;Node1956</title>
+<!-- Node1938&#45;&gt;Node1940 -->
+<g id="edge10" class="edge"><title>Node1938&#45;&gt;Node1940</title>
 <path fill="none" stroke="midnightblue" d="M825.802,-146C839.961,-146 857.29,-146 874.654,-146"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="874.859,-149.5 884.859,-146 874.859,-142.5 874.859,-149.5"/>
 </g>
-<!-- Node1957 -->
-<g id="node12" class="node"><title>Node1957</title>
+<!-- Node1941 -->
+<g id="node12" class="node"><title>Node1941</title>
 <g id="a_node12"><a xlink:href="util_8cpp.html#ab272995de020a3bcbf743be630e485c6" target="_top" xlink:title="GetDefaultDataDir">
 <polygon fill="white" stroke="black" points="909,-212.5 909,-231.5 1007,-231.5 1007,-212.5 909,-212.5"/>
 <text text-anchor="middle" x="958" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetDefaultDataDir</text>
 </a>
 </g>
 </g>
-<!-- Node1954&#45;&gt;Node1957 -->
-<g id="edge11" class="edge"><title>Node1954&#45;&gt;Node1957</title>
+<!-- Node1938&#45;&gt;Node1941 -->
+<g id="edge11" class="edge"><title>Node1938&#45;&gt;Node1941</title>
 <path fill="none" stroke="midnightblue" d="M825.538,-154.043C833.554,-156.827 841.889,-160.43 849,-165 868.572,-177.576 864.989,-191.135 885,-203 889.405,-205.612 894.17,-207.87 899.079,-209.822"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="898.044,-213.168 908.639,-213.21 900.382,-206.57 898.044,-213.168"/>
 </g>
-<!-- Node1959 -->
-<g id="node14" class="node"><title>Node1959</title>
+<!-- Node1943 -->
+<g id="node14" class="node"><title>Node1943</title>
 <g id="a_node14"><a xlink:href="util_8cpp.html#a1db3aa900bfa259ae1fe04068f2accfc" target="_top" xlink:title="GetThreadName">
 <polygon fill="white" stroke="black" points="913.5,-250.5 913.5,-269.5 1002.5,-269.5 1002.5,-250.5 913.5,-250.5"/>
 <text text-anchor="middle" x="958" y="-257.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetThreadName</text>
 </a>
 </g>
 </g>
-<!-- Node1958&#45;&gt;Node1959 -->
-<g id="edge13" class="edge"><title>Node1958&#45;&gt;Node1959</title>
+<!-- Node1942&#45;&gt;Node1943 -->
+<g id="edge13" class="edge"><title>Node1942&#45;&gt;Node1943</title>
 <path fill="none" stroke="midnightblue" d="M834.758,-231.589C856.431,-236.626 883.183,-242.844 906.13,-248.177"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="905.506,-251.625 916.039,-250.48 907.091,-244.807 905.506,-251.625"/>
 </g>
-<!-- Node1961 -->
-<g id="node16" class="node"><title>Node1961</title>
+<!-- Node1945 -->
+<g id="node16" class="node"><title>Node1945</title>
 <g id="a_node16"><a xlink:href="utiltime_8cpp.html#a749bc6776c8ec72d7c5e4dea56aee415" target="_top" xlink:title="DateTimeStrFormat">
 <polygon fill="white" stroke="black" points="906.5,-60.5 906.5,-79.5 1009.5,-79.5 1009.5,-60.5 906.5,-60.5"/>
 <text text-anchor="middle" x="958" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">DateTimeStrFormat</text>
 </a>
 </g>
 </g>
-<!-- Node1960&#45;&gt;Node1961 -->
-<g id="edge15" class="edge"><title>Node1960&#45;&gt;Node1961</title>
+<!-- Node1944&#45;&gt;Node1945 -->
+<g id="edge15" class="edge"><title>Node1944&#45;&gt;Node1945</title>
 <path fill="none" stroke="midnightblue" d="M834.758,-98.411C856.431,-93.3739 883.183,-87.1562 906.13,-81.8229"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="907.091,-85.1931 916.039,-79.5201 905.506,-78.3748 907.091,-85.1931"/>
 </g>
-<!-- Node1962 -->
-<g id="node17" class="node"><title>Node1962</title>
+<!-- Node1946 -->
+<g id="node17" class="node"><title>Node1946</title>
 <g id="a_node17"><a xlink:href="utiltime_8cpp.html#a474bed4c01c8a1d18330dceccf865e1e" target="_top" xlink:title="Return a time useful for the debug log. ">
 <polygon fill="white" stroke="black" points="908.5,-98.5 908.5,-117.5 1007.5,-117.5 1007.5,-98.5 908.5,-98.5"/>
 <text text-anchor="middle" x="958" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetLogTimeMicros</text>
 </a>
 </g>
 </g>
-<!-- Node1960&#45;&gt;Node1962 -->
-<g id="edge16" class="edge"><title>Node1960&#45;&gt;Node1962</title>
+<!-- Node1944&#45;&gt;Node1946 -->
+<g id="edge16" class="edge"><title>Node1944&#45;&gt;Node1946</title>
 <path fill="none" stroke="midnightblue" d="M839.915,-108C858.081,-108 879.13,-108 898.329,-108"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="898.474,-111.5 908.474,-108 898.474,-104.5 898.474,-111.5"/>
 </g>
-<!-- Node1963 -->
-<g id="node18" class="node"><title>Node1963</title>
+<!-- Node1947 -->
+<g id="node18" class="node"><title>Node1947</title>
 <g id="a_node18"><a xlink:href="utiltime_8cpp.html#a0c5a06b50cd805b1923552114494c029" target="_top" xlink:title="GetTimeMicros">
 <polygon fill="white" stroke="black" points="1067,-98.5 1067,-117.5 1150,-117.5 1150,-98.5 1067,-98.5"/>
 <text text-anchor="middle" x="1108.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetTimeMicros</text>
 </a>
 </g>
 </g>
-<!-- Node1962&#45;&gt;Node1963 -->
-<g id="edge17" class="edge"><title>Node1962&#45;&gt;Node1963</title>
+<!-- Node1946&#45;&gt;Node1947 -->
+<g id="edge17" class="edge"><title>Node1946&#45;&gt;Node1947</title>
 <path fill="none" stroke="midnightblue" d="M1007.62,-108C1023.31,-108 1040.73,-108 1056.57,-108"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1056.72,-111.5 1066.72,-108 1056.72,-104.5 1056.72,-111.5"/>
 </g>
-<!-- Node1965 -->
-<g id="node20" class="node"><title>Node1965</title>
+<!-- Node1949 -->
+<g id="node20" class="node"><title>Node1949</title>
 <g id="a_node20"><a xlink:href="class_tx_confirm_stats.html#a3cc392ef180cd7bddd0181c1a73dd741" target="_top" xlink:title="Read saved state of estimation data from a file and replace all internal data structures and variable...">
 <polygon fill="white" stroke="black" points="357,-136.5 357,-155.5 472,-155.5 472,-136.5 357,-136.5"/>
 <text text-anchor="middle" x="414.5" y="-143.5" font-family="Helvetica,sans-Serif" font-size="10.00">TxConfirmStats::Read</text>
 </a>
 </g>
 </g>
-<!-- Node1964&#45;&gt;Node1965 -->
-<g id="edge19" class="edge"><title>Node1964&#45;&gt;Node1965</title>
+<!-- Node1948&#45;&gt;Node1949 -->
+<g id="edge19" class="edge"><title>Node1948&#45;&gt;Node1949</title>
 <path fill="none" stroke="midnightblue" d="M321.187,-146C329.538,-146 338.184,-146 346.685,-146"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="346.953,-149.5 356.952,-146 346.952,-142.5 346.953,-149.5"/>
 </g>
-<!-- Node1966 -->
-<g id="node21" class="node"><title>Node1966</title>
+<!-- Node1950 -->
+<g id="node21" class="node"><title>Node1950</title>
 <g id="a_node21"><a xlink:href="util_8h.html#aab1f837a2366f424bdc996fdf6352171" target="_top" xlink:title="Zero&#45;arg versions of logging and error, these are not covered by TINYFORMAT_FOREACH_ARGNUM. ">
 <polygon fill="white" stroke="black" points="508,-136.5 508,-155.5 561,-155.5 561,-136.5 508,-136.5"/>
 <text text-anchor="middle" x="534.5" y="-143.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogPrint</text>
 </a>
 </g>
 </g>
-<!-- Node1965&#45;&gt;Node1966 -->
-<g id="edge20" class="edge"><title>Node1965&#45;&gt;Node1966</title>
+<!-- Node1949&#45;&gt;Node1950 -->
+<g id="edge20" class="edge"><title>Node1949&#45;&gt;Node1950</title>
 <path fill="none" stroke="midnightblue" d="M472.081,-146C480.8,-146 489.589,-146 497.686,-146"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="497.866,-149.5 507.866,-146 497.866,-142.5 497.866,-149.5"/>
 </g>
-<!-- Node1966&#45;&gt;Node1948 -->
-<g id="edge21" class="edge"><title>Node1966&#45;&gt;Node1948</title>
+<!-- Node1950&#45;&gt;Node1932 -->
+<g id="edge21" class="edge"><title>Node1950&#45;&gt;Node1932</title>
 <path fill="none" stroke="midnightblue" d="M559.802,-136.453C571.512,-131.853 585.977,-126.17 599.761,-120.755"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="601.124,-123.98 609.152,-117.065 598.564,-117.464 601.124,-123.98"/>
 </g>
-<!-- Node1966&#45;&gt;Node1951 -->
-<g id="edge24" class="edge"><title>Node1966&#45;&gt;Node1951</title>
+<!-- Node1950&#45;&gt;Node1935 -->
+<g id="edge24" class="edge"><title>Node1950&#45;&gt;Node1935</title>
 <path fill="none" stroke="midnightblue" d="M561.195,-146C574.418,-146 590.868,-146 605.848,-146"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="605.927,-149.5 615.927,-146 605.927,-142.5 605.927,-149.5"/>
 </g>
-<!-- Node1967 -->
-<g id="node22" class="node"><title>Node1967</title>
+<!-- Node1951 -->
+<g id="node22" class="node"><title>Node1951</title>
 <g id="a_node22"><a xlink:href="util_8h.html#a343d2a13efe00125f78d25dafb0a8d98" target="_top" xlink:title="Return true if log accepts specified category. ">
 <polygon fill="white" stroke="black" points="597,-212.5 597,-231.5 700,-231.5 700,-212.5 597,-212.5"/>
 <text text-anchor="middle" x="648.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogAcceptCategory</text>
 </a>
 </g>
 </g>
-<!-- Node1966&#45;&gt;Node1967 -->
-<g id="edge22" class="edge"><title>Node1966&#45;&gt;Node1967</title>
+<!-- Node1950&#45;&gt;Node1951 -->
+<g id="edge22" class="edge"><title>Node1950&#45;&gt;Node1951</title>
 <path fill="none" stroke="midnightblue" d="M549.685,-155.625C568.704,-168.531 602.673,-191.582 625.149,-206.833"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="623.19,-209.734 633.43,-212.453 627.121,-203.941 623.19,-209.734"/>
 </g>
-<!-- Node1967&#45;&gt;Node1959 -->
-<g id="edge23" class="edge"><title>Node1967&#45;&gt;Node1959</title>
+<!-- Node1951&#45;&gt;Node1943 -->
+<g id="edge23" class="edge"><title>Node1951&#45;&gt;Node1943</title>
 <path fill="none" stroke="midnightblue" d="M688.052,-231.597C702.952,-235.008 720.192,-238.595 736,-241 792.689,-249.625 858.199,-254.645 903.09,-257.335"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="903.005,-260.836 913.191,-257.922 903.411,-253.848 903.005,-260.836"/>
 </g>

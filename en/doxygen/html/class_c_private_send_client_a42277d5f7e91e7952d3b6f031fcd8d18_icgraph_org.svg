@@ -9,27 +9,27 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 236.5)">
 <title>CPrivateSendClient::ClearSkippedDenominations</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-236.5 820,-236.5 820,4 -4,4"/>
-<!-- Node153 -->
-<g id="node1" class="node"><title>Node153</title>
+<!-- Node145 -->
+<g id="node1" class="node"><title>Node145</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-109 0,-139 146,-139 146,-109 0,-109"/>
 <text text-anchor="start" x="8" y="-127" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
 <text text-anchor="middle" x="73" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">::ClearSkippedDenominations</text>
 </g>
-<!-- Node154 -->
-<g id="node2" class="node"><title>Node154</title>
+<!-- Node146 -->
+<g id="node2" class="node"><title>Node146</title>
 <g id="a_node2"><a xlink:href="group___actions.html#ga9476d8b40414f77f7f3bcd3ba28fa31f" target="_top" xlink:title="Create a new transaction paying the recipients with a set of coins selected by SelectCoins(); Also cr...">
 <polygon fill="white" stroke="black" points="182,-114.5 182,-133.5 320,-133.5 320,-114.5 182,-114.5"/>
 <text text-anchor="middle" x="251" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::CreateTransaction</text>
 </a>
 </g>
 </g>
-<!-- Node153&#45;&gt;Node154 -->
-<g id="edge1" class="edge"><title>Node153&#45;&gt;Node154</title>
+<!-- Node145&#45;&gt;Node146 -->
+<g id="edge1" class="edge"><title>Node145&#45;&gt;Node146</title>
 <path fill="none" stroke="midnightblue" d="M156.181,-124C164.82,-124 173.534,-124 181.988,-124"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="156.094,-120.5 146.094,-124 156.094,-127.5 156.094,-120.5"/>
 </g>
-<!-- Node155 -->
-<g id="node3" class="node"><title>Node155</title>
+<!-- Node147 -->
+<g id="node3" class="node"><title>Node147</title>
 <g id="a_node3"><a xlink:href="class_c_private_send_client.html#a1318eb1f8e5a845036cfe99f0b3f8b36" target="_top" xlink:title="CPrivateSendClient\l::CreateDenominated">
 <polygon fill="white" stroke="black" points="381,-202 381,-232 491,-232 491,-202 381,-202"/>
 <text text-anchor="start" x="389" y="-220" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
@@ -37,13 +37,13 @@
 </a>
 </g>
 </g>
-<!-- Node154&#45;&gt;Node155 -->
-<g id="edge2" class="edge"><title>Node154&#45;&gt;Node155</title>
+<!-- Node146&#45;&gt;Node147 -->
+<g id="edge2" class="edge"><title>Node146&#45;&gt;Node147</title>
 <path fill="none" stroke="midnightblue" d="M271.899,-139.768C292.096,-155.135 324.754,-178.276 356,-193 363.78,-196.666 372.253,-199.932 380.666,-202.784"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="273.85,-136.852 263.797,-133.509 269.571,-142.392 273.85,-136.852"/>
 </g>
-<!-- Node156 -->
-<g id="node4" class="node"><title>Node156</title>
+<!-- Node148 -->
+<g id="node4" class="node"><title>Node148</title>
 <g id="a_node4"><a xlink:href="class_c_private_send_client.html#ad603beaa1644f6e6cfb8ca7d1400d46e" target="_top" xlink:title="CPrivateSendClient\l::MakeCollateralAmounts">
 <polygon fill="white" stroke="black" points="372.5,-153 372.5,-183 499.5,-183 499.5,-153 372.5,-153"/>
 <text text-anchor="start" x="380.5" y="-171" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
@@ -51,65 +51,65 @@
 </a>
 </g>
 </g>
-<!-- Node154&#45;&gt;Node156 -->
-<g id="edge3" class="edge"><title>Node154&#45;&gt;Node156</title>
+<!-- Node146&#45;&gt;Node148 -->
+<g id="edge3" class="edge"><title>Node146&#45;&gt;Node148</title>
 <path fill="none" stroke="midnightblue" d="M301.722,-135.955C323.491,-141.189 349.278,-147.389 372.342,-152.935"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="302.249,-132.482 291.708,-133.547 300.613,-139.288 302.249,-132.482"/>
 </g>
-<!-- Node157 -->
-<g id="node5" class="node"><title>Node157</title>
+<!-- Node149 -->
+<g id="node5" class="node"><title>Node149</title>
 <g id="a_node5"><a xlink:href="class_wallet_model.html#a8abc851901c7c7343ebfb5a8e5fc0154" target="_top" xlink:title="WalletModel::prepareTransaction">
 <polygon fill="white" stroke="black" points="356,-114.5 356,-133.5 516,-133.5 516,-114.5 356,-114.5"/>
 <text text-anchor="middle" x="436" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">WalletModel::prepareTransaction</text>
 </a>
 </g>
 </g>
-<!-- Node154&#45;&gt;Node157 -->
-<g id="edge4" class="edge"><title>Node154&#45;&gt;Node157</title>
+<!-- Node146&#45;&gt;Node149 -->
+<g id="edge4" class="edge"><title>Node146&#45;&gt;Node149</title>
 <path fill="none" stroke="midnightblue" d="M330.303,-124C338.711,-124 347.27,-124 355.69,-124"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="330.142,-120.5 320.142,-124 330.142,-127.5 330.142,-120.5"/>
 </g>
-<!-- Node160 -->
-<g id="node8" class="node"><title>Node160</title>
+<!-- Node152 -->
+<g id="node8" class="node"><title>Node152</title>
 <g id="a_node8"><a xlink:href="rpcwallet_8cpp.html#a02c1a7b5244896e62bc5ae698f7a76c9" target="_top" xlink:title="sendmany">
 <polygon fill="white" stroke="black" points="405,-76.5 405,-95.5 467,-95.5 467,-76.5 405,-76.5"/>
 <text text-anchor="middle" x="436" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">sendmany</text>
 </a>
 </g>
 </g>
-<!-- Node154&#45;&gt;Node160 -->
-<g id="edge7" class="edge"><title>Node154&#45;&gt;Node160</title>
+<!-- Node146&#45;&gt;Node152 -->
+<g id="edge7" class="edge"><title>Node146&#45;&gt;Node152</title>
 <path fill="none" stroke="midnightblue" d="M308.266,-112.316C340.14,-105.698 378.745,-97.6813 404.909,-92.2483"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="307.258,-108.951 298.179,-114.411 308.681,-115.805 307.258,-108.951"/>
 </g>
-<!-- Node161 -->
-<g id="node9" class="node"><title>Node161</title>
+<!-- Node153 -->
+<g id="node9" class="node"><title>Node153</title>
 <g id="a_node9"><a xlink:href="rpcwallet_8cpp.html#a1ce48c3b465b38c532d3a3bc9664ba16" target="_top" xlink:title="SendMoney">
 <polygon fill="white" stroke="black" points="402,-38.5 402,-57.5 470,-57.5 470,-38.5 402,-38.5"/>
 <text text-anchor="middle" x="436" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">SendMoney</text>
 </a>
 </g>
 </g>
-<!-- Node154&#45;&gt;Node161 -->
-<g id="edge8" class="edge"><title>Node154&#45;&gt;Node161</title>
+<!-- Node146&#45;&gt;Node153 -->
+<g id="edge8" class="edge"><title>Node146&#45;&gt;Node153</title>
 <path fill="none" stroke="midnightblue" d="M275.191,-108.945C295.716,-96.2017 326.854,-78.2611 356,-67 370.606,-61.3569 387.398,-57.0353 401.734,-53.9502"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="273.144,-106.098 266.552,-114.392 276.878,-112.019 273.144,-106.098"/>
 </g>
-<!-- Node158 -->
-<g id="node6" class="node"><title>Node158</title>
+<!-- Node150 -->
+<g id="node6" class="node"><title>Node150</title>
 <g id="a_node6"><a xlink:href="class_send_coins_dialog.html#aab03626a859f22a68760b235a1df6bc9" target="_top" xlink:title="SendCoinsDialog::send">
 <polygon fill="white" stroke="black" points="552,-114.5 552,-133.5 671,-133.5 671,-114.5 552,-114.5"/>
 <text text-anchor="middle" x="611.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">SendCoinsDialog::send</text>
 </a>
 </g>
 </g>
-<!-- Node157&#45;&gt;Node158 -->
-<g id="edge5" class="edge"><title>Node157&#45;&gt;Node158</title>
+<!-- Node149&#45;&gt;Node150 -->
+<g id="edge5" class="edge"><title>Node149&#45;&gt;Node150</title>
 <path fill="none" stroke="midnightblue" d="M526.34,-124C535.039,-124 543.702,-124 551.981,-124"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="526.134,-120.5 516.134,-124 526.134,-127.5 526.134,-120.5"/>
 </g>
-<!-- Node159 -->
-<g id="node7" class="node"><title>Node159</title>
+<!-- Node151 -->
+<g id="node7" class="node"><title>Node151</title>
 <g id="a_node7"><a xlink:href="class_send_coins_dialog.html#a2cab7cf9ea5040b9e2189297f7d3c764" target="_top" xlink:title="SendCoinsDialog::on\l_sendButton_clicked">
 <polygon fill="white" stroke="black" points="707,-109 707,-139 816,-139 816,-109 707,-109"/>
 <text text-anchor="start" x="715" y="-127" font-family="Helvetica,sans-Serif" font-size="10.00">SendCoinsDialog::on</text>
@@ -117,47 +117,47 @@
 </a>
 </g>
 </g>
-<!-- Node158&#45;&gt;Node159 -->
-<g id="edge6" class="edge"><title>Node158&#45;&gt;Node159</title>
+<!-- Node150&#45;&gt;Node151 -->
+<g id="edge6" class="edge"><title>Node150&#45;&gt;Node151</title>
 <path fill="none" stroke="midnightblue" d="M681.585,-124C689.979,-124 698.456,-124 706.584,-124"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="681.419,-120.5 671.419,-124 681.419,-127.5 681.419,-120.5"/>
 </g>
-<!-- Node162 -->
-<g id="node10" class="node"><title>Node162</title>
+<!-- Node154 -->
+<g id="node10" class="node"><title>Node154</title>
 <g id="a_node10"><a xlink:href="rpcwallet_8cpp.html#a13ae0f230ba6d349466070da38ee85f4" target="_top" xlink:title="instantsendtoaddress">
 <polygon fill="white" stroke="black" points="556.5,-76.5 556.5,-95.5 666.5,-95.5 666.5,-76.5 556.5,-76.5"/>
 <text text-anchor="middle" x="611.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">instantsendtoaddress</text>
 </a>
 </g>
 </g>
-<!-- Node161&#45;&gt;Node162 -->
-<g id="edge9" class="edge"><title>Node161&#45;&gt;Node162</title>
+<!-- Node153&#45;&gt;Node154 -->
+<g id="edge9" class="edge"><title>Node153&#45;&gt;Node154</title>
 <path fill="none" stroke="midnightblue" d="M479.825,-57.3796C506.384,-63.1966 540.405,-70.6478 567.075,-76.4891"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="480.56,-53.9576 470.042,-55.237 479.062,-60.7955 480.56,-53.9576"/>
 </g>
-<!-- Node163 -->
-<g id="node11" class="node"><title>Node163</title>
+<!-- Node155 -->
+<g id="node11" class="node"><title>Node155</title>
 <g id="a_node11"><a xlink:href="rpcwallet_8cpp.html#a887e8b6785b39cba59fe24ea952a4f10" target="_top" xlink:title="sendfrom">
 <polygon fill="white" stroke="black" points="583,-38.5 583,-57.5 640,-57.5 640,-38.5 583,-38.5"/>
 <text text-anchor="middle" x="611.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">sendfrom</text>
 </a>
 </g>
 </g>
-<!-- Node161&#45;&gt;Node163 -->
-<g id="edge10" class="edge"><title>Node161&#45;&gt;Node163</title>
+<!-- Node153&#45;&gt;Node155 -->
+<g id="edge10" class="edge"><title>Node153&#45;&gt;Node155</title>
 <path fill="none" stroke="midnightblue" d="M480.051,-48C512.148,-48 555.048,-48 582.729,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="480.042,-44.5001 470.042,-48 480.042,-51.5001 480.042,-44.5001"/>
 </g>
-<!-- Node164 -->
-<g id="node12" class="node"><title>Node164</title>
+<!-- Node156 -->
+<g id="node12" class="node"><title>Node156</title>
 <g id="a_node12"><a xlink:href="rpcwallet_8cpp.html#a36f0a0b6cd58a61c125bbe7a39ed1368" target="_top" xlink:title="sendtoaddress">
 <polygon fill="white" stroke="black" points="571.5,-0.5 571.5,-19.5 651.5,-19.5 651.5,-0.5 571.5,-0.5"/>
 <text text-anchor="middle" x="611.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">sendtoaddress</text>
 </a>
 </g>
 </g>
-<!-- Node161&#45;&gt;Node164 -->
-<g id="edge11" class="edge"><title>Node161&#45;&gt;Node164</title>
+<!-- Node153&#45;&gt;Node156 -->
+<g id="edge11" class="edge"><title>Node153&#45;&gt;Node156</title>
 <path fill="none" stroke="midnightblue" d="M479.931,-38.5973C507.866,-32.4789 544.022,-24.5599 571.202,-18.607"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="479.062,-35.2045 470.042,-40.763 480.56,-42.0424 479.062,-35.2045"/>
 </g>

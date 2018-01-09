@@ -115,7 +115,7 @@ var sectionId = 'dynsection-21';
 </g>
 <!-- Node519 -->
 <g id="node23" class="node"><title>Node519</title>
-<g id="a_node23"><a xlink:href="validation_8cpp.html#a2771319b8131d6bd0b26cd7de79fd690" target="_top" xlink:title="AcceptToMemoryPoolWorker">
+<g id="a_node23"><a xlink:href="validation_8cpp.html#a1888cf6244e5b79b00f3f9f6c9804602" target="_top" xlink:title="AcceptToMemoryPoolWorker">
 <polygon fill="white" stroke="black" points="860,-171.5 860,-190.5 1005,-190.5 1005,-171.5 860,-171.5"/>
 <text text-anchor="middle" x="932.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcceptToMemoryPoolWorker</text>
 </a>
@@ -126,16 +126,16 @@ var sectionId = 'dynsection-21';
 <path fill="none" stroke="midnightblue" d="M461.173,-137.434C482.847,-146.107 512.646,-156.723 540,-162 650.081,-183.234 780.62,-185.007 859.695,-183.573"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="462.405,-134.156 451.824,-133.612 459.756,-140.636 462.405,-134.156"/>
 </g>
-<!-- Node560 -->
-<g id="node50" class="node"><title>Node560</title>
-<g id="a_node50"><a xlink:href="class_c_tx_mem_pool.html#a75ada1d7bb5d96989cc73ee4a0a158d8" target="_top" xlink:title="Remove transactions from the mempool until its dynamic size is &lt;= sizelimit. ">
+<!-- Node559 -->
+<g id="node50" class="node"><title>Node559</title>
+<g id="a_node50"><a xlink:href="class_c_tx_mem_pool.html#aea66d0a70710af9d520039bac06c0b39" target="_top" xlink:title="Remove transactions from the mempool until its dynamic size is &lt;= sizelimit. ">
 <polygon fill="white" stroke="black" points="540,-95.5 540,-114.5 673,-114.5 673,-95.5 540,-95.5"/>
 <text text-anchor="middle" x="606.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::TrimToSize</text>
 </a>
 </g>
 </g>
-<!-- Node480&#45;&gt;Node560 -->
-<g id="edge64" class="edge"><title>Node480&#45;&gt;Node560</title>
+<!-- Node480&#45;&gt;Node559 -->
+<g id="edge64" class="edge"><title>Node480&#45;&gt;Node559</title>
 <path fill="none" stroke="midnightblue" d="M514.259,-114.878C522.885,-113.944 531.555,-113.005 539.937,-112.098"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="513.739,-111.414 504.173,-115.97 514.492,-118.373 513.739,-111.414"/>
 </g>
@@ -167,7 +167,7 @@ var sectionId = 'dynsection-21';
 </g>
 <!-- Node515 -->
 <g id="node19" class="node"><title>Node515</title>
-<g id="a_node19"><a xlink:href="validation_8h.html#a0c1aac3f96687018cb6a1faa3c3933ac" target="_top" xlink:title="Reprocess a number of blocks to try and get on the correct chain again. ">
+<g id="a_node19"><a xlink:href="validation_8h.html#a0c1aac3f96687018cb6a1faa3c3933ac" target="_top" xlink:title="Functions for validating blocks and updating the block tree. ">
 <polygon fill="white" stroke="black" points="1628.5,-57.5 1628.5,-76.5 1724.5,-76.5 1724.5,-57.5 1628.5,-57.5"/>
 <text text-anchor="middle" x="1676.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">DisconnectBlocks</text>
 </a>
@@ -506,30 +506,30 @@ var sectionId = 'dynsection-21';
 <path fill="none" stroke="midnightblue" d="M1104.97,-635.455C1116.7,-667.703 1144.56,-732.126 1190,-767 1195.09,-770.905 1200.8,-774.175 1206.77,-776.914"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1108.21,-634.125 1101.61,-625.841 1101.61,-636.436 1108.21,-634.125"/>
 </g>
-<!-- Node556 -->
-<g id="node47" class="node"><title>Node556</title>
-<g id="a_node47"><a xlink:href="class_c_private_send_client.html#a5dd3ad9ca84fcc35a3b3f19011494610" target="_top" xlink:title="step 2: send denominated inputs and outputs prepared in step 1 ">
+<!-- Node555 -->
+<g id="node47" class="node"><title>Node555</title>
+<g id="a_node47"><a xlink:href="class_c_private_send_client.html#a7e01fd502c2377024e5b858bb7f59337" target="_top" xlink:title="step 2: send denominated inputs and outputs prepared in step 1 ">
 <polygon fill="white" stroke="black" points="1222,-601 1222,-631 1325,-631 1325,-601 1222,-601"/>
 <text text-anchor="start" x="1230" y="-619" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
 <text text-anchor="middle" x="1273.5" y="-608" font-family="Helvetica,sans-Serif" font-size="10.00">::SendDenominate</text>
 </a>
 </g>
 </g>
-<!-- Node520&#45;&gt;Node556 -->
-<g id="edge59" class="edge"><title>Node520&#45;&gt;Node556</title>
+<!-- Node520&#45;&gt;Node555 -->
+<g id="edge59" class="edge"><title>Node520&#45;&gt;Node555</title>
 <path fill="none" stroke="midnightblue" d="M1164.18,-616C1183.3,-616 1203.88,-616 1221.91,-616"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1164.03,-612.5 1154.03,-616 1164.03,-619.5 1164.03,-612.5"/>
 </g>
-<!-- Node559 -->
-<g id="node49" class="node"><title>Node559</title>
+<!-- Node558 -->
+<g id="node49" class="node"><title>Node558</title>
 <g id="a_node49"><a xlink:href="server_8h.html#a962b2890c7be4b92841eb288e5a2aca5" target="_top" xlink:title="sendrawtransaction">
 <polygon fill="white" stroke="black" points="1223,-650.5 1223,-669.5 1324,-669.5 1324,-650.5 1223,-650.5"/>
 <text text-anchor="middle" x="1273.5" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">sendrawtransaction</text>
 </a>
 </g>
 </g>
-<!-- Node520&#45;&gt;Node559 -->
-<g id="edge61" class="edge"><title>Node520&#45;&gt;Node559</title>
+<!-- Node520&#45;&gt;Node558 -->
+<g id="edge61" class="edge"><title>Node520&#45;&gt;Node558</title>
 <path fill="none" stroke="midnightblue" d="M1141.95,-628.258C1157.12,-632.434 1174.28,-637.044 1190,-641 1202.83,-644.228 1216.83,-647.535 1229.6,-650.466"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1142.88,-624.883 1132.31,-625.587 1141.01,-631.629 1142.88,-624.883"/>
 </g>
@@ -745,8 +745,8 @@ var sectionId = 'dynsection-21';
 <path fill="none" stroke="midnightblue" d="M1350.4,-785.928C1371.48,-784.519 1394.24,-782.998 1414.9,-781.618"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1349.96,-782.45 1340.21,-786.609 1350.42,-789.434 1349.96,-782.45"/>
 </g>
-<!-- Node552 -->
-<g id="node45" class="node"><title>Node552</title>
+<!-- Node551 -->
+<g id="node45" class="node"><title>Node551</title>
 <g id="a_node45"><a xlink:href="class_c_private_send_server.html#aa1d021f6e9df0817b8bee67bd8c90bdc" target="_top" xlink:title="Add a clients entry to the pool. ">
 <polygon fill="white" stroke="black" points="1432,-713 1432,-743 1538,-743 1538,-713 1432,-713"/>
 <text text-anchor="start" x="1440" y="-731" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendServer</text>
@@ -754,13 +754,13 @@ var sectionId = 'dynsection-21';
 </a>
 </g>
 </g>
-<!-- Node544&#45;&gt;Node552 -->
-<g id="edge54" class="edge"><title>Node544&#45;&gt;Node552</title>
+<!-- Node544&#45;&gt;Node551 -->
+<g id="edge54" class="edge"><title>Node544&#45;&gt;Node551</title>
 <path fill="none" stroke="midnightblue" d="M1338.63,-772.945C1344.86,-771.01 1351.07,-769.012 1357,-767 1373.26,-761.486 1376.7,-758.392 1393,-753 1405.44,-748.883 1419,-744.898 1431.75,-741.364"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1337.4,-769.661 1328.85,-775.924 1339.44,-776.357 1337.4,-769.661"/>
 </g>
-<!-- Node553 -->
-<g id="node46" class="node"><title>Node553</title>
+<!-- Node552 -->
+<g id="node46" class="node"><title>Node552</title>
 <g id="a_node46"><a xlink:href="class_c_private_send_server.html#af7e38b25732fe0532d4a7061badababe" target="_top" xlink:title="Is this nDenom and txCollateral acceptable? ">
 <polygon fill="white" stroke="red" points="1400,-811 1400,-841 1570,-841 1570,-811 1400,-811"/>
 <text text-anchor="start" x="1408" y="-829" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendServer</text>
@@ -768,18 +768,18 @@ var sectionId = 'dynsection-21';
 </a>
 </g>
 </g>
-<!-- Node544&#45;&gt;Node553 -->
-<g id="edge56" class="edge"><title>Node544&#45;&gt;Node553</title>
+<!-- Node544&#45;&gt;Node552 -->
+<g id="edge56" class="edge"><title>Node544&#45;&gt;Node552</title>
 <path fill="none" stroke="midnightblue" d="M1350.09,-803.628C1366.17,-806.316 1383.26,-809.17 1399.65,-811.909"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1350.65,-800.174 1340.21,-801.978 1349.5,-807.078 1350.65,-800.174"/>
 </g>
-<!-- Node552&#45;&gt;Node543 -->
-<g id="edge55" class="edge"><title>Node552&#45;&gt;Node543</title>
+<!-- Node551&#45;&gt;Node543 -->
+<g id="edge55" class="edge"><title>Node551&#45;&gt;Node543</title>
 <path fill="none" stroke="midnightblue" d="M1548.42,-725.086C1600.09,-721.961 1675.24,-715.768 1740,-704 1754,-701.455 1768.98,-697.798 1782.7,-694.064"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1548.19,-721.593 1538.41,-725.67 1548.6,-728.581 1548.19,-721.593"/>
 </g>
-<!-- Node557 -->
-<g id="node48" class="node"><title>Node557</title>
+<!-- Node556 -->
+<g id="node48" class="node"><title>Node556</title>
 <g id="a_node48"><a xlink:href="class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546" target="_top" xlink:title="As a client, submit part of a future mixing transaction to a Masternode to start the process...">
 <polygon fill="white" stroke="red" points="1432,-601 1432,-631 1538,-631 1538,-601 1432,-601"/>
 <text text-anchor="start" x="1440" y="-619" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
@@ -787,13 +787,13 @@ var sectionId = 'dynsection-21';
 </a>
 </g>
 </g>
-<!-- Node556&#45;&gt;Node557 -->
-<g id="edge60" class="edge"><title>Node556&#45;&gt;Node557</title>
+<!-- Node555&#45;&gt;Node556 -->
+<g id="edge60" class="edge"><title>Node555&#45;&gt;Node556</title>
 <path fill="none" stroke="midnightblue" d="M1335.34,-616C1365.94,-616 1402.65,-616 1431.93,-616"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1335.21,-612.5 1325.21,-616 1335.21,-619.5 1335.21,-612.5"/>
 </g>
-<!-- Node560&#45;&gt;Node518 -->
-<g id="edge65" class="edge"><title>Node560&#45;&gt;Node518</title>
+<!-- Node559&#45;&gt;Node518 -->
+<g id="edge65" class="edge"><title>Node559&#45;&gt;Node518</title>
 <path fill="none" stroke="midnightblue" d="M657.262,-116.968C679.403,-122.293 705.112,-128.476 725.917,-133.48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="657.911,-113.524 647.37,-114.589 656.274,-120.33 657.911,-113.524"/>
 </g>

@@ -21,6 +21,8 @@ var class_c_data_stream =
     [ "begin", "class_c_data_stream.html#a4b8ed86db3a4563fc327c903b0ccf4ee", null ],
     [ "clear", "class_c_data_stream.html#ade6ed9a3a481e333900e6496707b9692", null ],
     [ "Compact", "class_c_data_stream.html#a84c3fd4cf194f3402dc8adce6ab3ccf9", null ],
+    [ "data", "class_c_data_stream.html#a1c0a87d9ea725d5d83562dfda15fbeeb", null ],
+    [ "data", "class_c_data_stream.html#abfba39f6f3f8bfd40d8ec49dfb050a3c", null ],
     [ "empty", "class_c_data_stream.html#ab2633ac67f098dad30d03291741c2e42", null ],
     [ "end", "class_c_data_stream.html#a66409dbd4403682fe674e2e71173cab4", null ],
     [ "end", "class_c_data_stream.html#a6a486e8e0da9e769520de62b15bd9315", null ],

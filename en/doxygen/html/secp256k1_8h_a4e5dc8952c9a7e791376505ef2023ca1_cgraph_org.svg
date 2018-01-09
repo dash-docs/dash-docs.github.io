@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 187.5)">
 <title>secp256k1_ec_pubkey_parse</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-187.5 565,-187.5 565,4 -4,4"/>
-<!-- Node252 -->
-<g id="node1" class="node"><title>Node252</title>
+<!-- Node249 -->
+<g id="node1" class="node"><title>Node249</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-109 0,-139 116,-139 116,-109 0,-109"/>
 <text text-anchor="start" x="8" y="-127" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ec_pubkey</text>
 <text text-anchor="middle" x="58" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">_parse</text>
 </g>
-<!-- Node253 -->
-<g id="node2" class="node"><title>Node253</title>
+<!-- Node250 -->
+<g id="node2" class="node"><title>Node250</title>
 <g id="a_node2"><a xlink:href="eckey_8h.html#ae0cdb1eef2dc770d70aac0ad50a35e9a" target="_top" xlink:title="secp256k1_eckey_pubkey\l_parse">
 <polygon fill="white" stroke="black" points="152,-153 152,-183 284,-183 284,-153 152,-153"/>
 <text text-anchor="start" x="160" y="-171" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_eckey_pubkey</text>
@@ -24,112 +24,112 @@
 </a>
 </g>
 </g>
-<!-- Node252&#45;&gt;Node253 -->
-<g id="edge1" class="edge"><title>Node252&#45;&gt;Node253</title>
+<!-- Node249&#45;&gt;Node250 -->
+<g id="edge1" class="edge"><title>Node249&#45;&gt;Node250</title>
 <path fill="none" stroke="midnightblue" d="M112.933,-139.019C125.953,-142.645 139.987,-146.553 153.405,-150.29"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="152.47,-153.663 163.042,-152.974 154.348,-146.919 152.47,-153.663"/>
 </g>
-<!-- Node254 -->
-<g id="node3" class="node"><title>Node254</title>
+<!-- Node251 -->
+<g id="node3" class="node"><title>Node251</title>
 <g id="a_node3"><a xlink:href="group_8h.html#a34793cf48794f089bb28597d1a9f23b2" target="_top" xlink:title="Clear a secp256k1_ge to prevent leaking sensitive information. ">
 <polygon fill="white" stroke="black" points="165,-114.5 165,-133.5 271,-133.5 271,-114.5 165,-114.5"/>
 <text text-anchor="middle" x="218" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_clear</text>
 </a>
 </g>
 </g>
-<!-- Node252&#45;&gt;Node254 -->
-<g id="edge2" class="edge"><title>Node252&#45;&gt;Node254</title>
+<!-- Node249&#45;&gt;Node251 -->
+<g id="edge2" class="edge"><title>Node249&#45;&gt;Node251</title>
 <path fill="none" stroke="midnightblue" d="M116.042,-124C128.596,-124 141.954,-124 154.704,-124"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="154.772,-127.5 164.772,-124 154.772,-120.5 154.772,-127.5"/>
 </g>
-<!-- Node255 -->
-<g id="node4" class="node"><title>Node255</title>
+<!-- Node252 -->
+<g id="node4" class="node"><title>Node252</title>
 <g id="a_node4"><a xlink:href="secp256k1_8c.html#aa061c9c5c861017bef990e5c4653e0f4" target="_top" xlink:title="secp256k1_pubkey_save">
 <polygon fill="white" stroke="black" points="154.5,-76.5 154.5,-95.5 281.5,-95.5 281.5,-76.5 154.5,-76.5"/>
 <text text-anchor="middle" x="218" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_pubkey_save</text>
 </a>
 </g>
 </g>
-<!-- Node252&#45;&gt;Node255 -->
-<g id="edge3" class="edge"><title>Node252&#45;&gt;Node255</title>
+<!-- Node249&#45;&gt;Node252 -->
+<g id="edge3" class="edge"><title>Node249&#45;&gt;Node252</title>
 <path fill="none" stroke="midnightblue" d="M116.042,-110.281C132.878,-106.232 151.159,-101.835 167.481,-97.9097"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="168.455,-101.275 177.359,-95.5338 166.818,-94.4693 168.455,-101.275"/>
 </g>
-<!-- Node256 -->
-<g id="node5" class="node"><title>Node256</title>
+<!-- Node253 -->
+<g id="node5" class="node"><title>Node253</title>
 <g id="a_node5"><a xlink:href="group_8h.html#ad6499ae629f998e50d8614869ee3c67f" target="_top" xlink:title="Convert a group element to the storage type. ">
 <polygon fill="white" stroke="black" points="326,-152.5 326,-171.5 457,-171.5 457,-152.5 326,-152.5"/>
 <text text-anchor="middle" x="391.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_to_storage</text>
 </a>
 </g>
 </g>
-<!-- Node255&#45;&gt;Node256 -->
-<g id="edge4" class="edge"><title>Node255&#45;&gt;Node256</title>
+<!-- Node252&#45;&gt;Node253 -->
+<g id="edge4" class="edge"><title>Node252&#45;&gt;Node253</title>
 <path fill="none" stroke="midnightblue" d="M263.35,-95.5302C270.533,-98.0271 277.679,-101.139 284,-105 303.853,-117.128 300.02,-131.082 320,-143 323.674,-145.192 327.605,-147.136 331.661,-148.859"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="330.698,-152.237 341.29,-152.494 333.17,-145.688 330.698,-152.237"/>
 </g>
-<!-- Node257 -->
-<g id="node6" class="node"><title>Node257</title>
+<!-- Node254 -->
+<g id="node6" class="node"><title>Node254</title>
 <g id="a_node6"><a xlink:href="glibc__compat_8cpp.html#a0f46826ab0466591e136db24394923cf" target="_top" xlink:title="memcpy">
 <polygon fill="white" stroke="black" points="364.5,-114.5 364.5,-133.5 418.5,-133.5 418.5,-114.5 364.5,-114.5"/>
 <text text-anchor="middle" x="391.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">memcpy</text>
 </a>
 </g>
 </g>
-<!-- Node255&#45;&gt;Node257 -->
-<g id="edge5" class="edge"><title>Node255&#45;&gt;Node257</title>
+<!-- Node252&#45;&gt;Node254 -->
+<g id="edge5" class="edge"><title>Node252&#45;&gt;Node254</title>
 <path fill="none" stroke="midnightblue" d="M262.277,-95.589C290.785,-101.906 327.673,-110.079 354.56,-116.037"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="353.816,-119.457 364.336,-118.203 355.33,-112.622 353.816,-119.457"/>
 </g>
-<!-- Node259 -->
-<g id="node8" class="node"><title>Node259</title>
+<!-- Node256 -->
+<g id="node8" class="node"><title>Node256</title>
 <g id="a_node8"><a xlink:href="group_8h.html#ac83592db46af97faf7ba9b9a39a1f6ff" target="_top" xlink:title="Check whether a group element is the point at infinity. ">
 <polygon fill="white" stroke="black" points="328.5,-76.5 328.5,-95.5 454.5,-95.5 454.5,-76.5 328.5,-76.5"/>
 <text text-anchor="middle" x="391.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_is_infinity</text>
 </a>
 </g>
 </g>
-<!-- Node255&#45;&gt;Node259 -->
-<g id="edge7" class="edge"><title>Node255&#45;&gt;Node259</title>
+<!-- Node252&#45;&gt;Node256 -->
+<g id="edge7" class="edge"><title>Node252&#45;&gt;Node256</title>
 <path fill="none" stroke="midnightblue" d="M281.886,-86C293.761,-86 306.268,-86 318.4,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="318.48,-89.5001 328.48,-86 318.48,-82.5001 318.48,-89.5001"/>
 </g>
-<!-- Node260 -->
-<g id="node9" class="node"><title>Node260</title>
+<!-- Node257 -->
+<g id="node9" class="node"><title>Node257</title>
 <g id="a_node9"><a xlink:href="field_8h.html#a2d45c987537eadb2923c93aa3af9db71" target="_top" xlink:title="Normalize a field element, without constant&#45;time guarantee. ">
 <polygon fill="white" stroke="black" points="320,-38.5 320,-57.5 463,-57.5 463,-38.5 320,-38.5"/>
 <text text-anchor="middle" x="391.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_normalize_var</text>
 </a>
 </g>
 </g>
-<!-- Node255&#45;&gt;Node260 -->
-<g id="edge8" class="edge"><title>Node255&#45;&gt;Node260</title>
+<!-- Node252&#45;&gt;Node257 -->
+<g id="edge8" class="edge"><title>Node252&#45;&gt;Node257</title>
 <path fill="none" stroke="midnightblue" d="M262.277,-76.411C285.112,-71.3513 313.323,-65.1004 337.465,-59.7512"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="338.528,-63.1005 347.535,-57.5201 337.014,-56.2663 338.528,-63.1005"/>
 </g>
-<!-- Node261 -->
-<g id="node10" class="node"><title>Node261</title>
+<!-- Node258 -->
+<g id="node10" class="node"><title>Node258</title>
 <g id="a_node10"><a xlink:href="field_8h.html#abb1017649be14b9ac1823be3c573e542" target="_top" xlink:title="Convert a field element to a 32&#45;byte big endian value. ">
 <polygon fill="white" stroke="black" points="333,-0.5 333,-19.5 450,-19.5 450,-0.5 333,-0.5"/>
 <text text-anchor="middle" x="391.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_get_b32</text>
 </a>
 </g>
 </g>
-<!-- Node255&#45;&gt;Node261 -->
-<g id="edge9" class="edge"><title>Node255&#45;&gt;Node261</title>
+<!-- Node252&#45;&gt;Node258 -->
+<g id="edge9" class="edge"><title>Node252&#45;&gt;Node258</title>
 <path fill="none" stroke="midnightblue" d="M233.47,-76.2869C252.57,-63.8347 287.577,-42.2716 320,-29 325.851,-26.605 332.098,-24.422 338.365,-22.4593"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="339.578,-25.7504 348.175,-19.5577 337.593,-19.0379 339.578,-25.7504"/>
 </g>
-<!-- Node258 -->
-<g id="node7" class="node"><title>Node258</title>
+<!-- Node255 -->
+<g id="node7" class="node"><title>Node255</title>
 <g id="a_node7"><a xlink:href="glibc__compat_8cpp.html#a9778d49e9029dd75bc53ecbbf9f5e9a1" target="_top" xlink:title="memmove">
 <polygon fill="white" stroke="black" points="499,-114.5 499,-133.5 561,-133.5 561,-114.5 499,-114.5"/>
 <text text-anchor="middle" x="530" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">memmove</text>
 </a>
 </g>
 </g>
-<!-- Node257&#45;&gt;Node258 -->
-<g id="edge6" class="edge"><title>Node257&#45;&gt;Node258</title>
+<!-- Node254&#45;&gt;Node255 -->
+<g id="edge6" class="edge"><title>Node254&#45;&gt;Node255</title>
 <path fill="none" stroke="midnightblue" d="M418.819,-124C438.615,-124 466.096,-124 488.66,-124"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="488.96,-127.5 498.96,-124 488.96,-120.5 488.96,-127.5"/>
 </g>

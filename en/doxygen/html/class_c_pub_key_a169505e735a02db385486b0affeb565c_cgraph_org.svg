@@ -9,26 +9,26 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 888.5)">
 <title>CPubKey::RecoverCompact</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-888.5 856,-888.5 856,4 -4,4"/>
-<!-- Node1560 -->
-<g id="node1" class="node"><title>Node1560</title>
+<!-- Node1528 -->
+<g id="node1" class="node"><title>Node1528</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-676.5 0,-695.5 141,-695.5 141,-676.5 0,-676.5"/>
 <text text-anchor="middle" x="70.5" y="-683.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::RecoverCompact</text>
 </g>
-<!-- Node1561 -->
-<g id="node2" class="node"><title>Node1561</title>
+<!-- Node1529 -->
+<g id="node2" class="node"><title>Node1529</title>
 <g id="a_node2"><a xlink:href="classbase__blob.html#aeee68e00ceeacf49086e98b661e017ff" target="_top" xlink:title="base_blob::begin">
 <polygon fill="white" stroke="black" points="207.5,-829.5 207.5,-848.5 297.5,-848.5 297.5,-829.5 207.5,-829.5"/>
 <text text-anchor="middle" x="252.5" y="-836.5" font-family="Helvetica,sans-Serif" font-size="10.00">base_blob::begin</text>
 </a>
 </g>
 </g>
-<!-- Node1560&#45;&gt;Node1561 -->
-<g id="edge1" class="edge"><title>Node1560&#45;&gt;Node1561</title>
+<!-- Node1528&#45;&gt;Node1529 -->
+<g id="edge1" class="edge"><title>Node1528&#45;&gt;Node1529</title>
 <path fill="none" stroke="midnightblue" d="M76.1504,-695.532C88.715,-720.239 125.873,-786.738 177,-820 183.231,-824.053 190.276,-827.243 197.487,-829.751"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="196.774,-833.193 207.361,-832.768 198.82,-826.499 196.774,-833.193"/>
 </g>
-<!-- Node1562 -->
-<g id="node3" class="node"><title>Node1562</title>
+<!-- Node1530 -->
+<g id="node3" class="node"><title>Node1530</title>
 <g id="a_node3"><a xlink:href="secp256k1_8h.html#a34977bf00322e510e881160c421836d7" target="_top" xlink:title="Serialize a pubkey object into a serialized byte sequence. ">
 <polygon fill="white" stroke="black" points="194.5,-780 194.5,-810 310.5,-810 310.5,-780 194.5,-780"/>
 <text text-anchor="start" x="202.5" y="-798" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ec_pubkey</text>
@@ -36,26 +36,26 @@
 </a>
 </g>
 </g>
-<!-- Node1560&#45;&gt;Node1562 -->
-<g id="edge2" class="edge"><title>Node1560&#45;&gt;Node1562</title>
+<!-- Node1528&#45;&gt;Node1530 -->
+<g id="edge2" class="edge"><title>Node1528&#45;&gt;Node1530</title>
 <path fill="none" stroke="midnightblue" d="M87.4738,-695.673C116.548,-713.279 178.691,-750.91 217.589,-774.465"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="216.1,-777.655 226.467,-779.841 219.726,-771.668 216.1,-777.655"/>
 </g>
-<!-- Node1571 -->
-<g id="node12" class="node"><title>Node1571</title>
+<!-- Node1539 -->
+<g id="node12" class="node"><title>Node1539</title>
 <g id="a_node12"><a xlink:href="secp256k1__recovery_8h.html#a7e156c6f4be24b07f4a563210dcb1a2e" target="_top" xlink:title="Recover an ECDSA public key from a signature. ">
 <polygon fill="white" stroke="black" points="186,-630.5 186,-649.5 319,-649.5 319,-630.5 186,-630.5"/>
 <text text-anchor="middle" x="252.5" y="-637.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_recover</text>
 </a>
 </g>
 </g>
-<!-- Node1560&#45;&gt;Node1571 -->
-<g id="edge11" class="edge"><title>Node1560&#45;&gt;Node1571</title>
+<!-- Node1528&#45;&gt;Node1539 -->
+<g id="edge11" class="edge"><title>Node1528&#45;&gt;Node1539</title>
 <path fill="none" stroke="midnightblue" d="M108.796,-676.469C136.551,-669.376 174.631,-659.644 204.474,-652.018"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="205.43,-655.386 214.252,-649.519 203.696,-648.604 205.43,-655.386"/>
 </g>
-<!-- Node1597 -->
-<g id="node38" class="node"><title>Node1597</title>
+<!-- Node1565 -->
+<g id="node38" class="node"><title>Node1565</title>
 <g id="a_node38"><a xlink:href="secp256k1__recovery_8h.html#a6699b45dc75be70f028ac7d8ffaba46e" target="_top" xlink:title="Parse a compact ECDSA signature (64 bytes + recovery id). ">
 <polygon fill="white" stroke="black" points="177,-671 177,-701 328,-701 328,-671 177,-671"/>
 <text text-anchor="start" x="185" y="-689" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_recoverable</text>
@@ -63,26 +63,26 @@
 </a>
 </g>
 </g>
-<!-- Node1560&#45;&gt;Node1597 -->
-<g id="edge41" class="edge"><title>Node1560&#45;&gt;Node1597</title>
+<!-- Node1528&#45;&gt;Node1565 -->
+<g id="edge41" class="edge"><title>Node1528&#45;&gt;Node1565</title>
 <path fill="none" stroke="midnightblue" d="M141.093,-686C149.483,-686 158.123,-686 166.701,-686"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="166.721,-689.5 176.721,-686 166.721,-682.5 166.721,-689.5"/>
 </g>
-<!-- Node1599 -->
-<g id="node40" class="node"><title>Node1599</title>
+<!-- Node1567 -->
+<g id="node40" class="node"><title>Node1567</title>
 <g id="a_node40"><a xlink:href="class_c_pub_key.html#af59bc1d3be119c1f8b49d3c1e2c0797b" target="_top" xlink:title="Initialize a public key using begin/end iterators to byte data. ">
 <polygon fill="white" stroke="black" points="212.5,-436.5 212.5,-455.5 292.5,-455.5 292.5,-436.5 212.5,-436.5"/>
 <text text-anchor="middle" x="252.5" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::Set</text>
 </a>
 </g>
 </g>
-<!-- Node1560&#45;&gt;Node1599 -->
-<g id="edge46" class="edge"><title>Node1560&#45;&gt;Node1599</title>
+<!-- Node1528&#45;&gt;Node1567 -->
+<g id="edge46" class="edge"><title>Node1528&#45;&gt;Node1567</title>
 <path fill="none" stroke="midnightblue" d="M78.7792,-676.294C106.09,-639.88 202.708,-511.057 238.251,-463.665"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="241.127,-465.663 244.327,-455.563 235.527,-461.463 241.127,-465.663"/>
 </g>
-<!-- Node1563 -->
-<g id="node4" class="node"><title>Node1563</title>
+<!-- Node1531 -->
+<g id="node4" class="node"><title>Node1531</title>
 <g id="a_node4"><a xlink:href="eckey_8h.html#ae1f52342d70928f16c8e606da59e6aa6" target="_top" xlink:title="secp256k1_eckey_pubkey\l_serialize">
 <polygon fill="white" stroke="black" points="373.5,-854 373.5,-884 505.5,-884 505.5,-854 373.5,-854"/>
 <text text-anchor="start" x="381.5" y="-872" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_eckey_pubkey</text>
@@ -90,104 +90,104 @@
 </a>
 </g>
 </g>
-<!-- Node1562&#45;&gt;Node1563 -->
-<g id="edge3" class="edge"><title>Node1562&#45;&gt;Node1563</title>
+<!-- Node1530&#45;&gt;Node1531 -->
+<g id="edge3" class="edge"><title>Node1530&#45;&gt;Node1531</title>
 <path fill="none" stroke="midnightblue" d="M304.319,-810.041C312.387,-812.999 320.528,-816.336 328,-820 345.266,-828.466 346.734,-835.534 364,-844 368.553,-846.233 373.355,-848.344 378.237,-850.322"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="377.091,-853.631 387.681,-853.959 379.607,-847.099 377.091,-853.631"/>
 </g>
-<!-- Node1564 -->
-<g id="node5" class="node"><title>Node1564</title>
+<!-- Node1532 -->
+<g id="node5" class="node"><title>Node1532</title>
 <g id="a_node5"><a xlink:href="secp256k1_8c.html#a9966ec041e71010d1593ae2211ffb843" target="_top" xlink:title="secp256k1_pubkey_load">
 <polygon fill="white" stroke="black" points="377.5,-815.5 377.5,-834.5 501.5,-834.5 501.5,-815.5 377.5,-815.5"/>
 <text text-anchor="middle" x="439.5" y="-822.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_pubkey_load</text>
 </a>
 </g>
 </g>
-<!-- Node1562&#45;&gt;Node1564 -->
-<g id="edge4" class="edge"><title>Node1562&#45;&gt;Node1564</title>
+<!-- Node1530&#45;&gt;Node1532 -->
+<g id="edge4" class="edge"><title>Node1530&#45;&gt;Node1532</title>
 <path fill="none" stroke="midnightblue" d="M310.516,-804.246C329.23,-807.281 350.228,-810.686 369.72,-813.846"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="369.324,-817.328 379.755,-815.474 370.445,-810.418 369.324,-817.328"/>
 </g>
-<!-- Node1565 -->
-<g id="node6" class="node"><title>Node1565</title>
+<!-- Node1533 -->
+<g id="node6" class="node"><title>Node1533</title>
 <g id="a_node6"><a xlink:href="glibc__compat_8cpp.html#a0f46826ab0466591e136db24394923cf" target="_top" xlink:title="memcpy">
 <polygon fill="white" stroke="black" points="599.5,-703.5 599.5,-722.5 653.5,-722.5 653.5,-703.5 599.5,-703.5"/>
 <text text-anchor="middle" x="626.5" y="-710.5" font-family="Helvetica,sans-Serif" font-size="10.00">memcpy</text>
 </a>
 </g>
 </g>
-<!-- Node1564&#45;&gt;Node1565 -->
-<g id="edge5" class="edge"><title>Node1564&#45;&gt;Node1565</title>
+<!-- Node1532&#45;&gt;Node1533 -->
+<g id="edge5" class="edge"><title>Node1532&#45;&gt;Node1533</title>
 <path fill="none" stroke="midnightblue" d="M448.924,-815.482C466.161,-796.61 507.511,-754.347 551,-732 562.78,-725.947 576.619,-721.732 589.152,-718.839"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.232,-722.189 599.299,-716.709 588.794,-715.339 590.232,-722.189"/>
 </g>
-<!-- Node1567 -->
-<g id="node8" class="node"><title>Node1567</title>
+<!-- Node1535 -->
+<g id="node8" class="node"><title>Node1535</title>
 <g id="a_node8"><a xlink:href="field_8h.html#a619ec4805df6cc54d70e6682ceebd098" target="_top" xlink:title="Verify whether a field element is zero. ">
 <polygon fill="white" stroke="black" points="569.5,-817.5 569.5,-836.5 683.5,-836.5 683.5,-817.5 569.5,-817.5"/>
 <text text-anchor="middle" x="626.5" y="-824.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_is_zero</text>
 </a>
 </g>
 </g>
-<!-- Node1564&#45;&gt;Node1567 -->
-<g id="edge7" class="edge"><title>Node1564&#45;&gt;Node1567</title>
+<!-- Node1532&#45;&gt;Node1535 -->
+<g id="edge7" class="edge"><title>Node1532&#45;&gt;Node1535</title>
 <path fill="none" stroke="midnightblue" d="M501.589,-825.66C520.059,-825.86 540.426,-826.08 559.22,-826.283"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="559.439,-829.786 569.476,-826.394 559.515,-822.786 559.439,-829.786"/>
 </g>
-<!-- Node1568 -->
-<g id="node9" class="node"><title>Node1568</title>
+<!-- Node1536 -->
+<g id="node9" class="node"><title>Node1536</title>
 <g id="a_node9"><a xlink:href="field_8h.html#a5c86a65052e3b135919c00fe2233a43d" target="_top" xlink:title="Set a field element equal to 32&#45;byte big endian value. ">
 <polygon fill="white" stroke="black" points="568,-627.5 568,-646.5 685,-646.5 685,-627.5 568,-627.5"/>
 <text text-anchor="middle" x="626.5" y="-634.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_set_b32</text>
 </a>
 </g>
 </g>
-<!-- Node1564&#45;&gt;Node1568 -->
-<g id="edge8" class="edge"><title>Node1564&#45;&gt;Node1568</title>
+<!-- Node1532&#45;&gt;Node1536 -->
+<g id="edge8" class="edge"><title>Node1532&#45;&gt;Node1536</title>
 <path fill="none" stroke="midnightblue" d="M449.29,-815.258C464.044,-798.604 494.217,-763.231 515,-730 534.394,-698.991 522.65,-679.107 551,-656 553.406,-654.039 555.989,-652.278 558.697,-650.696"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="560.305,-653.806 567.711,-646.23 557.197,-647.534 560.305,-653.806"/>
 </g>
-<!-- Node1569 -->
-<g id="node10" class="node"><title>Node1569</title>
+<!-- Node1537 -->
+<g id="node10" class="node"><title>Node1537</title>
 <g id="a_node10"><a xlink:href="group_8h.html#a8c1e7f328284d9ba56404bb8d99bf765" target="_top" xlink:title="Convert a group element back from the storage type. ">
 <polygon fill="white" stroke="black" points="555.5,-779.5 555.5,-798.5 697.5,-798.5 697.5,-779.5 555.5,-779.5"/>
 <text text-anchor="middle" x="626.5" y="-786.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_from_storage</text>
 </a>
 </g>
 </g>
-<!-- Node1564&#45;&gt;Node1569 -->
-<g id="edge9" class="edge"><title>Node1564&#45;&gt;Node1569</title>
+<!-- Node1532&#45;&gt;Node1537 -->
+<g id="edge9" class="edge"><title>Node1532&#45;&gt;Node1537</title>
 <path fill="none" stroke="midnightblue" d="M489.591,-815.447C513.206,-810.852 541.702,-805.307 566.489,-800.483"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="567.354,-803.881 576.501,-798.535 566.017,-797.01 567.354,-803.881"/>
 </g>
-<!-- Node1570 -->
-<g id="node11" class="node"><title>Node1570</title>
+<!-- Node1538 -->
+<g id="node11" class="node"><title>Node1538</title>
 <g id="a_node11"><a xlink:href="group_8h.html#a34ab3d1a9a0a7ff0ed1cedff9db5f73c" target="_top" xlink:title="Set a group element equal to the point with given X and Y coordinates. ">
 <polygon fill="white" stroke="black" points="569.5,-855.5 569.5,-874.5 683.5,-874.5 683.5,-855.5 569.5,-855.5"/>
 <text text-anchor="middle" x="626.5" y="-862.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_set_xy</text>
 </a>
 </g>
 </g>
-<!-- Node1564&#45;&gt;Node1570 -->
-<g id="edge10" class="edge"><title>Node1564&#45;&gt;Node1570</title>
+<!-- Node1532&#45;&gt;Node1538 -->
+<g id="edge10" class="edge"><title>Node1532&#45;&gt;Node1538</title>
 <path fill="none" stroke="midnightblue" d="M484.812,-834.581C510.898,-840.221 544.078,-847.395 571.663,-853.36"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="571.036,-856.805 581.549,-855.497 572.515,-849.963 571.036,-856.805"/>
 </g>
-<!-- Node1566 -->
-<g id="node7" class="node"><title>Node1566</title>
+<!-- Node1534 -->
+<g id="node7" class="node"><title>Node1534</title>
 <g id="a_node7"><a xlink:href="glibc__compat_8cpp.html#a9778d49e9029dd75bc53ecbbf9f5e9a1" target="_top" xlink:title="memmove">
 <polygon fill="white" stroke="black" points="764,-703.5 764,-722.5 826,-722.5 826,-703.5 764,-703.5"/>
 <text text-anchor="middle" x="795" y="-710.5" font-family="Helvetica,sans-Serif" font-size="10.00">memmove</text>
 </a>
 </g>
 </g>
-<!-- Node1565&#45;&gt;Node1566 -->
-<g id="edge6" class="edge"><title>Node1565&#45;&gt;Node1566</title>
+<!-- Node1533&#45;&gt;Node1534 -->
+<g id="edge6" class="edge"><title>Node1533&#45;&gt;Node1534</title>
 <path fill="none" stroke="midnightblue" d="M653.516,-713C680.386,-713 722.675,-713 753.84,-713"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="753.945,-716.5 763.945,-713 753.944,-709.5 753.945,-716.5"/>
 </g>
-<!-- Node1572 -->
-<g id="node13" class="node"><title>Node1572</title>
+<!-- Node1540 -->
+<g id="node13" class="node"><title>Node1540</title>
 <g id="a_node13"><a xlink:href="recovery_2main__impl_8h.html#aa3ef0903a865dc9a6e42dfe61f75a9e5" target="_top" xlink:title="secp256k1_ecdsa_recoverable\l_signature_load">
 <polygon fill="white" stroke="black" points="364,-690 364,-720 515,-720 515,-690 364,-690"/>
 <text text-anchor="start" x="372" y="-708" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_recoverable</text>
@@ -195,26 +195,26 @@
 </a>
 </g>
 </g>
-<!-- Node1571&#45;&gt;Node1572 -->
-<g id="edge12" class="edge"><title>Node1571&#45;&gt;Node1572</title>
+<!-- Node1539&#45;&gt;Node1540 -->
+<g id="edge12" class="edge"><title>Node1539&#45;&gt;Node1540</title>
 <path fill="none" stroke="midnightblue" d="M293.455,-649.592C304.784,-652.759 317.019,-656.612 328,-661 344.8,-667.714 347.37,-672.877 364,-680 369.302,-682.271 374.886,-684.474 380.512,-686.569"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="379.386,-689.884 389.98,-689.987 381.762,-683.3 379.386,-689.884"/>
 </g>
-<!-- Node1573 -->
-<g id="node14" class="node"><title>Node1573</title>
+<!-- Node1541 -->
+<g id="node14" class="node"><title>Node1541</title>
 <g id="a_node14"><a xlink:href="scalar_8h.html#a25cc2d45ae1d1765d07c3313cdf46fa0" target="_top" xlink:title="Set a scalar from a big endian byte array. ">
 <polygon fill="white" stroke="black" points="559,-741.5 559,-760.5 694,-760.5 694,-741.5 559,-741.5"/>
 <text text-anchor="middle" x="626.5" y="-748.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_set_b32</text>
 </a>
 </g>
 </g>
-<!-- Node1571&#45;&gt;Node1573 -->
-<g id="edge40" class="edge"><title>Node1571&#45;&gt;Node1573</title>
+<!-- Node1539&#45;&gt;Node1541 -->
+<g id="edge40" class="edge"><title>Node1539&#45;&gt;Node1541</title>
 <path fill="none" stroke="midnightblue" d="M307.788,-649.584C315.064,-652.449 322.055,-656.17 328,-661 354.845,-682.812 335.163,-710.899 364,-730 393.33,-749.427 482.49,-753.055 548.588,-752.877"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="549.006,-756.375 558.986,-752.818 548.966,-749.375 549.006,-756.375"/>
 </g>
-<!-- Node1574 -->
-<g id="node15" class="node"><title>Node1574</title>
+<!-- Node1542 -->
+<g id="node15" class="node"><title>Node1542</title>
 <g id="a_node15"><a xlink:href="recovery_2main__impl_8h.html#a1a831ed991717749ed9d200bb9d3f03b" target="_top" xlink:title="secp256k1_ecdsa_sig\l_recover">
 <polygon fill="white" stroke="black" points="383,-337 383,-367 496,-367 496,-337 383,-337"/>
 <text text-anchor="start" x="391" y="-355" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_sig</text>
@@ -222,13 +222,13 @@
 </a>
 </g>
 </g>
-<!-- Node1571&#45;&gt;Node1574 -->
-<g id="edge15" class="edge"><title>Node1571&#45;&gt;Node1574</title>
+<!-- Node1539&#45;&gt;Node1542 -->
+<g id="edge15" class="edge"><title>Node1539&#45;&gt;Node1542</title>
 <path fill="none" stroke="midnightblue" d="M259.655,-630.418C285.365,-590.395 384.612,-435.891 423.112,-375.955"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="426.289,-377.485 428.749,-367.18 420.4,-373.702 426.289,-377.485"/>
 </g>
-<!-- Node1591 -->
-<g id="node32" class="node"><title>Node1591</title>
+<!-- Node1559 -->
+<g id="node32" class="node"><title>Node1559</title>
 <g id="a_node32"><a xlink:href="ecmult_8h.html#aa4f6f213989d3ec35850c40c8f1b313b" target="_top" xlink:title="secp256k1_ecmult_context\l_is_built">
 <polygon fill="white" stroke="black" points="371.5,-592 371.5,-622 507.5,-622 507.5,-592 371.5,-592"/>
 <text text-anchor="start" x="379.5" y="-610" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecmult_context</text>
@@ -236,311 +236,311 @@
 </a>
 </g>
 </g>
-<!-- Node1571&#45;&gt;Node1591 -->
-<g id="edge33" class="edge"><title>Node1571&#45;&gt;Node1591</title>
+<!-- Node1539&#45;&gt;Node1559 -->
+<g id="edge33" class="edge"><title>Node1539&#45;&gt;Node1559</title>
 <path fill="none" stroke="midnightblue" d="M307.01,-630.455C323.937,-627.436 342.997,-624.036 361.243,-620.781"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="362.047,-624.193 371.277,-618.991 360.818,-617.302 362.047,-624.193"/>
 </g>
-<!-- Node1592 -->
-<g id="node33" class="node"><title>Node1592</title>
+<!-- Node1560 -->
+<g id="node33" class="node"><title>Node1560</title>
 <g id="a_node33"><a xlink:href="secp256k1_8c.html#aa061c9c5c861017bef990e5c4653e0f4" target="_top" xlink:title="secp256k1_pubkey_save">
 <polygon fill="white" stroke="black" points="376,-515.5 376,-534.5 503,-534.5 503,-515.5 376,-515.5"/>
 <text text-anchor="middle" x="439.5" y="-522.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_pubkey_save</text>
 </a>
 </g>
 </g>
-<!-- Node1571&#45;&gt;Node1592 -->
-<g id="edge34" class="edge"><title>Node1571&#45;&gt;Node1592</title>
+<!-- Node1539&#45;&gt;Node1560 -->
+<g id="edge34" class="edge"><title>Node1539&#45;&gt;Node1560</title>
 <path fill="none" stroke="midnightblue" d="M268.955,-630.393C301.194,-610.353 375.817,-563.965 414.412,-539.974"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="416.314,-542.912 422.959,-534.661 412.618,-536.967 416.314,-542.912"/>
 </g>
-<!-- Node1572&#45;&gt;Node1565 -->
-<g id="edge13" class="edge"><title>Node1572&#45;&gt;Node1565</title>
+<!-- Node1540&#45;&gt;Node1533 -->
+<g id="edge13" class="edge"><title>Node1540&#45;&gt;Node1533</title>
 <path fill="none" stroke="midnightblue" d="M515.213,-708.231C540.778,-709.336 568.227,-710.523 589.345,-711.437"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="589.325,-714.939 599.467,-711.874 589.628,-707.945 589.325,-714.939"/>
 </g>
-<!-- Node1572&#45;&gt;Node1573 -->
-<g id="edge14" class="edge"><title>Node1572&#45;&gt;Node1573</title>
+<!-- Node1540&#45;&gt;Node1541 -->
+<g id="edge14" class="edge"><title>Node1540&#45;&gt;Node1541</title>
 <path fill="none" stroke="midnightblue" d="M501.076,-720.062C525.769,-726.202 553.921,-733.202 577.194,-738.989"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="576.629,-742.455 587.178,-741.471 578.318,-735.662 576.629,-742.455"/>
 </g>
-<!-- Node1574&#45;&gt;Node1568 -->
-<g id="edge19" class="edge"><title>Node1574&#45;&gt;Node1568</title>
+<!-- Node1542&#45;&gt;Node1536 -->
+<g id="edge19" class="edge"><title>Node1542&#45;&gt;Node1536</title>
 <path fill="none" stroke="midnightblue" d="M448.851,-367.415C463.473,-394.783 494.138,-453.887 515,-506 534.432,-554.541 512.913,-582.178 551,-618 553.431,-620.286 556.097,-622.307 558.93,-624.093"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="557.378,-627.231 567.86,-628.774 560.628,-621.031 557.378,-627.231"/>
 </g>
-<!-- Node1575 -->
-<g id="node16" class="node"><title>Node1575</title>
+<!-- Node1543 -->
+<g id="node16" class="node"><title>Node1543</title>
 <g id="a_node16"><a xlink:href="ecmult_8h.html#aacf8b6ba48671daf24d549adb176366c" target="_top" xlink:title="Double multiply: R = na*A + ng*G. ">
 <polygon fill="white" stroke="black" points="577.5,-171.5 577.5,-190.5 675.5,-190.5 675.5,-171.5 577.5,-171.5"/>
 <text text-anchor="middle" x="626.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecmult</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1575 -->
-<g id="edge16" class="edge"><title>Node1574&#45;&gt;Node1575</title>
+<!-- Node1542&#45;&gt;Node1543 -->
+<g id="edge16" class="edge"><title>Node1542&#45;&gt;Node1543</title>
 <path fill="none" stroke="midnightblue" d="M496.211,-340.19C503.197,-336.836 509.728,-332.529 515,-327 555.487,-284.541 508.969,-240.931 551,-200 555.707,-195.416 561.357,-191.893 567.415,-189.192"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="569.019,-192.331 577.192,-185.589 566.599,-185.762 569.019,-192.331"/>
 </g>
-<!-- Node1576 -->
-<g id="node17" class="node"><title>Node1576</title>
+<!-- Node1544 -->
+<g id="node17" class="node"><title>Node1544</title>
 <g id="a_node17"><a xlink:href="field_8h.html#a7512f80b60598e4af89c004890880fc7" target="_top" xlink:title="Adds a field element to another. ">
 <polygon fill="white" stroke="black" points="577.5,-133.5 577.5,-152.5 675.5,-152.5 675.5,-133.5 577.5,-133.5"/>
 <text text-anchor="middle" x="626.5" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_add</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1576 -->
-<g id="edge17" class="edge"><title>Node1574&#45;&gt;Node1576</title>
+<!-- Node1542&#45;&gt;Node1544 -->
+<g id="edge17" class="edge"><title>Node1542&#45;&gt;Node1544</title>
 <path fill="none" stroke="midnightblue" d="M496.154,-340.662C503.236,-337.241 509.809,-332.79 515,-327 565.106,-271.115 498.86,-215.992 551,-162 555.735,-157.097 561.545,-153.394 567.812,-150.608"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="569.067,-153.876 577.251,-147.148 566.658,-147.303 569.067,-153.876"/>
 </g>
-<!-- Node1577 -->
-<g id="node18" class="node"><title>Node1577</title>
+<!-- Node1545 -->
+<g id="node18" class="node"><title>Node1545</title>
 <g id="a_node18"><a xlink:href="field_8h.html#af372f2088796ef5338bb43dbb6dd5277" target="_top" xlink:title="Compare two field elements. ">
 <polygon fill="white" stroke="black" points="566.5,-95.5 566.5,-114.5 686.5,-114.5 686.5,-95.5 566.5,-95.5"/>
 <text text-anchor="middle" x="626.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_cmp_var</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1577 -->
-<g id="edge18" class="edge"><title>Node1574&#45;&gt;Node1577</title>
+<!-- Node1542&#45;&gt;Node1545 -->
+<g id="edge18" class="edge"><title>Node1542&#45;&gt;Node1545</title>
 <path fill="none" stroke="midnightblue" d="M496.362,-340.845C503.414,-337.398 509.924,-332.891 515,-327 574.816,-257.588 488.656,-191.151 551,-124 552.867,-121.989 554.916,-120.178 557.103,-118.548"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="559.373,-121.268 566.146,-113.121 555.771,-115.266 559.373,-121.268"/>
 </g>
-<!-- Node1578 -->
-<g id="node19" class="node"><title>Node1578</title>
+<!-- Node1546 -->
+<g id="node19" class="node"><title>Node1546</title>
 <g id="a_node19"><a xlink:href="group__impl_8h.html#aea803cf52c0f33c2cb3bfb82d5790d71" target="_top" xlink:title="secp256k1_ge_set_gej_var">
 <polygon fill="white" stroke="black" points="559,-57.5 559,-76.5 694,-76.5 694,-57.5 559,-57.5"/>
 <text text-anchor="middle" x="626.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_set_gej_var</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1578 -->
-<g id="edge20" class="edge"><title>Node1574&#45;&gt;Node1578</title>
+<!-- Node1542&#45;&gt;Node1546 -->
+<g id="edge20" class="edge"><title>Node1542&#45;&gt;Node1546</title>
 <path fill="none" stroke="midnightblue" d="M496.138,-341.151C503.312,-337.664 509.917,-333.064 515,-327 584.574,-244.005 478.401,-166.363 551,-86 552.063,-84.8238 553.187,-83.7158 554.365,-82.6723"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="556.692,-85.3131 562.834,-76.6802 552.649,-79.5987 556.692,-85.3131"/>
 </g>
-<!-- Node1583 -->
-<g id="node24" class="node"><title>Node1583</title>
+<!-- Node1551 -->
+<g id="node24" class="node"><title>Node1551</title>
 <g id="a_node24"><a xlink:href="group_8h.html#a3c3d9154b093bb4ed48ba55e4c28a0b5" target="_top" xlink:title="Set a group element (affine) equal to the point with the given X coordinate, and given oddness for Y...">
 <polygon fill="white" stroke="black" points="560,-437.5 560,-456.5 693,-456.5 693,-437.5 560,-437.5"/>
 <text text-anchor="middle" x="626.5" y="-444.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_set_xo_var</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1583 -->
-<g id="edge25" class="edge"><title>Node1574&#45;&gt;Node1583</title>
+<!-- Node1542&#45;&gt;Node1551 -->
+<g id="edge25" class="edge"><title>Node1542&#45;&gt;Node1551</title>
 <path fill="none" stroke="midnightblue" d="M458.068,-367.036C478.924,-384.154 515.381,-411.833 551,-428 556.373,-430.439 562.111,-432.602 567.929,-434.511"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="567.159,-437.935 577.744,-437.49 569.192,-431.237 567.159,-437.935"/>
 </g>
-<!-- Node1584 -->
-<g id="node25" class="node"><title>Node1584</title>
+<!-- Node1552 -->
+<g id="node25" class="node"><title>Node1552</title>
 <g id="a_node25"><a xlink:href="group_8h.html#a33786d5853579c92d46fac51f6a40093" target="_top" xlink:title="Check whether a group element is the point at infinity. ">
 <polygon fill="white" stroke="black" points="562.5,-399.5 562.5,-418.5 690.5,-418.5 690.5,-399.5 562.5,-399.5"/>
 <text text-anchor="middle" x="626.5" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_gej_is_infinity</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1584 -->
-<g id="edge26" class="edge"><title>Node1574&#45;&gt;Node1584</title>
+<!-- Node1542&#45;&gt;Node1552 -->
+<g id="edge26" class="edge"><title>Node1542&#45;&gt;Node1552</title>
 <path fill="none" stroke="midnightblue" d="M481.695,-367.06C502.367,-374.389 527.87,-383.086 551,-390 558.91,-392.365 567.347,-394.696 575.594,-396.871"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="574.953,-400.321 585.511,-399.44 576.708,-393.544 574.953,-400.321"/>
 </g>
-<!-- Node1585 -->
-<g id="node26" class="node"><title>Node1585</title>
+<!-- Node1553 -->
+<g id="node26" class="node"><title>Node1553</title>
 <g id="a_node26"><a xlink:href="group_8h.html#ad5f813e26afb239f03e83f0e61e05498" target="_top" xlink:title="Set a group element (jacobian) equal to another which is given in affine coordinates. ">
 <polygon fill="white" stroke="black" points="568.5,-361.5 568.5,-380.5 684.5,-380.5 684.5,-361.5 568.5,-361.5"/>
 <text text-anchor="middle" x="626.5" y="-368.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_gej_set_ge</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1585 -->
-<g id="edge27" class="edge"><title>Node1574&#45;&gt;Node1585</title>
+<!-- Node1542&#45;&gt;Node1553 -->
+<g id="edge27" class="edge"><title>Node1542&#45;&gt;Node1553</title>
 <path fill="none" stroke="midnightblue" d="M496.006,-357.701C515.582,-359.711 537.804,-361.993 558.245,-364.093"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="558.126,-367.599 568.431,-365.139 558.841,-360.635 558.126,-367.599"/>
 </g>
-<!-- Node1586 -->
-<g id="node27" class="node"><title>Node1586</title>
+<!-- Node1554 -->
+<g id="node27" class="node"><title>Node1554</title>
 <g id="a_node27"><a xlink:href="scalar_8h.html#a4fa08f8af5a23f505b44c9ef1bec1831" target="_top" xlink:title="Convert a scalar to a byte array. ">
 <polygon fill="white" stroke="black" points="559,-589.5 559,-608.5 694,-608.5 694,-589.5 559,-589.5"/>
 <text text-anchor="middle" x="626.5" y="-596.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_get_b32</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1586 -->
-<g id="edge28" class="edge"><title>Node1574&#45;&gt;Node1586</title>
+<!-- Node1542&#45;&gt;Node1554 -->
+<g id="edge28" class="edge"><title>Node1542&#45;&gt;Node1554</title>
 <path fill="none" stroke="midnightblue" d="M447.9,-367.296C472.607,-418.36 550.713,-579.766 551,-580 553.081,-581.699 555.295,-583.248 557.609,-584.66"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="556.459,-588.004 566.954,-589.458 559.657,-581.777 556.459,-588.004"/>
 </g>
-<!-- Node1587 -->
-<g id="node28" class="node"><title>Node1587</title>
+<!-- Node1555 -->
+<g id="node28" class="node"><title>Node1555</title>
 <g id="a_node28"><a xlink:href="scalar_8h.html#a58e84d0cabe81139df5c71759f833855" target="_top" xlink:title="Compute the inverse of a scalar (modulo the group order), without constant&#45;time guarantee. ">
 <polygon fill="white" stroke="black" points="551,-323.5 551,-342.5 702,-342.5 702,-323.5 551,-323.5"/>
 <text text-anchor="middle" x="626.5" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_inverse_var</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1587 -->
-<g id="edge29" class="edge"><title>Node1574&#45;&gt;Node1587</title>
+<!-- Node1542&#45;&gt;Node1555 -->
+<g id="edge29" class="edge"><title>Node1542&#45;&gt;Node1555</title>
 <path fill="none" stroke="midnightblue" d="M496.006,-346.299C510.15,-344.847 525.675,-343.252 540.912,-341.687"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="541.276,-345.169 550.866,-340.665 540.56,-338.205 541.276,-345.169"/>
 </g>
-<!-- Node1588 -->
-<g id="node29" class="node"><title>Node1588</title>
+<!-- Node1556 -->
+<g id="node29" class="node"><title>Node1556</title>
 <g id="a_node29"><a xlink:href="scalar_8h.html#a3f0ac84fe49a1c1f51212582a2c149d4" target="_top" xlink:title="Check whether a scalar equals zero. ">
 <polygon fill="white" stroke="black" points="560.5,-285.5 560.5,-304.5 692.5,-304.5 692.5,-285.5 560.5,-285.5"/>
 <text text-anchor="middle" x="626.5" y="-292.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_is_zero</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1588 -->
-<g id="edge30" class="edge"><title>Node1574&#45;&gt;Node1588</title>
+<!-- Node1542&#45;&gt;Node1556 -->
+<g id="edge30" class="edge"><title>Node1542&#45;&gt;Node1556</title>
 <path fill="none" stroke="midnightblue" d="M485.863,-336.961C495.496,-333.716 505.595,-330.276 515,-327 531.065,-321.405 534.739,-318.997 551,-314 558.801,-311.603 567.125,-309.267 575.278,-307.1"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="576.294,-310.452 585.091,-304.547 574.531,-303.678 576.294,-310.452"/>
 </g>
-<!-- Node1589 -->
-<g id="node30" class="node"><title>Node1589</title>
+<!-- Node1557 -->
+<g id="node30" class="node"><title>Node1557</title>
 <g id="a_node30"><a xlink:href="scalar_8h.html#a89db15f705c8eafcd10c08181523acd0" target="_top" xlink:title="Multiply two scalars (modulo the group order). ">
 <polygon fill="white" stroke="black" points="568.5,-247.5 568.5,-266.5 684.5,-266.5 684.5,-247.5 568.5,-247.5"/>
 <text text-anchor="middle" x="626.5" y="-254.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_mul</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1589 -->
-<g id="edge31" class="edge"><title>Node1574&#45;&gt;Node1589</title>
+<!-- Node1542&#45;&gt;Node1557 -->
+<g id="edge31" class="edge"><title>Node1542&#45;&gt;Node1557</title>
 <path fill="none" stroke="midnightblue" d="M496.187,-337.746C502.857,-334.783 509.309,-331.236 515,-327 537.255,-310.432 528.147,-291.733 551,-276 553.891,-274.01 556.975,-272.228 560.18,-270.632"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="561.689,-273.793 569.479,-266.612 558.911,-267.368 561.689,-273.793"/>
 </g>
-<!-- Node1590 -->
-<g id="node31" class="node"><title>Node1590</title>
+<!-- Node1558 -->
+<g id="node31" class="node"><title>Node1558</title>
 <g id="a_node31"><a xlink:href="scalar_8h.html#aa3f1c1d4536adf835ee256878c222968" target="_top" xlink:title="Compute the complement of a scalar (modulo the group order). ">
 <polygon fill="white" stroke="black" points="561.5,-209.5 561.5,-228.5 691.5,-228.5 691.5,-209.5 561.5,-209.5"/>
 <text text-anchor="middle" x="626.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_negate</text>
 </a>
 </g>
 </g>
-<!-- Node1574&#45;&gt;Node1590 -->
-<g id="edge32" class="edge"><title>Node1574&#45;&gt;Node1590</title>
+<!-- Node1542&#45;&gt;Node1558 -->
+<g id="edge32" class="edge"><title>Node1542&#45;&gt;Node1558</title>
 <path fill="none" stroke="midnightblue" d="M496.056,-339.477C502.981,-336.229 509.536,-332.143 515,-327 546.072,-297.757 518.867,-266.073 551,-238 552.935,-236.309 555,-234.766 557.165,-233.356"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="558.848,-236.425 565.946,-228.559 555.492,-230.282 558.848,-236.425"/>
 </g>
-<!-- Node1579 -->
-<g id="node20" class="node"><title>Node1579</title>
+<!-- Node1547 -->
+<g id="node20" class="node"><title>Node1547</title>
 <g id="a_node20"><a xlink:href="field_8h.html#a0090ecfb39b34a8965cc16ae1feca5aa" target="_top" xlink:title="Potentially faster version of secp256k1_fe_inv, without constant&#45;time guarantee. ">
 <polygon fill="white" stroke="black" points="738,-76.5 738,-95.5 852,-95.5 852,-76.5 738,-76.5"/>
 <text text-anchor="middle" x="795" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_inv_var</text>
 </a>
 </g>
 </g>
-<!-- Node1578&#45;&gt;Node1579 -->
-<g id="edge21" class="edge"><title>Node1578&#45;&gt;Node1579</title>
+<!-- Node1546&#45;&gt;Node1547 -->
+<g id="edge21" class="edge"><title>Node1546&#45;&gt;Node1547</title>
 <path fill="none" stroke="midnightblue" d="M694.263,-74.6185C705.345,-75.8833 716.834,-77.1943 727.901,-78.4571"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="727.588,-81.9441 737.921,-79.6006 728.382,-74.9893 727.588,-81.9441"/>
 </g>
-<!-- Node1580 -->
-<g id="node21" class="node"><title>Node1580</title>
+<!-- Node1548 -->
+<g id="node21" class="node"><title>Node1548</title>
 <g id="a_node21"><a xlink:href="field_8h.html#a542b97d2574d9687c563d002587cf9a2" target="_top" xlink:title="Sets a field element to be the product of two others. ">
 <polygon fill="white" stroke="black" points="746,-38.5 746,-57.5 844,-57.5 844,-38.5 746,-38.5"/>
 <text text-anchor="middle" x="795" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_mul</text>
 </a>
 </g>
 </g>
-<!-- Node1578&#45;&gt;Node1580 -->
-<g id="edge22" class="edge"><title>Node1578&#45;&gt;Node1580</title>
+<!-- Node1546&#45;&gt;Node1548 -->
+<g id="edge22" class="edge"><title>Node1546&#45;&gt;Node1548</title>
 <path fill="none" stroke="midnightblue" d="M694.263,-59.3815C708.033,-57.8101 722.43,-56.1672 735.864,-54.6341"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="736.385,-58.0975 745.923,-53.4862 735.591,-51.1427 736.385,-58.0975"/>
 </g>
-<!-- Node1581 -->
-<g id="node22" class="node"><title>Node1581</title>
+<!-- Node1549 -->
+<g id="node22" class="node"><title>Node1549</title>
 <g id="a_node22"><a xlink:href="field_8h.html#a4bfba9980b6d6960ad623f1ddbbc547e" target="_top" xlink:title="Set a field element equal to a small integer. ">
 <polygon fill="white" stroke="black" points="739,-0.5 739,-19.5 851,-19.5 851,-0.5 739,-0.5"/>
 <text text-anchor="middle" x="795" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_set_int</text>
 </a>
 </g>
 </g>
-<!-- Node1578&#45;&gt;Node1581 -->
-<g id="edge23" class="edge"><title>Node1578&#45;&gt;Node1581</title>
+<!-- Node1546&#45;&gt;Node1549 -->
+<g id="edge23" class="edge"><title>Node1546&#45;&gt;Node1549</title>
 <path fill="none" stroke="midnightblue" d="M655.19,-57.4422C677.534,-49.7385 709.78,-38.6397 738,-29 743.788,-27.0228 749.915,-24.9368 755.91,-22.8998"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="757.447,-26.0744 765.791,-19.5457 755.197,-19.446 757.447,-26.0744"/>
 </g>
-<!-- Node1582 -->
-<g id="node23" class="node"><title>Node1582</title>
+<!-- Node1550 -->
+<g id="node23" class="node"><title>Node1550</title>
 <g id="a_node23"><a xlink:href="field_8h.html#a6cbe550ca5eb35e683b1c8d68d8de26b" target="_top" xlink:title="Sets a field element to be the square of another. ">
 <polygon fill="white" stroke="black" points="747,-114.5 747,-133.5 843,-133.5 843,-114.5 747,-114.5"/>
 <text text-anchor="middle" x="795" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_sqr</text>
 </a>
 </g>
 </g>
-<!-- Node1578&#45;&gt;Node1582 -->
-<g id="edge24" class="edge"><title>Node1578&#45;&gt;Node1582</title>
+<!-- Node1546&#45;&gt;Node1550 -->
+<g id="edge24" class="edge"><title>Node1546&#45;&gt;Node1550</title>
 <path fill="none" stroke="midnightblue" d="M672.16,-76.5625C682.122,-79.1978 692.533,-82.3537 702,-86 718.883,-92.5028 721.382,-97.8489 738,-105 742.827,-107.077 747.963,-109.083 753.091,-110.964"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="752.264,-114.384 762.859,-114.411 754.594,-107.783 752.264,-114.384"/>
 </g>
-<!-- Node1592&#45;&gt;Node1565 -->
-<g id="edge35" class="edge"><title>Node1592&#45;&gt;Node1565</title>
+<!-- Node1560&#45;&gt;Node1533 -->
+<g id="edge35" class="edge"><title>Node1560&#45;&gt;Node1533</title>
 <path fill="none" stroke="midnightblue" d="M493.342,-534.524C501.44,-537.966 509.064,-542.644 515,-549 560.322,-597.528 504.197,-646.898 551,-694 561.046,-704.111 575.674,-709.092 589.312,-711.465"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="589.083,-714.965 599.457,-712.812 590.005,-708.026 589.083,-714.965"/>
 </g>
-<!-- Node1593 -->
-<g id="node34" class="node"><title>Node1593</title>
+<!-- Node1561 -->
+<g id="node34" class="node"><title>Node1561</title>
 <g id="a_node34"><a xlink:href="field_8h.html#abb1017649be14b9ac1823be3c573e542" target="_top" xlink:title="Convert a field element to a 32&#45;byte big endian value. ">
 <polygon fill="white" stroke="black" points="568,-513.5 568,-532.5 685,-532.5 685,-513.5 568,-513.5"/>
 <text text-anchor="middle" x="626.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_get_b32</text>
 </a>
 </g>
 </g>
-<!-- Node1592&#45;&gt;Node1593 -->
-<g id="edge36" class="edge"><title>Node1592&#45;&gt;Node1593</title>
+<!-- Node1560&#45;&gt;Node1561 -->
+<g id="edge36" class="edge"><title>Node1560&#45;&gt;Node1561</title>
 <path fill="none" stroke="midnightblue" d="M503.133,-524.323C520.658,-524.133 539.785,-523.927 557.6,-523.734"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="557.954,-527.231 567.916,-523.623 557.878,-520.231 557.954,-527.231"/>
 </g>
-<!-- Node1594 -->
-<g id="node35" class="node"><title>Node1594</title>
+<!-- Node1562 -->
+<g id="node35" class="node"><title>Node1562</title>
 <g id="a_node35"><a xlink:href="field_8h.html#a2d45c987537eadb2923c93aa3af9db71" target="_top" xlink:title="Normalize a field element, without constant&#45;time guarantee. ">
 <polygon fill="white" stroke="black" points="555,-475.5 555,-494.5 698,-494.5 698,-475.5 555,-475.5"/>
 <text text-anchor="middle" x="626.5" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_normalize_var</text>
 </a>
 </g>
 </g>
-<!-- Node1592&#45;&gt;Node1594 -->
-<g id="edge37" class="edge"><title>Node1592&#45;&gt;Node1594</title>
+<!-- Node1560&#45;&gt;Node1562 -->
+<g id="edge37" class="edge"><title>Node1560&#45;&gt;Node1562</title>
 <path fill="none" stroke="midnightblue" d="M484.812,-515.419C510.898,-509.779 544.078,-502.605 571.663,-496.64"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="572.515,-500.037 581.549,-494.503 571.036,-493.195 572.515,-500.037"/>
 </g>
-<!-- Node1595 -->
-<g id="node36" class="node"><title>Node1595</title>
+<!-- Node1563 -->
+<g id="node36" class="node"><title>Node1563</title>
 <g id="a_node36"><a xlink:href="group_8h.html#ac83592db46af97faf7ba9b9a39a1f6ff" target="_top" xlink:title="Check whether a group element is the point at infinity. ">
 <polygon fill="white" stroke="black" points="563.5,-665.5 563.5,-684.5 689.5,-684.5 689.5,-665.5 563.5,-665.5"/>
 <text text-anchor="middle" x="626.5" y="-672.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_is_infinity</text>
 </a>
 </g>
 </g>
-<!-- Node1592&#45;&gt;Node1595 -->
-<g id="edge38" class="edge"><title>Node1592&#45;&gt;Node1595</title>
+<!-- Node1560&#45;&gt;Node1563 -->
+<g id="edge38" class="edge"><title>Node1560&#45;&gt;Node1563</title>
 <path fill="none" stroke="midnightblue" d="M492.151,-534.625C500.574,-538.052 508.618,-542.699 515,-549 550.707,-584.249 514.218,-621.873 551,-656 552.67,-657.549 554.448,-658.976 556.312,-660.29"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="554.575,-663.329 564.973,-665.36 558.111,-657.288 554.575,-663.329"/>
 </g>
-<!-- Node1596 -->
-<g id="node37" class="node"><title>Node1596</title>
+<!-- Node1564 -->
+<g id="node37" class="node"><title>Node1564</title>
 <g id="a_node37"><a xlink:href="group_8h.html#ad6499ae629f998e50d8614869ee3c67f" target="_top" xlink:title="Convert a group element to the storage type. ">
 <polygon fill="white" stroke="black" points="561,-551.5 561,-570.5 692,-570.5 692,-551.5 561,-551.5"/>
 <text text-anchor="middle" x="626.5" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_to_storage</text>
 </a>
 </g>
 </g>
-<!-- Node1592&#45;&gt;Node1596 -->
-<g id="edge39" class="edge"><title>Node1592&#45;&gt;Node1596</title>
+<!-- Node1560&#45;&gt;Node1564 -->
+<g id="edge39" class="edge"><title>Node1560&#45;&gt;Node1564</title>
 <path fill="none" stroke="midnightblue" d="M489.591,-534.553C513.206,-539.148 541.702,-544.693 566.489,-549.517"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="566.017,-552.99 576.501,-551.465 567.354,-546.119 566.017,-552.99"/>
 </g>
-<!-- Node1597&#45;&gt;Node1573 -->
-<g id="edge45" class="edge"><title>Node1597&#45;&gt;Node1573</title>
+<!-- Node1565&#45;&gt;Node1541 -->
+<g id="edge45" class="edge"><title>Node1565&#45;&gt;Node1541</title>
 <path fill="none" stroke="midnightblue" d="M268.644,-701.212C288.512,-719.976 325.407,-750.88 364,-763 436.303,-785.707 525.365,-773.741 578.676,-762.638"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="579.488,-766.043 588.524,-760.511 578.011,-759.201 579.488,-766.043"/>
 </g>
-<!-- Node1598 -->
-<g id="node39" class="node"><title>Node1598</title>
+<!-- Node1566 -->
+<g id="node39" class="node"><title>Node1566</title>
 <g id="a_node39"><a xlink:href="recovery_2main__impl_8h.html#a58a8a03b17aeb5cb4daf2940a58663b9" target="_top" xlink:title="secp256k1_ecdsa_recoverable\l_signature_save">
 <polygon fill="white" stroke="black" points="364,-641 364,-671 515,-671 515,-641 364,-641"/>
 <text text-anchor="start" x="372" y="-659" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_recoverable</text>
@@ -548,49 +548,49 @@
 </a>
 </g>
 </g>
-<!-- Node1597&#45;&gt;Node1598 -->
-<g id="edge42" class="edge"><title>Node1597&#45;&gt;Node1598</title>
+<!-- Node1565&#45;&gt;Node1566 -->
+<g id="edge42" class="edge"><title>Node1565&#45;&gt;Node1566</title>
 <path fill="none" stroke="midnightblue" d="M328.213,-673.884C336.646,-672.517 345.284,-671.116 353.833,-669.73"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.498,-673.168 363.809,-668.112 353.377,-666.258 354.498,-673.168"/>
 </g>
-<!-- Node1598&#45;&gt;Node1565 -->
-<g id="edge43" class="edge"><title>Node1598&#45;&gt;Node1565</title>
+<!-- Node1566&#45;&gt;Node1533 -->
+<g id="edge43" class="edge"><title>Node1566&#45;&gt;Node1533</title>
 <path fill="none" stroke="midnightblue" d="M485.863,-671.039C495.496,-674.284 505.595,-677.724 515,-681 531.065,-686.595 534.739,-689.003 551,-694 563.46,-697.829 577.255,-701.501 589.553,-704.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="588.923,-708.029 599.47,-707.016 590.594,-701.231 588.923,-708.029"/>
 </g>
-<!-- Node1598&#45;&gt;Node1586 -->
-<g id="edge44" class="edge"><title>Node1598&#45;&gt;Node1586</title>
+<!-- Node1566&#45;&gt;Node1554 -->
+<g id="edge44" class="edge"><title>Node1566&#45;&gt;Node1554</title>
 <path fill="none" stroke="midnightblue" d="M485.863,-640.961C495.496,-637.716 505.595,-634.276 515,-631 531.065,-625.405 534.739,-622.997 551,-618 558.801,-615.603 567.125,-613.267 575.278,-611.1"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="576.294,-614.452 585.091,-608.547 574.531,-607.678 576.294,-614.452"/>
 </g>
-<!-- Node1599&#45;&gt;Node1565 -->
-<g id="edge48" class="edge"><title>Node1599&#45;&gt;Node1565</title>
+<!-- Node1567&#45;&gt;Node1533 -->
+<g id="edge48" class="edge"><title>Node1567&#45;&gt;Node1533</title>
 <path fill="none" stroke="midnightblue" d="M261.541,-455.758C278.397,-475.55 319.562,-520.524 364,-544 425.19,-576.326 464.514,-534.668 515,-582 553.144,-617.761 512.913,-658.178 551,-694 561.305,-703.692 575.847,-708.616 589.351,-711.058"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="588.995,-714.542 599.388,-712.48 589.977,-707.612 588.995,-714.542"/>
 </g>
-<!-- Node1600 -->
-<g id="node41" class="node"><title>Node1600</title>
+<!-- Node1568 -->
+<g id="node41" class="node"><title>Node1568</title>
 <g id="a_node41"><a xlink:href="class_c_pub_key.html#a7dc71b3f037c84268dc22de97d7b65fb" target="_top" xlink:title="Compute the length of a pubkey with a given first byte. ">
 <polygon fill="white" stroke="black" points="391.5,-298.5 391.5,-317.5 487.5,-317.5 487.5,-298.5 391.5,-298.5"/>
 <text text-anchor="middle" x="439.5" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::GetLen</text>
 </a>
 </g>
 </g>
-<!-- Node1599&#45;&gt;Node1600 -->
-<g id="edge47" class="edge"><title>Node1599&#45;&gt;Node1600</title>
+<!-- Node1567&#45;&gt;Node1568 -->
+<g id="edge47" class="edge"><title>Node1567&#45;&gt;Node1568</title>
 <path fill="none" stroke="midnightblue" d="M259.64,-436.232C274.545,-413.363 315.039,-356.088 364,-327 369.422,-323.779 375.381,-321.099 381.493,-318.871"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="382.739,-322.147 391.17,-315.729 380.577,-315.489 382.739,-322.147"/>
 </g>
-<!-- Node1601 -->
-<g id="node42" class="node"><title>Node1601</title>
+<!-- Node1569 -->
+<g id="node42" class="node"><title>Node1569</title>
 <g id="a_node42"><a xlink:href="class_c_pub_key.html#a99917e80a362af54a3677ea9cf1328ee" target="_top" xlink:title="Set this key data to be invalid. ">
 <polygon fill="white" stroke="black" points="386,-260.5 386,-279.5 493,-279.5 493,-260.5 386,-260.5"/>
 <text text-anchor="middle" x="439.5" y="-267.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::Invalidate</text>
 </a>
 </g>
 </g>
-<!-- Node1599&#45;&gt;Node1601 -->
-<g id="edge49" class="edge"><title>Node1599&#45;&gt;Node1601</title>
+<!-- Node1567&#45;&gt;Node1569 -->
+<g id="edge49" class="edge"><title>Node1567&#45;&gt;Node1569</title>
 <path fill="none" stroke="midnightblue" d="M257.339,-436.463C268.934,-408.926 306.373,-328.731 364,-289 367.915,-286.301 372.183,-283.985 376.63,-281.998"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="377.908,-285.257 385.954,-278.364 375.366,-278.734 377.908,-285.257"/>
 </g>

@@ -21,7 +21,6 @@ var class_c_script =
     [ "GetOp2", "class_c_script.html#aac2dbe75742054049b0c6de0e9473ef0", null ],
     [ "GetSigOpCount", "class_c_script.html#a957f92ddf3efcd76b66e514c05f27dde", null ],
     [ "GetSigOpCount", "class_c_script.html#ab2fc38465955bb6688d204036633ee85", null ],
-    [ "IsNormalPaymentScript", "class_c_script.html#a4bebedf75cc256220cd7be25a6c95fe7", null ],
     [ "IsPayToPublicKeyHash", "class_c_script.html#abd0d9370d4d4e7b7503d680410752b2b", null ],
     [ "IsPayToScriptHash", "class_c_script.html#a0c3729c606d318923dc06f95d85a0971", null ],
     [ "IsPushOnly", "class_c_script.html#a090905f875fa5a40e616b319de8e973f", null ],

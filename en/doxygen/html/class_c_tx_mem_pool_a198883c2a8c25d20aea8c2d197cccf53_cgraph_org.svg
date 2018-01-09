@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 214)">
 <title>CTxMemPool::UpdateForRemoveFromMempool</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-214 947,-214 947,4 -4,4"/>
-<!-- Node3180 -->
-<g id="node1" class="node"><title>Node3180</title>
+<!-- Node3143 -->
+<g id="node1" class="node"><title>Node3143</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-90 0,-120 165,-120 165,-90 0,-90"/>
 <text text-anchor="start" x="8" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::UpdateForRemove</text>
 <text text-anchor="middle" x="82.5" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00">FromMempool</text>
 </g>
-<!-- Node3181 -->
-<g id="node2" class="node"><title>Node3181</title>
+<!-- Node3144 -->
+<g id="node2" class="node"><title>Node3144</title>
 <g id="a_node2"><a xlink:href="class_c_tx_mem_pool.html#ae755bb5ccada190327c26d09388b4139" target="_top" xlink:title="Try to calculate all in&#45;mempool ancestors of entry. ">
 <polygon fill="white" stroke="black" points="212.5,-140 212.5,-170 358.5,-170 358.5,-140 212.5,-140"/>
 <text text-anchor="start" x="220.5" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::CalculateMem</text>
@@ -24,26 +24,26 @@
 </a>
 </g>
 </g>
-<!-- Node3180&#45;&gt;Node3181 -->
-<g id="edge1" class="edge"><title>Node3180&#45;&gt;Node3181</title>
+<!-- Node3143&#45;&gt;Node3144 -->
+<g id="edge1" class="edge"><title>Node3143&#45;&gt;Node3144</title>
 <path fill="none" stroke="midnightblue" d="M143.807,-120.002C165.867,-125.489 191.02,-131.746 213.899,-137.437"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="213.34,-140.905 223.889,-139.923 215.029,-134.112 213.34,-140.905"/>
 </g>
-<!-- Node3185 -->
-<g id="node6" class="node"><title>Node3185</title>
+<!-- Node3148 -->
+<g id="node6" class="node"><title>Node3148</title>
 <g id="a_node6"><a xlink:href="class_c_tx_mem_pool.html#a1e5540275b4a83746d491a5741ec85be" target="_top" xlink:title="Update ancestors of hash to add/remove it as a descendant transaction. ">
 <polygon fill="white" stroke="black" points="201,-95.5 201,-114.5 370,-114.5 370,-95.5 201,-95.5"/>
 <text text-anchor="middle" x="285.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::UpdateAncestorsOf</text>
 </a>
 </g>
 </g>
-<!-- Node3180&#45;&gt;Node3185 -->
-<g id="edge5" class="edge"><title>Node3180&#45;&gt;Node3185</title>
+<!-- Node3143&#45;&gt;Node3148 -->
+<g id="edge5" class="edge"><title>Node3143&#45;&gt;Node3148</title>
 <path fill="none" stroke="midnightblue" d="M165.254,-105C173.6,-105 182.123,-105 190.585,-105"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="190.859,-108.5 200.859,-105 190.859,-101.5 190.859,-108.5"/>
 </g>
-<!-- Node3189 -->
-<g id="node10" class="node"><title>Node3189</title>
+<!-- Node3152 -->
+<g id="node10" class="node"><title>Node3152</title>
 <g id="a_node10"><a xlink:href="class_c_tx_mem_pool.html#a87623d672631b33a26e38810fa2d0006" target="_top" xlink:title="Sever link between specified transaction and direct children. ">
 <polygon fill="white" stroke="black" points="210.5,-33 210.5,-63 360.5,-63 360.5,-33 210.5,-33"/>
 <text text-anchor="start" x="218.5" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::UpdateChildren</text>
@@ -51,70 +51,70 @@
 </a>
 </g>
 </g>
-<!-- Node3180&#45;&gt;Node3189 -->
-<g id="edge10" class="edge"><title>Node3180&#45;&gt;Node3189</title>
+<!-- Node3143&#45;&gt;Node3152 -->
+<g id="edge10" class="edge"><title>Node3143&#45;&gt;Node3152</title>
 <path fill="none" stroke="midnightblue" d="M136.573,-89.9494C162.677,-82.5467 194.321,-73.5732 221.631,-65.8286"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="222.812,-69.1316 231.478,-63.0361 220.903,-62.3972 222.812,-69.1316"/>
 </g>
-<!-- Node3182 -->
-<g id="node3" class="node"><title>Node3182</title>
+<!-- Node3145 -->
+<g id="node3" class="node"><title>Node3145</title>
 <g id="a_node3"><a xlink:href="class_c_tx_mem_pool.html#ac3336a567bb5cd890057482170e5553d" target="_top" xlink:title="CTxMemPool::GetMemPoolParents">
 <polygon fill="white" stroke="black" points="407.5,-114.5 407.5,-133.5 580.5,-133.5 580.5,-114.5 407.5,-114.5"/>
 <text text-anchor="middle" x="494" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::GetMemPoolParents</text>
 </a>
 </g>
 </g>
-<!-- Node3181&#45;&gt;Node3182 -->
-<g id="edge2" class="edge"><title>Node3181&#45;&gt;Node3182</title>
+<!-- Node3144&#45;&gt;Node3145 -->
+<g id="edge2" class="edge"><title>Node3144&#45;&gt;Node3145</title>
 <path fill="none" stroke="midnightblue" d="M358.724,-144.158C378.334,-141.214 399.59,-138.023 419.282,-135.067"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="420.05,-138.491 429.42,-133.545 419.011,-131.568 420.05,-138.491"/>
 </g>
-<!-- Node3183 -->
-<g id="node4" class="node"><title>Node3183</title>
+<!-- Node3146 -->
+<g id="node4" class="node"><title>Node3146</title>
 <g id="a_node4"><a xlink:href="class_c_tx_mem_pool_entry.html#a2deed4202061edf8b040a3f554417c20" target="_top" xlink:title="CTxMemPoolEntry::GetTx">
 <polygon fill="white" stroke="black" points="427.5,-190.5 427.5,-209.5 560.5,-209.5 560.5,-190.5 427.5,-190.5"/>
 <text text-anchor="middle" x="494" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPoolEntry::GetTx</text>
 </a>
 </g>
 </g>
-<!-- Node3181&#45;&gt;Node3183 -->
-<g id="edge3" class="edge"><title>Node3181&#45;&gt;Node3183</title>
+<!-- Node3144&#45;&gt;Node3146 -->
+<g id="edge3" class="edge"><title>Node3144&#45;&gt;Node3146</title>
 <path fill="none" stroke="midnightblue" d="M355.549,-170.047C382.875,-176.002 413.804,-182.742 439.394,-188.318"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="438.766,-191.763 449.282,-190.473 440.256,-184.924 438.766,-191.763"/>
 </g>
-<!-- Node3184 -->
-<g id="node5" class="node"><title>Node3184</title>
+<!-- Node3147 -->
+<g id="node5" class="node"><title>Node3147</title>
 <g id="a_node5"><a xlink:href="class_c_tx_mem_pool_entry.html#a89325fcaa8efbd1d6fe68c39d7d676b0" target="_top" xlink:title="CTxMemPoolEntry::GetTxSize">
 <polygon fill="white" stroke="black" points="418,-152.5 418,-171.5 570,-171.5 570,-152.5 418,-152.5"/>
 <text text-anchor="middle" x="494" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPoolEntry::GetTxSize</text>
 </a>
 </g>
 </g>
-<!-- Node3181&#45;&gt;Node3184 -->
-<g id="edge4" class="edge"><title>Node3181&#45;&gt;Node3184</title>
+<!-- Node3144&#45;&gt;Node3147 -->
+<g id="edge4" class="edge"><title>Node3144&#45;&gt;Node3147</title>
 <path fill="none" stroke="midnightblue" d="M358.724,-157.448C374.519,-157.984 391.383,-158.555 407.637,-159.106"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="407.551,-162.605 417.664,-159.446 407.788,-155.609 407.551,-162.605"/>
 </g>
-<!-- Node3185&#45;&gt;Node3182 -->
-<g id="edge6" class="edge"><title>Node3185&#45;&gt;Node3182</title>
+<!-- Node3148&#45;&gt;Node3145 -->
+<g id="edge6" class="edge"><title>Node3148&#45;&gt;Node3145</title>
 <path fill="none" stroke="midnightblue" d="M370.194,-112.701C379.048,-113.515 388.101,-114.348 397.08,-115.174"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="396.892,-118.672 407.171,-116.103 397.534,-111.701 396.892,-118.672"/>
 </g>
-<!-- Node3186 -->
-<g id="node7" class="node"><title>Node3186</title>
+<!-- Node3149 -->
+<g id="node7" class="node"><title>Node3149</title>
 <g id="a_node7"><a xlink:href="class_c_tx_mem_pool.html#a93ee11ea2adc6021d5bf0842516222b4" target="_top" xlink:title="CTxMemPool::UpdateChild">
 <polygon fill="white" stroke="black" points="425.5,-76.5 425.5,-95.5 562.5,-95.5 562.5,-76.5 425.5,-76.5"/>
 <text text-anchor="middle" x="494" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::UpdateChild</text>
 </a>
 </g>
 </g>
-<!-- Node3185&#45;&gt;Node3186 -->
-<g id="edge7" class="edge"><title>Node3185&#45;&gt;Node3186</title>
+<!-- Node3148&#45;&gt;Node3149 -->
+<g id="edge7" class="edge"><title>Node3148&#45;&gt;Node3149</title>
 <path fill="none" stroke="midnightblue" d="M370.194,-97.2994C385.091,-95.9287 400.552,-94.5061 415.274,-93.1515"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="415.696,-96.6276 425.333,-92.226 415.054,-89.6571 415.696,-96.6276"/>
 </g>
-<!-- Node3187 -->
-<g id="node8" class="node"><title>Node3187</title>
+<!-- Node3150 -->
+<g id="node8" class="node"><title>Node3150</title>
 <g id="a_node8"><a xlink:href="namespacememusage.html#adb94a858deacb691d493a604f572a9a9" target="_top" xlink:title="memusage::IncrementalDynamic\lUsage">
 <polygon fill="white" stroke="black" points="618,-33 618,-63 779,-63 779,-33 618,-33"/>
 <text text-anchor="start" x="626" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">memusage::IncrementalDynamic</text>
@@ -122,52 +122,52 @@
 </a>
 </g>
 </g>
-<!-- Node3186&#45;&gt;Node3187 -->
-<g id="edge8" class="edge"><title>Node3186&#45;&gt;Node3187</title>
+<!-- Node3149&#45;&gt;Node3150 -->
+<g id="edge8" class="edge"><title>Node3149&#45;&gt;Node3150</title>
 <path fill="none" stroke="midnightblue" d="M545.838,-76.46C564.65,-72.9299 586.579,-68.8148 607.82,-64.8289"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="608.662,-68.232 617.845,-62.9477 607.371,-61.3521 608.662,-68.232"/>
 </g>
-<!-- Node3188 -->
-<g id="node9" class="node"><title>Node3188</title>
+<!-- Node3151 -->
+<g id="node9" class="node"><title>Node3151</title>
 <g id="a_node9"><a xlink:href="namespacememusage.html#ae8ade104f83bf4c608c282adc365bf90" target="_top" xlink:title="Compute the total memory used by allocating alloc bytes. ">
 <polygon fill="white" stroke="black" points="815,-38.5 815,-57.5 943,-57.5 943,-38.5 815,-38.5"/>
 <text text-anchor="middle" x="879" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">memusage::MallocUsage</text>
 </a>
 </g>
 </g>
-<!-- Node3187&#45;&gt;Node3188 -->
-<g id="edge9" class="edge"><title>Node3187&#45;&gt;Node3188</title>
+<!-- Node3150&#45;&gt;Node3151 -->
+<g id="edge9" class="edge"><title>Node3150&#45;&gt;Node3151</title>
 <path fill="none" stroke="midnightblue" d="M779.092,-48C787.619,-48 796.264,-48 804.712,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="804.897,-51.5001 814.897,-48 804.897,-44.5001 804.897,-51.5001"/>
 </g>
-<!-- Node3190 -->
-<g id="node11" class="node"><title>Node3190</title>
+<!-- Node3153 -->
+<g id="node11" class="node"><title>Node3153</title>
 <g id="a_node11"><a xlink:href="class_c_tx_mem_pool.html#a0f163f91b8590b86acd43b26438d7ee1" target="_top" xlink:title="CTxMemPool::GetMemPoolChildren">
 <polygon fill="white" stroke="black" points="406,-38.5 406,-57.5 582,-57.5 582,-38.5 406,-38.5"/>
 <text text-anchor="middle" x="494" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::GetMemPoolChildren</text>
 </a>
 </g>
 </g>
-<!-- Node3189&#45;&gt;Node3190 -->
-<g id="edge11" class="edge"><title>Node3189&#45;&gt;Node3190</title>
+<!-- Node3152&#45;&gt;Node3153 -->
+<g id="edge11" class="edge"><title>Node3152&#45;&gt;Node3153</title>
 <path fill="none" stroke="midnightblue" d="M360.759,-48C372.028,-48 383.797,-48 395.469,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="395.686,-51.5001 405.686,-48 395.686,-44.5001 395.686,-51.5001"/>
 </g>
-<!-- Node3191 -->
-<g id="node12" class="node"><title>Node3191</title>
+<!-- Node3154 -->
+<g id="node12" class="node"><title>Node3154</title>
 <g id="a_node12"><a xlink:href="class_c_tx_mem_pool.html#ae6cc140209f782be93c522048595b797" target="_top" xlink:title="CTxMemPool::UpdateParent">
 <polygon fill="white" stroke="black" points="422.5,-0.5 422.5,-19.5 565.5,-19.5 565.5,-0.5 422.5,-0.5"/>
 <text text-anchor="middle" x="494" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::UpdateParent</text>
 </a>
 </g>
 </g>
-<!-- Node3189&#45;&gt;Node3191 -->
-<g id="edge12" class="edge"><title>Node3189&#45;&gt;Node3191</title>
+<!-- Node3152&#45;&gt;Node3154 -->
+<g id="edge12" class="edge"><title>Node3152&#45;&gt;Node3154</title>
 <path fill="none" stroke="midnightblue" d="M360.759,-34.3348C383.922,-30.0724 409.203,-25.4203 431.399,-21.3358"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="432.16,-24.7546 441.361,-19.5025 430.893,-17.8702 432.16,-24.7546"/>
 </g>
-<!-- Node3191&#45;&gt;Node3187 -->
-<g id="edge13" class="edge"><title>Node3191&#45;&gt;Node3187</title>
+<!-- Node3154&#45;&gt;Node3150 -->
+<g id="edge13" class="edge"><title>Node3154&#45;&gt;Node3150</title>
 <path fill="none" stroke="midnightblue" d="M545.838,-19.54C564.65,-23.0701 586.579,-27.1852 607.82,-31.1711"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="607.371,-34.6479 617.845,-33.0523 608.662,-27.768 607.371,-34.6479"/>
 </g>

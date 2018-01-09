@@ -4,7 +4,7 @@ var searchData=
   ['camount',['CAmount',['../amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564',1,'amount.h']]],
   ['cbitcoinextkey',['CBitcoinExtKey',['../base58_8h.html#a34d676ba7e9ada0b90c49397b7d7b45a',1,'base58.h']]],
   ['cbitcoinextpubkey',['CBitcoinExtPubKey',['../base58_8h.html#a30ba109360a623ffbb1e1031c3765c10',1,'base58.h']]],
-  ['ccoinsmap',['CCoinsMap',['../coins_8h.html#a2886ba2fd0428bae777e1cbcabc02834',1,'coins.h']]],
+  ['ccoinsmap',['CCoinsMap',['../coins_8h.html#a6d9207327f736296422186c8192d3d30',1,'coins.h']]],
   ['cconditionvariable',['CConditionVariable',['../sync_8h.html#acdd2020d08e99abd9504ea67d0190520',1,'sync.h']]],
   ['ccriticalblock',['CCriticalBlock',['../sync_8h.html#a8a4a73fdc781f3f58f9729fce8b7d13c',1,'sync.h']]],
   ['ccriticalsection',['CCriticalSection',['../sync_8h.html#a37a4692b2d517f2843655ca11af7668a',1,'sync.h']]],

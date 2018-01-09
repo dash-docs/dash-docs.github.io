@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('class_c_private_send_client.html','');
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client__coll__graph.svg" width="100%" height="505"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -167,14 +167,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af8a649a4aa27cb51eb94384232d7b49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af714c916948fda55c513e0eb238d2cd3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#af714c916948fda55c513e0eb238d2cd3">GetStatus</a> ()</td></tr>
 <tr class="separator:af714c916948fda55c513e0eb238d2cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160f33d809a06e231bc8067b1a1245ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a160f33d809a06e231bc8067b1a1245ad">GetMixingMasternodeInfo</a> (<a class="el" href="structmasternode__info__t.html">masternode_info_t</a> &amp;mnInfoRet)</td></tr>
+<tr class="separator:a160f33d809a06e231bc8067b1a1245ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8343b61f5df92c7d9080273f44174685"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a8343b61f5df92c7d9080273f44174685">IsMixingMasternode</a> (const <a class="el" href="class_c_node.html">CNode</a> *pnode)</td></tr>
+<tr class="separator:a8343b61f5df92c7d9080273f44174685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3438123cb41c93b5323f64bb52a7331"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331">DoAutomaticDenominating</a> (<a class="el" href="class_c_connman.html">CConnman</a> &amp;connman, bool fDryRun=false)</td></tr>
 <tr class="memdesc:ad3438123cb41c93b5323f64bb52a7331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passively run mixing in the background according to the configuration in settings.  <a href="#ad3438123cb41c93b5323f64bb52a7331">More...</a><br /></td></tr>
 <tr class="separator:ad3438123cb41c93b5323f64bb52a7331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f1f1448b1737eb8e914dfc9f2edd46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a46f1f1448b1737eb8e914dfc9f2edd46">CheckTimeout</a> ()</td></tr>
 <tr class="separator:a46f1f1448b1737eb8e914dfc9f2edd46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90f93846395809d7e088fc5fd7a0f7d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a90f93846395809d7e088fc5fd7a0f7d8">NewBlock</a> ()</td></tr>
-<tr class="memdesc:a90f93846395809d7e088fc5fd7a0f7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a new block.  <a href="#a90f93846395809d7e088fc5fd7a0f7d8">More...</a><br /></td></tr>
-<tr class="separator:a90f93846395809d7e088fc5fd7a0f7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aa728cc4f11d0986229e35d33486c2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a7aa728cc4f11d0986229e35d33486c2e">UpdatedBlockTip</a> (const <a class="el" href="class_c_block_index.html">CBlockIndex</a> *pindex)</td></tr>
 <tr class="separator:a7aa728cc4f11d0986229e35d33486c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_private_send_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_private_send_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_c_private_send_base.html">CPrivateSendBase</a></td></tr>
@@ -201,8 +202,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a75799095593d6171c667e9892f2723d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0749ab2a86d86bc9961202d8776e0998"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a0749ab2a86d86bc9961202d8776e0998">fPrivateSendMultiSession</a></td></tr>
 <tr class="separator:a0749ab2a86d86bc9961202d8776e0998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7fe5ded946515b6ed6f07e3130427f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmasternode__info__t.html">masternode_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#ab7fe5ded946515b6ed6f07e3130427f9">infoMixingMasternode</a></td></tr>
-<tr class="separator:ab7fe5ded946515b6ed6f07e3130427f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84aee9524e7f78828583bcf83c6cd559"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a84aee9524e7f78828583bcf83c6cd559">nCachedNumBlocks</a></td></tr>
 <tr class="separator:a84aee9524e7f78828583bcf83c6cd559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af733c757c72bcff4b99b613cce0de29e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#af733c757c72bcff4b99b613cce0de29e">fCreateAutoBackups</a></td></tr>
@@ -241,12 +240,12 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a0c0fd844c06a51c196e9c712df4af546"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546">SubmitDenominate</a> (<a class="el" href="class_c_connman.html">CConnman</a> &amp;connman)</td></tr>
 <tr class="memdesc:a0c0fd844c06a51c196e9c712df4af546"><td class="mdescLeft">&#160;</td><td class="mdescRight">As a client, submit part of a future mixing transaction to a Masternode to start the process.  <a href="#a0c0fd844c06a51c196e9c712df4af546">More...</a><br /></td></tr>
 <tr class="separator:a0c0fd844c06a51c196e9c712df4af546"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356ed0412558a251d85ebfbc4090dcf9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a356ed0412558a251d85ebfbc4090dcf9">PrepareDenominate</a> (int nMinRounds, int nMaxRounds, std::string &amp;strErrorRet, std::vector&lt; <a class="el" href="class_c_tx_in.html">CTxIn</a> &gt; &amp;vecTxInRet, std::vector&lt; <a class="el" href="class_c_tx_out.html">CTxOut</a> &gt; &amp;vecTxOutRet)</td></tr>
-<tr class="memdesc:a356ed0412558a251d85ebfbc4090dcf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">step 1: prepare denominated inputs and outputs  <a href="#a356ed0412558a251d85ebfbc4090dcf9">More...</a><br /></td></tr>
-<tr class="separator:a356ed0412558a251d85ebfbc4090dcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dd3ad9ca84fcc35a3b3f19011494610"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a5dd3ad9ca84fcc35a3b3f19011494610">SendDenominate</a> (const std::vector&lt; <a class="el" href="class_c_tx_in.html">CTxIn</a> &gt; &amp;vecTxIn, const std::vector&lt; <a class="el" href="class_c_tx_out.html">CTxOut</a> &gt; &amp;vecTxOut, <a class="el" href="class_c_connman.html">CConnman</a> &amp;connman)</td></tr>
-<tr class="memdesc:a5dd3ad9ca84fcc35a3b3f19011494610"><td class="mdescLeft">&#160;</td><td class="mdescRight">step 2: send denominated inputs and outputs prepared in step 1  <a href="#a5dd3ad9ca84fcc35a3b3f19011494610">More...</a><br /></td></tr>
-<tr class="separator:a5dd3ad9ca84fcc35a3b3f19011494610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505994a7673bd4ca41b45256168597a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a505994a7673bd4ca41b45256168597a1">PrepareDenominate</a> (int nMinRounds, int nMaxRounds, std::string &amp;strErrorRet, std::vector&lt; <a class="el" href="class_c_tx_d_s_in.html">CTxDSIn</a> &gt; &amp;vecTxDSInRet, std::vector&lt; <a class="el" href="class_c_tx_out.html">CTxOut</a> &gt; &amp;vecTxOutRet)</td></tr>
+<tr class="memdesc:a505994a7673bd4ca41b45256168597a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">step 1: prepare denominated inputs and outputs  <a href="#a505994a7673bd4ca41b45256168597a1">More...</a><br /></td></tr>
+<tr class="separator:a505994a7673bd4ca41b45256168597a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e01fd502c2377024e5b858bb7f59337"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a7e01fd502c2377024e5b858bb7f59337">SendDenominate</a> (const std::vector&lt; <a class="el" href="class_c_tx_d_s_in.html">CTxDSIn</a> &gt; &amp;vecTxDSIn, const std::vector&lt; <a class="el" href="class_c_tx_out.html">CTxOut</a> &gt; &amp;vecTxOut, <a class="el" href="class_c_connman.html">CConnman</a> &amp;connman)</td></tr>
+<tr class="memdesc:a7e01fd502c2377024e5b858bb7f59337"><td class="mdescLeft">&#160;</td><td class="mdescRight">step 2: send denominated inputs and outputs prepared in step 1  <a href="#a7e01fd502c2377024e5b858bb7f59337">More...</a><br /></td></tr>
+<tr class="separator:a7e01fd502c2377024e5b858bb7f59337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ceb3cdbbc766124a2a79166241a72cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a1ceb3cdbbc766124a2a79166241a72cf">CheckPoolStateUpdate</a> (<a class="el" href="privatesend_8h.html#abbe2eccf5424566d6e095f9af8136a9c">PoolState</a> nStateNew, int nEntriesCountNew, <a class="el" href="privatesend_8h.html#a31c8a30d2786888a6414397247a9672b">PoolStatusUpdate</a> nStatusUpdate, <a class="el" href="privatesend_8h.html#a4546369e58c84af3d62649ca72cae73a">PoolMessage</a> nMessageID, int nSessionIDNew=0)</td></tr>
 <tr class="memdesc:a1ceb3cdbbc766124a2a79166241a72cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Masternode updates about the progress of mixing.  <a href="#a1ceb3cdbbc766124a2a79166241a72cf">More...</a><br /></td></tr>
 <tr class="separator:a1ceb3cdbbc766124a2a79166241a72cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,8 +261,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aad97f0fc94af9d511e1a52f9ad164d49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sync_8h.html#a37a4692b2d517f2843655ca11af7668a">CCriticalSection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#aad97f0fc94af9d511e1a52f9ad164d49">cs_darksend</a></td></tr>
-<tr class="separator:aad97f0fc94af9d511e1a52f9ad164d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010af65bc5f5dad3828bddf4f086ae34"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_out_point.html">COutPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#a010af65bc5f5dad3828bddf4f086ae34">vecMasternodesUsed</a></td></tr>
 <tr class="separator:a010af65bc5f5dad3828bddf4f086ae34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbc77682f1af60eea559f725059c3614"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#afbc77682f1af60eea559f725059c3614">vecDenominationsSkipped</a></td></tr>
@@ -284,6 +281,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2fd1883b287215177902202140e8fc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfa3f21c956257cfa30549134a16246b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#acfa3f21c956257cfa30549134a16246b">strAutoDenomResult</a></td></tr>
 <tr class="separator:acfa3f21c956257cfa30549134a16246b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fe5ded946515b6ed6f07e3130427f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmasternode__info__t.html">masternode_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#ab7fe5ded946515b6ed6f07e3130427f9">infoMixingMasternode</a></td></tr>
+<tr class="separator:ab7fe5ded946515b6ed6f07e3130427f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1cc0fa3fa8322950f80d7454646c4ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_mutable_transaction.html">CMutableTransaction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#af1cc0fa3fa8322950f80d7454646c4ba">txMyCollateral</a></td></tr>
 <tr class="separator:af1cc0fa3fa8322950f80d7454646c4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa144288555b8b7e5331b00382c8a2cfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_key_holder_storage.html">CKeyHolderStorage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_client.html#aa144288555b8b7e5331b00382c8a2cfe">keyHolderStorage</a></td></tr>
@@ -294,7 +293,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_c_private_send_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_c_private_send_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_c_private_send_base.html">CPrivateSendBase</a></td></tr>
 <tr class="memitem:a0391a4e1597763c859634cec88428190 inherit pro_methods_class_c_private_send_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a0391a4e1597763c859634cec88428190">SetNull</a> ()</td></tr>
 <tr class="separator:a0391a4e1597763c859634cec88428190 inherit pro_methods_class_c_private_send_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19f902730483077d67c13d0f8a7a957 inherit pro_methods_class_c_private_send_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#ae19f902730483077d67c13d0f8a7a957">CheckQueue</a> ()</td></tr>
+<tr class="separator:ae19f902730483077d67c13d0f8a7a957 inherit pro_methods_class_c_private_send_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_c_private_send_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_c_private_send_base')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_c_private_send_base.html">CPrivateSendBase</a></td></tr>
+<tr class="memitem:a34728bfdaa9656850ef06ff31919164d inherit pro_attribs_class_c_private_send_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sync_8h.html#a37a4692b2d517f2843655ca11af7668a">CCriticalSection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a34728bfdaa9656850ef06ff31919164d">cs_darksend</a></td></tr>
+<tr class="separator:a34728bfdaa9656850ef06ff31919164d inherit pro_attribs_class_c_private_send_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434f518bfe5ca5c06cd7d96160a3a890 inherit pro_attribs_class_c_private_send_base"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_darksend_queue.html">CDarksendQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a434f518bfe5ca5c06cd7d96160a3a890">vecDarksendQueue</a></td></tr>
 <tr class="separator:a434f518bfe5ca5c06cd7d96160a3a890 inherit pro_attribs_class_c_private_send_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35fe3675579b01d6f88ff010e31f7f76 inherit pro_attribs_class_c_private_send_base"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_dark_send_entry.html">CDarkSendEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a35fe3675579b01d6f88ff010e31f7f76">vecEntries</a></td></tr>
@@ -336,7 +339,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00114">114</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00112">112</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
 <p class="reference">References <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -374,11 +377,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00627">627</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00614">614</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="walletdb_8cpp_source.html#l00946">AutoBackupWallet()</a>, <a class="el" href="privatesend-client_8h_source.html#l00112">fCreateAutoBackups</a>, <a class="el" href="privatesend-client_8h_source.html#l00107">fEnablePrivateSend</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="wallet_8h_source.html#l00755">CWallet::nKeysLeftSinceAutoBackup</a>, <a class="el" href="util_8cpp_source.html#l00117">nWalletBackups</a>, <a class="el" href="privatesend-client_8h_source.html#l00027">PRIVATESEND_KEYS_THRESHOLD_STOP</a>, <a class="el" href="privatesend-client_8h_source.html#l00025">PRIVATESEND_KEYS_THRESHOLD_WARNING</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>, and <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="walletdb_8cpp_source.html#l00946">AutoBackupWallet()</a>, <a class="el" href="privatesend-client_8h_source.html#l00110">fCreateAutoBackups</a>, <a class="el" href="privatesend-client_8h_source.html#l00106">fEnablePrivateSend</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="wallet_8h_source.html#l00746">CWallet::nKeysLeftSinceAutoBackup</a>, <a class="el" href="util_8cpp_source.html#l00117">nWalletBackups</a>, <a class="el" href="privatesend-client_8h_source.html#l00027">PRIVATESEND_KEYS_THRESHOLD_STOP</a>, <a class="el" href="privatesend-client_8h_source.html#l00025">PRIVATESEND_KEYS_THRESHOLD_WARNING</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>, and <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -423,11 +426,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Check for process. </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00291">291</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00302">302</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00035">CKeyHolderStorage::KeepAll()</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="privatesend_8h_source.html#l00287">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00288">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
+<p class="reference">References <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00035">CKeyHolderStorage::KeepAll()</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="privatesend_8h_source.html#l00281">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00282">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00065">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00320">CheckTimeout()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -441,7 +444,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_ac697b8fbdc76ff365bccdf553f0ac4e9_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_ac697b8fbdc76ff365bccdf553f0ac4e9_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -501,9 +504,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get Masternode updates about the progress of mixing. </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00442">442</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00441">441</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8h_source.html#l00052">fLastEntryAccepted</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="privatesend_8cpp_source.html#l00339">CPrivateSend::GetMessageByID()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend-client_8h_source.html#l00051">nEntriesCount</a>, <a class="el" href="privatesend_8h_source.html#l00290">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00287">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00288">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00059">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_QUEUE</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01397">SetState()</a>, <a class="el" href="privatesend_8h_source.html#l00072">STATUS_ACCEPTED</a>, <a class="el" href="privatesend_8h_source.html#l00071">STATUS_REJECTED</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>, <a class="el" href="privatesend-client_8h_source.html#l00054">strLastMessage</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8h_source.html#l00050">fLastEntryAccepted</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="privatesend_8cpp_source.html#l00350">CPrivateSend::GetMessageByID()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nEntriesCount</a>, <a class="el" href="privatesend_8h_source.html#l00284">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00281">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00282">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_QUEUE</a>, <a class="el" href="privatesend_8h_source.html#l00065">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01383">SetState()</a>, <a class="el" href="privatesend_8h_source.html#l00073">STATUS_ACCEPTED</a>, <a class="el" href="privatesend_8h_source.html#l00072">STATUS_REJECTED</a>, <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>, <a class="el" href="privatesend-client_8h_source.html#l00052">strLastMessage</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -540,11 +543,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00309">309</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00320">320</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00291">CheckPool()</a>, <a class="el" href="privatesend-client_8h_source.html#l00037">cs_darksend</a>, <a class="el" href="privatesend-client_8h_source.html#l00107">fEnablePrivateSend</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="privatesend_8h_source.html#l00287">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00288">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00059">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_SIGNING</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend_8h_source.html#l00021">PRIVATESEND_QUEUE_TIMEOUT</a>, <a class="el" href="privatesend_8h_source.html#l00022">PRIVATESEND_SIGNING_TIMEOUT</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01397">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00054">strLastMessage</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, and <a class="el" href="privatesend_8h_source.html#l00283">CPrivateSendBase::vecDarksendQueue</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00302">CheckPool()</a>, <a class="el" href="privatesend_8cpp_source.html#l00121">CPrivateSendBase::CheckQueue()</a>, <a class="el" href="privatesend-client_8h_source.html#l00106">fEnablePrivateSend</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="privatesend_8h_source.html#l00281">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00282">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_SIGNING</a>, <a class="el" href="privatesend_8h_source.html#l00065">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend_8h_source.html#l00022">PRIVATESEND_QUEUE_TIMEOUT</a>, <a class="el" href="privatesend_8h_source.html#l00023">PRIVATESEND_SIGNING_TIMEOUT</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01383">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00052">strLastMessage</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00586">NewBlock()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01416">ThreadCheckPrivateSendClient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l01397">ThreadCheckPrivateSendClient()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -558,7 +561,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a46f1f1448b1737eb8e914dfc9f2edd46_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a46f1f1448b1737eb8e914dfc9f2edd46_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -587,11 +590,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00128">128</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00126">126</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00042">vecDenominationsSkipped</a>.</p>
+<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00040">vecDenominationsSkipped</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -627,9 +630,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00599">599</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00586">586</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="privatesend_8cpp_source.html#l00339">CPrivateSend::GetMessageByID()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00035">CKeyHolderStorage::KeepAll()</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00051">MSG_SUCCESS</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00045">nCachedLastSuccessBlock</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8h_source.html#l00054">strLastMessage</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
+<p class="reference">References <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="privatesend_8cpp_source.html#l00350">CPrivateSend::GetMessageByID()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00035">CKeyHolderStorage::KeepAll()</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00052">MSG_SUCCESS</a>, <a class="el" href="privatesend-client_8h_source.html#l00047">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00043">nCachedLastSuccessBlock</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8h_source.html#l00052">strLastMessage</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -677,11 +680,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Create denominations. </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01258">1258</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01244">1244</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="wallet_8h_source.html#l00672">CWallet::cs_wallet</a>, <a class="el" href="wallet_8cpp_source.html#l03072">CWallet::HasCollateralInputs()</a>, <a class="el" href="sync_8h_source.html#l00169">LOCK2</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, and <a class="el" href="wallet_8cpp_source.html#l02831">CWallet::SelectCoinsGrouppedByAddresses()</a>.</p>
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="wallet_8h_source.html#l00663">CWallet::cs_wallet</a>, <a class="el" href="wallet_8cpp_source.html#l03058">CWallet::HasCollateralInputs()</a>, <a class="el" href="sync_8h_source.html#l00169">LOCK2</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, and <a class="el" href="wallet_8cpp_source.html#l02819">CWallet::SelectCoinsGrouppedByAddresses()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -741,9 +744,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01280">1280</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01266">1266</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00028">CKeyHolderStorage::AddKey()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="wallet_8cpp_source.html#l03527">CWallet::CommitTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03044">CWallet::CountInputsWithAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, <a class="el" href="privatesend-client_8h_source.html#l00016">DENOMS_COUNT_MAX</a>, <a class="el" href="coincontrol_8h_source.html#l00014">CCoinControl::destChange</a>, <a class="el" href="coincontrol_8h_source.html#l00018">CCoinControl::fAllowOtherInputs</a>, <a class="el" href="coincontrol_8h_source.html#l00020">CCoinControl::fAllowWatchOnly</a>, <a class="el" href="privatesend_8h_source.html#l00349">CPrivateSend::GetCollateralAmount()</a>, <a class="el" href="transaction_8h_source.html#l00262">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="privatesend_8h_source.html#l00350">CPrivateSend::GetMaxCollateralAmount()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00022">CKeyHolder::GetScriptForDestination()</a>, <a class="el" href="privatesend_8h_source.html#l00328">CPrivateSend::GetStandardDenominations()</a>, <a class="el" href="privatesend-client_8h_source.html#l00065">IsDenomSkipped()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00035">CKeyHolderStorage::KeepAll()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="wallet_8h_source.html#l00114">CompactTallyItem::nAmount</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00045">nCachedLastSuccessBlock</a>, <a class="el" href="wallet_8h_source.html#l00106">ONLY_NONDENOMINATED_NOT1000IFMN</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="prevector_8h_source.html#l00381">prevector&lt; N, T, Size, Diff &gt;::push_back()</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="coincontrol_8h_source.html#l00050">CCoinControl::Select()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="wallet_8h_source.html#l00113">CompactTallyItem::txdest</a>, <a class="el" href="privatesend-client_8h_source.html#l00042">vecDenominationsSkipped</a>, and <a class="el" href="wallet_8h_source.html#l00115">CompactTallyItem::vecTxIn</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00028">CKeyHolderStorage::AddKey()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="wallet_8cpp_source.html#l03506">CWallet::CommitTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03030">CWallet::CountInputsWithAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, <a class="el" href="privatesend-client_8h_source.html#l00016">DENOMS_COUNT_MAX</a>, <a class="el" href="coincontrol_8h_source.html#l00014">CCoinControl::destChange</a>, <a class="el" href="coincontrol_8h_source.html#l00018">CCoinControl::fAllowOtherInputs</a>, <a class="el" href="coincontrol_8h_source.html#l00020">CCoinControl::fAllowWatchOnly</a>, <a class="el" href="privatesend_8h_source.html#l00347">CPrivateSend::GetCollateralAmount()</a>, <a class="el" href="transaction_8h_source.html#l00261">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="privatesend_8h_source.html#l00348">CPrivateSend::GetMaxCollateralAmount()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00022">CKeyHolder::GetScriptForDestination()</a>, <a class="el" href="privatesend_8h_source.html#l00325">CPrivateSend::GetStandardDenominations()</a>, <a class="el" href="privatesend-client_8h_source.html#l00064">IsDenomSkipped()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00035">CKeyHolderStorage::KeepAll()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="wallet_8h_source.html#l00105">CompactTallyItem::nAmount</a>, <a class="el" href="privatesend-client_8h_source.html#l00047">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00043">nCachedLastSuccessBlock</a>, <a class="el" href="wallet_8h_source.html#l00097">ONLY_NONDENOMINATED</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="prevector_8h_source.html#l00381">prevector&lt; N, T, Size, Diff &gt;::push_back()</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="coincontrol_8h_source.html#l00050">CCoinControl::Select()</a>, <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, <a class="el" href="wallet_8h_source.html#l00104">CompactTallyItem::txdest</a>, <a class="el" href="privatesend-client_8h_source.html#l00040">vecDenominationsSkipped</a>, and <a class="el" href="wallet_8h_source.html#l00106">CompactTallyItem::vecTxIn</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -783,11 +786,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Passively run mixing in the background according to the configuration in settings. </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00695">695</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00682">682</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00627">CheckAutomaticBackup()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="masternodeman_8cpp_source.html#l00368">CMasternodeMan::CountEnabled()</a>, <a class="el" href="wallet_8cpp_source.html#l03088">CWallet::CreateCollateralTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01258">CreateDenominated()</a>, <a class="el" href="privatesend-client_8h_source.html#l00037">cs_darksend</a>, <a class="el" href="privatesend-client_8h_source.html#l00107">fEnablePrivateSend</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="privatesend-client_8h_source.html#l00108">fPrivateSendMultiSession</a>, <a class="el" href="wallet_8cpp_source.html#l02155">CWallet::GetAnonymizableBalance()</a>, <a class="el" href="privatesend_8h_source.html#l00349">CPrivateSend::GetCollateralAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l02268">CWallet::GetDenominatedBalance()</a>, <a class="el" href="privatesend_8h_source.html#l00305">CPrivateSendBase::GetEntriesCount()</a>, <a class="el" href="privatesend_8h_source.html#l00350">CPrivateSend::GetMaxCollateralAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l02244">CWallet::GetNeedsToBeAnonymizedBalance()</a>, <a class="el" href="random_8cpp_source.html#l00109">GetRandInt()</a>, <a class="el" href="privatesend_8h_source.html#l00329">CPrivateSend::GetSmallestDenomination()</a>, <a class="el" href="wallet_8cpp_source.html#l03072">CWallet::HasCollateralInputs()</a>, <a class="el" href="privatesend_8cpp_source.html#l00174">CPrivateSend::IsCollateralValid()</a>, <a class="el" href="crypter_8h_source.html#l00166">CCryptoKeyStore::IsLocked()</a>, <a class="el" href="masternode-sync_8h_source.html#l00061">CMasternodeSync::IsMasternodeListSynced()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01160">MakeCollateralAmounts()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00017">masternodeSync</a>, <a class="el" href="privatesend_8h_source.html#l00025">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00017">mnodeman</a>, <a class="el" href="privatesend-client_8h_source.html#l00106">nLiquidityProvider</a>, <a class="el" href="privatesend-client_8h_source.html#l00105">nPrivateSendAmount</a>, <a class="el" href="privatesend_8h_source.html#l00290">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00287">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00059">POOL_STATE_IDLE</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="masternodeman_8h_source.html#l00195">CMasternodeMan::size()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00929">StartNewQueue()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="privatesend-client_8h_source.html#l00057">txMyCollateral</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, <a class="el" href="privatesend-client_8h_source.html#l00040">vecMasternodesUsed</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00616">WaitForAnotherBlock()</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00614">CheckAutomaticBackup()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="masternodeman_8cpp_source.html#l00371">CMasternodeMan::CountEnabled()</a>, <a class="el" href="wallet_8cpp_source.html#l03066">CWallet::CreateCollateralTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01244">CreateDenominated()</a>, <a class="el" href="privatesend_8h_source.html#l00274">CPrivateSendBase::cs_darksend</a>, <a class="el" href="privatesend-client_8h_source.html#l00106">fEnablePrivateSend</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="privatesend-client_8h_source.html#l00107">fPrivateSendMultiSession</a>, <a class="el" href="wallet_8cpp_source.html#l02147">CWallet::GetAnonymizableBalance()</a>, <a class="el" href="privatesend_8h_source.html#l00347">CPrivateSend::GetCollateralAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l02260">CWallet::GetDenominatedBalance()</a>, <a class="el" href="privatesend_8h_source.html#l00300">CPrivateSendBase::GetEntriesCount()</a>, <a class="el" href="privatesend_8h_source.html#l00348">CPrivateSend::GetMaxCollateralAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l02236">CWallet::GetNeedsToBeAnonymizedBalance()</a>, <a class="el" href="random_8cpp_source.html#l00109">GetRandInt()</a>, <a class="el" href="privatesend_8h_source.html#l00326">CPrivateSend::GetSmallestDenomination()</a>, <a class="el" href="wallet_8cpp_source.html#l03058">CWallet::HasCollateralInputs()</a>, <a class="el" href="privatesend_8cpp_source.html#l00179">CPrivateSend::IsCollateralValid()</a>, <a class="el" href="crypter_8h_source.html#l00166">CCryptoKeyStore::IsLocked()</a>, <a class="el" href="masternode-sync_8h_source.html#l00061">CMasternodeSync::IsMasternodeListSynced()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01147">MakeCollateralAmounts()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00018">masternodeSync</a>, <a class="el" href="privatesend_8h_source.html#l00026">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00020">mnodeman</a>, <a class="el" href="privatesend-client_8h_source.html#l00105">nLiquidityProvider</a>, <a class="el" href="privatesend-client_8h_source.html#l00104">nPrivateSendAmount</a>, <a class="el" href="privatesend_8h_source.html#l00284">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00281">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_IDLE</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="masternodeman_8h_source.html#l00194">CMasternodeMan::size()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00916">StartNewQueue()</a>, <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="privatesend-client_8h_source.html#l00056">txMyCollateral</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, <a class="el" href="privatesend-client_8h_source.html#l00038">vecMasternodesUsed</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00603">WaitForAnotherBlock()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00025">privatesend()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00575">OverviewPage::privateSendAuto()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01416">ThreadCheckPrivateSendClient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="overviewpage_8cpp_source.html#l00575">OverviewPage::privateSendAuto()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01397">ThreadCheckPrivateSendClient()</a>.</p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -801,7 +804,39 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-18-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_ad3438123cb41c93b5323f64bb52a7331_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_ad3438123cb41c93b5323f64bb52a7331_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a160f33d809a06e231bc8067b1a1245ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160f33d809a06e231bc8067b1a1245ad">&#9670;&nbsp;</a></span>GetMixingMasternodeInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CPrivateSendClient::GetMixingMasternodeInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmasternode__info__t.html">masternode_info_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>mnInfoRet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00288">288</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, and <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00070">getpoolinfo()</a>.</p>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a160f33d809a06e231bc8067b1a1245ad_icgraph.svg" width="323" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -824,23 +859,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00239">239</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8h_source.html#l00052">fLastEntryAccepted</a>, <a class="el" href="privatesend_8h_source.html#l00343">CPrivateSend::GetMaxPoolTransactions()</a>, <a class="el" href="masternode-sync_8h_source.html#l00060">CMasternodeSync::IsBlockchainSynced()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00017">masternodeSync</a>, <a class="el" href="privatesend-client_8h_source.html#l00051">nEntriesCount</a>, <a class="el" href="privatesend_8h_source.html#l00287">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00059">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_QUEUE</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_SIGNING</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>, <a class="el" href="privatesend-client_8h_source.html#l00054">strLastMessage</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00616">WaitForAnotherBlock()</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="privatesend-client_8h_source.html#l00050">fLastEntryAccepted</a>, <a class="el" href="privatesend_8h_source.html#l00341">CPrivateSend::GetMaxPoolTransactions()</a>, <a class="el" href="masternode-sync_8h_source.html#l00060">CMasternodeSync::IsBlockchainSynced()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00018">masternodeSync</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nEntriesCount</a>, <a class="el" href="privatesend_8h_source.html#l00281">CPrivateSendBase::nState</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_QUEUE</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_SIGNING</a>, <a class="el" href="privatesend_8h_source.html#l00065">POOL_STATE_SUCCESS</a>, <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>, <a class="el" href="privatesend-client_8h_source.html#l00052">strLastMessage</a>, <a class="el" href="tinyformat_8h_source.html#l01011">strprintf</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00603">WaitForAnotherBlock()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00065">getpoolinfo()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00025">privatesend()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>.</p>
-<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-19-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_af714c916948fda55c513e0eb238d2cd3_cgraph.svg" width="100%" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
+<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00070">getpoolinfo()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>.</p>
 <div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-20-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_af714c916948fda55c513e0eb238d2cd3_icgraph.svg" width="636" height="172"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_af714c916948fda55c513e0eb238d2cd3_cgraph.svg" width="100%" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_af714c916948fda55c513e0eb238d2cd3_icgraph.svg" width="636" height="122"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -870,17 +905,49 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00065">65</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00064">64</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00042">vecDenominationsSkipped</a>.</p>
+<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00040">vecDenominationsSkipped</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l01280">CreateDenominated()</a>.</p>
-<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l01266">CreateDenominated()</a>.</p>
+<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a39479063476c18d9faf8531867d522d5_icgraph.svg" width="343" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8343b61f5df92c7d9080273f44174685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8343b61f5df92c7d9080273f44174685">&#9670;&nbsp;</a></span>IsMixingMasternode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CPrivateSendClient::IsMixingMasternode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_node.html">CNode</a> *&#160;</td>
+          <td class="paramname"><em>pnode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00294">294</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="net_8h_source.html#l00688">CNode::addr</a>, <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, and <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="masternodeman_8cpp_source.html#l00696">CMasternodeMan::ProcessMasternodeConnections()</a>.</p>
+<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a8343b61f5df92c7d9080273f44174685_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -920,25 +987,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00845">845</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00832">832</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="net_8h_source.html#l00160">CConnman::AllNodes</a>, <a class="el" href="net_8cpp_source.html#l00347">CConnman::ConnectNode()</a>, <a class="el" href="protocol_8cpp_source.html#l00054">NetMsgType::DSACCEPT</a>, <a class="el" href="net_8cpp_source.html#l02879">CConnman::ForNode()</a>, <a class="el" href="privatesend_8h_source.html#l00158">CDarksendQueue::fTried</a>, <a class="el" href="privatesend_8cpp_source.html#l00303">CPrivateSend::GetDenominationsBits()</a>, <a class="el" href="privatesend_8cpp_source.html#l00230">CPrivateSend::GetDenominationsToString()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00440">CMasternodeMan::GetMasternodeInfo()</a>, <a class="el" href="privatesend_8h_source.html#l00328">CPrivateSend::GetStandardDenominations()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00110">infoMixingMasternode</a>, <a class="el" href="privatesend_8h_source.html#l00203">CDarksendQueue::IsExpired()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00025">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00017">mnodeman</a>, <a class="el" href="privatesend_8h_source.html#l00152">CDarksendQueue::nDenom</a>, <a class="el" href="protocol_8h_source.html#l00259">NODE_NETWORK</a>, <a class="el" href="privatesend-client_8h_source.html#l00104">nPrivateSendRounds</a>, <a class="el" href="masternode_8h_source.html#l00111">masternode_info_t::nProtocolVersion</a>, <a class="el" href="privatesend_8h_source.html#l00297">CPrivateSendBase::nSessionDenom</a>, <a class="el" href="privatesend_8h_source.html#l00288">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_QUEUE</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="net_8h_source.html#l00199">CConnman::PushMessage()</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="wallet_8cpp_source.html#l02762">CWallet::SelectCoinsByDenominations()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01397">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>, <a class="el" href="privatesend_8h_source.html#l00205">CDarksendQueue::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>, <a class="el" href="privatesend-client_8h_source.html#l00057">txMyCollateral</a>, <a class="el" href="privatesend_8h_source.html#l00283">CPrivateSendBase::vecDarksendQueue</a>, <a class="el" href="privatesend-client_8h_source.html#l00040">vecMasternodesUsed</a>, and <a class="el" href="privatesend_8h_source.html#l00153">CDarksendQueue::vin</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="net_8h_source.html#l00160">CConnman::AllNodes</a>, <a class="el" href="net_8cpp_source.html#l00346">CConnman::ConnectNode()</a>, <a class="el" href="protocol_8cpp_source.html#l00054">NetMsgType::DSACCEPT</a>, <a class="el" href="net_8cpp_source.html#l02878">CConnman::ForNode()</a>, <a class="el" href="privatesend_8h_source.html#l00150">CDarksendQueue::fTried</a>, <a class="el" href="privatesend_8cpp_source.html#l00306">CPrivateSend::GetDenominationsBits()</a>, <a class="el" href="privatesend_8cpp_source.html#l00243">CPrivateSend::GetDenominationsToString()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00443">CMasternodeMan::GetMasternodeInfo()</a>, <a class="el" href="privatesend_8h_source.html#l00325">CPrivateSend::GetStandardDenominations()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>, <a class="el" href="privatesend_8h_source.html#l00195">CDarksendQueue::IsExpired()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00026">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00020">mnodeman</a>, <a class="el" href="privatesend_8h_source.html#l00144">CDarksendQueue::nDenom</a>, <a class="el" href="protocol_8h_source.html#l00259">NODE_NETWORK</a>, <a class="el" href="privatesend-client_8h_source.html#l00103">nPrivateSendRounds</a>, <a class="el" href="masternode_8h_source.html#l00111">masternode_info_t::nProtocolVersion</a>, <a class="el" href="privatesend_8h_source.html#l00292">CPrivateSendBase::nSessionDenom</a>, <a class="el" href="privatesend_8h_source.html#l00282">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_QUEUE</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="net_8h_source.html#l00199">CConnman::PushMessage()</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="wallet_8cpp_source.html#l02751">CWallet::SelectCoinsByDenominations()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01383">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>, <a class="el" href="privatesend_8h_source.html#l00197">CDarksendQueue::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>, <a class="el" href="privatesend-client_8h_source.html#l00056">txMyCollateral</a>, <a class="el" href="privatesend_8h_source.html#l00277">CPrivateSendBase::vecDarksendQueue</a>, <a class="el" href="privatesend-client_8h_source.html#l00038">vecMasternodesUsed</a>, and <a class="el" href="privatesend_8h_source.html#l00145">CDarksendQueue::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>.</p>
-<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>.</p>
+<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a58fe9de7d8ed8dff1503299c42e9138f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-23-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a58fe9de7d8ed8dff1503299c42e9138f_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a58fe9de7d8ed8dff1503299c42e9138f_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -970,25 +1037,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Split up large inputs or make fee sized inputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01160">1160</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01147">1147</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, and <a class="el" href="wallet_8cpp_source.html#l02831">CWallet::SelectCoinsGrouppedByAddresses()</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, and <a class="el" href="wallet_8cpp_source.html#l02819">CWallet::SelectCoinsGrouppedByAddresses()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>.</p>
-<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>.</p>
+<div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div id="dynsection-26-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a3f4bddf72925cabe06a4c85f6ad522d7_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-<div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-25-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a3f4bddf72925cabe06a4c85f6ad522d7_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a3f4bddf72925cabe06a4c85f6ad522d7_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1034,63 +1101,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01186">1186</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01173">1173</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="wallet_8cpp_source.html#l03527">CWallet::CommitTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="wallet_8h_source.html#l00672">CWallet::cs_wallet</a>, <a class="el" href="coincontrol_8h_source.html#l00014">CCoinControl::destChange</a>, <a class="el" href="coincontrol_8h_source.html#l00018">CCoinControl::fAllowOtherInputs</a>, <a class="el" href="coincontrol_8h_source.html#l00020">CCoinControl::fAllowWatchOnly</a>, <a class="el" href="transaction_8h_source.html#l00262">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="pubkey_8h_source.html#l00144">CPubKey::GetID()</a>, <a class="el" href="privatesend_8h_source.html#l00350">CPrivateSend::GetMaxCollateralAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l04101">CReserveKey::GetReservedKey()</a>, <a class="el" href="standard_8cpp_source.html#l00262">GetScriptForDestination()</a>, <a class="el" href="wallet_8cpp_source.html#l01343">CWallet::IsDenominatedAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l04120">CReserveKey::KeepKey()</a>, <a class="el" href="sync_8h_source.html#l00169">LOCK2</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="wallet_8h_source.html#l00114">CompactTallyItem::nAmount</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00045">nCachedLastSuccessBlock</a>, <a class="el" href="wallet_8h_source.html#l00106">ONLY_NONDENOMINATED_NOT1000IFMN</a>, <a class="el" href="wallet_8h_source.html#l00105">ONLY_NOT1000IFMN</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="prevector_8h_source.html#l00381">prevector&lt; N, T, Size, Diff &gt;::push_back()</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="wallet_8cpp_source.html#l04129">CReserveKey::ReturnKey()</a>, <a class="el" href="coincontrol_8h_source.html#l00050">CCoinControl::Select()</a>, <a class="el" href="wallet_8h_source.html#l00113">CompactTallyItem::txdest</a>, and <a class="el" href="wallet_8h_source.html#l00115">CompactTallyItem::vecTxIn</a>.</p>
-<div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="wallet_8h_source.html#l00095">ALL_COINS</a>, <a class="el" href="wallet_8cpp_source.html#l03506">CWallet::CommitTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="wallet_8h_source.html#l00663">CWallet::cs_wallet</a>, <a class="el" href="coincontrol_8h_source.html#l00014">CCoinControl::destChange</a>, <a class="el" href="coincontrol_8h_source.html#l00018">CCoinControl::fAllowOtherInputs</a>, <a class="el" href="coincontrol_8h_source.html#l00020">CCoinControl::fAllowWatchOnly</a>, <a class="el" href="transaction_8h_source.html#l00261">CTransaction::GetHash()</a>, <a class="el" href="uint256_8cpp_source.html#l00021">base_blob&lt; BITS &gt;::GetHex()</a>, <a class="el" href="pubkey_8h_source.html#l00144">CPubKey::GetID()</a>, <a class="el" href="privatesend_8h_source.html#l00348">CPrivateSend::GetMaxCollateralAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l04080">CReserveKey::GetReservedKey()</a>, <a class="el" href="standard_8cpp_source.html#l00262">GetScriptForDestination()</a>, <a class="el" href="privatesend_8cpp_source.html#l00342">CPrivateSend::IsDenominatedAmount()</a>, <a class="el" href="wallet_8cpp_source.html#l04099">CReserveKey::KeepKey()</a>, <a class="el" href="sync_8h_source.html#l00169">LOCK2</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="wallet_8h_source.html#l00105">CompactTallyItem::nAmount</a>, <a class="el" href="privatesend-client_8h_source.html#l00047">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00043">nCachedLastSuccessBlock</a>, <a class="el" href="wallet_8h_source.html#l00097">ONLY_NONDENOMINATED</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="prevector_8h_source.html#l00381">prevector&lt; N, T, Size, Diff &gt;::push_back()</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="wallet_8cpp_source.html#l04108">CReserveKey::ReturnKey()</a>, <a class="el" href="coincontrol_8h_source.html#l00050">CCoinControl::Select()</a>, <a class="el" href="wallet_8h_source.html#l00104">CompactTallyItem::txdest</a>, and <a class="el" href="wallet_8h_source.html#l00106">CompactTallyItem::vecTxIn</a>.</p>
+<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_ad603beaa1644f6e6cfb8ca7d1400d46e_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a90f93846395809d7e088fc5fd7a0f7d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90f93846395809d7e088fc5fd7a0f7d8">&#9670;&nbsp;</a></span>NewBlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CPrivateSendClient::NewBlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process a new block. </p>
-
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00586">586</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="utiltime_8cpp_source.html#l00020">GetTime()</a>, and <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l01403">UpdatedBlockTip()</a>.</p>
-<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-27-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a90f93846395809d7e088fc5fd7a0f7d8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-28-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a90f93846395809d7e088fc5fd7a0f7d8_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a356ed0412558a251d85ebfbc4090dcf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a356ed0412558a251d85ebfbc4090dcf9">&#9670;&nbsp;</a></span>PrepareDenominate()</h2>
+<a id="a505994a7673bd4ca41b45256168597a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a505994a7673bd4ca41b45256168597a1">&#9670;&nbsp;</a></span>PrepareDenominate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1119,8 +1145,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_c_tx_in.html">CTxIn</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vecTxInRet</em>, </td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_c_tx_d_s_in.html">CTxDSIn</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vecTxDSInRet</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1143,17 +1169,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>step 1: prepare denominated inputs and outputs </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01039">1039</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01026">1026</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend-util_8cpp_source.html#l00028">CKeyHolderStorage::AddKey()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="wallet_8h_source.html#l00672">CWallet::cs_wallet</a>, <a class="el" href="privatesend_8cpp_source.html#l00271">CPrivateSend::GetDenominations()</a>, <a class="el" href="privatesend_8cpp_source.html#l00303">CPrivateSend::GetDenominationsBits()</a>, <a class="el" href="privatesend_8h_source.html#l00305">CPrivateSendBase::GetEntriesCount()</a>, <a class="el" href="privatesend_8h_source.html#l00345">CPrivateSend::GetMaxPoolAmount()</a>, <a class="el" href="random_8cpp_source.html#l00109">GetRandInt()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00022">CKeyHolder::GetScriptForDestination()</a>, <a class="el" href="privatesend_8h_source.html#l00328">CPrivateSend::GetStandardDenominations()</a>, <a class="el" href="crypter_8h_source.html#l00166">CCryptoKeyStore::IsLocked()</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="wallet_8cpp_source.html#l04193">CWallet::LockCoin()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00297">CPrivateSendBase::nSessionDenom</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="privatesend_8h_source.html#l00027">PRIVATESEND_ENTRY_MAX_SIZE</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="wallet_8cpp_source.html#l02762">CWallet::SelectCoinsByDenominations()</a>, <a class="el" href="wallet_8cpp_source.html#l04204">CWallet::UnlockCoin()</a>, and <a class="el" href="wallet__tests_8cpp_source.html#l00031">vCoins</a>.</p>
+<p class="reference">References <a class="el" href="privatesend-util_8cpp_source.html#l00028">CKeyHolderStorage::AddKey()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="wallet_8h_source.html#l00663">CWallet::cs_wallet</a>, <a class="el" href="privatesend_8cpp_source.html#l00274">CPrivateSend::GetDenominations()</a>, <a class="el" href="privatesend_8cpp_source.html#l00306">CPrivateSend::GetDenominationsBits()</a>, <a class="el" href="privatesend_8h_source.html#l00300">CPrivateSendBase::GetEntriesCount()</a>, <a class="el" href="privatesend_8h_source.html#l00343">CPrivateSend::GetMaxPoolAmount()</a>, <a class="el" href="random_8cpp_source.html#l00109">GetRandInt()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00022">CKeyHolder::GetScriptForDestination()</a>, <a class="el" href="privatesend_8h_source.html#l00325">CPrivateSend::GetStandardDenominations()</a>, <a class="el" href="crypter_8h_source.html#l00166">CCryptoKeyStore::IsLocked()</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="sync_8h_source.html#l00168">LOCK</a>, <a class="el" href="wallet_8cpp_source.html#l04172">CWallet::LockCoin()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00292">CPrivateSendBase::nSessionDenom</a>, <a class="el" href="privatesend_8h_source.html#l00028">PRIVATESEND_ENTRY_MAX_SIZE</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="wallet_8cpp_source.html#l02751">CWallet::SelectCoinsByDenominations()</a>, <a class="el" href="wallet_8cpp_source.html#l04183">CWallet::UnlockCoin()</a>, and <a class="el" href="wallet__tests_8cpp_source.html#l00031">vCoins</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l01011">SubmitDenominate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00998">SubmitDenominate()</a>.</p>
 <div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-29-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-29-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a356ed0412558a251d85ebfbc4090dcf9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a505994a7673bd4ca41b45256168597a1_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1161,7 +1187,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-30-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-30-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a356ed0412558a251d85ebfbc4090dcf9_icgraph.svg" width="100%" height="417"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a505994a7673bd4ca41b45256168597a1_icgraph.svg" width="100%" height="417"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1207,9 +1233,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00021">21</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="net_8h_source.html#l00688">CNode::addr</a>, <a class="el" href="masternodeman_8cpp_source.html#l00109">CMasternodeMan::AllowMixing()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00080">CMasternodeMan::AskForMN()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00599">CompletedTransaction()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00368">CMasternodeMan::CountEnabled()</a>, <a class="el" href="privatesend-client_8h_source.html#l00037">cs_darksend</a>, <a class="el" href="protocol_8cpp_source.html#l00058">NetMsgType::DSCOMPLETE</a>, <a class="el" href="protocol_8cpp_source.html#l00056">NetMsgType::DSFINALTX</a>, <a class="el" href="protocol_8cpp_source.html#l00061">NetMsgType::DSQUEUE</a>, <a class="el" href="protocol_8cpp_source.html#l00059">NetMsgType::DSSTATUSUPDATE</a>, <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, <a class="el" href="util_8cpp_source.html#l00109">fLiteMode</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="masternodeman_8cpp_source.html#l00440">CMasternodeMan::GetMasternodeInfo()</a>, <a class="el" href="privatesend_8cpp_source.html#l00339">CPrivateSend::GetMessageByID()</a>, <a class="el" href="privatesend-client_8h_source.html#l00110">infoMixingMasternode</a>, <a class="el" href="masternode-sync_8h_source.html#l00060">CMasternodeSync::IsBlockchainSynced()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00017">masternodeSync</a>, <a class="el" href="privatesend_8h_source.html#l00025">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00017">mnodeman</a>, <a class="el" href="privatesend_8h_source.html#l00054">MSG_POOL_MAX</a>, <a class="el" href="masternodeman_8h_source.html#l00091">CMasternodeMan::nDsqCount</a>, <a class="el" href="privatesend-client_8h_source.html#l00051">nEntriesCount</a>, <a class="el" href="masternode_8h_source.html#l00120">masternode_info_t::nLastDsq</a>, <a class="el" href="privatesend_8h_source.html#l00290">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00287">CPrivateSendBase::nState</a>, <a class="el" href="net_8h_source.html#l00692">CNode::nVersion</a>, <a class="el" href="privatesend_8h_source.html#l00066">POOL_STATE_MAX</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_QUEUE</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="masternode_8h_source.html#l00117">masternode_info_t::pubKeyMasternode</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00488">SignFinalTransaction()</a>, <a class="el" href="privatesend_8h_source.html#l00072">STATUS_ACCEPTED</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01011">SubmitDenominate()</a>, <a class="el" href="netaddress_8cpp_source.html#l00568">CService::ToString()</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="privatesend_8h_source.html#l00283">CPrivateSendBase::vecDarksendQueue</a>, <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>, and <a class="el" href="privatesend_8h_source.html#l00153">CDarksendQueue::vin</a>.</p>
+<p class="reference">References <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="net_8h_source.html#l00688">CNode::addr</a>, <a class="el" href="masternodeman_8cpp_source.html#l00112">CMasternodeMan::AllowMixing()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00083">CMasternodeMan::AskForMN()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00586">CompletedTransaction()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00371">CMasternodeMan::CountEnabled()</a>, <a class="el" href="privatesend_8h_source.html#l00274">CPrivateSendBase::cs_darksend</a>, <a class="el" href="protocol_8cpp_source.html#l00058">NetMsgType::DSCOMPLETE</a>, <a class="el" href="protocol_8cpp_source.html#l00056">NetMsgType::DSFINALTX</a>, <a class="el" href="protocol_8cpp_source.html#l00061">NetMsgType::DSQUEUE</a>, <a class="el" href="protocol_8cpp_source.html#l00059">NetMsgType::DSSTATUSUPDATE</a>, <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, <a class="el" href="util_8cpp_source.html#l00109">fLiteMode</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="masternodeman_8cpp_source.html#l00443">CMasternodeMan::GetMasternodeInfo()</a>, <a class="el" href="privatesend_8cpp_source.html#l00350">CPrivateSend::GetMessageByID()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>, <a class="el" href="masternode-sync_8h_source.html#l00060">CMasternodeSync::IsBlockchainSynced()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00018">masternodeSync</a>, <a class="el" href="privatesend_8h_source.html#l00026">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00020">mnodeman</a>, <a class="el" href="privatesend_8h_source.html#l00055">MSG_POOL_MAX</a>, <a class="el" href="masternodeman_8h_source.html#l00091">CMasternodeMan::nDsqCount</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nEntriesCount</a>, <a class="el" href="masternode_8h_source.html#l00120">masternode_info_t::nLastDsq</a>, <a class="el" href="privatesend_8h_source.html#l00284">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00281">CPrivateSendBase::nState</a>, <a class="el" href="net_8h_source.html#l00692">CNode::nVersion</a>, <a class="el" href="privatesend_8h_source.html#l00067">POOL_STATE_MAX</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_QUEUE</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="masternode_8h_source.html#l00117">masternode_info_t::pubKeyMasternode</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00487">SignFinalTransaction()</a>, <a class="el" href="privatesend_8h_source.html#l00073">STATUS_ACCEPTED</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00998">SubmitDenominate()</a>, <a class="el" href="netaddress_8cpp_source.html#l00568">CService::ToString()</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="privatesend_8h_source.html#l00277">CPrivateSendBase::vecDarksendQueue</a>, <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>, and <a class="el" href="privatesend_8h_source.html#l00145">CDarksendQueue::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>.</p>
 <div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-31-summary" class="dynsummary" style="display:block;">
@@ -1263,11 +1289,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01386">1386</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01372">1372</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, <a class="el" href="net_8cpp_source.html#l02879">CConnman::ForNode()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00110">infoMixingMasternode</a>.</p>
+<p class="reference">References <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, <a class="el" href="net_8cpp_source.html#l02878">CConnman::ForNode()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>.</p>
 <div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-33-summary" class="dynsummary" style="display:block;">
@@ -1304,9 +1330,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00203">203</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="privatesend-client_8h_source.html#l00045">nCachedLastSuccessBlock</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8h_source.html#l00057">txMyCollateral</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00040">vecMasternodesUsed</a>.</p>
+<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="privatesend-client_8h_source.html#l00043">nCachedLastSuccessBlock</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8h_source.html#l00056">txMyCollateral</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00038">vecMasternodesUsed</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00025">privatesend()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00579">OverviewPage::privateSendReset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="overviewpage_8cpp_source.html#l00579">OverviewPage::privateSendReset()</a>.</p>
 <div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-35-summary" class="dynsummary" style="display:block;">
@@ -1320,14 +1346,14 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-36-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-36-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_ac311fe13f1289e5df9a4420d58d06d09_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_ac311fe13f1289e5df9a4420d58d06d09_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a5dd3ad9ca84fcc35a3b3f19011494610"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dd3ad9ca84fcc35a3b3f19011494610">&#9670;&nbsp;</a></span>SendDenominate()</h2>
+<a id="a7e01fd502c2377024e5b858bb7f59337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e01fd502c2377024e5b858bb7f59337">&#9670;&nbsp;</a></span>SendDenominate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1338,8 +1364,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">bool CPrivateSendClient::SendDenominate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_c_tx_in.html">CTxIn</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vecTxIn</em>, </td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_c_tx_d_s_in.html">CTxDSIn</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vecTxDSIn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1368,17 +1394,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>step 2: send denominated inputs and outputs prepared in step 1 </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00362">362</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00361">361</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8cpp_source.html#l01014">AcceptToMemoryPool()</a>, <a class="el" href="validation_8cpp_source.html#l03642">CheckDiskSpace()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="privatesend-client_8h_source.html#l00107">fEnablePrivateSend</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="transaction_8cpp_source.html#l00071">CMutableTransaction::GetHash()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="privatesend_8h_source.html#l00290">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00288">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="txmempool_8cpp_source.html#l00934">CTxMemPool::PrioritiseTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01386">RelayIn()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01397">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00054">strLastMessage</a>, <a class="el" href="uint256_8cpp_source.html#l00065">base_blob&lt; BITS &gt;::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00036">CTxIn::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00063">CTxOut::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00076">CMutableTransaction::ToString()</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="privatesend-client_8h_source.html#l00057">txMyCollateral</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, <a class="el" href="privatesend_8h_source.html#l00285">CPrivateSendBase::vecEntries</a>, <a class="el" href="privatesend-client_8h_source.html#l00043">vecOutPointLocked</a>, <a class="el" href="transaction_8h_source.html#l00306">CMutableTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00307">CMutableTransaction::vout</a>.</p>
+<p class="reference">References <a class="el" href="validation_8cpp_source.html#l01019">AcceptToMemoryPool()</a>, <a class="el" href="validation_8cpp_source.html#l03645">CheckDiskSpace()</a>, <a class="el" href="amount_8h_source.html#l00016">COIN</a>, <a class="el" href="validation_8cpp_source.html#l00062">cs_main</a>, <a class="el" href="privatesend-client_8h_source.html#l00106">fEnablePrivateSend</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="transaction_8cpp_source.html#l00071">CMutableTransaction::GetHash()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a>, <a class="el" href="privatesend_8h_source.html#l00284">CPrivateSendBase::nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00282">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="txmempool_8cpp_source.html#l00928">CTxMemPool::PrioritiseTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01372">RelayIn()</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01383">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00052">strLastMessage</a>, <a class="el" href="uint256_8cpp_source.html#l00065">base_blob&lt; BITS &gt;::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00063">CTxOut::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00076">CMutableTransaction::ToString()</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="privatesend-client_8h_source.html#l00056">txMyCollateral</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, <a class="el" href="privatesend_8h_source.html#l00279">CPrivateSendBase::vecEntries</a>, <a class="el" href="privatesend-client_8h_source.html#l00041">vecOutPointLocked</a>, <a class="el" href="transaction_8h_source.html#l00305">CMutableTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00306">CMutableTransaction::vout</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l01011">SubmitDenominate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00998">SubmitDenominate()</a>.</p>
 <div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-37-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-37-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a5dd3ad9ca84fcc35a3b3f19011494610_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a7e01fd502c2377024e5b858bb7f59337_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1386,7 +1412,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-38-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-38-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a5dd3ad9ca84fcc35a3b3f19011494610_icgraph.svg" width="100%" height="417"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a7e01fd502c2377024e5b858bb7f59337_icgraph.svg" width="100%" height="417"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1416,11 +1442,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00130">130</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00128">128</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00046">nMinBlocksToWait</a>.</p>
+<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00044">nMinBlocksToWait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>.</p>
 <div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-39-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-39-summary" class="dynsummary" style="display:block;">
@@ -1457,9 +1483,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00213">213</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00052">fLastEntryAccepted</a>, <a class="el" href="privatesend-client_8h_source.html#l00110">infoMixingMasternode</a>, <a class="el" href="privatesend-client_8h_source.html#l00051">nEntriesCount</a>, and <a class="el" href="privatesend_8cpp_source.html#l00119">CPrivateSendBase::SetNull()</a>.</p>
+<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00050">fLastEntryAccepted</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nEntriesCount</a>, and <a class="el" href="privatesend_8cpp_source.html#l00109">CPrivateSendBase::SetNull()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00291">CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00599">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8h_source.html#l00114">CPrivateSendClient()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00488">SignFinalTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00302">CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00586">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8h_source.html#l00112">CPrivateSendClient()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00487">SignFinalTransaction()</a>.</p>
 <div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-40-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-40-summary" class="dynsummary" style="display:block;">
@@ -1503,17 +1529,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01397">1397</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01383">1383</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, and <a class="el" href="privatesend_8h_source.html#l00287">CPrivateSendBase::nState</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, and <a class="el" href="privatesend_8h_source.html#l00281">CPrivateSendBase::nState</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00488">SignFinalTransaction()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00929">StartNewQueue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00487">SignFinalTransaction()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00916">StartNewQueue()</a>.</p>
 <div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-42-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-42-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-42-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_aeecf1de650020b699ac781d6e35738ca_icgraph.svg" width="100%" height="571"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_aeecf1de650020b699ac781d6e35738ca_icgraph.svg" width="100%" height="568"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1561,9 +1587,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>As a client, check and sign the final transaction. </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00488">488</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00487">487</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="protocol_8cpp_source.html#l00057">NetMsgType::DSSIGNFINALTX</a>, <a class="el" href="privatesend_8h_source.html#l00292">CPrivateSendBase::finalMutableTransaction</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="transaction_8h_source.html#l00262">CTransaction::GetHash()</a>, <a class="el" href="transaction_8cpp_source.html#l00071">CMutableTransaction::GetHash()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00110">infoMixingMasternode</a>, <a class="el" href="privatesend-client_8h_source.html#l00059">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00288">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::nValue</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_SIGNING</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="transaction_8h_source.html#l00064">CTxIn::prevPubKey</a>, <a class="el" href="net_8h_source.html#l00199">CConnman::PushMessage()</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="core__write_8cpp_source.html#l00075">ScriptToAsmStr()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01397">SetState()</a>, <a class="el" href="interpreter_8h_source.html#l00024">SIGHASH_ALL</a>, <a class="el" href="interpreter_8h_source.html#l00027">SIGHASH_ANYONECANPAY</a>, <a class="el" href="sign_8cpp_source.html#l00129">SignSignature()</a>, <a class="el" href="transaction_8cpp_source.html#l00076">CMutableTransaction::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, <a class="el" href="privatesend_8h_source.html#l00285">CPrivateSendBase::vecEntries</a>, <a class="el" href="privatesend_8h_source.html#l00118">CDarkSendEntry::vecTxDSIn</a>, <a class="el" href="privatesend_8h_source.html#l00119">CDarkSendEntry::vecTxDSOut</a>, <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>, <a class="el" href="transaction_8h_source.html#l00306">CMutableTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00307">CMutableTransaction::vout</a>.</p>
+<p class="reference">References <a class="el" href="protocol_8cpp_source.html#l00057">NetMsgType::DSSIGNFINALTX</a>, <a class="el" href="privatesend_8h_source.html#l00286">CPrivateSendBase::finalMutableTransaction</a>, <a class="el" href="util_8cpp_source.html#l00108">fMasterNode</a>, <a class="el" href="transaction_8h_source.html#l00261">CTransaction::GetHash()</a>, <a class="el" href="transaction_8cpp_source.html#l00071">CMutableTransaction::GetHash()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>, <a class="el" href="privatesend-client_8h_source.html#l00058">keyHolderStorage</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00282">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_SIGNING</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="privatesend_8h_source.html#l00082">CTxDSIn::prevPubKey</a>, <a class="el" href="net_8h_source.html#l00199">CConnman::PushMessage()</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="privatesend-util_8cpp_source.html#l00045">CKeyHolderStorage::ReturnAll()</a>, <a class="el" href="core__write_8cpp_source.html#l00075">ScriptToAsmStr()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01383">SetState()</a>, <a class="el" href="interpreter_8h_source.html#l00024">SIGHASH_ALL</a>, <a class="el" href="interpreter_8h_source.html#l00027">SIGHASH_ANYONECANPAY</a>, <a class="el" href="sign_8cpp_source.html#l00129">SignSignature()</a>, <a class="el" href="transaction_8cpp_source.html#l00076">CMutableTransaction::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>, <a class="el" href="privatesend_8h_source.html#l00279">CPrivateSendBase::vecEntries</a>, <a class="el" href="privatesend_8h_source.html#l00105">CDarkSendEntry::vecTxDSIn</a>, <a class="el" href="privatesend_8h_source.html#l00106">CDarkSendEntry::vecTxOut</a>, <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>, <a class="el" href="transaction_8h_source.html#l00305">CMutableTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00306">CMutableTransaction::vout</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>.</p>
 <div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1625,11 +1651,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00929">929</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00916">916</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="net_8h_source.html#l00160">CConnman::AllNodes</a>, <a class="el" href="net_8cpp_source.html#l00347">CConnman::ConnectNode()</a>, <a class="el" href="wallet_8cpp_source.html#l03158">CWallet::ConvertList()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00368">CMasternodeMan::CountEnabled()</a>, <a class="el" href="protocol_8cpp_source.html#l00054">NetMsgType::DSACCEPT</a>, <a class="el" href="masternodeman_8cpp_source.html#l00566">CMasternodeMan::FindRandomNotInVec()</a>, <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, <a class="el" href="net_8cpp_source.html#l02879">CConnman::ForNode()</a>, <a class="el" href="privatesend_8cpp_source.html#l00326">CPrivateSend::GetDenominationsByAmounts()</a>, <a class="el" href="privatesend_8cpp_source.html#l00230">CPrivateSend::GetDenominationsToString()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00110">infoMixingMasternode</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00025">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00017">mnodeman</a>, <a class="el" href="masternodeman_8h_source.html#l00091">CMasternodeMan::nDsqCount</a>, <a class="el" href="masternode_8h_source.html#l00120">masternode_info_t::nLastDsq</a>, <a class="el" href="protocol_8h_source.html#l00259">NODE_NETWORK</a>, <a class="el" href="privatesend-client_8h_source.html#l00104">nPrivateSendRounds</a>, <a class="el" href="privatesend_8h_source.html#l00297">CPrivateSendBase::nSessionDenom</a>, <a class="el" href="privatesend_8h_source.html#l00288">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_QUEUE</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="net_8h_source.html#l00199">CConnman::PushMessage()</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="wallet_8cpp_source.html#l02930">CWallet::SelectCoinsDark()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01397">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>, <a class="el" href="netaddress_8cpp_source.html#l00568">CService::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>, <a class="el" href="privatesend-client_8h_source.html#l00057">txMyCollateral</a>, <a class="el" href="privatesend-client_8h_source.html#l00040">vecMasternodesUsed</a>, and <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00084">_()</a>, <a class="el" href="masternode_8h_source.html#l00115">masternode_info_t::addr</a>, <a class="el" href="net_8h_source.html#l00160">CConnman::AllNodes</a>, <a class="el" href="net_8cpp_source.html#l00346">CConnman::ConnectNode()</a>, <a class="el" href="wallet_8cpp_source.html#l03136">CWallet::ConvertList()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00371">CMasternodeMan::CountEnabled()</a>, <a class="el" href="protocol_8cpp_source.html#l00054">NetMsgType::DSACCEPT</a>, <a class="el" href="masternodeman_8cpp_source.html#l00569">CMasternodeMan::FindRandomNotInVec()</a>, <a class="el" href="masternode_8h_source.html#l00124">masternode_info_t::fInfoValid</a>, <a class="el" href="net_8cpp_source.html#l02878">CConnman::ForNode()</a>, <a class="el" href="privatesend_8cpp_source.html#l00329">CPrivateSend::GetDenominationsByAmounts()</a>, <a class="el" href="privatesend_8cpp_source.html#l00243">CPrivateSend::GetDenominationsToString()</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend-client_8h_source.html#l00055">infoMixingMasternode</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend_8h_source.html#l00026">MIN_PRIVATESEND_PEER_PROTO_VERSION</a>, <a class="el" href="masternodeman_8cpp_source.html#l00020">mnodeman</a>, <a class="el" href="masternodeman_8h_source.html#l00091">CMasternodeMan::nDsqCount</a>, <a class="el" href="masternode_8h_source.html#l00120">masternode_info_t::nLastDsq</a>, <a class="el" href="protocol_8h_source.html#l00259">NODE_NETWORK</a>, <a class="el" href="privatesend-client_8h_source.html#l00103">nPrivateSendRounds</a>, <a class="el" href="privatesend_8h_source.html#l00292">CPrivateSendBase::nSessionDenom</a>, <a class="el" href="privatesend_8h_source.html#l00282">CPrivateSendBase::nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_QUEUE</a>, <a class="el" href="transaction_8h_source.html#l00061">CTxIn::prevout</a>, <a class="el" href="net_8h_source.html#l00199">CConnman::PushMessage()</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="wallet_8cpp_source.html#l02918">CWallet::SelectCoinsDark()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01383">SetState()</a>, <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>, <a class="el" href="netaddress_8cpp_source.html#l00568">CService::ToString()</a>, <a class="el" href="transaction_8cpp_source.html#l00017">COutPoint::ToStringShort()</a>, <a class="el" href="privatesend-client_8h_source.html#l00056">txMyCollateral</a>, <a class="el" href="privatesend-client_8h_source.html#l00038">vecMasternodesUsed</a>, and <a class="el" href="masternode_8h_source.html#l00114">masternode_info_t::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>.</p>
 <div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-45-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-45-summary" class="dynsummary" style="display:block;">
@@ -1643,7 +1669,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-46-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-46-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a4394dfd7c898722e494a417cce66aeea_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_a4394dfd7c898722e494a417cce66aeea_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1675,9 +1701,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>As a client, submit part of a future mixing transaction to a Masternode to start the process. </p>
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01011">1011</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00998">998</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend-client_8h_source.html#l00104">nPrivateSendRounds</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01039">PrepareDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00055">strAutoDenomResult</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="util_8h_source.html#l00098">LogPrintf</a>, <a class="el" href="privatesend-client_8h_source.html#l00103">nPrivateSendRounds</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01026">PrepareDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00053">strAutoDenomResult</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>.</p>
 <div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1716,9 +1742,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00226">226</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="wallet_8h_source.html#l00672">CWallet::cs_wallet</a>, <a class="el" href="utiltime_8cpp_source.html#l00063">MilliSleep()</a>, <a class="el" href="activemasternode_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="wallet_8cpp_source.html#l04204">CWallet::UnlockCoin()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00043">vecOutPointLocked</a>.</p>
+<p class="reference">References <a class="el" href="wallet_8h_source.html#l00663">CWallet::cs_wallet</a>, <a class="el" href="utiltime_8cpp_source.html#l00063">MilliSleep()</a>, <a class="el" href="init_8h.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, <a class="el" href="wallet_8cpp_source.html#l04183">CWallet::UnlockCoin()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00041">vecOutPointLocked</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00291">CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00599">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00488">SignFinalTransaction()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00302">CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00586">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00487">SignFinalTransaction()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>.</p>
 <div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-49-summary" class="dynsummary" style="display:block;">
@@ -1754,11 +1780,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01403">1403</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l01389">1389</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend_8cpp_source.html#l00381">CPrivateSend::CheckDSTXes()</a>, <a class="el" href="util_8cpp_source.html#l00109">fLiteMode</a>, <a class="el" href="masternode-sync_8h_source.html#l00061">CMasternodeSync::IsMasternodeListSynced()</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00017">masternodeSync</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00586">NewBlock()</a>, and <a class="el" href="chain_8h_source.html#l00113">CBlockIndex::nHeight</a>.</p>
+<p class="reference">References <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="privatesend-client_8h_source.html#l00047">nCachedBlockHeight</a>, and <a class="el" href="chain_8h_source.html#l00167">CBlockIndex::nHeight</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dsnotificationinterface_8cpp_source.html#l00030">CDSNotificationInterface::UpdatedBlockTip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dsnotificationinterface_8cpp_source.html#l00033">CDSNotificationInterface::UpdatedBlockTip()</a>.</p>
 <div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-51-summary" class="dynsummary" style="display:block;">
@@ -1801,11 +1827,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00616">616</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8cpp_source.html#l00603">603</a> of file <a class="el" href="privatesend-client_8cpp_source.html">privatesend-client.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00108">fPrivateSendMultiSession</a>, <a class="el" href="masternode-sync_8h_source.html#l00061">CMasternodeSync::IsMasternodeListSynced()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00017">masternodeSync</a>, <a class="el" href="privatesend-client_8h_source.html#l00049">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00045">nCachedLastSuccessBlock</a>, and <a class="el" href="privatesend-client_8h_source.html#l00046">nMinBlocksToWait</a>.</p>
+<p class="reference">References <a class="el" href="privatesend-client_8h_source.html#l00107">fPrivateSendMultiSession</a>, <a class="el" href="masternode-sync_8h_source.html#l00061">CMasternodeSync::IsMasternodeListSynced()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00018">masternodeSync</a>, <a class="el" href="privatesend-client_8h_source.html#l00047">nCachedBlockHeight</a>, <a class="el" href="privatesend-client_8h_source.html#l00043">nCachedLastSuccessBlock</a>, and <a class="el" href="privatesend-client_8h_source.html#l00044">nMinBlocksToWait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>.</p>
 <div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-53-summary" class="dynsummary" style="display:block;">
@@ -1819,39 +1845,13 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-54-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-54-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_af57143820ab3c0ff4c8e3f0781a9a329_icgraph.svg" width="100%" height="505"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_client_af57143820ab3c0ff4c8e3f0781a9a329_icgraph.svg" width="100%" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aad97f0fc94af9d511e1a52f9ad164d49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad97f0fc94af9d511e1a52f9ad164d49">&#9670;&nbsp;</a></span>cs_darksend</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="sync_8h.html#a37a4692b2d517f2843655ca11af7668a">CCriticalSection</a> CPrivateSendClient::cs_darksend</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00037">37</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>.</p>
-
-</div>
-</div>
 <a id="af733c757c72bcff4b99b613cce0de29e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af733c757c72bcff4b99b613cce0de29e">&#9670;&nbsp;</a></span>fCreateAutoBackups</h2>
 
@@ -1864,9 +1864,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00112">112</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00110">110</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00627">CheckAutomaticBackup()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00124">OverviewPage::OverviewPage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00614">CheckAutomaticBackup()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00124">OverviewPage::OverviewPage()</a>.</p>
 
 </div>
 </div>
@@ -1882,9 +1882,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00107">107</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00106">106</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00627">CheckAutomaticBackup()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00668">OverviewPage::DisablePrivateSendCompletely()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="wallet_8cpp_source.html#l03743">CWallet::NewKeyPool()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00124">OverviewPage::OverviewPage()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00025">privatesend()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00614">CheckAutomaticBackup()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CheckTimeout()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00668">OverviewPage::DisablePrivateSendCompletely()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="wallet_8cpp_source.html#l03722">CWallet::NewKeyPool()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00124">OverviewPage::OverviewPage()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>.</p>
 
 </div>
 </div>
@@ -1908,9 +1908,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00052">52</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00050">50</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>.</p>
 
 </div>
 </div>
@@ -1926,9 +1926,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00108">108</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00107">107</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00065">getpoolinfo()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00048">OptionsModel::Init()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00306">OptionsModel::setData()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00616">WaitForAnotherBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00070">getpoolinfo()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00046">OptionsModel::Init()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00311">OptionsModel::setData()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00603">WaitForAnotherBlock()</a>.</p>
 
 </div>
 </div>
@@ -1937,16 +1937,24 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structmasternode__info__t.html">masternode_info_t</a> CPrivateSendClient::infoMixingMasternode</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00110">110</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00055">55</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00065">getpoolinfo()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01386">RelayIn()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00488">SignFinalTransaction()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00929">StartNewQueue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00288">GetMixingMasternodeInfo()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00294">IsMixingMasternode()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01372">RelayIn()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00487">SignFinalTransaction()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00916">StartNewQueue()</a>.</p>
 
 </div>
 </div>
@@ -1970,9 +1978,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00059">59</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00058">58</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00291">CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00599">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01039">PrepareDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00488">SignFinalTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00302">CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00586">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01026">PrepareDenominate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00487">SignFinalTransaction()</a>.</p>
 
 </div>
 </div>
@@ -1996,9 +2004,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00049">49</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00047">47</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00599">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01280">CreateDenominated()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01186">MakeCollateralAmounts()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01403">UpdatedBlockTip()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00616">WaitForAnotherBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00586">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01266">CreateDenominated()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01173">MakeCollateralAmounts()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01389">UpdatedBlockTip()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00603">WaitForAnotherBlock()</a>.</p>
 
 </div>
 </div>
@@ -2022,9 +2030,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00045">45</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00043">43</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00599">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01280">CreateDenominated()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01186">MakeCollateralAmounts()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00616">WaitForAnotherBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00586">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01266">CreateDenominated()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01173">MakeCollateralAmounts()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00603">WaitForAnotherBlock()</a>.</p>
 
 </div>
 </div>
@@ -2040,9 +2048,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00111">111</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00109">109</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="optionsdialog_8cpp_source.html#l00262">OptionsDialog::on_okButton_clicked()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="optionsdialog_8cpp_source.html#l00264">OptionsDialog::on_okButton_clicked()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>.</p>
 
 </div>
 </div>
@@ -2066,9 +2074,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00051">51</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00049">49</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">ProcessMessage()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00213">SetNull()</a>.</p>
 
 </div>
 </div>
@@ -2084,9 +2092,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00106">106</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00105">105</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>.</p>
 
 </div>
 </div>
@@ -2110,9 +2118,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00046">46</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00044">44</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8h_source.html#l00130">SetMinBlocksToWait()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00616">WaitForAnotherBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8h_source.html#l00128">SetMinBlocksToWait()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00603">WaitForAnotherBlock()</a>.</p>
 
 </div>
 </div>
@@ -2128,9 +2136,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00105">105</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00104">104</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="darksendconfig_8cpp_source.html#l00082">DarksendConfig::configure()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="wallet_8cpp_source.html#l02244">CWallet::GetNeedsToBeAnonymizedBalance()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00048">OptionsModel::Init()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00306">OptionsModel::setData()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00330">OverviewPage::updatePrivateSendProgress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="darksendconfig_8cpp_source.html#l00082">DarksendConfig::configure()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="wallet_8cpp_source.html#l02236">CWallet::GetNeedsToBeAnonymizedBalance()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00046">OptionsModel::Init()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00311">OptionsModel::setData()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00592">OverviewPage::togglePrivateSend()</a>, and <a class="el" href="overviewpage_8cpp_source.html#l00330">OverviewPage::updatePrivateSendProgress()</a>.</p>
 
 </div>
 </div>
@@ -2146,9 +2154,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00104">104</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00103">103</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="darksendconfig_8cpp_source.html#l00082">DarksendConfig::configure()</a>, <a class="el" href="wallet_8cpp_source.html#l01944">CWalletTx::GetAnonymizedCredit()</a>, <a class="el" href="wallet_8cpp_source.html#l02224">CWallet::GetNormalizedAnonymizedBalance()</a>, <a class="el" href="wallet_8cpp_source.html#l01321">CWallet::GetOutpointPrivateSendRounds()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00048">OptionsModel::Init()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">JoinExistingQueue()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00134">WalletModel::pollBalanceChanged()</a>, <a class="el" href="wallet_8cpp_source.html#l02623">CWallet::SelectCoins()</a>, <a class="el" href="wallet_8cpp_source.html#l02831">CWallet::SelectCoinsGrouppedByAddresses()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00306">OptionsModel::setData()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00929">StartNewQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01011">SubmitDenominate()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00330">OverviewPage::updatePrivateSendProgress()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00429">CoinControlDialog::viewItemChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="darksendconfig_8cpp_source.html#l00082">DarksendConfig::configure()</a>, <a class="el" href="wallet_8cpp_source.html#l01936">CWalletTx::GetAnonymizedCredit()</a>, <a class="el" href="wallet_8cpp_source.html#l02216">CWallet::GetNormalizedAnonymizedBalance()</a>, <a class="el" href="wallet_8cpp_source.html#l01321">CWallet::GetOutpointPrivateSendRounds()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00046">OptionsModel::Init()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">JoinExistingQueue()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00134">WalletModel::pollBalanceChanged()</a>, <a class="el" href="wallet_8cpp_source.html#l02612">CWallet::SelectCoins()</a>, <a class="el" href="wallet_8cpp_source.html#l02819">CWallet::SelectCoinsGrouppedByAddresses()</a>, <a class="el" href="optionsmodel_8cpp_source.html#l00311">OptionsModel::setData()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00916">StartNewQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00998">SubmitDenominate()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00330">OverviewPage::updatePrivateSendProgress()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00429">CoinControlDialog::viewItemChanged()</a>.</p>
 
 </div>
 </div>
@@ -2172,9 +2180,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00055">55</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00053">53</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00627">CheckAutomaticBackup()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01280">CreateDenominated()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00929">StartNewQueue()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01011">SubmitDenominate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00614">CheckAutomaticBackup()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01266">CreateDenominated()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00916">StartNewQueue()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00998">SubmitDenominate()</a>.</p>
 
 </div>
 </div>
@@ -2198,9 +2206,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00054">54</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00052">52</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00442">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00599">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00441">CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00586">CompletedTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">GetStatus()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>.</p>
 
 </div>
 </div>
@@ -2224,9 +2232,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00057">57</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00056">56</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00929">StartNewQueue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00916">StartNewQueue()</a>.</p>
 
 </div>
 </div>
@@ -2250,9 +2258,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00042">42</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00040">40</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8h_source.html#l00128">ClearSkippedDenominations()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01280">CreateDenominated()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00065">IsDenomSkipped()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8h_source.html#l00126">ClearSkippedDenominations()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01266">CreateDenominated()</a>, and <a class="el" href="privatesend-client_8h_source.html#l00064">IsDenomSkipped()</a>.</p>
 
 </div>
 </div>
@@ -2276,9 +2284,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00040">40</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00038">38</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00695">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00929">StartNewQueue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00682">DoAutomaticDenominating()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00203">ResetPool()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00916">StartNewQueue()</a>.</p>
 
 </div>
 </div>
@@ -2302,9 +2310,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00043">43</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend-client_8h_source.html#l00041">41</a> of file <a class="el" href="privatesend-client_8h_source.html">privatesend-client.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00362">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-client_8cpp_source.html#l00361">SendDenominate()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00226">UnlockCoins()</a>.</p>
 
 </div>
 </div>
@@ -2319,7 +2327,7 @@ Additional Inherited Members</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_private_send_client.html">CPrivateSendClient</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:25 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:32 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

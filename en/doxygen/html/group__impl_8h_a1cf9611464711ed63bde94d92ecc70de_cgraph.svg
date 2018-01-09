@@ -9,66 +9,66 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 100)">
 <title>secp256k1_ge_set_table_gej_var</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-100 439,-100 439,4 -4,4"/>
-<!-- Node167 -->
-<g id="node1" class="node"><title>Node167</title>
+<!-- Node155 -->
+<g id="node1" class="node"><title>Node155</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-33 0,-63 125,-63 125,-33 0,-33"/>
 <text text-anchor="start" x="8" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_set_table</text>
 <text text-anchor="middle" x="62.5" y="-40" font-family="Helvetica,sans-Serif" font-size="10.00">_gej_var</text>
 </g>
-<!-- Node168 -->
-<g id="node2" class="node"><title>Node168</title>
+<!-- Node156 -->
+<g id="node2" class="node"><title>Node156</title>
 <g id="a_node2"><a xlink:href="field_8h.html#a3a071aa04ce0d88003b059c0a8ee0c0e" target="_top" xlink:title="Sets a field element to be the (modular) inverse of another. ">
 <polygon fill="white" stroke="black" points="183.5,-76.5 183.5,-95.5 278.5,-95.5 278.5,-76.5 183.5,-76.5"/>
 <text text-anchor="middle" x="231" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_inv</text>
 </a>
 </g>
 </g>
-<!-- Node167&#45;&gt;Node168 -->
-<g id="edge1" class="edge"><title>Node167&#45;&gt;Node168</title>
+<!-- Node155&#45;&gt;Node156 -->
+<g id="edge1" class="edge"><title>Node155&#45;&gt;Node156</title>
 <path fill="none" stroke="midnightblue" d="M125.025,-62.0418C142.44,-66.0162 161.217,-70.3018 178.01,-74.1344"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="177.651,-77.6424 188.179,-76.4553 179.208,-70.8179 177.651,-77.6424"/>
 </g>
-<!-- Node169 -->
-<g id="node3" class="node"><title>Node169</title>
+<!-- Node157 -->
+<g id="node3" class="node"><title>Node157</title>
 <g id="a_node3"><a xlink:href="field_8h.html#a542b97d2574d9687c563d002587cf9a2" target="_top" xlink:title="Sets a field element to be the product of two others. ">
 <polygon fill="white" stroke="black" points="337,-38.5 337,-57.5 435,-57.5 435,-38.5 337,-38.5"/>
 <text text-anchor="middle" x="386" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_mul</text>
 </a>
 </g>
 </g>
-<!-- Node167&#45;&gt;Node169 -->
-<g id="edge2" class="edge"><title>Node167&#45;&gt;Node169</title>
+<!-- Node155&#45;&gt;Node157 -->
+<g id="edge2" class="edge"><title>Node155&#45;&gt;Node157</title>
 <path fill="none" stroke="midnightblue" d="M125.108,-48C183.21,-48 269.663,-48 326.669,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="326.957,-51.5001 336.957,-48 326.957,-44.5001 326.957,-51.5001"/>
 </g>
-<!-- Node170 -->
-<g id="node4" class="node"><title>Node170</title>
+<!-- Node158 -->
+<g id="node4" class="node"><title>Node158</title>
 <g id="a_node4"><a xlink:href="group__impl_8h.html#a6492f6aad16e545239c0ec52780d2e1f" target="_top" xlink:title="secp256k1_ge_set_gej_zinv">
 <polygon fill="white" stroke="black" points="161,-0.5 161,-19.5 301,-19.5 301,-0.5 161,-0.5"/>
 <text text-anchor="middle" x="231" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_set_gej_zinv</text>
 </a>
 </g>
 </g>
-<!-- Node167&#45;&gt;Node170 -->
-<g id="edge3" class="edge"><title>Node167&#45;&gt;Node170</title>
+<!-- Node155&#45;&gt;Node158 -->
+<g id="edge3" class="edge"><title>Node155&#45;&gt;Node158</title>
 <path fill="none" stroke="midnightblue" d="M125.025,-33.9582C142.44,-29.9838 161.217,-25.6982 178.01,-21.8656"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="179.208,-25.1821 188.179,-19.5447 177.651,-18.3576 179.208,-25.1821"/>
 </g>
-<!-- Node170&#45;&gt;Node169 -->
-<g id="edge4" class="edge"><title>Node170&#45;&gt;Node169</title>
+<!-- Node158&#45;&gt;Node157 -->
+<g id="edge4" class="edge"><title>Node158&#45;&gt;Node157</title>
 <path fill="none" stroke="midnightblue" d="M270.608,-19.589C290.707,-24.5809 315.475,-30.7324 336.819,-36.0334"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="336.12,-39.4662 346.669,-38.4799 337.808,-32.6726 336.12,-39.4662"/>
 </g>
-<!-- Node171 -->
-<g id="node5" class="node"><title>Node171</title>
+<!-- Node159 -->
+<g id="node5" class="node"><title>Node159</title>
 <g id="a_node5"><a xlink:href="field_8h.html#a6cbe550ca5eb35e683b1c8d68d8de26b" target="_top" xlink:title="Sets a field element to be the square of another. ">
 <polygon fill="white" stroke="black" points="338,-0.5 338,-19.5 434,-19.5 434,-0.5 338,-0.5"/>
 <text text-anchor="middle" x="386" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_sqr</text>
 </a>
 </g>
 </g>
-<!-- Node170&#45;&gt;Node171 -->
-<g id="edge5" class="edge"><title>Node170&#45;&gt;Node171</title>
+<!-- Node158&#45;&gt;Node159 -->
+<g id="edge5" class="edge"><title>Node158&#45;&gt;Node159</title>
 <path fill="none" stroke="midnightblue" d="M301.337,-10C310.106,-10 319.002,-10 327.558,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="327.794,-13.5001 337.794,-10 327.794,-6.5001 327.794,-13.5001"/>
 </g>

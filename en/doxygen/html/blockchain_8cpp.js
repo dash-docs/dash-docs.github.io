@@ -1,6 +1,8 @@
 var blockchain_8cpp =
 [
+    [ "CCoinsStats", "struct_c_coins_stats.html", "struct_c_coins_stats" ],
     [ "CompareBlocksByHeight", "struct_compare_blocks_by_height.html", "struct_compare_blocks_by_height" ],
+    [ "ApplyStats", "blockchain_8cpp.html#ac20f641f3dc069e77a73c3ef08135cac", null ],
     [ "BIP9SoftForkDesc", "blockchain_8cpp.html#a0de028dbae097fe1fa0e09fa520466a6", null ],
     [ "blockheaderToJSON", "blockchain_8cpp.html#aa1e97ce578bfdae0125555bda5a2d48d", null ],
     [ "blockToJSON", "blockchain_8cpp.html#a6b596f07acd85fe676c798170fd8ddbe", null ],
@@ -19,6 +21,7 @@ var blockchain_8cpp =
     [ "getrawmempool", "blockchain_8cpp.html#a44f5bbe5b8c41540712ec39d2ece88a9", null ],
     [ "gettxout", "blockchain_8cpp.html#a5d2241797e79623e7a558ab617415652", null ],
     [ "gettxoutsetinfo", "blockchain_8cpp.html#afba3c21535e88135f386a12e40199da2", null ],
+    [ "GetUTXOStats", "blockchain_8cpp.html#a2d5144afc19a0e8bafb934ebfd145671", null ],
     [ "invalidateblock", "blockchain_8cpp.html#a7e43030fb221e28db98accef3fc80232", null ],
     [ "mempoolInfoToJSON", "blockchain_8cpp.html#a7305038a43cc5f399ca00e00c6f07186", null ],
     [ "mempoolToJSON", "blockchain_8cpp.html#a3b8a8939a31de29ceb0ea581341eeb92", null ],

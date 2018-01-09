@@ -46,110 +46,136 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 700;
+var viewWidth = 719;
 var viewHeight = 142;
-var sectionId = 'dynsection-18';
+var sectionId = 'dynsection-17';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>CCoinsViewCache::GetPriority</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-138 696,-138 696,4 -4,4"/>
-<!-- Node891 -->
-<g id="node1" class="node"><title>Node891</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-138 715,-138 715,4 -4,4"/>
+<!-- Node824 -->
+<g id="node1" class="node"><title>Node824</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-57.5 0,-76.5 152,-76.5 152,-57.5 0,-57.5"/>
 <text text-anchor="middle" x="76" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCoinsViewCache::GetPriority</text>
 </g>
-<!-- Node892 -->
-<g id="node2" class="node"><title>Node892</title>
-<g id="a_node2"><a xlink:href="class_c_coins_view_cache.html#a8e5341e8b01233949d6170dd4d1fd75d" target="_top" xlink:title="Return a pointer to CCoins in the cache, or NULL if not found. ">
-<polygon fill="white" stroke="black" points="188,-114.5 188,-133.5 352,-133.5 352,-114.5 188,-114.5"/>
-<text text-anchor="middle" x="270" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCoinsViewCache::AccessCoins</text>
+<!-- Node825 -->
+<g id="node2" class="node"><title>Node825</title>
+<g id="a_node2"><a xlink:href="class_c_coins_view_cache.html#afd0144ded5ce891084aabff29141f8b2" target="_top" xlink:title="Return a reference to Coin in the cache, or a pruned one if not found. ">
+<polygon fill="white" stroke="black" points="188,-114.5 188,-133.5 347,-133.5 347,-114.5 188,-114.5"/>
+<text text-anchor="middle" x="267.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCoinsViewCache::AccessCoin</text>
 </a>
 </g>
 </g>
-<!-- Node891&#45;&gt;Node892 -->
-<g id="edge1" class="edge"><title>Node891&#45;&gt;Node892</title>
-<path fill="none" stroke="midnightblue" d="M102.785,-76.6425C125.135,-84.8038 158.442,-96.4966 188,-105 196.573,-107.466 205.723,-109.848 214.674,-112.043"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="214.113,-115.508 224.653,-114.437 215.745,-108.701 214.113,-115.508"/>
+<!-- Node824&#45;&gt;Node825 -->
+<g id="edge1" class="edge"><title>Node824&#45;&gt;Node825</title>
+<path fill="none" stroke="midnightblue" d="M102.8,-76.5898C125.159,-84.7181 158.472,-96.3922 188,-105 196.411,-107.452 205.393,-109.839 214.166,-112.047"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="213.393,-115.461 223.941,-114.457 215.069,-108.664 213.393,-115.461"/>
 </g>
-<!-- Node894 -->
-<g id="node4" class="node"><title>Node894</title>
-<g id="a_node4"><a xlink:href="class_c_transaction.html#adccb264c374e4ad57e699947540256f8" target="_top" xlink:title="CTransaction::ComputePriority">
-<polygon fill="white" stroke="black" points="194,-76.5 194,-95.5 346,-95.5 346,-76.5 194,-76.5"/>
-<text text-anchor="middle" x="270" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTransaction::ComputePriority</text>
+<!-- Node828 -->
+<g id="node5" class="node"><title>Node828</title>
+<g id="a_node5"><a xlink:href="class_c_transaction.html#adccb264c374e4ad57e699947540256f8" target="_top" xlink:title="CTransaction::ComputePriority">
+<polygon fill="white" stroke="black" points="191.5,-76.5 191.5,-95.5 343.5,-95.5 343.5,-76.5 191.5,-76.5"/>
+<text text-anchor="middle" x="267.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTransaction::ComputePriority</text>
 </a>
 </g>
 </g>
-<!-- Node891&#45;&gt;Node894 -->
-<g id="edge3" class="edge"><title>Node891&#45;&gt;Node894</title>
-<path fill="none" stroke="midnightblue" d="M152.057,-74.4275C162.498,-75.4608 173.287,-76.5284 183.896,-77.5782"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="183.699,-81.0758 193.995,-78.5776 184.388,-74.1098 183.699,-81.0758"/>
+<!-- Node824&#45;&gt;Node828 -->
+<g id="edge4" class="edge"><title>Node824&#45;&gt;Node828</title>
+<path fill="none" stroke="midnightblue" d="M152.168,-74.5366C161.754,-75.4978 171.621,-76.487 181.351,-77.4626"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="181.124,-80.9573 191.423,-78.4725 181.822,-73.9923 181.124,-80.9573"/>
 </g>
-<!-- Node897 -->
-<g id="node7" class="node"><title>Node897</title>
-<g id="a_node7"><a xlink:href="class_c_coins.html#aa645bc3d18f74e91430ac178a9d28ee4" target="_top" xlink:title="check whether a particular output is still available ">
-<polygon fill="white" stroke="black" points="218,-38.5 218,-57.5 322,-57.5 322,-38.5 218,-38.5"/>
-<text text-anchor="middle" x="270" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCoins::IsAvailable</text>
-</a>
-</g>
-</g>
-<!-- Node891&#45;&gt;Node897 -->
-<g id="edge6" class="edge"><title>Node891&#45;&gt;Node897</title>
-<path fill="none" stroke="midnightblue" d="M152.057,-59.5725C170.521,-57.7454 190.07,-55.8107 207.791,-54.0571"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="208.385,-57.5156 217.992,-53.0477 207.696,-50.5496 208.385,-57.5156"/>
-</g>
-<!-- Node898 -->
-<g id="node8" class="node"><title>Node898</title>
+<!-- Node831 -->
+<g id="node8" class="node"><title>Node831</title>
 <g id="a_node8"><a xlink:href="class_c_transaction.html#a96256e8ac1bf79ad9c057e48c41132dd" target="_top" xlink:title="CTransaction::IsCoinBase">
-<polygon fill="white" stroke="black" points="204,-0.5 204,-19.5 336,-19.5 336,-0.5 204,-0.5"/>
-<text text-anchor="middle" x="270" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTransaction::IsCoinBase</text>
+<polygon fill="white" stroke="black" points="201.5,-38.5 201.5,-57.5 333.5,-57.5 333.5,-38.5 201.5,-38.5"/>
+<text text-anchor="middle" x="267.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTransaction::IsCoinBase</text>
 </a>
 </g>
 </g>
-<!-- Node891&#45;&gt;Node898 -->
-<g id="edge7" class="edge"><title>Node891&#45;&gt;Node898</title>
-<path fill="none" stroke="midnightblue" d="M102.785,-57.3575C125.135,-49.1962 158.442,-37.5034 188,-29 196.573,-26.5338 205.723,-24.1517 214.674,-21.9567"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="215.745,-25.2992 224.653,-19.5635 214.113,-18.4922 215.745,-25.2992"/>
+<!-- Node824&#45;&gt;Node831 -->
+<g id="edge7" class="edge"><title>Node824&#45;&gt;Node831</title>
+<path fill="none" stroke="midnightblue" d="M152.168,-59.4634C164.969,-58.1799 178.269,-56.8464 191.077,-55.5622"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="191.623,-59.0251 201.224,-54.5448 190.925,-52.06 191.623,-59.0251"/>
 </g>
-<!-- Node893 -->
-<g id="node3" class="node"><title>Node893</title>
-<g id="a_node3"><a xlink:href="class_c_coins_view_cache.html#a7d385628b7d821d2d5b6c5aaf1734616" target="_top" xlink:title="CCoinsViewCache::FetchCoins">
-<polygon fill="white" stroke="black" points="399.5,-114.5 399.5,-133.5 555.5,-133.5 555.5,-114.5 399.5,-114.5"/>
-<text text-anchor="middle" x="477.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCoinsViewCache::FetchCoins</text>
+<!-- Node832 -->
+<g id="node9" class="node"><title>Node832</title>
+<g id="a_node9"><a xlink:href="class_coin.html#ad900ffd083fd31e3b52adf3dc4092953" target="_top" xlink:title="Coin::IsSpent">
+<polygon fill="white" stroke="black" points="229,-0.5 229,-19.5 306,-19.5 306,-0.5 229,-0.5"/>
+<text text-anchor="middle" x="267.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Coin::IsSpent</text>
 </a>
 </g>
 </g>
-<!-- Node892&#45;&gt;Node893 -->
-<g id="edge2" class="edge"><title>Node892&#45;&gt;Node893</title>
-<path fill="none" stroke="midnightblue" d="M352.219,-124C364.314,-124 376.827,-124 389.044,-124"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="389.221,-127.5 399.221,-124 389.221,-120.5 389.221,-127.5"/>
+<!-- Node824&#45;&gt;Node832 -->
+<g id="edge8" class="edge"><title>Node824&#45;&gt;Node832</title>
+<path fill="none" stroke="midnightblue" d="M102.8,-57.4102C125.159,-49.2819 158.472,-37.6078 188,-29 197.894,-26.1157 208.578,-23.3214 218.782,-20.8032"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="219.883,-24.1378 228.78,-18.3839 218.237,-17.3342 219.883,-24.1378"/>
 </g>
-<!-- Node895 -->
-<g id="node5" class="node"><title>Node895</title>
-<g id="a_node5"><a xlink:href="class_c_transaction.html#a001aa818efad11751db060dd447dc28b" target="_top" xlink:title="CTransaction::CalculateModifiedSize">
-<polygon fill="white" stroke="black" points="388,-76.5 388,-95.5 567,-95.5 567,-76.5 388,-76.5"/>
-<text text-anchor="middle" x="477.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTransaction::CalculateModifiedSize</text>
+<!-- Node826 -->
+<g id="node3" class="node"><title>Node826</title>
+<g id="a_node3"><a xlink:href="class_c_coins_view_cache.html#aad44dd0b312871702e46ddfb449cecba" target="_top" xlink:title="CCoinsViewCache::FetchCoin">
+<polygon fill="white" stroke="black" points="397,-114.5 397,-133.5 548,-133.5 548,-114.5 397,-114.5"/>
+<text text-anchor="middle" x="472.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCoinsViewCache::FetchCoin</text>
 </a>
 </g>
 </g>
-<!-- Node894&#45;&gt;Node895 -->
-<g id="edge4" class="edge"><title>Node894&#45;&gt;Node895</title>
-<path fill="none" stroke="midnightblue" d="M346.063,-86C356.315,-86 366.965,-86 377.562,-86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="377.689,-89.5001 387.689,-86 377.689,-82.5001 377.689,-89.5001"/>
+<!-- Node825&#45;&gt;Node826 -->
+<g id="edge2" class="edge"><title>Node825&#45;&gt;Node826</title>
+<path fill="none" stroke="midnightblue" d="M347.276,-124C360.115,-124 373.466,-124 386.447,-124"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="386.763,-127.5 396.763,-124 386.763,-120.5 386.763,-127.5"/>
 </g>
-<!-- Node896 -->
-<g id="node6" class="node"><title>Node896</title>
-<g id="a_node6"><a xlink:href="serialize_8h.html#a48239e478ae730373d1984fe304ca025" target="_top" xlink:title="GetSerializeSize">
-<polygon fill="white" stroke="black" points="603,-76.5 603,-95.5 692,-95.5 692,-76.5 603,-76.5"/>
-<text text-anchor="middle" x="647.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetSerializeSize</text>
+<!-- Node827 -->
+<g id="node4" class="node"><title>Node827</title>
+<g id="a_node4"><a xlink:href="class_c_coins_view.html#a435080be262889508365787dcc75cf95" target="_top" xlink:title="Retrieve the Coin (unspent transaction output) for a given outpoint. ">
+<polygon fill="white" stroke="black" points="598,-114.5 598,-133.5 711,-133.5 711,-114.5 598,-114.5"/>
+<text text-anchor="middle" x="654.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCoinsView::GetCoin</text>
 </a>
 </g>
 </g>
-<!-- Node895&#45;&gt;Node896 -->
-<g id="edge5" class="edge"><title>Node895&#45;&gt;Node896</title>
-<path fill="none" stroke="midnightblue" d="M567.419,-86C576.053,-86 584.616,-86 592.744,-86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="592.778,-89.5001 602.778,-86 592.778,-82.5001 592.778,-89.5001"/>
+<!-- Node826&#45;&gt;Node827 -->
+<g id="edge3" class="edge"><title>Node826&#45;&gt;Node827</title>
+<path fill="none" stroke="midnightblue" d="M548.012,-124C561.139,-124 574.718,-124 587.588,-124"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="587.735,-127.5 597.735,-124 587.735,-120.5 587.735,-127.5"/>
+</g>
+<!-- Node829 -->
+<g id="node6" class="node"><title>Node829</title>
+<g id="a_node6"><a xlink:href="class_c_transaction.html#a001aa818efad11751db060dd447dc28b" target="_top" xlink:title="CTransaction::CalculateModifiedSize">
+<polygon fill="white" stroke="black" points="383,-76.5 383,-95.5 562,-95.5 562,-76.5 383,-76.5"/>
+<text text-anchor="middle" x="472.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTransaction::CalculateModifiedSize</text>
+</a>
+</g>
+</g>
+<!-- Node828&#45;&gt;Node829 -->
+<g id="edge5" class="edge"><title>Node828&#45;&gt;Node829</title>
+<path fill="none" stroke="midnightblue" d="M343.513,-86C352.985,-86 362.788,-86 372.56,-86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="372.716,-89.5001 382.716,-86 372.716,-82.5001 372.716,-89.5001"/>
+</g>
+<!-- Node830 -->
+<g id="node7" class="node"><title>Node830</title>
+<g id="a_node7"><a xlink:href="serialize_8h.html#a48239e478ae730373d1984fe304ca025" target="_top" xlink:title="GetSerializeSize">
+<polygon fill="white" stroke="black" points="610,-76.5 610,-95.5 699,-95.5 699,-76.5 610,-76.5"/>
+<text text-anchor="middle" x="654.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetSerializeSize</text>
+</a>
+</g>
+</g>
+<!-- Node829&#45;&gt;Node830 -->
+<g id="edge6" class="edge"><title>Node829&#45;&gt;Node830</title>
+<path fill="none" stroke="midnightblue" d="M562.182,-86C574.948,-86 587.749,-86 599.559,-86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="599.655,-89.5001 609.655,-86 599.655,-82.5001 599.655,-89.5001"/>
+</g>
+<!-- Node833 -->
+<g id="node10" class="node"><title>Node833</title>
+<g id="a_node10"><a xlink:href="class_c_tx_out.html#ab92a3c4c95c643f7b3ffd3ffa7cd7055" target="_top" xlink:title="CTxOut::IsNull">
+<polygon fill="white" stroke="black" points="431,-0.5 431,-19.5 514,-19.5 514,-0.5 431,-0.5"/>
+<text text-anchor="middle" x="472.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxOut::IsNull</text>
+</a>
+</g>
+</g>
+<!-- Node832&#45;&gt;Node833 -->
+<g id="edge9" class="edge"><title>Node832&#45;&gt;Node833</title>
+<path fill="none" stroke="midnightblue" d="M306.207,-10C338.454,-10 385.148,-10 420.687,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="420.861,-13.5001 430.861,-10 420.861,-6.5001 420.861,-13.5001"/>
 </g>
 </g>
 </svg>

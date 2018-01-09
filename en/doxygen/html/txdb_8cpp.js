@@ -5,6 +5,7 @@ var txdb_8cpp =
     [ "DB_BEST_BLOCK", "txdb_8cpp.html#acdb0c57454cfc05bbe55466539f1003c", null ],
     [ "DB_BLOCK_FILES", "txdb_8cpp.html#a1a83020e99718ce119801502dd71f60c", null ],
     [ "DB_BLOCK_INDEX", "txdb_8cpp.html#a85d0146a00e244755e0969d116fb079c", null ],
+    [ "DB_COIN", "txdb_8cpp.html#a9ae84a664ab2bfc0835666acd523fd45", null ],
     [ "DB_COINS", "txdb_8cpp.html#a39905dcbdcbf070340a290b28d813b09", null ],
     [ "DB_FLAG", "txdb_8cpp.html#ac4b0f0ea7126b2ec05ff118b3c180871", null ],
     [ "DB_LAST_BLOCK", "txdb_8cpp.html#a7969649b291abcdde50191c27b820203", null ],

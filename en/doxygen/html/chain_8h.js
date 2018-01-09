@@ -1,5 +1,6 @@
 var chain_8h =
 [
+    [ "CBlockFileInfo", "class_c_block_file_info.html", "class_c_block_file_info" ],
     [ "CDiskBlockPos", "struct_c_disk_block_pos.html", "struct_c_disk_block_pos" ],
     [ "CBlockIndex", "class_c_block_index.html", "class_c_block_index" ],
     [ "CDiskBlockIndex", "class_c_disk_block_index.html", "class_c_disk_block_index" ],

@@ -9,171 +9,158 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 100)">
 <title>CWallet::HasCollateralInputs</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-100 1188,-100 1188,4 -4,4"/>
-<!-- Node1698 -->
-<g id="node1" class="node"><title>Node1698</title>
-<polygon fill="#bfbfbf" stroke="black" points="0,-38.5 0,-57.5 144,-57.5 144,-38.5 0,-38.5"/>
-<text text-anchor="middle" x="72" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::HasCollateralInputs</text>
+<!-- Node1639 -->
+<g id="node1" class="node"><title>Node1639</title>
+<polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-38.5 144,-38.5 144,-19.5 0,-19.5"/>
+<text text-anchor="middle" x="72" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWallet::HasCollateralInputs</text>
 </g>
-<!-- Node1699 -->
-<g id="node2" class="node"><title>Node1699</title>
+<!-- Node1640 -->
+<g id="node2" class="node"><title>Node1640</title>
 <g id="a_node2"><a xlink:href="class_c_private_send_client.html#ac0c910708ed9797f5a9e5fe68144bcc1" target="_top" xlink:title="Create denominations. ">
-<polygon fill="white" stroke="black" points="180,-55 180,-85 290,-85 290,-55 180,-55"/>
-<text text-anchor="start" x="188" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
-<text text-anchor="middle" x="235" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">::CreateDenominated</text>
+<polygon fill="white" stroke="black" points="180,-36 180,-66 290,-66 290,-36 180,-36"/>
+<text text-anchor="start" x="188" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
+<text text-anchor="middle" x="235" y="-43" font-family="Helvetica,sans-Serif" font-size="10.00">::CreateDenominated</text>
 </a>
 </g>
 </g>
-<!-- Node1698&#45;&gt;Node1699 -->
-<g id="edge1" class="edge"><title>Node1698&#45;&gt;Node1699</title>
-<path fill="none" stroke="midnightblue" d="M152.619,-58.8797C161.805,-60.1348 171.006,-61.3921 179.743,-62.5861"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="153.062,-55.4078 142.681,-57.5216 152.115,-62.3433 153.062,-55.4078"/>
+<!-- Node1639&#45;&gt;Node1640 -->
+<g id="edge1" class="edge"><title>Node1639&#45;&gt;Node1640</title>
+<path fill="none" stroke="midnightblue" d="M152.619,-39.8797C161.805,-41.1348 171.006,-42.3921 179.743,-43.5861"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="153.062,-36.4078 142.681,-38.5216 152.115,-43.3433 153.062,-36.4078"/>
 </g>
-<!-- Node1700 -->
-<g id="node3" class="node"><title>Node1700</title>
+<!-- Node1641 -->
+<g id="node3" class="node"><title>Node1641</title>
 <g id="a_node3"><a xlink:href="class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" target="_top" xlink:title="Passively run mixing in the background according to the configuration in settings. ">
-<polygon fill="white" stroke="black" points="326,-33 326,-63 466,-63 466,-33 326,-33"/>
-<text text-anchor="start" x="334" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
-<text text-anchor="middle" x="396" y="-40" font-family="Helvetica,sans-Serif" font-size="10.00">::DoAutomaticDenominating</text>
+<polygon fill="white" stroke="black" points="326,-14 326,-44 466,-44 466,-14 326,-14"/>
+<text text-anchor="start" x="334" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendClient</text>
+<text text-anchor="middle" x="396" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">::DoAutomaticDenominating</text>
 </a>
 </g>
 </g>
-<!-- Node1698&#45;&gt;Node1700 -->
-<g id="edge13" class="edge"><title>Node1698&#45;&gt;Node1700</title>
-<path fill="none" stroke="midnightblue" d="M154.248,-45.4833C162.94,-45.2853 171.653,-45.117 180,-45 228.884,-44.3148 241.116,-44.3018 290,-45 301.579,-45.1654 313.874,-45.4333 325.818,-45.7427"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="153.988,-41.9884 144.076,-45.7281 154.157,-48.9864 153.988,-41.9884"/>
+<!-- Node1639&#45;&gt;Node1641 -->
+<g id="edge12" class="edge"><title>Node1639&#45;&gt;Node1641</title>
+<path fill="none" stroke="midnightblue" d="M154.248,-26.4833C162.94,-26.2853 171.653,-26.117 180,-26 228.884,-25.3148 241.116,-25.3018 290,-26 301.579,-26.1654 313.874,-26.4333 325.818,-26.7427"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="153.988,-22.9884 144.076,-26.7281 154.157,-29.9864 153.988,-22.9884"/>
 </g>
-<!-- Node1699&#45;&gt;Node1700 -->
-<g id="edge2" class="edge"><title>Node1699&#45;&gt;Node1700</title>
-<path fill="none" stroke="midnightblue" d="M300.35,-61.0962C308.727,-59.9372 317.337,-58.7459 325.789,-57.5764"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="299.7,-57.6527 290.274,-62.4904 300.659,-64.5867 299.7,-57.6527"/>
+<!-- Node1640&#45;&gt;Node1641 -->
+<g id="edge2" class="edge"><title>Node1640&#45;&gt;Node1641</title>
+<path fill="none" stroke="midnightblue" d="M300.35,-42.0962C308.727,-40.9372 317.337,-39.7459 325.789,-38.5764"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="299.7,-38.6527 290.274,-43.4904 300.659,-45.5867 299.7,-38.6527"/>
 </g>
-<!-- Node1701 -->
-<g id="node4" class="node"><title>Node1701</title>
-<g id="a_node4"><a xlink:href="server_8h.html#a6f0f20fd2a24851d47a6120eeca7d3e4" target="_top" xlink:title="privatesend">
-<polygon fill="white" stroke="black" points="547.5,-76.5 547.5,-95.5 614.5,-95.5 614.5,-76.5 547.5,-76.5"/>
-<text text-anchor="middle" x="581" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">privatesend</text>
-</a>
-</g>
-</g>
-<!-- Node1700&#45;&gt;Node1701 -->
-<g id="edge3" class="edge"><title>Node1700&#45;&gt;Node1701</title>
-<path fill="none" stroke="midnightblue" d="M476.037,-64.412C500.988,-69.5932 527.2,-75.0361 547.062,-79.1604"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="476.687,-60.9725 466.184,-62.3662 475.264,-67.8263 476.687,-60.9725"/>
-</g>
-<!-- Node1702 -->
-<g id="node5" class="node"><title>Node1702</title>
-<g id="a_node5"><a xlink:href="privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" target="_top" xlink:title="ThreadCheckPrivateSendClient">
+<!-- Node1642 -->
+<g id="node4" class="node"><title>Node1642</title>
+<g id="a_node4"><a xlink:href="privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" target="_top" xlink:title="ThreadCheckPrivateSendClient">
 <polygon fill="white" stroke="black" points="504,-38.5 504,-57.5 658,-57.5 658,-38.5 504,-38.5"/>
 <text text-anchor="middle" x="581" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ThreadCheckPrivateSendClient</text>
 </a>
 </g>
 </g>
-<!-- Node1700&#45;&gt;Node1702 -->
-<g id="edge4" class="edge"><title>Node1700&#45;&gt;Node1702</title>
-<path fill="none" stroke="midnightblue" d="M476.423,-48C485.572,-48 494.884,-48 503.985,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="476.184,-44.5001 466.184,-48 476.184,-51.5001 476.184,-44.5001"/>
+<!-- Node1641&#45;&gt;Node1642 -->
+<g id="edge3" class="edge"><title>Node1641&#45;&gt;Node1642</title>
+<path fill="none" stroke="midnightblue" d="M476.423,-37.2462C485.572,-38.196 494.884,-39.1628 503.985,-40.1078"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="476.492,-33.7346 466.184,-36.1831 475.77,-40.6972 476.492,-33.7346"/>
 </g>
-<!-- Node1707 -->
-<g id="node10" class="node"><title>Node1707</title>
-<g id="a_node10"><a xlink:href="class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" target="_top" xlink:title="OverviewPage::privateSendAuto">
+<!-- Node1647 -->
+<g id="node9" class="node"><title>Node1647</title>
+<g id="a_node9"><a xlink:href="class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" target="_top" xlink:title="OverviewPage::privateSendAuto">
 <polygon fill="white" stroke="black" points="502,-0.5 502,-19.5 660,-19.5 660,-0.5 502,-0.5"/>
 <text text-anchor="middle" x="581" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">OverviewPage::privateSendAuto</text>
 </a>
 </g>
 </g>
-<!-- Node1700&#45;&gt;Node1707 -->
-<g id="edge9" class="edge"><title>Node1700&#45;&gt;Node1707</title>
-<path fill="none" stroke="midnightblue" d="M476.119,-31.571C495.888,-27.466 516.442,-23.1978 533.999,-19.5522"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="475.264,-28.1737 466.184,-33.6338 476.687,-35.0275 475.264,-28.1737"/>
+<!-- Node1641&#45;&gt;Node1647 -->
+<g id="edge8" class="edge"><title>Node1641&#45;&gt;Node1647</title>
+<path fill="none" stroke="midnightblue" d="M476.387,-20.7576C484.825,-19.8816 493.402,-18.991 501.825,-18.1165"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="475.77,-17.3028 466.184,-21.8169 476.492,-24.2654 475.77,-17.3028"/>
 </g>
-<!-- Node1703 -->
-<g id="node6" class="node"><title>Node1703</title>
-<g id="a_node6"><a xlink:href="init_8h.html#a6f0784aa332573f949b0975205572b28" target="_top" xlink:title="Initialize Dash Core. ">
+<!-- Node1643 -->
+<g id="node5" class="node"><title>Node1643</title>
+<g id="a_node5"><a xlink:href="init_8h.html#a6f0784aa332573f949b0975205572b28" target="_top" xlink:title="Initialize Dash Core. ">
 <polygon fill="white" stroke="black" points="746.5,-38.5 746.5,-57.5 799.5,-57.5 799.5,-38.5 746.5,-38.5"/>
 <text text-anchor="middle" x="773" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">AppInit2</text>
 </a>
 </g>
 </g>
-<!-- Node1702&#45;&gt;Node1703 -->
-<g id="edge5" class="edge"><title>Node1702&#45;&gt;Node1703</title>
+<!-- Node1642&#45;&gt;Node1643 -->
+<g id="edge4" class="edge"><title>Node1642&#45;&gt;Node1643</title>
 <path fill="none" stroke="midnightblue" d="M668.194,-48C696.664,-48 726.198,-48 746.45,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="668.186,-44.5001 658.185,-48 668.185,-51.5001 668.186,-44.5001"/>
 </g>
-<!-- Node1704 -->
-<g id="node7" class="node"><title>Node1704</title>
-<g id="a_node7"><a xlink:href="dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" target="_top" xlink:title="AppInit">
+<!-- Node1644 -->
+<g id="node6" class="node"><title>Node1644</title>
+<g id="a_node6"><a xlink:href="dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" target="_top" xlink:title="AppInit">
 <polygon fill="white" stroke="black" points="932.5,-76.5 932.5,-95.5 979.5,-95.5 979.5,-76.5 932.5,-76.5"/>
 <text text-anchor="middle" x="956" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">AppInit</text>
 </a>
 </g>
 </g>
-<!-- Node1703&#45;&gt;Node1704 -->
-<g id="edge6" class="edge"><title>Node1703&#45;&gt;Node1704</title>
+<!-- Node1643&#45;&gt;Node1644 -->
+<g id="edge5" class="edge"><title>Node1643&#45;&gt;Node1644</title>
 <path fill="none" stroke="midnightblue" d="M809.749,-55.5053C846.208,-63.1597 901.663,-74.8021 932.434,-81.2623"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="810.055,-51.9933 799.549,-53.3639 808.616,-58.8439 810.055,-51.9933"/>
 </g>
-<!-- Node1706 -->
-<g id="node9" class="node"><title>Node1706</title>
-<g id="a_node9"><a xlink:href="class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" target="_top" xlink:title="BitcoinCore::initialize">
+<!-- Node1646 -->
+<g id="node8" class="node"><title>Node1646</title>
+<g id="a_node8"><a xlink:href="class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" target="_top" xlink:title="BitcoinCore::initialize">
 <polygon fill="white" stroke="black" points="901.5,-38.5 901.5,-57.5 1010.5,-57.5 1010.5,-38.5 901.5,-38.5"/>
 <text text-anchor="middle" x="956" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">BitcoinCore::initialize</text>
 </a>
 </g>
 </g>
-<!-- Node1703&#45;&gt;Node1706 -->
-<g id="edge8" class="edge"><title>Node1703&#45;&gt;Node1706</title>
+<!-- Node1643&#45;&gt;Node1646 -->
+<g id="edge7" class="edge"><title>Node1643&#45;&gt;Node1646</title>
 <path fill="none" stroke="midnightblue" d="M809.746,-48C835.861,-48 871.722,-48 901.278,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="809.549,-44.5001 799.549,-48 809.549,-51.5001 809.549,-44.5001"/>
 </g>
-<!-- Node1705 -->
-<g id="node8" class="node"><title>Node1705</title>
-<g id="a_node8"><a xlink:href="dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" target="_top" xlink:title="main">
+<!-- Node1645 -->
+<g id="node7" class="node"><title>Node1645</title>
+<g id="a_node7"><a xlink:href="dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" target="_top" xlink:title="main">
 <polygon fill="white" stroke="black" points="1104,-76.5 1104,-95.5 1142,-95.5 1142,-76.5 1104,-76.5"/>
 <text text-anchor="middle" x="1123" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node1704&#45;&gt;Node1705 -->
-<g id="edge7" class="edge"><title>Node1704&#45;&gt;Node1705</title>
+<!-- Node1644&#45;&gt;Node1645 -->
+<g id="edge6" class="edge"><title>Node1644&#45;&gt;Node1645</title>
 <path fill="none" stroke="midnightblue" d="M990.007,-86C1024.18,-86 1076.34,-86 1103.74,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="989.597,-82.5001 979.597,-86 989.597,-89.5001 989.597,-82.5001"/>
 </g>
-<!-- Node1708 -->
-<g id="node11" class="node"><title>Node1708</title>
-<g id="a_node11"><a xlink:href="class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" target="_top" xlink:title="OverviewPage::setWalletModel">
+<!-- Node1648 -->
+<g id="node10" class="node"><title>Node1648</title>
+<g id="a_node10"><a xlink:href="class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" target="_top" xlink:title="OverviewPage::setWalletModel">
 <polygon fill="white" stroke="black" points="696,-0.5 696,-19.5 850,-19.5 850,-0.5 696,-0.5"/>
 <text text-anchor="middle" x="773" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">OverviewPage::setWalletModel</text>
 </a>
 </g>
 </g>
-<!-- Node1707&#45;&gt;Node1708 -->
-<g id="edge10" class="edge"><title>Node1707&#45;&gt;Node1708</title>
+<!-- Node1647&#45;&gt;Node1648 -->
+<g id="edge9" class="edge"><title>Node1647&#45;&gt;Node1648</title>
 <path fill="none" stroke="midnightblue" d="M670.381,-10C678.852,-10 687.393,-10 695.733,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="670.103,-6.5001 660.103,-10 670.103,-13.5001 670.103,-6.5001"/>
 </g>
-<!-- Node1709 -->
-<g id="node12" class="node"><title>Node1709</title>
-<g id="a_node12"><a xlink:href="class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" target="_top" xlink:title="Set the wallet model. ">
+<!-- Node1649 -->
+<g id="node11" class="node"><title>Node1649</title>
+<g id="a_node11"><a xlink:href="class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" target="_top" xlink:title="Set the wallet model. ">
 <polygon fill="white" stroke="black" points="886,-0.5 886,-19.5 1026,-19.5 1026,-0.5 886,-0.5"/>
 <text text-anchor="middle" x="956" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">WalletView::setWalletModel</text>
 </a>
 </g>
 </g>
-<!-- Node1708&#45;&gt;Node1709 -->
-<g id="edge11" class="edge"><title>Node1708&#45;&gt;Node1709</title>
+<!-- Node1648&#45;&gt;Node1649 -->
+<g id="edge10" class="edge"><title>Node1648&#45;&gt;Node1649</title>
 <path fill="none" stroke="midnightblue" d="M860.241,-10C868.8,-10 877.409,-10 885.763,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="860.236,-6.5001 850.236,-10 860.236,-13.5001 860.236,-6.5001"/>
 </g>
-<!-- Node1710 -->
-<g id="node13" class="node"><title>Node1710</title>
-<g id="a_node13"><a xlink:href="class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" target="_top" xlink:title="WalletFrame::addWallet">
+<!-- Node1650 -->
+<g id="node12" class="node"><title>Node1650</title>
+<g id="a_node12"><a xlink:href="class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" target="_top" xlink:title="WalletFrame::addWallet">
 <polygon fill="white" stroke="black" points="1062,-0.5 1062,-19.5 1184,-19.5 1184,-0.5 1062,-0.5"/>
 <text text-anchor="middle" x="1123" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">WalletFrame::addWallet</text>
 </a>
 </g>
 </g>
-<!-- Node1709&#45;&gt;Node1710 -->
-<g id="edge12" class="edge"><title>Node1709&#45;&gt;Node1710</title>
+<!-- Node1649&#45;&gt;Node1650 -->
+<g id="edge11" class="edge"><title>Node1649&#45;&gt;Node1650</title>
 <path fill="none" stroke="midnightblue" d="M1036.15,-10C1044.81,-10 1053.53,-10 1061.91,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1036.02,-6.5001 1026.02,-10 1036.02,-13.5001 1036.02,-6.5001"/>
 </g>

@@ -69,7 +69,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "coincontrol.h", "coincontrol_8h.html", [
       [ "CCoinControl", "class_c_coin_control.html", "class_c_coin_control" ]
     ] ],
-    [ "coins.cpp", "coins_8cpp.html", null ],
+    [ "coins.cpp", "coins_8cpp.html", "coins_8cpp" ],
     [ "coins.h", "coins_8h.html", "coins_8h" ],
     [ "compat.h", "compat_8h.html", "compat_8h" ],
     [ "compressor.cpp", "compressor_8cpp.html", null ],
@@ -81,10 +81,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "core_memusage.h", "core__memusage_8h.html", "core__memusage_8h" ],
     [ "core_read.cpp", "core__read_8cpp.html", "core__read_8cpp" ],
     [ "core_write.cpp", "core__write_8cpp.html", "core__write_8cpp" ],
-    [ "darksend-relay.cpp", "darksend-relay_8cpp.html", null ],
-    [ "darksend-relay.h", "darksend-relay_8h.html", [
-      [ "CDarkSendRelay", "class_c_dark_send_relay.html", "class_c_dark_send_relay" ]
-    ] ],
     [ "dash-cli.cpp", "dash-cli_8cpp.html", "dash-cli_8cpp" ],
     [ "dash-tx.cpp", "dash-tx_8cpp.html", "dash-tx_8cpp" ],
     [ "dashd.cpp", "dashd_8cpp.html", "dashd_8cpp" ],
@@ -215,7 +211,14 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "spentindex.h", "spentindex_8h.html", [
       [ "CSpentIndexKey", "struct_c_spent_index_key.html", "struct_c_spent_index_key" ],
       [ "CSpentIndexValue", "struct_c_spent_index_value.html", "struct_c_spent_index_value" ],
-      [ "CSpentIndexKeyCompare", "struct_c_spent_index_key_compare.html", "struct_c_spent_index_key_compare" ]
+      [ "CSpentIndexKeyCompare", "struct_c_spent_index_key_compare.html", "struct_c_spent_index_key_compare" ],
+      [ "CTimestampIndexIteratorKey", "struct_c_timestamp_index_iterator_key.html", "struct_c_timestamp_index_iterator_key" ],
+      [ "CTimestampIndexKey", "struct_c_timestamp_index_key.html", "struct_c_timestamp_index_key" ],
+      [ "CAddressUnspentKey", "struct_c_address_unspent_key.html", "struct_c_address_unspent_key" ],
+      [ "CAddressUnspentValue", "struct_c_address_unspent_value.html", "struct_c_address_unspent_value" ],
+      [ "CAddressIndexKey", "struct_c_address_index_key.html", "struct_c_address_index_key" ],
+      [ "CAddressIndexIteratorKey", "struct_c_address_index_iterator_key.html", "struct_c_address_index_iterator_key" ],
+      [ "CAddressIndexIteratorHeightKey", "struct_c_address_index_iterator_height_key.html", "struct_c_address_index_iterator_height_key" ]
     ] ],
     [ "spork.cpp", "spork_8cpp.html", "spork_8cpp" ],
     [ "spork.h", "spork_8h.html", "spork_8h" ],
@@ -241,13 +244,9 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "txmempool.cpp", "txmempool_8cpp.html", null ],
     [ "txmempool.h", "txmempool_8h.html", "txmempool_8h" ],
     [ "ui_interface.h", "ui__interface_8h.html", "ui__interface_8h" ],
-    [ "uint256.cpp", "uint256_8cpp.html", "uint256_8cpp" ],
+    [ "uint256.cpp", "uint256_8cpp.html", null ],
     [ "uint256.h", "uint256_8h.html", "uint256_8h" ],
-    [ "undo.h", "undo_8h.html", [
-      [ "CTxInUndo", "class_c_tx_in_undo.html", "class_c_tx_in_undo" ],
-      [ "CTxUndo", "class_c_tx_undo.html", "class_c_tx_undo" ],
-      [ "CBlockUndo", "class_c_block_undo.html", "class_c_block_undo" ]
-    ] ],
+    [ "undo.h", "undo_8h.html", "undo_8h" ],
     [ "util.cpp", "util_8cpp.html", "util_8cpp" ],
     [ "util.h", "util_8h.html", "util_8h" ],
     [ "utilmoneystr.cpp", "utilmoneystr_8cpp.html", "utilmoneystr_8cpp" ],

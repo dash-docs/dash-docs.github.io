@@ -67,6 +67,7 @@ var searchData=
   ['shift_5frow3',['SHIFT_ROW3',['../echo_8c.html#ac4abb8c088f1b1b2cc2e913d0d9a6cec',1,'echo.c']]],
   ['sigma0',['sigma0',['../hash__impl_8h.html#a672bd39bdf2f6dc295a23ddd109175ff',1,'sigma0():&#160;hash_impl.h'],['../hash__impl_8h.html#a613f88ad88919b6ed21ff223070f9a21',1,'Sigma0():&#160;hash_impl.h']]],
   ['sigma1',['Sigma1',['../hash__impl_8h.html#a6d34508d6d962274083fcd992fb4e340',1,'Sigma1():&#160;hash_impl.h'],['../hash__impl_8h.html#a0347251dc63b7abe5d4c500544c24a97',1,'sigma1():&#160;hash_impl.h']]],
+  ['sipround',['SIPROUND',['../hash_8cpp.html#abd545ba6d36990ee5903ff4d0e6edecf',1,'hash.cpp']]],
   ['sixperem_5fsp_5fcp',['SIXPEREM_SP_CP',['../bitcoinunits_8h.html#a4f81a2092131809d327ac966db1601b5',1,'bitcoinunits.h']]],
   ['sixperem_5fsp_5fhtml',['SIXPEREM_SP_HTML',['../bitcoinunits_8h.html#a285b47226a42a51d316b20e042e92f33',1,'bitcoinunits.h']]],
   ['sixperem_5fsp_5futf8',['SIXPEREM_SP_UTF8',['../bitcoinunits_8h.html#aebac7a1b8b402fbf6d1e1645e23382db',1,'bitcoinunits.h']]],

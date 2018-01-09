@@ -55,39 +55,39 @@ var sectionId = 'dynsection-10';
 <g id="viewport">
 <title>secp256k1_fe_is_odd</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-334.386 679,-334.386 679,4 -4,4"/>
-<!-- Node677 -->
-<g id="node1" class="node"><title>Node677</title>
+<!-- Node629 -->
+<g id="node1" class="node"><title>Node629</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-135.886 0,-154.886 111,-154.886 111,-135.886 0,-135.886"/>
 <text text-anchor="middle" x="55.5" y="-142.886" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_is_odd</text>
 </g>
-<!-- Node678 -->
-<g id="node2" class="node"><title>Node678</title>
+<!-- Node630 -->
+<g id="node2" class="node"><title>Node630</title>
 <g id="a_node2"><a xlink:href="ecdh_2main__impl_8h.html#aeb1a1fa5ba08b7f43e5f60a1bf2cb76d" target="_top" xlink:title="Compute an EC Diffie&#45;Hellman secret in constant time Returns: 1: exponentiation was successful 0: sca...">
 <polygon fill="white" stroke="black" points="173.5,-288.886 173.5,-307.886 263.5,-307.886 263.5,-288.886 173.5,-288.886"/>
 <text text-anchor="middle" x="218.5" y="-295.886" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdh</text>
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node678 -->
-<g id="edge1" class="edge"><title>Node677&#45;&gt;Node678</title>
+<!-- Node629&#45;&gt;Node630 -->
+<g id="edge1" class="edge"><title>Node629&#45;&gt;Node630</title>
 <path fill="none" stroke="midnightblue" d="M64.2688,-164.781C77.0397,-194.144 105.286,-249.604 147,-279.386 154.738,-284.91 163.993,-288.828 173.212,-291.607"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="67.3626,-163.108 60.2676,-155.24 60.9073,-165.815 67.3626,-163.108"/>
 </g>
-<!-- Node685 -->
-<g id="node9" class="node"><title>Node685</title>
+<!-- Node637 -->
+<g id="node9" class="node"><title>Node637</title>
 <g id="a_node9"><a xlink:href="ecdsa__impl_8h.html#a3eaa1b23550fa2ccf948e67f2c87a330" target="_top" xlink:title="secp256k1_ecdsa_sig_sign">
 <polygon fill="white" stroke="black" points="150,-250.886 150,-269.886 287,-269.886 287,-250.886 150,-250.886"/>
 <text text-anchor="middle" x="218.5" y="-257.886" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_sig_sign</text>
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node685 -->
-<g id="edge9" class="edge"><title>Node677&#45;&gt;Node685</title>
+<!-- Node629&#45;&gt;Node637 -->
+<g id="edge9" class="edge"><title>Node629&#45;&gt;Node637</title>
 <path fill="none" stroke="midnightblue" d="M68.88,-163.335C84.603,-184.788 113.725,-220.302 147,-240.386 154.189,-244.725 162.357,-248.156 170.522,-250.859"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="71.6493,-161.19 62.9888,-155.087 65.9532,-165.259 71.6493,-161.19"/>
 </g>
-<!-- Node686 -->
-<g id="node10" class="node"><title>Node686</title>
+<!-- Node638 -->
+<g id="node10" class="node"><title>Node638</title>
 <g id="a_node10"><a xlink:href="eckey__impl_8h.html#ae0cdb1eef2dc770d70aac0ad50a35e9a" target="_top" xlink:title="secp256k1_eckey_pubkey\l_parse">
 <polygon fill="white" stroke="black" points="152.5,-201.386 152.5,-231.386 284.5,-231.386 284.5,-201.386 152.5,-201.386"/>
 <text text-anchor="start" x="160.5" y="-219.386" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_eckey_pubkey</text>
@@ -95,13 +95,13 @@ var sectionId = 'dynsection-10';
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node686 -->
-<g id="edge10" class="edge"><title>Node677&#45;&gt;Node686</title>
+<!-- Node629&#45;&gt;Node638 -->
+<g id="edge10" class="edge"><title>Node629&#45;&gt;Node638</title>
 <path fill="none" stroke="midnightblue" d="M83.0557,-160.032C100.865,-169.567 124.999,-181.941 147,-191.386 155.115,-194.869 163.892,-198.266 172.409,-201.377"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="84.3276,-156.741 73.8663,-155.064 80.9983,-162.898 84.3276,-156.741"/>
 </g>
-<!-- Node687 -->
-<g id="node11" class="node"><title>Node687</title>
+<!-- Node639 -->
+<g id="node11" class="node"><title>Node639</title>
 <g id="a_node11"><a xlink:href="eckey__impl_8h.html#ae1f52342d70928f16c8e606da59e6aa6" target="_top" xlink:title="secp256k1_eckey_pubkey\l_serialize">
 <polygon fill="white" stroke="black" points="152.5,-152.386 152.5,-182.386 284.5,-182.386 284.5,-152.386 152.5,-152.386"/>
 <text text-anchor="start" x="160.5" y="-170.386" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_eckey_pubkey</text>
@@ -109,39 +109,39 @@ var sectionId = 'dynsection-10';
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node687 -->
-<g id="edge11" class="edge"><title>Node677&#45;&gt;Node687</title>
+<!-- Node629&#45;&gt;Node639 -->
+<g id="edge11" class="edge"><title>Node629&#45;&gt;Node639</title>
 <path fill="none" stroke="midnightblue" d="M121.169,-154.222C131.478,-155.631 142.148,-157.089 152.465,-158.499"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="121.389,-150.72 111.007,-152.834 120.441,-157.656 121.389,-150.72"/>
 </g>
-<!-- Node688 -->
-<g id="node12" class="node"><title>Node688</title>
+<!-- Node640 -->
+<g id="node12" class="node"><title>Node640</title>
 <g id="a_node12"><a xlink:href="group__impl_8h.html#a3c3d9154b093bb4ed48ba55e4c28a0b5" target="_top" xlink:title="secp256k1_ge_set_xo_var">
 <polygon fill="white" stroke="black" points="152,-113.886 152,-132.886 285,-132.886 285,-113.886 152,-113.886"/>
 <text text-anchor="middle" x="218.5" y="-120.886" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ge_set_xo_var</text>
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node688 -->
-<g id="edge12" class="edge"><title>Node677&#45;&gt;Node688</title>
+<!-- Node629&#45;&gt;Node640 -->
+<g id="edge12" class="edge"><title>Node629&#45;&gt;Node640</title>
 <path fill="none" stroke="midnightblue" d="M121.028,-136.568C131.193,-135.179 141.711,-133.742 151.899,-132.35"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="120.441,-133.116 111.007,-137.937 121.389,-140.051 120.441,-133.116"/>
 </g>
-<!-- Node689 -->
-<g id="node13" class="node"><title>Node689</title>
+<!-- Node641 -->
+<g id="node13" class="node"><title>Node641</title>
 <g id="a_node13"><a xlink:href="schnorr__impl_8h.html#ab58ca77446a7d8daff985d07d43e7175" target="_top" xlink:title="Custom Schnorr&#45;based signature scheme. ">
 <polygon fill="white" stroke="black" points="147,-75.8857 147,-94.8857 290,-94.8857 290,-75.8857 147,-75.8857"/>
 <text text-anchor="middle" x="218.5" y="-82.8857" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_schnorr_sig_sign</text>
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node689 -->
-<g id="edge13" class="edge"><title>Node677&#45;&gt;Node689</title>
+<!-- Node629&#45;&gt;Node641 -->
+<g id="edge13" class="edge"><title>Node629&#45;&gt;Node641</title>
 <path fill="none" stroke="midnightblue" d="M84.3567,-131.347C102.01,-122.807 125.492,-112.099 147,-104.386 156.784,-100.877 167.534,-97.6666 177.627,-94.9235"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="82.638,-128.291 75.1983,-135.834 85.7183,-134.577 82.638,-128.291"/>
 </g>
-<!-- Node690 -->
-<g id="node14" class="node"><title>Node690</title>
+<!-- Node642 -->
+<g id="node14" class="node"><title>Node642</title>
 <g id="a_node14"><a xlink:href="schnorr__impl_8h.html#ad8ac32b20746524ea3b97ab609117daa" target="_top" xlink:title="secp256k1_schnorr_sig\l_verify">
 <polygon fill="white" stroke="black" points="159,-26.3857 159,-56.3857 278,-56.3857 278,-26.3857 159,-26.3857"/>
 <text text-anchor="start" x="167" y="-44.3857" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_schnorr_sig</text>
@@ -149,39 +149,39 @@ var sectionId = 'dynsection-10';
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node690 -->
-<g id="edge14" class="edge"><title>Node677&#45;&gt;Node690</title>
+<!-- Node629&#45;&gt;Node642 -->
+<g id="edge14" class="edge"><title>Node629&#45;&gt;Node642</title>
 <path fill="none" stroke="midnightblue" d="M72.0251,-128.488C88.9785,-110.893 117.65,-83.5516 147,-66.3857 153.39,-62.6486 160.429,-59.3363 167.512,-56.4449"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="69.4254,-126.143 65.0998,-135.815 74.5126,-130.952 69.4254,-126.143"/>
 </g>
-<!-- Node691 -->
-<g id="node15" class="node"><title>Node691</title>
+<!-- Node643 -->
+<g id="node15" class="node"><title>Node643</title>
 <g id="a_node15"><a xlink:href="tests_8c.html#abf8379c326274c3162ebb26491a31611" target="_top" xlink:title="test_group_decompress">
 <polygon fill="white" stroke="black" points="326,-36.8857 326,-55.8857 447,-55.8857 447,-36.8857 326,-36.8857"/>
 <text text-anchor="middle" x="386.5" y="-43.8857" font-family="Helvetica,sans-Serif" font-size="10.00">test_group_decompress</text>
 </a>
 </g>
 </g>
-<!-- Node677&#45;&gt;Node691 -->
-<g id="edge15" class="edge"><title>Node677&#45;&gt;Node691</title>
+<!-- Node629&#45;&gt;Node643 -->
+<g id="edge15" class="edge"><title>Node629&#45;&gt;Node643</title>
 <path fill="none" stroke="midnightblue" d="M63.2987,-126.157C75.0451,-96.2583 102.273,-39.6435 147,-16.3857 220.496,21.8321 323.409,-17.2544 365.932,-36.7409"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="60.0217,-124.928 59.7862,-135.52 66.5757,-127.387 60.0217,-124.928"/>
 </g>
-<!-- Node679 -->
-<g id="node3" class="node"><title>Node679</title>
+<!-- Node631 -->
+<g id="node3" class="node"><title>Node631</title>
 <g id="a_node3"><a xlink:href="bench__ecdh_8c.html#a859eabd44b49e17c9450975ea03c4a0c" target="_top" xlink:title="bench_ecdh">
 <polygon fill="white" stroke="black" points="352,-310.886 352,-329.886 421,-329.886 421,-310.886 352,-310.886"/>
 <text text-anchor="middle" x="386.5" y="-317.886" font-family="Helvetica,sans-Serif" font-size="10.00">bench_ecdh</text>
 </a>
 </g>
 </g>
-<!-- Node678&#45;&gt;Node679 -->
-<g id="edge2" class="edge"><title>Node678&#45;&gt;Node679</title>
+<!-- Node630&#45;&gt;Node631 -->
+<g id="edge2" class="edge"><title>Node630&#45;&gt;Node631</title>
 <path fill="none" stroke="midnightblue" d="M273.554,-305.549C299.312,-308.963 329.322,-312.94 351.782,-315.917"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="273.922,-302.068 263.549,-304.223 273.003,-309.007 273.922,-302.068"/>
 </g>
-<!-- Node681 -->
-<g id="node5" class="node"><title>Node681</title>
+<!-- Node633 -->
+<g id="node5" class="node"><title>Node633</title>
 <g id="a_node5"><a xlink:href="ecdh_2tests__impl_8h.html#ab13157e14f777c18f14fefc834d067c5" target="_top" xlink:title="test_ecdh_generator\l_basepoint">
 <polygon fill="white" stroke="black" points="334,-261.386 334,-291.386 439,-291.386 439,-261.386 334,-261.386"/>
 <text text-anchor="start" x="342" y="-279.386" font-family="Helvetica,sans-Serif" font-size="10.00">test_ecdh_generator</text>
@@ -189,83 +189,83 @@ var sectionId = 'dynsection-10';
 </a>
 </g>
 </g>
-<!-- Node678&#45;&gt;Node681 -->
-<g id="edge4" class="edge"><title>Node678&#45;&gt;Node681</title>
+<!-- Node630&#45;&gt;Node633 -->
+<g id="edge4" class="edge"><title>Node630&#45;&gt;Node633</title>
 <path fill="none" stroke="midnightblue" d="M273.715,-291.201C293.05,-288.638 314.764,-285.76 333.875,-283.228"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="273.003,-287.764 263.549,-292.548 273.922,-294.704 273.003,-287.764"/>
 </g>
-<!-- Node684 -->
-<g id="node8" class="node"><title>Node684</title>
+<!-- Node636 -->
+<g id="node8" class="node"><title>Node636</title>
 <g id="a_node8"><a xlink:href="ecdh_2tests__impl_8h.html#a505bff7cea922e6d8aa4f7525cfd191a" target="_top" xlink:title="test_bad_scalar">
 <polygon fill="white" stroke="black" points="343.5,-222.886 343.5,-241.886 429.5,-241.886 429.5,-222.886 343.5,-222.886"/>
 <text text-anchor="middle" x="386.5" y="-229.886" font-family="Helvetica,sans-Serif" font-size="10.00">test_bad_scalar</text>
 </a>
 </g>
 </g>
-<!-- Node678&#45;&gt;Node684 -->
-<g id="edge7" class="edge"><title>Node678&#45;&gt;Node684</title>
+<!-- Node630&#45;&gt;Node636 -->
+<g id="edge7" class="edge"><title>Node630&#45;&gt;Node636</title>
 <path fill="none" stroke="midnightblue" d="M273.406,-286.27C279.13,-284.277 284.766,-281.993 290,-279.386 308.143,-270.348 308.068,-260.837 326,-251.386 333.003,-247.695 340.85,-244.564 348.491,-241.974"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="272.207,-282.979 263.746,-289.356 274.337,-289.647 272.207,-282.979"/>
 </g>
-<!-- Node680 -->
-<g id="node4" class="node"><title>Node680</title>
+<!-- Node632 -->
+<g id="node4" class="node"><title>Node632</title>
 <g id="a_node4"><a xlink:href="bench__ecdh_8c.html#a840291bc02cba5474a4cb46a9b9566fe" target="_top" xlink:title="main">
 <polygon fill="white" stroke="black" points="523,-310.886 523,-329.886 561,-329.886 561,-310.886 523,-310.886"/>
 <text text-anchor="middle" x="542" y="-317.886" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node679&#45;&gt;Node680 -->
-<g id="edge3" class="edge"><title>Node679&#45;&gt;Node680</title>
+<!-- Node631&#45;&gt;Node632 -->
+<g id="edge3" class="edge"><title>Node631&#45;&gt;Node632</title>
 <path fill="none" stroke="midnightblue" d="M431.501,-320.386C461.76,-320.386 500.38,-320.386 522.738,-320.386"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="431.186,-316.886 421.186,-320.386 431.186,-323.886 431.186,-316.886"/>
 </g>
-<!-- Node682 -->
-<g id="node6" class="node"><title>Node682</title>
+<!-- Node634 -->
+<g id="node6" class="node"><title>Node634</title>
 <g id="a_node6"><a xlink:href="ecdh_2tests__impl_8h.html#aab6cd779f0b87dc8a7afdf4eaf873407" target="_top" xlink:title="run_ecdh_tests">
 <polygon fill="white" stroke="black" points="500.5,-222.886 500.5,-241.886 583.5,-241.886 583.5,-222.886 500.5,-222.886"/>
 <text text-anchor="middle" x="542" y="-229.886" font-family="Helvetica,sans-Serif" font-size="10.00">run_ecdh_tests</text>
 </a>
 </g>
 </g>
-<!-- Node681&#45;&gt;Node682 -->
-<g id="edge5" class="edge"><title>Node681&#45;&gt;Node682</title>
+<!-- Node633&#45;&gt;Node634 -->
+<g id="edge5" class="edge"><title>Node633&#45;&gt;Node634</title>
 <path fill="none" stroke="midnightblue" d="M448.764,-258.825C468.864,-253.063 490.443,-246.877 507.672,-241.939"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="447.689,-255.492 439.04,-261.612 449.618,-262.221 447.689,-255.492"/>
 </g>
-<!-- Node683 -->
-<g id="node7" class="node"><title>Node683</title>
+<!-- Node635 -->
+<g id="node7" class="node"><title>Node635</title>
 <g id="a_node7"><a xlink:href="tests_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title="main">
 <polygon fill="white" stroke="black" points="637,-154.886 637,-173.886 675,-173.886 675,-154.886 637,-154.886"/>
 <text text-anchor="middle" x="656" y="-161.886" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node682&#45;&gt;Node683 -->
-<g id="edge6" class="edge"><title>Node682&#45;&gt;Node683</title>
+<!-- Node634&#45;&gt;Node635 -->
+<g id="edge6" class="edge"><title>Node634&#45;&gt;Node635</title>
 <path fill="none" stroke="midnightblue" d="M567.775,-217.344C589.62,-204.081 620.783,-185.16 639.344,-173.891"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="565.778,-214.461 559.047,-222.643 569.411,-220.445 565.778,-214.461"/>
 </g>
-<!-- Node684&#45;&gt;Node682 -->
-<g id="edge8" class="edge"><title>Node684&#45;&gt;Node682</title>
+<!-- Node636&#45;&gt;Node634 -->
+<g id="edge8" class="edge"><title>Node636&#45;&gt;Node634</title>
 <path fill="none" stroke="midnightblue" d="M439.934,-232.386C459.694,-232.386 481.853,-232.386 500.375,-232.386"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="439.851,-228.886 429.851,-232.386 439.851,-235.886 439.851,-228.886"/>
 </g>
-<!-- Node692 -->
-<g id="node16" class="node"><title>Node692</title>
+<!-- Node644 -->
+<g id="node16" class="node"><title>Node644</title>
 <g id="a_node16"><a xlink:href="tests_8c.html#a03817b02604d9e2c9b5f049fc01d4a99" target="_top" xlink:title="run_group_decompress">
 <polygon fill="white" stroke="black" points="483,-86.8857 483,-105.886 601,-105.886 601,-86.8857 483,-86.8857"/>
 <text text-anchor="middle" x="542" y="-93.8857" font-family="Helvetica,sans-Serif" font-size="10.00">run_group_decompress</text>
 </a>
 </g>
 </g>
-<!-- Node691&#45;&gt;Node692 -->
-<g id="edge16" class="edge"><title>Node691&#45;&gt;Node692</title>
+<!-- Node643&#45;&gt;Node644 -->
+<g id="edge16" class="edge"><title>Node643&#45;&gt;Node644</title>
 <path fill="none" stroke="midnightblue" d="M426.454,-59.0744C452.94,-67.7017 487.429,-78.9357 511.614,-86.8138"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="427.326,-55.6773 416.733,-55.908 425.158,-62.3331 427.326,-55.6773"/>
 </g>
-<!-- Node692&#45;&gt;Node683 -->
-<g id="edge17" class="edge"><title>Node692&#45;&gt;Node683</title>
+<!-- Node644&#45;&gt;Node635 -->
+<g id="edge17" class="edge"><title>Node644&#45;&gt;Node635</title>
 <path fill="none" stroke="midnightblue" d="M567.775,-111.427C589.62,-124.691 620.783,-143.611 639.344,-154.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="569.411,-108.326 559.047,-106.128 565.778,-114.31 569.411,-108.326"/>
 </g>

@@ -1,43 +1,38 @@
 <map id="CWallet::UnlockCoin" name="CWallet::UnlockCoin">
-<area shape="rect" id="node2" href="$rpcwallet_8cpp.html#ac107d90133b49cec9907e032c2a001ca" title="lockunspent" alt="" coords="236,122,328,149"/>
-<area shape="rect" id="node3" href="$class_c_private_send_client.html#a356ed0412558a251d85ebfbc4090dcf9" title="step 1: prepare denominated inputs and outputs " alt="" coords="209,529,355,571"/>
-<area shape="rect" id="node18" href="$class_wallet_model.html#a0a5514bd400327df0f7d63341d8fabf4" title="WalletModel::unlockCoin" alt="" coords="199,173,365,199"/>
-<area shape="rect" id="node22" href="$class_c_private_send_client.html#af8a649a4aa27cb51eb94384232d7b49e" title="CPrivateSendClient\l::UnlockCoins" alt="" coords="213,348,351,389"/>
-<area shape="rect" id="node4" href="$class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546" title="As a client, submit part of a future mixing transaction to a Masternode to start the process..." alt="" coords="688,617,829,659"/>
-<area shape="rect" id="node5" href="$class_c_private_send_client.html#ac5739f34dc74c48a25481ed6cb61a88f" title="CPrivateSendClient\l::ProcessMessage" alt="" coords="951,491,1089,532"/>
-<area shape="rect" id="node6" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1203,495,1325,522"/>
-<area shape="rect" id="node7" href="$net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" title="Process protocol messages received from a given node. " alt="" coords="1424,491,1555,518"/>
-<area shape="rect" id="node8" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="1635,434,1780,461"/>
-<area shape="rect" id="node13" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="1629,491,1785,518"/>
-<area shape="rect" id="node9" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="1869,374,1939,401"/>
-<area shape="rect" id="node10" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2254,407,2317,434"/>
-<area shape="rect" id="node12" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="2015,407,2160,434"/>
-<area shape="rect" id="node11" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="2411,407,2461,434"/>
-<area shape="rect" id="node14" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="1841,491,1967,518"/>
-<area shape="rect" id="node15" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2020,458,2155,485"/>
-<area shape="rect" id="node16" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2047,509,2127,535"/>
-<area shape="rect" id="node17" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2208,509,2363,535"/>
-<area shape="rect" id="node19" href="$class_coin_control_dialog.html#a6da2f01f4e266766a0be3609890b22f2" title="CoinControlDialog::\lbuttonToggleLockClicked" alt="" coords="422,5,591,47"/>
-<area shape="rect" id="node21" href="$class_coin_control_dialog.html#a3097ebdc8972660aae30f49f2ccd1d8c" title="CoinControlDialog::\lunlockCoin" alt="" coords="439,71,575,112"/>
-<area shape="rect" id="node20" href="$class_coin_control_dialog.html#a3cec3ece6aa5eec3e7829e042356a659" title="CoinControlDialog::\lCoinControlDialog" alt="" coords="691,13,827,55"/>
-<area shape="rect" id="node23" href="$class_c_private_send_client.html#ac311fe13f1289e5df9a4420d58d06d09" title="CPrivateSendClient\l::ResetPool" alt="" coords="438,188,575,229"/>
-<area shape="rect" id="node29" href="$class_c_private_send_client.html#ac697b8fbdc76ff365bccdf553f0ac4e9" title="Check for process. " alt="" coords="438,319,575,360"/>
-<area shape="rect" id="node30" href="$class_c_private_send_client.html#a46f1f1448b1737eb8e914dfc9f2edd46" title="CPrivateSendClient\l::CheckTimeout" alt="" coords="690,367,827,408"/>
-<area shape="rect" id="node36" href="$class_c_private_send_client.html#a5dd3ad9ca84fcc35a3b3f19011494610" title="step 2: send denominated inputs and outputs prepared in step 1 " alt="" coords="438,617,575,659"/>
-<area shape="rect" id="node37" href="$class_c_private_send_client.html#a1ceb3cdbbc766124a2a79166241a72cf" title="Get Masternode updates about the progress of mixing. " alt="" coords="675,432,842,473"/>
-<area shape="rect" id="node38" href="$class_c_private_send_client.html#a2b2003b8c8b493d13fb8b0dfcac37fd5" title="As a client, check and sign the final transaction. " alt="" coords="431,552,583,593"/>
-<area shape="rect" id="node39" href="$class_c_private_send_client.html#a1f8053400f47f19228fb34d8ee13a983" title="CPrivateSendClient\l::CompletedTransaction" alt="" coords="426,487,587,528"/>
-<area shape="rect" id="node40" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="413,253,600,295"/>
-<area shape="rect" id="node42" href="$class_overview_page.html#adb8782b6d0e6a976d29d249e63e9859b" title="OverviewPage::togglePrivateSend" alt="" coords="648,97,869,123"/>
-<area shape="rect" id="node24" href="$server_8h.html#a6f0f20fd2a24851d47a6120eeca7d3e4" title="privatesend" alt="" coords="714,214,803,241"/>
-<area shape="rect" id="node25" href="$class_overview_page.html#a5886f0785375a7fc30b9802a4f2c7665" title="OverviewPage::privateSend\lReset" alt="" coords="667,148,851,189"/>
-<area shape="rect" id="node26" href="$class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" title="OverviewPage::setWalletModel" alt="" coords="917,155,1123,182"/>
-<area shape="rect" id="node27" href="$class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" title="Set the wallet model. " alt="" coords="1171,155,1357,182"/>
-<area shape="rect" id="node28" href="$class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" title="WalletFrame::addWallet" alt="" coords="1408,155,1571,182"/>
-<area shape="rect" id="node31" href="$class_c_private_send_client.html#a90f93846395809d7e088fc5fd7a0f7d8" title="Process a new block. " alt="" coords="951,367,1089,408"/>
-<area shape="rect" id="node35" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="917,315,1123,342"/>
-<area shape="rect" id="node32" href="$class_c_private_send_client.html#a7aa728cc4f11d0986229e35d33486c2e" title="CPrivateSendClient\l::UpdatedBlockTip" alt="" coords="1195,367,1333,408"/>
-<area shape="rect" id="node33" href="$class_c_d_s_notification_interface.html#ac2ced383b75336649c5694e580b18164" title="CDSNotificationInterface\l::UpdatedBlockTip" alt="" coords="1405,367,1573,408"/>
-<area shape="rect" id="node34" href="$class_c_d_s_notification_interface.html#a2e9dff307e1373bda9ac9445f7f5a3d7" title="CDSNotificationInterface\l::InitializeCurrentBlockTip" alt="" coords="1621,367,1793,408"/>
-<area shape="rect" id="node41" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="653,265,864,291"/>
+<area shape="rect" id="node2" href="$rpcwallet_8cpp.html#ac107d90133b49cec9907e032c2a001ca" title="lockunspent" alt="" coords="236,163,328,190"/>
+<area shape="rect" id="node3" href="$class_c_private_send_client.html#a505994a7673bd4ca41b45256168597a1" title="step 1: prepare denominated inputs and outputs " alt="" coords="209,215,355,256"/>
+<area shape="rect" id="node18" href="$class_wallet_model.html#a0a5514bd400327df0f7d63341d8fabf4" title="WalletModel::unlockCoin" alt="" coords="199,594,365,621"/>
+<area shape="rect" id="node22" href="$class_c_private_send_client.html#af8a649a4aa27cb51eb94384232d7b49e" title="CPrivateSendClient\l::UnlockCoins" alt="" coords="213,280,351,321"/>
+<area shape="rect" id="node4" href="$class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546" title="As a client, submit part of a future mixing transaction to a Masternode to start the process..." alt="" coords="688,45,829,87"/>
+<area shape="rect" id="node5" href="$class_c_private_send_client.html#ac5739f34dc74c48a25481ed6cb61a88f" title="CPrivateSendClient\l::ProcessMessage" alt="" coords="951,176,1089,217"/>
+<area shape="rect" id="node6" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1203,201,1325,227"/>
+<area shape="rect" id="node7" href="$net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" title="Process protocol messages received from a given node. " alt="" coords="1421,218,1552,245"/>
+<area shape="rect" id="node8" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="1621,218,1767,245"/>
+<area shape="rect" id="node13" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="1616,319,1772,346"/>
+<area shape="rect" id="node9" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="1847,231,1918,258"/>
+<area shape="rect" id="node10" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2233,218,2295,245"/>
+<area shape="rect" id="node12" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="1993,243,2139,270"/>
+<area shape="rect" id="node11" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="2389,218,2440,245"/>
+<area shape="rect" id="node14" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="1820,319,1945,346"/>
+<area shape="rect" id="node15" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="1999,345,2133,371"/>
+<area shape="rect" id="node16" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2026,294,2106,321"/>
+<area shape="rect" id="node17" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2187,294,2341,321"/>
+<area shape="rect" id="node19" href="$class_coin_control_dialog.html#a6da2f01f4e266766a0be3609890b22f2" title="CoinControlDialog::\lbuttonToggleLockClicked" alt="" coords="422,587,591,628"/>
+<area shape="rect" id="node21" href="$class_coin_control_dialog.html#a3097ebdc8972660aae30f49f2ccd1d8c" title="CoinControlDialog::\lunlockCoin" alt="" coords="439,652,575,693"/>
+<area shape="rect" id="node20" href="$class_coin_control_dialog.html#a3cec3ece6aa5eec3e7829e042356a659" title="CoinControlDialog::\lCoinControlDialog" alt="" coords="691,619,827,660"/>
+<area shape="rect" id="node23" href="$class_c_private_send_client.html#ac311fe13f1289e5df9a4420d58d06d09" title="CPrivateSendClient\l::ResetPool" alt="" coords="438,469,575,511"/>
+<area shape="rect" id="node28" href="$class_c_private_send_client.html#ac697b8fbdc76ff365bccdf553f0ac4e9" title="Check for process. " alt="" coords="438,339,575,380"/>
+<area shape="rect" id="node29" href="$class_c_private_send_client.html#a46f1f1448b1737eb8e914dfc9f2edd46" title="CPrivateSendClient\l::CheckTimeout" alt="" coords="690,295,827,336"/>
+<area shape="rect" id="node31" href="$class_c_private_send_client.html#a7e01fd502c2377024e5b858bb7f59337" title="step 2: send denominated inputs and outputs prepared in step 1 " alt="" coords="438,53,575,95"/>
+<area shape="rect" id="node32" href="$class_c_private_send_client.html#a1ceb3cdbbc766124a2a79166241a72cf" title="Get Masternode updates about the progress of mixing. " alt="" coords="675,111,842,152"/>
+<area shape="rect" id="node33" href="$class_c_private_send_client.html#a2b2003b8c8b493d13fb8b0dfcac37fd5" title="As a client, check and sign the final transaction. " alt="" coords="683,176,835,217"/>
+<area shape="rect" id="node34" href="$class_c_private_send_client.html#a1f8053400f47f19228fb34d8ee13a983" title="CPrivateSendClient\l::CompletedTransaction" alt="" coords="426,221,587,263"/>
+<area shape="rect" id="node35" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="413,404,600,445"/>
+<area shape="rect" id="node37" href="$class_overview_page.html#adb8782b6d0e6a976d29d249e63e9859b" title="OverviewPage::togglePrivateSend" alt="" coords="648,535,869,562"/>
+<area shape="rect" id="node24" href="$class_overview_page.html#a5886f0785375a7fc30b9802a4f2c7665" title="OverviewPage::privateSend\lReset" alt="" coords="667,469,851,511"/>
+<area shape="rect" id="node25" href="$class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" title="OverviewPage::setWalletModel" alt="" coords="917,477,1123,503"/>
+<area shape="rect" id="node26" href="$class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" title="Set the wallet model. " alt="" coords="1171,477,1357,503"/>
+<area shape="rect" id="node27" href="$class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" title="WalletFrame::addWallet" alt="" coords="1405,477,1568,503"/>
+<area shape="rect" id="node30" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="917,302,1123,329"/>
+<area shape="rect" id="node36" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="653,415,864,442"/>
 </map>

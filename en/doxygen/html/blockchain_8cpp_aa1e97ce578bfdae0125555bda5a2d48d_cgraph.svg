@@ -9,169 +9,169 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 366)">
 <title>blockheaderToJSON</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-366 492,-366 492,4 -4,4"/>
-<!-- Node9 -->
-<g id="node1" class="node"><title>Node9</title>
+<!-- Node13 -->
+<g id="node1" class="node"><title>Node13</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-171.5 0,-190.5 107,-190.5 107,-171.5 0,-171.5"/>
 <text text-anchor="middle" x="53.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">blockheaderToJSON</text>
 </g>
-<!-- Node10 -->
-<g id="node2" class="node"><title>Node10</title>
+<!-- Node14 -->
+<g id="node2" class="node"><title>Node14</title>
 <g id="a_node2"><a xlink:href="class_c_chain.html#af1786dc229c215dea7f727c11df2c8dc" target="_top" xlink:title="Efficiently check whether a block is present in this chain. ">
 <polygon fill="white" stroke="black" points="370,-209.5 370,-228.5 465,-228.5 465,-209.5 370,-209.5"/>
 <text text-anchor="middle" x="417.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Contains</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node10 -->
-<g id="edge1" class="edge"><title>Node9&#45;&gt;Node10</title>
+<!-- Node13&#45;&gt;Node14 -->
+<g id="edge1" class="edge"><title>Node13&#45;&gt;Node14</title>
 <path fill="none" stroke="midnightblue" d="M107.028,-175.755C159.196,-171.771 241.251,-168.821 311,-181 337.655,-185.654 366.464,-196.456 387.232,-205.358"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="385.89,-208.591 396.453,-209.412 388.708,-202.183 385.89,-208.591"/>
 </g>
-<!-- Node11 -->
-<g id="node3" class="node"><title>Node11</title>
+<!-- Node15 -->
+<g id="node3" class="node"><title>Node15</title>
 <g id="a_node3"><a xlink:href="class_c_block_index.html#a98490a2788c65cdd6ae9002b004dd74c" target="_top" xlink:title="CBlockIndex::GetBlockHash">
 <polygon fill="white" stroke="black" points="155.5,-304.5 155.5,-323.5 298.5,-323.5 298.5,-304.5 155.5,-304.5"/>
 <text text-anchor="middle" x="227" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBlockIndex::GetBlockHash</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node11 -->
-<g id="edge2" class="edge"><title>Node9&#45;&gt;Node11</title>
+<!-- Node13&#45;&gt;Node15 -->
+<g id="edge2" class="edge"><title>Node13&#45;&gt;Node15</title>
 <path fill="none" stroke="midnightblue" d="M59.1204,-190.774C70.1988,-213.084 100.542,-267.914 143,-295 146.34,-297.13 149.889,-299.023 153.569,-300.704"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="152.352,-303.987 162.936,-304.463 154.959,-297.491 152.352,-303.987"/>
 </g>
-<!-- Node12 -->
-<g id="node4" class="node"><title>Node12</title>
+<!-- Node16 -->
+<g id="node4" class="node"><title>Node16</title>
 <g id="a_node4"><a xlink:href="blockchain_8cpp.html#a65a78b16d228932a6142656509a8bce4" target="_top" xlink:title="GetDifficulty">
 <polygon fill="white" stroke="black" points="191.5,-342.5 191.5,-361.5 262.5,-361.5 262.5,-342.5 191.5,-342.5"/>
 <text text-anchor="middle" x="227" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetDifficulty</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node12 -->
-<g id="edge3" class="edge"><title>Node9&#45;&gt;Node12</title>
+<!-- Node13&#45;&gt;Node16 -->
+<g id="edge3" class="edge"><title>Node13&#45;&gt;Node16</title>
 <path fill="none" stroke="midnightblue" d="M57.1555,-190.665C65.1372,-217.802 91.5933,-295.18 143,-333 154.102,-341.167 168.126,-345.906 181.472,-348.63"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="181.038,-352.106 191.485,-350.343 182.219,-345.207 181.038,-352.106"/>
 </g>
-<!-- Node14 -->
-<g id="node6" class="node"><title>Node14</title>
+<!-- Node18 -->
+<g id="node6" class="node"><title>Node18</title>
 <g id="a_node6"><a xlink:href="classbase__blob.html#ad7263503f949fb3c6c520ebb1f28e378" target="_top" xlink:title="base_blob::GetHex">
 <polygon fill="white" stroke="black" points="176.5,-228.5 176.5,-247.5 277.5,-247.5 277.5,-228.5 176.5,-228.5"/>
 <text text-anchor="middle" x="227" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">base_blob::GetHex</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node14 -->
-<g id="edge5" class="edge"><title>Node9&#45;&gt;Node14</title>
+<!-- Node13&#45;&gt;Node18 -->
+<g id="edge5" class="edge"><title>Node13&#45;&gt;Node18</title>
 <path fill="none" stroke="midnightblue" d="M74.1392,-190.652C91.8168,-199.043 118.678,-211.066 143,-219 150.793,-221.542 159.105,-223.874 167.344,-225.968"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="166.775,-229.432 177.319,-228.403 168.434,-222.632 166.775,-229.432"/>
 </g>
-<!-- Node15 -->
-<g id="node7" class="node"><title>Node15</title>
+<!-- Node19 -->
+<g id="node7" class="node"><title>Node19</title>
 <g id="a_node7"><a xlink:href="classbase__uint.html#ae5e7b7481de91ebead20eebd5d685441" target="_top" xlink:title="base_uint::GetHex">
 <polygon fill="white" stroke="black" points="178,-190.5 178,-209.5 276,-209.5 276,-190.5 178,-190.5"/>
 <text text-anchor="middle" x="227" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">base_uint::GetHex</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node15 -->
-<g id="edge6" class="edge"><title>Node9&#45;&gt;Node15</title>
+<!-- Node13&#45;&gt;Node19 -->
+<g id="edge6" class="edge"><title>Node13&#45;&gt;Node19</title>
 <path fill="none" stroke="midnightblue" d="M107.355,-186.856C126.548,-188.982 148.332,-191.395 167.949,-193.569"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="167.66,-197.058 177.984,-194.68 168.431,-190.101 167.66,-197.058"/>
 </g>
-<!-- Node16 -->
-<g id="node8" class="node"><title>Node16</title>
+<!-- Node20 -->
+<g id="node8" class="node"><title>Node20</title>
 <g id="a_node8"><a xlink:href="class_c_block_index.html#aa9bd0ab02cf8b9c866618cee3a5a0583" target="_top" xlink:title="CBlockIndex::GetMedianTimePast">
 <polygon fill="white" stroke="black" points="143,-76.5 143,-95.5 311,-95.5 311,-76.5 143,-76.5"/>
 <text text-anchor="middle" x="227" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBlockIndex::GetMedianTimePast</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node16 -->
-<g id="edge7" class="edge"><title>Node9&#45;&gt;Node16</title>
+<!-- Node13&#45;&gt;Node20 -->
+<g id="edge7" class="edge"><title>Node13&#45;&gt;Node20</title>
 <path fill="none" stroke="midnightblue" d="M62.7203,-171.392C77.2128,-155.099 109.007,-122.152 143,-105 147.665,-102.646 152.623,-100.581 157.706,-98.7678"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="159.143,-101.982 167.588,-95.5847 156.996,-95.3193 159.143,-101.982"/>
 </g>
-<!-- Node18 -->
-<g id="node10" class="node"><title>Node18</title>
+<!-- Node22 -->
+<g id="node10" class="node"><title>Node22</title>
 <g id="a_node10"><a xlink:href="class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" target="_top" xlink:title="Return the maximal height in the chain. ">
 <polygon fill="white" stroke="black" points="185,-114.5 185,-133.5 269,-133.5 269,-114.5 185,-114.5"/>
 <text text-anchor="middle" x="227" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Height</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node18 -->
-<g id="edge9" class="edge"><title>Node9&#45;&gt;Node18</title>
+<!-- Node13&#45;&gt;Node22 -->
+<g id="edge9" class="edge"><title>Node13&#45;&gt;Node22</title>
 <path fill="none" stroke="midnightblue" d="M78.7416,-171.397C96.429,-164.529 121.047,-155.255 143,-148 155.25,-143.952 168.637,-139.914 181.015,-136.338"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="182.029,-139.688 190.684,-133.577 180.107,-132.957 182.029,-139.688"/>
 </g>
-<!-- Node19 -->
-<g id="node11" class="node"><title>Node19</title>
+<!-- Node23 -->
+<g id="node11" class="node"><title>Node23</title>
 <g id="a_node11"><a xlink:href="class_c_chain.html#a3077e83c87e8a974765fa76a57fd040b" target="_top" xlink:title="Find the successor of a block in this chain, or NULL if the given index is not found or is the tip...">
 <polygon fill="white" stroke="black" points="188.5,-266.5 188.5,-285.5 265.5,-285.5 265.5,-266.5 188.5,-266.5"/>
 <text text-anchor="middle" x="227" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Next</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node19 -->
-<g id="edge10" class="edge"><title>Node9&#45;&gt;Node19</title>
+<!-- Node13&#45;&gt;Node23 -->
+<g id="edge10" class="edge"><title>Node13&#45;&gt;Node23</title>
 <path fill="none" stroke="midnightblue" d="M62.7203,-190.608C77.2128,-206.901 109.007,-239.848 143,-257 153.929,-262.515 166.473,-266.45 178.443,-269.25"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="177.806,-272.693 188.315,-271.345 179.259,-265.845 177.806,-272.693"/>
 </g>
-<!-- Node20 -->
-<g id="node12" class="node"><title>Node20</title>
+<!-- Node24 -->
+<g id="node12" class="node"><title>Node24</title>
 <g id="a_node12"><a xlink:href="univalue_8h.html#a884f0e316157c5d85f6cff80c442bf1a" target="_top" xlink:title="Pair">
 <polygon fill="white" stroke="black" points="210,-38.5 210,-57.5 244,-57.5 244,-38.5 210,-38.5"/>
 <text text-anchor="middle" x="227" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Pair</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node20 -->
-<g id="edge12" class="edge"><title>Node9&#45;&gt;Node20</title>
+<!-- Node13&#45;&gt;Node24 -->
+<g id="edge12" class="edge"><title>Node13&#45;&gt;Node24</title>
 <path fill="none" stroke="midnightblue" d="M59.1204,-171.226C70.1988,-148.916 100.542,-94.0856 143,-67 160.029,-56.1366 182.525,-51.457 199.801,-49.4549"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="200.156,-52.937 209.788,-48.5229 199.506,-45.9673 200.156,-52.937"/>
 </g>
-<!-- Node21 -->
-<g id="node13" class="node"><title>Node21</title>
+<!-- Node25 -->
+<g id="node13" class="node"><title>Node25</title>
 <g id="a_node13"><a xlink:href="class_uni_value.html#a944cd1b59b040cd24c9f46b55a68d49a" target="_top" xlink:title="UniValue::push_back">
 <polygon fill="white" stroke="black" points="172,-0.5 172,-19.5 282,-19.5 282,-0.5 172,-0.5"/>
 <text text-anchor="middle" x="227" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">UniValue::push_back</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node21 -->
-<g id="edge13" class="edge"><title>Node9&#45;&gt;Node21</title>
+<!-- Node13&#45;&gt;Node25 -->
+<g id="edge13" class="edge"><title>Node13&#45;&gt;Node25</title>
 <path fill="none" stroke="midnightblue" d="M57.1555,-171.335C65.1372,-144.198 91.5933,-66.8201 143,-29 148.812,-24.7239 155.425,-21.3878 162.323,-18.7885"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="163.433,-22.108 171.857,-15.6818 161.264,-15.4525 163.433,-22.108"/>
 </g>
-<!-- Node13 -->
-<g id="node5" class="node"><title>Node13</title>
+<!-- Node17 -->
+<g id="node5" class="node"><title>Node17</title>
 <g id="a_node5"><a xlink:href="class_c_chain.html#a578545bde95163bee37b1be28e7b2755" target="_top" xlink:title="Returns the index entry for the tip of this chain, or NULL if none. ">
 <polygon fill="white" stroke="black" points="383,-342.5 383,-361.5 452,-361.5 452,-342.5 383,-342.5"/>
 <text text-anchor="middle" x="417.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Tip</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
-<g id="edge4" class="edge"><title>Node12&#45;&gt;Node13</title>
+<!-- Node16&#45;&gt;Node17 -->
+<g id="edge4" class="edge"><title>Node16&#45;&gt;Node17</title>
 <path fill="none" stroke="midnightblue" d="M262.574,-352C293.456,-352 338.858,-352 372.356,-352"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="372.78,-355.5 382.78,-352 372.78,-348.5 372.78,-355.5"/>
 </g>
-<!-- Node17 -->
-<g id="node9" class="node"><title>Node17</title>
+<!-- Node21 -->
+<g id="node9" class="node"><title>Node21</title>
 <g id="a_node9"><a xlink:href="class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" target="_top" xlink:title="CBlockIndex::GetBlockTime">
 <polygon fill="white" stroke="black" points="347,-76.5 347,-95.5 488,-95.5 488,-76.5 347,-76.5"/>
 <text text-anchor="middle" x="417.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBlockIndex::GetBlockTime</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node17 -->
-<g id="edge8" class="edge"><title>Node16&#45;&gt;Node17</title>
+<!-- Node20&#45;&gt;Node21 -->
+<g id="edge8" class="edge"><title>Node20&#45;&gt;Node21</title>
 <path fill="none" stroke="midnightblue" d="M311.228,-86C319.712,-86 328.317,-86 336.762,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="336.966,-89.5001 346.966,-86 336.966,-82.5001 336.966,-89.5001"/>
 </g>
-<!-- Node19&#45;&gt;Node10 -->
-<g id="edge11" class="edge"><title>Node19&#45;&gt;Node10</title>
+<!-- Node23&#45;&gt;Node14 -->
+<g id="edge11" class="edge"><title>Node23&#45;&gt;Node14</title>
 <path fill="none" stroke="midnightblue" d="M265.848,-268.345C280.1,-265.199 296.39,-261.286 311,-257 335.401,-249.841 362.369,-240.094 382.931,-232.264"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="384.394,-235.451 392.471,-228.594 381.881,-228.918 384.394,-235.451"/>
 </g>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['guiutil',['GUIUtil',['../namespace_g_u_i_util.html',1,'']]]
+  ['dbwrapper_5fprivate',['dbwrapper_private',['../namespacedbwrapper__private.html',1,'']]]
 ];

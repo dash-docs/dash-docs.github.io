@@ -17,6 +17,7 @@ var searchData=
   ['release_2dnotes_2d0_2e11_2e1_2emd',['release-notes-0.11.1.md',['../release-notes-0_811_81_8md.html',1,'']]],
   ['release_2dnotes_2d0_2e11_2e2_2emd',['release-notes-0.11.2.md',['../release-notes-0_811_82_8md.html',1,'']]],
   ['release_2dnotes_2d0_2e12_2e0_2emd',['release-notes-0.12.0.md',['../release-notes-0_812_80_8md.html',1,'']]],
+  ['release_2dnotes_2d0_2e12_2e2_2emd',['release-notes-0.12.2.md',['../release-notes-0_812_82_8md.html',1,'']]],
   ['release_2dnotes_2d0_2e9_2e0_2emd',['release-notes-0.9.0.md',['../release-notes-0_89_80_8md.html',1,'']]],
   ['rest_2ecpp',['rest.cpp',['../rest_8cpp.html',1,'']]],
   ['reverselock_2eh',['reverselock.h',['../reverselock_8h.html',1,'']]],

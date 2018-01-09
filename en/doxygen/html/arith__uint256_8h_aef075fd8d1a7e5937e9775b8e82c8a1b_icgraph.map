@@ -1,51 +1,38 @@
 <map id="ArithToUint256" name="ArithToUint256">
-<area shape="rect" id="node2" href="$class_c_masternode.html#abfee4bc30fa436d9a5f8b5f15a078081" title="CMasternode::CalculateScore" alt="" coords="387,365,584,391"/>
-<area shape="rect" id="node25" href="$classbase__uint.html#ae5e7b7481de91ebead20eebd5d685441" title="base_uint\&lt; 256 \&gt;::GetHex" alt="" coords="163,855,339,882"/>
-<area shape="rect" id="node26" href="$net__processing_8cpp.html#a5de6345878869c44bb12d104fecd55d1" title="RelayAddress" alt="" coords="433,637,537,663"/>
-<area shape="rect" id="node31" href="$net__processing_8h.html#aeff072ce2b170f7800141915a667adfc" title="Send queued protocol messages to be sent to a give node. " alt="" coords="1784,691,1896,718"/>
-<area shape="rect" id="node32" href="$class_c_governance_manager.html#a86138b11fecbfc562b899a42ba89d19a" title="CGovernanceManager\l::UpdateCurrentWatchdog" alt="" coords="163,688,338,729"/>
-<area shape="rect" id="node3" href="$class_c_masternode_man.html#ad549e14e5a1184a6ee01135d1b480f2e" title="Find an entry in the masternode list that is next to be paid. " alt="" coords="632,136,883,177"/>
-<area shape="rect" id="node4" href="$class_c_masternode_payments.html#a6c323905008eeba029283b2467463b9e" title="FillBlockPayee. " alt="" coords="977,71,1135,112"/>
-<area shape="rect" id="node19" href="$class_c_masternode_payments.html#a3827f5f6335d03ba2c4fabe542d55d54" title="CMasternodePayments\l::ProcessBlock" alt="" coords="977,136,1135,177"/>
-<area shape="rect" id="node23" href="$server_8h.html#adc51a168fd3ea207996ae4f8d9d6c6ea" title="masternode" alt="" coords="1795,318,1885,345"/>
-<area shape="rect" id="node24" href="$class_c_masternode_man.html#aa51b437b31b0d7fd88692e344a3893ea" title="Same as above but use current block height. " alt="" coords="931,5,1181,47"/>
-<area shape="rect" id="node5" href="$masternode-payments_8h.html#a1a60010ef73db581ad54a165770391c6" title="FillBlockPayments" alt="" coords="1281,83,1412,110"/>
-<area shape="rect" id="node6" href="$miner_8h.html#ac8f34678ed590db1325b261c708f2626" title="Generate a new block, without valid proof&#45;of&#45;work. " alt="" coords="1549,133,1670,159"/>
-<area shape="rect" id="node7" href="$miner_8cpp.html#a17c61f964b27cc5060cd7f9b0efb3607" title="BitcoinMiner" alt="" coords="1793,263,1887,290"/>
-<area shape="rect" id="node17" href="$server_8h.html#afc5f2c0cbe40a2f876b46df2929cf359" title="generate" alt="" coords="1804,97,1876,123"/>
-<area shape="rect" id="node18" href="$server_8h.html#a054ca23f5d86a8ca30138464ba10008c" title="getblocktemplate" alt="" coords="1779,147,1901,174"/>
-<area shape="rect" id="node8" href="$miner_8h.html#a5dd1df3c97c260735ad08a808db2115c" title="Run the miner threads. " alt="" coords="1998,574,2121,601"/>
-<area shape="rect" id="node9" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="2193,639,2319,666"/>
-<area shape="rect" id="node15" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="2221,549,2291,575"/>
-<area shape="rect" id="node10" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2399,614,2479,641"/>
-<area shape="rect" id="node14" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2372,665,2507,691"/>
-<area shape="rect" id="node11" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2606,538,2669,565"/>
-<area shape="rect" id="node13" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2560,614,2715,641"/>
-<area shape="rect" id="node12" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="2763,538,2813,565"/>
-<area shape="rect" id="node16" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="2367,563,2512,590"/>
-<area shape="rect" id="node20" href="$class_c_masternode_payments.html#a83580d8ca468c726d7de57c5bb832b24" title="CMasternodePayments\l::UpdatedBlockTip" alt="" coords="1267,140,1426,181"/>
-<area shape="rect" id="node21" href="$class_c_d_s_notification_interface.html#ac2ced383b75336649c5694e580b18164" title="CDSNotificationInterface\l::UpdatedBlockTip" alt="" coords="1525,201,1693,243"/>
-<area shape="rect" id="node22" href="$class_c_d_s_notification_interface.html#a2e9dff307e1373bda9ac9445f7f5a3d7" title="CDSNotificationInterface\l::InitializeCurrentBlockTip" alt="" coords="1973,332,2145,373"/>
-<area shape="rect" id="node27" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1548,645,1671,671"/>
-<area shape="rect" id="node28" href="$net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" title="Process protocol messages received from a given node. " alt="" coords="1775,641,1905,667"/>
-<area shape="rect" id="node29" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="1987,630,2132,657"/>
-<area shape="rect" id="node30" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="1981,681,2137,707"/>
-<area shape="rect" id="node33" href="$class_c_governance_manager.html#a411c189171dd09a82de2daf8b12134fd" title="CGovernanceManager\l::AddGovernanceObject" alt="" coords="405,688,566,729"/>
-<area shape="rect" id="node34" href="$class_c_governance_manager.html#a442507518db0686a860dea18979c7cd6" title="CGovernanceManager\l::ProcessMessage" alt="" coords="681,688,833,729"/>
-<area shape="rect" id="node35" href="$class_c_governance_manager.html#a3953c78251f14a8db9ed1b8683c35670" title="CGovernanceManager\l::CheckMasternodeOrphanObjects" alt="" coords="646,540,869,581"/>
-<area shape="rect" id="node48" href="$class_c_governance_manager.html#ac3f4ec182d1b226f8f2190224044e533" title="CGovernanceManager\l::CheckPostponedObjects" alt="" coords="670,336,845,377"/>
-<area shape="rect" id="node50" href="$server_8h.html#a0fa637689f8c63fc6adebeb9458430db" title="gobject" alt="" coords="725,754,789,781"/>
-<area shape="rect" id="node36" href="$class_c_masternode_man.html#a5e27707730f73d111df8bc0fcd819b68" title="Called to notify CGovernanceManager that the masternode index has been updated. " alt="" coords="938,511,1174,552"/>
-<area shape="rect" id="node37" href="$class_c_active_masternode.html#a6b4e22d77d7a2670328910848ef498b8" title="CActiveMasternode::\lManageStateLocal" alt="" coords="1274,427,1419,468"/>
-<area shape="rect" id="node40" href="$server_8h.html#a7ae813efd78b542bd5e3cddb01174777" title="masternodebroadcast" alt="" coords="1273,543,1420,570"/>
-<area shape="rect" id="node41" href="$class_c_masternode_man.html#a09302023fe1dca8be33e34d1ece9d27f" title="Check all Masternodes and remove inactive. " alt="" coords="1512,579,1707,620"/>
-<area shape="rect" id="node42" href="$class_c_masternode_man.html#ae8534b13438b5a2166854a6d35d99bac" title="CMasternodeMan::ProcessMessage" alt="" coords="1229,594,1464,621"/>
-<area shape="rect" id="node43" href="$class_masternode_list.html#ab3a42d1c66f3b28e9843335d8ce0178d" title="MasternodeList::StartAlias" alt="" coords="1259,746,1435,773"/>
-<area shape="rect" id="node45" href="$class_masternode_list.html#a0ebd5301adf7567e6a82550ba6d02ccc" title="MasternodeList::StartAll" alt="" coords="1265,375,1428,402"/>
-<area shape="rect" id="node38" href="$class_c_active_masternode.html#aa34e5cadd8539d8be6f7a606aa1407c6" title="Manage state of active Masternode. " alt="" coords="1537,513,1682,555"/>
-<area shape="rect" id="node39" href="$privatesend_8h.html#a8ca12ada145ba86ddcba18018b77db14" title="ThreadCheckPrivateSend" alt="" coords="1755,523,1925,550"/>
-<area shape="rect" id="node44" href="$class_masternode_list.html#a4370755b1dcdbf4a9396108c2b7ae76a" title="MasternodeList::on\l_startButton_clicked" alt="" coords="1539,739,1680,780"/>
-<area shape="rect" id="node46" href="$class_masternode_list.html#a12e7d7a66cc6ce787fb5de9babfd7358" title="MasternodeList::on\l_startAllButton_clicked" alt="" coords="1531,448,1687,489"/>
-<area shape="rect" id="node47" href="$class_masternode_list.html#a559cf1011eede788d0416c7390e25145" title="MasternodeList::on\l_startMissingButton\l_clicked" alt="" coords="1540,369,1679,425"/>
-<area shape="rect" id="node49" href="$class_c_governance_manager.html#abefe0f159b050f2c3c3c8f382ecca88d" title="CGovernanceManager\l::UpdatedBlockTip" alt="" coords="980,201,1132,243"/>
+<area shape="rect" id="node2" href="$classbase__uint.html#ae5e7b7481de91ebead20eebd5d685441" title="base_uint\&lt; 256 \&gt;::GetHex" alt="" coords="163,5,339,32"/>
+<area shape="rect" id="node3" href="$net__processing_8cpp.html#a5de6345878869c44bb12d104fecd55d1" title="RelayAddress" alt="" coords="415,107,519,133"/>
+<area shape="rect" id="node16" href="$net__processing_8h.html#aeff072ce2b170f7800141915a667adfc" title="Send queued protocol messages to be sent to a give node. " alt="" coords="1685,143,1797,169"/>
+<area shape="rect" id="node17" href="$class_c_governance_manager.html#a86138b11fecbfc562b899a42ba89d19a" title="CGovernanceManager\l::UpdateCurrentWatchdog" alt="" coords="163,179,338,221"/>
+<area shape="rect" id="node4" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1450,179,1573,205"/>
+<area shape="rect" id="node5" href="$net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" title="Process protocol messages received from a given node. " alt="" coords="1676,193,1807,220"/>
+<area shape="rect" id="node6" href="$net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" title="Register with a network node to receive its signals. " alt="" coords="1907,219,2052,245"/>
+<area shape="rect" id="node11" href="$net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" title="Unregister a network node. " alt="" coords="1901,168,2057,195"/>
+<area shape="rect" id="node7" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="2141,353,2211,380"/>
+<area shape="rect" id="node8" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2526,283,2589,309"/>
+<area shape="rect" id="node10" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="2287,353,2432,380"/>
+<area shape="rect" id="node9" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="2683,283,2733,309"/>
+<area shape="rect" id="node12" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="2113,169,2239,196"/>
+<area shape="rect" id="node13" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2319,228,2399,255"/>
+<area shape="rect" id="node15" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2292,169,2427,196"/>
+<area shape="rect" id="node14" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2480,228,2635,255"/>
+<area shape="rect" id="node18" href="$class_c_governance_manager.html#a411c189171dd09a82de2daf8b12134fd" title="CGovernanceManager\l::AddGovernanceObject" alt="" coords="387,211,548,253"/>
+<area shape="rect" id="node19" href="$class_c_governance_manager.html#a442507518db0686a860dea18979c7cd6" title="CGovernanceManager\l::ProcessMessage" alt="" coords="909,185,1061,226"/>
+<area shape="rect" id="node20" href="$class_c_governance_manager.html#a3953c78251f14a8db9ed1b8683c35670" title="CGovernanceManager\l::CheckMasternodeOrphanObjects" alt="" coords="596,291,819,333"/>
+<area shape="rect" id="node33" href="$class_c_governance_manager.html#ac3f4ec182d1b226f8f2190224044e533" title="CGovernanceManager\l::CheckPostponedObjects" alt="" coords="620,450,795,491"/>
+<area shape="rect" id="node37" href="$server_8h.html#a0fa637689f8c63fc6adebeb9458430db" title="gobject" alt="" coords="675,168,739,195"/>
+<area shape="rect" id="node21" href="$class_c_masternode_man.html#a5e27707730f73d111df8bc0fcd819b68" title="Called to notify CGovernanceManager that the masternode index has been updated. " alt="" coords="867,302,1103,343"/>
+<area shape="rect" id="node22" href="$server_8h.html#adc51a168fd3ea207996ae4f8d9d6c6ea" title="masternode" alt="" coords="1223,309,1313,336"/>
+<area shape="rect" id="node23" href="$server_8h.html#a7ae813efd78b542bd5e3cddb01174777" title="masternodebroadcast" alt="" coords="1195,360,1341,387"/>
+<area shape="rect" id="node24" href="$class_c_masternode_man.html#a09302023fe1dca8be33e34d1ece9d27f" title="Check all Masternodes and remove inactive. " alt="" coords="1644,347,1839,389"/>
+<area shape="rect" id="node26" href="$class_c_masternode_man.html#ae8534b13438b5a2166854a6d35d99bac" title="CMasternodeMan::ProcessMessage" alt="" coords="1151,208,1385,235"/>
+<area shape="rect" id="node27" href="$class_masternode_list.html#ab3a42d1c66f3b28e9843335d8ce0178d" title="MasternodeList::StartAlias" alt="" coords="1180,259,1356,285"/>
+<area shape="rect" id="node30" href="$class_masternode_list.html#a0ebd5301adf7567e6a82550ba6d02ccc" title="MasternodeList::StartAll" alt="" coords="1187,411,1349,437"/>
+<area shape="rect" id="node25" href="$privatesend_8h.html#a8ca12ada145ba86ddcba18018b77db14" title="ThreadCheckPrivateSend" alt="" coords="1894,355,2065,381"/>
+<area shape="rect" id="node28" href="$class_masternode_list.html#a4370755b1dcdbf4a9396108c2b7ae76a" title="MasternodeList::on\l_startButton_clicked" alt="" coords="1441,251,1582,293"/>
+<area shape="rect" id="node29" href="$class_masternode_list.html#a257b85a08e7d691d1ecb35472043cf90" title="MasternodeList::MasternodeList" alt="" coords="1637,259,1845,285"/>
+<area shape="rect" id="node31" href="$class_masternode_list.html#a12e7d7a66cc6ce787fb5de9babfd7358" title="MasternodeList::on\l_startAllButton_clicked" alt="" coords="1433,317,1589,358"/>
+<area shape="rect" id="node32" href="$class_masternode_list.html#a559cf1011eede788d0416c7390e25145" title="MasternodeList::on\l_startMissingButton\l_clicked" alt="" coords="1442,381,1581,437"/>
+<area shape="rect" id="node34" href="$class_c_governance_manager.html#abefe0f159b050f2c3c3c8f382ecca88d" title="CGovernanceManager\l::UpdatedBlockTip" alt="" coords="909,482,1061,523"/>
+<area shape="rect" id="node35" href="$class_c_d_s_notification_interface.html#ac2ced383b75336649c5694e580b18164" title="CDSNotificationInterface\l::UpdatedBlockTip" alt="" coords="1184,513,1352,554"/>
+<area shape="rect" id="node36" href="$class_c_d_s_notification_interface.html#a2e9dff307e1373bda9ac9445f7f5a3d7" title="CDSNotificationInterface\l::InitializeCurrentBlockTip" alt="" coords="1893,474,2065,515"/>
 </map>

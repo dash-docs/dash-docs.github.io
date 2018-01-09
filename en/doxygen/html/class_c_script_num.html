@@ -219,7 +219,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00195">195</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00198">198</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abd546b6e7786ba70aeeb81e218d055bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd546b6e7786ba70aeeb81e218d055bc">&#9670;&nbsp;</a></span>CScriptNum() <span class="overload">[1/2]</span></h2>
@@ -248,11 +248,11 @@ Private Attributes</h2></td></tr>
 <p>Numeric opcodes (OP_1ADD, etc) are restricted to operating on 4-byte integers. </p>
 <p>The semantics are subtle, though: operands must be in the range [-2^31 +1...2^31 -1], but results may overflow (and are valid as long as they are not used in a subsequent numeric operation). <a class="el" href="class_c_script_num.html">CScriptNum</a> enforces those semantics by storing results as an int64 and allowing out-of-range values to be returned as a vector of bytes but throwing an exception if arithmetic is done or the result is interpreted as an integer. </p>
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00207">207</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00210">210</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00263">operator &amp;()</a>, <a class="el" href="script_8h_source.html#l00255">operator+()</a>, and <a class="el" href="script_8h_source.html#l00256">operator-()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00266">operator &amp;()</a>, <a class="el" href="script_8h_source.html#l00258">operator+()</a>, and <a class="el" href="script_8h_source.html#l00259">operator-()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -304,9 +304,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00214">214</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00217">217</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00350">set_vch()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00353">set_vch()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -342,9 +342,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00302">302</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00305">305</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -381,11 +381,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00311">311</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00314">314</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00316">serialize()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00319">serialize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, and <a class="el" href="script_8h_source.html#l00429">CScript::operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, and <a class="el" href="script_8h_source.html#l00432">CScript::operator&lt;&lt;()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -429,11 +429,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00263">263</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00266">266</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00207">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00210">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00264">operator &amp;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00267">operator &amp;()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -477,9 +477,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00264">264</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00267">267</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00263">operator &amp;()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00266">operator &amp;()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -515,9 +515,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00266">266</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00269">269</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -545,9 +545,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00296">296</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00299">299</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -575,9 +575,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00242">242</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00245">245</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -605,11 +605,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00249">249</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00252">252</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00249">operator!=()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00252">operator!=()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00249">operator!=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00252">operator!=()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -653,9 +653,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00255">255</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00258">258</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00207">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00210">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -691,11 +691,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00257">257</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00260">260</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00257">operator+()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00260">operator+()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00257">operator+()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00260">operator+()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -739,11 +739,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00260">260</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00263">263</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00260">operator+=()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00263">operator+=()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00260">operator+=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00263">operator+=()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -787,9 +787,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00280">280</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00283">283</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -817,9 +817,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00256">256</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00259">259</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00207">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00210">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -855,11 +855,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00258">258</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00261">261</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00258">operator-()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00261">operator-()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00258">operator-()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00261">operator-()</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -902,9 +902,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00268">268</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00271">271</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00207">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00210">CScriptNum()</a>, and <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -940,11 +940,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00261">261</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00264">264</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00261">operator-=()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00264">operator-=()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00261">operator-=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00264">operator-=()</a>.</p>
 <div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-19-summary" class="dynsummary" style="display:block;">
@@ -988,9 +988,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00288">288</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00291">291</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -1018,11 +1018,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00244">244</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00247">247</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00251">operator&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00254">operator&lt;()</a>.</p>
 <div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
@@ -1058,9 +1058,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00251">251</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00254">254</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00244">operator&lt;()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00247">operator&lt;()</a>.</p>
 <div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
@@ -1096,9 +1096,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00243">243</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00246">246</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -1126,11 +1126,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00250">250</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00253">253</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00250">operator&lt;=()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00253">operator&lt;=()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00250">operator&lt;=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00253">operator&lt;=()</a>.</p>
 <div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-23-summary" class="dynsummary" style="display:block;">
@@ -1174,9 +1174,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00274">274</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00277">277</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -1204,9 +1204,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00241">241</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00244">244</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -1234,11 +1234,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00248">248</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00251">251</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00248">operator==()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00251">operator==()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00248">operator==()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00251">operator==()</a>.</p>
 <div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-25-summary" class="dynsummary" style="display:block;">
@@ -1282,11 +1282,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00246">246</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00249">249</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00253">operator&gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00256">operator&gt;()</a>.</p>
 <div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-27-summary" class="dynsummary" style="display:block;">
@@ -1322,9 +1322,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00253">253</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00256">256</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00246">operator&gt;()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00249">operator&gt;()</a>.</p>
 <div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-28-summary" class="dynsummary" style="display:block;">
@@ -1360,9 +1360,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00245">245</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00248">248</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>.</p>
 
 </div>
 </div>
@@ -1390,11 +1390,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00252">252</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00255">255</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">References <a class="el" href="script_8h_source.html#l00367">m_value</a>, and <a class="el" href="script_8h_source.html#l00252">operator&gt;=()</a>.</p>
+<p class="reference">References <a class="el" href="script_8h_source.html#l00370">m_value</a>, and <a class="el" href="script_8h_source.html#l00255">operator&gt;=()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00252">operator&gt;=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00255">operator&gt;=()</a>.</p>
 <div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-29-summary" class="dynsummary" style="display:block;">
@@ -1438,9 +1438,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00316">316</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00319">319</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00311">getvch()</a>, and <a class="el" href="script_8h_source.html#l00376">CScript::push_int64()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00314">getvch()</a>, and <a class="el" href="script_8h_source.html#l00379">CScript::push_int64()</a>.</p>
 <div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-31-summary" class="dynsummary" style="display:block;">
@@ -1476,9 +1476,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00350">350</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00353">353</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00214">CScriptNum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00217">CScriptNum()</a>.</p>
 <div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-32-summary" class="dynsummary" style="display:block;">
@@ -1511,9 +1511,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00367">367</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00370">370</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00207">CScriptNum()</a>, <a class="el" href="script_8h_source.html#l00302">getint()</a>, <a class="el" href="script_8h_source.html#l00311">getvch()</a>, <a class="el" href="script_8h_source.html#l00263">operator &amp;()</a>, <a class="el" href="script_8h_source.html#l00266">operator &amp;=()</a>, <a class="el" href="script_8h_source.html#l00242">operator!=()</a>, <a class="el" href="script_8h_source.html#l00255">operator+()</a>, <a class="el" href="script_8h_source.html#l00260">operator+=()</a>, <a class="el" href="script_8h_source.html#l00256">operator-()</a>, <a class="el" href="script_8h_source.html#l00261">operator-=()</a>, <a class="el" href="script_8h_source.html#l00244">operator&lt;()</a>, <a class="el" href="script_8h_source.html#l00243">operator&lt;=()</a>, <a class="el" href="script_8h_source.html#l00274">operator=()</a>, <a class="el" href="script_8h_source.html#l00241">operator==()</a>, <a class="el" href="script_8h_source.html#l00246">operator&gt;()</a>, and <a class="el" href="script_8h_source.html#l00245">operator&gt;=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="script_8h_source.html#l00210">CScriptNum()</a>, <a class="el" href="script_8h_source.html#l00305">getint()</a>, <a class="el" href="script_8h_source.html#l00314">getvch()</a>, <a class="el" href="script_8h_source.html#l00266">operator &amp;()</a>, <a class="el" href="script_8h_source.html#l00269">operator &amp;=()</a>, <a class="el" href="script_8h_source.html#l00245">operator!=()</a>, <a class="el" href="script_8h_source.html#l00258">operator+()</a>, <a class="el" href="script_8h_source.html#l00263">operator+=()</a>, <a class="el" href="script_8h_source.html#l00259">operator-()</a>, <a class="el" href="script_8h_source.html#l00264">operator-=()</a>, <a class="el" href="script_8h_source.html#l00247">operator&lt;()</a>, <a class="el" href="script_8h_source.html#l00246">operator&lt;=()</a>, <a class="el" href="script_8h_source.html#l00277">operator=()</a>, <a class="el" href="script_8h_source.html#l00244">operator==()</a>, <a class="el" href="script_8h_source.html#l00249">operator&gt;()</a>, and <a class="el" href="script_8h_source.html#l00248">operator&gt;=()</a>.</p>
 
 </div>
 </div>
@@ -1537,7 +1537,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00212">212</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="script_8h_source.html#l00215">215</a> of file <a class="el" href="script_8h_source.html">script.h</a>.</p>
 
 </div>
 </div>
@@ -1551,7 +1551,7 @@ Private Attributes</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_script_num.html">CScriptNum</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:25 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:32 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

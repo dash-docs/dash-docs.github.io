@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['detail',['detail',['../namespacetinyformat_1_1detail.html',1,'tinyformat']]],
-  ['tinyformat',['tinyformat',['../namespacetinyformat.html',1,'']]]
+  ['sha1',['sha1',['../namespacesha1.html',1,'']]],
+  ['sha256',['sha256',['../namespacesha256.html',1,'']]],
+  ['sha512',['sha512',['../namespacesha512.html',1,'']]]
 ];

@@ -126,12 +126,12 @@ $(document).ready(function(){initNavTree('txdb_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="txdb_8h_source.html">txdb.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="chain_8h_source.html">chain.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="chainparams_8h_source.html">chainparams.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="hash_8h_source.html">hash.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="validation_8h_source.html">validation.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pow_8h_source.html">pow.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="uint256_8h_source.html">uint256.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ui__interface_8h_source.html">ui_interface.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="init_8h_source.html">init.h</a>&quot;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;boost/thread.hpp&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -147,6 +147,8 @@ $(document).ready(function(){initNavTree('txdb_8cpp.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a9ae84a664ab2bfc0835666acd523fd45"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8cpp.html#a9ae84a664ab2bfc0835666acd523fd45">DB_COIN</a> = '<a class="el" href="jh_8c.html#a7ae229096086cb63e25daa7951527de4">C</a>'</td></tr>
+<tr class="separator:a9ae84a664ab2bfc0835666acd523fd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39905dcbdcbf070340a290b28d813b09"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8cpp.html#a39905dcbdcbf070340a290b28d813b09">DB_COINS</a> = 'c'</td></tr>
 <tr class="separator:a39905dcbdcbf070340a290b28d813b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a83020e99718ce119801502dd71f60c"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txdb_8cpp.html#a1a83020e99718ce119801502dd71f60c">DB_BLOCK_FILES</a> = 'f'</td></tr>
@@ -193,9 +195,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00024">24</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00025">25</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00231">CBlockTreeDB::EraseAddressIndex()</a>, <a class="el" href="txdb_8cpp_source.html#l00238">CBlockTreeDB::ReadAddressIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00224">CBlockTreeDB::WriteAddressIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00270">CBlockTreeDB::EraseAddressIndex()</a>, <a class="el" href="txdb_8cpp_source.html#l00277">CBlockTreeDB::ReadAddressIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00263">CBlockTreeDB::WriteAddressIndex()</a>.</p>
 
 </div>
 </div>
@@ -219,9 +221,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00025">25</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00026">26</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00198">CBlockTreeDB::ReadAddressUnspentIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00186">CBlockTreeDB::UpdateAddressUnspentIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00237">CBlockTreeDB::ReadAddressUnspentIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00225">CBlockTreeDB::UpdateAddressUnspentIndex()</a>.</p>
 
 </div>
 </div>
@@ -245,9 +247,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00030">30</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00031">31</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00055">CCoinsViewDB::BatchWrite()</a>, and <a class="el" href="txdb_8cpp_source.html#l00048">CCoinsViewDB::GetBestBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00079">CCoinsViewDB::BatchWrite()</a>, and <a class="el" href="txdb_8cpp_source.html#l00072">CCoinsViewDB::GetBestBlock()</a>.</p>
 
 </div>
 </div>
@@ -271,9 +273,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00022">22</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00023">23</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00081">CBlockTreeDB::ReadBlockFileInfo()</a>, and <a class="el" href="txdb_8cpp_source.html#l00147">CBlockTreeDB::WriteBatchSync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00112">CBlockTreeDB::ReadBlockFileInfo()</a>, and <a class="el" href="txdb_8cpp_source.html#l00186">CBlockTreeDB::WriteBatchSync()</a>.</p>
 
 </div>
 </div>
@@ -297,9 +299,35 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00028">28</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00029">29</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00310">CBlockTreeDB::LoadBlockIndexGuts()</a>, and <a class="el" href="txdb_8cpp_source.html#l00147">CBlockTreeDB::WriteBatchSync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00349">CBlockTreeDB::LoadBlockIndexGuts()</a>, and <a class="el" href="txdb_8cpp_source.html#l00186">CBlockTreeDB::WriteBatchSync()</a>.</p>
+
+</div>
+</div>
+<a id="a9ae84a664ab2bfc0835666acd523fd45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae84a664ab2bfc0835666acd523fd45">&#9670;&nbsp;</a></span>DB_COIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char DB_COIN = '<a class="el" href="jh_8c.html#a7ae229096086cb63e25daa7951527de4">C</a>'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00021">21</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00132">CCoinsViewDB::Cursor()</a>, <a class="el" href="txdb_8cpp_source.html#l00104">CCoinsViewDB::EstimateSize()</a>, <a class="el" href="txdb_8cpp_source.html#l00150">CCoinsViewDBCursor::GetKey()</a>, and <a class="el" href="txdb_8cpp_source.html#l00170">CCoinsViewDBCursor::Valid()</a>.</p>
 
 </div>
 </div>
@@ -323,9 +351,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00021">21</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00022">22</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00055">CCoinsViewDB::BatchWrite()</a>, <a class="el" href="txdb_8cpp_source.html#l00040">CCoinsViewDB::GetCoins()</a>, <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, and <a class="el" href="txdb_8cpp_source.html#l00044">CCoinsViewDB::HaveCoins()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00451">CCoinsViewDB::Upgrade()</a>.</p>
 
 </div>
 </div>
@@ -349,9 +377,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00031">31</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00032">32</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00302">CBlockTreeDB::ReadFlag()</a>, and <a class="el" href="txdb_8cpp_source.html#l00298">CBlockTreeDB::WriteFlag()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00341">CBlockTreeDB::ReadFlag()</a>, and <a class="el" href="txdb_8cpp_source.html#l00337">CBlockTreeDB::WriteFlag()</a>.</p>
 
 </div>
 </div>
@@ -375,9 +403,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00033">33</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00034">34</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00097">CBlockTreeDB::ReadLastBlockFile()</a>, and <a class="el" href="txdb_8cpp_source.html#l00147">CBlockTreeDB::WriteBatchSync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00128">CBlockTreeDB::ReadLastBlockFile()</a>, and <a class="el" href="txdb_8cpp_source.html#l00186">CBlockTreeDB::WriteBatchSync()</a>.</p>
 
 </div>
 </div>
@@ -401,9 +429,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00032">32</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00033">33</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00092">CBlockTreeDB::ReadReindexing()</a>, and <a class="el" href="txdb_8cpp_source.html#l00085">CBlockTreeDB::WriteReindexing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00123">CBlockTreeDB::ReadReindexing()</a>, and <a class="el" href="txdb_8cpp_source.html#l00116">CBlockTreeDB::WriteReindexing()</a>.</p>
 
 </div>
 </div>
@@ -427,9 +455,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00027">27</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00028">28</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00170">CBlockTreeDB::ReadSpentIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00174">CBlockTreeDB::UpdateSpentIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00209">CBlockTreeDB::ReadSpentIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00213">CBlockTreeDB::UpdateSpentIndex()</a>.</p>
 
 </div>
 </div>
@@ -453,9 +481,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00026">26</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00027">27</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00278">CBlockTreeDB::ReadTimestampIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00272">CBlockTreeDB::WriteTimestampIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00317">CBlockTreeDB::ReadTimestampIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00311">CBlockTreeDB::WriteTimestampIndex()</a>.</p>
 
 </div>
 </div>
@@ -479,9 +507,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00023">23</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txdb_8cpp_source.html#l00024">24</a> of file <a class="el" href="txdb_8cpp_source.html">txdb.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00159">CBlockTreeDB::ReadTxIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00163">CBlockTreeDB::WriteTxIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="txdb_8cpp_source.html#l00198">CBlockTreeDB::ReadTxIndex()</a>, and <a class="el" href="txdb_8cpp_source.html#l00202">CBlockTreeDB::WriteTxIndex()</a>.</p>
 
 </div>
 </div>
@@ -492,7 +520,7 @@ Variables</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="txdb_8cpp.html">txdb.cpp</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:21 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:29 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

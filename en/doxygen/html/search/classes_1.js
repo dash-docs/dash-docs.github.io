@@ -28,6 +28,5 @@ var searchData=
   ['bitcoincore',['BitcoinCore',['../class_bitcoin_core.html',1,'']]],
   ['bitcoingui',['BitcoinGUI',['../class_bitcoin_g_u_i.html',1,'']]],
   ['bitcoinunits',['BitcoinUnits',['../class_bitcoin_units.html',1,'']]],
-  ['blockhasher',['BlockHasher',['../struct_block_hasher.html',1,'']]],
-  ['boost_5funordered_5fnode',['boost_unordered_node',['../structmemusage_1_1boost__unordered__node.html',1,'memusage']]]
+  ['blockhasher',['BlockHasher',['../struct_block_hasher.html',1,'']]]
 ];

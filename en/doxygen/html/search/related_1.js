@@ -1,8 +1,7 @@
 var searchData=
 [
   ['caddrman',['CAddrMan',['../class_c_addr_info.html#a17ec4e9e560da58786d2ca36092bf83d',1,'CAddrInfo']]],
-  ['ccoinsmodifier',['CCoinsModifier',['../class_c_coins_view_cache.html#ae6ce8219acb79950bced74cb108acacf',1,'CCoinsViewCache']]],
-  ['ccoinsviewcache',['CCoinsViewCache',['../class_c_coins_modifier.html#a1a8530a17e2e3f56e97217784400ee46',1,'CCoinsModifier']]],
+  ['ccoinsviewdb',['CCoinsViewDB',['../class_c_coins_view_d_b_cursor.html#ae6da699caa30e53aac25922db7d00e47',1,'CCoinsViewDBCursor']]],
   ['cconnman',['CConnman',['../class_c_node.html#ab056adbed53a8de7255493492a78f0f0',1,'CNode']]],
   ['cdbwrapper',['CDBWrapper',['../class_c_d_b_batch.html#a2d327eccbb43e94ccd92f0ae70db14dd',1,'CDBBatch']]],
   ['cgovernancemanager',['CGovernanceManager',['../class_c_governance_trigger_manager.html#a93bf9a5038d0e59771589500db19be9e',1,'CGovernanceTriggerManager::CGovernanceManager()'],['../class_c_governance_object.html#a93bf9a5038d0e59771589500db19be9e',1,'CGovernanceObject::CGovernanceManager()']]],

@@ -1,51 +1,51 @@
 <map id="WalletModel::listCoins" name="WalletModel::listCoins">
-<area shape="rect" id="node2" href="$group___actions.html#ga1cc229323a238a59d4eb592286c8bf2a" title="populate vCoins with vector of available COutputs. " alt="" coords="212,233,376,260"/>
-<area shape="rect" id="node27" href="$standard_8cpp.html#a951f7e601746ae076afdf3169ecca2fc" title="ExtractDestination" alt="" coords="473,527,603,553"/>
-<area shape="rect" id="node48" href="$group__map_wallet.html#gaba1c6108b7d2d3800dd487bab4c4c82e" title="CWallet::IsChange" alt="" coords="227,476,361,503"/>
-<area shape="rect" id="node49" href="$group__map_wallet.html#ga4eada57edc1c443564b8cc9b853d955c" title="CWallet::IsMine" alt="" coords="236,425,352,452"/>
-<area shape="rect" id="node50" href="$group___actions.html#ga41f4c77a0843692388f8b11d5fb88042" title="CWallet::ListLockedCoins" alt="" coords="207,577,381,604"/>
-<area shape="rect" id="node3" href="$validation_8cpp.html#a7e254ea66e047c3d3ed0bedc5997fc4f" title="Check if transaction will be final in the next block to be created. " alt="" coords="745,181,847,208"/>
-<area shape="rect" id="node12" href="$class_c_merkle_tx.html#a69ebd437f7b44169659c3527fe73b6ab" title="CMerkleTx::GetBlocksToMaturity" alt="" coords="429,5,647,32"/>
-<area shape="rect" id="node13" href="$class_c_merkle_tx.html#a5bf3a355593ecce5799de92d013149b1" title="Return depth of transaction in blockchain: &lt;0 : conflicts with a transaction this deep in the blockch..." alt="" coords="443,310,633,351"/>
-<area shape="rect" id="node20" href="$class_c_coin_control.html#a20b259681a7c62b2119256a4862091ac" title="CCoinControl::HasSelected" alt="" coords="446,56,630,83"/>
-<area shape="rect" id="node21" href="$group__map_wallet.html#gae4af382e1eeba62ee7e84100c7234f23" title="CWalletTx::InMempool" alt="" coords="460,376,616,403"/>
-<area shape="rect" id="node22" href="$class_c_transaction.html#a96256e8ac1bf79ad9c057e48c41132dd" title="CTransaction::IsCoinBase" alt="" coords="450,107,626,133"/>
-<area shape="rect" id="node23" href="$wallet__ismine_8cpp.html#adc59cf67d903c1ba1ef225561b85bfce" title="IsMine" alt="" coords="507,451,569,477"/>
-<area shape="rect" id="node25" href="$class_c_coin_control.html#a6b419aa41fd3a9d037856d8814d594e1" title="CCoinControl::IsSelected" alt="" coords="453,157,623,184"/>
-<area shape="rect" id="node26" href="$group__map_wallet.html#ga71efb0d5b5def8ae00a1d74b8741bfcb" title="CWalletTx::IsTrusted" alt="" coords="465,259,611,285"/>
-<area shape="rect" id="node4" href="$timedata_8cpp.html#a09f81b9c7650f898cf3cf305b87547e6" title="GetAdjustedTime" alt="" coords="1250,207,1373,233"/>
-<area shape="rect" id="node7" href="$class_c_block_index.html#aa9bd0ab02cf8b9c866618cee3a5a0583" title="CBlockIndex::GetMedianTimePast" alt="" coords="945,80,1169,107"/>
-<area shape="rect" id="node9" href="$class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" title="Return the maximal height in the chain. " alt="" coords="1001,283,1113,309"/>
-<area shape="rect" id="node10" href="$validation_8cpp.html#adc332cd7ac94e639bb4239618341be19" title="Check if transaction is final and can be included in a block with the specified height and time..." alt="" coords="1019,181,1095,208"/>
-<area shape="rect" id="node11" href="$class_c_chain.html#a578545bde95163bee37b1be28e7b2755" title="Returns the index entry for the tip of this chain, or NULL if none. " alt="" coords="1011,232,1103,259"/>
-<area shape="rect" id="node5" href="$utiltime_8cpp.html#a46fac5fba8ba905b5f9acb364f5d8c6f" title="For unit testing. " alt="" coords="1473,181,1545,208"/>
-<area shape="rect" id="node6" href="$timedata_8cpp.html#a50ca5344c75631267633f15cfe5e983e" title="&quot;Never go to sea with two chronometers; take one or three.&quot; Our three time sources are: ..." alt="" coords="1455,232,1563,259"/>
-<area shape="rect" id="node8" href="$class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" title="CBlockIndex::GetBlockTime" alt="" coords="1217,80,1405,107"/>
-<area shape="rect" id="node14" href="$class_c_chain.html#af1786dc229c215dea7f727c11df2c8dc" title="Efficiently check whether a block is present in this chain. " alt="" coords="733,232,859,259"/>
-<area shape="rect" id="node15" href="$class_c_tx_mem_pool.html#a8b7a13b5289ab839d4460f41a7da9789" title="CTxMemPool::exists" alt="" coords="723,400,869,427"/>
-<area shape="rect" id="node16" href="$class_c_instant_send.html#a2b5bebbef6c466ee34706eeb9f53d4a7" title="CInstantSend::IsLockedInstant\lSendTransaction" alt="" coords="695,334,897,375"/>
-<area shape="rect" id="node17" href="$class_c_instant_send.html#a944921efd152fb5772182269409902e3" title="CInstantSend::GetLockedOut\lPointTxHash" alt="" coords="960,385,1155,426"/>
-<area shape="rect" id="node18" href="$class_c_spork_manager.html#a97d20d530b500c013e8bc8649ee13daf" title="CSporkManager::IsSporkActive" alt="" coords="954,333,1161,360"/>
-<area shape="rect" id="node19" href="$util_8h.html#aab1f837a2366f424bdc996fdf6352171" title="Zero&#45;arg versions of logging and error, these are not covered by TINYFORMAT_FOREACH_ARGNUM. " alt="" coords="1276,333,1347,360"/>
-<area shape="rect" id="node24" href="$standard_8cpp.html#ae40f28d3b46c21033f6ee1f1200d0321" title="GetScriptForDestination" alt="" coords="715,451,877,477"/>
-<area shape="rect" id="node28" href="$class_c_pub_key.html#a2675f7e6f72eff68e7a5227289feb021" title="Get the KeyID of this public key (hash of its serialization) " alt="" coords="735,501,857,528"/>
-<area shape="rect" id="node34" href="$class_c_pub_key.html#a4fa94293cf8577fd039b9a133f6c7f30" title="CPubKey::IsValid" alt="" coords="733,552,859,579"/>
-<area shape="rect" id="node35" href="$standard_8cpp.html#a6ee6be50bff44464e905680c6fcee6dc" title="Return public keys or hashes from scriptPubKey, for &#39;standard&#39; transaction types. ..." alt="" coords="767,755,825,781"/>
-<area shape="rect" id="node29" href="$hash_8h.html#a4490f70ddae16e9e48460a0416a48a6b" title="Compute the 160&#45;bit hash an object. " alt="" coords="1020,476,1095,503"/>
-<area shape="rect" id="node32" href="$class_c_pub_key.html#a6bb28fcf0a5f799c69f5b7269363b309" title="Simple read&#45;only vector&#45;like interface to the pubkey data. " alt="" coords="1002,527,1113,553"/>
-<area shape="rect" id="node30" href="$class_c_hash160.html#a9bb08e1772002ae1a5d85017ba7952ee" title="CHash160::Finalize" alt="" coords="1243,425,1380,452"/>
-<area shape="rect" id="node31" href="$class_c_hash160.html#af56cdd9443013eb68b246aa8450217f2" title="CHash160::Write" alt="" coords="1250,476,1373,503"/>
-<area shape="rect" id="node33" href="$class_c_pub_key.html#a7dc71b3f037c84268dc22de97d7b65fb" title="Compute the length of a pubkey with a given first byte. " alt="" coords="1247,527,1375,553"/>
-<area shape="rect" id="node36" href="$classprevector.html#aa9210cbe708412a70868d6e0bca844c9" title="prevector::begin" alt="" coords="1254,628,1369,655"/>
-<area shape="rect" id="node39" href="$class_c_script.html#a7b2baf842621f07c4939408acf63377c" title="CScript::clear" alt="" coords="1006,831,1109,857"/>
-<area shape="rect" id="node40" href="$class_c_script.html#a7f975fca06b3e9a17da8ba23c7647e2e" title="Encode/decode small integers: " alt="" coords="980,881,1135,908"/>
-<area shape="rect" id="node41" href="$classprevector.html#aab7f6e13a3cac85cc340fc6b90c5365c" title="prevector::end" alt="" coords="1456,679,1561,705"/>
-<area shape="rect" id="node42" href="$classprevector.html#a626f7d206dbc24e5610631809762758b" title="prevector::size" alt="" coords="1623,679,1731,705"/>
-<area shape="rect" id="node43" href="$classprevector.html#acb71926f63896b2bd6f4da4ffe515d19" title="prevector::front" alt="" coords="1453,577,1564,604"/>
-<area shape="rect" id="node44" href="$class_c_script.html#a94635ed93d8d244ec3acfa83f9ecfe5f" title="CScript::GetOp" alt="" coords="1001,679,1113,705"/>
-<area shape="rect" id="node46" href="$class_c_script.html#a0c3729c606d318923dc06f95d85a0971" title="CScript::IsPayToScriptHash" alt="" coords="963,932,1151,959"/>
-<area shape="rect" id="node47" href="$class_c_script.html#a090905f875fa5a40e616b319de8e973f" title="Called by IsStandardTx and P2SH/BIP62 VerifyScript (which makes it consensus&#45;critical). " alt="" coords="986,983,1129,1009"/>
-<area shape="rect" id="node37" href="$classprevector.html#a59f1d7bcbc751cfa0faddd7ffa184846" title="prevector::item_ptr" alt="" coords="1612,628,1743,655"/>
-<area shape="rect" id="node38" href="$classprevector.html#a933e204a7e29c6bbc85479d023c00ff8" title="prevector::is_direct" alt="" coords="1791,653,1924,680"/>
-<area shape="rect" id="node45" href="$class_c_script.html#aac2dbe75742054049b0c6de0e9473ef0" title="CScript::GetOp2" alt="" coords="1252,679,1371,705"/>
+<area shape="rect" id="node2" href="$group___actions.html#ga1cc229323a238a59d4eb592286c8bf2a" title="populate vCoins with vector of available COutputs. " alt="" coords="212,300,376,327"/>
+<area shape="rect" id="node30" href="$standard_8cpp.html#a951f7e601746ae076afdf3169ecca2fc" title="ExtractDestination" alt="" coords="473,659,603,685"/>
+<area shape="rect" id="node48" href="$group__map_wallet.html#gaba1c6108b7d2d3800dd487bab4c4c82e" title="CWallet::IsChange" alt="" coords="227,608,361,635"/>
+<area shape="rect" id="node49" href="$group__map_wallet.html#ga4eada57edc1c443564b8cc9b853d955c" title="CWallet::IsMine" alt="" coords="236,557,352,584"/>
+<area shape="rect" id="node50" href="$group___actions.html#ga41f4c77a0843692388f8b11d5fb88042" title="CWallet::ListLockedCoins" alt="" coords="207,709,381,736"/>
+<area shape="rect" id="node3" href="$validation_8cpp.html#a7e254ea66e047c3d3ed0bedc5997fc4f" title="Check if transaction will be final in the next block to be created. " alt="" coords="749,107,852,133"/>
+<area shape="rect" id="node12" href="$class_c_merkle_tx.html#a69ebd437f7b44169659c3527fe73b6ab" title="CMerkleTx::GetBlocksToMaturity" alt="" coords="429,157,647,184"/>
+<area shape="rect" id="node13" href="$class_c_merkle_tx.html#a5bf3a355593ecce5799de92d013149b1" title="Return depth of transaction in blockchain: &lt;0 : conflicts with a transaction this deep in the blockch..." alt="" coords="443,209,633,250"/>
+<area shape="rect" id="node19" href="$class_c_coin_control.html#a20b259681a7c62b2119256a4862091ac" title="CCoinControl::HasSelected" alt="" coords="446,275,630,301"/>
+<area shape="rect" id="node20" href="$group__map_wallet.html#gae4af382e1eeba62ee7e84100c7234f23" title="CWalletTx::InMempool" alt="" coords="460,325,616,352"/>
+<area shape="rect" id="node21" href="$class_c_transaction.html#a96256e8ac1bf79ad9c057e48c41132dd" title="CTransaction::IsCoinBase" alt="" coords="450,376,626,403"/>
+<area shape="rect" id="node22" href="$class_c_private_send.html#a529046deea87098dabcba937527f9c20" title="CPrivateSend::IsCollateral\lAmount" alt="" coords="449,427,627,469"/>
+<area shape="rect" id="node25" href="$class_c_private_send.html#a7fad1aa9fb6672932a4d908a3e859c22" title="CPrivateSend::IsDenominated\lAmount" alt="" coords="439,493,637,534"/>
+<area shape="rect" id="node26" href="$wallet__ismine_8cpp.html#adc59cf67d903c1ba1ef225561b85bfce" title="IsMine" alt="" coords="507,583,569,609"/>
+<area shape="rect" id="node28" href="$class_c_coin_control.html#a6b419aa41fd3a9d037856d8814d594e1" title="CCoinControl::IsSelected" alt="" coords="453,5,623,32"/>
+<area shape="rect" id="node29" href="$group__map_wallet.html#ga71efb0d5b5def8ae00a1d74b8741bfcb" title="CWalletTx::IsTrusted" alt="" coords="465,56,611,83"/>
+<area shape="rect" id="node4" href="$timedata_8cpp.html#a09f81b9c7650f898cf3cf305b87547e6" title="GetAdjustedTime" alt="" coords="1259,241,1382,268"/>
+<area shape="rect" id="node7" href="$class_c_block_index.html#aa9bd0ab02cf8b9c866618cee3a5a0583" title="CBlockIndex::GetMedianTimePast" alt="" coords="955,107,1179,133"/>
+<area shape="rect" id="node9" href="$class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" title="Return the maximal height in the chain. " alt="" coords="1011,208,1123,235"/>
+<area shape="rect" id="node10" href="$validation_8cpp.html#adc332cd7ac94e639bb4239618341be19" title="Check if transaction is final and can be included in a block with the specified height and time..." alt="" coords="1029,5,1105,32"/>
+<area shape="rect" id="node11" href="$class_c_chain.html#a578545bde95163bee37b1be28e7b2755" title="Returns the index entry for the tip of this chain, or NULL if none. " alt="" coords="1021,56,1113,83"/>
+<area shape="rect" id="node5" href="$utiltime_8cpp.html#a46fac5fba8ba905b5f9acb364f5d8c6f" title="For unit testing. " alt="" coords="1481,216,1553,243"/>
+<area shape="rect" id="node6" href="$timedata_8cpp.html#a50ca5344c75631267633f15cfe5e983e" title="&quot;Never go to sea with two chronometers; take one or three.&quot; Our three time sources are: ..." alt="" coords="1463,267,1571,293"/>
+<area shape="rect" id="node8" href="$class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" title="CBlockIndex::GetBlockTime" alt="" coords="1227,107,1415,133"/>
+<area shape="rect" id="node14" href="$class_c_chain.html#af1786dc229c215dea7f727c11df2c8dc" title="Efficiently check whether a block is present in this chain. " alt="" coords="737,157,864,184"/>
+<area shape="rect" id="node15" href="$class_c_tx_mem_pool.html#a8b7a13b5289ab839d4460f41a7da9789" title="CTxMemPool::exists" alt="" coords="728,325,873,352"/>
+<area shape="rect" id="node16" href="$class_c_instant_send.html#a2b5bebbef6c466ee34706eeb9f53d4a7" title="CInstantSend::IsLockedInstant\lSendTransaction" alt="" coords="699,259,902,301"/>
+<area shape="rect" id="node17" href="$class_c_instant_send.html#a944921efd152fb5772182269409902e3" title="CInstantSend::GetLockedOut\lPointTxHash" alt="" coords="969,259,1164,301"/>
+<area shape="rect" id="node18" href="$class_c_spork_manager.html#a97d20d530b500c013e8bc8649ee13daf" title="CSporkManager::IsSporkActive" alt="" coords="963,325,1170,352"/>
+<area shape="rect" id="node23" href="$class_c_private_send.html#ac699ad0d6b0b0621b2b6358b38703525" title="CPrivateSend::GetCollateral\lAmount" alt="" coords="707,467,894,509"/>
+<area shape="rect" id="node24" href="$class_c_private_send.html#aa84712b7f8c56b84b5bcbcb8557d06db" title="CPrivateSend::GetMaxCollateral\lAmount" alt="" coords="695,402,907,443"/>
+<area shape="rect" id="node27" href="$standard_8cpp.html#ae40f28d3b46c21033f6ee1f1200d0321" title="GetScriptForDestination" alt="" coords="719,580,882,607"/>
+<area shape="rect" id="node31" href="$class_c_pub_key.html#a2675f7e6f72eff68e7a5227289feb021" title="Get the KeyID of this public key (hash of its serialization) " alt="" coords="740,833,861,860"/>
+<area shape="rect" id="node37" href="$class_c_pub_key.html#a4fa94293cf8577fd039b9a133f6c7f30" title="CPubKey::IsValid" alt="" coords="737,732,864,759"/>
+<area shape="rect" id="node38" href="$standard_8cpp.html#a6ee6be50bff44464e905680c6fcee6dc" title="Return public keys or hashes from scriptPubKey, for &#39;standard&#39; transaction types. ..." alt="" coords="771,631,830,657"/>
+<area shape="rect" id="node32" href="$hash_8h.html#a4490f70ddae16e9e48460a0416a48a6b" title="Compute the 160&#45;bit hash an object. " alt="" coords="1029,884,1104,911"/>
+<area shape="rect" id="node35" href="$class_c_pub_key.html#a6bb28fcf0a5f799c69f5b7269363b309" title="Simple read&#45;only vector&#45;like interface to the pubkey data. " alt="" coords="1011,833,1122,860"/>
+<area shape="rect" id="node33" href="$class_c_hash160.html#a9bb08e1772002ae1a5d85017ba7952ee" title="CHash160::Finalize" alt="" coords="1252,884,1389,911"/>
+<area shape="rect" id="node34" href="$class_c_hash160.html#af56cdd9443013eb68b246aa8450217f2" title="CHash160::Write" alt="" coords="1259,935,1382,961"/>
+<area shape="rect" id="node36" href="$class_c_pub_key.html#a7dc71b3f037c84268dc22de97d7b65fb" title="Compute the length of a pubkey with a given first byte. " alt="" coords="1257,833,1385,860"/>
+<area shape="rect" id="node39" href="$classprevector.html#aa9210cbe708412a70868d6e0bca844c9" title="prevector::begin" alt="" coords="1263,707,1378,733"/>
+<area shape="rect" id="node40" href="$class_c_script.html#a7b2baf842621f07c4939408acf63377c" title="CScript::clear" alt="" coords="1015,377,1118,404"/>
+<area shape="rect" id="node41" href="$class_c_script.html#a7f975fca06b3e9a17da8ba23c7647e2e" title="Encode/decode small integers: " alt="" coords="989,428,1144,455"/>
+<area shape="rect" id="node42" href="$classprevector.html#aab7f6e13a3cac85cc340fc6b90c5365c" title="prevector::end" alt="" coords="1014,479,1119,505"/>
+<area shape="rect" id="node43" href="$classprevector.html#a626f7d206dbc24e5610631809762758b" title="prevector::size" alt="" coords="1267,504,1375,531"/>
+<area shape="rect" id="node44" href="$classprevector.html#acb71926f63896b2bd6f4da4ffe515d19" title="prevector::front" alt="" coords="1011,580,1122,607"/>
+<area shape="rect" id="node45" href="$class_c_script.html#a94635ed93d8d244ec3acfa83f9ecfe5f" title="CScript::GetOp" alt="" coords="1011,631,1123,657"/>
+<area shape="rect" id="node46" href="$class_c_script.html#a0c3729c606d318923dc06f95d85a0971" title="CScript::IsPayToScriptHash" alt="" coords="973,681,1161,708"/>
+<area shape="rect" id="node47" href="$class_c_script.html#a090905f875fa5a40e616b319de8e973f" title="Called by IsStandardTx and P2SH/BIP62 VerifyScript (which makes it consensus&#45;critical). " alt="" coords="995,732,1138,759"/>
 </map>

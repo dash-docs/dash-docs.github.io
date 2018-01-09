@@ -8,6 +8,7 @@ var class_c_auto_file =
     [ "GetSerializeSize", "class_c_auto_file.html#a883a261f0d7d0320f72152ff2167fd24", null ],
     [ "GetType", "class_c_auto_file.html#a774f2aad2c462d4ff47125ceec2ebab0", null ],
     [ "GetVersion", "class_c_auto_file.html#a976ab8e5477aedd3a531fc49b01153ce", null ],
+    [ "ignore", "class_c_auto_file.html#a0159b896d7ed2574cc32663987bfc0ce", null ],
     [ "IsNull", "class_c_auto_file.html#a7fd47268b6d85a89acafdb73559f8e78", null ],
     [ "operator<<", "class_c_auto_file.html#a8e194596d1f8f64059247724b25df82c", null ],
     [ "operator=", "class_c_auto_file.html#a5937561da10e79c2da4bb47c0fc57d96", null ],

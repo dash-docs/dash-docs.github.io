@@ -123,7 +123,8 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>n
-: <a class="el" href="class_c_in_point.html#a456e18a182bfa70cbf63d28561c3ae1c">CInPoint</a>
+: <a class="el" href="class_c_compact_size.html#afc52ef89f9d53d0fb9251d0712e07325">CCompactSize</a>
+, <a class="el" href="class_c_in_point.html#a456e18a182bfa70cbf63d28561c3ae1c">CInPoint</a>
 , <a class="el" href="class_c_out_point.html#a1b857e3a0412ff741da2c9f8defe315c">COutPoint</a>
 , <a class="el" href="class_c_var_int.html#a4514adc82b41754d9ac22ee627744614">CVarInt&lt; I &gt;</a>
 , <a class="el" href="structsecp256k1__fe.html#a4e7c00a989d1da635e7ffd33105d62df">secp256k1_fe</a>
@@ -188,8 +189,7 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 , <a class="el" href="class_c_block_index.html#a3324894e6af612d1bd76f89378435713">CBlockIndex</a>
 </li>
 <li>nBlockHeight
-: <a class="el" href="class_c_dark_send_relay.html#a21dcacd4e92be97966be1a4230a4a6ec">CDarkSendRelay</a>
-, <a class="el" href="class_c_masternode_block_payees.html#ae7eae4dd466c444d7c41debcbcc402f1">CMasternodeBlockPayees</a>
+: <a class="el" href="class_c_masternode_block_payees.html#ae7eae4dd466c444d7c41debcbcc402f1">CMasternodeBlockPayees</a>
 , <a class="el" href="class_c_masternode_payment_vote.html#ad75d093e53aa3e727a81aea841f4e26d">CMasternodePaymentVote</a>
 , <a class="el" href="class_c_masternode_verification.html#abcdce5525c4a618976ef33c01893eced">CMasternodeVerification</a>
 </li>
@@ -334,6 +334,9 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 <li>nDeriveIterations
 : <a class="el" href="class_c_master_key.html#aec53e0be82d1053cf5a70a67fd4cc25d">CMasterKey</a>
 </li>
+<li>nDiskSize
+: <a class="el" href="struct_c_coins_stats.html#a6119c0cd76d8031d14e261a903f2abfd">CCoinsStats</a>
+</li>
 <li>nDisplayUnit
 : <a class="el" href="class_options_model.html#a8eb750130dbd5bf186f41d292b4c9903">OptionsModel</a>
 , <a class="el" href="class_overview_page.html#a332e7ec8d8deecf8177df62243a554a0">OverviewPage</a>
@@ -430,9 +433,8 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 <li>nHeight
 : <a class="el" href="class_c_block_index.html#aebfc8d6b95852546760e742553d7bfd5">CBlockIndex</a>
 , <a class="el" href="struct_c_coin.html#aaec259d22f0c76fa7716f03587d3407b">CCoin</a>
-, <a class="el" href="class_c_coins.html#af7396dfad71367de46f21cf92e2c70ab">CCoins</a>
 , <a class="el" href="struct_c_coins_stats.html#a5972700c4733ce02e12530d758e95d8c">CCoinsStats</a>
-, <a class="el" href="class_c_tx_in_undo.html#af022118f015a9b1b9ab96e04e8452292">CTxInUndo</a>
+, <a class="el" href="class_coin.html#af2408bb4b93de3ecc2cf0d13e3900ea5">Coin</a>
 </li>
 <li>nHeightFirst
 : <a class="el" href="class_c_block_file_info.html#a66d258b11b1aec30cbacdc6130c271a8">CBlockFileInfo</a>
@@ -766,6 +768,12 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 <li>nPoSeBanScore
 : <a class="el" href="class_c_masternode.html#aa0a7406aa8ea8a159af7ff719bfc1f8c">CMasternode</a>
 </li>
+<li>nPowDGWHeight
+: <a class="el" href="struct_consensus_1_1_params.html#a2aea81ea712e695f72165f9e50d190bd">Consensus::Params</a>
+</li>
+<li>nPowKGWHeight
+: <a class="el" href="struct_consensus_1_1_params.html#a523199d1219c335696545d3a969570d6">Consensus::Params</a>
+</li>
 <li>nPowTargetSpacing
 : <a class="el" href="struct_consensus_1_1_params.html#aea6ebb563ceffd026cc7c11d3e9b192e">Consensus::Params</a>
 </li>
@@ -817,9 +825,6 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 <li>nRefCount
 : <a class="el" href="class_c_addr_info.html#ada2f8362fe6ed379a6fdaa3aef682e45">CAddrInfo</a>
 , <a class="el" href="class_c_node.html#a01f8cac776bef676651f9b8f3f80ae98">CNode</a>
-</li>
-<li>nRelayType
-: <a class="el" href="class_c_dark_send_relay.html#a3ab43fa7980b7d98f262b1debf094ae5">CDarkSendRelay</a>
 </li>
 <li>nRelayUntil
 : <a class="el" href="class_c_unsigned_alert.html#a13bb82aef8b496584f6b3ae6424f8e58">CUnsignedAlert</a>
@@ -887,7 +892,6 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 </li>
 <li>nSentTimes
 : <a class="el" href="class_c_tx_d_s_in.html#ad3da7f430f5bd835b02addff54a19606">CTxDSIn</a>
-, <a class="el" href="class_c_tx_d_s_out.html#a6bd3a1e7c7b697062ef4f79699357052">CTxDSOut</a>
 </li>
 <li>nSequence
 : <a class="el" href="class_c_tx_in.html#a635deeaf3ca4e8b3e1a97054607211b9">CTxIn</a>
@@ -895,9 +899,6 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 </li>
 <li>nSequenceId
 : <a class="el" href="class_c_block_index.html#a4a679af5f7924cc594b8131371b21e54">CBlockIndex</a>
-</li>
-<li>nSerializedSize
-: <a class="el" href="struct_c_coins_stats.html#ac4302ffc2f8be6e62dbc5655f77e4202">CCoinsStats</a>
 </li>
 <li>nServices
 : <a class="el" href="class_c_address.html#a24e2309d92694a5a234751634bdf0458">CAddress</a>
@@ -1103,9 +1104,6 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 <li>nTxSize
 : <a class="el" href="class_c_tx_mem_pool_entry.html#a25fcb552777ae6f36df9de3f4c23bad3">CTxMemPoolEntry</a>
 </li>
-<li>nTxVer
-: <a class="el" href="struct_c_coin.html#a15fff0a242b693debd526affc73fd146">CCoin</a>
-</li>
 <li>nType
 : <a class="el" href="class_c_auto_file.html#a39ca705ff45e36a05acd5df3c4114aef">CAutoFile</a>
 , <a class="el" href="class_c_buffered_file.html#a121e3ede0af49d4711dc4934d252f842">CBufferedFile</a>
@@ -1138,7 +1136,6 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 , <a class="el" href="class_c_block_header.html#ad64b7a76914741861f55f0f38ed66fb5">CBlockHeader</a>
 , <a class="el" href="class_c_block_index.html#a45126301a0a6e26010527a7bbfc1ef58">CBlockIndex</a>
 , <a class="el" href="class_c_buffered_file.html#afdfff4bdd212f72580b1c7c02bef554a">CBufferedFile</a>
-, <a class="el" href="class_c_coins.html#a96fea4ee8841e9ce32f60c2e7e3cf6b6">CCoins</a>
 , <a class="el" href="class_c_data_stream.html#a074998c6b7c8aa17a1a90dbc414b605d">CDataStream</a>
 , <a class="el" href="class_c_hash_writer.html#ad7d3642addab58385476dc0f9d55fa58">CHashWriter</a>
 , <a class="el" href="class_c_h_d_chain.html#aa5460e217c12a11885b13dc35441166d">CHDChain</a>
@@ -1149,7 +1146,6 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 , <a class="el" href="class_c_node_stats.html#ac8892d29d7c246e34e78fbc15ae77276">CNodeStats</a>
 , <a class="el" href="class_c_size_computer.html#a25759db1089e475fcba2f408633dc7bf">CSizeComputer</a>
 , <a class="el" href="class_c_transaction.html#abda727662de83b84dc2ef56d30690cb1">CTransaction</a>
-, <a class="el" href="class_c_tx_in_undo.html#a193281289475ca792e436a7a02de23ef">CTxInUndo</a>
 , <a class="el" href="class_c_unsigned_alert.html#ad8fad8e8f62caaf8162fad19170de2cf">CUnsignedAlert</a>
 , <a class="el" href="class_recent_request_entry.html#afaaea4ce5649d760100ed4ecd9933fe9">RecentRequestEntry</a>
 , <a class="el" href="class_send_coins_recipient.html#a2c8bb55c771dbcd34b420ef06f6a48f7">SendCoinsRecipient</a>
@@ -1182,7 +1178,7 @@ $(document).ready(function(){initNavTree('functions_vars_n.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

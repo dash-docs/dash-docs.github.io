@@ -126,13 +126,13 @@ $(document).ready(function(){initNavTree('class_c_d_b_iterator.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_c_d_b_iterator.html">CDBIterator</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_c_d_b_iterator.html#a2d97aa02ffb0b109a918b46071cddf37">CDBIterator</a>(leveldb::Iterator *piterIn, const std::vector&lt; unsigned char &gt; *obfuscate_key)</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_d_b_iterator.html#aed33ee824d9e3fbf21a7d8f56527ddd0">CDBIterator</a>(const CDBWrapper &amp;_parent, leveldb::Iterator *_piter)</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_d_b_iterator.html#a8833b0184eaf011529fa36a2ec65286f">GetKey</a>(K &amp;key)</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_d_b_iterator.html#a503d902ba4380434d487edb89e512d0f">GetKeySize</a>()</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_d_b_iterator.html#a1b99353b18b45216db24940526838e7a">GetValue</a>(V &amp;value)</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_d_b_iterator.html#a773b7d9ebc460a801e972cb4a77b522b">GetValueSize</a>()</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_d_b_iterator.html#acf9f90746acc8305a8b6785f72a1a1a6">Next</a>()</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_d_b_iterator.html#a26f047cdbccc5acc020bec4492196ecc">obfuscate_key</a></td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_d_b_iterator.html#aa315b1efef256ea4933e63d57f94f2c5">parent</a></td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_d_b_iterator.html#a996368b2965a7ca436c24eeb39ed2c53">piter</a></td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_d_b_iterator.html#aa16a3cbdc2e514996a73ef1e3bc67209">Seek</a>(const K &amp;key)</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_d_b_iterator.html#ac2528733670e679f79011c347ff01f1c">SeekToFirst</a>()</td><td class="entry"><a class="el" href="class_c_d_b_iterator.html">CDBIterator</a></td><td class="entry"></td></tr>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('class_c_d_b_iterator.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:23 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:31 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

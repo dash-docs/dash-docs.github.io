@@ -211,8 +211,7 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 , <a class="el" href="class_c_buffered_file.html#aef8c993fe3eb0fa423d09d095f40dcf6">CBufferedFile</a>
 </li>
 <li>fCoinBase
-: <a class="el" href="class_c_coins.html#adeedfaef84ba39b6e295d5d1fb9d8f0b">CCoins</a>
-, <a class="el" href="class_c_tx_in_undo.html#a5952f917224de3a2193157b856c47864">CTxInUndo</a>
+: <a class="el" href="class_coin.html#af60f94738658ee32216d2532457edf3d">Coin</a>
 </li>
 <li>fCoinControlFeatures
 : <a class="el" href="class_options_model.html#a2e9d6e6fc3efa717c1027b9582e763aa">OptionsModel</a>
@@ -287,8 +286,8 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 <li>fEnablePrivateSend
 : <a class="el" href="class_c_private_send_client.html#a75799095593d6171c667e9892f2723d0">CPrivateSendClient</a>
 </li>
-<li>FetchCoins()
-: <a class="el" href="class_c_coins_view_cache.html#a7d385628b7d821d2d5b6c5aaf1734616">CCoinsViewCache</a>
+<li>FetchCoin()
+: <a class="el" href="class_c_coins_view_cache.html#aad44dd0b312871702e46ddfb449cecba">CCoinsViewCache</a>
 </li>
 <li>fetchPaymentACK()
 : <a class="el" href="class_payment_server.html#ab846f9e8778e5cc878b644133e8628f1">PaymentServer</a>
@@ -377,6 +376,7 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 , <a class="el" href="class_c_s_h_a1.html#a9a4f829cbe511ca899d27dcab1d0d9e6">CSHA1</a>
 , <a class="el" href="class_c_s_h_a256.html#a4259230be0caefa590bc324fc12b9b90">CSHA256</a>
 , <a class="el" href="class_c_s_h_a512.html#aef4627aae19eeeb54bf02ea7b222b688">CSHA512</a>
+, <a class="el" href="class_c_sip_hasher.html#a9de97ad61ec6ce18ddc94abe1d5fcdf0">CSipHasher</a>
 </li>
 <li>finalize()
 : <a class="el" href="class_j_s_o_n_u_t_f8_string_filter.html#a83905d8112c98598ca3345cfa0c6e052">JSONUTF8StringFilter</a>
@@ -578,13 +578,13 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 : <a class="el" href="class_r_p_c_console.html#a259454bfa74826c944fec35953f2d328">RPCConsole</a>
 </li>
 <li>ForEachNode()
-: <a class="el" href="class_c_connman.html#a2d665bfdec68f6484b9f0d6760f9efd1">CConnman</a>
+: <a class="el" href="class_c_connman.html#aec1d86d7a6bd9e10544b93ccb56adf0d">CConnman</a>
 </li>
 <li>ForEachNodeContinueIf()
-: <a class="el" href="class_c_connman.html#a1cbf9aa1c0e71a10993116d7d7a25bd6">CConnman</a>
+: <a class="el" href="class_c_connman.html#aecacad9a722bf0b065b2e3062d8506c4">CConnman</a>
 </li>
 <li>ForEachNodeThen()
-: <a class="el" href="class_c_connman.html#a217dabe388fc5e97064cc8848abbe502">CConnman</a>
+: <a class="el" href="class_c_connman.html#a9b7efcca91a687285efcbad17523e0bf">CConnman</a>
 </li>
 <li>ForEditing
 : <a class="el" href="class_address_book_page.html#a0a8f8e590dc6f18e829fde039f984464a86b6565fcddce6edf578c0e470471296">AddressBookPage</a>
@@ -611,7 +611,7 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 : <a class="el" href="class_bitcoin_units.html#a5f4ef08b81386d393a16001bdfef5d56">BitcoinUnits</a>
 </li>
 <li>FormatIterator()
-: <a class="el" href="classtinyformat_1_1detail_1_1_format_iterator.html#a798e0f475996df1b0a4f93540d96791b">tinyformat::detail::FormatIterator</a>
+: <a class="el" href="classtinyformat_1_1detail_1_1_format_iterator.html#a0001a875c2d504f05abde849d3fd74be">tinyformat::detail::FormatIterator</a>
 </li>
 <li>formatSubTxId()
 : <a class="el" href="class_transaction_record.html#a7664c0127a66cdc42d3d56d6a85a5f1e">TransactionRecord</a>
@@ -647,7 +647,7 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 : <a class="el" href="class_bitcoin_units.html#aef9fb7509257bc84ee459d7f0c663020">BitcoinUnits</a>
 </li>
 <li>ForNode()
-: <a class="el" href="class_c_connman.html#a447794157fee913aa13f3d0a7f946f2f">CConnman</a>
+: <a class="el" href="class_c_connman.html#aae39909a16dd6dad7b487935eee5e152">CConnman</a>
 </li>
 <li>ForRead()
 : <a class="el" href="struct_c_ser_action_serialize.html#a3facaa35d0ba0b175c647b5409d2bde8">CSerActionSerialize</a>
@@ -725,11 +725,8 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 <li>fromPeer
 : <a class="el" href="struct_c_orphan_tx.html#a06fa313a474fd4e6d0ed20bda7cbe69c">COrphanTx</a>
 </li>
-<li>FromTx()
-: <a class="el" href="class_c_coins.html#abf67e501a1d207c892c1f52dd383956e">CCoins</a>
-</li>
 <li>front()
-: <a class="el" href="classprevector.html#a6c970d084ff59fcfb81185456acb4bb6">prevector&lt; N, T, Size, Diff &gt;</a>
+: <a class="el" href="classprevector.html#acb71926f63896b2bd6f4da4ffe515d19">prevector&lt; N, T, Size, Diff &gt;</a>
 </li>
 <li>fSentinelIsCurrent
 : <a class="el" href="class_c_masternode_ping.html#adc4d1e97f71c4512db62d68b501a7866">CMasternodePing</a>
@@ -831,7 +828,7 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

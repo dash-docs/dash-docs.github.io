@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['obfuscate_5fkey',['obfuscate_key',['../class_c_d_b_batch.html#a0e4545536cb12048b179538986d5e463',1,'CDBBatch::obfuscate_key()'],['../class_c_d_b_iterator.html#a26f047cdbccc5acc020bec4492196ecc',1,'CDBIterator::obfuscate_key()'],['../class_c_d_b_wrapper.html#a6baaceaa7825b0adfc078c59fddd0f1c',1,'CDBWrapper::obfuscate_key()']]],
+  ['obfuscate_5fkey',['obfuscate_key',['../class_c_d_b_wrapper.html#a6baaceaa7825b0adfc078c59fddd0f1c',1,'CDBWrapper']]],
   ['obfuscate_5fkey_5fkey',['OBFUSCATE_KEY_KEY',['../class_c_d_b_wrapper.html#a991c2ad52d45664e17bcfc588022e71c',1,'CDBWrapper']]],
   ['obfuscate_5fkey_5fnum_5fbytes',['OBFUSCATE_KEY_NUM_BYTES',['../class_c_d_b_wrapper.html#a958103a454c991c03dd0efb7bf3a10cf',1,'CDBWrapper']]],
   ['objjson',['objJSON',['../class_c_proposal_validator.html#a820a462c9607e74783f720b9889959a3',1,'CProposalValidator']]],
@@ -20,7 +20,7 @@ var searchData=
   ['optionsaction',['optionsAction',['../class_bitcoin_g_u_i.html#a9cedb919cf5909cb2529b310c1f968fc',1,'BitcoinGUI']]],
   ['optionsmodel',['optionsModel',['../class_unit_display_status_bar_control.html#a62e10f0662b19879d0897da57ed69ce8',1,'UnitDisplayStatusBarControl::optionsModel()'],['../class_client_model.html#ac82294221ed5ba1051a1b4bd9e2d2389',1,'ClientModel::optionsModel()'],['../class_bitcoin_application.html#a7f4ccffc32070fd0a154d151363aae85',1,'BitcoinApplication::optionsModel()'],['../class_payment_server.html#afbd4c9840b6eac3f32e2a2b4ed2e89a0',1,'PaymentServer::optionsModel()'],['../class_wallet_model.html#a01d9aba010d85b79d46fe427919dbdc1',1,'WalletModel::optionsModel()']]],
   ['order',['order',['../class_banned_node_less_than.html#a76e0441e6ec7c92d19952071e6cc2589',1,'BannedNodeLessThan::order()'],['../class_node_less_than.html#afb215ca60b4a3825effc6240b0574935',1,'NodeLessThan::order()'],['../class_recent_request_entry_less_than.html#a0fdd6db366ec7984a9ed23134bd3af6c',1,'RecentRequestEntryLessThan::order()']]],
-  ['out',['out',['../class_c_dark_send_relay.html#a1f70afb8a809c1e5ca0ad5c31f44e72b',1,'CDarkSendRelay::out()'],['../struct_traffic_sample.html#afaf38e0c7b2f983c39a5ebac6ba3c7b6',1,'TrafficSample::out()'],['../struct_c_coin.html#a15c9b12a37610f0295326529fee9afea',1,'CCoin::out()']]],
+  ['out',['out',['../class_coin.html#aa1c3ccdcdb7754b184f433cc1f583a71',1,'Coin::out()'],['../struct_traffic_sample.html#afaf38e0c7b2f983c39a5ebac6ba3c7b6',1,'TrafficSample::out()'],['../struct_c_coin.html#a15c9b12a37610f0295326529fee9afea',1,'CCoin::out()']]],
   ['outer',['outer',['../class_c_h_m_a_c___s_h_a256.html#a9ca3643194a1a1d842038bac559f298a',1,'CHMAC_SHA256::outer()'],['../class_c_h_m_a_c___s_h_a512.html#ac62385ef186c3ee721c00ae8b90c0823',1,'CHMAC_SHA512::outer()'],['../structsecp256k1__hmac__sha256__t.html#a3974e44471231d09a8d282ef62e0b77a',1,'secp256k1_hmac_sha256_t::outer()']]],
   ['outpoint',['outpoint',['../class_c_active_masternode.html#ab3c9811f4470407543da35c8e37f187f',1,'CActiveMasternode::outpoint()'],['../class_c_tx_lock_vote.html#acc127e90122b0006970f8f83523827e8',1,'CTxLockVote::outpoint()'],['../class_c_out_point_lock.html#aa4b61dfa82ffe40404cc5b32a0ff9ff5',1,'COutPointLock::outpoint()']]],
   ['outpointmasternode',['outpointMasternode',['../class_c_tx_lock_vote.html#a14164ed25ce80fba497a4039bf471612',1,'CTxLockVote']]],

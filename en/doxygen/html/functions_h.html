@@ -214,6 +214,7 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 <li>hashBlock
 : <a class="el" href="struct_c_coins_stats.html#a75b32757ea85b8df6453490e1acc4607">CCoinsStats</a>
 , <a class="el" href="class_c_coins_view_cache.html#a229dddddbc5501edc250209a2ce5df8b">CCoinsViewCache</a>
+, <a class="el" href="class_c_coins_view_cursor.html#a568f141cc26ec7baa1b5fd7e9b292360">CCoinsViewCursor</a>
 , <a class="el" href="class_c_merkle_tx.html#a788ee54c14b6d9706eb3737404663238">CMerkleTx</a>
 </li>
 <li>hashBytes
@@ -255,9 +256,6 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 : <a class="el" href="class_c_out_point_lock.html#a25a7c2b013f606dad5526a158d854da1">COutPointLock</a>
 , <a class="el" href="class_c_tx_lock_candidate.html#a0d3ae64011b81108c169f01060e9b269">CTxLockCandidate</a>
 </li>
-<li>hasModifier
-: <a class="el" href="class_c_coins_view_cache.html#a363e27234d36bb0fc533d60cd64d1bc3">CCoinsViewCache</a>
-</li>
 <li>HasNoInputsOf()
 : <a class="el" href="class_c_tx_mem_pool.html#a7a5b17b8cf4560cd681ef035880e3245">CTxMemPool</a>
 </li>
@@ -279,15 +277,14 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 <li>HasVote()
 : <a class="el" href="class_c_governance_object_vote_file.html#a0875c5f3b0fc99fb8a43445302fccf44">CGovernanceObjectVoteFile</a>
 </li>
-<li>HaveCoins()
-: <a class="el" href="class_c_coins_view.html#ade3a65fc3f1b02baf7bebce630e4eba3">CCoinsView</a>
-, <a class="el" href="class_c_coins_view_backed.html#ad49041658bdec807d556e080476e6543">CCoinsViewBacked</a>
-, <a class="el" href="class_c_coins_view_cache.html#aa8f0c55b6fc207d2188948a565125ab7">CCoinsViewCache</a>
-, <a class="el" href="class_c_coins_view_d_b.html#af55f35faadeb74b5406559fe3ed20114">CCoinsViewDB</a>
-, <a class="el" href="class_c_coins_view_mem_pool.html#a2c5900448dc5570053060686ad1f014b">CCoinsViewMemPool</a>
+<li>HaveCoin()
+: <a class="el" href="class_c_coins_view.html#a97b721d8f39ff91d4364acd27b6f646b">CCoinsView</a>
+, <a class="el" href="class_c_coins_view_backed.html#a14265b7d1864f2817d23b257d8342a38">CCoinsViewBacked</a>
+, <a class="el" href="class_c_coins_view_cache.html#af097128dca85eb8f94b864015d839d46">CCoinsViewCache</a>
+, <a class="el" href="class_c_coins_view_d_b.html#a3fcf56cd1715d603eccacc500ef03609">CCoinsViewDB</a>
 </li>
-<li>HaveCoinsInCache()
-: <a class="el" href="class_c_coins_view_cache.html#a5eef8cd21bc594b53a72bf5161dfd95b">CCoinsViewCache</a>
+<li>HaveCoinInCache()
+: <a class="el" href="class_c_coins_view_cache.html#ab2e11ee063c40be4a6bc620fd98149a0">CCoinsViewCache</a>
 </li>
 <li>HaveCScript()
 : <a class="el" href="class_c_basic_key_store.html#a499e0a1d117b43e3200883d88a400bf6">CBasicKeyStore</a>
@@ -413,7 +410,7 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 : <a class="el" href="class_h_t_t_p_event.html#ad7598146077dac606ccf4c9948040508">HTTPEvent</a>
 </li>
 <li>HTTPPathHandler()
-: <a class="el" href="struct_h_t_t_p_path_handler.html#acdfd2521c5f888e52d9a7c14bd5c6781">HTTPPathHandler</a>
+: <a class="el" href="struct_h_t_t_p_path_handler.html#a9161b61163110ac69e928bc128b1a47c">HTTPPathHandler</a>
 </li>
 <li>HTTPRequest()
 : <a class="el" href="class_h_t_t_p_request.html#aab94919073c53e2302a653cb0c91a7d5">HTTPRequest</a>
@@ -434,7 +431,7 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 		<!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:27 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:35 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

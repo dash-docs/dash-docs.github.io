@@ -28,7 +28,6 @@ var class_c_masternode_man =
     [ "Get", "class_c_masternode_man.html#a343f7c30c005af247a0cabbd1d665610", null ],
     [ "GetAndClearDirtyGovernanceObjectHashes", "class_c_masternode_man.html#aac50d92c2e58d658df889ff3079c75fe", null ],
     [ "GetFullMasternodeMap", "class_c_masternode_man.html#afe4877dd70f9a175eb9adec3da6b5d13", null ],
-    [ "GetMasternodeByRank", "class_c_masternode_man.html#a3fc09ce890b92fa3b3c7dff55f061dcd", null ],
     [ "GetMasternodeInfo", "class_c_masternode_man.html#a23248711382f2b942ec89b16719be279", null ],
     [ "GetMasternodeInfo", "class_c_masternode_man.html#a7dca98137ea872e933d469b4da955e00", null ],
     [ "GetMasternodeInfo", "class_c_masternode_man.html#a646779da6f99271b8c4e746822698ba0", null ],

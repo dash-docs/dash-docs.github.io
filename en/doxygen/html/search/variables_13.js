@@ -76,7 +76,7 @@ var searchData=
   ['txlockvote',['TXLOCKVOTE',['../namespace_net_msg_type.html#a8b94e14857fd0ee095d5ebf4e6cb9be4',1,'NetMsgType']]],
   ['txmycollateral',['txMyCollateral',['../class_c_private_send_client.html#af1cc0fa3fa8322950f80d7454646c4ba',1,'CPrivateSendClient']]],
   ['txn',['txn',['../class_c_merkle_block.html#ac2174e9e8ea6e429328deb5a69a05558',1,'CMerkleBlock']]],
-  ['txout',['txout',['../class_c_tx_out_compressor.html#a0cc5b4e0d80df37dcaa706624eddc2f1',1,'CTxOutCompressor::txout()'],['../class_c_tx_in_undo.html#a0eb1374984b5b68b0af14d88d7d4b821',1,'CTxInUndo::txout()']]],
+  ['txout',['txout',['../class_c_tx_out_compressor.html#a0cc5b4e0d80df37dcaa706624eddc2f1',1,'CTxOutCompressor::txout()'],['../class_tx_in_undo_serializer.html#a3609e9b9a70569b06ca4e46a5726981b',1,'TxInUndoSerializer::txout()'],['../class_tx_in_undo_deserializer.html#a2f5d44fe6ab330b0ce8759fb67d7c723',1,'TxInUndoDeserializer::txout()']]],
   ['txoutmasternode',['txoutMasternode',['../class_c_block.html#a1bc25c5482ab726f97b3cde842cad6d9',1,'CBlock']]],
   ['txto',['txTo',['../class_transaction_signature_checker.html#acf55a415fe4ccccd81fa03a9ba29da5a',1,'TransactionSignatureChecker::txTo()'],['../class_mutable_transaction_signature_checker.html#ad2f5c93683a9a3310b0daff93d0805b9',1,'MutableTransactionSignatureChecker::txTo()'],['../class_transaction_signature_creator.html#a693a324fdf10f73f5fe3c42f87810a27',1,'TransactionSignatureCreator::txTo()']]],
   ['typ',['typ',['../class_uni_value.html#a0108d4cf15c5b1d9cb370840ecec3217',1,'UniValue']]],

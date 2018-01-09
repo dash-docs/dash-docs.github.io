@@ -55,13 +55,13 @@ var sectionId = 'dynsection-14';
 <g id="viewport">
 <title>WalletFrame::setCurrentWallet</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-48.5 868,-48.5 868,4 -4,4"/>
-<!-- Node1049 -->
-<g id="node1" class="node"><title>Node1049</title>
+<!-- Node1047 -->
+<g id="node1" class="node"><title>Node1047</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-38.5 152,-38.5 152,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="76" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">WalletFrame::setCurrentWallet</text>
 </g>
-<!-- Node1050 -->
-<g id="node2" class="node"><title>Node1050</title>
+<!-- Node1048 -->
+<g id="node2" class="node"><title>Node1048</title>
 <g id="a_node2"><a xlink:href="class_wallet_view.html#ad348f2ed9f843ef9125ca416307c7412" target="_top" xlink:title="Re&#45;emit encryption status signal. ">
 <polygon fill="white" stroke="black" points="188,-14 188,-44 336,-44 336,-14 188,-14"/>
 <text text-anchor="start" x="196" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00">WalletView::updateEncryption</text>
@@ -69,13 +69,13 @@ var sectionId = 'dynsection-14';
 </a>
 </g>
 </g>
-<!-- Node1049&#45;&gt;Node1050 -->
-<g id="edge1" class="edge"><title>Node1049&#45;&gt;Node1050</title>
+<!-- Node1047&#45;&gt;Node1048 -->
+<g id="edge1" class="edge"><title>Node1047&#45;&gt;Node1048</title>
 <path fill="none" stroke="midnightblue" d="M152.105,-29C160.605,-29 169.303,-29 177.897,-29"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="177.92,-32.5001 187.92,-29 177.92,-25.5001 177.92,-32.5001"/>
 </g>
-<!-- Node1051 -->
-<g id="node3" class="node"><title>Node1051</title>
+<!-- Node1049 -->
+<g id="node3" class="node"><title>Node1049</title>
 <g id="a_node3"><a xlink:href="class_wallet_model.html#aa89632d2019414f2ab85674cd4d01398" target="_top" xlink:title="WalletModel::getEncryption\lStatus">
 <polygon fill="white" stroke="black" points="372,-14 372,-44 509,-44 509,-14 372,-14"/>
 <text text-anchor="start" x="380" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00">WalletModel::getEncryption</text>
@@ -83,39 +83,39 @@ var sectionId = 'dynsection-14';
 </a>
 </g>
 </g>
-<!-- Node1050&#45;&gt;Node1051 -->
-<g id="edge2" class="edge"><title>Node1050&#45;&gt;Node1051</title>
+<!-- Node1048&#45;&gt;Node1049 -->
+<g id="edge2" class="edge"><title>Node1048&#45;&gt;Node1049</title>
 <path fill="none" stroke="midnightblue" d="M336.063,-29C344.491,-29 353.11,-29 361.598,-29"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="361.867,-32.5001 371.867,-29 361.867,-25.5001 361.867,-32.5001"/>
 </g>
-<!-- Node1052 -->
-<g id="node4" class="node"><title>Node1052</title>
+<!-- Node1050 -->
+<g id="node4" class="node"><title>Node1050</title>
 <g id="a_node4"><a xlink:href="class_c_crypto_key_store.html#acc8fed44366c98fb481333ca6e867088" target="_top" xlink:title="CCryptoKeyStore::IsCrypted">
 <polygon fill="white" stroke="black" points="721,-19.5 721,-38.5 864,-38.5 864,-19.5 721,-19.5"/>
 <text text-anchor="middle" x="792.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCryptoKeyStore::IsCrypted</text>
 </a>
 </g>
 </g>
-<!-- Node1051&#45;&gt;Node1052 -->
-<g id="edge3" class="edge"><title>Node1051&#45;&gt;Node1052</title>
+<!-- Node1049&#45;&gt;Node1050 -->
+<g id="edge3" class="edge"><title>Node1049&#45;&gt;Node1050</title>
 <path fill="none" stroke="midnightblue" d="M509.399,-29C566.902,-29 649.475,-29 710.435,-29"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="710.789,-32.5001 720.789,-29 710.789,-25.5001 710.789,-32.5001"/>
 </g>
-<!-- Node1053 -->
-<g id="node5" class="node"><title>Node1053</title>
+<!-- Node1051 -->
+<g id="node5" class="node"><title>Node1051</title>
 <g id="a_node5"><a xlink:href="class_c_crypto_key_store.html#af9a5bd9adc6d09c3eddbf81e71237994" target="_top" xlink:title="CCryptoKeyStore::IsLocked">
 <polygon fill="white" stroke="black" points="545,-0.5 545,-19.5 685,-19.5 685,-0.5 545,-0.5"/>
 <text text-anchor="middle" x="615" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CCryptoKeyStore::IsLocked</text>
 </a>
 </g>
 </g>
-<!-- Node1051&#45;&gt;Node1053 -->
-<g id="edge4" class="edge"><title>Node1051&#45;&gt;Node1053</title>
+<!-- Node1049&#45;&gt;Node1051 -->
+<g id="edge4" class="edge"><title>Node1049&#45;&gt;Node1051</title>
 <path fill="none" stroke="midnightblue" d="M509.181,-21.5452C517.594,-20.6186 526.254,-19.6648 534.82,-18.7213"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="535.256,-22.1946 544.812,-17.6207 534.489,-15.2366 535.256,-22.1946"/>
 </g>
-<!-- Node1053&#45;&gt;Node1052 -->
-<g id="edge5" class="edge"><title>Node1053&#45;&gt;Node1052</title>
+<!-- Node1051&#45;&gt;Node1050 -->
+<g id="edge5" class="edge"><title>Node1051&#45;&gt;Node1050</title>
 <path fill="none" stroke="midnightblue" d="M685.11,-17.482C693.521,-18.3926 702.172,-19.3292 710.733,-20.256"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="710.404,-23.7408 720.723,-21.3375 711.158,-16.7814 710.404,-23.7408"/>
 </g>

@@ -9,118 +9,118 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 157)">
 <title>secp256k1_ecdsa_signature_normalize</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-157 616,-157 616,4 -4,4"/>
-<!-- Node942 -->
-<g id="node1" class="node"><title>Node942</title>
+<!-- Node923 -->
+<g id="node1" class="node"><title>Node923</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-52 0,-82 140,-82 140,-52 0,-52"/>
 <text text-anchor="start" x="8" y="-70" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_signature</text>
 <text text-anchor="middle" x="70" y="-59" font-family="Helvetica,sans-Serif" font-size="10.00">_normalize</text>
 </g>
-<!-- Node943 -->
-<g id="node2" class="node"><title>Node943</title>
+<!-- Node924 -->
+<g id="node2" class="node"><title>Node924</title>
 <g id="a_node2"><a xlink:href="secp256k1_8c.html#af2027241c9dfc85fa5b6a3bb5fe41d18" target="_top" xlink:title="secp256k1_ecdsa_signature_load">
 <polygon fill="white" stroke="black" points="177.5,-114.5 177.5,-133.5 341.5,-133.5 341.5,-114.5 177.5,-114.5"/>
 <text text-anchor="middle" x="259.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_signature_load</text>
 </a>
 </g>
 </g>
-<!-- Node942&#45;&gt;Node943 -->
-<g id="edge1" class="edge"><title>Node942&#45;&gt;Node943</title>
+<!-- Node923&#45;&gt;Node924 -->
+<g id="edge1" class="edge"><title>Node923&#45;&gt;Node924</title>
 <path fill="none" stroke="midnightblue" d="M109.032,-82.0211C128.813,-89.5121 153.501,-98.3643 176,-105 184.501,-107.507 193.576,-109.888 202.481,-112.062"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="201.886,-115.518 212.424,-114.425 203.504,-108.707 201.886,-115.518"/>
 </g>
-<!-- Node947 -->
-<g id="node6" class="node"><title>Node947</title>
+<!-- Node928 -->
+<g id="node6" class="node"><title>Node928</title>
 <g id="a_node6"><a xlink:href="secp256k1_8c.html#a94e522f94c4819bebf8e854952eb6a8f" target="_top" xlink:title="secp256k1_ecdsa_signature_save">
 <polygon fill="white" stroke="black" points="176,-76.5 176,-95.5 343,-95.5 343,-76.5 176,-76.5"/>
 <text text-anchor="middle" x="259.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_signature_save</text>
 </a>
 </g>
 </g>
-<!-- Node942&#45;&gt;Node947 -->
-<g id="edge5" class="edge"><title>Node942&#45;&gt;Node947</title>
+<!-- Node923&#45;&gt;Node928 -->
+<g id="edge5" class="edge"><title>Node923&#45;&gt;Node928</title>
 <path fill="none" stroke="midnightblue" d="M140.019,-73.994C148.425,-74.8457 157.116,-75.7265 165.796,-76.606"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="165.659,-80.11 175.961,-77.6361 166.365,-73.1457 165.659,-80.11"/>
 </g>
-<!-- Node949 -->
-<g id="node8" class="node"><title>Node949</title>
+<!-- Node930 -->
+<g id="node8" class="node"><title>Node930</title>
 <g id="a_node8"><a xlink:href="scalar_8h.html#aab66620cbbe49bec3c7c02f4a1219c05" target="_top" xlink:title="Check whether a scalar is higher than the group order divided by 2. ">
 <polygon fill="white" stroke="black" points="194,-38.5 194,-57.5 325,-57.5 325,-38.5 194,-38.5"/>
 <text text-anchor="middle" x="259.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_is_high</text>
 </a>
 </g>
 </g>
-<!-- Node942&#45;&gt;Node949 -->
-<g id="edge8" class="edge"><title>Node942&#45;&gt;Node949</title>
+<!-- Node923&#45;&gt;Node930 -->
+<g id="edge8" class="edge"><title>Node923&#45;&gt;Node930</title>
 <path fill="none" stroke="midnightblue" d="M140.019,-60.006C154.219,-58.5671 169.235,-57.0455 183.631,-55.5868"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="184.387,-59.0282 193.983,-54.5377 183.681,-52.0638 184.387,-59.0282"/>
 </g>
-<!-- Node950 -->
-<g id="node9" class="node"><title>Node950</title>
+<!-- Node931 -->
+<g id="node9" class="node"><title>Node931</title>
 <g id="a_node9"><a xlink:href="scalar_8h.html#aa3f1c1d4536adf835ee256878c222968" target="_top" xlink:title="Compute the complement of a scalar (modulo the group order). ">
 <polygon fill="white" stroke="black" points="194.5,-0.5 194.5,-19.5 324.5,-19.5 324.5,-0.5 194.5,-0.5"/>
 <text text-anchor="middle" x="259.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_negate</text>
 </a>
 </g>
 </g>
-<!-- Node942&#45;&gt;Node950 -->
-<g id="edge9" class="edge"><title>Node942&#45;&gt;Node950</title>
+<!-- Node923&#45;&gt;Node931 -->
+<g id="edge9" class="edge"><title>Node923&#45;&gt;Node931</title>
 <path fill="none" stroke="midnightblue" d="M109.032,-51.9789C128.813,-44.4879 153.501,-35.6357 176,-29 184.501,-26.4927 193.576,-24.1123 202.481,-21.9382"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="203.504,-25.2926 212.424,-19.5754 201.886,-18.4822 203.504,-25.2926"/>
 </g>
-<!-- Node944 -->
-<g id="node3" class="node"><title>Node944</title>
+<!-- Node925 -->
+<g id="node3" class="node"><title>Node925</title>
 <g id="a_node3"><a xlink:href="glibc__compat_8cpp.html#a0f46826ab0466591e136db24394923cf" target="_top" xlink:title="memcpy">
 <polygon fill="white" stroke="black" points="419.5,-95.5 419.5,-114.5 473.5,-114.5 473.5,-95.5 419.5,-95.5"/>
 <text text-anchor="middle" x="446.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">memcpy</text>
 </a>
 </g>
 </g>
-<!-- Node943&#45;&gt;Node944 -->
-<g id="edge2" class="edge"><title>Node943&#45;&gt;Node944</title>
+<!-- Node924&#45;&gt;Node925 -->
+<g id="edge2" class="edge"><title>Node924&#45;&gt;Node925</title>
 <path fill="none" stroke="midnightblue" d="M341.644,-115.666C365.235,-113.243 389.827,-110.718 409.156,-108.733"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="409.723,-112.193 419.313,-107.689 409.008,-105.23 409.723,-112.193"/>
 </g>
-<!-- Node946 -->
-<g id="node5" class="node"><title>Node946</title>
+<!-- Node927 -->
+<g id="node5" class="node"><title>Node927</title>
 <g id="a_node5"><a xlink:href="scalar_8h.html#a25cc2d45ae1d1765d07c3313cdf46fa0" target="_top" xlink:title="Set a scalar from a big endian byte array. ">
 <polygon fill="white" stroke="black" points="379,-133.5 379,-152.5 514,-152.5 514,-133.5 379,-133.5"/>
 <text text-anchor="middle" x="446.5" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_set_b32</text>
 </a>
 </g>
 </g>
-<!-- Node943&#45;&gt;Node946 -->
-<g id="edge4" class="edge"><title>Node943&#45;&gt;Node946</title>
+<!-- Node924&#45;&gt;Node927 -->
+<g id="edge4" class="edge"><title>Node924&#45;&gt;Node927</title>
 <path fill="none" stroke="midnightblue" d="M341.644,-132.334C350.673,-133.261 359.848,-134.203 368.819,-135.125"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="368.536,-138.614 378.841,-136.154 369.251,-131.651 368.536,-138.614"/>
 </g>
-<!-- Node945 -->
-<g id="node4" class="node"><title>Node945</title>
+<!-- Node926 -->
+<g id="node4" class="node"><title>Node926</title>
 <g id="a_node4"><a xlink:href="glibc__compat_8cpp.html#a9778d49e9029dd75bc53ecbbf9f5e9a1" target="_top" xlink:title="memmove">
 <polygon fill="white" stroke="black" points="550,-95.5 550,-114.5 612,-114.5 612,-95.5 550,-95.5"/>
 <text text-anchor="middle" x="581" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">memmove</text>
 </a>
 </g>
 </g>
-<!-- Node944&#45;&gt;Node945 -->
-<g id="edge3" class="edge"><title>Node944&#45;&gt;Node945</title>
+<!-- Node925&#45;&gt;Node926 -->
+<g id="edge3" class="edge"><title>Node925&#45;&gt;Node926</title>
 <path fill="none" stroke="midnightblue" d="M473.678,-105C492.474,-105 518.162,-105 539.581,-105"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="539.703,-108.5 549.703,-105 539.703,-101.5 539.703,-108.5"/>
 </g>
-<!-- Node947&#45;&gt;Node944 -->
-<g id="edge6" class="edge"><title>Node947&#45;&gt;Node944</title>
+<!-- Node928&#45;&gt;Node925 -->
+<g id="edge6" class="edge"><title>Node928&#45;&gt;Node925</title>
 <path fill="none" stroke="midnightblue" d="M343.26,-94.4997C366.476,-96.884 390.519,-99.3533 409.453,-101.298"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="409.103,-104.78 419.408,-102.32 409.818,-97.8168 409.103,-104.78"/>
 </g>
-<!-- Node948 -->
-<g id="node7" class="node"><title>Node948</title>
+<!-- Node929 -->
+<g id="node7" class="node"><title>Node929</title>
 <g id="a_node7"><a xlink:href="scalar_8h.html#a4fa08f8af5a23f505b44c9ef1bec1831" target="_top" xlink:title="Convert a scalar to a byte array. ">
 <polygon fill="white" stroke="black" points="379,-57.5 379,-76.5 514,-76.5 514,-57.5 379,-57.5"/>
 <text text-anchor="middle" x="446.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_get_b32</text>
 </a>
 </g>
 </g>
-<!-- Node947&#45;&gt;Node948 -->
-<g id="edge7" class="edge"><title>Node947&#45;&gt;Node948</title>
+<!-- Node928&#45;&gt;Node929 -->
+<g id="edge7" class="edge"><title>Node928&#45;&gt;Node929</title>
 <path fill="none" stroke="midnightblue" d="M343.26,-77.5003C351.741,-76.6293 360.333,-75.7469 368.745,-74.8829"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="369.309,-78.3436 378.899,-73.8401 368.593,-71.3802 369.309,-78.3436"/>
 </g>

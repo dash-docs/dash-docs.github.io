@@ -1,44 +1,44 @@
 <map id="CTxMemPool::removeForReorg" name="CTxMemPool::removeForReorg">
-<area shape="rect" id="node2" href="$class_c_coins_view_cache.html#a8e5341e8b01233949d6170dd4d1fd75d" title="Return a pointer to CCoins in the cache, or NULL if not found. " alt="" coords="260,56,479,83"/>
-<area shape="rect" id="node4" href="$validation_8cpp.html#a7e254ea66e047c3d3ed0bedc5997fc4f" title="Check if transaction will be final in the next block to be created. " alt="" coords="318,183,421,209"/>
-<area shape="rect" id="node13" href="$validation_8cpp.html#ad6a438d8b190d5742cc471452da5d709" title="Check if transaction will be BIP 68 final in the next block to be created. " alt="" coords="293,360,446,387"/>
-<area shape="rect" id="node41" href="$class_c_coins.html#a976c1374c3398e1ee23b1110f1663895" title="CCoins::IsCoinBase" alt="" coords="298,411,441,437"/>
-<area shape="rect" id="node42" href="$validation_8cpp.html#a2b1fec98f6318f76274f831b0d894ca2" title="Test whether the LockPoints height and time are still valid on the current chain. ..." alt="" coords="295,524,444,551"/>
-<area shape="rect" id="node3" href="$class_c_coins_view_cache.html#a7d385628b7d821d2d5b6c5aaf1734616" title="CCoinsViewCache::FetchCoins" alt="" coords="527,5,735,32"/>
-<area shape="rect" id="node5" href="$timedata_8cpp.html#a09f81b9c7650f898cf3cf305b87547e6" title="GetAdjustedTime" alt="" coords="569,56,692,83"/>
-<area shape="rect" id="node8" href="$class_c_block_index.html#aa9bd0ab02cf8b9c866618cee3a5a0583" title="CBlockIndex::GetMedianTimePast" alt="" coords="783,303,1007,329"/>
-<area shape="rect" id="node10" href="$class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" title="Return the maximal height in the chain. " alt="" coords="575,157,687,184"/>
-<area shape="rect" id="node11" href="$validation_8cpp.html#adc332cd7ac94e639bb4239618341be19" title="Check if transaction is final and can be included in a block with the specified height and time..." alt="" coords="593,208,669,235"/>
-<area shape="rect" id="node12" href="$class_c_chain.html#a578545bde95163bee37b1be28e7b2755" title="Returns the index entry for the tip of this chain, or NULL if none. " alt="" coords="585,259,677,285"/>
-<area shape="rect" id="node6" href="$utiltime_8cpp.html#a46fac5fba8ba905b5f9acb364f5d8c6f" title="For unit testing. " alt="" coords="859,31,931,57"/>
-<area shape="rect" id="node7" href="$timedata_8cpp.html#a50ca5344c75631267633f15cfe5e983e" title="&quot;Never go to sea with two chronometers; take one or three.&quot; Our three time sources are: ..." alt="" coords="841,81,949,108"/>
-<area shape="rect" id="node9" href="$class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" title="CBlockIndex::GetBlockTime" alt="" coords="1055,296,1243,323"/>
-<area shape="rect" id="node14" href="$validation_8cpp.html#a74a3878cdcfda3f183b6f399aff0474c" title="Calculates the block height and previous block&#39;s median time past at which the transaction will be co..." alt="" coords="545,360,716,387"/>
-<area shape="rect" id="node15" href="$class_c_block_index.html#ae1f702384690c6b8302e026a84172ef3" title="Efficiently find an ancestor of this block. " alt="" coords="805,360,984,387"/>
-<area shape="rect" id="node18" href="$util_8h.html#af8985880cf4ef26df0a5aa2ffcb76662" title="error" alt="" coords="607,461,655,488"/>
-<area shape="rect" id="node35" href="$validation_8cpp.html#aaf1acb4e178054d683264e45e7483db9" title="EvaluateSequenceLocks" alt="" coords="547,309,714,336"/>
-<area shape="rect" id="node36" href="$class_c_coins_view_mem_pool.html#a1a4a556821b1680ff4b73758c8a1e471" title="Retrieve the CCoins (unspent transaction outputs) for a given txid. " alt="" coords="551,558,710,599"/>
-<area shape="rect" id="node16" href="$chain_8cpp.html#ad168714f025f6299a1c80626b6a5bb5a" title="Compute what height to jump back to with the CBlockIndex::pskip pointer. " alt="" coords="1095,347,1202,373"/>
-<area shape="rect" id="node17" href="$chain_8cpp.html#ae4573d0178546d3f9c518c39ae45fe69" title="Turn the lowest &#39;1&#39; bit in the binary representation of a number into a &#39;0&#39;. " alt="" coords="1327,336,1449,363"/>
-<area shape="rect" id="node19" href="$namespacetinyformat_1_1detail.html#aa4b0590b3e34562c2d252a2086cec7ba" title="tinyformat::detail\l::format" alt="" coords="835,423,954,465"/>
-<area shape="rect" id="node22" href="$util_8h.html#afd4c3002b2797c0560adddb6af3ca1da" title="Send a string to the log output. " alt="" coords="851,515,938,541"/>
-<area shape="rect" id="node20" href="$classtinyformat_1_1detail_1_1_format_iterator.html#a46377a804f72dbad1e508d2fbaa18ce9" title="tinyformat::detail\l::FormatIterator::finish" alt="" coords="1073,398,1224,439"/>
-<area shape="rect" id="node21" href="$classtinyformat_1_1detail_1_1_format_iterator.html#af3bbb8259ac0593ec2268ef5863311d5" title="tinyformat::detail\l::FormatIterator::printFormat\lStringLiteral" alt="" coords="1295,387,1481,443"/>
-<area shape="rect" id="node23" href="$util_8cpp.html#a751ff5f21d880737811136b5e0bcea12" title="DebugPrintInit" alt="" coords="1096,464,1201,491"/>
-<area shape="rect" id="node24" href="$util_8cpp.html#a7c125ce70fa6b09e1de0c4a404fc2b6f" title="FileWriteStr" alt="" coords="1103,515,1194,541"/>
-<area shape="rect" id="node25" href="$util_8cpp.html#ab83866a054745d4b30a3948a1b44beba" title="GetDataDir" alt="" coords="1105,565,1193,592"/>
-<area shape="rect" id="node29" href="$util_8cpp.html#af0c31e37a5891e021f9b339696398a28" title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the th..." alt="" coords="1081,617,1216,644"/>
-<area shape="rect" id="node31" href="$util_8cpp.html#a8e80ae045580407e9f2028dc5f7b954c" title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the ti..." alt="" coords="1086,669,1211,696"/>
-<area shape="rect" id="node26" href="$chainparamsbase_8cpp.html#a06ef5bfd0efb53d13bbf4276726e84ab" title="Return the currently selected parameters. " alt="" coords="1339,467,1437,493"/>
-<area shape="rect" id="node27" href="$class_c_base_chain_params.html#a4b142e94ae27f860522dd5efef41fb67" title="CBaseChainParams::DataDir" alt="" coords="1291,517,1485,544"/>
-<area shape="rect" id="node28" href="$util_8cpp.html#ab272995de020a3bcbf743be630e485c6" title="GetDefaultDataDir" alt="" coords="1323,568,1453,595"/>
-<area shape="rect" id="node30" href="$util_8cpp.html#a1db3aa900bfa259ae1fe04068f2accfc" title="GetThreadName" alt="" coords="1329,619,1447,645"/>
-<area shape="rect" id="node32" href="$utiltime_8cpp.html#a749bc6776c8ec72d7c5e4dea56aee415" title="DateTimeStrFormat" alt="" coords="1319,669,1457,696"/>
-<area shape="rect" id="node33" href="$utiltime_8cpp.html#a474bed4c01c8a1d18330dceccf865e1e" title="Return a time useful for the debug log. " alt="" coords="1322,720,1454,747"/>
-<area shape="rect" id="node34" href="$utiltime_8cpp.html#a0c5a06b50cd805b1923552114494c029" title="GetTimeMicros" alt="" coords="1533,720,1644,747"/>
-<area shape="rect" id="node37" href="$class_c_coins_view.html#a67d865358127bef1f0011a23d5158a9f" title="Retrieve the CCoins (unspent transaction outputs) for a given txid. " alt="" coords="815,565,974,592"/>
-<area shape="rect" id="node38" href="$class_c_coins.html#a597a7cb8830fc29565918ce1823b2244" title="check whether the entire CCoins is spent note that only !IsPruned() CCoins can be serialized ..." alt="" coords="831,616,958,643"/>
-<area shape="rect" id="node40" href="$class_c_tx_mem_pool.html#ad6d9966cdeb4b6586f7186e709b4e77e" title="CTxMemPool::lookup" alt="" coords="821,667,969,693"/>
-<area shape="rect" id="node39" href="$class_c_tx_out.html#ab92a3c4c95c643f7b3ffd3ffa7cd7055" title="CTxOut::IsNull" alt="" coords="1093,720,1204,747"/>
-<area shape="rect" id="node43" href="$class_c_chain.html#af1786dc229c215dea7f727c11df2c8dc" title="Efficiently check whether a block is present in this chain. " alt="" coords="567,624,694,651"/>
+<area shape="rect" id="node2" href="$class_c_coins_view_cache.html#afd0144ded5ce891084aabff29141f8b2" title="Return a reference to Coin in the cache, or a pruned one if not found. " alt="" coords="260,117,472,144"/>
+<area shape="rect" id="node5" href="$validation_8cpp.html#a7e254ea66e047c3d3ed0bedc5997fc4f" title="Check if transaction will be final in the next block to be created. " alt="" coords="315,455,417,481"/>
+<area shape="rect" id="node14" href="$validation_8cpp.html#ad6a438d8b190d5742cc471452da5d709" title="Check if transaction will be BIP 68 final in the next block to be created. " alt="" coords="289,252,443,279"/>
+<area shape="rect" id="node39" href="$class_coin.html#a2da55fc574a7346d11447133832f23e0" title="Coin::IsCoinBase" alt="" coords="303,505,429,532"/>
+<area shape="rect" id="node40" href="$class_coin.html#ad900ffd083fd31e3b52adf3dc4092953" title="Coin::IsSpent" alt="" coords="315,568,417,595"/>
+<area shape="rect" id="node42" href="$validation_8cpp.html#a2b1fec98f6318f76274f831b0d894ca2" title="Test whether the LockPoints height and time are still valid on the current chain. ..." alt="" coords="291,644,441,671"/>
+<area shape="rect" id="node3" href="$class_c_coins_view_cache.html#aad44dd0b312871702e46ddfb449cecba" title="CCoinsViewCache::FetchCoin" alt="" coords="520,33,721,60"/>
+<area shape="rect" id="node4" href="$class_c_coins_view.html#a435080be262889508365787dcc75cf95" title="Retrieve the Coin (unspent transaction output) for a given outpoint. " alt="" coords="806,37,957,64"/>
+<area shape="rect" id="node6" href="$timedata_8cpp.html#a09f81b9c7650f898cf3cf305b87547e6" title="GetAdjustedTime" alt="" coords="559,556,682,583"/>
+<area shape="rect" id="node9" href="$class_c_block_index.html#aa9bd0ab02cf8b9c866618cee3a5a0583" title="CBlockIndex::GetMedianTimePast" alt="" coords="769,381,993,408"/>
+<area shape="rect" id="node11" href="$class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" title="Return the maximal height in the chain. " alt="" coords="565,505,677,532"/>
+<area shape="rect" id="node12" href="$validation_8cpp.html#adc332cd7ac94e639bb4239618341be19" title="Check if transaction is final and can be included in a block with the specified height and time..." alt="" coords="583,455,659,481"/>
+<area shape="rect" id="node13" href="$class_c_chain.html#a578545bde95163bee37b1be28e7b2755" title="Returns the index entry for the tip of this chain, or NULL if none. " alt="" coords="575,353,667,380"/>
+<area shape="rect" id="node7" href="$utiltime_8cpp.html#a46fac5fba8ba905b5f9acb364f5d8c6f" title="For unit testing. " alt="" coords="845,531,917,557"/>
+<area shape="rect" id="node8" href="$timedata_8cpp.html#a50ca5344c75631267633f15cfe5e983e" title="&quot;Never go to sea with two chronometers; take one or three.&quot; Our three time sources are: ..." alt="" coords="827,581,935,608"/>
+<area shape="rect" id="node10" href="$class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" title="CBlockIndex::GetBlockTime" alt="" coords="1041,484,1229,511"/>
+<area shape="rect" id="node15" href="$validation_8cpp.html#a74a3878cdcfda3f183b6f399aff0474c" title="Calculates the block height and previous block&#39;s median time past at which the transaction will be co..." alt="" coords="535,252,706,279"/>
+<area shape="rect" id="node16" href="$class_c_block_index.html#ae1f702384690c6b8302e026a84172ef3" title="Efficiently find an ancestor of this block. " alt="" coords="792,143,971,169"/>
+<area shape="rect" id="node19" href="$util_8h.html#af8985880cf4ef26df0a5aa2ffcb76662" title="error" alt="" coords="597,201,645,228"/>
+<area shape="rect" id="node36" href="$validation_8cpp.html#aaf1acb4e178054d683264e45e7483db9" title="EvaluateSequenceLocks" alt="" coords="537,303,704,329"/>
+<area shape="rect" id="node37" href="$class_c_coins_view_mem_pool.html#a32f25cd311440908e7b53d95d7b0ba68" title="Retrieve the Coin (unspent transaction output) for a given outpoint. " alt="" coords="541,85,700,126"/>
+<area shape="rect" id="node17" href="$chain_8cpp.html#ad168714f025f6299a1c80626b6a5bb5a" title="Compute what height to jump back to with the CBlockIndex::pskip pointer. " alt="" coords="1082,21,1189,48"/>
+<area shape="rect" id="node18" href="$chain_8cpp.html#ae4573d0178546d3f9c518c39ae45fe69" title="Turn the lowest &#39;1&#39; bit in the binary representation of a number into a &#39;0&#39;. " alt="" coords="1314,5,1435,32"/>
+<area shape="rect" id="node20" href="$namespacetinyformat_1_1detail.html#aa4b0590b3e34562c2d252a2086cec7ba" title="tinyformat::detail\l::format" alt="" coords="822,194,941,235"/>
+<area shape="rect" id="node23" href="$util_8h.html#afd4c3002b2797c0560adddb6af3ca1da" title="Send a string to the log output. " alt="" coords="838,307,925,333"/>
+<area shape="rect" id="node21" href="$classtinyformat_1_1detail_1_1_format_iterator.html#a46377a804f72dbad1e508d2fbaa18ce9" title="tinyformat::detail\l::FormatIterator::finish" alt="" coords="1060,103,1211,145"/>
+<area shape="rect" id="node22" href="$classtinyformat_1_1detail_1_1_format_iterator.html#af3bbb8259ac0593ec2268ef5863311d5" title="tinyformat::detail\l::FormatIterator::printFormat\lStringLiteral" alt="" coords="1281,56,1468,112"/>
+<area shape="rect" id="node24" href="$util_8cpp.html#a751ff5f21d880737811136b5e0bcea12" title="DebugPrintInit" alt="" coords="1083,383,1188,409"/>
+<area shape="rect" id="node25" href="$util_8cpp.html#a7c125ce70fa6b09e1de0c4a404fc2b6f" title="FileWriteStr" alt="" coords="1090,433,1181,460"/>
+<area shape="rect" id="node26" href="$util_8cpp.html#ab83866a054745d4b30a3948a1b44beba" title="GetDataDir" alt="" coords="1091,223,1179,249"/>
+<area shape="rect" id="node30" href="$util_8cpp.html#af0c31e37a5891e021f9b339696398a28" title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the th..." alt="" coords="1068,281,1203,308"/>
+<area shape="rect" id="node32" href="$util_8cpp.html#a8e80ae045580407e9f2028dc5f7b954c" title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the ti..." alt="" coords="1073,332,1198,359"/>
+<area shape="rect" id="node27" href="$chainparamsbase_8cpp.html#a06ef5bfd0efb53d13bbf4276726e84ab" title="Return the currently selected parameters. " alt="" coords="1326,237,1423,264"/>
+<area shape="rect" id="node28" href="$class_c_base_chain_params.html#a4b142e94ae27f860522dd5efef41fb67" title="CBaseChainParams::DataDir" alt="" coords="1277,136,1472,163"/>
+<area shape="rect" id="node29" href="$util_8cpp.html#ab272995de020a3bcbf743be630e485c6" title="GetDefaultDataDir" alt="" coords="1309,187,1440,213"/>
+<area shape="rect" id="node31" href="$util_8cpp.html#a1db3aa900bfa259ae1fe04068f2accfc" title="GetThreadName" alt="" coords="1315,288,1434,315"/>
+<area shape="rect" id="node33" href="$utiltime_8cpp.html#a749bc6776c8ec72d7c5e4dea56aee415" title="DateTimeStrFormat" alt="" coords="1306,339,1443,365"/>
+<area shape="rect" id="node34" href="$utiltime_8cpp.html#a474bed4c01c8a1d18330dceccf865e1e" title="Return a time useful for the debug log. " alt="" coords="1309,389,1441,416"/>
+<area shape="rect" id="node35" href="$utiltime_8cpp.html#a0c5a06b50cd805b1923552114494c029" title="GetTimeMicros" alt="" coords="1520,389,1631,416"/>
+<area shape="rect" id="node38" href="$class_c_tx_mem_pool.html#ad6d9966cdeb4b6586f7186e709b4e77e" title="CTxMemPool::lookup" alt="" coords="807,92,955,119"/>
+<area shape="rect" id="node41" href="$class_c_tx_out.html#ab92a3c4c95c643f7b3ffd3ffa7cd7055" title="CTxOut::IsNull" alt="" coords="565,607,676,633"/>
+<area shape="rect" id="node43" href="$class_c_chain.html#af1786dc229c215dea7f727c11df2c8dc" title="Efficiently check whether a block is present in this chain. " alt="" coords="557,657,684,684"/>
 </map>

@@ -1,7 +1,6 @@
 var privatesend_8h =
 [
     [ "CTxDSIn", "class_c_tx_d_s_in.html", "class_c_tx_d_s_in" ],
-    [ "CTxDSOut", "class_c_tx_d_s_out.html", "class_c_tx_d_s_out" ],
     [ "CDarkSendEntry", "class_c_dark_send_entry.html", "class_c_dark_send_entry" ],
     [ "CDarksendQueue", "class_c_darksend_queue.html", "class_c_darksend_queue" ],
     [ "CDarksendBroadcastTx", "class_c_darksend_broadcast_tx.html", "class_c_darksend_broadcast_tx" ],

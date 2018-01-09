@@ -43,7 +43,6 @@ var init_8cpp =
     [ "g_connman", "init_8cpp.html#a152c3d2ceeeaf7a300666dcbcc8bb945", null ],
     [ "globalVerifyHandle", "init_8cpp.html#a6bfd81994d7eb439873021f25d4d7949", null ],
     [ "pcoinscatcher", "init_8cpp.html#ada9880e5650247956ce93bfc37ca9d8a", null ],
-    [ "pcoinsdbview", "init_8cpp.html#a1fa98bf3c123612093fcb5321d6a47fb", null ],
     [ "pdsNotificationInterface", "init_8cpp.html#ac834926d6cf8042db43be222159bd9ba", null ],
     [ "peerLogic", "init_8cpp.html#afad7ee4e7c8698bf63a91a4e80b30ed8", null ],
     [ "uiInterface", "init_8cpp.html#a4fe31b510fc1c2b95321cedb9f89e8de", null ]

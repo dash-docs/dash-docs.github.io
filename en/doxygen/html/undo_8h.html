@@ -120,12 +120,14 @@ $(document).ready(function(){initNavTree('undo_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">undo.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="compressor_8h_source.html">compressor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="consensus_8h_source.html">consensus/consensus.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="transaction_8h_source.html">primitives/transaction.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="serialize_8h_source.html">serialize.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -149,8 +151,10 @@ $(document).ready(function(){initNavTree('undo_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tx_in_undo.html">CTxInUndo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo information for a <a class="el" href="class_c_tx_in.html" title="An input of a transaction. ">CTxIn</a>.  <a href="class_c_tx_in_undo.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tx_in_undo_serializer.html">TxInUndoSerializer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo information for a <a class="el" href="class_c_tx_in.html" title="An input of a transaction. ">CTxIn</a>.  <a href="class_tx_in_undo_serializer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tx_in_undo_deserializer.html">TxInUndoDeserializer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tx_undo.html">CTxUndo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo information for a <a class="el" href="class_c_transaction.html" title="The basic transaction that is broadcasted on the network and contained in blocks. ...">CTransaction</a>.  <a href="class_c_tx_undo.html#details">More...</a><br /></td></tr>
@@ -158,7 +162,39 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_block_undo.html">CBlockUndo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo information for a <a class="el" href="class_c_block.html">CBlock</a>.  <a href="class_c_block_undo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a54490e19b0d17a6a1214cb114b5f4e29"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="undo_8h.html#a54490e19b0d17a6a1214cb114b5f4e29">MAX_INPUTS_PER_BLOCK</a> = <a class="el" href="consensus_8h.html#aa372df0d6494f4aaca5ecf5a5a9d4406">MaxBlockSize</a>(true) / ::<a class="el" href="serialize_8h.html#ab43922d497e06a9d72767759470c4181">GetSerializeSize</a>(<a class="el" href="class_c_tx_in.html">CTxIn</a>(), <a class="el" href="serialize_8h.html#ae4d5251432e1a9e6803c0240cc492e18a652754eeaf79fba4fcf4c18597a6961c">SER_NETWORK</a>, <a class="el" href="version_8h.html#a4e2497f7c9c4319adcaf945159ec63f4">PROTOCOL_VERSION</a>)</td></tr>
+<tr class="separator:a54490e19b0d17a6a1214cb114b5f4e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a54490e19b0d17a6a1214cb114b5f4e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54490e19b0d17a6a1214cb114b5f4e29">&#9670;&nbsp;</a></span>MAX_INPUTS_PER_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t MAX_INPUTS_PER_BLOCK = <a class="el" href="consensus_8h.html#aa372df0d6494f4aaca5ecf5a5a9d4406">MaxBlockSize</a>(true) / ::<a class="el" href="serialize_8h.html#ab43922d497e06a9d72767759470c4181">GetSerializeSize</a>(<a class="el" href="class_c_tx_in.html">CTxIn</a>(), <a class="el" href="serialize_8h.html#ae4d5251432e1a9e6803c0240cc492e18a652754eeaf79fba4fcf4c18597a6961c">SER_NETWORK</a>, <a class="el" href="version_8h.html#a4e2497f7c9c4319adcaf945159ec63f4">PROTOCOL_VERSION</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00063">63</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="undo_8h_source.html#l00083">CTxUndo::Unserialize()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 		<!-- HTML footer for doxygen 1.8.14-->
@@ -166,7 +202,7 @@ Classes</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="undo_8h.html">undo.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:21 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:29 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

@@ -1,51 +1,51 @@
 <map id="LoadBlockIndex" name="LoadBlockIndex">
-<area shape="rect" id="node2" href="$validation_8cpp.html#ab92802791dd1274ab21b812d6bd9d7a7" title="LoadBlockIndexDB" alt="" coords="168,887,303,914"/>
-<area shape="rect" id="node3" href="$chainparams_8cpp.html#ace5c5b706d71a324a417dd2db394fd4a" title="Return the currently selected parameters. " alt="" coords="713,76,779,103"/>
-<area shape="rect" id="node4" href="$class_c_block_tree_d_b.html#a12be19bb1d7253eeb40e1aa88b032346" title="CBlockTreeDB::LoadBlockIndexGuts" alt="" coords="351,304,589,331"/>
-<area shape="rect" id="node17" href="$class_c_block_index.html#a98490a2788c65cdd6ae9002b004dd74c" title="CBlockIndex::GetBlockHash" alt="" coords="911,532,1101,559"/>
-<area shape="rect" id="node20" href="$classbase__blob.html#a7a0d25782830d8b087c4da839f3ccdeb" title="base_blob::ToString" alt="" coords="937,608,1075,635"/>
-<area shape="rect" id="node21" href="$pow_8cpp.html#a334aa8015cc7185f7fdf484783e40f38" title="GetBlockProof" alt="" coords="693,482,799,508"/>
-<area shape="rect" id="node22" href="$class_c_block_index.html#ad8b5a6560e7c0d4222066e2922178683" title="Check whether this block index entry is valid up to the passed validity level. " alt="" coords="397,684,543,711"/>
-<area shape="rect" id="node23" href="$class_c_block_index.html#a21209a71e50daf10e283bd4049e46f64" title="Build the skiplist pointer for this entry. " alt="" coords="390,735,550,762"/>
-<area shape="rect" id="node26" href="$class_c_block_tree_d_b.html#adb1276fe2f0e0c4c106660948c581711" title="CBlockTreeDB::ReadLastBlockFile" alt="" coords="356,836,584,863"/>
-<area shape="rect" id="node33" href="$class_c_block_tree_d_b.html#a6f951198dc53fbe9194626ff82638656" title="CBlockTreeDB::ReadBlockFileInfo" alt="" coords="357,887,583,914"/>
-<area shape="rect" id="node34" href="$validation_8cpp.html#a0d81388930a4ccb6a69b9abdd1ef5097" title="Open a block file (blk?????.dat) " alt="" coords="417,988,523,1015"/>
-<area shape="rect" id="node38" href="$class_c_block_tree_d_b.html#acd779c4653fd9a87fffe95d53ce7c6d3" title="CBlockTreeDB::ReadFlag" alt="" coords="383,786,557,812"/>
-<area shape="rect" id="node39" href="$class_c_block_tree_d_b.html#a1abf6fc392048428aa24a12b7942824b" title="CBlockTreeDB::ReadReindexing" alt="" coords="363,938,577,964"/>
-<area shape="rect" id="node41" href="$class_c_coins_view_cache.html#a1190c94a943c067d13211179ef06470b" title="Retrieve the block hash whose state this CCoinsView currently represents. " alt="" coords="375,18,565,60"/>
-<area shape="rect" id="node43" href="$class_c_chain.html#aeb563751f7362d4308c7c2cb35b834a5" title="Set/initialize a chain with a given tip. " alt="" coords="414,1039,526,1066"/>
-<area shape="rect" id="node44" href="$validation_8cpp.html#a0d96b40fd4fda216d00ecb9dcab29094" title="Delete all entries in setBlockIndexCandidates that are worse than the current tip. " alt="" coords="377,1140,563,1167"/>
-<area shape="rect" id="node45" href="$class_c_chain.html#a578545bde95163bee37b1be28e7b2755" title="Returns the index entry for the tip of this chain, or NULL if none. " alt="" coords="700,1115,792,1142"/>
-<area shape="rect" id="node46" href="$class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" title="Return the maximal height in the chain. " alt="" coords="414,1191,526,1218"/>
-<area shape="rect" id="node47" href="$utiltime_8cpp.html#a749bc6776c8ec72d7c5e4dea56aee415" title="DateTimeStrFormat" alt="" coords="401,1242,539,1268"/>
-<area shape="rect" id="node48" href="$class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" title="CBlockIndex::GetBlockTime" alt="" coords="652,1322,840,1348"/>
-<area shape="rect" id="node49" href="$namespace_checkpoints.html#aa2e60b5114a431ccaff32a6e1f418af1" title="Guess how far we are in the verification process at the given block index. " alt="" coords="367,1344,573,1385"/>
-<area shape="rect" id="node50" href="$class_c_chain_params.html#a55760ebfb6727f84d98295fa40f08940" title="CChainParams::Checkpoints" alt="" coords="374,1410,566,1436"/>
-<area shape="rect" id="node5" href="$class_c_d_b_wrapper.html#a086e9b6d6756642cb5d60778ea948c8f" title="CDBWrapper::NewIterator" alt="" coords="658,431,834,458"/>
-<area shape="rect" id="node6" href="$validation_8cpp.html#af3adfd64a90ee443bfa5fe16321aa2d7" title="Create a new block index entry for a given block hash. " alt="" coords="686,127,806,154"/>
-<area shape="rect" id="node8" href="$class_c_disk_block_index.html#acc607a9082c558d7301077631b66122b" title="CDiskBlockIndex::GetBlockHash" alt="" coords="637,330,855,356"/>
-<area shape="rect" id="node11" href="$pow_8cpp.html#a4e1129d7ab72643eb7e830f7f72953d7" title="Check whether a block hash satisfies the proof&#45;of&#45;work requirement specified by nBits. " alt="" coords="678,279,814,306"/>
-<area shape="rect" id="node14" href="$util_8h.html#af8985880cf4ef26df0a5aa2ffcb76662" title="error" alt="" coords="982,191,1030,218"/>
-<area shape="rect" id="node18" href="$class_c_chain_params.html#aa366d4f63c8d16d625336dca61ca65e5" title="CChainParams::GetConsensus" alt="" coords="643,228,849,255"/>
-<area shape="rect" id="node19" href="$class_c_block_index.html#a18258e956a4bc77dcccdb0db8f91effe" title="CBlockIndex::ToString" alt="" coords="669,532,823,559"/>
-<area shape="rect" id="node7" href="$classbase__blob.html#aba89c6722866a5850882a509d27d7bbd" title="base_blob::IsNull" alt="" coords="945,51,1067,78"/>
-<area shape="rect" id="node9" href="$class_c_block_header.html#af0239f86a13f622a826e9eea66b2d7f3" title="CBlockHeader::GetHash" alt="" coords="923,355,1089,382"/>
-<area shape="rect" id="node10" href="$hash_8h.html#acb0f5c5ebc989fda4f9835456d5ef531" title="HashX11" alt="" coords="1187,355,1263,382"/>
-<area shape="rect" id="node12" href="$classarith__uint256.html#a458133c9f123519646b07e6143f2164f" title="The &quot;compact&quot; format is a representation of a whole number N using an unsigned 32bit number similar t..." alt="" coords="917,304,1095,331"/>
-<area shape="rect" id="node13" href="$arith__uint256_8cpp.html#a6a6e0e2e41ba7e31c4a741eb2426a516" title="UintToArith256" alt="" coords="951,254,1061,280"/>
-<area shape="rect" id="node15" href="$util_8h.html#afd4c3002b2797c0560adddb6af3ca1da" title="Send a string to the log output. " alt="" coords="1181,220,1268,247"/>
-<area shape="rect" id="node16" href="$namespacetinyformat_1_1detail.html#aa4b0590b3e34562c2d252a2086cec7ba" title="tinyformat::detail\l::format" alt="" coords="1165,154,1284,196"/>
-<area shape="rect" id="node24" href="$chain_8cpp.html#ad168714f025f6299a1c80626b6a5bb5a" title="Compute what height to jump back to with the CBlockIndex::pskip pointer. " alt="" coords="693,710,799,736"/>
-<area shape="rect" id="node25" href="$chain_8cpp.html#ae4573d0178546d3f9c518c39ae45fe69" title="Turn the lowest &#39;1&#39; bit in the binary representation of a number into a &#39;0&#39;. " alt="" coords="945,684,1067,711"/>
-<area shape="rect" id="node27" href="$class_c_d_b_wrapper.html#a38084dd7b2870e6ac3082e7521d88a29" title="CDBWrapper::Read" alt="" coords="677,836,815,863"/>
-<area shape="rect" id="node28" href="$class_c_data_stream.html#a5542e71bd7af2ab7cd7be0f381d39cb5" title="CDataStream::reserve" alt="" coords="929,887,1083,914"/>
-<area shape="rect" id="node29" href="$class_c_data_stream.html#aaf2b9e953793ce5a4fc438a7ecb00dc2" title="CDataStream::GetSerializeSize" alt="" coords="903,938,1109,964"/>
-<area shape="rect" id="node30" href="$class_c_data_stream.html#add30f866dd928fc28c47fe79a0a6723a" title="CDataStream::size" alt="" coords="1157,786,1292,812"/>
-<area shape="rect" id="node31" href="$dbwrapper_8h.html#aea36eb5fddb6266b14ea8cb15e183486" title="HandleError" alt="" coords="961,836,1051,863"/>
-<area shape="rect" id="node32" href="$class_c_data_stream.html#a5b631dc9cc9d5ba6a5b6ee910bd7d8a8" title="XOR the contents of this stream with a certain key. " alt="" coords="941,786,1071,812"/>
-<area shape="rect" id="node35" href="$validation_8cpp.html#ab15fc61f1d9596ad0aca703ff2c74635" title="OpenDiskFile" alt="" coords="695,1039,797,1066"/>
-<area shape="rect" id="node36" href="$struct_c_disk_block_pos.html#a7dd98fe3f5372d358df61db31899b0af" title="CDiskBlockPos::IsNull" alt="" coords="927,1039,1085,1066"/>
-<area shape="rect" id="node37" href="$validation_8cpp.html#a2f26f074aac584c3398de1dcdac59de9" title="Translation to a filesystem path. " alt="" coords="930,1090,1082,1116"/>
-<area shape="rect" id="node40" href="$class_c_d_b_wrapper.html#a6abcb2368561b33b005666aa88315ed7" title="CDBWrapper::Exists" alt="" coords="673,938,819,964"/>
-<area shape="rect" id="node42" href="$class_c_coins_view.html#af81f2907d360a2548d59a61388e5e5cb" title="Retrieve the block hash whose state this CCoinsView currently represents. " alt="" coords="654,26,838,52"/>
+<area shape="rect" id="node2" href="$validation_8cpp.html#ab92802791dd1274ab21b812d6bd9d7a7" title="LoadBlockIndexDB" alt="" coords="168,857,303,884"/>
+<area shape="rect" id="node3" href="$chainparams_8cpp.html#ace5c5b706d71a324a417dd2db394fd4a" title="Return the currently selected parameters. " alt="" coords="713,56,779,83"/>
+<area shape="rect" id="node4" href="$class_c_block_tree_d_b.html#a8f21cec56f3e4c8025726c39522a1ec5" title="CBlockTreeDB::LoadBlockIndexGuts" alt="" coords="351,259,589,285"/>
+<area shape="rect" id="node15" href="$class_c_block_index.html#a98490a2788c65cdd6ae9002b004dd74c" title="CBlockIndex::GetBlockHash" alt="" coords="903,259,1093,285"/>
+<area shape="rect" id="node18" href="$classbase__blob.html#a7a0d25782830d8b087c4da839f3ccdeb" title="base_blob::ToString" alt="" coords="929,461,1067,488"/>
+<area shape="rect" id="node19" href="$validation_8cpp.html#af3adfd64a90ee443bfa5fe16321aa2d7" title="Create a new block index entry for a given block hash. " alt="" coords="410,563,530,589"/>
+<area shape="rect" id="node21" href="$pow_8cpp.html#a334aa8015cc7185f7fdf484783e40f38" title="GetBlockProof" alt="" coords="693,5,799,32"/>
+<area shape="rect" id="node22" href="$class_c_block_index.html#ad8b5a6560e7c0d4222066e2922178683" title="Check whether this block index entry is valid up to the passed validity level. " alt="" coords="397,680,543,707"/>
+<area shape="rect" id="node23" href="$class_c_block_index.html#a21209a71e50daf10e283bd4049e46f64" title="Build the skiplist pointer for this entry. " alt="" coords="390,731,550,757"/>
+<area shape="rect" id="node26" href="$class_c_block_tree_d_b.html#adb1276fe2f0e0c4c106660948c581711" title="CBlockTreeDB::ReadLastBlockFile" alt="" coords="356,781,584,808"/>
+<area shape="rect" id="node33" href="$class_c_block_tree_d_b.html#a6f951198dc53fbe9194626ff82638656" title="CBlockTreeDB::ReadBlockFileInfo" alt="" coords="357,832,583,859"/>
+<area shape="rect" id="node34" href="$validation_8cpp.html#a0d81388930a4ccb6a69b9abdd1ef5097" title="Open a block file (blk?????.dat) " alt="" coords="417,984,523,1011"/>
+<area shape="rect" id="node38" href="$class_c_block_tree_d_b.html#acd779c4653fd9a87fffe95d53ce7c6d3" title="CBlockTreeDB::ReadFlag" alt="" coords="383,883,557,909"/>
+<area shape="rect" id="node39" href="$class_c_block_tree_d_b.html#a1abf6fc392048428aa24a12b7942824b" title="CBlockTreeDB::ReadReindexing" alt="" coords="363,933,577,960"/>
+<area shape="rect" id="node41" href="$class_c_coins_view_cache.html#a943a3d13f2ba6936002d7a87b969edba" title="Retrieve the block hash whose state this CCoinsView currently represents. " alt="" coords="375,614,565,655"/>
+<area shape="rect" id="node43" href="$class_c_chain.html#aeb563751f7362d4308c7c2cb35b834a5" title="Set/initialize a chain with a given tip. " alt="" coords="414,1035,526,1061"/>
+<area shape="rect" id="node44" href="$validation_8cpp.html#a0d96b40fd4fda216d00ecb9dcab29094" title="Delete all entries in setBlockIndexCandidates that are worse than the current tip. " alt="" coords="377,1136,563,1163"/>
+<area shape="rect" id="node45" href="$class_c_chain.html#a578545bde95163bee37b1be28e7b2755" title="Returns the index entry for the tip of this chain, or NULL if none. " alt="" coords="700,1119,792,1145"/>
+<area shape="rect" id="node46" href="$class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" title="Return the maximal height in the chain. " alt="" coords="414,1187,526,1213"/>
+<area shape="rect" id="node47" href="$utiltime_8cpp.html#a749bc6776c8ec72d7c5e4dea56aee415" title="DateTimeStrFormat" alt="" coords="401,1237,539,1264"/>
+<area shape="rect" id="node48" href="$class_c_block_index.html#a9fe0d4463c07c466f66252e8eec25f5c" title="CBlockIndex::GetBlockTime" alt="" coords="652,1317,840,1344"/>
+<area shape="rect" id="node49" href="$namespace_checkpoints.html#aa2e60b5114a431ccaff32a6e1f418af1" title="Guess how far we are in the verification process at the given block index. " alt="" coords="367,1339,573,1381"/>
+<area shape="rect" id="node50" href="$class_c_chain_params.html#a55760ebfb6727f84d98295fa40f08940" title="CChainParams::Checkpoints" alt="" coords="374,1405,566,1432"/>
+<area shape="rect" id="node5" href="$class_c_d_b_wrapper.html#a086e9b6d6756642cb5d60778ea948c8f" title="CDBWrapper::NewIterator" alt="" coords="658,309,834,336"/>
+<area shape="rect" id="node6" href="$class_c_disk_block_index.html#acc607a9082c558d7301077631b66122b" title="CDiskBlockIndex::GetBlockHash" alt="" coords="637,360,855,387"/>
+<area shape="rect" id="node9" href="$pow_8cpp.html#a4e1129d7ab72643eb7e830f7f72953d7" title="Check whether a block hash satisfies the proof&#45;of&#45;work requirement specified by nBits. " alt="" coords="678,107,814,133"/>
+<area shape="rect" id="node12" href="$util_8h.html#af8985880cf4ef26df0a5aa2ffcb76662" title="error" alt="" coords="974,157,1022,184"/>
+<area shape="rect" id="node16" href="$class_c_chain_params.html#aa366d4f63c8d16d625336dca61ca65e5" title="CChainParams::GetConsensus" alt="" coords="643,411,849,437"/>
+<area shape="rect" id="node17" href="$class_c_block_index.html#a18258e956a4bc77dcccdb0db8f91effe" title="CBlockIndex::ToString" alt="" coords="669,259,823,285"/>
+<area shape="rect" id="node7" href="$class_c_block_header.html#af0239f86a13f622a826e9eea66b2d7f3" title="CBlockHeader::GetHash" alt="" coords="915,360,1081,387"/>
+<area shape="rect" id="node8" href="$hash_8h.html#acb0f5c5ebc989fda4f9835456d5ef531" title="HashX11" alt="" coords="1171,360,1247,387"/>
+<area shape="rect" id="node10" href="$classarith__uint256.html#a458133c9f123519646b07e6143f2164f" title="The &quot;compact&quot; format is a representation of a whole number N using an unsigned 32bit number similar t..." alt="" coords="909,31,1087,57"/>
+<area shape="rect" id="node11" href="$arith__uint256_8cpp.html#a6a6e0e2e41ba7e31c4a741eb2426a516" title="UintToArith256" alt="" coords="943,107,1053,133"/>
+<area shape="rect" id="node13" href="$util_8h.html#afd4c3002b2797c0560adddb6af3ca1da" title="Send a string to the log output. " alt="" coords="1165,128,1252,155"/>
+<area shape="rect" id="node14" href="$namespacetinyformat_1_1detail.html#aa4b0590b3e34562c2d252a2086cec7ba" title="tinyformat::detail\l::format" alt="" coords="1149,179,1268,221"/>
+<area shape="rect" id="node20" href="$classbase__blob.html#aba89c6722866a5850882a509d27d7bbd" title="base_blob::IsNull" alt="" coords="685,567,807,593"/>
+<area shape="rect" id="node24" href="$chain_8cpp.html#ad168714f025f6299a1c80626b6a5bb5a" title="Compute what height to jump back to with the CBlockIndex::pskip pointer. " alt="" coords="693,705,799,732"/>
+<area shape="rect" id="node25" href="$chain_8cpp.html#ae4573d0178546d3f9c518c39ae45fe69" title="Turn the lowest &#39;1&#39; bit in the binary representation of a number into a &#39;0&#39;. " alt="" coords="937,680,1059,707"/>
+<area shape="rect" id="node27" href="$class_c_d_b_wrapper.html#a38084dd7b2870e6ac3082e7521d88a29" title="CDBWrapper::Read" alt="" coords="677,832,815,859"/>
+<area shape="rect" id="node28" href="$class_c_data_stream.html#a5542e71bd7af2ab7cd7be0f381d39cb5" title="CDataStream::reserve" alt="" coords="921,832,1075,859"/>
+<area shape="rect" id="node29" href="$class_c_data_stream.html#a1c0a87d9ea725d5d83562dfda15fbeeb" title="CDataStream::data" alt="" coords="931,883,1065,909"/>
+<area shape="rect" id="node30" href="$class_c_data_stream.html#add30f866dd928fc28c47fe79a0a6723a" title="CDataStream::size" alt="" coords="1141,781,1276,808"/>
+<area shape="rect" id="node31" href="$namespacedbwrapper__private.html#a69015f423e1a3c2bcf387e4a208c3c36" title="Handle database error by throwing dbwrapper_error exception. " alt="" coords="930,934,1066,975"/>
+<area shape="rect" id="node32" href="$class_c_data_stream.html#a5b631dc9cc9d5ba6a5b6ee910bd7d8a8" title="XOR the contents of this stream with a certain key. " alt="" coords="933,731,1063,757"/>
+<area shape="rect" id="node35" href="$validation_8cpp.html#ab15fc61f1d9596ad0aca703ff2c74635" title="OpenDiskFile" alt="" coords="695,1051,797,1077"/>
+<area shape="rect" id="node36" href="$struct_c_disk_block_pos.html#a7dd98fe3f5372d358df61db31899b0af" title="CDiskBlockPos::IsNull" alt="" coords="919,1101,1077,1128"/>
+<area shape="rect" id="node37" href="$validation_8cpp.html#a2f26f074aac584c3398de1dcdac59de9" title="Translation to a filesystem path. " alt="" coords="922,1051,1074,1077"/>
+<area shape="rect" id="node40" href="$class_c_d_b_wrapper.html#a6abcb2368561b33b005666aa88315ed7" title="CDBWrapper::Exists" alt="" coords="673,933,819,960"/>
+<area shape="rect" id="node42" href="$class_c_coins_view.html#af81f2907d360a2548d59a61388e5e5cb" title="Retrieve the block hash whose state this CCoinsView currently represents. " alt="" coords="654,621,838,648"/>
 </map>

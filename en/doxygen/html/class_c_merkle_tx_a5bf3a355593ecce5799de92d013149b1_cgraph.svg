@@ -55,53 +55,53 @@ var sectionId = 'dynsection-7';
 <g id="viewport">
 <title>CMerkleTx::GetDepthInMainChain</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-327 1242,-327 1242,4 -4,4"/>
-<!-- Node339 -->
-<g id="node1" class="node"><title>Node339</title>
+<!-- Node334 -->
+<g id="node1" class="node"><title>Node334</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-241 0,-271 142,-271 142,-241 0,-241"/>
 <text text-anchor="start" x="8" y="-259" font-family="Helvetica,sans-Serif" font-size="10.00">CMerkleTx::GetDepthInMain</text>
 <text text-anchor="middle" x="71" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00">Chain</text>
 </g>
-<!-- Node340 -->
-<g id="node2" class="node"><title>Node340</title>
+<!-- Node335 -->
+<g id="node2" class="node"><title>Node335</title>
 <g id="a_node2"><a xlink:href="class_c_chain.html#af1786dc229c215dea7f727c11df2c8dc" target="_top" xlink:title="Efficiently check whether a block is present in this chain. ">
 <polygon fill="white" stroke="black" points="206.5,-303.5 206.5,-322.5 301.5,-322.5 301.5,-303.5 206.5,-303.5"/>
 <text text-anchor="middle" x="254" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Contains</text>
 </a>
 </g>
 </g>
-<!-- Node339&#45;&gt;Node340 -->
-<g id="edge1" class="edge"><title>Node339&#45;&gt;Node340</title>
+<!-- Node334&#45;&gt;Node335 -->
+<g id="edge1" class="edge"><title>Node334&#45;&gt;Node335</title>
 <path fill="none" stroke="midnightblue" d="M111.213,-271.074C131.074,-278.449 155.655,-287.182 178,-294 185.855,-296.397 194.236,-298.733 202.444,-300.9"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="201.764,-304.339 212.322,-303.452 203.516,-297.562 201.764,-304.339"/>
 </g>
-<!-- Node341 -->
-<g id="node3" class="node"><title>Node341</title>
+<!-- Node336 -->
+<g id="node3" class="node"><title>Node336</title>
 <g id="a_node3"><a xlink:href="class_c_tx_mem_pool.html#a8b7a13b5289ab839d4460f41a7da9789" target="_top" xlink:title="CTxMemPool::exists">
 <polygon fill="white" stroke="black" points="199.5,-265.5 199.5,-284.5 308.5,-284.5 308.5,-265.5 199.5,-265.5"/>
 <text text-anchor="middle" x="254" y="-272.5" font-family="Helvetica,sans-Serif" font-size="10.00">CTxMemPool::exists</text>
 </a>
 </g>
 </g>
-<!-- Node339&#45;&gt;Node341 -->
-<g id="edge2" class="edge"><title>Node339&#45;&gt;Node341</title>
+<!-- Node334&#45;&gt;Node336 -->
+<g id="edge2" class="edge"><title>Node334&#45;&gt;Node336</title>
 <path fill="none" stroke="midnightblue" d="M142.238,-263.373C157.659,-264.992 173.908,-266.698 189.066,-268.289"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="189.051,-271.806 199.361,-269.369 189.781,-264.844 189.051,-271.806"/>
 </g>
-<!-- Node342 -->
-<g id="node4" class="node"><title>Node342</title>
+<!-- Node337 -->
+<g id="node4" class="node"><title>Node337</title>
 <g id="a_node4"><a xlink:href="class_c_chain.html#ad4758bc8872ce065a9579f77c3171d40" target="_top" xlink:title="Return the maximal height in the chain. ">
 <polygon fill="white" stroke="black" points="212,-227.5 212,-246.5 296,-246.5 296,-227.5 212,-227.5"/>
 <text text-anchor="middle" x="254" y="-234.5" font-family="Helvetica,sans-Serif" font-size="10.00">CChain::Height</text>
 </a>
 </g>
 </g>
-<!-- Node339&#45;&gt;Node342 -->
-<g id="edge3" class="edge"><title>Node339&#45;&gt;Node342</title>
+<!-- Node334&#45;&gt;Node337 -->
+<g id="edge3" class="edge"><title>Node334&#45;&gt;Node337</title>
 <path fill="none" stroke="midnightblue" d="M142.238,-248.627C162.109,-246.541 183.354,-244.311 201.869,-242.367"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="202.267,-245.845 211.847,-241.32 201.537,-238.883 202.267,-245.845"/>
 </g>
-<!-- Node343 -->
-<g id="node5" class="node"><title>Node343</title>
+<!-- Node338 -->
+<g id="node5" class="node"><title>Node338</title>
 <g id="a_node5"><a xlink:href="class_c_instant_send.html#a2b5bebbef6c466ee34706eeb9f53d4a7" target="_top" xlink:title="CInstantSend::IsLockedInstant\lSendTransaction">
 <polygon fill="white" stroke="black" points="178,-178 178,-208 330,-208 330,-178 178,-178"/>
 <text text-anchor="start" x="186" y="-196" font-family="Helvetica,sans-Serif" font-size="10.00">CInstantSend::IsLockedInstant</text>
@@ -109,13 +109,13 @@ var sectionId = 'dynsection-7';
 </a>
 </g>
 </g>
-<!-- Node339&#45;&gt;Node343 -->
-<g id="edge4" class="edge"><title>Node339&#45;&gt;Node343</title>
+<!-- Node334&#45;&gt;Node338 -->
+<g id="edge4" class="edge"><title>Node334&#45;&gt;Node338</title>
 <path fill="none" stroke="midnightblue" d="M113.202,-240.987C132.795,-233.91 156.568,-225.412 178,-218 184.362,-215.8 191.039,-213.525 197.677,-211.285"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="198.969,-214.543 207.334,-208.04 196.74,-207.907 198.969,-214.543"/>
 </g>
-<!-- Node344 -->
-<g id="node6" class="node"><title>Node344</title>
+<!-- Node339 -->
+<g id="node6" class="node"><title>Node339</title>
 <g id="a_node6"><a xlink:href="class_c_instant_send.html#a944921efd152fb5772182269409902e3" target="_top" xlink:title="CInstantSend::GetLockedOut\lPointTxHash">
 <polygon fill="white" stroke="black" points="370.5,-200 370.5,-230 516.5,-230 516.5,-200 370.5,-200"/>
 <text text-anchor="start" x="378.5" y="-218" font-family="Helvetica,sans-Serif" font-size="10.00">CInstantSend::GetLockedOut</text>
@@ -123,52 +123,52 @@ var sectionId = 'dynsection-7';
 </a>
 </g>
 </g>
-<!-- Node343&#45;&gt;Node344 -->
-<g id="edge5" class="edge"><title>Node343&#45;&gt;Node344</title>
+<!-- Node338&#45;&gt;Node339 -->
+<g id="edge5" class="edge"><title>Node338&#45;&gt;Node339</title>
 <path fill="none" stroke="midnightblue" d="M330.183,-201.821C340.117,-202.987 350.34,-204.187 360.382,-205.365"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="360.007,-208.845 370.347,-206.534 360.823,-201.892 360.007,-208.845"/>
 </g>
-<!-- Node345 -->
-<g id="node7" class="node"><title>Node345</title>
+<!-- Node340 -->
+<g id="node7" class="node"><title>Node340</title>
 <g id="a_node7"><a xlink:href="class_c_spork_manager.html#a97d20d530b500c013e8bc8649ee13daf" target="_top" xlink:title="CSporkManager::IsSporkActive">
 <polygon fill="white" stroke="black" points="366,-161.5 366,-180.5 521,-180.5 521,-161.5 366,-161.5"/>
 <text text-anchor="middle" x="443.5" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">CSporkManager::IsSporkActive</text>
 </a>
 </g>
 </g>
-<!-- Node343&#45;&gt;Node345 -->
-<g id="edge6" class="edge"><title>Node343&#45;&gt;Node345</title>
+<!-- Node338&#45;&gt;Node340 -->
+<g id="edge6" class="edge"><title>Node338&#45;&gt;Node340</title>
 <path fill="none" stroke="midnightblue" d="M330.183,-184.179C338.604,-183.19 347.234,-182.178 355.785,-181.175"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="356.246,-184.645 365.77,-180.003 355.43,-177.692 356.246,-184.645"/>
 </g>
-<!-- Node346 -->
-<g id="node8" class="node"><title>Node346</title>
+<!-- Node341 -->
+<g id="node8" class="node"><title>Node341</title>
 <g id="a_node8"><a xlink:href="util_8h.html#aab1f837a2366f424bdc996fdf6352171" target="_top" xlink:title="Zero&#45;arg versions of logging and error, these are not covered by TINYFORMAT_FOREACH_ARGNUM. ">
 <polygon fill="white" stroke="black" points="576.5,-190.5 576.5,-209.5 629.5,-209.5 629.5,-190.5 576.5,-190.5"/>
 <text text-anchor="middle" x="603" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogPrint</text>
 </a>
 </g>
 </g>
-<!-- Node345&#45;&gt;Node346 -->
-<g id="edge7" class="edge"><title>Node345&#45;&gt;Node346</title>
+<!-- Node340&#45;&gt;Node341 -->
+<g id="edge7" class="edge"><title>Node340&#45;&gt;Node341</title>
 <path fill="none" stroke="midnightblue" d="M496.508,-180.576C519.35,-184.782 545.599,-189.615 566.198,-193.408"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="565.644,-196.865 576.112,-195.233 566.911,-189.98 565.644,-196.865"/>
 </g>
-<!-- Node364 -->
-<g id="node26" class="node"><title>Node364</title>
+<!-- Node359 -->
+<g id="node26" class="node"><title>Node359</title>
 <g id="a_node26"><a xlink:href="timedata_8cpp.html#a09f81b9c7650f898cf3cf305b87547e6" target="_top" xlink:title="GetAdjustedTime">
 <polygon fill="white" stroke="black" points="557,-133.5 557,-152.5 649,-152.5 649,-133.5 557,-133.5"/>
 <text text-anchor="middle" x="603" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetAdjustedTime</text>
 </a>
 </g>
 </g>
-<!-- Node345&#45;&gt;Node364 -->
-<g id="edge26" class="edge"><title>Node345&#45;&gt;Node364</title>
+<!-- Node340&#45;&gt;Node359 -->
+<g id="edge26" class="edge"><title>Node340&#45;&gt;Node359</title>
 <path fill="none" stroke="midnightblue" d="M498.262,-161.442C513.906,-158.661 531.017,-155.619 546.751,-152.822"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="547.629,-156.221 556.862,-151.025 546.404,-149.329 547.629,-156.221"/>
 </g>
-<!-- Node347 -->
-<g id="node9" class="node"><title>Node347</title>
+<!-- Node342 -->
+<g id="node9" class="node"><title>Node342</title>
 <g id="a_node9"><a xlink:href="namespacetinyformat_1_1detail.html#aa4b0590b3e34562c2d252a2086cec7ba" target="_top" xlink:title="tinyformat::detail\l::format">
 <polygon fill="white" stroke="black" points="692,-276 692,-306 781,-306 781,-276 692,-276"/>
 <text text-anchor="start" x="700" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">tinyformat::detail</text>
@@ -176,39 +176,39 @@ var sectionId = 'dynsection-7';
 </a>
 </g>
 </g>
-<!-- Node346&#45;&gt;Node347 -->
-<g id="edge8" class="edge"><title>Node346&#45;&gt;Node347</title>
+<!-- Node341&#45;&gt;Node342 -->
+<g id="edge8" class="edge"><title>Node341&#45;&gt;Node342</title>
 <path fill="none" stroke="midnightblue" d="M617.413,-209.566C633.43,-220.959 661.063,-240.522 685,-257 691.225,-261.285 697.912,-265.829 704.317,-270.152"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="702.557,-273.187 712.808,-275.867 706.466,-267.379 702.557,-273.187"/>
 </g>
-<!-- Node350 -->
-<g id="node12" class="node"><title>Node350</title>
+<!-- Node345 -->
+<g id="node12" class="node"><title>Node345</title>
 <g id="a_node12"><a xlink:href="util_8h.html#a343d2a13efe00125f78d25dafb0a8d98" target="_top" xlink:title="Return true if log accepts specified category. ">
 <polygon fill="white" stroke="black" points="685,-228.5 685,-247.5 788,-247.5 788,-228.5 685,-228.5"/>
 <text text-anchor="middle" x="736.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogAcceptCategory</text>
 </a>
 </g>
 </g>
-<!-- Node346&#45;&gt;Node350 -->
-<g id="edge11" class="edge"><title>Node346&#45;&gt;Node350</title>
+<!-- Node341&#45;&gt;Node345 -->
+<g id="edge11" class="edge"><title>Node341&#45;&gt;Node345</title>
 <path fill="none" stroke="midnightblue" d="M629.667,-207.417C647.523,-212.577 671.759,-219.58 692.532,-225.583"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="691.83,-229.024 702.409,-228.437 693.773,-222.299 691.83,-229.024"/>
 </g>
-<!-- Node352 -->
-<g id="node14" class="node"><title>Node352</title>
+<!-- Node347 -->
+<g id="node14" class="node"><title>Node347</title>
 <g id="a_node14"><a xlink:href="util_8h.html#afd4c3002b2797c0560adddb6af3ca1da" target="_top" xlink:title="Send a string to the log output. ">
 <polygon fill="white" stroke="black" points="704,-171.5 704,-190.5 769,-190.5 769,-171.5 704,-171.5"/>
 <text text-anchor="middle" x="736.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogPrintStr</text>
 </a>
 </g>
 </g>
-<!-- Node346&#45;&gt;Node352 -->
-<g id="edge13" class="edge"><title>Node346&#45;&gt;Node352</title>
+<!-- Node341&#45;&gt;Node347 -->
+<g id="edge13" class="edge"><title>Node341&#45;&gt;Node347</title>
 <path fill="none" stroke="midnightblue" d="M629.667,-196.292C647.909,-193.656 672.808,-190.058 693.872,-187.015"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="694.462,-190.466 703.859,-185.572 693.461,-183.538 694.462,-190.466"/>
 </g>
-<!-- Node348 -->
-<g id="node10" class="node"><title>Node348</title>
+<!-- Node343 -->
+<g id="node10" class="node"><title>Node343</title>
 <g id="a_node10"><a xlink:href="classtinyformat_1_1detail_1_1_format_iterator.html#a46377a804f72dbad1e508d2fbaa18ce9" target="_top" xlink:title="tinyformat::detail\l::FormatIterator::finish">
 <polygon fill="white" stroke="black" points="824,-286 824,-316 937,-316 937,-286 824,-286"/>
 <text text-anchor="start" x="832" y="-304" font-family="Helvetica,sans-Serif" font-size="10.00">tinyformat::detail</text>
@@ -216,13 +216,13 @@ var sectionId = 'dynsection-7';
 </a>
 </g>
 </g>
-<!-- Node347&#45;&gt;Node348 -->
-<g id="edge9" class="edge"><title>Node347&#45;&gt;Node348</title>
+<!-- Node342&#45;&gt;Node343 -->
+<g id="edge9" class="edge"><title>Node342&#45;&gt;Node343</title>
 <path fill="none" stroke="midnightblue" d="M781.263,-294.082C791.558,-294.807 802.753,-295.595 813.777,-296.372"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="813.602,-299.868 823.823,-297.079 814.093,-292.885 813.602,-299.868"/>
 </g>
-<!-- Node349 -->
-<g id="node11" class="node"><title>Node349</title>
+<!-- Node344 -->
+<g id="node11" class="node"><title>Node344</title>
 <g id="a_node11"><a xlink:href="classtinyformat_1_1detail_1_1_format_iterator.html#af3bbb8259ac0593ec2268ef5863311d5" target="_top" xlink:title="tinyformat::detail\l::FormatIterator::printFormat\lStringLiteral">
 <polygon fill="white" stroke="black" points="976,-280.5 976,-321.5 1116,-321.5 1116,-280.5 976,-280.5"/>
 <text text-anchor="start" x="984" y="-309.5" font-family="Helvetica,sans-Serif" font-size="10.00">tinyformat::detail</text>
@@ -231,195 +231,195 @@ var sectionId = 'dynsection-7';
 </a>
 </g>
 </g>
-<!-- Node348&#45;&gt;Node349 -->
-<g id="edge10" class="edge"><title>Node348&#45;&gt;Node349</title>
+<!-- Node343&#45;&gt;Node344 -->
+<g id="edge10" class="edge"><title>Node343&#45;&gt;Node344</title>
 <path fill="none" stroke="midnightblue" d="M937.31,-301C946.51,-301 956.2,-301 965.841,-301"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="965.848,-304.5 975.848,-301 965.848,-297.5 965.848,-304.5"/>
 </g>
-<!-- Node351 -->
-<g id="node13" class="node"><title>Node351</title>
+<!-- Node346 -->
+<g id="node13" class="node"><title>Node346</title>
 <g id="a_node13"><a xlink:href="util_8cpp.html#a1db3aa900bfa259ae1fe04068f2accfc" target="_top" xlink:title="GetThreadName">
 <polygon fill="white" stroke="black" points="1001.5,-206.5 1001.5,-225.5 1090.5,-225.5 1090.5,-206.5 1001.5,-206.5"/>
 <text text-anchor="middle" x="1046" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetThreadName</text>
 </a>
 </g>
 </g>
-<!-- Node350&#45;&gt;Node351 -->
-<g id="edge12" class="edge"><title>Node350&#45;&gt;Node351</title>
+<!-- Node345&#45;&gt;Node346 -->
+<g id="edge12" class="edge"><title>Node345&#45;&gt;Node346</title>
 <path fill="none" stroke="midnightblue" d="M788.065,-240.794C828.478,-242.354 886.515,-243.09 937,-238 957.173,-235.966 979.148,-231.847 997.978,-227.717"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="998.813,-231.117 1007.8,-225.502 997.272,-224.289 998.813,-231.117"/>
 </g>
-<!-- Node353 -->
-<g id="node15" class="node"><title>Node353</title>
+<!-- Node348 -->
+<g id="node15" class="node"><title>Node348</title>
 <g id="a_node15"><a xlink:href="util_8cpp.html#a751ff5f21d880737811136b5e0bcea12" target="_top" xlink:title="DebugPrintInit">
 <polygon fill="white" stroke="black" points="841,-209.5 841,-228.5 920,-228.5 920,-209.5 841,-209.5"/>
 <text text-anchor="middle" x="880.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">DebugPrintInit</text>
 </a>
 </g>
 </g>
-<!-- Node352&#45;&gt;Node353 -->
-<g id="edge14" class="edge"><title>Node352&#45;&gt;Node353</title>
+<!-- Node347&#45;&gt;Node348 -->
+<g id="edge14" class="edge"><title>Node347&#45;&gt;Node348</title>
 <path fill="none" stroke="midnightblue" d="M769.014,-189.433C788.13,-194.549 812.844,-201.163 834.05,-206.837"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="833.26,-210.249 843.825,-209.453 835.07,-203.487 833.26,-210.249"/>
 </g>
-<!-- Node354 -->
-<g id="node16" class="node"><title>Node354</title>
+<!-- Node349 -->
+<g id="node16" class="node"><title>Node349</title>
 <g id="a_node16"><a xlink:href="util_8cpp.html#a7c125ce70fa6b09e1de0c4a404fc2b6f" target="_top" xlink:title="FileWriteStr">
 <polygon fill="white" stroke="black" points="846.5,-171.5 846.5,-190.5 914.5,-190.5 914.5,-171.5 846.5,-171.5"/>
 <text text-anchor="middle" x="880.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">FileWriteStr</text>
 </a>
 </g>
 </g>
-<!-- Node352&#45;&gt;Node354 -->
-<g id="edge15" class="edge"><title>Node352&#45;&gt;Node354</title>
+<!-- Node347&#45;&gt;Node349 -->
+<g id="edge15" class="edge"><title>Node347&#45;&gt;Node349</title>
 <path fill="none" stroke="midnightblue" d="M769.014,-181C788.675,-181 814.259,-181 835.857,-181"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="836.095,-184.5 846.095,-181 836.095,-177.5 836.095,-184.5"/>
 </g>
-<!-- Node355 -->
-<g id="node17" class="node"><title>Node355</title>
+<!-- Node350 -->
+<g id="node17" class="node"><title>Node350</title>
 <g id="a_node17"><a xlink:href="util_8cpp.html#ab83866a054745d4b30a3948a1b44beba" target="_top" xlink:title="GetDataDir">
 <polygon fill="white" stroke="black" points="847.5,-95.5 847.5,-114.5 913.5,-114.5 913.5,-95.5 847.5,-95.5"/>
 <text text-anchor="middle" x="880.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetDataDir</text>
 </a>
 </g>
 </g>
-<!-- Node352&#45;&gt;Node355 -->
-<g id="edge16" class="edge"><title>Node352&#45;&gt;Node355</title>
+<!-- Node347&#45;&gt;Node350 -->
+<g id="edge16" class="edge"><title>Node347&#45;&gt;Node350</title>
 <path fill="none" stroke="midnightblue" d="M769.024,-171.659C775.569,-169.04 782.225,-165.834 788,-162 807.381,-149.131 804.428,-136.576 824,-124 828.334,-121.215 833.121,-118.789 838.014,-116.689"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="839.393,-119.909 847.462,-113.043 836.873,-113.378 839.393,-119.909"/>
 </g>
-<!-- Node359 -->
-<g id="node21" class="node"><title>Node359</title>
+<!-- Node354 -->
+<g id="node21" class="node"><title>Node354</title>
 <g id="a_node21"><a xlink:href="util_8cpp.html#af0c31e37a5891e021f9b339696398a28" target="_top" xlink:title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the th...">
 <polygon fill="white" stroke="black" points="830,-133.5 830,-152.5 931,-152.5 931,-133.5 830,-133.5"/>
 <text text-anchor="middle" x="880.5" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogThreadNameStr</text>
 </a>
 </g>
 </g>
-<!-- Node352&#45;&gt;Node359 -->
-<g id="edge20" class="edge"><title>Node352&#45;&gt;Node359</title>
+<!-- Node347&#45;&gt;Node354 -->
+<g id="edge20" class="edge"><title>Node347&#45;&gt;Node354</title>
 <path fill="none" stroke="midnightblue" d="M769.014,-172.567C788.13,-167.451 812.844,-160.837 834.05,-155.163"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="835.07,-158.513 843.825,-152.547 833.26,-151.751 835.07,-158.513"/>
 </g>
-<!-- Node360 -->
-<g id="node22" class="node"><title>Node360</title>
+<!-- Node355 -->
+<g id="node22" class="node"><title>Node355</title>
 <g id="a_node22"><a xlink:href="util_8cpp.html#a8e80ae045580407e9f2028dc5f7b954c" target="_top" xlink:title="fStartedNewLine is a state variable held by the calling context that will suppress printing of the ti...">
 <polygon fill="white" stroke="black" points="833.5,-38.5 833.5,-57.5 927.5,-57.5 927.5,-38.5 833.5,-38.5"/>
 <text text-anchor="middle" x="880.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogTimestampStr</text>
 </a>
 </g>
 </g>
-<!-- Node352&#45;&gt;Node360 -->
-<g id="edge22" class="edge"><title>Node352&#45;&gt;Node360</title>
+<!-- Node347&#45;&gt;Node355 -->
+<g id="edge22" class="edge"><title>Node347&#45;&gt;Node355</title>
 <path fill="none" stroke="midnightblue" d="M769.259,-173.288C776.011,-170.551 782.694,-166.886 788,-162 815.496,-136.684 799.74,-114.432 824,-86 831.776,-76.8864 842.234,-68.9745 851.974,-62.7648"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="853.861,-65.7138 860.62,-57.5548 850.248,-59.7182 853.861,-65.7138"/>
 </g>
-<!-- Node356 -->
-<g id="node18" class="node"><title>Node356</title>
+<!-- Node351 -->
+<g id="node18" class="node"><title>Node351</title>
 <g id="a_node18"><a xlink:href="chainparamsbase_8cpp.html#a06ef5bfd0efb53d13bbf4276726e84ab" target="_top" xlink:title="Return the currently selected parameters. ">
 <polygon fill="white" stroke="black" points="1009.5,-152.5 1009.5,-171.5 1082.5,-171.5 1082.5,-152.5 1009.5,-152.5"/>
 <text text-anchor="middle" x="1046" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseParams</text>
 </a>
 </g>
 </g>
-<!-- Node355&#45;&gt;Node356 -->
-<g id="edge17" class="edge"><title>Node355&#45;&gt;Node356</title>
+<!-- Node350&#45;&gt;Node351 -->
+<g id="edge17" class="edge"><title>Node350&#45;&gt;Node351</title>
 <path fill="none" stroke="midnightblue" d="M912.07,-114.512C920.265,-117.32 929.053,-120.567 937,-124 953.609,-131.174 956.145,-136.427 973,-143 981.401,-146.276 990.569,-149.177 999.463,-151.665"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="998.767,-155.102 1009.33,-154.296 1000.57,-148.338 998.767,-155.102"/>
 </g>
-<!-- Node357 -->
-<g id="node19" class="node"><title>Node357</title>
+<!-- Node352 -->
+<g id="node19" class="node"><title>Node352</title>
 <g id="a_node19"><a xlink:href="class_c_base_chain_params.html#a4b142e94ae27f860522dd5efef41fb67" target="_top" xlink:title="CBaseChainParams::DataDir">
 <polygon fill="white" stroke="black" points="973,-114.5 973,-133.5 1119,-133.5 1119,-114.5 973,-114.5"/>
 <text text-anchor="middle" x="1046" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">CBaseChainParams::DataDir</text>
 </a>
 </g>
 </g>
-<!-- Node355&#45;&gt;Node357 -->
-<g id="edge18" class="edge"><title>Node355&#45;&gt;Node357</title>
+<!-- Node350&#45;&gt;Node352 -->
+<g id="edge18" class="edge"><title>Node350&#45;&gt;Node352</title>
 <path fill="none" stroke="midnightblue" d="M913.802,-108.754C927.961,-110.399 945.29,-112.413 962.654,-114.431"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="962.522,-117.939 972.859,-115.617 963.33,-110.986 962.522,-117.939"/>
 </g>
-<!-- Node358 -->
-<g id="node20" class="node"><title>Node358</title>
+<!-- Node353 -->
+<g id="node20" class="node"><title>Node353</title>
 <g id="a_node20"><a xlink:href="util_8cpp.html#ab272995de020a3bcbf743be630e485c6" target="_top" xlink:title="GetDefaultDataDir">
 <polygon fill="white" stroke="black" points="997,-76.5 997,-95.5 1095,-95.5 1095,-76.5 997,-76.5"/>
 <text text-anchor="middle" x="1046" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetDefaultDataDir</text>
 </a>
 </g>
 </g>
-<!-- Node355&#45;&gt;Node358 -->
-<g id="edge19" class="edge"><title>Node355&#45;&gt;Node358</title>
+<!-- Node350&#45;&gt;Node353 -->
+<g id="edge19" class="edge"><title>Node350&#45;&gt;Node353</title>
 <path fill="none" stroke="midnightblue" d="M913.802,-101.246C934.66,-98.8224 962.397,-95.5992 986.993,-92.7409"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="987.426,-96.2143 996.955,-91.5832 986.617,-89.261 987.426,-96.2143"/>
 </g>
-<!-- Node359&#45;&gt;Node351 -->
-<g id="edge21" class="edge"><title>Node359&#45;&gt;Node351</title>
+<!-- Node354&#45;&gt;Node346 -->
+<g id="edge21" class="edge"><title>Node354&#45;&gt;Node346</title>
 <path fill="none" stroke="midnightblue" d="M912.07,-152.512C920.265,-155.32 929.053,-158.567 937,-162 953.609,-169.174 956.862,-172.822 973,-181 986.967,-188.078 1002.58,-195.704 1015.69,-202.026"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1014.21,-205.195 1024.74,-206.372 1017.24,-198.886 1014.21,-205.195"/>
 </g>
-<!-- Node361 -->
-<g id="node23" class="node"><title>Node361</title>
+<!-- Node356 -->
+<g id="node23" class="node"><title>Node356</title>
 <g id="a_node23"><a xlink:href="utiltime_8cpp.html#a749bc6776c8ec72d7c5e4dea56aee415" target="_top" xlink:title="DateTimeStrFormat">
 <polygon fill="white" stroke="black" points="994.5,-38.5 994.5,-57.5 1097.5,-57.5 1097.5,-38.5 994.5,-38.5"/>
 <text text-anchor="middle" x="1046" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">DateTimeStrFormat</text>
 </a>
 </g>
 </g>
-<!-- Node360&#45;&gt;Node361 -->
-<g id="edge23" class="edge"><title>Node360&#45;&gt;Node361</title>
+<!-- Node355&#45;&gt;Node356 -->
+<g id="edge23" class="edge"><title>Node355&#45;&gt;Node356</title>
 <path fill="none" stroke="midnightblue" d="M927.915,-48C945.44,-48 965.647,-48 984.289,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="984.457,-51.5001 994.457,-48 984.457,-44.5001 984.457,-51.5001"/>
 </g>
-<!-- Node362 -->
-<g id="node24" class="node"><title>Node362</title>
+<!-- Node357 -->
+<g id="node24" class="node"><title>Node357</title>
 <g id="a_node24"><a xlink:href="utiltime_8cpp.html#a474bed4c01c8a1d18330dceccf865e1e" target="_top" xlink:title="Return a time useful for the debug log. ">
 <polygon fill="white" stroke="black" points="996.5,-0.5 996.5,-19.5 1095.5,-19.5 1095.5,-0.5 996.5,-0.5"/>
 <text text-anchor="middle" x="1046" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetLogTimeMicros</text>
 </a>
 </g>
 </g>
-<!-- Node360&#45;&gt;Node362 -->
-<g id="edge24" class="edge"><title>Node360&#45;&gt;Node362</title>
+<!-- Node355&#45;&gt;Node357 -->
+<g id="edge24" class="edge"><title>Node355&#45;&gt;Node357</title>
 <path fill="none" stroke="midnightblue" d="M922.758,-38.411C944.431,-33.3739 971.183,-27.1562 994.13,-21.8229"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="995.091,-25.1931 1004.04,-19.5201 993.506,-18.3748 995.091,-25.1931"/>
 </g>
-<!-- Node363 -->
-<g id="node25" class="node"><title>Node363</title>
+<!-- Node358 -->
+<g id="node25" class="node"><title>Node358</title>
 <g id="a_node25"><a xlink:href="utiltime_8cpp.html#a0c5a06b50cd805b1923552114494c029" target="_top" xlink:title="GetTimeMicros">
 <polygon fill="white" stroke="black" points="1155,-0.5 1155,-19.5 1238,-19.5 1238,-0.5 1155,-0.5"/>
 <text text-anchor="middle" x="1196.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetTimeMicros</text>
 </a>
 </g>
 </g>
-<!-- Node362&#45;&gt;Node363 -->
-<g id="edge25" class="edge"><title>Node362&#45;&gt;Node363</title>
+<!-- Node357&#45;&gt;Node358 -->
+<g id="edge25" class="edge"><title>Node357&#45;&gt;Node358</title>
 <path fill="none" stroke="midnightblue" d="M1095.62,-10C1111.31,-10 1128.73,-10 1144.57,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1144.72,-13.5001 1154.72,-10 1144.72,-6.5001 1144.72,-13.5001"/>
 </g>
-<!-- Node365 -->
-<g id="node27" class="node"><title>Node365</title>
+<!-- Node360 -->
+<g id="node27" class="node"><title>Node360</title>
 <g id="a_node27"><a xlink:href="utiltime_8cpp.html#a46fac5fba8ba905b5f9acb364f5d8c6f" target="_top" xlink:title="For unit testing. ">
 <polygon fill="white" stroke="black" points="709.5,-133.5 709.5,-152.5 763.5,-152.5 763.5,-133.5 709.5,-133.5"/>
 <text text-anchor="middle" x="736.5" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetTime</text>
 </a>
 </g>
 </g>
-<!-- Node364&#45;&gt;Node365 -->
-<g id="edge27" class="edge"><title>Node364&#45;&gt;Node365</title>
+<!-- Node359&#45;&gt;Node360 -->
+<g id="edge27" class="edge"><title>Node359&#45;&gt;Node360</title>
 <path fill="none" stroke="midnightblue" d="M649.255,-143C665.553,-143 683.718,-143 699.158,-143"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="699.355,-146.5 709.355,-143 699.355,-139.5 699.355,-146.5"/>
 </g>
-<!-- Node366 -->
-<g id="node28" class="node"><title>Node366</title>
+<!-- Node361 -->
+<g id="node28" class="node"><title>Node361</title>
 <g id="a_node28"><a xlink:href="timedata_8cpp.html#a50ca5344c75631267633f15cfe5e983e" target="_top" xlink:title="&quot;Never go to sea with two chronometers; take one or three.&quot; Our three time sources are: ...">
 <polygon fill="white" stroke="black" points="696,-95.5 696,-114.5 777,-114.5 777,-95.5 696,-95.5"/>
 <text text-anchor="middle" x="736.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetTimeOffset</text>
 </a>
 </g>
 </g>
-<!-- Node364&#45;&gt;Node366 -->
-<g id="edge28" class="edge"><title>Node364&#45;&gt;Node366</title>
+<!-- Node359&#45;&gt;Node361 -->
+<g id="edge28" class="edge"><title>Node359&#45;&gt;Node361</title>
 <path fill="none" stroke="midnightblue" d="M637.183,-133.411C654.003,-128.551 674.626,-122.591 692.634,-117.387"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="693.692,-120.725 702.328,-114.586 691.749,-114 693.692,-120.725"/>
 </g>

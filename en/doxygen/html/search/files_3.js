@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['darksend_2drelay_2ecpp',['darksend-relay.cpp',['../darksend-relay_8cpp.html',1,'']]],
-  ['darksend_2drelay_2eh',['darksend-relay.h',['../darksend-relay_8h.html',1,'']]],
   ['darksendconfig_2ecpp',['darksendconfig.cpp',['../darksendconfig_8cpp.html',1,'']]],
   ['darksendconfig_2eh',['darksendconfig.h',['../darksendconfig_8h.html',1,'']]],
   ['dash_2dcli_2ecpp',['dash-cli.cpp',['../dash-cli_8cpp.html',1,'']]],

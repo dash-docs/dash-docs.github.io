@@ -1,10 +1,12 @@
 var class_c_coins_view_d_b =
 [
     [ "CCoinsViewDB", "class_c_coins_view_d_b.html#a209841b241febcccb2ec584b886ad374", null ],
-    [ "BatchWrite", "class_c_coins_view_d_b.html#a33f98ec9323ce48e1704327bc8a2a002", null ],
-    [ "GetBestBlock", "class_c_coins_view_d_b.html#ac9c513a34b9e58d942fdbeafd9e5bbce", null ],
-    [ "GetCoins", "class_c_coins_view_d_b.html#ac35a80d1115ec697101d382e71db5b31", null ],
-    [ "GetStats", "class_c_coins_view_d_b.html#a227bf56f8801921f12e56c6839104fce", null ],
-    [ "HaveCoins", "class_c_coins_view_d_b.html#af55f35faadeb74b5406559fe3ed20114", null ],
+    [ "BatchWrite", "class_c_coins_view_d_b.html#aeb6c04068de59681a8bbc85f81f50c34", null ],
+    [ "Cursor", "class_c_coins_view_d_b.html#a86359fc2e09d57c7cd6966bd6569fe05", null ],
+    [ "EstimateSize", "class_c_coins_view_d_b.html#aff2543247ac56cc5f708aa9be387e72b", null ],
+    [ "GetBestBlock", "class_c_coins_view_d_b.html#aac696880a5bb854dcdcb20d8a035be9b", null ],
+    [ "GetCoin", "class_c_coins_view_d_b.html#a2a018edc94bdca2b96a126688f22770d", null ],
+    [ "HaveCoin", "class_c_coins_view_d_b.html#a3fcf56cd1715d603eccacc500ef03609", null ],
+    [ "Upgrade", "class_c_coins_view_d_b.html#a72c1d718a15df89eadab97ce3b34fa56", null ],
     [ "db", "class_c_coins_view_d_b.html#a399b6f07efe5db2a22edef66e83930e6", null ]
 ];

@@ -9,170 +9,170 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112.97)">
 <title>CPrivateSendServer::ProcessMessage</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-112.97 1026,-112.97 1026,4 -4,4"/>
-<!-- Node3555 -->
-<g id="node1" class="node"><title>Node3555</title>
+<!-- Node3516 -->
+<g id="node1" class="node"><title>Node3516</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-52 0,-82 106,-82 106,-52 0,-52"/>
 <text text-anchor="start" x="8" y="-70" font-family="Helvetica,sans-Serif" font-size="10.00">CPrivateSendServer</text>
 <text text-anchor="middle" x="53" y="-59" font-family="Helvetica,sans-Serif" font-size="10.00">::ProcessMessage</text>
 </g>
-<!-- Node3556 -->
-<g id="node2" class="node"><title>Node3556</title>
+<!-- Node3517 -->
+<g id="node2" class="node"><title>Node3517</title>
 <g id="a_node2"><a xlink:href="net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" target="_top" xlink:title="ProcessMessage">
 <polygon fill="white" stroke="black" points="142,-57.5 142,-76.5 234,-76.5 234,-57.5 142,-57.5"/>
 <text text-anchor="middle" x="188" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProcessMessage</text>
 </a>
 </g>
 </g>
-<!-- Node3555&#45;&gt;Node3556 -->
-<g id="edge1" class="edge"><title>Node3555&#45;&gt;Node3556</title>
+<!-- Node3516&#45;&gt;Node3517 -->
+<g id="edge1" class="edge"><title>Node3516&#45;&gt;Node3517</title>
 <path fill="none" stroke="midnightblue" d="M116.245,-67C124.884,-67 133.619,-67 141.864,-67"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="116.183,-63.5001 106.183,-67 116.183,-70.5001 116.183,-63.5001"/>
 </g>
-<!-- Node3557 -->
-<g id="node3" class="node"><title>Node3557</title>
+<!-- Node3518 -->
+<g id="node3" class="node"><title>Node3518</title>
 <g id="a_node3"><a xlink:href="net__processing_8h.html#a7fa42e7ffd6e6ba5b7537af248e30fc8" target="_top" xlink:title="Process protocol messages received from a given node. ">
 <polygon fill="white" stroke="black" points="270,-57.5 270,-76.5 368,-76.5 368,-57.5 270,-57.5"/>
 <text text-anchor="middle" x="319" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProcessMessages</text>
 </a>
 </g>
 </g>
-<!-- Node3556&#45;&gt;Node3557 -->
-<g id="edge2" class="edge"><title>Node3556&#45;&gt;Node3557</title>
+<!-- Node3517&#45;&gt;Node3518 -->
+<g id="edge2" class="edge"><title>Node3517&#45;&gt;Node3518</title>
 <path fill="none" stroke="midnightblue" d="M244.259,-67C252.694,-67 261.344,-67 269.615,-67"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="244.118,-63.5001 234.118,-67 244.118,-70.5001 244.118,-63.5001"/>
 </g>
-<!-- Node3558 -->
-<g id="node4" class="node"><title>Node3558</title>
+<!-- Node3519 -->
+<g id="node4" class="node"><title>Node3519</title>
 <g id="a_node4"><a xlink:href="net__processing_8h.html#ab02615ff65f91d69f8d786ec900baa8a" target="_top" xlink:title="Register with a network node to receive its signals. ">
 <polygon fill="white" stroke="black" points="408,-76.5 408,-95.5 517,-95.5 517,-76.5 408,-76.5"/>
 <text text-anchor="middle" x="462.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">RegisterNodeSignals</text>
 </a>
 </g>
 </g>
-<!-- Node3557&#45;&gt;Node3558 -->
-<g id="edge3" class="edge"><title>Node3557&#45;&gt;Node3558</title>
+<!-- Node3518&#45;&gt;Node3519 -->
+<g id="edge3" class="edge"><title>Node3518&#45;&gt;Node3519</title>
 <path fill="none" stroke="midnightblue" d="M378.265,-74.8236C387.971,-76.1268 398,-77.4734 407.59,-78.7612"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="378.677,-71.3476 368.301,-73.4856 377.746,-78.2853 378.677,-71.3476"/>
 </g>
-<!-- Node3563 -->
-<g id="node9" class="node"><title>Node3563</title>
+<!-- Node3524 -->
+<g id="node9" class="node"><title>Node3524</title>
 <g id="a_node9"><a xlink:href="net__processing_8h.html#a3ef0cc6e9d9d6435ee2a5569244d6ebd" target="_top" xlink:title="Unregister a network node. ">
 <polygon fill="white" stroke="black" points="404,-38.5 404,-57.5 521,-57.5 521,-38.5 404,-38.5"/>
 <text text-anchor="middle" x="462.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">UnregisterNodeSignals</text>
 </a>
 </g>
 </g>
-<!-- Node3557&#45;&gt;Node3563 -->
-<g id="edge8" class="edge"><title>Node3557&#45;&gt;Node3563</title>
+<!-- Node3518&#45;&gt;Node3524 -->
+<g id="edge8" class="edge"><title>Node3518&#45;&gt;Node3524</title>
 <path fill="none" stroke="midnightblue" d="M378.343,-59.166C386.7,-58.0439 395.295,-56.8898 403.642,-55.7689"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="377.746,-55.7147 368.301,-60.5144 378.677,-62.6524 377.746,-55.7147"/>
 </g>
-<!-- Node3559 -->
-<g id="node5" class="node"><title>Node3559</title>
+<!-- Node3520 -->
+<g id="node5" class="node"><title>Node3520</title>
 <g id="a_node5"><a xlink:href="init_8h.html#a6f0784aa332573f949b0975205572b28" target="_top" xlink:title="Initialize Dash Core. ">
 <polygon fill="white" stroke="black" points="577.5,-76.5 577.5,-95.5 630.5,-95.5 630.5,-76.5 577.5,-76.5"/>
 <text text-anchor="middle" x="604" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">AppInit2</text>
 </a>
 </g>
 </g>
-<!-- Node3558&#45;&gt;Node3559 -->
-<g id="edge4" class="edge"><title>Node3558&#45;&gt;Node3559</title>
+<!-- Node3519&#45;&gt;Node3520 -->
+<g id="edge4" class="edge"><title>Node3519&#45;&gt;Node3520</title>
 <path fill="none" stroke="midnightblue" d="M527.375,-86C545.095,-86 563.324,-86 577.444,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="527.035,-82.5001 517.035,-86 527.035,-89.5001 527.035,-82.5001"/>
 </g>
-<!-- Node3560 -->
-<g id="node6" class="node"><title>Node3560</title>
+<!-- Node3521 -->
+<g id="node6" class="node"><title>Node3521</title>
 <g id="a_node6"><a xlink:href="dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" target="_top" xlink:title="AppInit">
 <polygon fill="white" stroke="black" points="866.5,-76.5 866.5,-95.5 913.5,-95.5 913.5,-76.5 866.5,-76.5"/>
 <text text-anchor="middle" x="890" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">AppInit</text>
 </a>
 </g>
 </g>
-<!-- Node3559&#45;&gt;Node3560 -->
-<g id="edge5" class="edge"><title>Node3559&#45;&gt;Node3560</title>
+<!-- Node3520&#45;&gt;Node3521 -->
+<g id="edge5" class="edge"><title>Node3520&#45;&gt;Node3521</title>
 <path fill="none" stroke="midnightblue" d="M640.527,-96.0906C654.837,-99.6657 671.578,-103.237 687,-105 735.131,-110.503 747.801,-109.873 796,-105 820.266,-102.547 847.557,-96.5796 866.266,-91.9816"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="641.148,-92.636 630.59,-93.5125 639.39,-99.4117 641.148,-92.636"/>
 </g>
-<!-- Node3562 -->
-<g id="node8" class="node"><title>Node3562</title>
+<!-- Node3523 -->
+<g id="node8" class="node"><title>Node3523</title>
 <g id="a_node8"><a xlink:href="class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" target="_top" xlink:title="BitcoinCore::initialize">
 <polygon fill="white" stroke="black" points="687,-76.5 687,-95.5 796,-95.5 796,-76.5 687,-76.5"/>
 <text text-anchor="middle" x="741.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">BitcoinCore::initialize</text>
 </a>
 </g>
 </g>
-<!-- Node3559&#45;&gt;Node3562 -->
-<g id="edge7" class="edge"><title>Node3559&#45;&gt;Node3562</title>
+<!-- Node3520&#45;&gt;Node3523 -->
+<g id="edge7" class="edge"><title>Node3520&#45;&gt;Node3523</title>
 <path fill="none" stroke="midnightblue" d="M641.012,-86C655.027,-86 671.384,-86 686.739,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="640.805,-82.5001 630.805,-86 640.805,-89.5001 640.805,-82.5001"/>
 </g>
-<!-- Node3561 -->
-<g id="node7" class="node"><title>Node3561</title>
+<!-- Node3522 -->
+<g id="node7" class="node"><title>Node3522</title>
 <g id="a_node7"><a xlink:href="dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" target="_top" xlink:title="main">
 <polygon fill="white" stroke="black" points="984,-76.5 984,-95.5 1022,-95.5 1022,-76.5 984,-76.5"/>
 <text text-anchor="middle" x="1003" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node3560&#45;&gt;Node3561 -->
-<g id="edge6" class="edge"><title>Node3560&#45;&gt;Node3561</title>
+<!-- Node3521&#45;&gt;Node3522 -->
+<g id="edge6" class="edge"><title>Node3521&#45;&gt;Node3522</title>
 <path fill="none" stroke="midnightblue" d="M923.767,-86C943.334,-86 967.459,-86 983.703,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="923.73,-82.5001 913.73,-86 923.73,-89.5001 923.73,-82.5001"/>
 </g>
-<!-- Node3564 -->
-<g id="node10" class="node"><title>Node3564</title>
+<!-- Node3525 -->
+<g id="node10" class="node"><title>Node3525</title>
 <g id="a_node10"><a xlink:href="init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" target="_top" xlink:title="Preparing steps before shutting down or restarting the wallet. ">
 <polygon fill="white" stroke="black" points="557,-38.5 557,-57.5 651,-57.5 651,-38.5 557,-38.5"/>
 <text text-anchor="middle" x="604" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">PrepareShutdown</text>
 </a>
 </g>
 </g>
-<!-- Node3563&#45;&gt;Node3564 -->
-<g id="edge9" class="edge"><title>Node3563&#45;&gt;Node3564</title>
+<!-- Node3524&#45;&gt;Node3525 -->
+<g id="edge9" class="edge"><title>Node3524&#45;&gt;Node3525</title>
 <path fill="none" stroke="midnightblue" d="M531.134,-48C539.773,-48 548.454,-48 556.648,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="531.045,-44.5001 521.045,-48 531.045,-51.5001 531.045,-44.5001"/>
 </g>
-<!-- Node3565 -->
-<g id="node11" class="node"><title>Node3565</title>
+<!-- Node3526 -->
+<g id="node11" class="node"><title>Node3526</title>
 <g id="a_node11"><a xlink:href="class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" target="_top" xlink:title="BitcoinCore::restart">
 <polygon fill="white" stroke="black" points="691,-38.5 691,-57.5 792,-57.5 792,-38.5 691,-38.5"/>
 <text text-anchor="middle" x="741.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">BitcoinCore::restart</text>
 </a>
 </g>
 </g>
-<!-- Node3564&#45;&gt;Node3565 -->
-<g id="edge10" class="edge"><title>Node3564&#45;&gt;Node3565</title>
+<!-- Node3525&#45;&gt;Node3526 -->
+<g id="edge10" class="edge"><title>Node3525&#45;&gt;Node3526</title>
 <path fill="none" stroke="midnightblue" d="M661.285,-48C671.061,-48 681.164,-48 690.75,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="661.252,-44.5001 651.252,-48 661.252,-51.5001 661.252,-44.5001"/>
 </g>
-<!-- Node3566 -->
-<g id="node12" class="node"><title>Node3566</title>
+<!-- Node3527 -->
+<g id="node12" class="node"><title>Node3527</title>
 <g id="a_node12"><a xlink:href="init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" target="_top" xlink:title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr...">
 <polygon fill="white" stroke="black" points="711.5,-0.5 711.5,-19.5 771.5,-19.5 771.5,-0.5 711.5,-0.5"/>
 <text text-anchor="middle" x="741.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Shutdown</text>
 </a>
 </g>
 </g>
-<!-- Node3564&#45;&gt;Node3566 -->
-<g id="edge11" class="edge"><title>Node3564&#45;&gt;Node3566</title>
+<!-- Node3525&#45;&gt;Node3527 -->
+<g id="edge11" class="edge"><title>Node3525&#45;&gt;Node3527</title>
 <path fill="none" stroke="midnightblue" d="M648.93,-35.68C669.39,-29.9422 693.171,-23.2731 711.369,-18.1695"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="647.876,-32.3407 639.192,-38.411 649.766,-39.0807 647.876,-32.3407"/>
 </g>
-<!-- Node3566&#45;&gt;Node3560 -->
-<g id="edge12" class="edge"><title>Node3566&#45;&gt;Node3560</title>
+<!-- Node3527&#45;&gt;Node3521 -->
+<g id="edge12" class="edge"><title>Node3527&#45;&gt;Node3521</title>
 <path fill="none" stroke="midnightblue" d="M781.173,-22.6455C786.228,-24.614 791.285,-26.748 796,-29 825.563,-43.1186 857.641,-64.1858 875.334,-76.3625"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="782.139,-19.2709 771.546,-19.0768 779.706,-25.8344 782.139,-19.2709"/>
 </g>
-<!-- Node3567 -->
-<g id="node13" class="node"><title>Node3567</title>
+<!-- Node3528 -->
+<g id="node13" class="node"><title>Node3528</title>
 <g id="a_node13"><a xlink:href="class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" target="_top" xlink:title="BitcoinCore::shutdown">
 <polygon fill="white" stroke="black" points="832,-0.5 832,-19.5 948,-19.5 948,-0.5 832,-0.5"/>
 <text text-anchor="middle" x="890" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BitcoinCore::shutdown</text>
 </a>
 </g>
 </g>
-<!-- Node3566&#45;&gt;Node3567 -->
-<g id="edge13" class="edge"><title>Node3566&#45;&gt;Node3567</title>
+<!-- Node3527&#45;&gt;Node3528 -->
+<g id="edge13" class="edge"><title>Node3527&#45;&gt;Node3528</title>
 <path fill="none" stroke="midnightblue" d="M781.966,-10C797.308,-10 815.182,-10 831.879,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="781.794,-6.5001 771.794,-10 781.794,-13.5001 781.794,-6.5001"/>
 </g>

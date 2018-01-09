@@ -48,67 +48,67 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 516;
 var viewHeight = 66;
-var sectionId = 'dynsection-49';
+var sectionId = 'dynsection-48';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>GetOldestKeyInPool</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-62 512,-62 512,4 -4,4"/>
-<!-- Node1407 -->
-<g id="node1" class="node"><title>Node1407</title>
+<!-- Node1349 -->
+<g id="node1" class="node"><title>Node1349</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-38.5 106,-38.5 106,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="53" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetOldestKeyInPool</text>
 </g>
-<!-- Node1408 -->
-<g id="node2" class="node"><title>Node1408</title>
+<!-- Node1350 -->
+<g id="node2" class="node"><title>Node1350</title>
 <g id="a_node2"><a xlink:href="class_c_pub_key.html#a4fa94293cf8577fd039b9a133f6c7f30" target="_top" xlink:title="CPubKey::IsValid">
 <polygon fill="white" stroke="black" points="152,-38.5 152,-57.5 247,-57.5 247,-38.5 152,-38.5"/>
 <text text-anchor="middle" x="199.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::IsValid</text>
 </a>
 </g>
 </g>
-<!-- Node1407&#45;&gt;Node1408 -->
-<g id="edge1" class="edge"><title>Node1407&#45;&gt;Node1408</title>
+<!-- Node1349&#45;&gt;Node1350 -->
+<g id="edge1" class="edge"><title>Node1349&#45;&gt;Node1350</title>
 <path fill="none" stroke="midnightblue" d="M106.168,-35.8594C117.672,-37.3722 129.915,-38.9819 141.596,-40.5179"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="141.314,-44.0108 151.685,-41.8444 142.226,-37.0705 141.314,-44.0108"/>
 </g>
-<!-- Node1411 -->
-<g id="node5" class="node"><title>Node1411</title>
+<!-- Node1353 -->
+<g id="node5" class="node"><title>Node1353</title>
 <g id="a_node5"><a xlink:href="class_c_wallet_d_b.html#a6a03927cf247314ccd9b285139de0bd1" target="_top" xlink:title="CWalletDB::ReadPool">
 <polygon fill="white" stroke="black" points="142,-0.5 142,-19.5 257,-19.5 257,-0.5 142,-0.5"/>
 <text text-anchor="middle" x="199.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CWalletDB::ReadPool</text>
 </a>
 </g>
 </g>
-<!-- Node1407&#45;&gt;Node1411 -->
-<g id="edge4" class="edge"><title>Node1407&#45;&gt;Node1411</title>
+<!-- Node1349&#45;&gt;Node1353 -->
+<g id="edge4" class="edge"><title>Node1349&#45;&gt;Node1353</title>
 <path fill="none" stroke="midnightblue" d="M106.168,-22.1406C114.419,-21.0557 123.049,-19.9209 131.58,-18.7992"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="132.061,-22.2661 141.519,-17.4923 131.148,-15.3259 132.061,-22.2661"/>
 </g>
-<!-- Node1409 -->
-<g id="node3" class="node"><title>Node1409</title>
+<!-- Node1351 -->
+<g id="node3" class="node"><title>Node1351</title>
 <g id="a_node3"><a xlink:href="class_c_pub_key.html#a6bb28fcf0a5f799c69f5b7269363b309" target="_top" xlink:title="Simple read&#45;only vector&#45;like interface to the pubkey data. ">
 <polygon fill="white" stroke="black" points="293,-38.5 293,-57.5 376,-57.5 376,-38.5 293,-38.5"/>
 <text text-anchor="middle" x="334.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::size</text>
 </a>
 </g>
 </g>
-<!-- Node1408&#45;&gt;Node1409 -->
-<g id="edge2" class="edge"><title>Node1408&#45;&gt;Node1409</title>
+<!-- Node1350&#45;&gt;Node1351 -->
+<g id="edge2" class="edge"><title>Node1350&#45;&gt;Node1351</title>
 <path fill="none" stroke="midnightblue" d="M247.017,-48C258.604,-48 271.084,-48 282.86,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="282.986,-51.5001 292.986,-48 282.986,-44.5001 282.986,-51.5001"/>
 </g>
-<!-- Node1410 -->
-<g id="node4" class="node"><title>Node1410</title>
+<!-- Node1352 -->
+<g id="node4" class="node"><title>Node1352</title>
 <g id="a_node4"><a xlink:href="class_c_pub_key.html#a7dc71b3f037c84268dc22de97d7b65fb" target="_top" xlink:title="Compute the length of a pubkey with a given first byte. ">
 <polygon fill="white" stroke="black" points="412,-38.5 412,-57.5 508,-57.5 508,-38.5 412,-38.5"/>
 <text text-anchor="middle" x="460" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CPubKey::GetLen</text>
 </a>
 </g>
 </g>
-<!-- Node1409&#45;&gt;Node1410 -->
-<g id="edge3" class="edge"><title>Node1409&#45;&gt;Node1410</title>
+<!-- Node1351&#45;&gt;Node1352 -->
+<g id="edge3" class="edge"><title>Node1351&#45;&gt;Node1352</title>
 <path fill="none" stroke="midnightblue" d="M376.281,-48C384.462,-48 393.2,-48 401.818,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="401.841,-51.5001 411.841,-48 401.841,-44.5001 401.841,-51.5001"/>
 </g>

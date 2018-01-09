@@ -231,9 +231,9 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8cpp_source.html#l00123">123</a> of file <a class="el" href="policy_8cpp_source.html">policy.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, <a class="el" href="coins_8cpp_source.html#l00227">CCoinsViewCache::GetOutputFor()</a>, <a class="el" href="transaction_8h_source.html#l00284">CTransaction::IsCoinBase()</a>, <a class="el" href="policy_8h_source.html#l00025">MAX_P2SH_SIGOPS</a>, <a class="el" href="interpreter_8h_source.html#l00033">SCRIPT_VERIFY_NONE</a>, <a class="el" href="transaction_8h_source.html#l00137">CTxOut::scriptPubKey</a>, <a class="el" href="standard_8cpp_source.html#l00041">Solver()</a>, <a class="el" href="standard_8h_source.html#l00051">TX_SCRIPTHASH</a>, and <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>.</p>
+<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00116">CCoinsViewCache::AccessCoin()</a>, <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, <a class="el" href="transaction_8h_source.html#l00283">CTransaction::IsCoinBase()</a>, <a class="el" href="policy_8h_source.html#l00025">MAX_P2SH_SIGOPS</a>, <a class="el" href="coins_8h_source.html#l00033">Coin::out</a>, <a class="el" href="interpreter_8h_source.html#l00033">SCRIPT_VERIFY_NONE</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::scriptPubKey</a>, <a class="el" href="standard_8cpp_source.html#l00041">Solver()</a>, <a class="el" href="standard_8h_source.html#l00051">TX_SCRIPTHASH</a>, and <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -342,9 +342,9 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8cpp_source.html#l00059">59</a> of file <a class="el" href="policy_8cpp_source.html">policy.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="transaction_8h_source.html#l00219">CTransaction::CURRENT_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00078">fIsBareMultisigStd</a>, <a class="el" href="transaction_8h_source.html#l00185">CTxOut::IsDust()</a>, <a class="el" href="script_8cpp_source.html#l00247">CScript::IsPushOnly()</a>, <a class="el" href="policy_8cpp_source.html#l00037">IsStandard()</a>, <a class="el" href="policy_8h_source.html#l00023">MAX_STANDARD_TX_SIZE</a>, <a class="el" href="transaction_8h_source.html#l00225">CTransaction::MAX_STANDARD_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00094">minRelayTxFee</a>, <a class="el" href="transaction_8h_source.html#l00232">CTransaction::nVersion</a>, <a class="el" href="transaction_8h_source.html#l00137">CTxOut::scriptPubKey</a>, <a class="el" href="transaction_8h_source.html#l00062">CTxIn::scriptSig</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>, <a class="el" href="standard_8h_source.html#l00052">TX_MULTISIG</a>, <a class="el" href="standard_8h_source.html#l00053">TX_NULL_DATA</a>, <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00234">CTransaction::vout</a>.</p>
+<p class="reference">References <a class="el" href="transaction_8h_source.html#l00218">CTransaction::CURRENT_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00078">fIsBareMultisigStd</a>, <a class="el" href="transaction_8h_source.html#l00184">CTxOut::IsDust()</a>, <a class="el" href="script_8cpp_source.html#l00223">CScript::IsPushOnly()</a>, <a class="el" href="policy_8cpp_source.html#l00037">IsStandard()</a>, <a class="el" href="policy_8h_source.html#l00023">MAX_STANDARD_TX_SIZE</a>, <a class="el" href="transaction_8h_source.html#l00224">CTransaction::MAX_STANDARD_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00094">minRelayTxFee</a>, <a class="el" href="transaction_8h_source.html#l00231">CTransaction::nVersion</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::scriptPubKey</a>, <a class="el" href="transaction_8h_source.html#l00062">CTxIn::scriptSig</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>, <a class="el" href="standard_8h_source.html#l00052">TX_MULTISIG</a>, <a class="el" href="standard_8h_source.html#l00053">TX_NULL_DATA</a>, <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vout</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -389,7 +389,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00018">18</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -415,7 +415,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00019">19</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -443,7 +443,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00021">21</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -471,7 +471,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00029">29</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="validation_8cpp_source.html#l02709">ActivateBestChainStep()</a>, <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="fees_8cpp_source.html#l00506">CBlockPolicyEstimator::estimateSmartFee()</a>, <a class="el" href="fees_8cpp_source.html#l00542">CBlockPolicyEstimator::estimateSmartPriority()</a>, <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, <a class="el" href="validation_8cpp_source.html#l02863">InvalidateBlock()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00948">mempoolInfoToJSON()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="validation_8cpp_source.html#l02712">ActivateBestChainStep()</a>, <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="fees_8cpp_source.html#l00506">CBlockPolicyEstimator::estimateSmartFee()</a>, <a class="el" href="fees_8cpp_source.html#l00542">CBlockPolicyEstimator::estimateSmartPriority()</a>, <a class="el" href="validation_8cpp_source.html#l02311">FlushStateToDisk()</a>, <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>, <a class="el" href="validation_8cpp_source.html#l02866">InvalidateBlock()</a>, and <a class="el" href="blockchain_8cpp_source.html#l01019">mempoolInfoToJSON()</a>.</p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00027">27</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00023">23</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l03275">ContextualCheckBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00518">ContextualCheckTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, and <a class="el" href="policy_8cpp_source.html#l00059">IsStandardTx()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l03278">ContextualCheckBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00523">ContextualCheckTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, and <a class="el" href="policy_8cpp_source.html#l00059">IsStandardTx()</a>.</p>
 
 </div>
 </div>
@@ -578,14 +578,14 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a3543497f358054a827af2a2a93c15d6d">LOCKTIME_VERIFY_SEQUENCE</a> |</div><div class="line">                                                           <a class="code" href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a26240702e1a6536406f20c2f0305358d">LOCKTIME_MEDIAN_TIME_PAST</a></div><div class="ttc" id="consensus_8h_html_a99fb83031ce9923c84392b4e92f956b5a26240702e1a6536406f20c2f0305358d"><div class="ttname"><a href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a26240702e1a6536406f20c2f0305358d">LOCKTIME_MEDIAN_TIME_PAST</a></div><div class="ttdef"><b>Definition:</b> <a href="consensus_8h_source.html#l00031">consensus.h:31</a></div></div>
-<div class="ttc" id="consensus_8h_html_a99fb83031ce9923c84392b4e92f956b5a3543497f358054a827af2a2a93c15d6d"><div class="ttname"><a href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a3543497f358054a827af2a2a93c15d6d">LOCKTIME_VERIFY_SEQUENCE</a></div><div class="ttdef"><b>Definition:</b> <a href="consensus_8h_source.html#l00028">consensus.h:28</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a3543497f358054a827af2a2a93c15d6d">LOCKTIME_VERIFY_SEQUENCE</a> |</div><div class="line">                                                           <a class="code" href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a26240702e1a6536406f20c2f0305358d">LOCKTIME_MEDIAN_TIME_PAST</a></div><div class="ttc" id="consensus_8h_html_a99fb83031ce9923c84392b4e92f956b5a26240702e1a6536406f20c2f0305358d"><div class="ttname"><a href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a26240702e1a6536406f20c2f0305358d">LOCKTIME_MEDIAN_TIME_PAST</a></div><div class="ttdef"><b>Definition:</b> <a href="consensus_8h_source.html#l00030">consensus.h:30</a></div></div>
+<div class="ttc" id="consensus_8h_html_a99fb83031ce9923c84392b4e92f956b5a3543497f358054a827af2a2a93c15d6d"><div class="ttname"><a href="consensus_8h.html#a99fb83031ce9923c84392b4e92f956b5a3543497f358054a827af2a2a93c15d6d">LOCKTIME_VERIFY_SEQUENCE</a></div><div class="ttdef"><b>Definition:</b> <a href="consensus_8h_source.html#l00027">consensus.h:27</a></div></div>
 </div><!-- fragment -->
 <p>Used as the flags parameter to sequence and nLocktime checks in non-consensus code. </p>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00050">50</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="validation_8cpp_source.html#l02709">ActivateBestChainStep()</a>, <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="validation_8cpp_source.html#l02863">InvalidateBlock()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="validation_8cpp_source.html#l02712">ActivateBestChainStep()</a>, <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="validation_8cpp_source.html#l02866">InvalidateBlock()</a>.</p>
 
 </div>
 </div>
@@ -613,7 +613,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00047">47</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01528">CheckInputs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01510">CheckInputs()</a>.</p>
 
 </div>
 </div>
@@ -652,7 +652,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8h_source.html#l00035">35</a> of file <a class="el" href="policy_8h_source.html">policy.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="dash-tx_8cpp_source.html#l00366">MutateTxSign()</a>, <a class="el" href="sign_8cpp_source.html#l00104">ProduceSignature()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00588">signrawtransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="dash-tx_8cpp_source.html#l00366">MutateTxSign()</a>, <a class="el" href="sign_8cpp_source.html#l00104">ProduceSignature()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00589">signrawtransaction()</a>.</p>
 
 </div>
 </div>
@@ -663,7 +663,7 @@ Variables</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f9a362818448b8ef6661813ae65d7e79.html">policy</a></li><li class="navelem"><a class="el" href="policy_8h.html">policy.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:19 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:27 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

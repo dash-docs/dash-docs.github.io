@@ -2,6 +2,7 @@ var version_8h =
 [
     [ "BIP0031_VERSION", "version_8h.html#aa3feca3b6094096fa1b660159bdcb04a", null ],
     [ "CADDR_TIME_VERSION", "version_8h.html#a04ad229ffd8c41a83118551a4d395205", null ],
+    [ "DIP0001_PROTOCOL_VERSION", "version_8h.html#aaf035b59a3afc03d6b551f1b1537a0db", null ],
     [ "GETHEADERS_VERSION", "version_8h.html#aac3dea582571948b31c3414146240f9f", null ],
     [ "INIT_PROTO_VERSION", "version_8h.html#a2c4c900f5bd0c956cc1a64cd0cc1c318", null ],
     [ "MEMPOOL_GD_VERSION", "version_8h.html#a32b994bfb5a98b4a2f3746e5f7a57854", null ],

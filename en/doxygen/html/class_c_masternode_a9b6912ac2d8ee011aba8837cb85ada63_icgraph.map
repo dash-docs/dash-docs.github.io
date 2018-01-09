@@ -1,34 +1,33 @@
 <map id="CMasternode::GetInfo" name="CMasternode::GetInfo">
-<area shape="rect" id="node2" href="$class_c_masternode_man.html#a95b7e14eabe262a2a8be107d98d5d7b8" title="Find a random entry. " alt="" coords="226,78,433,119"/>
-<area shape="rect" id="node15" href="$class_c_masternode_man.html#ad549e14e5a1184a6ee01135d1b480f2e" title="Find an entry in the masternode list that is next to be paid. " alt="" coords="204,175,455,217"/>
-<area shape="rect" id="node3" href="$class_c_private_send_client.html#a4394dfd7c898722e494a417cce66aeea" title="CPrivateSendClient\l::StartNewQueue" alt="" coords="559,45,697,86"/>
-<area shape="rect" id="node4" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="801,46,988,87"/>
-<area shape="rect" id="node5" href="$server_8h.html#a6f0f20fd2a24851d47a6120eeca7d3e4" title="privatesend" alt="" coords="1097,107,1186,133"/>
-<area shape="rect" id="node6" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="1548,63,1753,89"/>
-<area shape="rect" id="node11" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="1036,5,1247,32"/>
-<area shape="rect" id="node7" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="1847,147,1918,173"/>
-<area shape="rect" id="node8" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2251,185,2314,212"/>
-<area shape="rect" id="node10" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="2012,185,2157,212"/>
-<area shape="rect" id="node9" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="2408,185,2459,212"/>
-<area shape="rect" id="node12" href="$class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" title="OverviewPage::setWalletModel" alt="" coords="1295,5,1500,32"/>
-<area shape="rect" id="node13" href="$class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" title="Set the wallet model. " alt="" coords="1557,5,1744,32"/>
-<area shape="rect" id="node14" href="$class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" title="WalletFrame::addWallet" alt="" coords="1801,5,1964,32"/>
-<area shape="rect" id="node16" href="$class_c_masternode_payments.html#a6c323905008eeba029283b2467463b9e" title="FillBlockPayee. " alt="" coords="549,241,707,282"/>
-<area shape="rect" id="node28" href="$class_c_masternode_payments.html#a3827f5f6335d03ba2c4fabe542d55d54" title="CMasternodePayments\l::ProcessBlock" alt="" coords="549,175,707,217"/>
-<area shape="rect" id="node32" href="$server_8h.html#adc51a168fd3ea207996ae4f8d9d6c6ea" title="masternode" alt="" coords="583,307,673,333"/>
-<area shape="rect" id="node33" href="$class_c_masternode_man.html#aa51b437b31b0d7fd88692e344a3893ea" title="Same as above but use current block height. " alt="" coords="503,110,753,151"/>
-<area shape="rect" id="node17" href="$masternode-payments_8h.html#a1a60010ef73db581ad54a165770391c6" title="FillBlockPayments" alt="" coords="829,248,960,275"/>
-<area shape="rect" id="node18" href="$miner_8h.html#ac8f34678ed590db1325b261c708f2626" title="Generate a new block, without valid proof&#45;of&#45;work. " alt="" coords="1081,248,1202,275"/>
-<area shape="rect" id="node19" href="$miner_8cpp.html#a17c61f964b27cc5060cd7f9b0efb3607" title="BitcoinMiner" alt="" coords="1350,299,1445,325"/>
-<area shape="rect" id="node26" href="$server_8h.html#afc5f2c0cbe40a2f876b46df2929cf359" title="generate" alt="" coords="1361,197,1433,224"/>
-<area shape="rect" id="node27" href="$server_8h.html#a054ca23f5d86a8ca30138464ba10008c" title="getblocktemplate" alt="" coords="1337,248,1458,275"/>
-<area shape="rect" id="node20" href="$miner_8h.html#a5dd1df3c97c260735ad08a808db2115c" title="Run the miner threads. " alt="" coords="1589,236,1712,263"/>
-<area shape="rect" id="node21" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="1820,261,1945,288"/>
-<area shape="rect" id="node25" href="$server_8h.html#ae13fce5b0e4a07b7d116242b3a0e39b8" title="setgenerate" alt="" coords="1837,211,1928,237"/>
-<area shape="rect" id="node22" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2017,236,2152,263"/>
-<area shape="rect" id="node23" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2045,287,2125,313"/>
-<area shape="rect" id="node24" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2205,287,2360,313"/>
-<area shape="rect" id="node29" href="$class_c_masternode_payments.html#a83580d8ca468c726d7de57c5bb832b24" title="CMasternodePayments\l::UpdatedBlockTip" alt="" coords="815,174,974,215"/>
-<area shape="rect" id="node30" href="$class_c_d_s_notification_interface.html#ac2ced383b75336649c5694e580b18164" title="CDSNotificationInterface\l::UpdatedBlockTip" alt="" coords="1057,169,1225,210"/>
-<area shape="rect" id="node31" href="$class_c_d_s_notification_interface.html#a2e9dff307e1373bda9ac9445f7f5a3d7" title="CDSNotificationInterface\l::InitializeCurrentBlockTip" alt="" coords="1565,139,1737,181"/>
+<area shape="rect" id="node2" href="$class_c_masternode_man.html#a95b7e14eabe262a2a8be107d98d5d7b8" title="Find a random entry. " alt="" coords="226,39,433,80"/>
+<area shape="rect" id="node14" href="$class_c_masternode_man.html#ad549e14e5a1184a6ee01135d1b480f2e" title="Find an entry in the masternode list that is next to be paid. " alt="" coords="204,136,455,177"/>
+<area shape="rect" id="node3" href="$class_c_private_send_client.html#a4394dfd7c898722e494a417cce66aeea" title="CPrivateSendClient\l::StartNewQueue" alt="" coords="559,5,697,47"/>
+<area shape="rect" id="node4" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="801,5,988,47"/>
+<area shape="rect" id="node5" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="1548,61,1753,87"/>
+<area shape="rect" id="node10" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="1036,10,1247,37"/>
+<area shape="rect" id="node6" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="1847,119,1918,146"/>
+<area shape="rect" id="node7" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="2251,158,2314,185"/>
+<area shape="rect" id="node9" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="2012,158,2157,185"/>
+<area shape="rect" id="node8" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="2408,158,2459,185"/>
+<area shape="rect" id="node11" href="$class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" title="OverviewPage::setWalletModel" alt="" coords="1295,10,1500,37"/>
+<area shape="rect" id="node12" href="$class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" title="Set the wallet model. " alt="" coords="1557,10,1744,37"/>
+<area shape="rect" id="node13" href="$class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" title="WalletFrame::addWallet" alt="" coords="1801,10,1964,37"/>
+<area shape="rect" id="node15" href="$class_c_masternode_payments.html#a6c323905008eeba029283b2467463b9e" title="FillBlockPayee. " alt="" coords="549,201,707,243"/>
+<area shape="rect" id="node27" href="$class_c_masternode_payments.html#a3827f5f6335d03ba2c4fabe542d55d54" title="CMasternodePayments\l::ProcessBlock" alt="" coords="549,136,707,177"/>
+<area shape="rect" id="node31" href="$server_8h.html#adc51a168fd3ea207996ae4f8d9d6c6ea" title="masternode" alt="" coords="583,267,673,294"/>
+<area shape="rect" id="node32" href="$class_c_masternode_man.html#aa51b437b31b0d7fd88692e344a3893ea" title="Same as above but use current block height. " alt="" coords="503,71,753,112"/>
+<area shape="rect" id="node16" href="$masternode-payments_8h.html#a1a60010ef73db581ad54a165770391c6" title="FillBlockPayments" alt="" coords="829,211,960,238"/>
+<area shape="rect" id="node17" href="$miner_8h.html#ac8f34678ed590db1325b261c708f2626" title="Generate a new block, without valid proof&#45;of&#45;work. " alt="" coords="1081,217,1202,243"/>
+<area shape="rect" id="node18" href="$miner_8cpp.html#a17c61f964b27cc5060cd7f9b0efb3607" title="BitcoinMiner" alt="" coords="1350,269,1445,295"/>
+<area shape="rect" id="node25" href="$server_8h.html#afc5f2c0cbe40a2f876b46df2929cf359" title="generate" alt="" coords="1361,167,1433,194"/>
+<area shape="rect" id="node26" href="$server_8h.html#a054ca23f5d86a8ca30138464ba10008c" title="getblocktemplate" alt="" coords="1337,218,1458,245"/>
+<area shape="rect" id="node19" href="$miner_8h.html#a5dd1df3c97c260735ad08a808db2115c" title="Run the miner threads. " alt="" coords="1589,209,1712,235"/>
+<area shape="rect" id="node20" href="$init_8h.html#a5cb3db83cb0ba2e421f651a1ee1f2cfe" title="Preparing steps before shutting down or restarting the wallet. " alt="" coords="1820,234,1945,261"/>
+<area shape="rect" id="node24" href="$server_8h.html#ae13fce5b0e4a07b7d116242b3a0e39b8" title="setgenerate" alt="" coords="1837,183,1928,210"/>
+<area shape="rect" id="node21" href="$class_bitcoin_core.html#ac2271844c89ebc4c611e7617ce6202e3" title="BitcoinCore::restart" alt="" coords="2017,209,2152,235"/>
+<area shape="rect" id="node22" href="$init_8h.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="Shutdown is split into 2 parts: Part 1: shut down everything but the main wallet instance (done in Pr..." alt="" coords="2045,259,2125,286"/>
+<area shape="rect" id="node23" href="$class_bitcoin_core.html#a94f3f4622ba698e321f3a2e0e686129f" title="BitcoinCore::shutdown" alt="" coords="2205,259,2360,286"/>
+<area shape="rect" id="node28" href="$class_c_masternode_payments.html#a83580d8ca468c726d7de57c5bb832b24" title="CMasternodePayments\l::UpdatedBlockTip" alt="" coords="815,129,974,171"/>
+<area shape="rect" id="node29" href="$class_c_d_s_notification_interface.html#ac2ced383b75336649c5694e580b18164" title="CDSNotificationInterface\l::UpdatedBlockTip" alt="" coords="1057,113,1225,155"/>
+<area shape="rect" id="node30" href="$class_c_d_s_notification_interface.html#a2e9dff307e1373bda9ac9445f7f5a3d7" title="CDSNotificationInterface\l::InitializeCurrentBlockTip" alt="" coords="1565,112,1737,153"/>
 </map>

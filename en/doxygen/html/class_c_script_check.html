@@ -145,8 +145,8 @@ $(document).ready(function(){initNavTree('class_c_script_check.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a3bf9c971437bcb6fae3e3254a8c178"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_script_check.html#a4a3bf9c971437bcb6fae3e3254a8c178">CScriptCheck</a> ()</td></tr>
 <tr class="separator:a4a3bf9c971437bcb6fae3e3254a8c178"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2617b99b66cd1de327478b74d8441c76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_script_check.html#a2617b99b66cd1de327478b74d8441c76">CScriptCheck</a> (const <a class="el" href="class_c_coins.html">CCoins</a> &amp;txFromIn, const <a class="el" href="class_c_transaction.html">CTransaction</a> &amp;txToIn, unsigned int nInIn, unsigned int nFlagsIn, bool cacheIn)</td></tr>
-<tr class="separator:a2617b99b66cd1de327478b74d8441c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40d5208a85bf2d21174ecdaa8302d6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_script_check.html#ad40d5208a85bf2d21174ecdaa8302d6f">CScriptCheck</a> (const <a class="el" href="class_c_script.html">CScript</a> &amp;scriptPubKeyIn, const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> amountIn, const <a class="el" href="class_c_transaction.html">CTransaction</a> &amp;txToIn, unsigned int nInIn, unsigned int nFlagsIn, bool cacheIn)</td></tr>
+<tr class="separator:ad40d5208a85bf2d21174ecdaa8302d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108d4c713338308be3867ed4e65b80c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_script_check.html#a108d4c713338308be3867ed4e65b80c5">operator()</a> ()</td></tr>
 <tr class="separator:a108d4c713338308be3867ed4e65b80c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fbde608ff29c1885b8b9caf0fd40a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_script_check.html#a69fbde608ff29c1885b8b9caf0fd40a0">swap</a> (<a class="el" href="class_c_script_check.html">CScriptCheck</a> &amp;check)</td></tr>
@@ -172,7 +172,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Closure representing one script verification Note that this stores references to the spending transaction. </p>
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00686">686</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00385">385</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4a3bf9c971437bcb6fae3e3254a8c178"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a3bf9c971437bcb6fae3e3254a8c178">&#9670;&nbsp;</a></span>CScriptCheck() <span class="overload">[1/2]</span></h2>
@@ -197,12 +197,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00697">697</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00396">396</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
 </div>
 </div>
-<a id="a2617b99b66cd1de327478b74d8441c76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2617b99b66cd1de327478b74d8441c76">&#9670;&nbsp;</a></span>CScriptCheck() <span class="overload">[2/2]</span></h2>
+<a id="ad40d5208a85bf2d21174ecdaa8302d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40d5208a85bf2d21174ecdaa8302d6f">&#9670;&nbsp;</a></span>CScriptCheck() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,8 +213,14 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">CScriptCheck::CScriptCheck </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_c_coins.html">CCoins</a> &amp;&#160;</td>
-          <td class="paramname"><em>txFromIn</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_c_script.html">CScript</a> &amp;&#160;</td>
+          <td class="paramname"><em>scriptPubKeyIn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td>
+          <td class="paramname"><em>amountIn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -253,7 +259,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00698">698</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00397">397</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
 </div>
 </div>
@@ -281,11 +287,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00713">713</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00412">412</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8h_source.html#l00694">error</a>.</p>
+<p class="reference">References <a class="el" href="validation_8h_source.html#l00393">error</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01528">CheckInputs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01510">CheckInputs()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -312,7 +318,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8cpp_source.html#l01467">1467</a> of file <a class="el" href="validation_8cpp_source.html">validation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8cpp_source.html#l01449">1449</a> of file <a class="el" href="validation_8cpp_source.html">validation.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="util_8h_source.html#l00131">error()</a>, and <a class="el" href="interpreter_8cpp_source.html#l01242">VerifyScript()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -350,11 +356,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00704">704</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00403">403</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">References <a class="el" href="validation_8h_source.html#l00693">cacheStore</a>, <a class="el" href="validation_8h_source.html#l00694">error</a>, <a class="el" href="validation_8h_source.html#l00692">nFlags</a>, <a class="el" href="validation_8h_source.html#l00691">nIn</a>, <a class="el" href="validation_8h_source.html#l00690">ptxTo</a>, <a class="el" href="validation_8h_source.html#l00689">scriptPubKey</a>, and <a class="el" href="prevector_8h_source.html#l00410">prevector&lt; N, T, Size, Diff &gt;::swap()</a>.</p>
+<p class="reference">References <a class="el" href="validation_8h_source.html#l00392">cacheStore</a>, <a class="el" href="validation_8h_source.html#l00393">error</a>, <a class="el" href="validation_8h_source.html#l00391">nFlags</a>, <a class="el" href="validation_8h_source.html#l00390">nIn</a>, <a class="el" href="validation_8h_source.html#l00389">ptxTo</a>, <a class="el" href="validation_8h_source.html#l00388">scriptPubKey</a>, and <a class="el" href="prevector_8h_source.html#l00410">prevector&lt; N, T, Size, Diff &gt;::swap()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01528">CheckInputs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01510">CheckInputs()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -395,9 +401,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00693">693</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00392">392</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00704">swap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00403">swap()</a>.</p>
 
 </div>
 </div>
@@ -421,9 +427,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00694">694</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00393">393</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00713">GetScriptError()</a>, and <a class="el" href="validation_8h_source.html#l00704">swap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00412">GetScriptError()</a>, and <a class="el" href="validation_8h_source.html#l00403">swap()</a>.</p>
 
 </div>
 </div>
@@ -447,9 +453,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00692">692</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00391">391</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00704">swap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00403">swap()</a>.</p>
 
 </div>
 </div>
@@ -473,9 +479,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00691">691</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00390">390</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00704">swap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00403">swap()</a>.</p>
 
 </div>
 </div>
@@ -499,9 +505,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00690">690</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00389">389</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00704">swap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00403">swap()</a>.</p>
 
 </div>
 </div>
@@ -525,9 +531,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00689">689</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validation_8h_source.html#l00388">388</a> of file <a class="el" href="validation_8h_source.html">validation.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00704">swap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00403">swap()</a>.</p>
 
 </div>
 </div>
@@ -542,7 +548,7 @@ Private Attributes</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_script_check.html">CScriptCheck</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:25 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:32 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

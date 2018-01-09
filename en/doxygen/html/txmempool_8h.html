@@ -185,6 +185,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_in_point.html">CInPoint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An inpoint - a combination of a transaction and an index n into its vin.  <a href="class_c_in_point.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_salted_txid_hasher.html">SaltedTxidHasher</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tx_mem_pool.html">CTxMemPool</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_tx_mem_pool.html" title="CTxMemPool stores valid-according-to-the-current-best-chain transactions that may be included in the ...">CTxMemPool</a> stores valid-according-to-the-current-best-chain transactions that may be included in the next block.  <a href="class_c_tx_mem_pool.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,9 +214,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac18cc9fcf96dcd34beef99424c12b268"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txmempool_8h.html#ac18cc9fcf96dcd34beef99424c12b268">MEMPOOL_HEIGHT</a> = 0x7FFFFFFF</td></tr>
-<tr class="memdesc:ac18cc9fcf96dcd34beef99424c12b268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fake height value used in <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> to signify they are only in the memory pool (since 0.8)  <a href="#ac18cc9fcf96dcd34beef99424c12b268">More...</a><br /></td></tr>
-<tr class="separator:ac18cc9fcf96dcd34beef99424c12b268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27e8af2886c474496561a6c0cfbfaf8"><td class="memItemLeft" align="right" valign="top">static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="txmempool_8h.html#ab27e8af2886c474496561a6c0cfbfaf8">MEMPOOL_HEIGHT</a> = 0x7FFFFFFF</td></tr>
+<tr class="memdesc:ab27e8af2886c474496561a6c0cfbfaf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fake height value used in <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> to signify they are only in the memory pool (since 0.8)  <a href="#ab27e8af2886c474496561a6c0cfbfaf8">More...</a><br /></td></tr>
+<tr class="separator:ab27e8af2886c474496561a6c0cfbfaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="aeaaac2108576e7c8d4c8960abdd7f153"></a>
@@ -229,7 +231,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="txmempool_8h_source.html#l00650">650</a> of file <a class="el" href="txmempool_8h_source.html">txmempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="txmempool_8h_source.html#l00670">670</a> of file <a class="el" href="txmempool_8h_source.html">txmempool.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +264,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="txmempool_8h_source.html#l00026">AllowFreeThreshold()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, and <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -322,8 +324,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ac18cc9fcf96dcd34beef99424c12b268"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac18cc9fcf96dcd34beef99424c12b268">&#9670;&nbsp;</a></span>MEMPOOL_HEIGHT</h2>
+<a id="ab27e8af2886c474496561a6c0cfbfaf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27e8af2886c474496561a6c0cfbfaf8">&#9670;&nbsp;</a></span>MEMPOOL_HEIGHT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +334,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned int MEMPOOL_HEIGHT = 0x7FFFFFFF</td>
+          <td class="memname">const uint32_t MEMPOOL_HEIGHT = 0x7FFFFFFF</td>
         </tr>
       </table>
   </td>
@@ -342,11 +344,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fake height value used in <a class="el" href="class_c_coins.html" title="Pruned version of CTransaction: only retains metadata and unspent transaction outputs. ">CCoins</a> to signify they are only in the memory pool (since 0.8) </p>
+<p>Fake height value used in <a class="el" href="class_coin.html" title="A UTXO entry. ">Coin</a> to signify they are only in the memory pool (since 0.8) </p>
 
 <p class="definition">Definition at line <a class="el" href="txmempool_8h_source.html#l00040">40</a> of file <a class="el" href="txmempool_8h_source.html">txmempool.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00346">CheckSequenceLocks()</a>, <a class="el" href="txmempool_8cpp_source.html#l00984">CCoinsViewMemPool::GetCoins()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00591">gettxout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00347">CheckSequenceLocks()</a>, <a class="el" href="txmempool_8cpp_source.html#l00978">CCoinsViewMemPool::GetCoin()</a>, and <a class="el" href="blockchain_8cpp_source.html#l00662">gettxout()</a>.</p>
 
 </div>
 </div>
@@ -357,7 +359,7 @@ Variables</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="txmempool_8h.html">txmempool.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:21 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:29 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

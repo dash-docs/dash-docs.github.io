@@ -55,78 +55,78 @@ var sectionId = 'dynsection-20';
 <g id="viewport">
 <title>secp256k1_gej_add_ge_var</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-374.5 500,-374.5 500,4 -4,4"/>
-<!-- Node211 -->
-<g id="node1" class="node"><title>Node211</title>
+<!-- Node199 -->
+<g id="node1" class="node"><title>Node199</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-183 0,-202 137,-202 137,-183 0,-183"/>
 <text text-anchor="middle" x="68.5" y="-190" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_gej_add_ge_var</text>
 </g>
-<!-- Node212 -->
-<g id="node2" class="node"><title>Node212</title>
+<!-- Node200 -->
+<g id="node2" class="node"><title>Node200</title>
 <g id="a_node2"><a xlink:href="field_8h.html#a7512f80b60598e4af89c004890880fc7" target="_top" xlink:title="Adds a field element to another. ">
 <polygon fill="white" stroke="black" points="370.5,-351 370.5,-370 468.5,-370 468.5,-351 370.5,-351"/>
 <text text-anchor="middle" x="419.5" y="-358" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_add</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node212 -->
-<g id="edge1" class="edge"><title>Node211&#45;&gt;Node212</title>
+<!-- Node199&#45;&gt;Node200 -->
+<g id="edge1" class="edge"><title>Node199&#45;&gt;Node200</title>
 <path fill="none" stroke="midnightblue" d="M74.4247,-202.303C87.0865,-226.394 123.302,-288.627 173,-317.5 230.7,-351.022 307.975,-359.76 360.3,-361.41"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="360.339,-364.912 370.419,-361.651 360.505,-357.914 360.339,-364.912"/>
 </g>
-<!-- Node213 -->
-<g id="node3" class="node"><title>Node213</title>
+<!-- Node201 -->
+<g id="node3" class="node"><title>Node201</title>
 <g id="a_node3"><a xlink:href="field_8h.html#a542b97d2574d9687c563d002587cf9a2" target="_top" xlink:title="Sets a field element to be the product of two others. ">
 <polygon fill="white" stroke="black" points="370.5,-308 370.5,-327 468.5,-327 468.5,-308 370.5,-308"/>
 <text text-anchor="middle" x="419.5" y="-315" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_mul</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node213 -->
-<g id="edge2" class="edge"><title>Node211&#45;&gt;Node213</title>
+<!-- Node199&#45;&gt;Node201 -->
+<g id="edge2" class="edge"><title>Node199&#45;&gt;Node201</title>
 <path fill="none" stroke="midnightblue" d="M76.2159,-202.029C91.0327,-222.198 128.745,-269.028 173,-289.5 232.554,-317.049 308.587,-321.673 360.145,-320.932"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="360.518,-324.425 370.439,-320.709 360.366,-317.427 360.518,-324.425"/>
 </g>
-<!-- Node214 -->
-<g id="node4" class="node"><title>Node214</title>
+<!-- Node202 -->
+<g id="node4" class="node"><title>Node202</title>
 <g id="a_node4"><a xlink:href="field_8h.html#a3f7b55267ed0d5135530283da6314416" target="_top" xlink:title="Multiplies the passed field element with a small integer constant. ">
 <polygon fill="white" stroke="black" points="362.5,-261 362.5,-280 476.5,-280 476.5,-261 362.5,-261"/>
 <text text-anchor="middle" x="419.5" y="-268" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_mul_int</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node214 -->
-<g id="edge3" class="edge"><title>Node211&#45;&gt;Node214</title>
+<!-- Node199&#45;&gt;Node202 -->
+<g id="edge3" class="edge"><title>Node199&#45;&gt;Node202</title>
 <path fill="none" stroke="midnightblue" d="M78.314,-202.114C94.8667,-219.377 132.592,-255.075 173,-268.5 231.277,-287.862 301.716,-286.064 352.17,-280.79"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="352.754,-284.247 362.303,-279.657 351.976,-277.29 352.754,-284.247"/>
 </g>
-<!-- Node215 -->
-<g id="node5" class="node"><title>Node215</title>
+<!-- Node203 -->
+<g id="node5" class="node"><title>Node203</title>
 <g id="a_node5"><a xlink:href="field_8h.html#a4543ff08a66fc870acd56c921f2b30f7" target="_top" xlink:title="Set a field element equal to the additive inverse of another. ">
 <polygon fill="white" stroke="black" points="363.5,-204 363.5,-223 475.5,-223 475.5,-204 363.5,-204"/>
 <text text-anchor="middle" x="419.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_negate</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node215 -->
-<g id="edge4" class="edge"><title>Node211&#45;&gt;Node215</title>
+<!-- Node199&#45;&gt;Node203 -->
+<g id="edge4" class="edge"><title>Node199&#45;&gt;Node203</title>
 <path fill="none" stroke="midnightblue" d="M137.205,-196.574C199.639,-200.331 291.709,-205.871 353.326,-209.578"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="353.131,-213.073 363.323,-210.18 353.551,-206.085 353.131,-213.073"/>
 </g>
-<!-- Node216 -->
-<g id="node6" class="node"><title>Node216</title>
+<!-- Node204 -->
+<g id="node6" class="node"><title>Node204</title>
 <g id="a_node6"><a xlink:href="field_8h.html#a0aaec7df2f708a451a8e1f41a943d8b1" target="_top" xlink:title="Weakly normalize a field element: reduce it magnitude to 1, but don&#39;t fully normalize. ">
 <polygon fill="white" stroke="black" points="343,-165 343,-184 496,-184 496,-165 343,-165"/>
 <text text-anchor="middle" x="419.5" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_normalize_weak</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node216 -->
-<g id="edge5" class="edge"><title>Node211&#45;&gt;Node216</title>
+<!-- Node199&#45;&gt;Node204 -->
+<g id="edge5" class="edge"><title>Node199&#45;&gt;Node204</title>
 <path fill="none" stroke="midnightblue" d="M137.205,-189.008C192.951,-186.133 272.326,-182.039 332.553,-178.933"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="332.998,-182.415 342.805,-178.404 332.638,-175.424 332.998,-182.415"/>
 </g>
-<!-- Node217 -->
-<g id="node7" class="node"><title>Node217</title>
+<!-- Node205 -->
+<g id="node7" class="node"><title>Node205</title>
 <g id="a_node7"><a xlink:href="field_8h.html#a67adb176b8e6efd2d2475a9d0a199e18" target="_top" xlink:title="Verify whether a field element represents zero i.e. ">
 <polygon fill="white" stroke="black" points="175,-0.5 175,-30.5 305,-30.5 305,-0.5 175,-0.5"/>
 <text text-anchor="start" x="183" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_normalizes</text>
@@ -134,100 +134,100 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node217 -->
-<g id="edge6" class="edge"><title>Node211&#45;&gt;Node217</title>
+<!-- Node199&#45;&gt;Node205 -->
+<g id="edge6" class="edge"><title>Node199&#45;&gt;Node205</title>
 <path fill="none" stroke="midnightblue" d="M73.5512,-182.808C85.1171,-156.259 120.849,-81.6086 173,-40.5 175.255,-38.7222 177.651,-37.0604 180.142,-35.5083"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="181.867,-38.5539 188.916,-30.6442 178.473,-32.4317 181.867,-38.5539"/>
 </g>
-<!-- Node218 -->
-<g id="node8" class="node"><title>Node218</title>
+<!-- Node206 -->
+<g id="node8" class="node"><title>Node206</title>
 <g id="a_node8"><a xlink:href="field_8h.html#a4bfba9980b6d6960ad623f1ddbbc547e" target="_top" xlink:title="Set a field element equal to a small integer. ">
 <polygon fill="white" stroke="black" points="363.5,-88 363.5,-107 475.5,-107 475.5,-88 363.5,-88"/>
 <text text-anchor="middle" x="419.5" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_set_int</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node218 -->
-<g id="edge7" class="edge"><title>Node211&#45;&gt;Node218</title>
+<!-- Node199&#45;&gt;Node206 -->
+<g id="edge7" class="edge"><title>Node199&#45;&gt;Node206</title>
 <path fill="none" stroke="midnightblue" d="M89.3213,-182.97C109.86,-173.406 143.084,-158.795 173,-149.5 232.942,-130.876 303.173,-116.745 353.125,-107.948"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="353.898,-111.366 363.151,-106.206 352.699,-104.47 353.898,-111.366"/>
 </g>
-<!-- Node219 -->
-<g id="node9" class="node"><title>Node219</title>
+<!-- Node207 -->
+<g id="node9" class="node"><title>Node207</title>
 <g id="a_node9"><a xlink:href="field_8h.html#a6cbe550ca5eb35e683b1c8d68d8de26b" target="_top" xlink:title="Sets a field element to be the square of another. ">
 <polygon fill="white" stroke="black" points="371.5,-127 371.5,-146 467.5,-146 467.5,-127 371.5,-127"/>
 <text text-anchor="middle" x="419.5" y="-134" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_fe_sqr</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node219 -->
-<g id="edge8" class="edge"><title>Node211&#45;&gt;Node219</title>
+<!-- Node199&#45;&gt;Node207 -->
+<g id="edge8" class="edge"><title>Node199&#45;&gt;Node207</title>
 <path fill="none" stroke="midnightblue" d="M127.245,-182.96C142.149,-180.513 158.169,-177.896 173,-175.5 237.569,-165.069 311.732,-153.319 361.497,-145.469"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="362.092,-148.918 371.424,-143.903 361.001,-142.004 362.092,-148.918"/>
 </g>
-<!-- Node220 -->
-<g id="node10" class="node"><title>Node220</title>
+<!-- Node208 -->
+<g id="node10" class="node"><title>Node208</title>
 <g id="a_node10"><a xlink:href="group__impl_8h.html#a033aa434a4d0838f649ad757dd44db46" target="_top" xlink:title="secp256k1_gej_double_var">
 <polygon fill="white" stroke="black" points="173,-240 173,-259 307,-259 307,-240 173,-240"/>
 <text text-anchor="middle" x="240" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_gej_double_var</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node220 -->
-<g id="edge9" class="edge"><title>Node211&#45;&gt;Node220</title>
+<!-- Node199&#45;&gt;Node208 -->
+<g id="edge9" class="edge"><title>Node199&#45;&gt;Node208</title>
 <path fill="none" stroke="midnightblue" d="M97.8705,-202.041C126.104,-211.535 169.614,-226.167 200.859,-236.674"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="199.943,-240.058 210.537,-239.928 202.174,-233.423 199.943,-240.058"/>
 </g>
-<!-- Node221 -->
-<g id="node11" class="node"><title>Node221</title>
+<!-- Node209 -->
+<g id="node11" class="node"><title>Node209</title>
 <g id="a_node11"><a xlink:href="group__impl_8h.html#ad5f813e26afb239f03e83f0e61e05498" target="_top" xlink:title="secp256k1_gej_set_ge">
 <polygon fill="white" stroke="black" points="182,-50 182,-69 298,-69 298,-50 182,-50"/>
 <text text-anchor="middle" x="240" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_gej_set_ge</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node221 -->
-<g id="edge17" class="edge"><title>Node211&#45;&gt;Node221</title>
+<!-- Node199&#45;&gt;Node209 -->
+<g id="edge17" class="edge"><title>Node199&#45;&gt;Node209</title>
 <path fill="none" stroke="midnightblue" d="M76.1481,-182.928C91.1157,-162.038 129.563,-111.96 173,-83.5 179.31,-79.3655 186.426,-75.8276 193.589,-72.8394"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="195.236,-75.9559 203.314,-69.1009 192.724,-69.422 195.236,-75.9559"/>
 </g>
-<!-- Node220&#45;&gt;Node212 -->
-<g id="edge16" class="edge"><title>Node220&#45;&gt;Node212</title>
+<!-- Node208&#45;&gt;Node200 -->
+<g id="edge16" class="edge"><title>Node208&#45;&gt;Node200</title>
 <path fill="none" stroke="midnightblue" d="M249.613,-259.025C266.092,-276.713 303.933,-314.802 343,-336.5 350.862,-340.867 359.634,-344.569 368.338,-347.661"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="367.49,-351.067 378.084,-350.895 369.695,-344.423 367.49,-351.067"/>
 </g>
-<!-- Node220&#45;&gt;Node213 -->
-<g id="edge13" class="edge"><title>Node220&#45;&gt;Node213</title>
+<!-- Node208&#45;&gt;Node201 -->
+<g id="edge13" class="edge"><title>Node208&#45;&gt;Node201</title>
 <path fill="none" stroke="midnightblue" d="M264.858,-259.001C285.499,-267.186 316.164,-279.263 343,-289.5 355.883,-294.415 370.047,-299.699 382.591,-304.338"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="381.656,-307.723 392.249,-307.901 384.079,-301.156 381.656,-307.723"/>
 </g>
-<!-- Node220&#45;&gt;Node214 -->
-<g id="edge12" class="edge"><title>Node220&#45;&gt;Node214</title>
+<!-- Node208&#45;&gt;Node202 -->
+<g id="edge12" class="edge"><title>Node208&#45;&gt;Node202</title>
 <path fill="none" stroke="midnightblue" d="M307.094,-257.32C321.83,-259.063 337.459,-260.912 352.202,-262.656"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="351.904,-266.145 362.246,-263.845 352.727,-259.194 351.904,-266.145"/>
 </g>
-<!-- Node220&#45;&gt;Node215 -->
-<g id="edge15" class="edge"><title>Node220&#45;&gt;Node215</title>
+<!-- Node208&#45;&gt;Node203 -->
+<g id="edge15" class="edge"><title>Node208&#45;&gt;Node203</title>
 <path fill="none" stroke="midnightblue" d="M288.101,-239.947C310.657,-235.372 337.856,-229.856 361.564,-225.048"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="362.383,-228.453 371.487,-223.035 360.991,-221.593 362.383,-228.453"/>
 </g>
-<!-- Node220&#45;&gt;Node216 -->
-<g id="edge11" class="edge"><title>Node220&#45;&gt;Node216</title>
+<!-- Node208&#45;&gt;Node204 -->
+<g id="edge11" class="edge"><title>Node208&#45;&gt;Node204</title>
 <path fill="none" stroke="midnightblue" d="M256.007,-239.942C275.432,-227.92 310.636,-207.305 343,-194.5 350.181,-191.659 357.904,-189.092 365.572,-186.818"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="366.538,-190.182 375.21,-184.096 364.635,-183.446 366.538,-190.182"/>
 </g>
-<!-- Node220&#45;&gt;Node218 -->
-<g id="edge10" class="edge"><title>Node220&#45;&gt;Node218</title>
+<!-- Node208&#45;&gt;Node206 -->
+<g id="edge10" class="edge"><title>Node208&#45;&gt;Node206</title>
 <path fill="none" stroke="midnightblue" d="M245.642,-239.78C257.883,-215.226 293.532,-150.331 343,-117.5 346.788,-114.986 350.88,-112.787 355.129,-110.864"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="356.635,-114.032 364.63,-107.081 354.045,-107.529 356.635,-114.032"/>
 </g>
-<!-- Node220&#45;&gt;Node219 -->
-<g id="edge14" class="edge"><title>Node220&#45;&gt;Node219</title>
+<!-- Node208&#45;&gt;Node207 -->
+<g id="edge14" class="edge"><title>Node208&#45;&gt;Node207</title>
 <path fill="none" stroke="midnightblue" d="M248.578,-239.836C264.132,-220.682 301.691,-177.83 343,-155.5 348.696,-152.421 354.904,-149.829 361.234,-147.649"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="362.707,-150.857 371.223,-144.553 360.635,-144.171 362.707,-150.857"/>
 </g>
-<!-- Node221&#45;&gt;Node218 -->
-<g id="edge18" class="edge"><title>Node221&#45;&gt;Node218</title>
+<!-- Node209&#45;&gt;Node206 -->
+<g id="edge18" class="edge"><title>Node209&#45;&gt;Node206</title>
 <path fill="none" stroke="midnightblue" d="M285.791,-69.089C309.53,-74.1713 338.884,-80.4554 363.944,-85.8203"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="363.52,-89.3089 374.031,-87.9799 364.986,-82.464 363.52,-89.3089"/>
 </g>

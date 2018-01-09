@@ -51,7 +51,6 @@ var group__map_wallet =
     [ "InMempool", "group__map_wallet.html#gae4af382e1eeba62ee7e84100c7234f23", null ],
     [ "IsChange", "group__map_wallet.html#gaba1c6108b7d2d3800dd487bab4c4c82e", null ],
     [ "IsDenominated", "group__map_wallet.html#gaa19d4251c40cfd00f55c0895891d5028", null ],
-    [ "IsDenominatedAmount", "group__map_wallet.html#ga070aa9135ca31d630fa798a868c0b59c", null ],
     [ "IsEquivalentTo", "group__map_wallet.html#ga663593382cf8b0fb993e2515261bb017", null ],
     [ "IsFromMe", "group__map_wallet.html#ga553ae4c21d71d887c392ae7b147f9dd0", null ],
     [ "IsHDEnabled", "group__map_wallet.html#gab357b83eabbf66ccfbccb9e658b47c72", null ],

@@ -139,6 +139,7 @@ $(document).ready(function(){initNavTree('instantx_8cpp.html','');});
 <code>#include &quot;<a class="el" href="txmempool_8h_source.html">txmempool.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="consensus_2validation_8h_source.html">consensus/validation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="validationinterface_8h_source.html">validationinterface.h</a>&quot;</code><br />
 <code>#include &lt;boost/algorithm/string/replace.hpp&gt;</code><br />
 <code>#include &lt;boost/thread.hpp&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -154,8 +155,6 @@ $(document).ready(function(){initNavTree('instantx_8cpp.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8c747077ad84071cba8b87f34fe38920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_wallet.html">CWallet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instantx_8cpp.html#a8c747077ad84071cba8b87f34fe38920">pwalletMain</a></td></tr>
-<tr class="separator:a8c747077ad84071cba8b87f34fe38920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc71256f703e47c9254093e32ed2994c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_tx_mem_pool.html">CTxMemPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instantx_8cpp.html#abc71256f703e47c9254093e32ed2994c">mempool</a></td></tr>
 <tr class="separator:abc71256f703e47c9254093e32ed2994c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a5a8ade95cb2fb16eb0efc75375c8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instantx_8cpp.html#a23a5a8ade95cb2fb16eb0efc75375c8f">fEnableInstantSend</a> = true</td></tr>
@@ -180,9 +179,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00026">26</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00032">32</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="instantx_8cpp_source.html#l00795">CInstantSend::GetTransactionLockSignatures()</a>, <a class="el" href="init_8cpp_source.html#l00818">InitParameterInteraction()</a>, <a class="el" href="instantx_8cpp_source.html#l00758">CInstantSend::IsInstantSendReadyToLock()</a>, <a class="el" href="instantx_8cpp_source.html#l00770">CInstantSend::IsLockedInstantSendTransaction()</a>, and <a class="el" href="instantx_8cpp_source.html#l00816">CInstantSend::IsTxLockCandidateTimedOut()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="instantx_8cpp_source.html#l00802">CInstantSend::GetTransactionLockSignatures()</a>, <a class="el" href="init_8cpp_source.html#l00822">InitParameterInteraction()</a>, <a class="el" href="instantx_8cpp_source.html#l00765">CInstantSend::IsInstantSendReadyToLock()</a>, <a class="el" href="instantx_8cpp_source.html#l00777">CInstantSend::IsLockedInstantSendTransaction()</a>, and <a class="el" href="instantx_8cpp_source.html#l00823">CInstantSend::IsTxLockCandidateTimedOut()</a>.</p>
 
 </div>
 </div>
@@ -198,9 +197,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00030">30</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00036">36</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>, <a class="el" href="net__processing_8cpp_source.html#l00677">AlreadyHave()</a>, <a class="el" href="validation_8cpp_source.html#l03119">CheckBlock()</a>, <a class="el" href="transactiondesc_8cpp_source.html#l00027">TransactionDesc::FormatTxStatus()</a>, <a class="el" href="wallet_8cpp_source.html#l04416">CMerkleTx::GetDepthInMainChain()</a>, <a class="el" href="governance-object_8cpp_source.html#l00502">CGovernanceObject::IsCollateralValid()</a>, <a class="el" href="instantx_8cpp_source.html#l01102">CTxLockVote::IsFailed()</a>, <a class="el" href="net__processing_8cpp_source.html#l00785">ProcessGetData()</a>, <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>, <a class="el" href="net_8cpp_source.html#l02477">CConnman::RelayTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l01760">CWalletTx::RelayWalletTransaction()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00830">sendrawtransaction()</a>, <a class="el" href="dsnotificationinterface_8cpp_source.html#l00068">CDSNotificationInterface::SyncTransaction()</a>, <a class="el" href="privatesend_8cpp_source.html#l00421">ThreadCheckPrivateSend()</a>, <a class="el" href="dsnotificationinterface_8cpp_source.html#l00030">CDSNotificationInterface::UpdatedBlockTip()</a>, and <a class="el" href="rpcwallet_8cpp_source.html#l00060">WalletTxToJSON()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>, <a class="el" href="net__processing_8cpp_source.html#l00679">AlreadyHave()</a>, <a class="el" href="validation_8cpp_source.html#l03122">CheckBlock()</a>, <a class="el" href="transactiondesc_8cpp_source.html#l00027">TransactionDesc::FormatTxStatus()</a>, <a class="el" href="wallet_8cpp_source.html#l04395">CMerkleTx::GetDepthInMainChain()</a>, <a class="el" href="governance-object_8cpp_source.html#l00503">CGovernanceObject::IsCollateralValid()</a>, <a class="el" href="instantx_8cpp_source.html#l01100">CTxLockVote::IsFailed()</a>, <a class="el" href="net__processing_8cpp_source.html#l00788">ProcessGetData()</a>, <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>, <a class="el" href="net_8cpp_source.html#l02476">CConnman::RelayTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l01752">CWalletTx::RelayWalletTransaction()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00831">sendrawtransaction()</a>, <a class="el" href="dsnotificationinterface_8cpp_source.html#l00056">CDSNotificationInterface::SyncTransaction()</a>, <a class="el" href="privatesend_8cpp_source.html#l00439">ThreadCheckPrivateSend()</a>, <a class="el" href="dsnotificationinterface_8cpp_source.html#l00033">CDSNotificationInterface::UpdatedBlockTip()</a>, and <a class="el" href="rpcwallet_8cpp_source.html#l00060">WalletTxToJSON()</a>.</p>
 
 </div>
 </div>
@@ -216,7 +215,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="wallet_8cpp_source.html#l04457">CMerkleTx::AcceptToMemoryPool()</a>, <a class="el" href="net__processing_8cpp_source.html#l00677">AlreadyHave()</a>, <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="miner_8cpp_source.html#l00403">BitcoinMiner()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00392">CPrivateSendServer::ChargeFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00469">CPrivateSendServer::ChargeRandomFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00331">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, <a class="el" href="mining_8cpp_source.html#l00811">estimatefee()</a>, <a class="el" href="mining_8cpp_source.html#l00842">estimatepriority()</a>, <a class="el" href="mining_8cpp_source.html#l00869">estimatesmartfee()</a>, <a class="el" href="mining_8cpp_source.html#l00905">estimatesmartpriority()</a>, <a class="el" href="misc_8cpp_source.html#l00583">getaddressmempool()</a>, <a class="el" href="mining_8cpp_source.html#l00337">getblocktemplate()</a>, <a class="el" href="wallet_8cpp_source.html#l04416">CMerkleTx::GetDepthInMainChain()</a>, <a class="el" href="clientmodel_8cpp_source.html#l00155">ClientModel::getMempoolDynamicUsage()</a>, <a class="el" href="clientmodel_8cpp_source.html#l00150">ClientModel::getMempoolSize()</a>, <a class="el" href="mining_8cpp_source.html#l00235">getmininginfo()</a>, <a class="el" href="blockchain_8cpp_source.html#l00591">gettxout()</a>, <a class="el" href="wallet_8cpp_source.html#l02032">CWalletTx::InMempool()</a>, <a class="el" href="privatesend_8cpp_source.html#l00174">CPrivateSend::IsCollateralValid()</a>, <a class="el" href="blockchain_8cpp_source.html#l00948">mempoolInfoToJSON()</a>, <a class="el" href="blockchain_8cpp_source.html#l00182">mempoolToJSON()</a>, <a class="el" href="init_8cpp_source.html#l00210">PrepareShutdown()</a>, <a class="el" href="mining_8cpp_source.html#l00279">prioritisetransaction()</a>, <a class="el" href="net__processing_8cpp_source.html#l00785">ProcessGetData()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00018">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>, <a class="el" href="wallet_8cpp_source.html#l01728">CWallet::ReacceptWalletTransactions()</a>, <a class="el" href="instantx_8cpp_source.html#l00539">CInstantSend::ResolveConflicts()</a>, <a class="el" href="rest_8cpp_source.html#l00403">rest_getutxos()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">CPrivateSendClient::SendDenominate()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00830">sendrawtransaction()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00588">signrawtransaction()</a>, <a class="el" href="dsnotificationinterface_8cpp_source.html#l00030">CDSNotificationInterface::UpdatedBlockTip()</a>, <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00746">SendCoinsDialog::updateSmartFeeLabel()</a>, and <a class="el" href="rpcwallet_8cpp_source.html#l00060">WalletTxToJSON()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="wallet_8cpp_source.html#l04436">CMerkleTx::AcceptToMemoryPool()</a>, <a class="el" href="net__processing_8cpp_source.html#l00679">AlreadyHave()</a>, <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="miner_8cpp_source.html#l00403">BitcoinMiner()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00393">CPrivateSendServer::ChargeFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00470">CPrivateSendServer::ChargeRandomFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00332">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="miner_8cpp_source.html#l00077">CreateNewBlock()</a>, <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, <a class="el" href="mining_8cpp_source.html#l00824">estimatefee()</a>, <a class="el" href="mining_8cpp_source.html#l00855">estimatepriority()</a>, <a class="el" href="mining_8cpp_source.html#l00882">estimatesmartfee()</a>, <a class="el" href="mining_8cpp_source.html#l00918">estimatesmartpriority()</a>, <a class="el" href="misc_8cpp_source.html#l00592">getaddressmempool()</a>, <a class="el" href="mining_8cpp_source.html#l00339">getblocktemplate()</a>, <a class="el" href="wallet_8cpp_source.html#l04395">CMerkleTx::GetDepthInMainChain()</a>, <a class="el" href="clientmodel_8cpp_source.html#l00155">ClientModel::getMempoolDynamicUsage()</a>, <a class="el" href="clientmodel_8cpp_source.html#l00150">ClientModel::getMempoolSize()</a>, <a class="el" href="mining_8cpp_source.html#l00236">getmininginfo()</a>, <a class="el" href="blockchain_8cpp_source.html#l00662">gettxout()</a>, <a class="el" href="wallet_8cpp_source.html#l02024">CWalletTx::InMempool()</a>, <a class="el" href="privatesend_8cpp_source.html#l00179">CPrivateSend::IsCollateralValid()</a>, <a class="el" href="blockchain_8cpp_source.html#l01019">mempoolInfoToJSON()</a>, <a class="el" href="blockchain_8cpp_source.html#l00186">mempoolToJSON()</a>, <a class="el" href="init_8cpp_source.html#l00212">PrepareShutdown()</a>, <a class="el" href="mining_8cpp_source.html#l00281">prioritisetransaction()</a>, <a class="el" href="net__processing_8cpp_source.html#l00788">ProcessGetData()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00019">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>, <a class="el" href="wallet_8cpp_source.html#l01720">CWallet::ReacceptWalletTransactions()</a>, <a class="el" href="instantx_8cpp_source.html#l00546">CInstantSend::ResolveConflicts()</a>, <a class="el" href="rest_8cpp_source.html#l00406">rest_getutxos()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">CPrivateSendClient::SendDenominate()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00831">sendrawtransaction()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00589">signrawtransaction()</a>, <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00746">SendCoinsDialog::updateSmartFeeLabel()</a>, and <a class="el" href="rpcwallet_8cpp_source.html#l00060">WalletTxToJSON()</a>.</p>
 
 </div>
 </div>
@@ -232,9 +231,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00028">28</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00034">34</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="walletmodel_8cpp_source.html#l00160">WalletModel::checkBalanceChanged()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00134">WalletModel::pollBalanceChanged()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00202">OverviewPage::setBalance()</a>, <a class="el" href="transactionrecord_8cpp_source.html#l00319">TransactionRecord::statusUpdateNeeded()</a>, <a class="el" href="instantx_8cpp_source.html#l00480">CInstantSend::UpdateLockedTransaction()</a>, and <a class="el" href="transactionrecord_8cpp_source.html#l00231">TransactionRecord::updateStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="walletmodel_8cpp_source.html#l00160">WalletModel::checkBalanceChanged()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00134">WalletModel::pollBalanceChanged()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00202">OverviewPage::setBalance()</a>, <a class="el" href="transactionrecord_8cpp_source.html#l00319">TransactionRecord::statusUpdateNeeded()</a>, <a class="el" href="instantx_8cpp_source.html#l00487">CInstantSend::UpdateLockedTransaction()</a>, and <a class="el" href="transactionrecord_8cpp_source.html#l00231">TransactionRecord::updateStatus()</a>.</p>
 
 </div>
 </div>
@@ -250,25 +249,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00027">27</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instantx_8cpp_source.html#l00033">33</a> of file <a class="el" href="instantx_8cpp_source.html">instantx.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00792">getbalance()</a>, <a class="el" href="instantx_8cpp_source.html#l00811">CInstantSend::GetConfirmations()</a>, <a class="el" href="wallet_8cpp_source.html#l04416">CMerkleTx::GetDepthInMainChain()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00701">getreceivedbyaccount()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00641">getreceivedbyaddress()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01645">listaccounts()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01380">listreceivedbyaccount()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01339">listreceivedbyaddress()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00958">sendfrom()</a>, and <a class="el" href="rpcwallet_8cpp_source.html#l01024">sendmany()</a>.</p>
-
-</div>
-</div>
-<a id="a8c747077ad84071cba8b87f34fe38920"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c747077ad84071cba8b87f34fe38920">&#9670;&nbsp;</a></span>pwalletMain</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_wallet.html">CWallet</a>* pwalletMain</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="instantx_8cpp_source.html#l00043">CInstantSend::ProcessMessage()</a>, <a class="el" href="instantx_8cpp_source.html#l00408">CInstantSend::ProcessOrphanTxLockVotes()</a>, <a class="el" href="instantx_8cpp_source.html#l00278">CInstantSend::ProcessTxLockVote()</a>, <a class="el" href="instantx_8cpp_source.html#l00458">CInstantSend::TryToFinalizeLockCandidate()</a>, and <a class="el" href="instantx_8cpp_source.html#l00480">CInstantSend::UpdateLockedTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00792">getbalance()</a>, <a class="el" href="instantx_8cpp_source.html#l00818">CInstantSend::GetConfirmations()</a>, <a class="el" href="wallet_8cpp_source.html#l04395">CMerkleTx::GetDepthInMainChain()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00701">getreceivedbyaccount()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00641">getreceivedbyaddress()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01645">listaccounts()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01380">listreceivedbyaccount()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01339">listreceivedbyaddress()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l00958">sendfrom()</a>, and <a class="el" href="rpcwallet_8cpp_source.html#l01024">sendmany()</a>.</p>
 
 </div>
 </div>
@@ -279,7 +262,7 @@ Variables</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="instantx_8cpp.html">instantx.cpp</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:19 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:26 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

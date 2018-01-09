@@ -1,7 +1,7 @@
 var memusage_8h =
 [
     [ "stl_tree_node", "structmemusage_1_1stl__tree__node.html", "structmemusage_1_1stl__tree__node" ],
-    [ "boost_unordered_node", "structmemusage_1_1boost__unordered__node.html", "structmemusage_1_1boost__unordered__node" ],
+    [ "unordered_node", "structmemusage_1_1unordered__node.html", "structmemusage_1_1unordered__node" ],
     [ "DynamicUsage", "memusage_8h.html#a24d4e7ba4b087b7c854e819c37e20ea0", null ],
     [ "DynamicUsage", "memusage_8h.html#acf15bdba7e4327aa5d5d1fe71eca19a3", null ],
     [ "DynamicUsage", "memusage_8h.html#acdf1e4b51f6362bd060fb640da9f1992", null ],
@@ -20,6 +20,8 @@ var memusage_8h =
     [ "DynamicUsage", "memusage_8h.html#a345c786f94a5f4d423ba6240273a804f", null ],
     [ "DynamicUsage", "memusage_8h.html#a6551a2eb5c7c55534efd8715da244e83", null ],
     [ "DynamicUsage", "memusage_8h.html#a6ad91da241c7c9802976b38e60091967", null ],
+    [ "DynamicUsage", "memusage_8h.html#a07a556d14952f53269ce62f5965b90f1", null ],
+    [ "DynamicUsage", "memusage_8h.html#ad9abf7c55e82f4bb2a6eaa86e1f4f7ee", null ],
     [ "IncrementalDynamicUsage", "memusage_8h.html#adb94a858deacb691d493a604f572a9a9", null ],
     [ "IncrementalDynamicUsage", "memusage_8h.html#ac3378c097b343ce1539a862fa273b8da", null ],
     [ "MallocUsage", "memusage_8h.html#ae8ade104f83bf4c608c282adc365bf90", null ]

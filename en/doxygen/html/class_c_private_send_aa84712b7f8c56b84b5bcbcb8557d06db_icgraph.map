@@ -1,24 +1,51 @@
 <map id="CPrivateSend::GetMaxCollateralAmount" name="CPrivateSend::GetMaxCollateralAmount">
-<area shape="rect" id="node2" href="$class_c_private_send_client.html#a1318eb1f8e5a845036cfe99f0b3f8b36" title="CPrivateSendClient\l::CreateDenominated" alt="" coords="286,26,433,67"/>
-<area shape="rect" id="node3" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="266,91,453,133"/>
-<area shape="rect" id="node14" href="$group___actions.html#gaea356cdf45e0ec83056ca5b0576add2b" title="CWallet::IsCollateralAmount" alt="" coords="265,208,453,235"/>
-<area shape="rect" id="node22" href="$class_c_private_send_client.html#ad603beaa1644f6e6cfb8ca7d1400d46e" title="CPrivateSendClient\l::MakeCollateralAmounts" alt="" coords="275,259,444,301"/>
-<area shape="rect" id="node23" href="$class_overview_page.html#adb8782b6d0e6a976d29d249e63e9859b" title="OverviewPage::togglePrivateSend" alt="" coords="501,157,723,184"/>
-<area shape="rect" id="node4" href="$server_8h.html#a6f0f20fd2a24851d47a6120eeca7d3e4" title="privatesend" alt="" coords="567,5,657,32"/>
-<area shape="rect" id="node5" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="509,56,715,83"/>
-<area shape="rect" id="node10" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="507,107,717,133"/>
-<area shape="rect" id="node6" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="838,56,909,83"/>
-<area shape="rect" id="node7" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="1086,17,1149,44"/>
-<area shape="rect" id="node9" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="1045,68,1190,95"/>
-<area shape="rect" id="node8" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1329,17,1379,44"/>
-<area shape="rect" id="node11" href="$class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" title="OverviewPage::setWalletModel" alt="" coords="771,119,976,145"/>
-<area shape="rect" id="node12" href="$class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" title="Set the wallet model. " alt="" coords="1024,119,1211,145"/>
-<area shape="rect" id="node13" href="$class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" title="WalletFrame::addWallet" alt="" coords="1273,119,1435,145"/>
-<area shape="rect" id="node15" href="$class_transaction_record.html#a9f5db4465fa5fdcc3f9af525096bcdb9" title="TransactionRecord::\ldecomposeTransaction" alt="" coords="533,209,691,250"/>
-<area shape="rect" id="node16" href="$class_transaction_table_priv.html#a1f81da5d7cfb2aac03a5e18e6bc91792" title="TransactionTablePriv\l::refreshWallet" alt="" coords="801,195,946,237"/>
-<area shape="rect" id="node18" href="$class_transaction_table_priv.html#a5a8454ce91251c4d9eb927bf2850745c" title="TransactionTablePriv\l::updateWallet" alt="" coords="801,261,946,302"/>
-<area shape="rect" id="node17" href="$class_transaction_table_model.html#ac5cc82df37f09b4aed2d20628a77e756" title="TransactionTableModel\l::TransactionTableModel" alt="" coords="1035,195,1200,237"/>
-<area shape="rect" id="node19" href="$class_transaction_table_model.html#a8de43b3c7ba0612304906eb5a2f51a06" title="TransactionTableModel\l::updateTransaction" alt="" coords="1039,261,1196,302"/>
-<area shape="rect" id="node20" href="$class_transaction_view.html#a8dc3e9fc910cec4f6764d84c21941180" title="TransactionView::abandonTx" alt="" coords="1259,268,1449,295"/>
-<area shape="rect" id="node21" href="$class_transaction_view.html#a6bad80e62c684ad1e77250510c9323aa" title="TransactionView::TransactionView" alt="" coords="1497,268,1721,295"/>
+<area shape="rect" id="node2" href="$class_c_private_send_client.html#a1318eb1f8e5a845036cfe99f0b3f8b36" title="CPrivateSendClient\l::CreateDenominated" alt="" coords="303,5,449,47"/>
+<area shape="rect" id="node3" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="1004,188,1191,229"/>
+<area shape="rect" id="node13" href="$class_c_private_send.html#a529046deea87098dabcba937527f9c20" title="CPrivateSend::IsCollateral\lAmount" alt="" coords="287,240,465,281"/>
+<area shape="rect" id="node49" href="$class_c_private_send_client.html#ad603beaa1644f6e6cfb8ca7d1400d46e" title="CPrivateSendClient\l::MakeCollateralAmounts" alt="" coords="291,357,461,399"/>
+<area shape="rect" id="node50" href="$class_overview_page.html#adb8782b6d0e6a976d29d249e63e9859b" title="OverviewPage::togglePrivateSend" alt="" coords="265,306,487,333"/>
+<area shape="rect" id="node4" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="1255,195,1461,222"/>
+<area shape="rect" id="node9" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="1253,275,1463,302"/>
+<area shape="rect" id="node5" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="1602,195,1673,222"/>
+<area shape="rect" id="node6" href="$dashd_8cpp.html#ac59316b767e6984e1285f0531275286b" title="AppInit" alt="" coords="1863,170,1926,197"/>
+<area shape="rect" id="node8" href="$class_bitcoin_core.html#af34ca069cda1d4362dcc109b4397fb62" title="BitcoinCore::initialize" alt="" coords="1822,221,1967,247"/>
+<area shape="rect" id="node7" href="$dashd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="2096,170,2147,197"/>
+<area shape="rect" id="node10" href="$class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" title="OverviewPage::setWalletModel" alt="" coords="1535,369,1740,395"/>
+<area shape="rect" id="node11" href="$class_wallet_view.html#a0a37ff693a4f9c1e5ddc23f9cd3913be" title="Set the wallet model. " alt="" coords="1801,433,1988,459"/>
+<area shape="rect" id="node12" href="$class_wallet_frame.html#aa199c3f27654199d84c365cf86167d86" title="WalletFrame::addWallet" alt="" coords="2040,433,2203,459"/>
+<area shape="rect" id="node14" href="$class_transaction_record.html#a9f5db4465fa5fdcc3f9af525096bcdb9" title="TransactionRecord::\ldecomposeTransaction" alt="" coords="558,779,715,820"/>
+<area shape="rect" id="node21" href="$group__map_wallet.html#ga50bbe9588d1d53acb5e85240de353708" title="CWallet::GetRealOutpoint\lPrivateSendRounds" alt="" coords="549,240,724,281"/>
+<area shape="rect" id="node22" href="$group___actions.html#ga1cc229323a238a59d4eb592286c8bf2a" title="populate vCoins with vector of available COutputs. " alt="" coords="555,458,719,485"/>
+<area shape="rect" id="node43" href="$group___actions.html#ga5444fca647f090a8d55f20fe8ca3f4d1" title="CWallet::SelectCoinsGroupped\lByAddresses" alt="" coords="535,123,739,164"/>
+<area shape="rect" id="node46" href="$group___actions.html#ga099c7618f04c56b4bf592eafd1362489" title="CWallet::SelectCoinsDark" alt="" coords="549,189,725,215"/>
+<area shape="rect" id="node48" href="$group___actions.html#ga5a08ef8814c4f50263a6dac7da9eca44" title="CWallet::GetCollateralTxDSIn" alt="" coords="537,306,736,333"/>
+<area shape="rect" id="node15" href="$class_transaction_table_priv.html#a1f81da5d7cfb2aac03a5e18e6bc91792" title="TransactionTablePriv\l::refreshWallet" alt="" coords="799,779,944,820"/>
+<area shape="rect" id="node17" href="$class_transaction_table_priv.html#a5a8454ce91251c4d9eb927bf2850745c" title="TransactionTablePriv\l::updateWallet" alt="" coords="799,844,944,885"/>
+<area shape="rect" id="node16" href="$class_transaction_table_model.html#ac5cc82df37f09b4aed2d20628a77e756" title="TransactionTableModel\l::TransactionTableModel" alt="" coords="1015,779,1180,820"/>
+<area shape="rect" id="node18" href="$class_transaction_table_model.html#a8de43b3c7ba0612304906eb5a2f51a06" title="TransactionTableModel\l::updateTransaction" alt="" coords="1019,859,1176,900"/>
+<area shape="rect" id="node19" href="$class_transaction_view.html#a8dc3e9fc910cec4f6764d84c21941180" title="TransactionView::abandonTx" alt="" coords="1263,873,1453,899"/>
+<area shape="rect" id="node20" href="$class_transaction_view.html#a6bad80e62c684ad1e77250510c9323aa" title="TransactionView::TransactionView" alt="" coords="1525,873,1749,899"/>
+<area shape="rect" id="node23" href="$class_wallet_model.html#a4d2cb225a19b89c64f4b5d81faf89beb" title="WalletModel::getBalance" alt="" coords="1014,509,1181,535"/>
+<area shape="rect" id="node34" href="$class_wallet_model.html#ae5ce26bba42701b45de766ef11cc9a47" title="WalletModel::listCoins" alt="" coords="795,601,948,627"/>
+<area shape="rect" id="node41" href="$rpcwallet_8cpp.html#a465ffe9ab07fa4986f64d618404ba7c3" title="listunspent" alt="" coords="829,407,914,434"/>
+<area shape="rect" id="node42" href="$server_8h.html#adc51a168fd3ea207996ae4f8d9d6c6ea" title="masternode" alt="" coords="826,458,917,485"/>
+<area shape="rect" id="node24" href="$class_send_coins_dialog.html#a73a6c1b1850a334ee652ac167713a2aa" title="SendCoinsDialog::setModel" alt="" coords="1545,445,1729,471"/>
+<area shape="rect" id="node25" href="$class_send_coins_dialog.html#a74815ad8502b126200b6fd2e59e9f042" title="SendCoinsDialog::updateDisplayUnit" alt="" coords="1239,509,1477,535"/>
+<area shape="rect" id="node27" href="$class_wallet_model.html#adcc4eb8cd71cb4de223621866bb7fb7d" title="WalletModel::checkBalance\lChanged" alt="" coords="1266,611,1450,652"/>
+<area shape="rect" id="node33" href="$class_wallet_model.html#a8abc851901c7c7343ebfb5a8e5fc0154" title="WalletModel::prepareTransaction" alt="" coords="1531,495,1744,522"/>
+<area shape="rect" id="node26" href="$class_send_coins_dialog.html#affacd36b4df87a68e2fe706ef388c0a6" title="SendCoinsDialog::SendCoins\lDialog" alt="" coords="1797,575,1992,616"/>
+<area shape="rect" id="node28" href="$class_wallet_model.html#a51469b2d95cfd4bc0a14ee456fca7b95" title="WalletModel::pollBalance\lChanged" alt="" coords="1553,648,1722,689"/>
+<area shape="rect" id="node30" href="$class_wallet_model.html#a53443aca544c824550f21e5f87e4ec39" title="WalletModel::sendCoins" alt="" coords="1555,597,1719,623"/>
+<area shape="rect" id="node29" href="$class_wallet_model.html#a36282857c97bcaad796a2b5c7398245c" title="WalletModel::WalletModel" alt="" coords="1807,655,1982,682"/>
+<area shape="rect" id="node31" href="$class_send_coins_dialog.html#aab03626a859f22a68760b235a1df6bc9" title="SendCoinsDialog::send" alt="" coords="1815,509,1974,535"/>
+<area shape="rect" id="node32" href="$class_send_coins_dialog.html#a2cab7cf9ea5040b9e2189297f7d3c764" title="SendCoinsDialog::on\l_sendButton_clicked" alt="" coords="2049,501,2194,543"/>
+<area shape="rect" id="node35" href="$class_coin_control_dialog.html#aadea33050e5c1efd5eae8d2fcfa721f9" title="CoinControlDialog::\lupdateView" alt="" coords="1029,684,1165,725"/>
+<area shape="rect" id="node36" href="$class_coin_control_dialog.html#a775c6d290cb63667a434b09072094533" title="CoinControlDialog::\lradioListMode" alt="" coords="1290,741,1426,783"/>
+<area shape="rect" id="node38" href="$class_coin_control_dialog.html#a1990d478f3ffba666c358a4f1bd395ec" title="CoinControlDialog::\lradioTreeMode" alt="" coords="1290,807,1426,848"/>
+<area shape="rect" id="node39" href="$class_coin_control_dialog.html#a4c34a48574814089c54f763a22f5317a" title="CoinControlDialog::\lsetModel" alt="" coords="1290,676,1426,717"/>
+<area shape="rect" id="node37" href="$class_coin_control_dialog.html#a3cec3ece6aa5eec3e7829e042356a659" title="CoinControlDialog::\lCoinControlDialog" alt="" coords="1569,793,1705,835"/>
+<area shape="rect" id="node40" href="$class_send_coins_dialog.html#a59d757d9e4bea5b380eb480fd79cfb49" title="SendCoinsDialog::coinControl\lButtonClicked" alt="" coords="1539,713,1736,755"/>
+<area shape="rect" id="node44" href="$class_c_private_send_client.html#ac0c910708ed9797f5a9e5fe68144bcc1" title="Create denominations. " alt="" coords="798,123,945,164"/>
+<area shape="rect" id="node45" href="$class_c_private_send_client.html#a3f4bddf72925cabe06a4c85f6ad522d7" title="Split up large inputs or make fee sized inputs. " alt="" coords="787,188,956,229"/>
+<area shape="rect" id="node47" href="$class_c_private_send_client.html#a4394dfd7c898722e494a417cce66aeea" title="CPrivateSendClient\l::StartNewQueue" alt="" coords="803,253,940,295"/>
 </map>

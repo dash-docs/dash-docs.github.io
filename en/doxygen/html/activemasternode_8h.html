@@ -126,9 +126,10 @@ $(document).ready(function(){initNavTree('activemasternode_8h.html','');});
 <div class="title">activemasternode.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="net_8h_source.html">net.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="chainparams_8h_source.html">chainparams.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="key_8h_source.html">key.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="wallet_8h_source.html">wallet/wallet.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="net_8h_source.html">net.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="transaction_8h_source.html">primitives/transaction.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for activemasternode.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -142,7 +143,7 @@ $(document).ready(function(){initNavTree('activemasternode_8h.html','');});
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="activemasternode_8h__dep__incl.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="activemasternode_8h__dep__incl.svg" width="100%" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
@@ -189,9 +190,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00014">14</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00015">15</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00052">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">CActiveMasternode::GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00016">CActiveMasternode::ManageState()</a>, and <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00045">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">CActiveMasternode::GetStatus()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00014">CActiveMasternode::ManageState()</a>.</p>
 
 </div>
 </div>
@@ -215,9 +216,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00016">16</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00017">17</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00052">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">CActiveMasternode::GetStatus()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00277">CActiveMasternode::ManageStateLocal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00045">CActiveMasternode::GetStateString()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00057">CActiveMasternode::GetStatus()</a>.</p>
 
 </div>
 </div>
@@ -241,9 +242,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00017">17</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00018">18</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00052">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">CActiveMasternode::GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00141">CActiveMasternode::ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">CActiveMasternode::ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">CActiveMasternode::ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00096">CActiveMasternode::SendMasternodePing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00045">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">CActiveMasternode::GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00128">CActiveMasternode::ManageStateInitial()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00198">CActiveMasternode::ManageStateRemote()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00083">CActiveMasternode::SendMasternodePing()</a>.</p>
 
 </div>
 </div>
@@ -267,9 +268,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00018">18</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00019">19</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00052">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">CActiveMasternode::GetStatus()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00016">CActiveMasternode::ManageState()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00277">CActiveMasternode::ManageStateLocal()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00236">CActiveMasternode::ManageStateRemote()</a>, and <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00045">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">CActiveMasternode::GetStatus()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00198">CActiveMasternode::ManageStateRemote()</a>.</p>
 
 </div>
 </div>
@@ -293,9 +294,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00015">15</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8h_source.html#l00016">16</a> of file <a class="el" href="activemasternode_8h_source.html">activemasternode.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00052">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00064">CActiveMasternode::GetStatus()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00016">CActiveMasternode::ManageState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="activemasternode_8cpp_source.html#l00045">CActiveMasternode::GetStateString()</a>, <a class="el" href="activemasternode_8cpp_source.html#l00057">CActiveMasternode::GetStatus()</a>, and <a class="el" href="activemasternode_8cpp_source.html#l00014">CActiveMasternode::ManageState()</a>.</p>
 
 </div>
 </div>
@@ -311,9 +312,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00014">14</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="activemasternode_8cpp_source.html#l00012">12</a> of file <a class="el" href="activemasternode_8cpp_source.html">activemasternode.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="masternode_8cpp_source.html#l00139">CMasternode::Check()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00531">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01370">CMasternodeMan::CheckMnbAndUpdateMasternodeList()</a>, <a class="el" href="masternode_8cpp_source.html#l00543">CMasternodeBroadcast::CheckOutpoint()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00331">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00720">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00927">CMasternodeMan::DoFullVerificationStep()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00025">gobject()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00096">masternode()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00715">CMasternodePayments::ProcessBlock()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00018">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01125">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01085">CMasternodeMan::SendVerifyReply()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00836">sentinelping()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00416">CMasternodePaymentVote::Sign()</a>, <a class="el" href="instantx_8cpp_source.html#l01067">CTxLockVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00048">CDarksendQueue::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00086">CDarksendBroadcastTx::Sign()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00057">CMasternodeSync::SwitchToNextAsset()</a>, <a class="el" href="privatesend_8cpp_source.html#l00421">ThreadCheckPrivateSend()</a>, <a class="el" href="masternode_8cpp_source.html#l00491">CMasternodeBroadcast::Update()</a>, <a class="el" href="masternode_8cpp_source.html#l00053">CMasternode::UpdateFromNewBroadcast()</a>, and <a class="el" href="instantx_8cpp_source.html#l00178">CInstantSend::Vote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="masternode_8cpp_source.html#l00127">CMasternode::Check()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00520">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01351">CMasternodeMan::CheckMnbAndUpdateMasternodeList()</a>, <a class="el" href="masternode_8cpp_source.html#l00533">CMasternodeBroadcast::CheckOutpoint()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00332">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00708">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="masternodeman_8cpp_source.html#l00905">CMasternodeMan::DoFullVerificationStep()</a>, <a class="el" href="rpc_2governance_8cpp_source.html#l00028">gobject()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00109">masternode()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00714">CMasternodePayments::ProcessBlock()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00019">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01103">CMasternodeMan::ProcessVerifyReply()</a>, <a class="el" href="masternodeman_8cpp_source.html#l01063">CMasternodeMan::SendVerifyReply()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00833">sentinelping()</a>, <a class="el" href="masternode-payments_8cpp_source.html#l00418">CMasternodePaymentVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00038">CDarksendQueue::Sign()</a>, <a class="el" href="instantx_8cpp_source.html#l01065">CTxLockVote::Sign()</a>, <a class="el" href="privatesend_8cpp_source.html#l00076">CDarksendBroadcastTx::Sign()</a>, <a class="el" href="masternode-sync_8cpp_source.html#l00058">CMasternodeSync::SwitchToNextAsset()</a>, <a class="el" href="privatesend_8cpp_source.html#l00439">ThreadCheckPrivateSend()</a>, <a class="el" href="masternode_8cpp_source.html#l00481">CMasternodeBroadcast::Update()</a>, <a class="el" href="masternode_8cpp_source.html#l00058">CMasternode::UpdateFromNewBroadcast()</a>, and <a class="el" href="instantx_8cpp_source.html#l00185">CInstantSend::Vote()</a>.</p>
 
 </div>
 </div>
@@ -324,7 +325,7 @@ Variables</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="activemasternode_8h.html">activemasternode.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:17 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:25 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

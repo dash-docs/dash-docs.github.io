@@ -9,112 +9,112 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 81)">
 <title>CConnman::GetAddresses</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-81 904,-81 904,4 -4,4"/>
-<!-- Node1415 -->
-<g id="node1" class="node"><title>Node1415</title>
+<!-- Node1391 -->
+<g id="node1" class="node"><title>Node1391</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-38.5 0,-57.5 134,-57.5 134,-38.5 0,-38.5"/>
 <text text-anchor="middle" x="67" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CConnman::GetAddresses</text>
 </g>
-<!-- Node1416 -->
-<g id="node2" class="node"><title>Node1416</title>
+<!-- Node1392 -->
+<g id="node2" class="node"><title>Node1392</title>
 <g id="a_node2"><a xlink:href="class_c_addr_man.html#a69cc6138e696cf88de60925d26023bf2" target="_top" xlink:title="Return a bunch of addresses, selected at random. ">
 <polygon fill="white" stroke="black" points="170,-38.5 170,-57.5 275,-57.5 275,-38.5 170,-38.5"/>
 <text text-anchor="middle" x="222.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CAddrMan::GetAddr</text>
 </a>
 </g>
 </g>
-<!-- Node1415&#45;&gt;Node1416 -->
-<g id="edge1" class="edge"><title>Node1415&#45;&gt;Node1416</title>
+<!-- Node1391&#45;&gt;Node1392 -->
+<g id="edge1" class="edge"><title>Node1391&#45;&gt;Node1392</title>
 <path fill="none" stroke="midnightblue" d="M134.435,-48C142.845,-48 151.423,-48 159.756,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="159.771,-51.5001 169.771,-48 159.771,-44.5001 159.771,-51.5001"/>
 </g>
-<!-- Node1417 -->
-<g id="node3" class="node"><title>Node1417</title>
+<!-- Node1393 -->
+<g id="node3" class="node"><title>Node1393</title>
 <g id="a_node3"><a xlink:href="class_c_addr_man.html#a0c2677ae50ce0d680f0105b285d1f5d0" target="_top" xlink:title="Consistency check. ">
 <polygon fill="white" stroke="black" points="317,-57.5 317,-76.5 415,-76.5 415,-57.5 317,-57.5"/>
 <text text-anchor="middle" x="366" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">CAddrMan::Check</text>
 </a>
 </g>
 </g>
-<!-- Node1416&#45;&gt;Node1417 -->
-<g id="edge2" class="edge"><title>Node1416&#45;&gt;Node1417</title>
+<!-- Node1392&#45;&gt;Node1393 -->
+<g id="edge2" class="edge"><title>Node1392&#45;&gt;Node1393</title>
 <path fill="none" stroke="midnightblue" d="M275.386,-54.967C285.561,-56.3332 296.297,-57.7749 306.666,-59.1672"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="306.502,-62.6764 316.879,-60.5385 307.433,-55.7387 306.502,-62.6764"/>
 </g>
-<!-- Node1418 -->
-<g id="node4" class="node"><title>Node1418</title>
+<!-- Node1394 -->
+<g id="node4" class="node"><title>Node1394</title>
 <g id="a_node4"><a xlink:href="class_c_addr_man.html#aff86d04dc7c0e0afae3ff5998417db17" target="_top" xlink:title="Select several addresses at once. ">
 <polygon fill="white" stroke="black" points="311,-19.5 311,-38.5 421,-38.5 421,-19.5 311,-19.5"/>
 <text text-anchor="middle" x="366" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">CAddrMan::GetAddr_</text>
 </a>
 </g>
 </g>
-<!-- Node1416&#45;&gt;Node1418 -->
-<g id="edge3" class="edge"><title>Node1416&#45;&gt;Node1418</title>
+<!-- Node1392&#45;&gt;Node1394 -->
+<g id="edge3" class="edge"><title>Node1392&#45;&gt;Node1394</title>
 <path fill="none" stroke="midnightblue" d="M275.386,-41.033C283.663,-39.9216 292.311,-38.7603 300.832,-37.6163"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="301.299,-41.085 310.744,-36.2852 300.368,-34.1472 301.299,-41.085"/>
 </g>
-<!-- Node1419 -->
-<g id="node5" class="node"><title>Node1419</title>
+<!-- Node1395 -->
+<g id="node5" class="node"><title>Node1395</title>
 <g id="a_node5"><a xlink:href="class_c_addr_man.html#a4bf12611bd89c5e524396e50bf8f3846" target="_top" xlink:title="Wraps GetRandInt to allow tests to override RandomInt and make it determinismistic. ">
 <polygon fill="white" stroke="black" points="464,-38.5 464,-57.5 581,-57.5 581,-38.5 464,-38.5"/>
 <text text-anchor="middle" x="522.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">CAddrMan::RandomInt</text>
 </a>
 </g>
 </g>
-<!-- Node1418&#45;&gt;Node1419 -->
-<g id="edge4" class="edge"><title>Node1418&#45;&gt;Node1419</title>
+<!-- Node1394&#45;&gt;Node1395 -->
+<g id="edge4" class="edge"><title>Node1394&#45;&gt;Node1395</title>
 <path fill="none" stroke="midnightblue" d="M421.037,-35.6453C431.63,-36.948 442.865,-38.3297 453.838,-39.6791"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="453.463,-43.1593 463.815,-40.9061 454.317,-36.2116 453.463,-43.1593"/>
 </g>
-<!-- Node1423 -->
-<g id="node9" class="node"><title>Node1423</title>
+<!-- Node1399 -->
+<g id="node9" class="node"><title>Node1399</title>
 <g id="a_node9"><a xlink:href="class_c_addr_man.html#a3074bc8e3dcfb5348054613f575dc38e" target="_top" xlink:title="Swap two elements in vRandom. ">
 <polygon fill="white" stroke="black" points="457,-0.5 457,-19.5 588,-19.5 588,-0.5 457,-0.5"/>
 <text text-anchor="middle" x="522.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CAddrMan::SwapRandom</text>
 </a>
 </g>
 </g>
-<!-- Node1418&#45;&gt;Node1423 -->
-<g id="edge8" class="edge"><title>Node1418&#45;&gt;Node1423</title>
+<!-- Node1394&#45;&gt;Node1399 -->
+<g id="edge8" class="edge"><title>Node1394&#45;&gt;Node1399</title>
 <path fill="none" stroke="midnightblue" d="M421.037,-22.3547C429.355,-21.3317 438.069,-20.2601 446.742,-19.1936"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="447.379,-22.6417 456.877,-17.9472 446.524,-15.694 447.379,-22.6417"/>
 </g>
-<!-- Node1420 -->
-<g id="node6" class="node"><title>Node1420</title>
+<!-- Node1396 -->
+<g id="node6" class="node"><title>Node1396</title>
 <g id="a_node6"><a xlink:href="random_8cpp.html#a0e44e088732172da6662db2d5e37d4b2" target="_top" xlink:title="GetRandInt">
 <polygon fill="white" stroke="black" points="624,-38.5 624,-57.5 691,-57.5 691,-38.5 624,-38.5"/>
 <text text-anchor="middle" x="657.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetRandInt</text>
 </a>
 </g>
 </g>
-<!-- Node1419&#45;&gt;Node1420 -->
-<g id="edge5" class="edge"><title>Node1419&#45;&gt;Node1420</title>
+<!-- Node1395&#45;&gt;Node1396 -->
+<g id="edge5" class="edge"><title>Node1395&#45;&gt;Node1396</title>
 <path fill="none" stroke="midnightblue" d="M581.062,-48C592.014,-48 603.295,-48 613.689,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="613.741,-51.5001 623.741,-48 613.741,-44.5001 613.741,-51.5001"/>
 </g>
-<!-- Node1421 -->
-<g id="node7" class="node"><title>Node1421</title>
+<!-- Node1397 -->
+<g id="node7" class="node"><title>Node1397</title>
 <g id="a_node7"><a xlink:href="random_8cpp.html#a27d9149d522b1fa87d84e5e9ca902aef" target="_top" xlink:title="GetRand">
 <polygon fill="white" stroke="black" points="727,-38.5 727,-57.5 783,-57.5 783,-38.5 727,-38.5"/>
 <text text-anchor="middle" x="755" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetRand</text>
 </a>
 </g>
 </g>
-<!-- Node1420&#45;&gt;Node1421 -->
-<g id="edge6" class="edge"><title>Node1420&#45;&gt;Node1421</title>
+<!-- Node1396&#45;&gt;Node1397 -->
+<g id="edge6" class="edge"><title>Node1396&#45;&gt;Node1397</title>
 <path fill="none" stroke="midnightblue" d="M691.099,-48C699.396,-48 708.375,-48 716.88,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="716.941,-51.5001 726.941,-48 716.941,-44.5001 716.941,-51.5001"/>
 </g>
-<!-- Node1422 -->
-<g id="node8" class="node"><title>Node1422</title>
+<!-- Node1398 -->
+<g id="node8" class="node"><title>Node1398</title>
 <g id="a_node8"><a xlink:href="random_8cpp.html#ada0c29949c4d1ac0cc027d93c4771423" target="_top" xlink:title="Functions to gather random data via the OpenSSL PRNG. ">
 <polygon fill="white" stroke="black" points="819,-38.5 819,-57.5 900,-57.5 900,-38.5 819,-38.5"/>
 <text text-anchor="middle" x="859.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetRandBytes</text>
 </a>
 </g>
 </g>
-<!-- Node1421&#45;&gt;Node1422 -->
-<g id="edge7" class="edge"><title>Node1421&#45;&gt;Node1422</title>
+<!-- Node1397&#45;&gt;Node1398 -->
+<g id="edge7" class="edge"><title>Node1397&#45;&gt;Node1398</title>
 <path fill="none" stroke="midnightblue" d="M783.199,-48C791.043,-48 799.858,-48 808.62,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="808.82,-51.5001 818.82,-48 808.82,-44.5001 808.82,-51.5001"/>
 </g>

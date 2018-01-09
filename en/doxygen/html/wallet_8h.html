@@ -140,6 +140,7 @@ $(document).ready(function(){initNavTree('wallet_8h.html','');});
 <code>#include &quot;<a class="el" href="crypter_8h_source.html">wallet/crypter.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wallet__ismine_8h_source.html">wallet/wallet_ismine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="walletdb_8h_source.html">wallet/walletdb.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="privatesend_8h_source.html">privatesend.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;set&gt;</code><br />
@@ -225,13 +226,12 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:a39a6b71da3eb95cddc0836d3b27ac7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(client) version numbers for particular wallet features  <a href="wallet_8h.html#a39a6b71da3eb95cddc0836d3b27ac7c9">More...</a><br /></td></tr>
 <tr class="separator:a39a6b71da3eb95cddc0836d3b27ac7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b09b05f289ac32704a6446a94566ce"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566ce">AvailableCoinsType</a> { <br />
-&#160;&#160;<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea94cc8a0e81d9490cdbdfc3d3f215e9e7">ALL_COINS</a> = 1, 
-<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566ceaab4c4a7abab40ebdb2706c1708fff22e">ONLY_DENOMINATED</a> = 2, 
-<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566ceab6264c785b1784dcb35ee9ddb84b8583">ONLY_NOT1000IFMN</a> = 3, 
-<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea35c9bedf196c5d09731928695c969b70">ONLY_NONDENOMINATED_NOT1000IFMN</a> = 4, 
+&#160;&#160;<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea94cc8a0e81d9490cdbdfc3d3f215e9e7">ALL_COINS</a>, 
+<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566ceaab4c4a7abab40ebdb2706c1708fff22e">ONLY_DENOMINATED</a>, 
+<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea009b510e2a783d13c11717045cb06fe2">ONLY_NONDENOMINATED</a>, 
+<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea3eec6f6b31b59d32f5dc13c63bae582d">ONLY_1000</a>, 
 <br />
-&#160;&#160;<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea3eec6f6b31b59d32f5dc13c63bae582d">ONLY_1000</a> = 5, 
-<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea8454489afd757a138dd833cb00cf7aab">ONLY_PRIVATESEND_COLLATERAL</a> = 6
+&#160;&#160;<a class="el" href="wallet_8h.html#a90b09b05f289ac32704a6446a94566cea8454489afd757a138dd833cb00cf7aab">ONLY_PRIVATESEND_COLLATERAL</a>
 <br />
  }</td></tr>
 <tr class="separator:a90b09b05f289ac32704a6446a94566ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,10 +256,6 @@ Variables</h2></td></tr>
 <tr class="separator:a755a19591df8d2f5079c1f7132c65642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfb04198cec6dc995cbc6adf98e575d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#acfb04198cec6dc995cbc6adf98e575d3">fSendFreeTransactions</a></td></tr>
 <tr class="separator:acfb04198cec6dc995cbc6adf98e575d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3377c351f05649e07963776ba3a0499"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#ae3377c351f05649e07963776ba3a0499">fLargeWorkForkFound</a></td></tr>
-<tr class="separator:ae3377c351f05649e07963776ba3a0499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8ed8d08421c7cdfb3acb22e585468fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#aa8ed8d08421c7cdfb3acb22e585468fd">fLargeWorkInvalidChainFound</a></td></tr>
-<tr class="separator:aa8ed8d08421c7cdfb3acb22e585468fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63da8d3877972e02968c9d7f7156cf44"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a63da8d3877972e02968c9d7f7156cf44">DEFAULT_KEYPOOL_SIZE</a> = 1000</td></tr>
 <tr class="separator:a63da8d3877972e02968c9d7f7156cf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a552380bab1040b682ab9d4a1fca48f2f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a552380bab1040b682ab9d4a1fca48f2f">DEFAULT_TRANSACTION_FEE</a> = 0</td></tr>
@@ -268,16 +264,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a4797fb1b7c0734f82f8411b0eac1f19c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a4797fb1b7c0734f82f8411b0eac1f19c">nHighTransactionFeeWarning</a> = 0.01 * <a class="el" href="amount_8h.html#aed6bcb17bc73a5dcf33250e9c2c023cc">COIN</a></td></tr>
 <tr class="memdesc:a4797fb1b7c0734f82f8411b0eac1f19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">-paytxfee will warn if called with a higher fee than this amount (in satoshis) per KB  <a href="#a4797fb1b7c0734f82f8411b0eac1f19c">More...</a><br /></td></tr>
 <tr class="separator:a4797fb1b7c0734f82f8411b0eac1f19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1ad8571f6e40aa90375ad63fe47a92"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a2e1ad8571f6e40aa90375ad63fe47a92">DEFAULT_LEGACY_FALLBACK_FEE</a> = 20000</td></tr>
-<tr class="memdesc:a2e1ad8571f6e40aa90375ad63fe47a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">-fallbackfee default  <a href="#a2e1ad8571f6e40aa90375ad63fe47a92">More...</a><br /></td></tr>
-<tr class="separator:a2e1ad8571f6e40aa90375ad63fe47a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fb35823b2c8be3b410a8d2489ecb044"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a9fb35823b2c8be3b410a8d2489ecb044">DEFAULT_DIP0001_FALLBACK_FEE</a> = 1000</td></tr>
-<tr class="separator:a9fb35823b2c8be3b410a8d2489ecb044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91574d7e11957e02e07206d769a4e829"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a91574d7e11957e02e07206d769a4e829">DEFAULT_LEGACY_TRANSACTION_MINFEE</a> = 10000</td></tr>
-<tr class="memdesc:a91574d7e11957e02e07206d769a4e829"><td class="mdescLeft">&#160;</td><td class="mdescRight">-mintxfee default  <a href="#a91574d7e11957e02e07206d769a4e829">More...</a><br /></td></tr>
-<tr class="separator:a91574d7e11957e02e07206d769a4e829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c0bc895e90264261366c68c61d69a2b"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a5c0bc895e90264261366c68c61d69a2b">DEFAULT_DIP0001_TRANSACTION_MINFEE</a> = 1000</td></tr>
-<tr class="separator:a5c0bc895e90264261366c68c61d69a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4cf5f5a7eb0862635c685dac1ecf5cc"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#ad4cf5f5a7eb0862635c685dac1ecf5cc">DEFAULT_FALLBACK_FEE</a> = 1000</td></tr>
+<tr class="memdesc:ad4cf5f5a7eb0862635c685dac1ecf5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">-fallbackfee default  <a href="#ad4cf5f5a7eb0862635c685dac1ecf5cc">More...</a><br /></td></tr>
+<tr class="separator:ad4cf5f5a7eb0862635c685dac1ecf5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d05123d114452e43aa8cb750ab1758"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#af9d05123d114452e43aa8cb750ab1758">DEFAULT_TRANSACTION_MINFEE</a> = 1000</td></tr>
+<tr class="memdesc:af9d05123d114452e43aa8cb750ab1758"><td class="mdescLeft">&#160;</td><td class="mdescRight">-mintxfee default  <a href="#af9d05123d114452e43aa8cb750ab1758">More...</a><br /></td></tr>
+<tr class="separator:af9d05123d114452e43aa8cb750ab1758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08e44dbb6db8502639f09f72737afd19"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wallet_8h.html#a08e44dbb6db8502639f09f72737afd19">DEFAULT_TRANSACTION_MAXFEE</a> = 0.2 * <a class="el" href="amount_8h.html#aed6bcb17bc73a5dcf33250e9c2c023cc">COIN</a></td></tr>
 <tr class="memdesc:a08e44dbb6db8502639f09f72737afd19"><td class="mdescLeft">&#160;</td><td class="mdescRight">-maxtxfee default  <a href="#a08e44dbb6db8502639f09f72737afd19">More...</a><br /></td></tr>
 <tr class="separator:a08e44dbb6db8502639f09f72737afd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,7 +310,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00180">180</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00171">171</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
 </div>
 </div>
@@ -337,13 +329,12 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a90b09b05f289ac32704a6446a94566cea94cc8a0e81d9490cdbdfc3d3f215e9e7"></a>ALL_COINS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a90b09b05f289ac32704a6446a94566ceaab4c4a7abab40ebdb2706c1708fff22e"></a>ONLY_DENOMINATED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a90b09b05f289ac32704a6446a94566ceab6264c785b1784dcb35ee9ddb84b8583"></a>ONLY_NOT1000IFMN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a90b09b05f289ac32704a6446a94566cea35c9bedf196c5d09731928695c969b70"></a>ONLY_NONDENOMINATED_NOT1000IFMN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a90b09b05f289ac32704a6446a94566cea009b510e2a783d13c11717045cb06fe2"></a>ONLY_NONDENOMINATED&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a90b09b05f289ac32704a6446a94566cea3eec6f6b31b59d32f5dc13c63bae582d"></a>ONLY_1000&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a90b09b05f289ac32704a6446a94566cea8454489afd757a138dd833cb00cf7aab"></a>ONLY_PRIVATESEND_COLLATERAL&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00101">101</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00093">93</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +359,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a39a6b71da3eb95cddc0836d3b27ac7c9a867e17547f858859f558244dc96ac2f3"></a>FEATURE_LATEST&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00089">89</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00081">81</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
 </div>
 </div>
@@ -407,11 +398,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00183">183</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00174">174</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
 <p class="reference">References <a class="el" href="utilstrencodings_8cpp_source.html#l00523">atoi64()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="wallet_8h_source.html#l00376">CWalletTx::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="wallet_8h_source.html#l00367">CWalletTx::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -465,11 +456,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00194">194</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00185">185</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
 <p class="reference">References <a class="el" href="utilstrencodings_8cpp_source.html#l00513">i64tostr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="wallet_8h_source.html#l00376">CWalletTx::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="wallet_8h_source.html#l00367">CWalletTx::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -504,12 +495,12 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="wallet_8cpp_source.html#l00048">48</a> of file <a class="el" href="wallet_8cpp_source.html">wallet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l02041">CWalletTx::IsTrusted()</a>, and <a class="el" href="wallet_8cpp_source.html#l02623">CWallet::SelectCoins()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l02033">CWalletTx::IsTrusted()</a>, and <a class="el" href="wallet_8cpp_source.html#l02612">CWallet::SelectCoins()</a>.</p>
 
 </div>
 </div>
-<a id="a9fb35823b2c8be3b410a8d2489ecb044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fb35823b2c8be3b410a8d2489ecb044">&#9670;&nbsp;</a></span>DEFAULT_DIP0001_FALLBACK_FEE</h2>
+<a id="ad4cf5f5a7eb0862635c685dac1ecf5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cf5f5a7eb0862635c685dac1ecf5cc">&#9670;&nbsp;</a></span>DEFAULT_FALLBACK_FEE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -518,7 +509,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> DEFAULT_DIP0001_FALLBACK_FEE = 1000</td>
+          <td class="memname">const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> DEFAULT_FALLBACK_FEE = 1000</td>
         </tr>
       </table>
   </td>
@@ -528,35 +519,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00052">52</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p>-fallbackfee default </p>
 
-<p class="reference">Referenced by <a class="el" href="dsnotificationinterface_8cpp_source.html#l00030">CDSNotificationInterface::UpdatedBlockTip()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00050">50</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-</div>
-</div>
-<a id="a5c0bc895e90264261366c68c61d69a2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c0bc895e90264261366c68c61d69a2b">&#9670;&nbsp;</a></span>DEFAULT_DIP0001_TRANSACTION_MINFEE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> DEFAULT_DIP0001_TRANSACTION_MINFEE = 1000</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00060">60</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="dsnotificationinterface_8cpp_source.html#l00030">CDSNotificationInterface::UpdatedBlockTip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -580,66 +547,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00045">45</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00044">44</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01963">keypoolrefill()</a>, and <a class="el" href="wallet_8cpp_source.html#l03779">CWallet::TopUpKeyPool()</a>.</p>
-
-</div>
-</div>
-<a id="a2e1ad8571f6e40aa90375ad63fe47a92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e1ad8571f6e40aa90375ad63fe47a92">&#9670;&nbsp;</a></span>DEFAULT_LEGACY_FALLBACK_FEE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> DEFAULT_LEGACY_FALLBACK_FEE = 20000</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>-fallbackfee default </p>
-
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00051">51</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, and <a class="el" href="dsnotificationinterface_8cpp_source.html#l00030">CDSNotificationInterface::UpdatedBlockTip()</a>.</p>
-
-</div>
-</div>
-<a id="a91574d7e11957e02e07206d769a4e829"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91574d7e11957e02e07206d769a4e829">&#9670;&nbsp;</a></span>DEFAULT_LEGACY_TRANSACTION_MINFEE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> DEFAULT_LEGACY_TRANSACTION_MINFEE = 10000</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>-mintxfee default </p>
-<p>We are ~100 times smaller then bitcoin now (2016-03-01), set minTxFee 10 times higher so it's still 10 times lower comparing to bitcoin. 2017-07: we are 10x smaller now, let's lower defaults 10x via the same BIP9 bit as DIP0001 </p>
-
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00059">59</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, and <a class="el" href="dsnotificationinterface_8cpp_source.html#l00030">CDSNotificationInterface::UpdatedBlockTip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l01963">keypoolrefill()</a>, and <a class="el" href="wallet_8cpp_source.html#l03758">CWallet::TopUpKeyPool()</a>.</p>
 
 </div>
 </div>
@@ -665,9 +575,9 @@ Variables</h2></td></tr>
 
 <p>Default for -sendfreetransactions. </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00068">68</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00060">60</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -693,9 +603,9 @@ Variables</h2></td></tr>
 
 <p>Default for -spendzeroconfchange. </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00066">66</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00058">58</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -721,7 +631,7 @@ Variables</h2></td></tr>
 
 <p>-paytxfee default </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00047">47</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00046">46</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="sendcoinsdialog_8cpp_source.html#l00033">SendCoinsDialog::SendCoinsDialog()</a>.</p>
 
@@ -749,9 +659,37 @@ Variables</h2></td></tr>
 
 <p>-maxtxfee default </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00062">62</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00054">54</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
+
+</div>
+</div>
+<a id="af9d05123d114452e43aa8cb750ab1758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d05123d114452e43aa8cb750ab1758">&#9670;&nbsp;</a></span>DEFAULT_TRANSACTION_MINFEE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="amount_8h.html#a4eaf3a5239714d8c45b851527f7cb564">CAmount</a> DEFAULT_TRANSACTION_MINFEE = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>-mintxfee default </p>
+
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00052">52</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -777,9 +715,9 @@ Variables</h2></td></tr>
 
 <p>-txconfirmtarget default </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00070">70</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00062">62</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -805,9 +743,9 @@ Variables</h2></td></tr>
 
 <p>if set, all keys will be derived by using BIP39/BIP44 </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00078">78</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00070">70</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -831,45 +769,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00075">75</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00067">67</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>.</p>
-
-</div>
-</div>
-<a id="ae3377c351f05649e07963776ba3a0499"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3377c351f05649e07963776ba3a0499">&#9670;&nbsp;</a></span>fLargeWorkForkFound</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool fLargeWorkForkFound</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="validation_8cpp_source.html#l01316">1316</a> of file <a class="el" href="validation_8cpp_source.html">validation.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01320">CheckForkWarningConditions()</a>, <a class="el" href="instantx_8cpp_source.html#l00795">CInstantSend::GetTransactionLockSignatures()</a>, <a class="el" href="validation_8cpp_source.html#l04313">GetWarnings()</a>, <a class="el" href="instantx_8cpp_source.html#l00758">CInstantSend::IsInstantSendReadyToLock()</a>, and <a class="el" href="instantx_8cpp_source.html#l00770">CInstantSend::IsLockedInstantSendTransaction()</a>.</p>
-
-</div>
-</div>
-<a id="aa8ed8d08421c7cdfb3acb22e585468fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8ed8d08421c7cdfb3acb22e585468fd">&#9670;&nbsp;</a></span>fLargeWorkInvalidChainFound</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool fLargeWorkInvalidChainFound</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="validation_8cpp_source.html#l01317">1317</a> of file <a class="el" href="validation_8cpp_source.html">validation.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01320">CheckForkWarningConditions()</a>, <a class="el" href="instantx_8cpp_source.html#l00795">CInstantSend::GetTransactionLockSignatures()</a>, <a class="el" href="validation_8cpp_source.html#l04313">GetWarnings()</a>, <a class="el" href="instantx_8cpp_source.html#l00758">CInstantSend::IsInstantSendReadyToLock()</a>, and <a class="el" href="instantx_8cpp_source.html#l00770">CInstantSend::IsLockedInstantSendTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, and <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>.</p>
 
 </div>
 </div>
@@ -887,7 +789,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="wallet_8cpp_source.html#l00049">49</a> of file <a class="el" href="wallet_8cpp_source.html">wallet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00702">SendCoinsDialog::updateGlobalFeeVariables()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00702">SendCoinsDialog::updateGlobalFeeVariables()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
 
 </div>
 </div>
@@ -913,9 +815,9 @@ Variables</h2></td></tr>
 
 <p>Largest (in bytes) free transaction we're willing to create. </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00074">74</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00066">66</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
 
 </div>
 </div>
@@ -933,7 +835,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="wallet_8cpp_source.html#l00046">46</a> of file <a class="el" href="wallet_8cpp_source.html">wallet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l03596">CWallet::GetMinimumFee()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00218">WalletModel::prepareTransaction()</a>, and <a class="el" href="sendcoinsdialog_8cpp_source.html#l00609">SendCoinsDialog::processSendCoinsReturn()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l03575">CWallet::GetMinimumFee()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00218">WalletModel::prepareTransaction()</a>, and <a class="el" href="sendcoinsdialog_8cpp_source.html#l00609">SendCoinsDialog::processSendCoinsReturn()</a>.</p>
 
 </div>
 </div>
@@ -959,9 +861,9 @@ Variables</h2></td></tr>
 
 <p>minimum change amount </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00064">64</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00056">56</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="wallet__tests_8cpp_source.html#l00068">BOOST_AUTO_TEST_CASE()</a>, <a class="el" href="wallet_8cpp_source.html#l02498">CWallet::SelectCoinsMinConf()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="wallet__tests_8cpp_source.html#l00068">BOOST_AUTO_TEST_CASE()</a>, <a class="el" href="wallet_8cpp_source.html#l02487">CWallet::SelectCoinsMinConf()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
 
 </div>
 </div>
@@ -987,9 +889,9 @@ Variables</h2></td></tr>
 
 <p>-paytxfee will warn if called with a higher fee than this amount (in satoshis) per KB </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00049">49</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00048">48</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>.</p>
 
 </div>
 </div>
@@ -1015,9 +917,9 @@ Variables</h2></td></tr>
 
 <p>-maxtxfee will warn if called with a higher fee than this amount (in satoshis) </p>
 
-<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00072">72</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wallet_8h_source.html#l00064">64</a> of file <a class="el" href="wallet_8h_source.html">wallet.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +937,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="wallet_8cpp_source.html#l00047">47</a> of file <a class="el" href="wallet_8cpp_source.html">wallet.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00702">SendCoinsDialog::updateGlobalFeeVariables()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00702">SendCoinsDialog::updateGlobalFeeVariables()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
 
 </div>
 </div>
@@ -1054,7 +956,7 @@ Variables</h2></td></tr>
 <p>Settings. </p>
 <p>Settings. </p>
 
-<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00942">AppInit2()</a>, <a class="el" href="misc_8cpp_source.html#l00047">getinfo()</a>, <a class="el" href="wallet_8cpp_source.html#l03596">CWallet::GetMinimumFee()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l02376">getwalletinfo()</a>, <a class="el" href="init_8cpp_source.html#l00384">HelpMessage()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l02349">settxfee()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00702">SendCoinsDialog::updateGlobalFeeVariables()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8cpp_source.html#l00960">AppInit2()</a>, <a class="el" href="misc_8cpp_source.html#l00048">getinfo()</a>, <a class="el" href="wallet_8cpp_source.html#l03575">CWallet::GetMinimumFee()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l02376">getwalletinfo()</a>, <a class="el" href="init_8cpp_source.html#l00386">HelpMessage()</a>, <a class="el" href="rpcwallet_8cpp_source.html#l02349">settxfee()</a>, <a class="el" href="sendcoinsdialog_8cpp_source.html#l00702">SendCoinsDialog::updateGlobalFeeVariables()</a>, and <a class="el" href="coincontroldialog_8cpp_source.html#l00479">CoinControlDialog::updateLabels()</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +967,7 @@ Variables</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e91c81f9be83f649fcd1d8691438a113.html">wallet</a></li><li class="navelem"><a class="el" href="wallet_8h.html">wallet.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:22 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:29 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

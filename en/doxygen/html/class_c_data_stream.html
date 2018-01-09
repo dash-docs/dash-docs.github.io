@@ -207,6 +207,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a191a18802fbc0861ae118d79d33088dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8fa6a4a4cd08da5a0c87180834611e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#ac8fa6a4a4cd08da5a0c87180834611e5">insert</a> (<a class="el" href="class_c_data_stream.html#abed2013224bdf424e51c78bf483886d3">iterator</a> it, <a class="el" href="class_c_data_stream.html#a79e10daad6db0f94aea1e811eb167378">size_type</a> n, const char &amp;x)</td></tr>
 <tr class="separator:ac8fa6a4a4cd08da5a0c87180834611e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c0a87d9ea725d5d83562dfda15fbeeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_data_stream.html#a5572ddd57b7355f87781b89087dd18e0">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#a1c0a87d9ea725d5d83562dfda15fbeeb">data</a> ()</td></tr>
+<tr class="separator:a1c0a87d9ea725d5d83562dfda15fbeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfba39f6f3f8bfd40d8ec49dfb050a3c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_data_stream.html#a5572ddd57b7355f87781b89087dd18e0">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#abfba39f6f3f8bfd40d8ec49dfb050a3c">data</a> () const</td></tr>
+<tr class="separator:abfba39f6f3f8bfd40d8ec49dfb050a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa15a60d7ee6d987de444426f2825f284"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#aa15a60d7ee6d987de444426f2825f284">insert</a> (<a class="el" href="class_c_data_stream.html#abed2013224bdf424e51c78bf483886d3">iterator</a> it, std::vector&lt; char &gt;::<a class="el" href="class_c_data_stream.html#abcfd79b72607505b22f18424e313b4c5">const_iterator</a> first, std::vector&lt; char &gt;::<a class="el" href="class_c_data_stream.html#abcfd79b72607505b22f18424e313b4c5">const_iterator</a> last)</td></tr>
 <tr class="separator:aa15a60d7ee6d987de444426f2825f284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9635fda38bc0b7836b4364820a67a18d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#a9635fda38bc0b7836b4364820a67a18d">insert</a> (<a class="el" href="class_c_data_stream.html#abed2013224bdf424e51c78bf483886d3">iterator</a> it, const char *first, const char *last)</td></tr>
@@ -255,7 +259,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac80cfc65569416f8c23e328edb4cadae"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac80cfc65569416f8c23e328edb4cadae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_data_stream.html">CDataStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#ac80cfc65569416f8c23e328edb4cadae">operator&gt;&gt;</a> (T &amp;obj)</td></tr>
 <tr class="separator:ac80cfc65569416f8c23e328edb4cadae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4be60514b69c71a722e16bf1fbbc3c6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#a4be60514b69c71a722e16bf1fbbc3c6c">GetAndClear</a> (<a class="el" href="zeroafterfree_8h.html#a77935f92ff5ba1d71d692166f6ce0c1b">CSerializeData</a> &amp;data)</td></tr>
+<tr class="memitem:a4be60514b69c71a722e16bf1fbbc3c6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#a4be60514b69c71a722e16bf1fbbc3c6c">GetAndClear</a> (<a class="el" href="zeroafterfree_8h.html#a77935f92ff5ba1d71d692166f6ce0c1b">CSerializeData</a> &amp;<a class="el" href="class_c_data_stream.html#a1c0a87d9ea725d5d83562dfda15fbeeb">data</a>)</td></tr>
 <tr class="separator:a4be60514b69c71a722e16bf1fbbc3c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b631dc9cc9d5ba6a5b6ee910bd7d8a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_data_stream.html#a5b631dc9cc9d5ba6a5b6ee910bd7d8a8">Xor</a> (const std::vector&lt; unsigned char &gt; &amp;key)</td></tr>
 <tr class="memdesc:a5b631dc9cc9d5ba6a5b6ee910bd7d8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">XOR the contents of this stream with a certain key.  <a href="#a5b631dc9cc9d5ba6a5b6ee910bd7d8a8">More...</a><br /></td></tr>
@@ -501,7 +505,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00050">50</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00089">Init()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00087">Init()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -561,7 +565,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00055">55</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00089">Init()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00087">Init()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -619,9 +623,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00061">61</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00060">60</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00089">Init()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00087">Init()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -673,9 +677,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00067">67</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00065">65</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00089">Init()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00087">Init()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -727,9 +731,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00072">72</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00070">70</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00089">Init()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00087">Init()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -781,9 +785,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00077">77</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00075">75</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00089">Init()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00087">Init()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -837,9 +841,9 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00083">83</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00081">81</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00089">Init()</a>, <a class="el" href="streams_8h_source.html#l00037">nType</a>, <a class="el" href="streams_8h_source.html#l00038">nVersion</a>, and <a class="el" href="serialize_8h_source.html#l00988">SerializeMany()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00087">Init()</a>, <a class="el" href="streams_8h_source.html#l00037">nType</a>, <a class="el" href="streams_8h_source.html#l00038">nVersion</a>, and <a class="el" href="serialize_8h_source.html#l01011">SerializeMany()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -875,11 +879,11 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00118">118</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00116">116</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bloom_8cpp_source.html#l00104">CBloomFilter::contains()</a>, <a class="el" href="core__write_8cpp_source.html#l00119">EncodeHexTx()</a>, <a class="el" href="net_8cpp_source.html#l02822">CConnman::EndMessage()</a>, <a class="el" href="streams_8h_source.html#l00302">GetAndClear()</a>, <a class="el" href="blockchain_8cpp_source.html#l00483">getblock()</a>, <a class="el" href="blockchain_8cpp_source.html#l00336">getblockheader()</a>, <a class="el" href="blockchain_8cpp_source.html#l00394">getblockheaders()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00235">gettxoutproof()</a>, <a class="el" href="bloom_8cpp_source.html#l00074">CBloomFilter::insert()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00607">masternodebroadcast()</a>, <a class="el" href="zmqpublishnotifier_8cpp_source.html#l00176">CZMQPublishRawBlockNotifier::NotifyBlock()</a>, <a class="el" href="streams_8h_source.html#l00096">operator+=()</a>, <a class="el" href="net__processing_8cpp_source.html#l02184">ProcessMessages()</a>, <a class="el" href="net_8cpp_source.html#l02834">CConnman::PushMessage()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00159">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="rest_8cpp_source.html#l00203">rest_block()</a>, <a class="el" href="rest_8cpp_source.html#l00403">rest_getutxos()</a>, <a class="el" href="rest_8cpp_source.html#l00129">rest_headers()</a>, <a class="el" href="rest_8cpp_source.html#l00351">rest_tx()</a>, <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>, <a class="el" href="alert_8cpp_source.html#l00149">CAlert::Sign()</a>, <a class="el" href="streams_8h_source.html#l00109">str()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, and <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bloom_8cpp_source.html#l00104">CBloomFilter::contains()</a>, <a class="el" href="core__write_8cpp_source.html#l00119">EncodeHexTx()</a>, <a class="el" href="net_8cpp_source.html#l02821">CConnman::EndMessage()</a>, <a class="el" href="streams_8h_source.html#l00306">GetAndClear()</a>, <a class="el" href="blockchain_8cpp_source.html#l00487">getblock()</a>, <a class="el" href="blockchain_8cpp_source.html#l00340">getblockheader()</a>, <a class="el" href="blockchain_8cpp_source.html#l00398">getblockheaders()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00235">gettxoutproof()</a>, <a class="el" href="bloom_8cpp_source.html#l00074">CBloomFilter::insert()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00596">masternodebroadcast()</a>, <a class="el" href="zmqpublishnotifier_8cpp_source.html#l00176">CZMQPublishRawBlockNotifier::NotifyBlock()</a>, <a class="el" href="streams_8h_source.html#l00094">operator+=()</a>, <a class="el" href="net__processing_8cpp_source.html#l02189">ProcessMessages()</a>, <a class="el" href="net_8cpp_source.html#l02833">CConnman::PushMessage()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00159">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="rest_8cpp_source.html#l00206">rest_block()</a>, <a class="el" href="rest_8cpp_source.html#l00406">rest_getutxos()</a>, <a class="el" href="rest_8cpp_source.html#l00132">rest_headers()</a>, <a class="el" href="rest_8cpp_source.html#l00354">rest_tx()</a>, <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>, <a class="el" href="alert_8cpp_source.html#l00149">CAlert::Sign()</a>, <a class="el" href="streams_8h_source.html#l00107">str()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, and <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -914,7 +918,7 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00119">119</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00117">117</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
@@ -943,17 +947,17 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00128">128</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00126">126</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00302">GetAndClear()</a>, <a class="el" href="db_8h_source.html#l00231">CDB::ReadAtCursor()</a>, and <a class="el" href="db_8cpp_source.html#l00340">CDB::Rewrite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00097">CDBBatch::Erase()</a>, <a class="el" href="streams_8h_source.html#l00306">GetAndClear()</a>, <a class="el" href="db_8h_source.html#l00231">CDB::ReadAtCursor()</a>, <a class="el" href="db_8cpp_source.html#l00340">CDB::Rewrite()</a>, and <a class="el" href="dbwrapper_8h_source.html#l00074">CDBBatch::Write()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_ade6ed9a3a481e333900e6496707b9692_icgraph.svg" width="100%" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_ade6ed9a3a481e333900e6496707b9692_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -988,6 +992,74 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
+<a id="a1c0a87d9ea725d5d83562dfda15fbeeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c0a87d9ea725d5d83562dfda15fbeeb">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_data_stream.html#a5572ddd57b7355f87781b89087dd18e0">value_type</a>* CDataStream::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00129">129</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00331">CDBWrapper::CompactRange()</a>, <a class="el" href="dbwrapper_8h_source.html#l00097">CDBBatch::Erase()</a>, <a class="el" href="db_8h_source.html#l00179">CDB::Erase()</a>, <a class="el" href="dbwrapper_8h_source.html#l00312">CDBWrapper::EstimateSize()</a>, <a class="el" href="db_8h_source.html#l00201">CDB::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00261">CDBWrapper::Exists()</a>, <a class="el" href="streams_8h_source.html#l00306">GetAndClear()</a>, <a class="el" href="db_8h_source.html#l00116">CDB::Read()</a>, <a class="el" href="dbwrapper_8h_source.html#l00227">CDBWrapper::Read()</a>, <a class="el" href="db_8h_source.html#l00231">CDB::ReadAtCursor()</a>, <a class="el" href="db_8cpp_source.html#l00340">CDB::Rewrite()</a>, <a class="el" href="dbwrapper_8h_source.html#l00135">CDBIterator::Seek()</a>, <a class="el" href="dbwrapper_8h_source.html#l00074">CDBBatch::Write()</a>, and <a class="el" href="db_8h_source.html#l00150">CDB::Write()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_a1c0a87d9ea725d5d83562dfda15fbeeb_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abfba39f6f3f8bfd40d8ec49dfb050a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfba39f6f3f8bfd40d8ec49dfb050a3c">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_c_data_stream.html#a5572ddd57b7355f87781b89087dd18e0">value_type</a>* CDataStream::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00130">130</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
+
+</div>
+</div>
 <a id="ab2633ac67f098dad30d03291741c2e42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2633ac67f098dad30d03291741c2e42">&#9670;&nbsp;</a></span>empty()</h2>
 
@@ -1011,16 +1083,16 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00123">123</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00121">121</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>, <a class="el" href="net_8cpp_source.html#l02834">CConnman::PushMessage()</a>, <a class="el" href="walletdb_8cpp_source.html#l00350">ReadKeyValue()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00588">signrawtransaction()</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>, <a class="el" href="net_8cpp_source.html#l02833">CConnman::PushMessage()</a>, <a class="el" href="walletdb_8cpp_source.html#l00350">ReadKeyValue()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00589">signrawtransaction()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_ab2633ac67f098dad30d03291741c2e42_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1050,16 +1122,16 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00120">120</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00118">118</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bloom_8cpp_source.html#l00104">CBloomFilter::contains()</a>, <a class="el" href="core__write_8cpp_source.html#l00119">EncodeHexTx()</a>, <a class="el" href="net_8cpp_source.html#l02822">CConnman::EndMessage()</a>, <a class="el" href="streams_8h_source.html#l00302">GetAndClear()</a>, <a class="el" href="blockchain_8cpp_source.html#l00483">getblock()</a>, <a class="el" href="blockchain_8cpp_source.html#l00336">getblockheader()</a>, <a class="el" href="blockchain_8cpp_source.html#l00394">getblockheaders()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00235">gettxoutproof()</a>, <a class="el" href="bloom_8cpp_source.html#l00074">CBloomFilter::insert()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00607">masternodebroadcast()</a>, <a class="el" href="streams_8h_source.html#l00096">operator+=()</a>, <a class="el" href="net_8cpp_source.html#l02834">CConnman::PushMessage()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00159">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="rest_8cpp_source.html#l00203">rest_block()</a>, <a class="el" href="rest_8cpp_source.html#l00403">rest_getutxos()</a>, <a class="el" href="rest_8cpp_source.html#l00129">rest_headers()</a>, <a class="el" href="rest_8cpp_source.html#l00351">rest_tx()</a>, <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>, <a class="el" href="alert_8cpp_source.html#l00149">CAlert::Sign()</a>, <a class="el" href="streams_8h_source.html#l00109">str()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, and <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="bloom_8cpp_source.html#l00104">CBloomFilter::contains()</a>, <a class="el" href="core__write_8cpp_source.html#l00119">EncodeHexTx()</a>, <a class="el" href="net_8cpp_source.html#l02821">CConnman::EndMessage()</a>, <a class="el" href="streams_8h_source.html#l00306">GetAndClear()</a>, <a class="el" href="blockchain_8cpp_source.html#l00487">getblock()</a>, <a class="el" href="blockchain_8cpp_source.html#l00340">getblockheader()</a>, <a class="el" href="blockchain_8cpp_source.html#l00398">getblockheaders()</a>, <a class="el" href="rawtransaction_8cpp_source.html#l00235">gettxoutproof()</a>, <a class="el" href="bloom_8cpp_source.html#l00074">CBloomFilter::insert()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00596">masternodebroadcast()</a>, <a class="el" href="streams_8h_source.html#l00094">operator+=()</a>, <a class="el" href="net_8cpp_source.html#l02833">CConnman::PushMessage()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00159">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="rest_8cpp_source.html#l00206">rest_block()</a>, <a class="el" href="rest_8cpp_source.html#l00406">rest_getutxos()</a>, <a class="el" href="rest_8cpp_source.html#l00132">rest_headers()</a>, <a class="el" href="rest_8cpp_source.html#l00354">rest_tx()</a>, <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>, <a class="el" href="alert_8cpp_source.html#l00149">CAlert::Sign()</a>, <a class="el" href="streams_8h_source.html#l00107">str()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, and <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_a66409dbd4403682fe674e2e71173cab4_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1089,7 +1161,7 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00121">121</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00119">119</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
@@ -1120,12 +1192,12 @@ template&lt;typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00216">216</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00122">size()</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00120">size()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_ac6b34149b7eea928c925100dfe10c087_cgraph.svg" width="322" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -1226,15 +1298,15 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00302">302</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00306">306</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00118">begin()</a>, <a class="el" href="streams_8h_source.html#l00128">clear()</a>, and <a class="el" href="streams_8h_source.html#l00120">end()</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00116">begin()</a>, <a class="el" href="streams_8h_source.html#l00126">clear()</a>, <a class="el" href="streams_8h_source.html#l00129">data()</a>, and <a class="el" href="streams_8h_source.html#l00118">end()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_a4be60514b69c71a722e16bf1fbbc3c6c_cgraph.svg" width="386" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_a4be60514b69c71a722e16bf1fbbc3c6c_cgraph.svg" width="386" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1266,25 +1338,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00280">280</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00284">284</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00037">nType</a>, and <a class="el" href="streams_8h_source.html#l00038">nVersion</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00061">CDBBatch::Erase()</a>, <a class="el" href="dbwrapper_8h_source.html#l00217">CDBWrapper::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00183">CDBWrapper::Read()</a>, <a class="el" href="dbwrapper_8h_source.html#l00092">CDBIterator::Seek()</a>, and <a class="el" href="dbwrapper_8h_source.html#l00044">CDBBatch::Write()</a>.</p>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_aaf2b9e953793ce5a4fc438a7ecb00dc2_cgraph.svg" width="384" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_aaf2b9e953793ce5a4fc438a7ecb00dc2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_data_stream_aaf2b9e953793ce5a4fc438a7ecb00dc2_cgraph.svg" width="384" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1372,7 +1434,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00247">247</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00249">249</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
@@ -1403,9 +1465,9 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00218">218</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00122">size()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00120">size()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -1459,7 +1521,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00089">89</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00087">87</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, <a class="el" href="streams_8h_source.html#l00037">nType</a>, and <a class="el" href="streams_8h_source.html#l00038">nVersion</a>.</p>
 
@@ -1509,11 +1571,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00129">129</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00127">127</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>.</p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -1565,7 +1627,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00130">130</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00128">128</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
@@ -1703,9 +1765,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00096">96</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00094">94</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00118">begin()</a>, <a class="el" href="streams_8h_source.html#l00120">end()</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00116">begin()</a>, <a class="el" href="streams_8h_source.html#l00118">end()</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 <div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
@@ -1743,9 +1805,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00287">287</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00291">291</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00037">nType</a>, <a class="el" href="streams_8h_source.html#l00038">nVersion</a>, and <a class="el" href="streams_8h_source.html#l00272">Serialize()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00037">nType</a>, <a class="el" href="streams_8h_source.html#l00038">nVersion</a>, and <a class="el" href="streams_8h_source.html#l00276">Serialize()</a>.</p>
 <div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
@@ -1783,7 +1845,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00295">295</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00299">299</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00037">nType</a>, <a class="el" href="streams_8h_source.html#l00038">nVersion</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1821,7 +1883,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00126">126</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00124">124</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
@@ -1851,7 +1913,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00127">127</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00125">125</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
@@ -1985,11 +2047,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00125">125</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00123">123</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00061">CDBBatch::Erase()</a>, <a class="el" href="db_8h_source.html#l00179">CDB::Erase()</a>, <a class="el" href="db_8h_source.html#l00201">CDB::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00217">CDBWrapper::Exists()</a>, <a class="el" href="net__processing_8cpp_source.html#l00785">ProcessGetData()</a>, <a class="el" href="db_8h_source.html#l00116">CDB::Read()</a>, <a class="el" href="dbwrapper_8h_source.html#l00183">CDBWrapper::Read()</a>, <a class="el" href="net_8cpp_source.html#l02477">CConnman::RelayTransaction()</a>, <a class="el" href="dbwrapper_8h_source.html#l00092">CDBIterator::Seek()</a>, <a class="el" href="dbwrapper_8h_source.html#l00044">CDBBatch::Write()</a>, and <a class="el" href="db_8h_source.html#l00150">CDB::Write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00331">CDBWrapper::CompactRange()</a>, <a class="el" href="dbwrapper_8h_source.html#l00097">CDBBatch::Erase()</a>, <a class="el" href="db_8h_source.html#l00179">CDB::Erase()</a>, <a class="el" href="dbwrapper_8h_source.html#l00312">CDBWrapper::EstimateSize()</a>, <a class="el" href="db_8h_source.html#l00201">CDB::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00261">CDBWrapper::Exists()</a>, <a class="el" href="net__processing_8cpp_source.html#l00788">ProcessGetData()</a>, <a class="el" href="db_8h_source.html#l00116">CDB::Read()</a>, <a class="el" href="dbwrapper_8h_source.html#l00227">CDBWrapper::Read()</a>, <a class="el" href="net_8cpp_source.html#l02476">CConnman::RelayTransaction()</a>, <a class="el" href="dbwrapper_8h_source.html#l00135">CDBIterator::Seek()</a>, <a class="el" href="dbwrapper_8h_source.html#l00074">CDBBatch::Write()</a>, and <a class="el" href="db_8h_source.html#l00150">CDB::Write()</a>.</p>
 <div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-25-summary" class="dynsummary" style="display:block;">
@@ -2035,11 +2097,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00124">124</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00122">122</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net_8h_source.html#l00634">CNetMessage::CNetMessage()</a>, and <a class="el" href="net_8cpp_source.html#l00786">CNetMessage::readData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="net_8h_source.html#l00634">CNetMessage::CNetMessage()</a>, and <a class="el" href="net_8cpp_source.html#l00785">CNetMessage::readData()</a>.</p>
 <div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-26-summary" class="dynsummary" style="display:block;">
@@ -2123,11 +2185,11 @@ template&lt;typename Stream &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00272">272</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00276">276</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00287">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00291">operator&lt;&lt;()</a>.</p>
 <div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-27-summary" class="dynsummary" style="display:block;">
@@ -2242,11 +2304,11 @@ template&lt;typename Stream &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00122">122</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00120">120</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00035">nReadPos</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net_8cpp_source.html#l02822">CConnman::EndMessage()</a>, <a class="el" href="streams_8h_source.html#l00216">eof()</a>, <a class="el" href="dbwrapper_8h_source.html#l00061">CDBBatch::Erase()</a>, <a class="el" href="db_8h_source.html#l00179">CDB::Erase()</a>, <a class="el" href="db_8h_source.html#l00201">CDB::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00217">CDBWrapper::Exists()</a>, <a class="el" href="streams_8h_source.html#l00218">in_avail()</a>, <a class="el" href="zmqpublishnotifier_8cpp_source.html#l00176">CZMQPublishRawBlockNotifier::NotifyBlock()</a>, <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>, <a class="el" href="net_8cpp_source.html#l02834">CConnman::PushMessage()</a>, <a class="el" href="db_8h_source.html#l00116">CDB::Read()</a>, <a class="el" href="dbwrapper_8h_source.html#l00183">CDBWrapper::Read()</a>, <a class="el" href="db_8h_source.html#l00231">CDB::ReadAtCursor()</a>, <a class="el" href="net_8cpp_source.html#l00786">CNetMessage::readData()</a>, <a class="el" href="db_8cpp_source.html#l00340">CDB::Rewrite()</a>, <a class="el" href="dbwrapper_8h_source.html#l00092">CDBIterator::Seek()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00353">WalletModel::sendCoins()</a>, <a class="el" href="dbwrapper_8h_source.html#l00044">CDBBatch::Write()</a>, <a class="el" href="db_8h_source.html#l00150">CDB::Write()</a>, and <a class="el" href="streams_8h_source.html#l00312">Xor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00331">CDBWrapper::CompactRange()</a>, <a class="el" href="net_8cpp_source.html#l02821">CConnman::EndMessage()</a>, <a class="el" href="streams_8h_source.html#l00216">eof()</a>, <a class="el" href="dbwrapper_8h_source.html#l00097">CDBBatch::Erase()</a>, <a class="el" href="db_8h_source.html#l00179">CDB::Erase()</a>, <a class="el" href="dbwrapper_8h_source.html#l00312">CDBWrapper::EstimateSize()</a>, <a class="el" href="db_8h_source.html#l00201">CDB::Exists()</a>, <a class="el" href="dbwrapper_8h_source.html#l00261">CDBWrapper::Exists()</a>, <a class="el" href="streams_8h_source.html#l00218">in_avail()</a>, <a class="el" href="zmqpublishnotifier_8cpp_source.html#l00176">CZMQPublishRawBlockNotifier::NotifyBlock()</a>, <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>, <a class="el" href="net_8cpp_source.html#l02833">CConnman::PushMessage()</a>, <a class="el" href="db_8h_source.html#l00116">CDB::Read()</a>, <a class="el" href="dbwrapper_8h_source.html#l00227">CDBWrapper::Read()</a>, <a class="el" href="db_8h_source.html#l00231">CDB::ReadAtCursor()</a>, <a class="el" href="net_8cpp_source.html#l00785">CNetMessage::readData()</a>, <a class="el" href="db_8cpp_source.html#l00340">CDB::Rewrite()</a>, <a class="el" href="dbwrapper_8h_source.html#l00135">CDBIterator::Seek()</a>, <a class="el" href="walletmodel_8cpp_source.html#l00353">WalletModel::sendCoins()</a>, <a class="el" href="dbwrapper_8h_source.html#l00074">CDBBatch::Write()</a>, <a class="el" href="db_8h_source.html#l00150">CDB::Write()</a>, and <a class="el" href="streams_8h_source.html#l00316">Xor()</a>.</p>
 <div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-30-summary" class="dynsummary" style="display:block;">
@@ -2281,11 +2343,11 @@ template&lt;typename Stream &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00109">109</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00107">107</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00118">begin()</a>, and <a class="el" href="streams_8h_source.html#l00120">end()</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00116">begin()</a>, and <a class="el" href="streams_8h_source.html#l00118">end()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="recentrequeststablemodel_8cpp_source.html#l00172">RecentRequestsTableModel::addNewRequest()</a>, <a class="el" href="rest_8cpp_source.html#l00203">rest_block()</a>, <a class="el" href="rest_8cpp_source.html#l00403">rest_getutxos()</a>, <a class="el" href="rest_8cpp_source.html#l00129">rest_headers()</a>, <a class="el" href="rest_8cpp_source.html#l00351">rest_tx()</a>, and <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="recentrequeststablemodel_8cpp_source.html#l00172">RecentRequestsTableModel::addNewRequest()</a>, <a class="el" href="rest_8cpp_source.html#l00206">rest_block()</a>, <a class="el" href="rest_8cpp_source.html#l00406">rest_getutxos()</a>, <a class="el" href="rest_8cpp_source.html#l00132">rest_headers()</a>, <a class="el" href="rest_8cpp_source.html#l00354">rest_tx()</a>, and <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>.</p>
 <div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-31-summary" class="dynsummary" style="display:block;">
@@ -2339,7 +2401,7 @@ template&lt;typename Stream &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00264">264</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00268">268</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 <p class="reference">References <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
@@ -2416,11 +2478,11 @@ template&lt;typename Stream &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00312">312</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00316">316</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">References <a class="el" href="streams_8h_source.html#l00122">size()</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
+<p class="reference">References <a class="el" href="streams_8h_source.html#l00120">size()</a>, and <a class="el" href="streams_8h_source.html#l00034">vch</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00117">CDBIterator::GetValue()</a>, and <a class="el" href="dbwrapper_8h_source.html#l00183">CDBWrapper::Read()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dbwrapper_8h_source.html#l00160">CDBIterator::GetValue()</a>, <a class="el" href="dbwrapper_8h_source.html#l00227">CDBWrapper::Read()</a>, and <a class="el" href="dbwrapper_8h_source.html#l00074">CDBBatch::Write()</a>.</p>
 <div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-34-summary" class="dynsummary" style="display:block;">
@@ -2475,7 +2537,7 @@ template&lt;typename Stream &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00102">102</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00100">100</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
 </div>
 </div>
@@ -2502,7 +2564,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00035">35</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00118">begin()</a>, <a class="el" href="streams_8h_source.html#l00128">clear()</a>, <a class="el" href="streams_8h_source.html#l00197">Compact()</a>, <a class="el" href="streams_8h_source.html#l00123">empty()</a>, <a class="el" href="streams_8h_source.html#l00160">erase()</a>, <a class="el" href="streams_8h_source.html#l00247">ignore()</a>, <a class="el" href="streams_8h_source.html#l00089">Init()</a>, <a class="el" href="streams_8h_source.html#l00132">insert()</a>, <a class="el" href="streams_8h_source.html#l00126">operator[]()</a>, <a class="el" href="streams_8h_source.html#l00227">read()</a>, <a class="el" href="streams_8h_source.html#l00125">reserve()</a>, <a class="el" href="streams_8h_source.html#l00124">resize()</a>, <a class="el" href="streams_8h_source.html#l00203">Rewind()</a>, and <a class="el" href="streams_8h_source.html#l00122">size()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00116">begin()</a>, <a class="el" href="streams_8h_source.html#l00126">clear()</a>, <a class="el" href="streams_8h_source.html#l00197">Compact()</a>, <a class="el" href="streams_8h_source.html#l00129">data()</a>, <a class="el" href="streams_8h_source.html#l00121">empty()</a>, <a class="el" href="streams_8h_source.html#l00160">erase()</a>, <a class="el" href="streams_8h_source.html#l00249">ignore()</a>, <a class="el" href="streams_8h_source.html#l00087">Init()</a>, <a class="el" href="streams_8h_source.html#l00132">insert()</a>, <a class="el" href="streams_8h_source.html#l00124">operator[]()</a>, <a class="el" href="streams_8h_source.html#l00227">read()</a>, <a class="el" href="streams_8h_source.html#l00123">reserve()</a>, <a class="el" href="streams_8h_source.html#l00122">resize()</a>, <a class="el" href="streams_8h_source.html#l00203">Rewind()</a>, and <a class="el" href="streams_8h_source.html#l00120">size()</a>.</p>
 
 </div>
 </div>
@@ -2520,7 +2582,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00037">37</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00083">CDataStream()</a>, <a class="el" href="streams_8h_source.html#l00280">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00221">GetType()</a>, <a class="el" href="streams_8h_source.html#l00089">Init()</a>, <a class="el" href="streams_8h_source.html#l00287">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00295">operator&gt;&gt;()</a>, and <a class="el" href="streams_8h_source.html#l00220">SetType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00081">CDataStream()</a>, <a class="el" href="streams_8h_source.html#l00284">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00221">GetType()</a>, <a class="el" href="streams_8h_source.html#l00087">Init()</a>, <a class="el" href="streams_8h_source.html#l00291">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00299">operator&gt;&gt;()</a>, and <a class="el" href="streams_8h_source.html#l00220">SetType()</a>.</p>
 
 </div>
 </div>
@@ -2538,7 +2600,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00038">38</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00083">CDataStream()</a>, <a class="el" href="streams_8h_source.html#l00280">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00223">GetVersion()</a>, <a class="el" href="streams_8h_source.html#l00089">Init()</a>, <a class="el" href="streams_8h_source.html#l00287">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00295">operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00224">ReadVersion()</a>, <a class="el" href="streams_8h_source.html#l00222">SetVersion()</a>, and <a class="el" href="streams_8h_source.html#l00225">WriteVersion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00081">CDataStream()</a>, <a class="el" href="streams_8h_source.html#l00284">GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00223">GetVersion()</a>, <a class="el" href="streams_8h_source.html#l00087">Init()</a>, <a class="el" href="streams_8h_source.html#l00291">operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00299">operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00224">ReadVersion()</a>, <a class="el" href="streams_8h_source.html#l00222">SetVersion()</a>, and <a class="el" href="streams_8h_source.html#l00225">WriteVersion()</a>.</p>
 
 </div>
 </div>
@@ -2564,7 +2626,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="streams_8h_source.html#l00034">34</a> of file <a class="el" href="streams_8h_source.html">streams.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00118">begin()</a>, <a class="el" href="streams_8h_source.html#l00128">clear()</a>, <a class="el" href="streams_8h_source.html#l00197">Compact()</a>, <a class="el" href="streams_8h_source.html#l00123">empty()</a>, <a class="el" href="streams_8h_source.html#l00120">end()</a>, <a class="el" href="streams_8h_source.html#l00160">erase()</a>, <a class="el" href="streams_8h_source.html#l00247">ignore()</a>, <a class="el" href="streams_8h_source.html#l00129">insert()</a>, <a class="el" href="streams_8h_source.html#l00096">operator+=()</a>, <a class="el" href="streams_8h_source.html#l00126">operator[]()</a>, <a class="el" href="streams_8h_source.html#l00227">read()</a>, <a class="el" href="streams_8h_source.html#l00125">reserve()</a>, <a class="el" href="streams_8h_source.html#l00124">resize()</a>, <a class="el" href="streams_8h_source.html#l00272">Serialize()</a>, <a class="el" href="streams_8h_source.html#l00122">size()</a>, <a class="el" href="streams_8h_source.html#l00264">write()</a>, and <a class="el" href="streams_8h_source.html#l00312">Xor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00116">begin()</a>, <a class="el" href="streams_8h_source.html#l00126">clear()</a>, <a class="el" href="streams_8h_source.html#l00197">Compact()</a>, <a class="el" href="streams_8h_source.html#l00129">data()</a>, <a class="el" href="streams_8h_source.html#l00121">empty()</a>, <a class="el" href="streams_8h_source.html#l00118">end()</a>, <a class="el" href="streams_8h_source.html#l00160">erase()</a>, <a class="el" href="streams_8h_source.html#l00249">ignore()</a>, <a class="el" href="streams_8h_source.html#l00127">insert()</a>, <a class="el" href="streams_8h_source.html#l00094">operator+=()</a>, <a class="el" href="streams_8h_source.html#l00124">operator[]()</a>, <a class="el" href="streams_8h_source.html#l00227">read()</a>, <a class="el" href="streams_8h_source.html#l00123">reserve()</a>, <a class="el" href="streams_8h_source.html#l00122">resize()</a>, <a class="el" href="streams_8h_source.html#l00276">Serialize()</a>, <a class="el" href="streams_8h_source.html#l00120">size()</a>, <a class="el" href="streams_8h_source.html#l00268">write()</a>, and <a class="el" href="streams_8h_source.html#l00316">Xor()</a>.</p>
 
 </div>
 </div>
@@ -2578,7 +2640,7 @@ template&lt;typename Stream &gt; </div>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_data_stream.html">CDataStream</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:23 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:31 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

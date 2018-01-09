@@ -192,9 +192,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8cpp_source.html#l00123">123</a> of file <a class="el" href="policy_8cpp_source.html">policy.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, <a class="el" href="coins_8cpp_source.html#l00227">CCoinsViewCache::GetOutputFor()</a>, <a class="el" href="transaction_8h_source.html#l00284">CTransaction::IsCoinBase()</a>, <a class="el" href="policy_8h_source.html#l00025">MAX_P2SH_SIGOPS</a>, <a class="el" href="interpreter_8h_source.html#l00033">SCRIPT_VERIFY_NONE</a>, <a class="el" href="transaction_8h_source.html#l00137">CTxOut::scriptPubKey</a>, <a class="el" href="standard_8cpp_source.html#l00041">Solver()</a>, <a class="el" href="standard_8h_source.html#l00051">TX_SCRIPTHASH</a>, and <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>.</p>
+<p class="reference">References <a class="el" href="coins_8cpp_source.html#l00116">CCoinsViewCache::AccessCoin()</a>, <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, <a class="el" href="transaction_8h_source.html#l00283">CTransaction::IsCoinBase()</a>, <a class="el" href="policy_8h_source.html#l00025">MAX_P2SH_SIGOPS</a>, <a class="el" href="coins_8h_source.html#l00033">Coin::out</a>, <a class="el" href="interpreter_8h_source.html#l00033">SCRIPT_VERIFY_NONE</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::scriptPubKey</a>, <a class="el" href="standard_8cpp_source.html#l00041">Solver()</a>, <a class="el" href="standard_8h_source.html#l00051">TX_SCRIPTHASH</a>, and <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -303,9 +303,9 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="policy_8cpp_source.html#l00059">59</a> of file <a class="el" href="policy_8cpp_source.html">policy.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="transaction_8h_source.html#l00219">CTransaction::CURRENT_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00078">fIsBareMultisigStd</a>, <a class="el" href="transaction_8h_source.html#l00185">CTxOut::IsDust()</a>, <a class="el" href="script_8cpp_source.html#l00247">CScript::IsPushOnly()</a>, <a class="el" href="policy_8cpp_source.html#l00037">IsStandard()</a>, <a class="el" href="policy_8h_source.html#l00023">MAX_STANDARD_TX_SIZE</a>, <a class="el" href="transaction_8h_source.html#l00225">CTransaction::MAX_STANDARD_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00094">minRelayTxFee</a>, <a class="el" href="transaction_8h_source.html#l00232">CTransaction::nVersion</a>, <a class="el" href="transaction_8h_source.html#l00137">CTxOut::scriptPubKey</a>, <a class="el" href="transaction_8h_source.html#l00062">CTxIn::scriptSig</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>, <a class="el" href="standard_8h_source.html#l00052">TX_MULTISIG</a>, <a class="el" href="standard_8h_source.html#l00053">TX_NULL_DATA</a>, <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00234">CTransaction::vout</a>.</p>
+<p class="reference">References <a class="el" href="transaction_8h_source.html#l00218">CTransaction::CURRENT_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00078">fIsBareMultisigStd</a>, <a class="el" href="transaction_8h_source.html#l00184">CTxOut::IsDust()</a>, <a class="el" href="script_8cpp_source.html#l00223">CScript::IsPushOnly()</a>, <a class="el" href="policy_8cpp_source.html#l00037">IsStandard()</a>, <a class="el" href="policy_8h_source.html#l00023">MAX_STANDARD_TX_SIZE</a>, <a class="el" href="transaction_8h_source.html#l00224">CTransaction::MAX_STANDARD_VERSION</a>, <a class="el" href="validation_8cpp_source.html#l00094">minRelayTxFee</a>, <a class="el" href="transaction_8h_source.html#l00231">CTransaction::nVersion</a>, <a class="el" href="transaction_8h_source.html#l00136">CTxOut::scriptPubKey</a>, <a class="el" href="transaction_8h_source.html#l00062">CTxIn::scriptSig</a>, <a class="el" href="serialize_8h_source.html#l00170">SER_NETWORK</a>, <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>, <a class="el" href="standard_8h_source.html#l00052">TX_MULTISIG</a>, <a class="el" href="standard_8h_source.html#l00053">TX_NULL_DATA</a>, <a class="el" href="transaction_8h_source.html#l00232">CTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00233">CTransaction::vout</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00549">AcceptToMemoryPoolWorker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l00554">AcceptToMemoryPoolWorker()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -332,7 +332,7 @@ Functions</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f9a362818448b8ef6661813ae65d7e79.html">policy</a></li><li class="navelem"><a class="el" href="policy_8cpp.html">policy.cpp</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:19 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:27 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

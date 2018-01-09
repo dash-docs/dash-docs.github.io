@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 92.5)">
 <title>secp256k1_ecdsa_signature_serialize_der</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-92.5 613,-92.5 613,4 -4,4"/>
-<!-- Node1519 -->
-<g id="node1" class="node"><title>Node1519</title>
+<!-- Node1497 -->
+<g id="node1" class="node"><title>Node1497</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-36 0,-66 140,-66 140,-36 0,-36"/>
 <text text-anchor="start" x="8" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_signature</text>
 <text text-anchor="middle" x="70" y="-43" font-family="Helvetica,sans-Serif" font-size="10.00">_serialize_der</text>
 </g>
-<!-- Node1520 -->
-<g id="node2" class="node"><title>Node1520</title>
+<!-- Node1498 -->
+<g id="node2" class="node"><title>Node1498</title>
 <g id="a_node2"><a xlink:href="ecdsa_8h.html#a313b6733f5b079162fa15332d4b2ef36" target="_top" xlink:title="secp256k1_ecdsa_sig\l_serialize">
 <polygon fill="white" stroke="black" points="201.5,-58 201.5,-88 314.5,-88 314.5,-58 201.5,-58"/>
 <text text-anchor="start" x="209.5" y="-76" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_sig</text>
@@ -24,60 +24,60 @@
 </a>
 </g>
 </g>
-<!-- Node1519&#45;&gt;Node1520 -->
-<g id="edge1" class="edge"><title>Node1519&#45;&gt;Node1520</title>
+<!-- Node1497&#45;&gt;Node1498 -->
+<g id="edge1" class="edge"><title>Node1497&#45;&gt;Node1498</title>
 <path fill="none" stroke="midnightblue" d="M140.26,-59.192C156.939,-61.1648 174.71,-63.2667 191.224,-65.2201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="190.982,-68.7157 201.324,-66.4146 191.804,-61.7642 190.982,-68.7157"/>
 </g>
-<!-- Node1521 -->
-<g id="node3" class="node"><title>Node1521</title>
+<!-- Node1499 -->
+<g id="node3" class="node"><title>Node1499</title>
 <g id="a_node3"><a xlink:href="secp256k1_8c.html#af2027241c9dfc85fa5b6a3bb5fe41d18" target="_top" xlink:title="secp256k1_ecdsa_signature_load">
 <polygon fill="white" stroke="black" points="176,-19.5 176,-38.5 340,-38.5 340,-19.5 176,-19.5"/>
 <text text-anchor="middle" x="258" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_ecdsa_signature_load</text>
 </a>
 </g>
 </g>
-<!-- Node1519&#45;&gt;Node1521 -->
-<g id="edge2" class="edge"><title>Node1519&#45;&gt;Node1521</title>
+<!-- Node1497&#45;&gt;Node1499 -->
+<g id="edge2" class="edge"><title>Node1497&#45;&gt;Node1499</title>
 <path fill="none" stroke="midnightblue" d="M140.26,-42.808C148.723,-41.807 157.467,-40.7728 166.185,-39.7415"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="166.87,-43.185 176.39,-38.5346 166.048,-36.2335 166.87,-43.185"/>
 </g>
-<!-- Node1522 -->
-<g id="node4" class="node"><title>Node1522</title>
+<!-- Node1500 -->
+<g id="node4" class="node"><title>Node1500</title>
 <g id="a_node4"><a xlink:href="glibc__compat_8cpp.html#a0f46826ab0466591e136db24394923cf" target="_top" xlink:title="memcpy">
 <polygon fill="white" stroke="black" points="416.5,-38.5 416.5,-57.5 470.5,-57.5 470.5,-38.5 416.5,-38.5"/>
 <text text-anchor="middle" x="443.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">memcpy</text>
 </a>
 </g>
 </g>
-<!-- Node1521&#45;&gt;Node1522 -->
-<g id="edge3" class="edge"><title>Node1521&#45;&gt;Node1522</title>
+<!-- Node1499&#45;&gt;Node1500 -->
+<g id="edge3" class="edge"><title>Node1499&#45;&gt;Node1500</title>
 <path fill="none" stroke="midnightblue" d="M340.02,-37.389C363.188,-39.7879 387.282,-42.2826 406.282,-44.25"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="405.969,-47.7361 416.276,-45.2847 406.69,-40.7733 405.969,-47.7361"/>
 </g>
-<!-- Node1524 -->
-<g id="node6" class="node"><title>Node1524</title>
+<!-- Node1502 -->
+<g id="node6" class="node"><title>Node1502</title>
 <g id="a_node6"><a xlink:href="scalar_8h.html#a25cc2d45ae1d1765d07c3313cdf46fa0" target="_top" xlink:title="Set a scalar from a big endian byte array. ">
 <polygon fill="white" stroke="black" points="376,-0.5 376,-19.5 511,-19.5 511,-0.5 376,-0.5"/>
 <text text-anchor="middle" x="443.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">secp256k1_scalar_set_b32</text>
 </a>
 </g>
 </g>
-<!-- Node1521&#45;&gt;Node1524 -->
-<g id="edge5" class="edge"><title>Node1521&#45;&gt;Node1524</title>
+<!-- Node1499&#45;&gt;Node1502 -->
+<g id="edge5" class="edge"><title>Node1499&#45;&gt;Node1502</title>
 <path fill="none" stroke="midnightblue" d="M340.02,-20.611C348.646,-19.7179 357.4,-18.8114 365.972,-17.9239"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="366.346,-21.404 375.932,-16.8926 365.625,-14.4412 366.346,-21.404"/>
 </g>
-<!-- Node1523 -->
-<g id="node5" class="node"><title>Node1523</title>
+<!-- Node1501 -->
+<g id="node5" class="node"><title>Node1501</title>
 <g id="a_node5"><a xlink:href="glibc__compat_8cpp.html#a9778d49e9029dd75bc53ecbbf9f5e9a1" target="_top" xlink:title="memmove">
 <polygon fill="white" stroke="black" points="547,-38.5 547,-57.5 609,-57.5 609,-38.5 547,-38.5"/>
 <text text-anchor="middle" x="578" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">memmove</text>
 </a>
 </g>
 </g>
-<!-- Node1522&#45;&gt;Node1523 -->
-<g id="edge4" class="edge"><title>Node1522&#45;&gt;Node1523</title>
+<!-- Node1500&#45;&gt;Node1501 -->
+<g id="edge4" class="edge"><title>Node1500&#45;&gt;Node1501</title>
 <path fill="none" stroke="midnightblue" d="M470.678,-48C489.474,-48 515.162,-48 536.581,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="536.703,-51.5001 546.703,-48 536.703,-44.5001 536.703,-51.5001"/>
 </g>

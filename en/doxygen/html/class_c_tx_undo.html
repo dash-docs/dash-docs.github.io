@@ -135,35 +135,36 @@ $(document).ready(function(){initNavTree('class_c_tx_undo.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acded3ea0adf0309c160ea756a2361bf2"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename Operation &gt; </td></tr>
-<tr class="memitem:acded3ea0adf0309c160ea756a2361bf2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_tx_undo.html#acded3ea0adf0309c160ea756a2361bf2">SerializationOp</a> (Stream &amp;s, Operation ser_action, int nType, int nVersion)</td></tr>
-<tr class="separator:acded3ea0adf0309c160ea756a2361bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac256a1979c58a66a02275b34658571e"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:aac256a1979c58a66a02275b34658571e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_tx_undo.html#aac256a1979c58a66a02275b34658571e">Serialize</a> (Stream &amp;s, int nType, int nVersion) const</td></tr>
+<tr class="separator:aac256a1979c58a66a02275b34658571e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a55807f44a1f54d244fa4ee852734bd"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:a3a55807f44a1f54d244fa4ee852734bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_tx_undo.html#a3a55807f44a1f54d244fa4ee852734bd">Unserialize</a> (Stream &amp;s, int nType, int nVersion)</td></tr>
+<tr class="separator:a3a55807f44a1f54d244fa4ee852734bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a035e62f0b46f0d4ba392dad686ed18de"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_tx_in_undo.html">CTxInUndo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tx_undo.html#a035e62f0b46f0d4ba392dad686ed18de">vprevout</a></td></tr>
-<tr class="separator:a035e62f0b46f0d4ba392dad686ed18de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b7b4f167a00e200723165b3446cc4c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tx_undo.html#a8b7b4f167a00e200723165b3446cc4c4">ADD_SERIALIZE_METHODS</a></td></tr>
-<tr class="separator:a8b7b4f167a00e200723165b3446cc4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7180af7efb3094785f1406f80dc409d7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_coin.html">Coin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tx_undo.html#a7180af7efb3094785f1406f80dc409d7">vprevout</a></td></tr>
+<tr class="separator:a7180af7efb3094785f1406f80dc409d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Undo information for a <a class="el" href="class_c_transaction.html" title="The basic transaction that is broadcasted on the network and contained in blocks. ...">CTransaction</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00057">57</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00066">66</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="acded3ea0adf0309c160ea756a2361bf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acded3ea0adf0309c160ea756a2361bf2">&#9670;&nbsp;</a></span>SerializationOp()</h2>
+<a id="aac256a1979c58a66a02275b34658571e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac256a1979c58a66a02275b34658571e">&#9670;&nbsp;</a></span>Serialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Stream , typename Operation &gt; </div>
+template&lt;typename Stream &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CTxUndo::SerializationOp </td>
+          <td class="memname">void CTxUndo::Serialize </td>
           <td>(</td>
           <td class="paramtype">Stream &amp;&#160;</td>
           <td class="paramname"><em>s</em>, </td>
@@ -171,8 +172,58 @@ template&lt;typename Stream , typename Operation &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Operation&#160;</td>
-          <td class="paramname"><em>ser_action</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nVersion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00073">73</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
+
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00389">COMPACTSIZE</a>, <a class="el" href="tests_8c_source.html#l00041">count</a>, <a class="el" href="serialize_8h_source.html#l00033">REF()</a>, and <a class="el" href="undo_8h_source.html#l00070">vprevout</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_tx_undo_aac256a1979c58a66a02275b34658571e_cgraph.svg" width="244" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3a55807f44a1f54d244fa4ee852734bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a55807f44a1f54d244fa4ee852734bd">&#9670;&nbsp;</a></span>Unserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTxUndo::Unserialize </td>
+          <td>(</td>
+          <td class="paramtype">Stream &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -199,44 +250,36 @@ template&lt;typename Stream , typename Operation &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00066">66</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00083">83</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00175">READWRITE</a>, and <a class="el" href="undo_8h_source.html#l00061">vprevout</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00389">COMPACTSIZE</a>, <a class="el" href="tests_8c_source.html#l00041">count</a>, <a class="el" href="undo_8h_source.html#l00063">MAX_INPUTS_PER_BLOCK</a>, <a class="el" href="serialize_8h_source.html#l00033">REF()</a>, and <a class="el" href="undo_8h_source.html#l00070">vprevout</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_tx_undo_a3a55807f44a1f54d244fa4ee852734bd_cgraph.svg" width="259" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8b7b4f167a00e200723165b3446cc4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b7b4f167a00e200723165b3446cc4c4">&#9670;&nbsp;</a></span>ADD_SERIALIZE_METHODS</h2>
+<a id="a7180af7efb3094785f1406f80dc409d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7180af7efb3094785f1406f80dc409d7">&#9670;&nbsp;</a></span>vprevout</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CTxUndo::ADD_SERIALIZE_METHODS</td>
+          <td class="memname">std::vector&lt;<a class="el" href="class_coin.html">Coin</a>&gt; CTxUndo::vprevout</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00063">63</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00070">70</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
 
-</div>
-</div>
-<a id="a035e62f0b46f0d4ba392dad686ed18de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a035e62f0b46f0d4ba392dad686ed18de">&#9670;&nbsp;</a></span>vprevout</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_c_tx_in_undo.html">CTxInUndo</a>&gt; CTxUndo::vprevout</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="undo_8h_source.html#l00061">61</a> of file <a class="el" href="undo_8h_source.html">undo.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01696">DisconnectBlock()</a>, <a class="el" href="undo_8h_source.html#l00066">SerializationOp()</a>, and <a class="el" href="validation_8cpp_source.html#l01427">UpdateCoins()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01691">DisconnectBlock()</a>, <a class="el" href="undo_8h_source.html#l00073">Serialize()</a>, <a class="el" href="undo_8h_source.html#l00083">Unserialize()</a>, and <a class="el" href="validation_8cpp_source.html#l01428">UpdateCoins()</a>.</p>
 
 </div>
 </div>
@@ -250,7 +293,7 @@ template&lt;typename Stream , typename Operation &gt; </div>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_tx_undo.html">CTxUndo</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:25 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:33 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

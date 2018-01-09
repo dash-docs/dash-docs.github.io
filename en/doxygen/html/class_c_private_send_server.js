@@ -14,7 +14,7 @@ var class_c_private_send_server =
     [ "CreateNewSession", "class_c_private_send_server.html#ad22c8603123573ef0831c127477af1bd", null ],
     [ "IsAcceptableDenomAndCollateral", "class_c_private_send_server.html#af7e38b25732fe0532d4a7061badababe", null ],
     [ "IsInputScriptSigValid", "class_c_private_send_server.html#aa8e1e1e438219f4ddaf9a941e0c400b7", null ],
-    [ "IsOutputsCompatibleWithSessionDenom", "class_c_private_send_server.html#a9db6664e7c755680654305aa31d918de", null ],
+    [ "IsOutputsCompatibleWithSessionDenom", "class_c_private_send_server.html#a5469414252144e4af89ed0002db1c30b", null ],
     [ "IsSessionReady", "class_c_private_send_server.html#a657a2dec152aad8485ae9eb34195ef9e", null ],
     [ "IsSignaturesComplete", "class_c_private_send_server.html#a24be951a12edb94519674585dd211eee", null ],
     [ "ProcessMessage", "class_c_private_send_server.html#ad51576edb65312fa566ba6f0351a7b6d", null ],
@@ -24,7 +24,6 @@ var class_c_private_send_server =
     [ "RelayStatus", "class_c_private_send_server.html#a8d654b95a3cd65b5e1c560722f84d731", null ],
     [ "SetNull", "class_c_private_send_server.html#a095273c51a14551457b183214ca4e9d8", null ],
     [ "SetState", "class_c_private_send_server.html#a1625ff569c9c6f1053b998f62f3f3bdf", null ],
-    [ "cs_darksend", "class_c_private_send_server.html#abed703257e18f2973951045d2f958d01", null ],
     [ "fUnitTest", "class_c_private_send_server.html#abc98e4c549e0a0cc76dac9b963297e52", null ],
     [ "vecSessionCollaterals", "class_c_private_send_server.html#ab676f3dbdcb87b866312495b7de85bee", null ]
 ];

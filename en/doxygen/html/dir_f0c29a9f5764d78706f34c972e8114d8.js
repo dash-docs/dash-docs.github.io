@@ -90,7 +90,7 @@ var dir_f0c29a9f5764d78706f34c972e8114d8 =
     [ "openuridialog.h", "openuridialog_8h.html", [
       [ "OpenURIDialog", "class_open_u_r_i_dialog.html", "class_open_u_r_i_dialog" ]
     ] ],
-    [ "optionsdialog.cpp", "optionsdialog_8cpp.html", "optionsdialog_8cpp" ],
+    [ "optionsdialog.cpp", "optionsdialog_8cpp.html", null ],
     [ "optionsdialog.h", "optionsdialog_8h.html", [
       [ "ProxyAddressValidator", "class_proxy_address_validator.html", "class_proxy_address_validator" ],
       [ "OptionsDialog", "class_options_dialog.html", "class_options_dialog" ]

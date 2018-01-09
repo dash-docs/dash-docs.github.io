@@ -23,6 +23,8 @@ var searchData=
   ['transactionview',['TransactionView',['../class_transaction_view.html',1,'']]],
   ['txcoinageprioritycompare',['TxCoinAgePriorityCompare',['../struct_tx_coin_age_priority_compare.html',1,'']]],
   ['txconfirmstats',['TxConfirmStats',['../class_tx_confirm_stats.html',1,'']]],
+  ['txinundodeserializer',['TxInUndoDeserializer',['../class_tx_in_undo_deserializer.html',1,'']]],
+  ['txinundoserializer',['TxInUndoSerializer',['../class_tx_in_undo_serializer.html',1,'']]],
   ['txlessthan',['TxLessThan',['../struct_tx_less_than.html',1,'']]],
   ['txlinks',['TxLinks',['../struct_c_tx_mem_pool_1_1_tx_links.html',1,'CTxMemPool']]],
   ['txstatsinfo',['TxStatsInfo',['../struct_c_block_policy_estimator_1_1_tx_stats_info.html',1,'CBlockPolicyEstimator']]],

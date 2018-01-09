@@ -169,6 +169,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_var_int.html">CVarInt&lt; I &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_compact_size.html">CCompactSize</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_limited_string.html">LimitedString&lt; Limit &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_ser_action_serialize.html">CSerActionSerialize</a></td></tr>
@@ -192,6 +194,8 @@ Macros</h2></td></tr>
 <tr class="separator:a9393dd1b6a30ae7fe9cc42240241f741"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1383f2a4c22ffaeba9b2924d90459f76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serialize_8h.html#a1383f2a4c22ffaeba9b2924d90459f76">VARINT</a>(obj)&#160;&#160;&#160;<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(<a class="el" href="serialize_8h.html#a5748d9d17982b234b10a4b9e6f8e9f53">WrapVarInt</a>(<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(obj)))</td></tr>
 <tr class="separator:a1383f2a4c22ffaeba9b2924d90459f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea2415cbb9469ff5b90adf057d7e440"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serialize_8h.html#abea2415cbb9469ff5b90adf057d7e440">COMPACTSIZE</a>(obj)&#160;&#160;&#160;<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(<a class="el" href="class_c_compact_size.html">CCompactSize</a>(<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(obj)))</td></tr>
+<tr class="separator:abea2415cbb9469ff5b90adf057d7e440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78e63691a056ce2368984400605e4f6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serialize_8h.html#a78e63691a056ce2368984400605e4f6e">LIMITED_STRING</a>(obj,  n)&#160;&#160;&#160;<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(<a class="el" href="class_limited_string.html">LimitedString</a>&lt; n &gt;(<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(obj)))</td></tr>
 <tr class="separator:a78e63691a056ce2368984400605e4f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -549,16 +553,38 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> <a class="code" href="serialize_8h.html#a48239e478ae730373d1984fe304ca025">GetSerializeSize</a>(<span class="keywordtype">int</span> nType, <span class="keywordtype">int</span> nVersion)<span class="keyword"> const </span>{                         \</div><div class="line">        CSizeComputer s(nType, nVersion);                                            \</div><div class="line">        NCONST_PTR(<span class="keyword">this</span>)-&gt;SerializationOp(s, <a class="code" href="struct_c_ser_action_serialize.html">CSerActionSerialize</a>(), nType, nVersion);\</div><div class="line">        return s.size();                                                             \</div><div class="line">    }                                                                                \</div><div class="line">    template&lt;typename Stream&gt;                                                        \</div><div class="line">    void <a class="code" href="serialize_8h.html#a57a07500f5e1eb9589dc8d57bbd73a18">Serialize</a>(Stream&amp; s, <span class="keywordtype">int</span> nType, <span class="keywordtype">int</span> nVersion)<span class="keyword"> const </span>{                       \</div><div class="line">        NCONST_PTR(<span class="keyword">this</span>)-&gt;SerializationOp(s, <a class="code" href="struct_c_ser_action_serialize.html">CSerActionSerialize</a>(), nType, nVersion);\</div><div class="line">    }                                                                                \</div><div class="line">    template&lt;typename Stream&gt;                                                        \</div><div class="line">    void <a class="code" href="serialize_8h.html#a6535b70fa93811f2b1df307a424eb317">Unserialize</a>(Stream&amp; s, <span class="keywordtype">int</span> nType, <span class="keywordtype">int</span> nVersion) {                           \</div><div class="line">        SerializationOp(s, <a class="code" href="struct_c_ser_action_unserialize.html">CSerActionUnserialize</a>(), nType, nVersion);                \</div><div class="line">    }</div><div class="ttc" id="struct_c_ser_action_unserialize_html"><div class="ttname"><a href="struct_c_ser_action_unserialize.html">CSerActionUnserialize</a></div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00933">serialize.h:933</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> <a class="code" href="serialize_8h.html#a48239e478ae730373d1984fe304ca025">GetSerializeSize</a>(<span class="keywordtype">int</span> nType, <span class="keywordtype">int</span> nVersion)<span class="keyword"> const </span>{                         \</div><div class="line">        CSizeComputer s(nType, nVersion);                                            \</div><div class="line">        NCONST_PTR(<span class="keyword">this</span>)-&gt;SerializationOp(s, <a class="code" href="struct_c_ser_action_serialize.html">CSerActionSerialize</a>(), nType, nVersion);\</div><div class="line">        return s.size();                                                             \</div><div class="line">    }                                                                                \</div><div class="line">    template&lt;typename Stream&gt;                                                        \</div><div class="line">    void <a class="code" href="serialize_8h.html#a57a07500f5e1eb9589dc8d57bbd73a18">Serialize</a>(Stream&amp; s, <span class="keywordtype">int</span> nType, <span class="keywordtype">int</span> nVersion)<span class="keyword"> const </span>{                       \</div><div class="line">        NCONST_PTR(<span class="keyword">this</span>)-&gt;SerializationOp(s, <a class="code" href="struct_c_ser_action_serialize.html">CSerActionSerialize</a>(), nType, nVersion);\</div><div class="line">    }                                                                                \</div><div class="line">    template&lt;typename Stream&gt;                                                        \</div><div class="line">    void <a class="code" href="serialize_8h.html#a6535b70fa93811f2b1df307a424eb317">Unserialize</a>(Stream&amp; s, <span class="keywordtype">int</span> nType, <span class="keywordtype">int</span> nVersion) {                           \</div><div class="line">        SerializationOp(s, <a class="code" href="struct_c_ser_action_unserialize.html">CSerActionUnserialize</a>(), nType, nVersion);                \</div><div class="line">    }</div><div class="ttc" id="struct_c_ser_action_unserialize_html"><div class="ttname"><a href="struct_c_ser_action_unserialize.html">CSerActionUnserialize</a></div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00956">serialize.h:956</a></div></div>
 <div class="ttc" id="serialize_8h_html_a57a07500f5e1eb9589dc8d57bbd73a18"><div class="ttname"><a href="serialize_8h.html#a57a07500f5e1eb9589dc8d57bbd73a18">Serialize</a></div><div class="ttdeci">void Serialize(Stream &amp;s, char a, int, int=0)</div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00214">serialize.h:214</a></div></div>
 <div class="ttc" id="serialize_8h_html_a48239e478ae730373d1984fe304ca025"><div class="ttname"><a href="serialize_8h.html#a48239e478ae730373d1984fe304ca025">GetSerializeSize</a></div><div class="ttdeci">unsigned int GetSerializeSize(char a, int, int=0)</div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00202">serialize.h:202</a></div></div>
 <div class="ttc" id="serialize_8h_html_a6535b70fa93811f2b1df307a424eb317"><div class="ttname"><a href="serialize_8h.html#a6535b70fa93811f2b1df307a424eb317">Unserialize</a></div><div class="ttdeci">void Unserialize(Stream &amp;s, char &amp;a, int, int=0)</div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00226">serialize.h:226</a></div></div>
-<div class="ttc" id="struct_c_ser_action_serialize_html"><div class="ttname"><a href="struct_c_ser_action_serialize.html">CSerActionSerialize</a></div><div class="ttdoc">Support for ADD_SERIALIZE_METHODS and READWRITE macro. </div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00929">serialize.h:929</a></div></div>
+<div class="ttc" id="struct_c_ser_action_serialize_html"><div class="ttname"><a href="struct_c_ser_action_serialize.html">CSerActionSerialize</a></div><div class="ttdoc">Support for ADD_SERIALIZE_METHODS and READWRITE macro. </div><div class="ttdef"><b>Definition:</b> <a href="serialize_8h_source.html#l00952">serialize.h:952</a></div></div>
 </div><!-- fragment -->
 <p>Implement three methods for serializable objects. </p>
 <p>These are actually wrappers over "SerializationOp" template, which implements the body of each class' serialization code. Adding "ADD_SERIALIZE_METHODS" in the body of the class causes these wrappers to be added as members. </p>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00184">184</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+
+</div>
+</div>
+<a id="abea2415cbb9469ff5b90adf057d7e440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea2415cbb9469ff5b90adf057d7e440">&#9670;&nbsp;</a></span>COMPACTSIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPACTSIZE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">obj</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(<a class="el" href="class_c_compact_size.html">CCompactSize</a>(<a class="el" href="serialize_8h.html#abd1caa7e45d4ba31b7dfdda9949c3b05">REF</a>(obj)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00389">389</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="undo_8h_source.html#l00073">CTxUndo::Serialize()</a>, and <a class="el" href="undo_8h_source.html#l00083">CTxUndo::Unserialize()</a>.</p>
 
 </div>
 </div>
@@ -580,7 +606,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00387">387</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l04008">LoadExternalBlockFile()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00197">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="protocol_8h_source.html#l00043">CMessageHeader::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00087">CNetAddr::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00124">CSubNet::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00161">CService::SerializationOp()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>, and <a class="el" href="validation_8cpp_source.html#l01150">WriteBlockToDisk()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l04013">LoadExternalBlockFile()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00197">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="protocol_8h_source.html#l00043">CMessageHeader::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00087">CNetAddr::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00124">CSubNet::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00161">CService::SerializationOp()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>, and <a class="el" href="validation_8cpp_source.html#l01151">WriteBlockToDisk()</a>.</p>
 
 </div>
 </div>
@@ -610,9 +636,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00389">389</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00390">390</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>, <a class="el" href="alert_8h_source.html#l00053">CUnsignedAlert::SerializationOp()</a>, <a class="el" href="drafted_2governance-classes_8h_source.html#l00164">CDashNetwork::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00308">CGovernanceObject::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00521">CWalletKey::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>, <a class="el" href="alert_8h_source.html#l00053">CUnsignedAlert::SerializationOp()</a>, <a class="el" href="drafted_2governance-classes_8h_source.html#l00164">CDashNetwork::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00308">CGovernanceObject::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00512">CWalletKey::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>.</p>
 
 </div>
 </div>
@@ -634,7 +660,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00175">175</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="spentindex_8h_source.html#l00019">CSpentIndexKey::SerializationOp()</a>, <a class="el" href="hdchain_8h_source.html#l00020">CHDAccount::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00025">CDiskBlockPos::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00027">COutPoint::SerializationOp()</a>, <a class="el" href="recentrequeststablemodel_8h_source.html#l00030">RecentRequestEntry::SerializationOp()</a>, <a class="el" href="darksend-relay_8h_source.html#l00031">CDarkSendRelay::SerializationOp()</a>, <a class="el" href="cachemap_8h_source.html#l00034">CacheItem&lt; K, V &gt;::SerializationOp()</a>, <a class="el" href="netfulfilledman_8h_source.html#l00034">CNetFulfilledRequestManager::SerializationOp()</a>, <a class="el" href="block_8h_source.html#l00039">CBlockHeader::SerializationOp()</a>, <a class="el" href="protocol_8h_source.html#l00043">CMessageHeader::SerializationOp()</a>, <a class="el" href="crypter_8h_source.html#l00049">CMasterKey::SerializationOp()</a>, <a class="el" href="addrdb_8h_source.html#l00049">CBanEntry::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00050">CMasternodePing::SerializationOp()</a>, <a class="el" href="spentindex_8h_source.html#l00051">CSpentIndexValue::SerializationOp()</a>, <a class="el" href="alert_8h_source.html#l00053">CUnsignedAlert::SerializationOp()</a>, <a class="el" href="rest_8cpp_source.html#l00053">CCoin::SerializationOp()</a>, <a class="el" href="addrman_8h_source.html#l00057">CAddrInfo::SerializationOp()</a>, <a class="el" href="amount_8h_source.html#l00060">CFeeRate::SerializationOp()</a>, <a class="el" href="hdchain_8h_source.html#l00061">CHDChain::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00063">CMasternodePayee::SerializationOp()</a>, <a class="el" href="walletdb_8h_source.html#l00064">CKeyMetadata::SerializationOp()</a>, <a class="el" href="undo_8h_source.html#l00066">CTxUndo::SerializationOp()</a>, <a class="el" href="walletmodel_8h_source.html#l00071">SendCoinsRecipient::SerializationOp()</a>, <a class="el" href="spork_8h_source.html#l00076">CSporkMessage::SerializationOp()</a>, <a class="el" href="bloom_8h_source.html#l00076">CBloomFilter::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00077">vote_instance_t::SerializationOp()</a>, <a class="el" href="undo_8h_source.html#l00080">CBlockUndo::SerializationOp()</a>, <a class="el" href="governance-votedb_8h_source.html#l00080">CGovernanceObjectVoteFile::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00087">CNetAddr::SerializationOp()</a>, <a class="el" href="merkleblock_8h_source.html#l00088">CPartialMerkleTree::SerializationOp()</a>, <a class="el" href="alert_8h_source.html#l00091">CAlert::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00094">CMasternodeBlockPayees::SerializationOp()</a>, <a class="el" href="masternodeman_8h_source.html#l00097">CMasternodeMan::SerializationOp()</a>, <a class="el" href="block_8h_source.html#l00098">CBlock::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00101">vote_rec_t::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00104">CTxIn::SerializationOp()</a>, <a class="el" href="compressor_8h_source.html#l00109">CTxOutCompressor::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00124">CSubNet::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00135">CMasternodePaymentVote::SerializationOp()</a>, <a class="el" href="governance_8h_source.html#l00135">CRateCheckBuffer::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00136">CKeyPool::SerializationOp()</a>, <a class="el" href="privatesend_8h_source.html#l00136">CDarkSendEntry::SerializationOp()</a>, <a class="el" href="hdchain_8h_source.html#l00139">CHDPubKey::SerializationOp()</a>, <a class="el" href="block_8h_source.html#l00146">CBlockLocator::SerializationOp()</a>, <a class="el" href="merkleblock_8h_source.html#l00150">CMerkleBlock::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00150">CTxOut::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00161">CService::SerializationOp()</a>, <a class="el" href="governance_8h_source.html#l00162">CGovernanceManager::last_object_rec::SerializationOp()</a>, <a class="el" href="drafted_2governance-classes_8h_source.html#l00164">CDashNetwork::SerializationOp()</a>, <a class="el" href="cachemap_8h_source.html#l00171">CacheMap&lt; uint256, CGovernanceVote &gt;::SerializationOp()</a>, <a class="el" href="instantx_8h_source.html#l00175">CTxLockVote::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00177">CMasternode::SerializationOp()</a>, <a class="el" href="privatesend_8h_source.html#l00181">CDarksendQueue::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00189">CMasternodePayments::SerializationOp()</a>, <a class="el" href="governance-vote_8h_source.html#l00192">CGovernanceVote::SerializationOp()</a>, <a class="el" href="cachemultimap_8h_source.html#l00210">CacheMultiMap&lt; uint256, vote_time_pair_t &gt;::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00244">CMerkleTx::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00248">CTransaction::SerializationOp()</a>, <a class="el" href="privatesend_8h_source.html#l00251">CDarksendBroadcastTx::SerializationOp()</a>, <a class="el" href="protocol_8h_source.html#l00290">CAddress::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00303">CDiskBlockIndex::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00308">CGovernanceObject::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00316">CMutableTransaction::SerializationOp()</a>, <a class="el" href="protocol_8h_source.html#l00324">CInv::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00327">CMasternodeBroadcast::SerializationOp()</a>, <a class="el" href="governance_8h_source.html#l00344">CGovernanceManager::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00376">CWalletTx::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00382">CMasternodeVerification::SerializationOp()</a>, <a class="el" href="validation_8h_source.html#l00425">CAddressUnspentValue::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00521">CWalletKey::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00566">CAccountingEntry::SerializationOp()</a>, <a class="el" href="validation_8h_source.html#l00593">CDiskTxPos::SerializationOp()</a>, <a class="el" href="validation_8h_source.html#l00770">CBlockFileInfo::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l01098">CAccount::SerializationOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="hdchain_8h_source.html#l00020">CHDAccount::SerializationOp()</a>, <a class="el" href="spentindex_8h_source.html#l00020">CSpentIndexKey::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00027">COutPoint::SerializationOp()</a>, <a class="el" href="recentrequeststablemodel_8h_source.html#l00030">RecentRequestEntry::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00031">CBlockFileInfo::SerializationOp()</a>, <a class="el" href="netfulfilledman_8h_source.html#l00034">CNetFulfilledRequestManager::SerializationOp()</a>, <a class="el" href="cachemap_8h_source.html#l00034">CacheItem&lt; K, V &gt;::SerializationOp()</a>, <a class="el" href="block_8h_source.html#l00039">CBlockHeader::SerializationOp()</a>, <a class="el" href="protocol_8h_source.html#l00043">CMessageHeader::SerializationOp()</a>, <a class="el" href="crypter_8h_source.html#l00049">CMasterKey::SerializationOp()</a>, <a class="el" href="addrdb_8h_source.html#l00049">CBanEntry::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00050">CMasternodePing::SerializationOp()</a>, <a class="el" href="txdb_8h_source.html#l00051">CDiskTxPos::SerializationOp()</a>, <a class="el" href="spentindex_8h_source.html#l00052">CSpentIndexValue::SerializationOp()</a>, <a class="el" href="alert_8h_source.html#l00053">CUnsignedAlert::SerializationOp()</a>, <a class="el" href="rest_8cpp_source.html#l00055">CCoin::SerializationOp()</a>, <a class="el" href="addrman_8h_source.html#l00057">CAddrInfo::SerializationOp()</a>, <a class="el" href="amount_8h_source.html#l00060">CFeeRate::SerializationOp()</a>, <a class="el" href="hdchain_8h_source.html#l00061">CHDChain::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00063">CMasternodePayee::SerializationOp()</a>, <a class="el" href="walletdb_8h_source.html#l00064">CKeyMetadata::SerializationOp()</a>, <a class="el" href="walletmodel_8h_source.html#l00075">SendCoinsRecipient::SerializationOp()</a>, <a class="el" href="bloom_8h_source.html#l00076">CBloomFilter::SerializationOp()</a>, <a class="el" href="spork_8h_source.html#l00076">CSporkMessage::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00077">vote_instance_t::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00079">CDiskBlockPos::SerializationOp()</a>, <a class="el" href="governance-votedb_8h_source.html#l00080">CGovernanceObjectVoteFile::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00087">CNetAddr::SerializationOp()</a>, <a class="el" href="merkleblock_8h_source.html#l00088">CPartialMerkleTree::SerializationOp()</a>, <a class="el" href="alert_8h_source.html#l00091">CAlert::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00094">CMasternodeBlockPayees::SerializationOp()</a>, <a class="el" href="masternodeman_8h_source.html#l00097">CMasternodeMan::SerializationOp()</a>, <a class="el" href="block_8h_source.html#l00098">CBlock::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00101">vote_rec_t::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00103">CTxIn::SerializationOp()</a>, <a class="el" href="undo_8h_source.html#l00106">CBlockUndo::SerializationOp()</a>, <a class="el" href="compressor_8h_source.html#l00115">CTxOutCompressor::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00124">CSubNet::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00127">CKeyPool::SerializationOp()</a>, <a class="el" href="privatesend_8h_source.html#l00128">CDarkSendEntry::SerializationOp()</a>, <a class="el" href="governance_8h_source.html#l00135">CRateCheckBuffer::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00135">CMasternodePaymentVote::SerializationOp()</a>, <a class="el" href="hdchain_8h_source.html#l00139">CHDPubKey::SerializationOp()</a>, <a class="el" href="block_8h_source.html#l00146">CBlockLocator::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00149">CTxOut::SerializationOp()</a>, <a class="el" href="merkleblock_8h_source.html#l00150">CMerkleBlock::SerializationOp()</a>, <a class="el" href="netaddress_8h_source.html#l00161">CService::SerializationOp()</a>, <a class="el" href="governance_8h_source.html#l00162">CGovernanceManager::last_object_rec::SerializationOp()</a>, <a class="el" href="drafted_2governance-classes_8h_source.html#l00164">CDashNetwork::SerializationOp()</a>, <a class="el" href="cachemap_8h_source.html#l00171">CacheMap&lt; uint256, CGovernanceVote &gt;::SerializationOp()</a>, <a class="el" href="privatesend_8h_source.html#l00173">CDarksendQueue::SerializationOp()</a>, <a class="el" href="instantx_8h_source.html#l00175">CTxLockVote::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00177">CMasternode::SerializationOp()</a>, <a class="el" href="masternode-payments_8h_source.html#l00189">CMasternodePayments::SerializationOp()</a>, <a class="el" href="governance-vote_8h_source.html#l00192">CGovernanceVote::SerializationOp()</a>, <a class="el" href="cachemultimap_8h_source.html#l00210">CacheMultiMap&lt; uint256, vote_time_pair_t &gt;::SerializationOp()</a>, <a class="el" href="spentindex_8h_source.html#l00211">CAddressUnspentValue::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00235">CMerkleTx::SerializationOp()</a>, <a class="el" href="privatesend_8h_source.html#l00243">CDarksendBroadcastTx::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00247">CTransaction::SerializationOp()</a>, <a class="el" href="protocol_8h_source.html#l00290">CAddress::SerializationOp()</a>, <a class="el" href="governance-object_8h_source.html#l00308">CGovernanceObject::SerializationOp()</a>, <a class="el" href="transaction_8h_source.html#l00315">CMutableTransaction::SerializationOp()</a>, <a class="el" href="protocol_8h_source.html#l00324">CInv::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00327">CMasternodeBroadcast::SerializationOp()</a>, <a class="el" href="governance_8h_source.html#l00344">CGovernanceManager::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00357">CDiskBlockIndex::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00367">CWalletTx::SerializationOp()</a>, <a class="el" href="masternode_8h_source.html#l00382">CMasternodeVerification::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00512">CWalletKey::SerializationOp()</a>, <a class="el" href="wallet_8h_source.html#l00557">CAccountingEntry::SerializationOp()</a>, and <a class="el" href="wallet_8h_source.html#l01089">CAccount::SerializationOp()</a>.</p>
 
 </div>
 </div>
@@ -676,7 +702,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00388">388</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="undo_8h_source.html#l00030">CTxInUndo::GetSerializeSize()</a>, <a class="el" href="compressor_8h_source.html#l00058">CScriptCompressor::GetSerializeSize()</a>, <a class="el" href="coins_8h_source.html#l00155">CCoins::GetSerializeSize()</a>, <a class="el" href="txdb_8cpp_source.html#l00101">CCoinsViewDB::GetStats()</a>, <a class="el" href="chain_8h_source.html#l00025">CDiskBlockPos::SerializationOp()</a>, <a class="el" href="compressor_8h_source.html#l00109">CTxOutCompressor::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00303">CDiskBlockIndex::SerializationOp()</a>, <a class="el" href="validation_8h_source.html#l00593">CDiskTxPos::SerializationOp()</a>, <a class="el" href="validation_8h_source.html#l00770">CBlockFileInfo::SerializationOp()</a>, <a class="el" href="undo_8h_source.html#l00037">CTxInUndo::Serialize()</a>, <a class="el" href="compressor_8h_source.html#l00067">CScriptCompressor::Serialize()</a>, <a class="el" href="coins_8h_source.html#l00179">CCoins::Serialize()</a>, <a class="el" href="undo_8h_source.html#l00045">CTxInUndo::Unserialize()</a>, <a class="el" href="compressor_8h_source.html#l00079">CScriptCompressor::Unserialize()</a>, and <a class="el" href="coins_8h_source.html#l00208">CCoins::Unserialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="blockchain_8cpp_source.html#l00570">ApplyStats()</a>, <a class="el" href="compressor_8h_source.html#l00058">CScriptCompressor::GetSerializeSize()</a>, <a class="el" href="chain_8h_source.html#l00031">CBlockFileInfo::SerializationOp()</a>, <a class="el" href="txdb_8h_source.html#l00051">CDiskTxPos::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00079">CDiskBlockPos::SerializationOp()</a>, <a class="el" href="compressor_8h_source.html#l00115">CTxOutCompressor::SerializationOp()</a>, <a class="el" href="chain_8h_source.html#l00357">CDiskBlockIndex::SerializationOp()</a>, <a class="el" href="undo_8h_source.html#l00027">TxInUndoSerializer::Serialize()</a>, <a class="el" href="coins_8h_source.html#l00059">Coin::Serialize()</a>, <a class="el" href="compressor_8h_source.html#l00067">CScriptCompressor::Serialize()</a>, <a class="el" href="undo_8h_source.html#l00045">TxInUndoDeserializer::Unserialize()</a>, <a class="el" href="coins_8h_source.html#l00067">Coin::Unserialize()</a>, and <a class="el" href="compressor_8h_source.html#l00079">CScriptCompressor::Unserialize()</a>.</p>
 
 </div>
 </div>
@@ -734,7 +760,7 @@ template&lt;typename V &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00054">54</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net_8cpp_source.html#l02796">CNode::CalculateKeyedNetGroup()</a>, <a class="el" href="serialize_8h_source.html#l00402">CFlatData::CFlatData()</a>, <a class="el" href="torcontrol_8cpp_source.html#l00496">ComputeResponse()</a>, <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, <a class="el" href="random_8cpp_source.html#l00046">RandAddSeedPerfmon()</a>, <a class="el" href="util_8cpp_source.html#l00799">ShrinkDebugFile()</a>, and <a class="el" href="netbase_8cpp_source.html#l00303">Socks5()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="net_8cpp_source.html#l02795">CNode::CalculateKeyedNetGroup()</a>, <a class="el" href="serialize_8h_source.html#l00403">CFlatData::CFlatData()</a>, <a class="el" href="torcontrol_8cpp_source.html#l00496">ComputeResponse()</a>, <a class="el" href="interpreter_8cpp_source.html#l00232">EvalScript()</a>, <a class="el" href="random_8cpp_source.html#l00046">RandAddSeedPerfmon()</a>, <a class="el" href="util_8cpp_source.html#l00799">ShrinkDebugFile()</a>, and <a class="el" href="netbase_8cpp_source.html#l00303">Socks5()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -808,7 +834,7 @@ template&lt;typename V &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00066">66</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00402">CFlatData::CFlatData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00403">CFlatData::CFlatData()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -894,7 +920,7 @@ template&lt;typename V &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00202">202</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l03400">AcceptBlock()</a>, <a class="el" href="miner_8cpp_source.html#l00403">BitcoinMiner()</a>, <a class="el" href="blockchain_8cpp_source.html#l00090">blockToJSON()</a>, <a class="el" href="transaction_8cpp_source.html#l00132">CTransaction::CalculateModifiedSize()</a>, <a class="el" href="validation_8cpp_source.html#l03119">CheckBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00470">CheckTransaction()</a>, <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l03275">ContextualCheckBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00518">ContextualCheckTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03173">CWallet::CreateTransaction()</a>, <a class="el" href="txmempool_8cpp_source.html#l00023">CTxMemPoolEntry::CTxMemPoolEntry()</a>, <a class="el" href="transaction_8h_source.html#l00169">CTxOut::GetDustThreshold()</a>, <a class="el" href="undo_8h_source.html#l00030">CTxInUndo::GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00280">CDataStream::GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00424">CAutoFile::GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00800">GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00626">GetSerializeSize_impl()</a>, <a class="el" href="transaction_8cpp_source.html#l00150">CTransaction::GetTotalSize()</a>, <a class="el" href="walletmodeltransaction_8cpp_source.html#l00034">WalletModelTransaction::getTransactionSize()</a>, <a class="el" href="validation_8cpp_source.html#l03956">InitBlockIndex()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00064">TxToJSON()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l03403">AcceptBlock()</a>, <a class="el" href="miner_8cpp_source.html#l00403">BitcoinMiner()</a>, <a class="el" href="blockchain_8cpp_source.html#l00094">blockToJSON()</a>, <a class="el" href="transaction_8cpp_source.html#l00132">CTransaction::CalculateModifiedSize()</a>, <a class="el" href="validation_8cpp_source.html#l03122">CheckBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00475">CheckTransaction()</a>, <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>, <a class="el" href="validation_8cpp_source.html#l03278">ContextualCheckBlock()</a>, <a class="el" href="validation_8cpp_source.html#l00523">ContextualCheckTransaction()</a>, <a class="el" href="wallet_8cpp_source.html#l03151">CWallet::CreateTransaction()</a>, <a class="el" href="txmempool_8cpp_source.html#l00023">CTxMemPoolEntry::CTxMemPoolEntry()</a>, <a class="el" href="transaction_8h_source.html#l00168">CTxOut::GetDustThreshold()</a>, <a class="el" href="streams_8h_source.html#l00284">CDataStream::GetSerializeSize()</a>, <a class="el" href="streams_8h_source.html#l00442">CAutoFile::GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00823">GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00649">GetSerializeSize_impl()</a>, <a class="el" href="transaction_8cpp_source.html#l00150">CTransaction::GetTotalSize()</a>, <a class="el" href="walletmodeltransaction_8cpp_source.html#l00034">WalletModelTransaction::getTransactionSize()</a>, <a class="el" href="validation_8cpp_source.html#l03961">InitBlockIndex()</a>, and <a class="el" href="rawtransaction_8cpp_source.html#l00064">TxToJSON()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -1427,7 +1453,7 @@ template&lt;typename C &gt; </div>
 <p>Forward declarations. </p>
 <p>string </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00592">592</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00615">615</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1483,9 +1509,9 @@ template&lt;unsigned int N, typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00635">635</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00658">658</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00620">GetSerializeSize_impl()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00643">GetSerializeSize_impl()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -1539,9 +1565,9 @@ template&lt;typename T , typename A &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00725">725</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00748">748</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00620">GetSerializeSize_impl()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00643">GetSerializeSize_impl()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -1589,7 +1615,7 @@ template&lt;typename K , typename T &gt; </div>
 
 <p>pair </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00800">800</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00823">823</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1639,7 +1665,7 @@ template&lt;typename K , typename T , typename Pred , typename A &gt; </div>
 
 <p>map </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00825">825</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00848">848</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, and <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1689,7 +1715,7 @@ template&lt;typename K , typename Pred , typename A &gt; </div>
 
 <p>set </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00861">861</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00884">884</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, and <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1748,7 +1774,7 @@ template&lt;typename T &gt; </div>
 <p>If none of the specialized versions above matched, default to calling member function. </p>
 <p>"int nType" is changed to "long nType" to keep from getting an ambiguous overload error. The compiler will only cast int to long if none of the other templates matched. Thanks to Boost serialization for this idea. </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00567">567</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00590">590</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 </div>
 </div>
@@ -1788,7 +1814,7 @@ template&lt;typename T , typename A &gt; </div>
 
 <p>list </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00895">895</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00918">918</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, and <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1845,11 +1871,11 @@ template&lt;unsigned int N, typename T &gt; </div>
 <p>prevector prevectors of unsigned char are a special case and are intended to be serialized as a single opaque blob. </p>
 <p>prevector </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00620">620</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00643">643</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>, and <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00635">GetSerializeSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00658">GetSerializeSize()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -1909,7 +1935,7 @@ template&lt;unsigned int N, typename T , typename V &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00626">626</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00649">649</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="prevector_8h_source.html#l00270">prevector&lt; N, T, Size, Diff &gt;::begin()</a>, <a class="el" href="prevector_8h_source.html#l00272">prevector&lt; N, T, Size, Diff &gt;::end()</a>, <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>, and <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1966,7 +1992,7 @@ template&lt;typename T , typename A &gt; </div>
 <p>vector vectors of unsigned char are a special case and are intended to be serialized as a single opaque blob. </p>
 <p>vector </p>
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00710">710</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00733">733</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -2020,7 +2046,7 @@ template&lt;typename T , typename A , typename V &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00716">716</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00739">739</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00202">GetSerializeSize()</a>, and <a class="el" href="serialize_8h_source.html#l00254">GetSizeOfCompactSize()</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -2062,7 +2088,7 @@ template&lt;typename T , typename A , typename V &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00254">254</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01956">ConnectBlock()</a>, <a class="el" href="serialize_8h_source.html#l00487">LimitedString&lt; Limit &gt;::GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00592">GetSerializeSize()</a>, and <a class="el" href="serialize_8h_source.html#l00620">GetSerializeSize_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="validation_8cpp_source.html#l01954">ConnectBlock()</a>, <a class="el" href="serialize_8h_source.html#l00467">CCompactSize::GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00510">LimitedString&lt; Limit &gt;::GetSerializeSize()</a>, <a class="el" href="serialize_8h_source.html#l00615">GetSerializeSize()</a>, and <a class="el" href="serialize_8h_source.html#l00643">GetSerializeSize_impl()</a>.</p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -2169,7 +2195,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00026">MAX_SIZE</a>, <a class="el" href="serialize_8h_source.html#l00111">ser_readdata16()</a>, <a class="el" href="serialize_8h_source.html#l00117">ser_readdata32()</a>, <a class="el" href="serialize_8h_source.html#l00129">ser_readdata64()</a>, and <a class="el" href="serialize_8h_source.html#l00105">ser_readdata8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01074">ProcessMessage()</a>, <a class="el" href="pubkey_8h_source.html#l00129">CPubKey::Unserialize()</a>, <a class="el" href="key_8h_source.html#l00182">CExtKey::Unserialize()</a>, <a class="el" href="pubkey_8h_source.html#l00226">CExtPubKey::Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00468">LimitedString&lt; Limit &gt;::Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00606">Unserialize()</a>, and <a class="el" href="serialize_8h_source.html#l00665">Unserialize_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="net__processing_8cpp_source.html#l01077">ProcessMessage()</a>, <a class="el" href="pubkey_8h_source.html#l00129">CPubKey::Unserialize()</a>, <a class="el" href="key_8h_source.html#l00182">CExtKey::Unserialize()</a>, <a class="el" href="pubkey_8h_source.html#l00226">CExtPubKey::Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00491">LimitedString&lt; Limit &gt;::Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00629">Unserialize()</a>, and <a class="el" href="serialize_8h_source.html#l00688">Unserialize_impl()</a>.</p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -2251,13 +2277,13 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00033">33</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="undo_8h_source.html#l00030">CTxInUndo::GetSerializeSize()</a>, <a class="el" href="coins_8h_source.html#l00155">CCoins::GetSerializeSize()</a>, <a class="el" href="compressor_8h_source.html#l00109">CTxOutCompressor::SerializationOp()</a>, <a class="el" href="undo_8h_source.html#l00037">CTxInUndo::Serialize()</a>, <a class="el" href="coins_8h_source.html#l00179">CCoins::Serialize()</a>, <a class="el" href="undo_8h_source.html#l00045">CTxInUndo::Unserialize()</a>, <a class="el" href="compressor_8h_source.html#l00079">CScriptCompressor::Unserialize()</a>, and <a class="el" href="coins_8h_source.html#l00208">CCoins::Unserialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="compressor_8h_source.html#l00115">CTxOutCompressor::SerializationOp()</a>, <a class="el" href="undo_8h_source.html#l00027">TxInUndoSerializer::Serialize()</a>, <a class="el" href="coins_8h_source.html#l00059">Coin::Serialize()</a>, <a class="el" href="undo_8h_source.html#l00073">CTxUndo::Serialize()</a>, <a class="el" href="undo_8h_source.html#l00045">TxInUndoDeserializer::Unserialize()</a>, <a class="el" href="coins_8h_source.html#l00067">Coin::Unserialize()</a>, <a class="el" href="compressor_8h_source.html#l00079">CScriptCompressor::Unserialize()</a>, and <a class="el" href="undo_8h_source.html#l00083">CTxUndo::Unserialize()</a>.</p>
 <div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-21-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="serialize_8h_abd1caa7e45d4ba31b7dfdda9949c3b05_icgraph.svg" width="343" height="408"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="serialize_8h_abd1caa7e45d4ba31b7dfdda9949c3b05_icgraph.svg" width="343" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -2419,7 +2445,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="endian_8h_source.html#l00160">le32toh()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, <a class="el" href="serialize_8h_source.html#l00231">Unserialize()</a>, <a class="el" href="validation_8h_source.html#l00391">CAddressUnspentKey::Unserialize()</a>, and <a class="el" href="validation_8h_source.html#l00477">CAddressIndexKey::Unserialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, <a class="el" href="spentindex_8h_source.html#l00177">CAddressUnspentKey::Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00231">Unserialize()</a>, and <a class="el" href="spentindex_8h_source.html#l00263">CAddressIndexKey::Unserialize()</a>.</p>
 <div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-26-summary" class="dynsummary" style="display:block;">
@@ -2469,7 +2495,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="endian_8h_source.html#l00153">be32toh()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00324">CTimestampIndexIteratorKey::Unserialize()</a>, <a class="el" href="validation_8h_source.html#l00354">CTimestampIndexKey::Unserialize()</a>, <a class="el" href="validation_8h_source.html#l00477">CAddressIndexKey::Unserialize()</a>, and <a class="el" href="validation_8h_source.html#l00563">CAddressIndexIteratorHeightKey::Unserialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spentindex_8h_source.html#l00110">CTimestampIndexIteratorKey::Unserialize()</a>, <a class="el" href="spentindex_8h_source.html#l00140">CTimestampIndexKey::Unserialize()</a>, <a class="el" href="spentindex_8h_source.html#l00263">CAddressIndexKey::Unserialize()</a>, and <a class="el" href="spentindex_8h_source.html#l00349">CAddressIndexIteratorHeightKey::Unserialize()</a>.</p>
 <div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-28-summary" class="dynsummary" style="display:block;">
@@ -2567,7 +2593,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00105">105</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, <a class="el" href="serialize_8h_source.html#l00374">ReadVarInt()</a>, <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>, <a class="el" href="validation_8h_source.html#l00391">CAddressUnspentKey::Unserialize()</a>, <a class="el" href="validation_8h_source.html#l00477">CAddressIndexKey::Unserialize()</a>, <a class="el" href="validation_8h_source.html#l00528">CAddressIndexIteratorKey::Unserialize()</a>, and <a class="el" href="validation_8h_source.html#l00563">CAddressIndexIteratorHeightKey::Unserialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, <a class="el" href="serialize_8h_source.html#l00374">ReadVarInt()</a>, <a class="el" href="spentindex_8h_source.html#l00177">CAddressUnspentKey::Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>, <a class="el" href="spentindex_8h_source.html#l00263">CAddressIndexKey::Unserialize()</a>, <a class="el" href="spentindex_8h_source.html#l00314">CAddressIndexIteratorKey::Unserialize()</a>, and <a class="el" href="spentindex_8h_source.html#l00349">CAddressIndexIteratorHeightKey::Unserialize()</a>.</p>
 <div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-32-summary" class="dynsummary" style="display:block;">
@@ -2755,7 +2781,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="endian_8h_source.html#l00146">htole32()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00219">Serialize()</a>, <a class="el" href="validation_8h_source.html#l00384">CAddressUnspentKey::Serialize()</a>, <a class="el" href="validation_8h_source.html#l00465">CAddressIndexKey::Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spentindex_8h_source.html#l00170">CAddressUnspentKey::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00219">Serialize()</a>, <a class="el" href="spentindex_8h_source.html#l00251">CAddressIndexKey::Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-37-summary" class="dynsummary" style="display:block;">
@@ -2815,7 +2841,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="endian_8h_source.html#l00139">htobe32()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="validation_8h_source.html#l00320">CTimestampIndexIteratorKey::Serialize()</a>, <a class="el" href="validation_8h_source.html#l00349">CTimestampIndexKey::Serialize()</a>, <a class="el" href="validation_8h_source.html#l00465">CAddressIndexKey::Serialize()</a>, and <a class="el" href="validation_8h_source.html#l00557">CAddressIndexIteratorHeightKey::Serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spentindex_8h_source.html#l00106">CTimestampIndexIteratorKey::Serialize()</a>, <a class="el" href="spentindex_8h_source.html#l00135">CTimestampIndexKey::Serialize()</a>, <a class="el" href="spentindex_8h_source.html#l00251">CAddressIndexKey::Serialize()</a>, and <a class="el" href="spentindex_8h_source.html#l00343">CAddressIndexIteratorHeightKey::Serialize()</a>.</p>
 <div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-39-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-39-summary" class="dynsummary" style="display:block;">
@@ -2933,7 +2959,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00081">81</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, <a class="el" href="validation_8h_source.html#l00384">CAddressUnspentKey::Serialize()</a>, <a class="el" href="validation_8h_source.html#l00465">CAddressIndexKey::Serialize()</a>, <a class="el" href="validation_8h_source.html#l00523">CAddressIndexIteratorKey::Serialize()</a>, <a class="el" href="validation_8h_source.html#l00557">CAddressIndexIteratorHeightKey::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>, and <a class="el" href="serialize_8h_source.html#l00357">WriteVarInt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spentindex_8h_source.html#l00170">CAddressUnspentKey::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, <a class="el" href="spentindex_8h_source.html#l00251">CAddressIndexKey::Serialize()</a>, <a class="el" href="spentindex_8h_source.html#l00309">CAddressIndexIteratorKey::Serialize()</a>, <a class="el" href="spentindex_8h_source.html#l00343">CAddressIndexIteratorHeightKey::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>, and <a class="el" href="serialize_8h_source.html#l00357">WriteVarInt()</a>.</p>
 <div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-43-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-43-summary" class="dynsummary" style="display:block;">
@@ -2997,7 +3023,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00081">ser_writedata8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="hash_8h_source.html#l00261">CHashWriter::operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00431">CAutoFile::operator&lt;&lt;()</a>, <a class="el" href="serialize_8h_source.html#l00976">CSizeComputer::operator&lt;&lt;()</a>, <a class="el" href="serialize_8h_source.html#l00806">Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00650">Serialize_impl()</a>, <a class="el" href="serialize_8h_source.html#l00993">SerializeMany()</a>, and <a class="el" href="serialize_8h_source.html#l00939">SerReadWrite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="hash_8h_source.html#l00261">CHashWriter::operator&lt;&lt;()</a>, <a class="el" href="streams_8h_source.html#l00449">CAutoFile::operator&lt;&lt;()</a>, <a class="el" href="serialize_8h_source.html#l00999">CSizeComputer::operator&lt;&lt;()</a>, <a class="el" href="serialize_8h_source.html#l00829">Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00673">Serialize_impl()</a>, <a class="el" href="serialize_8h_source.html#l01016">SerializeMany()</a>, and <a class="el" href="serialize_8h_source.html#l00962">SerReadWrite()</a>.</p>
 <div id="dynsection-44" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-44-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-44-summary" class="dynsummary" style="display:block;">
@@ -3739,7 +3765,7 @@ template&lt;typename Stream , typename C &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00598">598</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00621">621</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -3801,9 +3827,9 @@ template&lt;typename Stream , unsigned int N, typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00658">658</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00681">681</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00642">Serialize_impl()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00665">Serialize_impl()</a>.</p>
 <div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-58-summary" class="dynsummary" style="display:block;">
@@ -3863,9 +3889,9 @@ template&lt;typename Stream , typename T , typename A &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00748">748</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00771">771</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00642">Serialize_impl()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00665">Serialize_impl()</a>.</p>
 <div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-59-summary" class="dynsummary" style="display:block;">
@@ -3917,7 +3943,7 @@ template&lt;typename Stream , typename K , typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00806">806</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00829">829</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>.</p>
 <div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -3971,7 +3997,7 @@ template&lt;typename Stream , typename K , typename T , typename Pred , typename
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00834">834</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00857">857</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4025,7 +4051,7 @@ template&lt;typename Stream , typename K , typename Pred , typename A &gt; </div
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00870">870</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00893">893</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-62" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4087,7 +4113,7 @@ template&lt;typename Stream , typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00573">573</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00596">596</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 </div>
 </div>
@@ -4131,7 +4157,7 @@ template&lt;typename Stream , typename T , typename A &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00904">904</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00927">927</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-63" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4191,11 +4217,11 @@ template&lt;typename Stream , unsigned int N, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00642">642</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00665">665</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="prevector_8h_source.html#l00266">prevector&lt; N, T, Size, Diff &gt;::empty()</a>, <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00658">Serialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00681">Serialize()</a>.</p>
 <div id="dynsection-64" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-64-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-64-summary" class="dynsummary" style="display:block;">
@@ -4261,7 +4287,7 @@ template&lt;typename Stream , unsigned int N, typename T , typename V &gt; </div
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00650">650</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00673">673</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="prevector_8h_source.html#l00270">prevector&lt; N, T, Size, Diff &gt;::begin()</a>, <a class="el" href="prevector_8h_source.html#l00272">prevector&lt; N, T, Size, Diff &gt;::end()</a>, <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, <a class="el" href="prevector_8h_source.html#l00262">prevector&lt; N, T, Size, Diff &gt;::size()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-66" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4321,7 +4347,7 @@ template&lt;typename Stream , typename T , typename A &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00732">732</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00755">755</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-67" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4381,7 +4407,7 @@ template&lt;typename Stream , typename T , typename A , typename V &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00740">740</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00763">763</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00263">WriteCompactSize()</a>.</p>
 <div id="dynsection-68" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4429,9 +4455,9 @@ template&lt;typename Stream &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00988">988</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01011">1011</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00083">CDataStream::CDataStream()</a>, <a class="el" href="net_8h_source.html#l00178">CConnman::PushMessageWithVersionAndFlag()</a>, <a class="el" href="serialize_8h_source.html#l00999">SerializeMany()</a>, and <a class="el" href="serialize_8h_source.html#l01024">SerReadWriteMany()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00081">CDataStream::CDataStream()</a>, <a class="el" href="net_8h_source.html#l00178">CConnman::PushMessageWithVersionAndFlag()</a>, <a class="el" href="serialize_8h_source.html#l01022">SerializeMany()</a>, and <a class="el" href="serialize_8h_source.html#l01047">SerReadWriteMany()</a>.</p>
 <div id="dynsection-69" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-69-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-69-summary" class="dynsummary" style="display:block;">
@@ -4483,7 +4509,7 @@ template&lt;typename Stream , typename Arg &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00993">993</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01016">1016</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>.</p>
 <div id="dynsection-70" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4543,9 +4569,9 @@ template&lt;typename Stream , typename Arg , typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00999">999</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01022">1022</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00988">SerializeMany()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l01011">SerializeMany()</a>.</p>
 <div id="dynsection-71" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-71-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-71-summary" class="dynsummary" style="display:block;">
@@ -4611,7 +4637,7 @@ template&lt;typename Stream , typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00939">939</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00962">962</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00214">Serialize()</a>.</p>
 <div id="dynsection-72" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4679,7 +4705,7 @@ template&lt;typename Stream , typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00945">945</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00968">968</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-73" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -4747,9 +4773,9 @@ template&lt;typename Stream , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01024">1024</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01047">1047</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00988">SerializeMany()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l01011">SerializeMany()</a>.</p>
 <div id="dynsection-74" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-74-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-74-summary" class="dynsummary" style="display:block;">
@@ -4815,9 +4841,9 @@ template&lt;typename Stream , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01030">1030</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01053">1053</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l01006">UnserializeMany()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l01029">UnserializeMany()</a>.</p>
 <div id="dynsection-75" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-75-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-75-summary" class="dynsummary" style="display:block;">
@@ -4881,7 +4907,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00105">ser_readdata8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="streams_8h_source.html#l00295">CDataStream::operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00441">CAutoFile::operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00584">CBufferedFile::operator&gt;&gt;()</a>, <a class="el" href="serialize_8h_source.html#l00945">SerReadWrite()</a>, <a class="el" href="serialize_8h_source.html#l00813">Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00681">Unserialize_impl()</a>, and <a class="el" href="serialize_8h_source.html#l01011">UnserializeMany()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="hash_8h_source.html#l00295">CHashVerifier&lt; Source &gt;::operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00299">CDataStream::operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00459">CAutoFile::operator&gt;&gt;()</a>, <a class="el" href="streams_8h_source.html#l00602">CBufferedFile::operator&gt;&gt;()</a>, <a class="el" href="serialize_8h_source.html#l00968">SerReadWrite()</a>, <a class="el" href="serialize_8h_source.html#l00836">Unserialize()</a>, <a class="el" href="serialize_8h_source.html#l00704">Unserialize_impl()</a>, and <a class="el" href="serialize_8h_source.html#l01034">UnserializeMany()</a>.</p>
 <div id="dynsection-76" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-76-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-76-summary" class="dynsummary" style="display:block;">
@@ -4895,7 +4921,7 @@ template&lt;typename Stream &gt; </div>
 <div id="dynsection-77-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-77-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="serialize_8h_a6535b70fa93811f2b1df307a424eb317_icgraph.svg" width="319" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="serialize_8h_a6535b70fa93811f2b1df307a424eb317_icgraph.svg" width="320" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -5623,7 +5649,7 @@ template&lt;typename Stream , typename C &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00606">606</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00629">629</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>.</p>
 <div id="dynsection-89" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -5685,9 +5711,9 @@ template&lt;typename Stream , unsigned int N, typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00699">699</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00722">722</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00665">Unserialize_impl()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00688">Unserialize_impl()</a>.</p>
 <div id="dynsection-90" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-90-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-90-summary" class="dynsummary" style="display:block;">
@@ -5747,9 +5773,9 @@ template&lt;typename Stream , typename T , typename A &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00789">789</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00812">812</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00665">Unserialize_impl()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00688">Unserialize_impl()</a>.</p>
 <div id="dynsection-91" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-91-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-91-summary" class="dynsummary" style="display:block;">
@@ -5801,7 +5827,7 @@ template&lt;typename Stream , typename K , typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00813">813</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00836">836</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-92" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -5855,7 +5881,7 @@ template&lt;typename Stream , typename K , typename T , typename Pred , typename
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00842">842</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00865">865</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-93" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -5909,7 +5935,7 @@ template&lt;typename Stream , typename K , typename Pred , typename A &gt; </div
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00878">878</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00901">901</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-94" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -5971,7 +5997,7 @@ template&lt;typename Stream , typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00579">579</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00602">602</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 </div>
 </div>
@@ -6015,7 +6041,7 @@ template&lt;typename Stream , typename T , typename A &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00912">912</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00935">935</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-95" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -6075,11 +6101,11 @@ template&lt;typename Stream , unsigned int N, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00665">665</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00688">688</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="prevector_8h_source.html#l00319">prevector&lt; N, T, Size, Diff &gt;::clear()</a>, <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, and <a class="el" href="prevector_8h_source.html#l00296">prevector&lt; N, T, Size, Diff &gt;::resize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00699">Unserialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l00722">Unserialize()</a>.</p>
 <div id="dynsection-96" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-96-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-96-summary" class="dynsummary" style="display:block;">
@@ -6145,7 +6171,7 @@ template&lt;typename Stream , unsigned int N, typename T , typename V &gt; </div
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00681">681</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00704">704</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="prevector_8h_source.html#l00319">prevector&lt; N, T, Size, Diff &gt;::clear()</a>, <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, <a class="el" href="prevector_8h_source.html#l00296">prevector&lt; N, T, Size, Diff &gt;::resize()</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-98" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -6205,7 +6231,7 @@ template&lt;typename Stream , typename T , typename A &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00755">755</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00778">778</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>.</p>
 <div id="dynsection-99" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -6265,7 +6291,7 @@ template&lt;typename Stream , typename T , typename A , typename V &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00771">771</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00794">794</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, and <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-100" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -6321,9 +6347,9 @@ template&lt;typename Stream &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01006">1006</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01029">1029</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l01030">SerReadWriteMany()</a>, and <a class="el" href="serialize_8h_source.html#l01017">UnserializeMany()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="serialize_8h_source.html#l01053">SerReadWriteMany()</a>, and <a class="el" href="serialize_8h_source.html#l01040">UnserializeMany()</a>.</p>
 <div id="dynsection-101" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-101-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-101-summary" class="dynsummary" style="display:block;">
@@ -6383,7 +6409,7 @@ template&lt;typename Stream , typename Arg &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01011">1011</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01034">1034</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>.</p>
 <div id="dynsection-102" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -6451,9 +6477,9 @@ template&lt;typename Stream , typename Arg , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01017">1017</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l01040">1040</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">References <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>, and <a class="el" href="serialize_8h_source.html#l01006">UnserializeMany()</a>.</p>
+<p class="reference">References <a class="el" href="serialize_8h_source.html#l00226">Unserialize()</a>, and <a class="el" href="serialize_8h_source.html#l01029">UnserializeMany()</a>.</p>
 <div id="dynsection-103" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-103-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-103-summary" class="dynsummary" style="display:block;">
@@ -6483,7 +6509,7 @@ template&lt;typename I &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00494">494</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00517">517</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
 </div>
 </div>
@@ -6519,7 +6545,7 @@ template&lt;typename Stream &gt; </div>
 
 <p class="reference">References <a class="el" href="serialize_8h_source.html#l00085">ser_writedata16()</a>, <a class="el" href="serialize_8h_source.html#l00090">ser_writedata32()</a>, <a class="el" href="serialize_8h_source.html#l00100">ser_writedata64()</a>, and <a class="el" href="serialize_8h_source.html#l00081">ser_writedata8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pubkey_8h_source.html#l00122">CPubKey::Serialize()</a>, <a class="el" href="key_8h_source.html#l00173">CExtKey::Serialize()</a>, <a class="el" href="pubkey_8h_source.html#l00217">CExtPubKey::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00480">LimitedString&lt; Limit &gt;::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00598">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00642">Serialize_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pubkey_8h_source.html#l00122">CPubKey::Serialize()</a>, <a class="el" href="key_8h_source.html#l00173">CExtKey::Serialize()</a>, <a class="el" href="pubkey_8h_source.html#l00217">CExtPubKey::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00503">LimitedString&lt; Limit &gt;::Serialize()</a>, <a class="el" href="serialize_8h_source.html#l00621">Serialize()</a>, and <a class="el" href="serialize_8h_source.html#l00665">Serialize_impl()</a>.</p>
 <div id="dynsection-104" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-104-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-104-summary" class="dynsummary" style="display:block;">
@@ -6604,7 +6630,7 @@ template&lt;typename Stream , typename I &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="serialize_8h_source.html#l00026">26</a> of file <a class="el" href="serialize_8h_source.html">serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="httpserver_8cpp_source.html#l00384">InitHTTPServer()</a>, <a class="el" href="protocol_8cpp_source.html#l00172">CMessageHeader::IsValid()</a>, <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, and <a class="el" href="net_8cpp_source.html#l00755">CNetMessage::readHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="httpserver_8cpp_source.html#l00384">InitHTTPServer()</a>, <a class="el" href="protocol_8cpp_source.html#l00172">CMessageHeader::IsValid()</a>, <a class="el" href="serialize_8h_source.html#l00288">ReadCompactSize()</a>, and <a class="el" href="net_8cpp_source.html#l00754">CNetMessage::readHeader()</a>.</p>
 
 </div>
 </div>
@@ -6615,7 +6641,7 @@ template&lt;typename Stream , typename I &gt; </div>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="serialize_8h.html">serialize.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:21 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:29 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

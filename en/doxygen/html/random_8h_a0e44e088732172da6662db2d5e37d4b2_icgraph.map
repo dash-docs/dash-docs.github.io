@@ -1,51 +1,51 @@
 <map id="GetRandInt" name="GetRandInt">
-<area shape="rect" id="node2" href="$class_c_private_send_server.html#a332772df161f5d7c60f98634e3c18370" title="Charge fees to bad actors (Charge clients a fee if they&#39;re abusive) " alt="" coords="197,5,339,47"/>
-<area shape="rect" id="node6" href="$class_c_private_send_server.html#a331ca0c6a5687ecb079b55da6d735bf4" title="Rarely charge fees to pay miners. " alt="" coords="193,435,343,476"/>
+<area shape="rect" id="node2" href="$class_c_private_send_server.html#a332772df161f5d7c60f98634e3c18370" title="Charge fees to bad actors (Charge clients a fee if they&#39;re abusive) " alt="" coords="197,136,339,177"/>
+<area shape="rect" id="node6" href="$class_c_private_send_server.html#a331ca0c6a5687ecb079b55da6d735bf4" title="Rarely charge fees to pay miners. " alt="" coords="193,525,343,567"/>
 <area shape="rect" id="node11" href="$class_c_masternode_man.html#a09302023fe1dca8be33e34d1ece9d27f" title="Check all Masternodes and remove inactive. " alt="" coords="171,71,365,112"/>
-<area shape="rect" id="node13" href="$class_c_private_send_server.html#ad22c8603123573ef0831c127477af1bd" title="CPrivateSendServer\l::CreateNewSession" alt="" coords="794,496,937,537"/>
-<area shape="rect" id="node14" href="$group___actions.html#ga9476d8b40414f77f7f3bcd3ba28fa31f" title="Create a new transaction paying the recipients with a set of coins selected by SelectCoins(); Also cr..." alt="" coords="176,795,360,822"/>
-<area shape="rect" id="node24" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="772,253,959,295"/>
-<area shape="rect" id="node26" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="1029,202,1235,229"/>
-<area shape="rect" id="node28" href="$class_c_private_send.html#a43c11671576bb701a8fb0a2dcc7ab855" title="Get the denominations for a list of outputs (returns a bitshifted integer) " alt="" coords="159,551,377,578"/>
-<area shape="rect" id="node29" href="$class_c_private_send_client.html#a356ed0412558a251d85ebfbc4090dcf9" title="step 1: prepare denominated inputs and outputs " alt="" coords="500,369,645,411"/>
-<area shape="rect" id="node34" href="$class_c_addr_man.html#a4bf12611bd89c5e524396e50bf8f3846" title="Wraps GetRandInt to allow tests to override RandomInt and make it determinismistic. " alt="" coords="190,1054,346,1081"/>
-<area shape="rect" id="node39" href="$class_c_governance_manager.html#a21705b3f3b7f56a2c4063c02536ac953" title="CGovernanceManager\l::RequestGovernanceObject" alt="" coords="175,1223,361,1264"/>
-<area shape="rect" id="node43" href="$group___actions.html#ga416c2796c5ecb9836d4f6407fcdbb42c" title="CWallet::SelectCoinsByDenominations" alt="" coords="143,333,393,359"/>
-<area shape="rect" id="node45" href="$group___actions.html#gac75c09aea2670e5d144161f285f41156" title="Shuffle and select coins until nTargetValue is reached while avoiding small change; This method is st..." alt="" coords="169,1321,367,1347"/>
-<area shape="rect" id="node47" href="$class_c_masternode_man.html#ad8afa8f263f5632504015990b196609e" title="CMasternodeMan::SendVerify\lRequest" alt="" coords="169,136,367,177"/>
-<area shape="rect" id="node49" href="$class_c_connman.html#ac4c8cf5142f88565e789f3b173d89b3e" title="CConnman::ThreadOpenConnections" alt="" coords="148,1437,388,1463"/>
-<area shape="rect" id="node3" href="$class_c_private_send_server.html#a5bbfc770d9593387302f40281f8fca96" title="CPrivateSendServer\l::CheckTimeout" alt="" coords="502,11,643,52"/>
-<area shape="rect" id="node4" href="$privatesend-server_8h.html#a6154ebb1088235a8e702e869eda136ab" title="ThreadCheckPrivateSendServer" alt="" coords="1027,49,1237,75"/>
-<area shape="rect" id="node5" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="1311,110,1382,137"/>
-<area shape="rect" id="node7" href="$class_c_private_send_server.html#a86b29accd11a5ff73ad409e6d29b28c9" title="CPrivateSendServer\l::CommitFinalTransaction" alt="" coords="487,435,659,476"/>
-<area shape="rect" id="node8" href="$class_c_private_send_server.html#ab6d446eb9d4d76982e7a92c8c9529af0" title="Check for process. " alt="" coords="795,431,936,472"/>
-<area shape="rect" id="node9" href="$class_c_private_send_server.html#ad51576edb65312fa566ba6f0351a7b6d" title="CPrivateSendServer\l::ProcessMessage" alt="" coords="1061,496,1203,537"/>
-<area shape="rect" id="node10" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1285,503,1408,530"/>
-<area shape="rect" id="node12" href="$privatesend_8h.html#a8ca12ada145ba86ddcba18018b77db14" title="ThreadCheckPrivateSend" alt="" coords="780,110,951,137"/>
-<area shape="rect" id="node15" href="$class_c_private_send_client.html#ad603beaa1644f6e6cfb8ca7d1400d46e" title="CPrivateSendClient\l::MakeCollateralAmounts" alt="" coords="488,872,657,913"/>
-<area shape="rect" id="node16" href="$class_c_private_send_client.html#a1318eb1f8e5a845036cfe99f0b3f8b36" title="CPrivateSendClient\l::CreateDenominated" alt="" coords="499,937,646,979"/>
-<area shape="rect" id="node17" href="$class_wallet_model.html#a8abc851901c7c7343ebfb5a8e5fc0154" title="WalletModel::prepareTransaction" alt="" coords="466,719,679,746"/>
-<area shape="rect" id="node19" href="$rpcwallet_8cpp.html#a1ce48c3b465b38c532d3a3bc9664ba16" title="SendMoney" alt="" coords="527,770,618,797"/>
-<area shape="rect" id="node23" href="$rpcwallet_8cpp.html#a02c1a7b5244896e62bc5ae698f7a76c9" title="sendmany" alt="" coords="531,821,614,847"/>
-<area shape="rect" id="node18" href="$class_send_coins_dialog.html#aab03626a859f22a68760b235a1df6bc9" title="SendCoinsDialog::send" alt="" coords="786,694,945,721"/>
-<area shape="rect" id="node20" href="$rpcwallet_8cpp.html#a36f0a0b6cd58a61c125bbe7a39ed1368" title="sendtoaddress" alt="" coords="812,846,919,873"/>
-<area shape="rect" id="node21" href="$rpcwallet_8cpp.html#a13ae0f230ba6d349466070da38ee85f4" title="instantsendtoaddress" alt="" coords="792,745,939,771"/>
-<area shape="rect" id="node22" href="$rpcwallet_8cpp.html#a887e8b6785b39cba59fe24ea952a4f10" title="sendfrom" alt="" coords="827,795,903,822"/>
-<area shape="rect" id="node25" href="$server_8h.html#a6f0f20fd2a24851d47a6120eeca7d3e4" title="privatesend" alt="" coords="1087,257,1177,283"/>
-<area shape="rect" id="node27" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="1027,307,1237,334"/>
-<area shape="rect" id="node31" href="$class_c_private_send_server.html#a9db6664e7c755680654305aa31d918de" title="Are these outputs compatible with other client in the pool? " alt="" coords="752,561,979,617"/>
-<area shape="rect" id="node32" href="$class_c_private_send.html#a0c46027cfe24dfca591f7b17bec13045" title="CPrivateSend::GetDenominations" alt="" coords="463,602,682,629"/>
-<area shape="rect" id="node33" href="$class_c_private_send.html#ae9450458b796fc1a97f6a86dd787bf23" title="Get the denominations for a specific amount of dash. " alt="" coords="463,653,682,695"/>
-<area shape="rect" id="node30" href="$class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546" title="As a client, submit part of a future mixing transaction to a Masternode to start the process..." alt="" coords="795,365,936,407"/>
-<area shape="rect" id="node35" href="$class_c_addr_man.html#a33ec6a4584cf4b17af821e6e35216459" title="Mark an entry &quot;good&quot;, possibly moving it from &quot;new&quot; to &quot;tried&quot;. " alt="" coords="507,1105,638,1131"/>
-<area shape="rect" id="node36" href="$class_c_addr_man.html#a9dd6df8b1904548a86054d19d4a90724" title="Add an entry to the &quot;new&quot; table. " alt="" coords="511,1155,634,1182"/>
-<area shape="rect" id="node37" href="$class_c_addr_man.html#a27e51ef4fe86db1ff5a5e45caefc1ef4" title="Select an address to connect to, if newOnly is set to true, only the new table is selected from..." alt="" coords="505,1003,641,1030"/>
-<area shape="rect" id="node38" href="$class_c_addr_man.html#aff86d04dc7c0e0afae3ff5998417db17" title="Select several addresses at once. " alt="" coords="499,1054,646,1081"/>
-<area shape="rect" id="node40" href="$class_c_governance_manager.html#a7af57e90ea7d01041410d26172ecae01" title="CGovernanceManager\l::ProcessVote" alt="" coords="497,1207,649,1248"/>
-<area shape="rect" id="node41" href="$class_c_governance_manager.html#abbf19b7d63d3e56cf0f6d1ff483b8519" title="CGovernanceManager\l::RequestGovernanceObjectVotes" alt="" coords="462,1272,683,1313"/>
-<area shape="rect" id="node42" href="$class_c_governance_manager.html#aa97afdda65dbb2dcf5915bca26153bdd" title="CGovernanceManager\l::RequestOrphanObjects" alt="" coords="489,1337,656,1379"/>
-<area shape="rect" id="node44" href="$class_c_private_send_client.html#a58fe9de7d8ed8dff1503299c42e9138f" title="CPrivateSendClient\l::JoinExistingQueue" alt="" coords="503,304,642,345"/>
-<area shape="rect" id="node46" href="$wallet__tests_8cpp.html#aab7a824695edf3faa00177e0aff1221b" title="BOOST_AUTO_TEST_CASE" alt="" coords="474,1403,671,1430"/>
-<area shape="rect" id="node48" href="$class_c_masternode_man.html#acf00d47e6a3c4a043c849797042b7597" title="CMasternodeMan::DoFullVerificationStep" alt="" coords="441,137,704,163"/>
-<area shape="rect" id="node50" href="$class_c_connman.html#a80caf4db74fcf515068f169e085ff84e" title="CConnman::Start" alt="" coords="511,1454,635,1481"/>
+<area shape="rect" id="node13" href="$class_c_private_send_server.html#ad22c8603123573ef0831c127477af1bd" title="CPrivateSendServer\l::CreateNewSession" alt="" coords="794,644,937,685"/>
+<area shape="rect" id="node14" href="$group___actions.html#ga9476d8b40414f77f7f3bcd3ba28fa31f" title="Create a new transaction paying the recipients with a set of coins selected by SelectCoins(); Also cr..." alt="" coords="176,765,360,791"/>
+<area shape="rect" id="node24" href="$class_c_private_send_client.html#ad3438123cb41c93b5323f64bb52a7331" title="Passively run mixing in the background according to the configuration in settings. " alt="" coords="1038,279,1225,320"/>
+<area shape="rect" id="node25" href="$privatesend-client_8h.html#a01b520827079bf595bfd4f72785026dc" title="ThreadCheckPrivateSendClient" alt="" coords="1287,202,1492,229"/>
+<area shape="rect" id="node28" href="$class_c_private_send.html#a43c11671576bb701a8fb0a2dcc7ab855" title="Get the denominations for a list of outputs (returns a bitshifted integer) " alt="" coords="159,454,377,481"/>
+<area shape="rect" id="node29" href="$class_c_private_send_client.html#a505994a7673bd4ca41b45256168597a1" title="step 1: prepare denominated inputs and outputs " alt="" coords="500,363,645,404"/>
+<area shape="rect" id="node34" href="$class_c_addr_man.html#a4bf12611bd89c5e524396e50bf8f3846" title="Wraps GetRandInt to allow tests to override RandomInt and make it determinismistic. " alt="" coords="190,997,346,1023"/>
+<area shape="rect" id="node39" href="$class_c_governance_manager.html#a21705b3f3b7f56a2c4063c02536ac953" title="CGovernanceManager\l::RequestGovernanceObject" alt="" coords="175,1165,361,1207"/>
+<area shape="rect" id="node43" href="$group___actions.html#ga77fb1b6a32b2df185ba40fdbb8c7173e" title="CWallet::SelectCoinsByDenominations" alt="" coords="143,353,393,379"/>
+<area shape="rect" id="node45" href="$group___actions.html#gac75c09aea2670e5d144161f285f41156" title="Shuffle and select coins until nTargetValue is reached while avoiding small change; This method is st..." alt="" coords="169,1263,367,1290"/>
+<area shape="rect" id="node47" href="$class_c_masternode_man.html#ad8afa8f263f5632504015990b196609e" title="CMasternodeMan::SendVerify\lRequest" alt="" coords="169,5,367,47"/>
+<area shape="rect" id="node49" href="$class_c_connman.html#ac4c8cf5142f88565e789f3b173d89b3e" title="CConnman::ThreadOpenConnections" alt="" coords="148,1379,388,1406"/>
+<area shape="rect" id="node3" href="$class_c_private_send_server.html#a5bbfc770d9593387302f40281f8fca96" title="CPrivateSendServer\l::CheckTimeout" alt="" coords="502,136,643,177"/>
+<area shape="rect" id="node4" href="$privatesend-server_8h.html#a6154ebb1088235a8e702e869eda136ab" title="ThreadCheckPrivateSendServer" alt="" coords="1027,143,1236,170"/>
+<area shape="rect" id="node5" href="$init_8h.html#a6f0784aa332573f949b0975205572b28" title="Initialize Dash Core. " alt="" coords="1610,143,1681,170"/>
+<area shape="rect" id="node7" href="$class_c_private_send_server.html#a86b29accd11a5ff73ad409e6d29b28c9" title="CPrivateSendServer\l::CommitFinalTransaction" alt="" coords="487,545,659,587"/>
+<area shape="rect" id="node8" href="$class_c_private_send_server.html#ab6d446eb9d4d76982e7a92c8c9529af0" title="Check for process. " alt="" coords="795,579,936,620"/>
+<area shape="rect" id="node9" href="$class_c_private_send_server.html#ad51576edb65312fa566ba6f0351a7b6d" title="CPrivateSendServer\l::ProcessMessage" alt="" coords="1061,579,1202,620"/>
+<area shape="rect" id="node10" href="$net__processing_8cpp.html#a193d0ece6e2f2f7ee37352ac9720bb83" title="ProcessMessage" alt="" coords="1328,586,1451,613"/>
+<area shape="rect" id="node12" href="$privatesend_8h.html#a8ca12ada145ba86ddcba18018b77db14" title="ThreadCheckPrivateSend" alt="" coords="780,78,951,105"/>
+<area shape="rect" id="node15" href="$class_c_private_send_client.html#ad603beaa1644f6e6cfb8ca7d1400d46e" title="CPrivateSendClient\l::MakeCollateralAmounts" alt="" coords="488,663,657,704"/>
+<area shape="rect" id="node16" href="$class_c_private_send_client.html#a1318eb1f8e5a845036cfe99f0b3f8b36" title="CPrivateSendClient\l::CreateDenominated" alt="" coords="499,728,646,769"/>
+<area shape="rect" id="node17" href="$class_wallet_model.html#a8abc851901c7c7343ebfb5a8e5fc0154" title="WalletModel::prepareTransaction" alt="" coords="466,794,679,821"/>
+<area shape="rect" id="node19" href="$rpcwallet_8cpp.html#a1ce48c3b465b38c532d3a3bc9664ba16" title="SendMoney" alt="" coords="527,845,618,871"/>
+<area shape="rect" id="node23" href="$rpcwallet_8cpp.html#a02c1a7b5244896e62bc5ae698f7a76c9" title="sendmany" alt="" coords="531,895,614,922"/>
+<area shape="rect" id="node18" href="$class_send_coins_dialog.html#aab03626a859f22a68760b235a1df6bc9" title="SendCoinsDialog::send" alt="" coords="786,769,945,795"/>
+<area shape="rect" id="node20" href="$rpcwallet_8cpp.html#a36f0a0b6cd58a61c125bbe7a39ed1368" title="sendtoaddress" alt="" coords="812,921,919,947"/>
+<area shape="rect" id="node21" href="$rpcwallet_8cpp.html#a13ae0f230ba6d349466070da38ee85f4" title="instantsendtoaddress" alt="" coords="792,819,939,846"/>
+<area shape="rect" id="node22" href="$rpcwallet_8cpp.html#a887e8b6785b39cba59fe24ea952a4f10" title="sendfrom" alt="" coords="827,870,903,897"/>
+<area shape="rect" id="node26" href="$class_overview_page.html#a26efca896ca89c09ebaba1020916ea59" title="OverviewPage::privateSendAuto" alt="" coords="1284,286,1495,313"/>
+<area shape="rect" id="node27" href="$class_overview_page.html#a2ed52a3a87e9c74fee38fa873c9bc71f" title="OverviewPage::setWalletModel" alt="" coords="1543,286,1748,313"/>
+<area shape="rect" id="node31" href="$class_c_private_send_server.html#a5469414252144e4af89ed0002db1c30b" title="Are these outputs compatible with other client in the pool? " alt="" coords="752,499,979,555"/>
+<area shape="rect" id="node32" href="$class_c_private_send.html#ae9450458b796fc1a97f6a86dd787bf23" title="Get the denominations for a specific amount of dash. " alt="" coords="463,428,682,469"/>
+<area shape="rect" id="node30" href="$class_c_private_send_client.html#a0c0fd844c06a51c196e9c712df4af546" title="As a client, submit part of a future mixing transaction to a Masternode to start the process..." alt="" coords="795,369,936,411"/>
+<area shape="rect" id="node33" href="$class_c_private_send_client.html#a4394dfd7c898722e494a417cce66aeea" title="CPrivateSendClient\l::StartNewQueue" alt="" coords="797,435,934,476"/>
+<area shape="rect" id="node35" href="$class_c_addr_man.html#a33ec6a4584cf4b17af821e6e35216459" title="Mark an entry &quot;good&quot;, possibly moving it from &quot;new&quot; to &quot;tried&quot;. " alt="" coords="507,997,638,1023"/>
+<area shape="rect" id="node36" href="$class_c_addr_man.html#a9dd6df8b1904548a86054d19d4a90724" title="Add an entry to the &quot;new&quot; table. " alt="" coords="511,1047,634,1074"/>
+<area shape="rect" id="node37" href="$class_c_addr_man.html#a27e51ef4fe86db1ff5a5e45caefc1ef4" title="Select an address to connect to, if newOnly is set to true, only the new table is selected from..." alt="" coords="505,1098,641,1125"/>
+<area shape="rect" id="node38" href="$class_c_addr_man.html#aff86d04dc7c0e0afae3ff5998417db17" title="Select several addresses at once. " alt="" coords="499,946,646,973"/>
+<area shape="rect" id="node40" href="$class_c_governance_manager.html#a7af57e90ea7d01041410d26172ecae01" title="CGovernanceManager\l::ProcessVote" alt="" coords="497,1215,649,1256"/>
+<area shape="rect" id="node41" href="$class_c_governance_manager.html#abbf19b7d63d3e56cf0f6d1ff483b8519" title="CGovernanceManager\l::RequestGovernanceObjectVotes" alt="" coords="462,1280,683,1321"/>
+<area shape="rect" id="node42" href="$class_c_governance_manager.html#aa97afdda65dbb2dcf5915bca26153bdd" title="CGovernanceManager\l::RequestOrphanObjects" alt="" coords="489,1149,656,1191"/>
+<area shape="rect" id="node44" href="$class_c_private_send_client.html#a58fe9de7d8ed8dff1503299c42e9138f" title="CPrivateSendClient\l::JoinExistingQueue" alt="" coords="796,304,935,345"/>
+<area shape="rect" id="node46" href="$wallet__tests_8cpp.html#aab7a824695edf3faa00177e0aff1221b" title="BOOST_AUTO_TEST_CASE" alt="" coords="474,1346,671,1373"/>
+<area shape="rect" id="node48" href="$class_c_masternode_man.html#acf00d47e6a3c4a043c849797042b7597" title="CMasternodeMan::DoFullVerificationStep" alt="" coords="441,21,704,47"/>
+<area shape="rect" id="node50" href="$class_c_connman.html#a80caf4db74fcf515068f169e085ff84e" title="CConnman::Start" alt="" coords="511,1397,635,1423"/>
 </map>

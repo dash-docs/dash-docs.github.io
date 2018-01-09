@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('class_c_private_send_base.html','');})
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base__coll__graph.svg" width="227" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base__coll__graph.svg" width="384" height="218"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -170,9 +170,13 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0391a4e1597763c859634cec88428190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a0391a4e1597763c859634cec88428190">SetNull</a> ()</td></tr>
 <tr class="separator:a0391a4e1597763c859634cec88428190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19f902730483077d67c13d0f8a7a957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#ae19f902730483077d67c13d0f8a7a957">CheckQueue</a> ()</td></tr>
+<tr class="separator:ae19f902730483077d67c13d0f8a7a957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a34728bfdaa9656850ef06ff31919164d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sync_8h.html#a37a4692b2d517f2843655ca11af7668a">CCriticalSection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a34728bfdaa9656850ef06ff31919164d">cs_darksend</a></td></tr>
+<tr class="separator:a34728bfdaa9656850ef06ff31919164d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434f518bfe5ca5c06cd7d96160a3a890"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_darksend_queue.html">CDarksendQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a434f518bfe5ca5c06cd7d96160a3a890">vecDarksendQueue</a></td></tr>
 <tr class="separator:a434f518bfe5ca5c06cd7d96160a3a890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35fe3675579b01d6f88ff010e31f7f76"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_dark_send_entry.html">CDarkSendEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_private_send_base.html#a35fe3675579b01d6f88ff010e31f7f76">vecEntries</a></td></tr>
@@ -188,7 +192,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00279">279</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00271">271</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a48a41057b035b035838355b3ad22db3d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48a41057b035b035838355b3ad22db3d">&#9670;&nbsp;</a></span>CPrivateSendBase()</h2>
@@ -213,9 +217,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00299">299</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00294">294</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend_8cpp_source.html#l00119">SetNull()</a>.</p>
+<p class="reference">References <a class="el" href="privatesend_8cpp_source.html#l00109">SetNull()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -228,6 +232,53 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae19f902730483077d67c13d0f8a7a957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19f902730483077d67c13d0f8a7a957">&#9670;&nbsp;</a></span>CheckQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPrivateSendBase::CheckQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="privatesend_8cpp_source.html#l00121">121</a> of file <a class="el" href="privatesend_8cpp_source.html">privatesend.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00274">cs_darksend</a>, <a class="el" href="util_8h_source.html#l00126">LogPrint()</a>, <a class="el" href="sync_8h_source.html#l00170">TRY_LOCK</a>, and <a class="el" href="privatesend_8h_source.html#l00277">vecDarksendQueue</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00496">CPrivateSendServer::CheckTimeout()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00320">CPrivateSendClient::CheckTimeout()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_ae19f902730483077d67c13d0f8a7a957_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_ae19f902730483077d67c13d0f8a7a957_icgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a9512a3d32d9e3f9f7a847b3337ad8f9e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9512a3d32d9e3f9f7a847b3337ad8f9e">&#9670;&nbsp;</a></span>GetEntriesCount()</h2>
 
@@ -251,17 +302,17 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00305">305</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00300">300</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00285">vecEntries</a>.</p>
+<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00279">vecEntries</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00591">CPrivateSendServer::AddEntry()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00637">CPrivateSendServer::AddScriptSig()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00278">CPrivateSendServer::CheckPool()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00305">CPrivateSendServer::CreateFinalTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">CPrivateSendClient::DoAutomaticDenominating()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00065">getpoolinfo()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01039">CPrivateSendClient::PrepareDenominate()</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00580">CPrivateSendServer::AddEntry()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00626">CPrivateSendServer::AddScriptSig()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00279">CPrivateSendServer::CheckPool()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00306">CPrivateSendServer::CreateFinalTransaction()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">CPrivateSendClient::DoAutomaticDenominating()</a>, <a class="el" href="rpc_2masternode_8cpp_source.html#l00070">getpoolinfo()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01026">CPrivateSendClient::PrepareDenominate()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_a9512a3d32d9e3f9f7a847b3337ad8f9e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_a9512a3d32d9e3f9f7a847b3337ad8f9e_icgraph.svg" width="100%" height="596"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -290,16 +341,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00301">301</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00296">296</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00283">vecDarksendQueue</a>.</p>
+<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00277">vecDarksendQueue</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00065">getpoolinfo()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00070">getpoolinfo()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_a2ae3342d1dae79f011c07c72570b6a43_icgraph.svg" width="371" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -329,9 +380,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00302">302</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00297">297</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00287">nState</a>.</p>
+<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00281">nState</a>.</p>
 
 </div>
 </div>
@@ -350,16 +401,16 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8cpp_source.html#l00131">131</a> of file <a class="el" href="privatesend_8cpp_source.html">privatesend.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8cpp_source.html#l00136">136</a> of file <a class="el" href="privatesend_8cpp_source.html">privatesend.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00287">nState</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00059">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_QUEUE</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_SIGNING</a>, and <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00281">nState</a>, <a class="el" href="privatesend_8h_source.html#l00062">POOL_STATE_ACCEPTING_ENTRIES</a>, <a class="el" href="privatesend_8h_source.html#l00064">POOL_STATE_ERROR</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00061">POOL_STATE_QUEUE</a>, <a class="el" href="privatesend_8h_source.html#l00063">POOL_STATE_SIGNING</a>, and <a class="el" href="privatesend_8h_source.html#l00065">POOL_STATE_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00065">getpoolinfo()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="rpc_2masternode_8cpp_source.html#l00070">getpoolinfo()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_ad9b10ffa4b75fa1a1cff666d19c1ebdb_icgraph.svg" width="338" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -389,24 +440,24 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8cpp_source.html#l00119">119</a> of file <a class="el" href="privatesend_8cpp_source.html">privatesend.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8cpp_source.html#l00109">109</a> of file <a class="el" href="privatesend_8cpp_source.html">privatesend.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00292">finalMutableTransaction</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend_8h_source.html#l00297">nSessionDenom</a>, <a class="el" href="privatesend_8h_source.html#l00290">nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00287">nState</a>, <a class="el" href="privatesend_8h_source.html#l00288">nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00059">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00285">vecEntries</a>, <a class="el" href="transaction_8h_source.html#l00306">CMutableTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00307">CMutableTransaction::vout</a>.</p>
+<p class="reference">References <a class="el" href="privatesend_8h_source.html#l00286">finalMutableTransaction</a>, <a class="el" href="utiltime_8cpp_source.html#l00034">GetTimeMillis()</a>, <a class="el" href="privatesend_8h_source.html#l00292">nSessionDenom</a>, <a class="el" href="privatesend_8h_source.html#l00284">nSessionID</a>, <a class="el" href="privatesend_8h_source.html#l00281">nState</a>, <a class="el" href="privatesend_8h_source.html#l00282">nTimeLastSuccessfulStep</a>, <a class="el" href="privatesend_8h_source.html#l00060">POOL_STATE_IDLE</a>, <a class="el" href="privatesend_8h_source.html#l00279">vecEntries</a>, <a class="el" href="transaction_8h_source.html#l00305">CMutableTransaction::vin</a>, and <a class="el" href="transaction_8h_source.html#l00306">CMutableTransaction::vout</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend_8h_source.html#l00299">CPrivateSendBase()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00267">CPrivateSendServer::SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00213">CPrivateSendClient::SetNull()</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="privatesend_8h_source.html#l00294">CPrivateSendBase()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00268">CPrivateSendServer::SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00213">CPrivateSendClient::SetNull()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_a0391a4e1597763c859634cec88428190_cgraph.svg" width="346" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_c_private_send_base_a0391a4e1597763c859634cec88428190_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -414,6 +465,32 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a34728bfdaa9656850ef06ff31919164d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34728bfdaa9656850ef06ff31919164d">&#9670;&nbsp;</a></span>cs_darksend</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sync_8h.html#a37a4692b2d517f2843655ca11af7668a">CCriticalSection</a> CPrivateSendBase::cs_darksend</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00274">274</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="privatesend_8cpp_source.html#l00121">CheckQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">CPrivateSendClient::DoAutomaticDenominating()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00019">CPrivateSendServer::ProcessMessage()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00021">CPrivateSendClient::ProcessMessage()</a>.</p>
+
+</div>
+</div>
 <a id="af97d6eb5ca512c2a4f000c21061ae793"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af97d6eb5ca512c2a4f000c21061ae793">&#9670;&nbsp;</a></span>finalMutableTransaction</h2>
 
@@ -434,9 +511,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00292">292</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00286">286</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00637">CPrivateSendServer::AddScriptSig()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00331">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00305">CPrivateSendServer::CreateFinalTransaction()</a>, <a class="el" href="privatesend_8cpp_source.html#l00119">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00488">CPrivateSendClient::SignFinalTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00626">CPrivateSendServer::AddScriptSig()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00332">CPrivateSendServer::CommitFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00306">CPrivateSendServer::CreateFinalTransaction()</a>, <a class="el" href="privatesend_8cpp_source.html#l00109">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00487">CPrivateSendClient::SignFinalTransaction()</a>.</p>
 
 </div>
 </div>
@@ -452,9 +529,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00297">297</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00292">292</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00759">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00531">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00720">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">CPrivateSendClient::JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01039">CPrivateSendClient::PrepareDenominate()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00854">CPrivateSendServer::RelayCompletedTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00793">CPrivateSendServer::RelayFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00818">CPrivateSendServer::RelayStatus()</a>, <a class="el" href="privatesend_8cpp_source.html#l00119">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00929">CPrivateSendClient::StartNewQueue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00747">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00520">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00708">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">CPrivateSendClient::JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l01026">CPrivateSendClient::PrepareDenominate()</a>, <a class="el" href="overviewpage_8cpp_source.html#l00455">OverviewPage::privateSendStatus()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00842">CPrivateSendServer::RelayCompletedTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00781">CPrivateSendServer::RelayFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00806">CPrivateSendServer::RelayStatus()</a>, <a class="el" href="privatesend_8cpp_source.html#l00109">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00916">CPrivateSendClient::StartNewQueue()</a>.</p>
 
 </div>
 </div>
@@ -478,9 +555,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00290">290</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00284">284</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00759">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CPrivateSendClient::CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00720">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">CPrivateSendClient::DoAutomaticDenominating()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00018">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">CPrivateSendClient::ProcessMessage()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00812">CPrivateSendServer::PushStatus()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00854">CPrivateSendServer::RelayCompletedTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00793">CPrivateSendServer::RelayFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00818">CPrivateSendServer::RelayStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">CPrivateSendClient::SendDenominate()</a>, and <a class="el" href="privatesend_8cpp_source.html#l00119">SetNull()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00747">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CPrivateSendClient::CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00708">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">CPrivateSendClient::DoAutomaticDenominating()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00019">CPrivateSendServer::ProcessMessage()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">CPrivateSendClient::ProcessMessage()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00800">CPrivateSendServer::PushStatus()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00842">CPrivateSendServer::RelayCompletedTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00781">CPrivateSendServer::RelayFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00806">CPrivateSendServer::RelayStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">CPrivateSendClient::SendDenominate()</a>, and <a class="el" href="privatesend_8cpp_source.html#l00109">SetNull()</a>.</p>
 
 </div>
 </div>
@@ -504,9 +581,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00287">287</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00281">281</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00759">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00392">CPrivateSendServer::ChargeFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00531">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00278">CPrivateSendServer::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00291">CPrivateSendClient::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CPrivateSendClient::CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00495">CPrivateSendServer::CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CPrivateSendClient::CheckTimeout()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00720">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00695">CPrivateSendClient::DoAutomaticDenominating()</a>, <a class="el" href="privatesend_8h_source.html#l00302">GetState()</a>, <a class="el" href="privatesend_8cpp_source.html#l00131">GetStateString()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">CPrivateSendClient::GetStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">CPrivateSendClient::ProcessMessage()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00812">CPrivateSendServer::PushStatus()</a>, <a class="el" href="privatesend_8cpp_source.html#l00119">SetNull()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00873">CPrivateSendServer::SetState()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01397">CPrivateSendClient::SetState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00747">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00393">CPrivateSendServer::ChargeFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00520">CPrivateSendServer::CheckForCompleteQueue()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00279">CPrivateSendServer::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00302">CPrivateSendClient::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CPrivateSendClient::CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00496">CPrivateSendServer::CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CPrivateSendClient::CheckTimeout()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00708">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00682">CPrivateSendClient::DoAutomaticDenominating()</a>, <a class="el" href="privatesend_8h_source.html#l00297">GetState()</a>, <a class="el" href="privatesend_8cpp_source.html#l00136">GetStateString()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00239">CPrivateSendClient::GetStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00021">CPrivateSendClient::ProcessMessage()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00800">CPrivateSendServer::PushStatus()</a>, <a class="el" href="privatesend_8cpp_source.html#l00109">SetNull()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00861">CPrivateSendServer::SetState()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l01383">CPrivateSendClient::SetState()</a>.</p>
 
 </div>
 </div>
@@ -530,9 +607,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00288">288</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00282">282</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00591">CPrivateSendServer::AddEntry()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00759">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00278">CPrivateSendServer::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00291">CPrivateSendClient::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00442">CPrivateSendClient::CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00495">CPrivateSendServer::CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CPrivateSendClient::CheckTimeout()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00720">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">CPrivateSendClient::JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">CPrivateSendClient::SendDenominate()</a>, <a class="el" href="privatesend_8cpp_source.html#l00119">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00488">CPrivateSendClient::SignFinalTransaction()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00929">CPrivateSendClient::StartNewQueue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00580">CPrivateSendServer::AddEntry()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00747">CPrivateSendServer::AddUserToExistingSession()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00279">CPrivateSendServer::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00302">CPrivateSendClient::CheckPool()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00441">CPrivateSendClient::CheckPoolStateUpdate()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00496">CPrivateSendServer::CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00320">CPrivateSendClient::CheckTimeout()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00708">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">CPrivateSendClient::JoinExistingQueue()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">CPrivateSendClient::SendDenominate()</a>, <a class="el" href="privatesend_8cpp_source.html#l00109">SetNull()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00487">CPrivateSendClient::SignFinalTransaction()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00916">CPrivateSendClient::StartNewQueue()</a>.</p>
 
 </div>
 </div>
@@ -556,9 +633,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00283">283</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00277">277</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00495">CPrivateSendServer::CheckTimeout()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00309">CPrivateSendClient::CheckTimeout()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00720">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend_8h_source.html#l00301">GetQueueSize()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00845">CPrivateSendClient::JoinExistingQueue()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00018">CPrivateSendServer::ProcessMessage()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00021">CPrivateSendClient::ProcessMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend_8cpp_source.html#l00121">CheckQueue()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00708">CPrivateSendServer::CreateNewSession()</a>, <a class="el" href="privatesend_8h_source.html#l00296">GetQueueSize()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00832">CPrivateSendClient::JoinExistingQueue()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00019">CPrivateSendServer::ProcessMessage()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00021">CPrivateSendClient::ProcessMessage()</a>.</p>
 
 </div>
 </div>
@@ -582,9 +659,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00285">285</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="privatesend_8h_source.html#l00279">279</a> of file <a class="el" href="privatesend_8h_source.html">privatesend.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00591">CPrivateSendServer::AddEntry()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00637">CPrivateSendServer::AddScriptSig()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00392">CPrivateSendServer::ChargeFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00305">CPrivateSendServer::CreateFinalTransaction()</a>, <a class="el" href="privatesend_8h_source.html#l00305">GetEntriesCount()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00546">CPrivateSendServer::IsInputScriptSigValid()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00685">CPrivateSendServer::IsOutputsCompatibleWithSessionDenom()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00676">CPrivateSendServer::IsSignaturesComplete()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00812">CPrivateSendServer::PushStatus()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00854">CPrivateSendServer::RelayCompletedTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00793">CPrivateSendServer::RelayFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00818">CPrivateSendServer::RelayStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00362">CPrivateSendClient::SendDenominate()</a>, <a class="el" href="privatesend_8cpp_source.html#l00119">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00488">CPrivateSendClient::SignFinalTransaction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="privatesend-server_8cpp_source.html#l00580">CPrivateSendServer::AddEntry()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00626">CPrivateSendServer::AddScriptSig()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00393">CPrivateSendServer::ChargeFees()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00306">CPrivateSendServer::CreateFinalTransaction()</a>, <a class="el" href="privatesend_8h_source.html#l00300">GetEntriesCount()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00535">CPrivateSendServer::IsInputScriptSigValid()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00673">CPrivateSendServer::IsOutputsCompatibleWithSessionDenom()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00664">CPrivateSendServer::IsSignaturesComplete()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00800">CPrivateSendServer::PushStatus()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00842">CPrivateSendServer::RelayCompletedTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00781">CPrivateSendServer::RelayFinalTransaction()</a>, <a class="el" href="privatesend-server_8cpp_source.html#l00806">CPrivateSendServer::RelayStatus()</a>, <a class="el" href="privatesend-client_8cpp_source.html#l00361">CPrivateSendClient::SendDenominate()</a>, <a class="el" href="privatesend_8cpp_source.html#l00109">SetNull()</a>, and <a class="el" href="privatesend-client_8cpp_source.html#l00487">CPrivateSendClient::SignFinalTransaction()</a>.</p>
 
 </div>
 </div>
@@ -599,7 +676,7 @@ Protected Attributes</h2></td></tr>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="class_c_private_send_base.html">CPrivateSendBase</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:25 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:32 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>

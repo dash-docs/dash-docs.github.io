@@ -108,10 +108,7 @@ var hierarchy =
     [ "CClientUIInterface", "class_c_client_u_i_interface.html", null ],
     [ "CCoin", "struct_c_coin.html", null ],
     [ "CCoinControl", "class_c_coin_control.html", null ],
-    [ "CCoins", "class_c_coins.html", null ],
     [ "CCoinsCacheEntry", "struct_c_coins_cache_entry.html", null ],
-    [ "CCoinsKeyHasher", "class_c_coins_key_hasher.html", null ],
-    [ "CCoinsModifier", "class_c_coins_modifier.html", null ],
     [ "CCoinsStats", "struct_c_coins_stats.html", null ],
     [ "CCoinsView", "class_c_coins_view.html", [
       [ "CCoinsViewBacked", "class_c_coins_view_backed.html", [
@@ -121,13 +118,16 @@ var hierarchy =
       ] ],
       [ "CCoinsViewDB", "class_c_coins_view_d_b.html", null ]
     ] ],
+    [ "CCoinsViewCursor", "class_c_coins_view_cursor.html", [
+      [ "CCoinsViewDBCursor", "class_c_coins_view_d_b_cursor.html", null ]
+    ] ],
     [ "CCombinedBan", "struct_c_combined_ban.html", null ],
+    [ "CCompactSize", "class_c_compact_size.html", null ],
     [ "CConnman", "class_c_connman.html", null ],
     [ "CCrypter", "class_c_crypter.html", null ],
     [ "CDarksendBroadcastTx", "class_c_darksend_broadcast_tx.html", null ],
     [ "CDarkSendEntry", "class_c_dark_send_entry.html", null ],
     [ "CDarksendQueue", "class_c_darksend_queue.html", null ],
-    [ "CDarkSendRelay", "class_c_dark_send_relay.html", null ],
     [ "CDataStream", "class_c_data_stream.html", null ],
     [ "CDB", "class_c_d_b.html", [
       [ "CWalletDB", "class_c_wallet_d_b.html", null ]
@@ -166,7 +166,9 @@ var hierarchy =
     [ "CHash160", "class_c_hash160.html", null ],
     [ "CHash256", "class_c_hash256.html", null ],
     [ "CHashSigner", "class_c_hash_signer.html", null ],
-    [ "CHashWriter", "class_c_hash_writer.html", null ],
+    [ "CHashWriter", "class_c_hash_writer.html", [
+      [ "CHashVerifier< Source >", "class_c_hash_verifier.html", null ]
+    ] ],
     [ "CHDAccount", "class_c_h_d_account.html", null ],
     [ "CHDChain", "class_c_h_d_chain.html", null ],
     [ "CHDPubKey", "class_c_h_d_pub_key.html", null ],
@@ -233,6 +235,7 @@ var hierarchy =
     [ "CNodeStateStats", "struct_c_node_state_stats.html", null ],
     [ "CNodeStats", "class_c_node_stats.html", null ],
     [ "CNoDestination", "class_c_no_destination.html", null ],
+    [ "Coin", "class_coin.html", null ],
     [ "CSVModelWriter::Column", "struct_c_s_v_model_writer_1_1_column.html", null ],
     [ "CombinerAll", "struct_combiner_all.html", null ],
     [ "CompactTallyItem", "struct_compact_tally_item.html", null ],
@@ -289,6 +292,7 @@ var hierarchy =
     [ "CSHA1", "class_c_s_h_a1.html", null ],
     [ "CSHA256", "class_c_s_h_a256.html", null ],
     [ "CSHA512", "class_c_s_h_a512.html", null ],
+    [ "CSipHasher", "class_c_sip_hasher.html", null ],
     [ "CSizeComputer", "class_c_size_computer.html", null ],
     [ "CSpentIndexKey", "struct_c_spent_index_key.html", null ],
     [ "CSpentIndexKeyCompare", "struct_c_spent_index_key_compare.html", null ],
@@ -310,14 +314,11 @@ var hierarchy =
     [ "CTxIn", "class_c_tx_in.html", [
       [ "CTxDSIn", "class_c_tx_d_s_in.html", null ]
     ] ],
-    [ "CTxInUndo", "class_c_tx_in_undo.html", null ],
     [ "CTxLockCandidate", "class_c_tx_lock_candidate.html", null ],
     [ "CTxLockVote", "class_c_tx_lock_vote.html", null ],
     [ "CTxMemPool", "class_c_tx_mem_pool.html", null ],
     [ "CTxMemPoolEntry", "class_c_tx_mem_pool_entry.html", null ],
-    [ "CTxOut", "class_c_tx_out.html", [
-      [ "CTxDSOut", "class_c_tx_d_s_out.html", null ]
-    ] ],
+    [ "CTxOut", "class_c_tx_out.html", null ],
     [ "CTxOutCompressor", "class_c_tx_out_compressor.html", null ],
     [ "CTxUndo", "class_c_tx_undo.html", null ],
     [ "CUnsignedAlert", "class_c_unsigned_alert.html", [
@@ -382,6 +383,9 @@ var hierarchy =
       [ "LockedPageManager", "class_locked_page_manager.html", null ]
     ] ],
     [ "LockPoints", "struct_lock_points.html", null ],
+    [ "Logger", null, [
+      [ "CBitcoinLevelDBLogger", "class_c_bitcoin_level_d_b_logger.html", null ]
+    ] ],
     [ "masternode_info_t", "structmasternode__info__t.html", [
       [ "CMasternode", "class_c_masternode.html", [
         [ "CMasternodeBroadcast", "class_c_masternode_broadcast.html", null ]
@@ -502,8 +506,8 @@ var hierarchy =
       [ "TrafficGraphWidget", "class_traffic_graph_widget.html", null ],
       [ "TransactionView", "class_transaction_view.html", null ]
     ] ],
-    [ "secure_allocator< T >::rebind< _Other >", "structsecure__allocator_1_1rebind.html", null ],
     [ "zero_after_free_allocator< T >::rebind< _Other >", "structzero__after__free__allocator_1_1rebind.html", null ],
+    [ "secure_allocator< T >::rebind< _Other >", "structsecure__allocator_1_1rebind.html", null ],
     [ "RecentRequestEntry", "class_recent_request_entry.html", null ],
     [ "RecentRequestEntryLessThan", "class_recent_request_entry_less_than.html", null ],
     [ "prevector< N, T, Size, Diff >::reverse_iterator", "classprevector_1_1reverse__iterator.html", null ],
@@ -523,6 +527,8 @@ var hierarchy =
       [ "SSLVerifyError", "class_s_s_l_verify_error.html", null ],
       [ "uint_error", "classuint__error.html", null ]
     ] ],
+    [ "SaltedOutpointHasher", "class_salted_outpoint_hasher.html", null ],
+    [ "SaltedTxidHasher", "class_salted_txid_hasher.html", null ],
     [ "CGovernanceManager::ScopedLockBool", "class_c_governance_manager_1_1_scoped_lock_bool.html", null ],
     [ "ScoreCompare", "class_score_compare.html", null ],
     [ "secp256k1_callback", "structsecp256k1__callback.html", null ],
@@ -583,6 +589,8 @@ var hierarchy =
     [ "TransactionTablePriv", "class_transaction_table_priv.html", null ],
     [ "TxCoinAgePriorityCompare", "struct_tx_coin_age_priority_compare.html", null ],
     [ "TxConfirmStats", "class_tx_confirm_stats.html", null ],
+    [ "TxInUndoDeserializer", "class_tx_in_undo_deserializer.html", null ],
+    [ "TxInUndoSerializer", "class_tx_in_undo_serializer.html", null ],
     [ "TxLessThan", "struct_tx_less_than.html", null ],
     [ "CTxMemPool::TxLinks", "struct_c_tx_mem_pool_1_1_tx_links.html", null ],
     [ "CBlockPolicyEstimator::TxStatsInfo", "struct_c_block_policy_estimator_1_1_tx_stats_info.html", null ],
@@ -597,7 +605,7 @@ var hierarchy =
     [ "WalletModelTransaction", "class_wallet_model_transaction.html", null ],
     [ "WorkQueue< WorkItem >", "class_work_queue.html", null ],
     [ "X", null, [
-      [ "memusage::boost_unordered_node< X >", "structmemusage_1_1boost__unordered__node.html", null ]
+      [ "memusage::unordered_node< X >", "structmemusage_1_1unordered__node.html", null ]
     ] ],
     [ "X509Deleter", "struct_x509_deleter.html", null ],
     [ "X509StoreDeleter", "struct_x509_store_deleter.html", null ],

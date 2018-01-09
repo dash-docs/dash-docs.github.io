@@ -10,7 +10,6 @@ var class_send_coins_recipient =
     [ "CURRENT_VERSION", "class_send_coins_recipient.html#a275b0eea2c3140d69fb282d217a790f5", null ],
     [ "fSubtractFeeFromAmount", "class_send_coins_recipient.html#a4a64483d05bf33cd58b2bbb2fc399ca7", null ],
     [ "fUseInstantSend", "class_send_coins_recipient.html#a6c96e444fe38eb92a642ac729318c048", null ],
-    [ "inputType", "class_send_coins_recipient.html#a92cb8e99cd0a80c5f972955338a8a0f5", null ],
     [ "label", "class_send_coins_recipient.html#a0152933f2c0cb9164d2fcb36bca83666", null ],
     [ "message", "class_send_coins_recipient.html#a83b85ce208f69adc9347f700ac60dfa0", null ],
     [ "nVersion", "class_send_coins_recipient.html#a2c8bb55c771dbcd34b420ef06f6a48f7", null ],

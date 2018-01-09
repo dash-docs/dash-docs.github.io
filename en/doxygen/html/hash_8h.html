@@ -177,6 +177,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_hash_writer.html">CHashWriter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A writer stream (for serialization) that computes a 256-bit hash.  <a href="class_c_hash_writer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_hash_verifier.html">CHashVerifier&lt; Source &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from an underlying stream, while hashing the read data.  <a href="class_c_hash_verifier.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sip_hasher.html">CSipHasher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SipHash-2-4, using a uint64_t-based (rather than byte-based) interface.  <a href="class_c_sip_hasher.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -247,6 +253,10 @@ Functions</h2></td></tr>
 <tr class="separator:a3cf0406d24590eaad9a3163c552e9730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a391c1a6a1f947abbc53cc51fc709110e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8h.html#a391c1a6a1f947abbc53cc51fc709110e">BIP32Hash</a> (const <a class="el" href="hash_8h.html#aa201a9867f780a040c7af908e0a85db3">ChainCode</a> &amp;chainCode, unsigned int nChild, unsigned char header, const unsigned char data[32], unsigned char output[64])</td></tr>
 <tr class="separator:a391c1a6a1f947abbc53cc51fc709110e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae60994a4cd54fb47d2bf6b432ab48bc"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8h.html#aae60994a4cd54fb47d2bf6b432ab48bc">SipHashUint256</a> (uint64_t k0, uint64_t k1, const <a class="el" href="classuint256.html">uint256</a> &amp;val)</td></tr>
+<tr class="separator:aae60994a4cd54fb47d2bf6b432ab48bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465236e346fda6f20670887d2c2d4916"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8h.html#a465236e346fda6f20670887d2c2d4916">SipHashUint256Extra</a> (uint64_t k0, uint64_t k1, const <a class="el" href="classuint256.html">uint256</a> &amp;val, uint32_t extra)</td></tr>
+<tr class="separator:a465236e346fda6f20670887d2c2d4916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb0f5c5ebc989fda4f9835456d5ef531"><td class="memTemplParams" colspan="2">template&lt;typename T1 &gt; </td></tr>
 <tr class="memitem:acb0f5c5ebc989fda4f9835456d5ef531"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classuint256.html">uint256</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="hash_8h.html#acb0f5c5ebc989fda4f9835456d5ef531">HashX11</a> (const T1 pbegin, const T1 pend)</td></tr>
 <tr class="separator:acb0f5c5ebc989fda4f9835456d5ef531"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -547,7 +557,7 @@ template&lt;typename T1 &gt; </div>
 
 <p class="reference">References <a class="el" href="hash_8h_source.html#l00080">CHash256::Finalize()</a>, and <a class="el" href="hash_8h_source.html#l00086">CHash256::Write()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="merkleblock_8cpp_source.html#l00063">CPartialMerkleTree::CalcHash()</a>, <a class="el" href="alert_8cpp_source.html#l00170">CAlert::CheckSignature()</a>, <a class="el" href="merkle_8cpp_source.html#l00141">ComputeMerkleRootFromBranch()</a>, <a class="el" href="base58_8cpp_source.html#l00130">DecodeBase58Check()</a>, <a class="el" href="base58_8cpp_source.html#l00121">EncodeBase58Check()</a>, <a class="el" href="net_8cpp_source.html#l02822">CConnman::EndMessage()</a>, <a class="el" href="netaddress_8cpp_source.html#l00369">CNetAddr::GetHash()</a>, <a class="el" href="alert_8cpp_source.html#l00098">CAlert::GetHash()</a>, <a class="el" href="pubkey_8h_source.html#l00150">CPubKey::GetHash()</a>, <a class="el" href="hdchain_8cpp_source.html#l00146">CHDChain::GetSeedHash()</a>, <a class="el" href="net__processing_8cpp_source.html#l02184">ProcessMessages()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00159">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="walletdb_8cpp_source.html#l00350">ReadKeyValue()</a>, <a class="el" href="net__processing_8cpp_source.html#l00752">RelayAddress()</a>, <a class="el" href="net__processing_8cpp_source.html#l02296">SendMessages()</a>, <a class="el" href="alert_8cpp_source.html#l00149">CAlert::Sign()</a>, <a class="el" href="merkleblock_8cpp_source.html#l00098">CPartialMerkleTree::TraverseAndExtract()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>, and <a class="el" href="walletdb_8cpp_source.html#l00070">CWalletDB::WriteKey()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="merkleblock_8cpp_source.html#l00063">CPartialMerkleTree::CalcHash()</a>, <a class="el" href="alert_8cpp_source.html#l00170">CAlert::CheckSignature()</a>, <a class="el" href="merkle_8cpp_source.html#l00141">ComputeMerkleRootFromBranch()</a>, <a class="el" href="base58_8cpp_source.html#l00130">DecodeBase58Check()</a>, <a class="el" href="base58_8cpp_source.html#l00121">EncodeBase58Check()</a>, <a class="el" href="net_8cpp_source.html#l02821">CConnman::EndMessage()</a>, <a class="el" href="netaddress_8cpp_source.html#l00369">CNetAddr::GetHash()</a>, <a class="el" href="alert_8cpp_source.html#l00098">CAlert::GetHash()</a>, <a class="el" href="pubkey_8h_source.html#l00150">CPubKey::GetHash()</a>, <a class="el" href="hdchain_8cpp_source.html#l00146">CHDChain::GetSeedHash()</a>, <a class="el" href="net__processing_8cpp_source.html#l02189">ProcessMessages()</a>, <a class="el" href="flat-database_8h_source.html#l00075">CFlatDB&lt; T &gt;::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00159">CAddrDB::Read()</a>, <a class="el" href="addrdb_8cpp_source.html#l00062">CBanDB::Read()</a>, <a class="el" href="walletdb_8cpp_source.html#l00350">ReadKeyValue()</a>, <a class="el" href="net__processing_8cpp_source.html#l00755">RelayAddress()</a>, <a class="el" href="net__processing_8cpp_source.html#l02301">SendMessages()</a>, <a class="el" href="alert_8cpp_source.html#l00149">CAlert::Sign()</a>, <a class="el" href="merkleblock_8cpp_source.html#l00098">CPartialMerkleTree::TraverseAndExtract()</a>, <a class="el" href="flat-database_8h_source.html#l00040">CFlatDB&lt; T &gt;::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00121">CAddrDB::Write()</a>, <a class="el" href="addrdb_8cpp_source.html#l00024">CBanDB::Write()</a>, and <a class="el" href="walletdb_8cpp_source.html#l00070">CWalletDB::WriteKey()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -1187,9 +1197,9 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hash_8h_source.html#l00283">283</a> of file <a class="el" href="hash_8h_source.html">hash.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hash_8h_source.html#l00334">334</a> of file <a class="el" href="hash_8h_source.html">hash.h</a>.</p>
 
-<p class="reference">References <a class="el" href="cubehash_8c_source.html#l00702">sph_cubehash512()</a>, <a class="el" href="cubehash_8c_source.html#l00709">sph_cubehash512_close()</a>, <a class="el" href="cubehash_8c_source.html#l00695">sph_cubehash512_init()</a>, <a class="el" href="echo_8c_source.html#l01011">sph_echo512()</a>, <a class="el" href="echo_8c_source.html#l01018">sph_echo512_close()</a>, <a class="el" href="echo_8c_source.html#l01004">sph_echo512_init()</a>, <a class="el" href="groestl_8c_source.html#l03102">sph_groestl512()</a>, <a class="el" href="groestl_8c_source.html#l03109">sph_groestl512_close()</a>, <a class="el" href="groestl_8c_source.html#l03095">sph_groestl512_init()</a>, <a class="el" href="jh_8c_source.html#l01095">sph_jh512()</a>, <a class="el" href="jh_8c_source.html#l01102">sph_jh512_close()</a>, <a class="el" href="jh_8c_source.html#l01088">sph_jh512_init()</a>, <a class="el" href="keccak_8c_source.html#l01802">sph_keccak512()</a>, <a class="el" href="keccak_8c_source.html#l01809">sph_keccak512_close()</a>, <a class="el" href="keccak_8c_source.html#l01795">sph_keccak512_init()</a>, <a class="el" href="luffa_8c_source.html#l01404">sph_luffa512()</a>, <a class="el" href="luffa_8c_source.html#l01411">sph_luffa512_close()</a>, <a class="el" href="luffa_8c_source.html#l01393">sph_luffa512_init()</a>, <a class="el" href="shavite_8c_source.html#l01741">sph_shavite512()</a>, <a class="el" href="shavite_8c_source.html#l01748">sph_shavite512_close()</a>, <a class="el" href="shavite_8c_source.html#l01734">sph_shavite512_init()</a>, <a class="el" href="simd_8c_source.html#l01780">sph_simd512()</a>, <a class="el" href="simd_8c_source.html#l01786">sph_simd512_close()</a>, <a class="el" href="simd_8c_source.html#l01774">sph_simd512_init()</a>, and <a class="el" href="uint256_8h_source.html#l00164">uint512::trim256()</a>.</p>
+<p class="reference">References <a class="el" href="cubehash_8c_source.html#l00702">sph_cubehash512()</a>, <a class="el" href="cubehash_8c_source.html#l00709">sph_cubehash512_close()</a>, <a class="el" href="cubehash_8c_source.html#l00695">sph_cubehash512_init()</a>, <a class="el" href="echo_8c_source.html#l01011">sph_echo512()</a>, <a class="el" href="echo_8c_source.html#l01018">sph_echo512_close()</a>, <a class="el" href="echo_8c_source.html#l01004">sph_echo512_init()</a>, <a class="el" href="groestl_8c_source.html#l03102">sph_groestl512()</a>, <a class="el" href="groestl_8c_source.html#l03109">sph_groestl512_close()</a>, <a class="el" href="groestl_8c_source.html#l03095">sph_groestl512_init()</a>, <a class="el" href="jh_8c_source.html#l01095">sph_jh512()</a>, <a class="el" href="jh_8c_source.html#l01102">sph_jh512_close()</a>, <a class="el" href="jh_8c_source.html#l01088">sph_jh512_init()</a>, <a class="el" href="keccak_8c_source.html#l01802">sph_keccak512()</a>, <a class="el" href="keccak_8c_source.html#l01809">sph_keccak512_close()</a>, <a class="el" href="keccak_8c_source.html#l01795">sph_keccak512_init()</a>, <a class="el" href="luffa_8c_source.html#l01404">sph_luffa512()</a>, <a class="el" href="luffa_8c_source.html#l01411">sph_luffa512_close()</a>, <a class="el" href="luffa_8c_source.html#l01393">sph_luffa512_init()</a>, <a class="el" href="shavite_8c_source.html#l01741">sph_shavite512()</a>, <a class="el" href="shavite_8c_source.html#l01748">sph_shavite512_close()</a>, <a class="el" href="shavite_8c_source.html#l01734">sph_shavite512_init()</a>, <a class="el" href="simd_8c_source.html#l01780">sph_simd512()</a>, <a class="el" href="simd_8c_source.html#l01786">sph_simd512_close()</a>, <a class="el" href="simd_8c_source.html#l01774">sph_simd512_init()</a>, and <a class="el" href="uint256_8h_source.html#l00172">uint512::trim256()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="block_8cpp_source.html#l00013">CBlockHeader::GetHash()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1297,7 +1307,7 @@ template&lt;typename T &gt; </div>
 
 <p>Compute the 256-bit hash of an object's serialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="hash_8h_source.html#l00270">270</a> of file <a class="el" href="hash_8h_source.html">hash.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hash_8h_source.html#l00305">305</a> of file <a class="el" href="hash_8h_source.html">hash.h</a>.</p>
 
 <p class="reference">References <a class="el" href="hash_8h_source.html#l00254">CHashWriter::GetHash()</a>.</p>
 
@@ -1316,6 +1326,124 @@ template&lt;typename T &gt; </div>
 </div>
 <div id="dynsection-20-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hash_8h_a6de694e43f17c62025c6883965b65e63_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aae60994a4cd54fb47d2bf6b432ab48bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae60994a4cd54fb47d2bf6b432ab48bc">&#9670;&nbsp;</a></span>SipHashUint256()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t SipHashUint256 </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>k0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>k1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="hash_8cpp_source.html#l00139">139</a> of file <a class="el" href="hash_8cpp_source.html">hash.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="uint256_8h_source.html#l00085">base_blob&lt; BITS &gt;::GetUint64()</a>, and <a class="el" href="hash_8cpp_source.html#l00087">SIPROUND</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="txmempool_8h_source.html#l00289">SaltedTxidHasher::operator()()</a>.</p>
+<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="hash_8h_aae60994a4cd54fb47d2bf6b432ab48bc_cgraph.svg" width="324" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="hash_8h_aae60994a4cd54fb47d2bf6b432ab48bc_icgraph.svg" width="366" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a465236e346fda6f20670887d2c2d4916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465236e346fda6f20670887d2c2d4916">&#9670;&nbsp;</a></span>SipHashUint256Extra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t SipHashUint256Extra </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>k0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>k1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classuint256.html">uint256</a> &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>extra</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="hash_8cpp_source.html#l00179">179</a> of file <a class="el" href="hash_8cpp_source.html">hash.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="uint256_8h_source.html#l00085">base_blob&lt; BITS &gt;::GetUint64()</a>, and <a class="el" href="hash_8cpp_source.html#l00087">SIPROUND</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="coins_8h_source.html#l00098">SaltedOutpointHasher::operator()()</a>.</p>
+<div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="hash_8h_a465236e346fda6f20670887d2c2d4916_cgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="hash_8h_a465236e346fda6f20670887d2c2d4916_icgraph.svg" width="358" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1505,7 +1633,7 @@ template&lt;typename T &gt; </div>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 		  <ul>
 			<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="hash_8h.html">hash.h</a></li>
-			<li class="footer">Generated on Tue Jan 2 2018 17:58:19 for Dash Core by
+			<li class="footer">Generated on Tue Jan 9 2018 11:30:26 for Dash Core by
 			<a href="http://www.doxygen.org/index.html">
 			<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
 		  </ul>
