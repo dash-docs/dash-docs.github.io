@@ -258,7 +258,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
               <li><a href="#sentinel-sync" id="markdown-toc-sentinel-sync">Sentinel Sync</a></li>
               <li><a href="#sentinel-ping" id="markdown-toc-sentinel-ping">Sentinel Ping</a></li>
               <li><a href="#sentinel-prune" id="markdown-toc-sentinel-prune">Sentinel Prune</a></li>
-              <li><a href="#sentinel-superblockenglossarysuperblockauto-link" id="markdown-toc-sentinel-superblockenglossarysuperblockauto-link">Sentinel <a href="/en/glossary/superblock" title="Special blocks that pay out funded budget proposals approved by masternode votes via the decentralized governance system. Superblocks are issued monthly and have a coinbase that can be much larger than normal. The superblock value is provided by the 10% of block rewards set aside for superblock payouts." class="auto-link">Superblock</a></a></li>
+              <li><a href="#sentinel-superblock" id="markdown-toc-sentinel-superblock">Sentinel Superblock</a></li>
             </ul>
           </li>
         </ul>
@@ -279,7 +279,7 @@ if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNot
   </li>
 </ul>
 
-    <ul class="goback"><li><a href="/en">Return To Overview</a></li></ul>
+    <ul class="goback"><li><a href="/en/">Return To Overview</a></li></ul>
     <ul class="reportissue"><li><a href="https://github.com/thephez/dash.org/issues/new" onmouseover="updateIssue(event);">Report An Issue</a></li></ul>
     <ul class="editsource"><li><a href="https://github.com/thephez/dash.org/tree/master/_includes" onmouseover="updateSource(event);">Edit On GitHub</a></li></ul>
 
@@ -312,8 +312,8 @@ Core, either from <a href="https://github.com/dashpay/dash/">source</a> or from 
   <p>Questions about Dash development are best asked in one of the
 <a href="https://www.dash.org/community/">Dash development communities</a>.
 Errors or suggestions related to
-documentation on {Dash.org} can be <a href="https://github.com/thephez/dash.org/issues">submitted as an issue</a>
-or posted to the [bitcoin-documentation mailing list][].</p>
+documentation on <a href="https://dash-docs.github.io">dash-docs.github.io</a> can be
+<a href="https://github.com/thephez/dash.org/issues">submitted as an issue</a>.</p>
 
   <p>In the following documentation, some strings have been shortened or wrapped: “[…]”
 indicates extra data was removed, and lines ending in a single backslash “\”
@@ -1338,8 +1338,7 @@ added in sequence until all of the available space is filled.</p>
   <p>As of Dash Core 0.12.2.x, a <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." id="term-minimum-fee" class="term">minimum fee</a>(1,000 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> following <a href="https://github.com/dashpay/dips/blob/master/dip-0001.md">DIP1</a> activation) is required to
 broadcast a non-priority transaction across the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>. Any transaction paying
 only the <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." class="auto-link">minimum fee</a> should be prepared to wait a long time before there’s
-enough spare space in a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to include it. Please see the <a href="/en/developer-guide#verifying-payment">verifying payment section</a>
-for why this could be important.</p>
+enough spare space in a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> to include it.</p>
 
   <p>Since each transaction spends Unspent Transaction <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">Outputs</a> (<a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXOs</a>) and
 because a <a href="/en/glossary/unspent-transaction-output" title="An Unspent Transaction Output (UTXO) that can be spent as an input in a new transaction." class="auto-link">UTXO</a> can only be spent once, the full value of the included
@@ -1376,7 +1375,7 @@ user can gain a significant amount of financial privacy.</p>
   <p>Even better, using new <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public keys</a> or <a href="/en/developer-guide#term-unique-address" title="Address which are only used once to protect privacy and increase security" id="term-unique-address" class="term">unique
 addresses</a> when accepting payments or creating
 <a href="/en/glossary/change-address" title="An output in a transaction which returns duffs to the spender, thus preventing too much of the input value from going to transaction fees." class="auto-link">change outputs</a> can be combined with other techniques discussed later,
-such as <a href="/en/glossary/privatesend" title="PrivateSend is a masternode managage, decentralized mixer for creating an on-demand system of removing the history from coins on the network. PrivateSend mixes inputs while allowing each participant to retain control of their coins at all times so the process can be done without trusting a third party." class="auto-link">PrivateSend</a> or <a href="/en/developer-guide#term-merge-avoidance" title="A strategy for selecting which outputs to spend that avoids merging outputs with different histories that could leak private information" class="auto-link">merge avoidance</a>, to make it extremely difficult to
+such as <a href="/en/glossary/privatesend" title="PrivateSend is a masternode managage, decentralized mixer for creating an on-demand system of removing the history from coins on the network. PrivateSend mixes inputs while allowing each participant to retain control of their coins at all times so the process can be done without trusting a third party." class="auto-link">PrivateSend</a> or merge avoidance, to make it extremely difficult to
 use the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> by itself to reliably track how users receive and
 spend their <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>.</p>
 
@@ -1408,8 +1407,8 @@ is exposed by some means, such as a
   <p>So, for both privacy and security, we encourage you to build your
 applications to avoid <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> reuse and, when possible, to discourage
 users from reusing <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>. If your application needs to provide a
-fixed URI to which payments should be sent, please see the
-<a href="/en/developer-guide#bitcoin-uri"><code class="highlighter-rouge">dash:</code> URI section</a> below.</p>
+fixed URI to which payments should be sent, please use <code class="highlighter-rouge">dash:</code> URIs as defined
+by <a href="https://github.com/QuantumExplorer/bips/blob/master/bip-0021.mediawiki#general-format">BIP21</a>.</p>
 
   <h3 id="transaction-malleability">Transaction Malleability</h3>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_transactions.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_transactions.md">Edit</a>
@@ -1492,7 +1491,7 @@ merchandise, but Charlie can’t get the merchandise and keep his payment.</p>
 Charlie enlist the help of Alice-the-arbitrator to create an <a href="/en/glossary/escrow-contract" title="A transaction in which a spender and receiver place funds in a 2-of-2 (or other m-of-n) multisig output so that neither can spend the funds until they're both satisfied with some external outcome." id="term-escrow-contract" class="term">escrow
 contract</a>. Charlie spends his <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>
 to an <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> which can only be spent if two of the three people sign the
-<a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>. Now Charlie can pay Bob if everything is ok, Bob can <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a>
+<a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>. Now Charlie can pay Bob if everything is ok, Bob can refund
 Charlie’s money if there’s a problem, or Alice can arbitrate and decide
 who should get the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> if there’s a dispute.</p>
 
@@ -1520,12 +1519,12 @@ keys</a> provided).</p>
 sees the payment get added to the <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">block chain</a> and ships the merchandise.</p>
 
   <p>Unfortunately, the merchandise gets slightly damaged in transit. Charlie
-wants a full <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a>, but Bob thinks a 10% <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> is sufficient. They
+wants a full refund, but Bob thinks a 10% refund is sufficient. They
 turn to Alice to resolve the issue. Alice asks for photo evidence from
 Charlie along with a copy of the <a href="/en/glossary/redeem-script" title="A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions." class="auto-link">redeem script</a> Bob created and
 Charlie checked.</p>
 
-  <p>After looking at the evidence, Alice thinks a 40% <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> is sufficient,
+  <p>After looking at the evidence, Alice thinks a 40% refund is sufficient,
 so she creates and signs a transaction with two <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a>, one that spends 60%
 of the <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> to Bob’s <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> and one that spends the remaining
 40% to Charlie’s <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a>.</p>
@@ -1586,37 +1585,37 @@ second transaction.</p>
 
   <p>The second transaction spends all of the first transaction’s <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a>
 (minus a <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a>) back to Bob after a 24 hour delay enforced
-by <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a>. This is the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction. Bob can’t sign the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction by himself, so he gives
+by <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a>. This is the refund transaction. Bob can’t sign the refund transaction by himself, so he gives
 it to Alice to sign, as shown in the
 illustration below.</p>
 
   <p><img src="/img/dev/en-micropayment-channel.svg" alt="Micropayment Channel Example" /></p>
 
-  <p>Alice checks that the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction’s <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a> is 24 hours in the
+  <p>Alice checks that the refund transaction’s <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a> is 24 hours in the
 future, signs it, and gives a copy of it back to Bob. She then asks Bob
-for the bond transaction and checks that the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction spends
+for the bond transaction and checks that the refund transaction spends
 the <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">output</a> of the bond transaction. She can now broadcast the bond
 transaction to the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> to ensure Bob has to wait for the time lock
 to expire before further spending his <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a>. Bob hasn’t actually
 spent anything so far, except possibly a small <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fee</a>, and
-he’ll be able to broadcast the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction in 24 hours for a
-full <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a>.</p>
+he’ll be able to broadcast the refund transaction in 24 hours for a
+full refund.</p>
 
   <p>Now, when Alice does some work worth 1 millibitcoin, she asks Bob to create
-and sign a new version of the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction.  Version two of the
+and sign a new version of the refund transaction.  Version two of the
 transaction spends 1 millibitcoin to Alice and the other 99 back to Bob; it does
 not have a <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a>, so Alice can sign it and spend it whenever she
 wants.  (But she doesn’t do that immediately.)</p>
 
   <p>Alice and Bob repeat these work-and-pay steps until Alice finishes for
 the day, or until the time lock is about to expire.  Alice signs the
-final version of the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction and broadcasts it, paying
+final version of the refund transaction and broadcasts it, paying
 herself and refunding any remaining balance to Bob.  The next day, when
 Alice starts work, they create a new <a href="/en/developer-guide#term-micropayment-channel" class="auto-link">micropayment channel</a>.</p>
 
-  <p>If Alice fails to broadcast a version of the <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a> transaction before
+  <p>If Alice fails to broadcast a version of the refund transaction before
 its time lock expires, Bob can broadcast the first version and receive a
-full <a href="/en/developer-guide#issuing-refunds" title="A transaction which refunds some or all satoshis received in a previous transaction" class="auto-link">refund</a>. This is one reason <a href="/en/developer-guide#term-micropayment-channel" class="auto-link">micropayment channels</a> are best suited to
+full refund. This is one reason <a href="/en/developer-guide#term-micropayment-channel" class="auto-link">micropayment channels</a> are best suited to
 small payments—if Alice’s Internet service goes out for a few hours
 near the time lock expiry, she could be cheated out of her payment.</p>
 
@@ -1629,96 +1628,6 @@ hadn’t done any work.</p>
   <p>For larger payments, Dash <a href="/en/glossary/transaction-fee" title="The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block." class="auto-link">transaction fees</a> are very low as a
 percentage of the total transaction value, so it makes more sense to
 protect payments with immediately-broadcast separate transactions.</p>
-
-  <!-- Obsolesced by PrivateSend
-### CoinJoin
-<div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_contracts.md"
-><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_contracts.md">Edit</a>
-| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_contracts.md">History</a>
-| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_contracts.md%0A%0A">Report Issue</a>
-| <a href="https://www.dash.org/forum/">Discuss</a></div>
-
-
-
-
-
-Alice is concerned about her privacy.  She knows every transaction gets
-added to the public [block chain][/en/glossary/block-chain]{:.auto-link}, so when Bob and Charlie pay her, they
-can each easily track those [duffs][/en/glossary/denominations]{:.auto-link} to learn what Bitcoin
-[addresses][/en/glossary/address]{:.auto-link} she pays, how much she pays them, and possibly how many
-[duffs][/en/glossary/denominations]{:.auto-link} she has left.
-
-Alice isn't a criminal, she just wants plausible deniability about
-where she has spent her [duffs][/en/glossary/denominations]{:.auto-link} and how many she has left, so she
-starts up the Tor anonymity service on her computer and logs into an
-IRC chatroom as "AnonGirl."
-
-Also in the chatroom are "Nemo" and "Neminem."  They collectively
-agree to transfer [duffs][/en/glossary/denominations]{:.auto-link} between each other so no one besides them
-can reliably determine who controls which [duffs][/en/glossary/denominations]{:.auto-link}.  But they're faced
-with a dilemma: who transfers their [duffs][/en/glossary/denominations]{:.auto-link} to one of the other two
-pseudonymous persons first? The CoinJoin-style contract, shown in the
-illustration below, makes this decision easy: they create a single
-transaction which does all of the spending simultaneously, ensuring none
-of them can steal the others' [duffs][/en/glossary/denominations]{:.auto-link}.
-
-![Example CoinJoin Transaction](/img/dev/en-coinjoin.svg)
-
-Each contributor looks through their collection of Unspent Transaction
-[Outputs][/en/glossary/output]{:.auto-link} ([UTXOs][/en/glossary/unspent-transaction-output]{:.auto-link}) for 100 [millidash][/en/glossary/denominations]{:.auto-link} they can spend. They then each generate
-a brand new [public key][/en/glossary/public-key]{:.auto-link} and give [UTXO][/en/glossary/unspent-transaction-output]{:.auto-link} details and [pubkey hashes][/en/glossary/p2pkh-address]{:.auto-link} to the
-facilitator.  In this case, the facilitator is AnonGirl; she creates
-a transaction spending each of the [UTXOs][/en/glossary/unspent-transaction-output]{:.auto-link} to three equally-sized [outputs][/en/glossary/output]{:.auto-link}.
-One [output][/en/glossary/output]{:.auto-link} goes to each of the contributors' [pubkey hashes][/en/glossary/p2pkh-address]{:.auto-link}.
-
-AnonGirl then signs her [inputs][/en/glossary/input]{:.auto-link} using [`SIGHASH_ALL`][/en/glossary/sighash-all]{:.auto-link} to ensure nobody can
-change the [input][/en/glossary/input]{:.auto-link} or [output][/en/glossary/output]{:.auto-link} details.  She gives the partially-signed
-transaction to Nemo who signs his [inputs][/en/glossary/input]{:.auto-link} the same way and passes it
-to Neminem, who also signs it the same way.  Neminem then broadcasts
-the transaction to the [peer-to-peer network][network]{:.auto-link}, mixing all of the [millidash][/en/glossary/denominations]{:.auto-link} in
-a single transaction.
-
-As you can see in the illustration, there's no way for anyone besides
-AnonGirl, Nemo, and Neminem to confidently determine who received
-which [output][/en/glossary/output]{:.auto-link}, so they can each spend their [output][/en/glossary/output]{:.auto-link} with plausible
-deniability.
-
-Now when Bob or Charlie try to track Alice's transactions through the
-[block chain][/en/glossary/block-chain]{:.auto-link}, they'll also see transactions made by Nemo and
-Neminem.  If Alice does a few more CoinJoins, Bob and Charlie might
-have to guess which transactions made by dozens or hundreds of people
-were actually made by Alice.
-
-The complete history of Alice's [duffs][/en/glossary/denominations]{:.auto-link} is still in the [block chain][/en/glossary/block-chain]{:.auto-link},
-so a determined investigator could talk to the people AnonGirl
-CoinJoined with to find out the ultimate origin of her [duffs][/en/glossary/denominations]{:.auto-link} and
-possibly reveal AnonGirl as Alice. But against anyone casually browsing
-[block chain][/en/glossary/block-chain]{:.auto-link} history, Alice gains plausible deniability.
-
-The CoinJoin technique described above costs the participants a small
-amount of [duffs][/en/glossary/denominations]{:.auto-link} to pay the [transaction fee][/en/glossary/transaction-fee]{:.auto-link}.  An alternative
-technique, purchaser CoinJoin, can actually save them [duffs][/en/glossary/denominations]{:.auto-link} and
-improve their privacy at the same time.
-
-AnonGirl waits in the IRC chatroom until she wants to make a purchase.
-She announces her intention to spend [duffs][/en/glossary/denominations]{:.auto-link} and waits until someone
-else wants to make a purchase, likely from a different merchant. Then
-they combine their [inputs][/en/glossary/input]{:.auto-link} the same way as before but set the [outputs][/en/glossary/output]{:.auto-link}
-to the separate merchant [addresses][/en/glossary/address]{:.auto-link} so nobody will be able to figure
-out solely from [block chain][/en/glossary/block-chain]{:.auto-link} history which one of them bought what from
-the merchants.
-
-Since they would've had to pay a [transaction fee][/en/glossary/transaction-fee]{:.auto-link} to make their purchases
-anyway, AnonGirl and her co-spenders don't pay anything extra---but
-because they reduced overhead by combining multiple transactions, saving
-bytes, they may be able to pay a smaller aggregate [transaction fee][/en/glossary/transaction-fee]{:.auto-link},
-saving each one of them a tiny amount of [duffs][/en/glossary/denominations]{:.auto-link}.
-
-
-**Resource:** An alpha-quality (as of this writing) implementation of decentralized
-CoinJoin is [CoinMux](http://coinmux.com/), available under the Apache
-license.
--->
 
   <h2 id="wallets">Wallets</h2>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_wallets.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_wallets.md">Edit</a>
@@ -1973,8 +1882,7 @@ index</a> number.</p>
 
   <p>Neither method adds a significant amount of overhead, especially if a
 database is used anyway to associate each incoming payment with a
-separate <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> for payment tracking. See the <a href="/en/developer-guide#payment-processing">Payment
-Processing</a> section for details.</p>
+separate <a href="/en/glossary/public-key" title="The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair." class="auto-link">public key</a> for payment tracking.</p>
 
   <h3 id="wallet-files">Wallet Files</h3>
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_wallets.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_wallets.md">Edit</a>
@@ -2628,7 +2536,7 @@ connection to a specific <a href="/en/glossary/node" title="A computer that conn
 details.</p>
 
   <p><strong>Resources:</strong> <a href="https://github.com/nightlydash/dash-seeder/tree/master">Dash Seeder</a>, the program run by several of the
-seeds used by Dash Core. The Dash Core [DNS SeedPolicy][]. The hardcoded list
+seeds used by Dash Core. The Dash Core <a href="https://github.com/dashpay/dash/blob/master/doc/dnsseed-policy.md">DNS Seed Policy</a>. The hardcoded list
  of IP addresses used by Dash Core is generated using the <a href="https://github.com/dashpay/dash/tree/master/contrib/seeds">makeseeds script</a>.</p>
 
   <h3 id="connecting-to-peers">Connecting To Peers</h3>
@@ -2695,7 +2603,7 @@ sends the <a href="/en/glossary/block-header" title="An 80-byte header belonging
 (b67a…0000 in <a href="/en/glossary/internal-byte-order" title="The standard order in which hash digests are displayed as strings---the same format used in serialized blocks and transactions." class="auto-link">internal byte order</a>).  It also sets the stop hash field
 to all zeroes to request a maximum-size response.</p>
 
-  <p>Upon <a href="/en/developer-guide#term-receipt" title="A cryptographically-verifiable receipt created using parts of a payment request and a confirmed transaction" class="auto-link">receipt</a> of the <a href="/en/developer-reference#getblocks" title="A P2P protocol message used to request an inv message containing a range of block header hashes" class="auto-link"><code class="highlighter-rouge">getblocks</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> takes the first
+  <p>Upon receipt of the <a href="/en/developer-reference#getblocks" title="A P2P protocol message used to request an inv message containing a range of block header hashes" class="auto-link"><code class="highlighter-rouge">getblocks</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> takes the first
 (and only) <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash and searches its local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> for a
 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> with that <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash. It finds that <a href="/en/glossary/genesis-block" title="The first block in the Dash block chain." class="auto-link">block 0</a> matches, so it
 replies with 500 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventories</a> (the maximum response to a
@@ -2726,7 +2634,7 @@ the preceding <a href="/en/glossary/block" title="One or more transactions prefa
 validated because their parents haven’t been received are called <a href="/en/glossary/orphan-block" title="Blocks whose parent block has not been processed by the local node, so they can't be fully validated yet." class="auto-link">orphan
 blocks</a>; a subsection below describes them in more detail.</p>
 
-  <p>Upon <a href="/en/developer-guide#term-receipt" title="A cryptographically-verifiable receipt created using parts of a payment request and a confirmed transaction" class="auto-link">receipt</a> of the <a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> replies with each
+  <p>Upon receipt of the <a href="/en/developer-reference#getdata" title="A P2P protocol message used to request one or more transactions, blocks, or merkle blocks" class="auto-link"><code class="highlighter-rouge">getdata</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> replies with each
 of the <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">blocks</a> requested. Each <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> is put into <a href="/en/glossary/serialized-block" title="A complete block in its binary format---the same format used to calculate total block byte size; often represented using hexadecimal." class="auto-link">serialized block</a> format
 and sent in a separate <a href="/en/developer-reference#block" title="The P2P network message which sends a serialized block" class="auto-link"><code class="highlighter-rouge">block</code> message</a>. The first <a href="/en/developer-reference#block" title="The P2P network message which sends a serialized block" class="auto-link"><code class="highlighter-rouge">block</code> message</a> sent
 (for <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> 1) is illustrated below.</p>
@@ -2743,7 +2651,7 @@ below:</p>
 
   <p><img src="/img/dev/en-ibd-getblocks2.svg" alt="Second GetBlocks Message Sent During IBD" /></p>
 
-  <p>Upon <a href="/en/developer-guide#term-receipt" title="A cryptographically-verifiable receipt created using parts of a payment request and a confirmed transaction" class="auto-link">receipt</a> of the second <a href="/en/developer-reference#getblocks" title="A P2P protocol message used to request an inv message containing a range of block header hashes" class="auto-link"><code class="highlighter-rouge">getblocks</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> searches
+  <p>Upon receipt of the second <a href="/en/developer-reference#getblocks" title="A P2P protocol message used to request an inv message containing a range of block header hashes" class="auto-link"><code class="highlighter-rouge">getblocks</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> searches
 its local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> for a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> that matches one of the <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a>
 hashes in the message, trying each hash in the order they were received.
 If it finds a matching hash, it replies with 500 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> <a href="/en/glossary/inventory" title="A data type identifier and a hash; used to identify transactions, blocks, and objects available for download through the Dash P2P network." class="auto-link">inventories</a>
@@ -2868,7 +2776,7 @@ sends the <a href="/en/glossary/block-header" title="An 80-byte header belonging
 (b67a…0000 in <a href="/en/glossary/internal-byte-order" title="The standard order in which hash digests are displayed as strings---the same format used in serialized blocks and transactions." class="auto-link">internal byte order</a>).  It also sets the stop hash field
 to all zeroes to request a maximum-size response.</p>
 
-  <p>Upon <a href="/en/developer-guide#term-receipt" title="A cryptographically-verifiable receipt created using parts of a payment request and a confirmed transaction" class="auto-link">receipt</a> of the <a href="/en/developer-reference#getheaders" title="A P2P protocol message used to request a range of block headers" class="auto-link"><code class="highlighter-rouge">getheaders</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> takes the first
+  <p>Upon receipt of the <a href="/en/developer-reference#getheaders" title="A P2P protocol message used to request a range of block headers" class="auto-link"><code class="highlighter-rouge">getheaders</code> message</a>, the sync <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> takes the first
 (and only) <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash and searches its local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> for a
 <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> with that <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> hash. It finds that <a href="/en/glossary/genesis-block" title="The first block in the Dash block chain." class="auto-link">block 0</a> matches, so it
 replies with 2,000 <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">header</a> (the maximum response) starting from
@@ -3423,7 +3331,6 @@ documentation describes these key features that set Dash apart in the <a href="/
 economy.</p>
 
   <h3 id="instantsend">InstantSend</h3>
-
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
@@ -3496,7 +3403,6 @@ If an <a href="/en/glossary/instantsend" title="InstantSend is a service that al
   </ul>
 
   <h3 id="privatesend">PrivateSend</h3>
-
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
@@ -3586,7 +3492,6 @@ reference this <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146
   </table>
 
   <h3 id="masternode-payment">Masternode Payment</h3>
-
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
@@ -3610,7 +3515,6 @@ relaying it to their <a href="/en/glossary/node" title="A computer that connects
 treated as misbehaving and have its ban score increased.</p>
 
   <h3 id="masternode-sync">Masternode Sync</h3>
-
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
@@ -3627,6 +3531,10 @@ several conditions that initiate a start/restart the sync process:</p>
   </ul>
 
   <h4 id="initial-masternode-sync">Initial Masternode Sync</h4>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
 
   <p>This diagram shows the order in which P2P messages are sent to perform
 <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternode</a> synchronization initially after startup.</p>
@@ -3812,6 +3720,10 @@ are used in both <a href="/en/developer-reference#ssc" title="A P2P network mess
   </table>
 
   <h4 id="ongoing-masternode-sync">Ongoing Masternode Sync</h4>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
 
   <p>Once a <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternode</a> completes an initial full sync, continuing synchronization is
 maintained by the exchange of P2P messages with other <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">nodes</a>. This diagram shows
@@ -3855,6 +3767,10 @@ current by the <a href="/en/developer-reference#govobj" title="A P2P network mes
 sync.</p>
 
   <h4 id="masternode-sync-schedule">Masternode Sync Schedule</h4>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
 
   <p>The following tables detail the timing of various functions used to keep the
 <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternodes</a> in sync with each other. This information is derived from
@@ -3928,13 +3844,16 @@ sync.</p>
   </table>
 
   <h3 id="governance">Governance</h3>
-
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
 | <a href="https://www.dash.org/forum/">Discuss</a></div>
 
   <h4 id="synchronization">Synchronization</h4>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
 
   <p>Dash Core synchronizes the governance system via the <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">Masternode</a> <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> as the
 last stage of the <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">Masternode</a> sync process (following the sync of <a href="/en/glossary/spork" title="A spork is a mechanism unique to Dash used to safely deploy new features to the network through network-level variables to avoid the risk of unintended network forking during upgrades." class="auto-link">sporks</a>, the
@@ -4101,6 +4020,10 @@ objects.</p>
   </table>
 
   <h4 id="sentinel">Sentinel</h4>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
 
   <p><a href="https://github.com/dashpay/sentinel/">Sentinel</a> is a Python application that connects to a <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternode’s</a> local dashd
 instance to run as an autonomous agent for persisting, processing, and automating
@@ -4115,11 +4038,21 @@ governance sync, ping, governance object pruning, and <a href="/en/glossary/supe
 The governance object data is stored in a SQLite database.</p>
 
   <h5 id="sentinel-sync">Sentinel Sync</h5>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
+
   <p><a href="/en/glossary/sentinel" title="An autonomous agent for persisting, processing and automating Dash governance objects and tasks, and for expanded functions in Dash Evolution." class="auto-link">Sentinel</a> issues a <code class="highlighter-rouge">gobject list</code> <a href="/en/developer-reference#remote-procedure-calls-rpcs" class="auto-link">RPC</a> command and updates its database with the
 results returned from dashd. When objects are removed from the <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a>, they are
 purged from the <a href="/en/glossary/sentinel" title="An autonomous agent for persisting, processing and automating Dash governance objects and tasks, and for expanded functions in Dash Evolution." class="auto-link">Sentinel</a> database.</p>
 
   <h5 id="sentinel-ping">Sentinel Ping</h5>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
+
   <p>In Dash Core 12.2, use of the <code class="highlighter-rouge">watchdog</code> governance object type was replaced
 by integrating <a href="/en/glossary/sentinel" title="An autonomous agent for persisting, processing and automating Dash governance objects and tasks, and for expanded functions in Dash Evolution." class="auto-link">sentinel</a> information into the <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternode</a> ping (<a href="/en/developer-reference#mnp" title="A P2P protocol message sent by masternodes every few minutes to ping the network with a message that propagates across the whole network" class="auto-link"><code class="highlighter-rouge">mnp</code> message</a>)
 via <a href="https://github.com/dashpay/dash/pull/1491">Pull Request #1491</a>.
@@ -4127,18 +4060,27 @@ via <a href="https://github.com/dashpay/dash/pull/1491">Pull Request #1491</a>.
 prevent it from entering a <code class="highlighter-rouge">MASTERNODE_WATCHDOG_EXPIRED</code> state.</p>
 
   <h5 id="sentinel-prune">Sentinel Prune</h5>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
+
   <p><a href="/en/glossary/sentinel" title="An autonomous agent for persisting, processing and automating Dash governance objects and tasks, and for expanded functions in Dash Evolution." class="auto-link">Sentinel</a> 1.1.0 introduced proposal pruning which automatically votes to delete
 expired proposals following approximately half of a <a href="/en/glossary/superblock" title="Special blocks that pay out funded budget proposals approved by masternode votes via the decentralized governance system. Superblocks are issued monthly and have a coinbase that can be much larger than normal. The superblock value is provided by the 10% of block rewards set aside for superblock payouts." class="auto-link">superblock</a> cycle. This delay
 period ensures that proposals are not deleted prematurely. Prior to this,
 proposals remained in memory unless a sufficient number of <a href="/en/glossary/masternode" title="A computer that provides second-tier Dash functionality (InstantSend, PrivateSend, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks." class="auto-link">masternodes</a> manually
 voted to delete them.</p>
 
-  <h5 id="sentinel-superblockenglossarysuperblockauto-link">Sentinel <a href="/en/glossary/superblock" title="Special blocks that pay out funded budget proposals approved by masternode votes via the decentralized governance system. Superblocks are issued monthly and have a coinbase that can be much larger than normal. The superblock value is provided by the 10% of block rewards set aside for superblock payouts." class="auto-link">Superblock</a></h5>
+  <h5 id="sentinel-superblock">Sentinel Superblock</h5>
+  <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
+| <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
+| <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
+| <a href="https://www.dash.org/forum/">Discuss</a></div>
+
   <p><a href="/en/glossary/sentinel" title="An autonomous agent for persisting, processing and automating Dash governance objects and tasks, and for expanded functions in Dash Evolution." class="auto-link">Sentinel</a> manages <a href="/en/glossary/superblock" title="Special blocks that pay out funded budget proposals approved by masternode votes via the decentralized governance system. Superblocks are issued monthly and have a coinbase that can be much larger than normal. The superblock value is provided by the 10% of block rewards set aside for superblock payouts." class="auto-link">superblock</a> creation, voting, and submission to dashd for
 <a href="/en/developer-guide#term-network" title="The Dash P2P network which broadcasts transactions and blocks" class="auto-link">network</a> propagation.</p>
 
   <h3 id="quorum-selection">Quorum Selection</h3>
-
   <div class="subhead-links sourcefile" data-sourcefile="_includes/devdoc/guide_dash_features.md"><a href="https://github.com/thephez/dash.org/edit/master/_includes/devdoc/guide_dash_features.md">Edit</a>
 | <a href="https://github.com/thephez/dash.org/commits/master/_includes/devdoc/guide_dash_features.md">History</a>
 | <a href="https://github.com/thephez/dash.org/issues/new?body=Source%20File%3A%20_includes/devdoc/guide_dash_features.md%0A%0A">Report Issue</a>
@@ -4400,7 +4342,7 @@ pools. The <a href="https://github.com/bitcoin/libblkmaker">libblkmaker</a> C li
 both MIT licensed, can interpret GetBlockTemplate for your programs.</p>
 
   <!-- Services like Blockcyper are more likely to be used by most than building a ground-up payment system
-include devdoc/guide_payment_processing.md
+
 -->
 
   <!-- Inventory Messages -->

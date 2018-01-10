@@ -2368,11 +2368,6 @@ uri: "/en/developer-reference#block",
 category: "P2P Messages"
 },
 {
-label: "feefilter",
-uri: "/en/developer-reference#feefilter",
-category: "P2P Messages"
-},
-{
 label: "filteradd",
 uri: "/en/developer-reference#filteradd",
 category: "P2P Messages"
