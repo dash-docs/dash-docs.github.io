@@ -1175,7 +1175,7 @@ evaluation stack. It cannot push new <a href="/en/glossary/op-code" title="Opera
     </li>
     <li>
       <p>The transaction must not include any <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> which receive fewer than
-1/3 as many satoshis as it would take to spend it in a typical <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>.
+1/3 as many <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> as it would take to spend it in a typical <a href="/en/glossary/input" title="An input in a transaction which contains three fields: an outpoint, a signature script, and a sequence number.  The outpoint references a previous output and the signature script allows spending it." class="auto-link">input</a>.
 That’s currently 5460 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a> for a
 P2PKH or <a href="/en/glossary/p2sh-address" title="A Dash payment address comprising a hashed script, allowing the spender to create a standard pubkey script that Pays To Script Hash (P2SH). The script can be almost any valid pubkey script." class="auto-link">P2SH output</a> on a Dash Core <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a> with the default <a href="/en/glossary/minimum-relay-fee" title="The minimum transaction fee a transaction must pay (if it isn't a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee---each node chooses its own policy." class="auto-link">relay fee</a>.
 Exception: standard null data <a href="/en/glossary/output" title="An output in a transaction which contains two fields: a value field for transferring zero or more duffs and a pubkey script for indicating what conditions must be fulfilled for those duffs to be further spent." class="auto-link">outputs</a> must receive zero <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">duffs</a>.</p>
@@ -1601,9 +1601,9 @@ spent anything so far, except possibly a small <a href="/en/glossary/transaction
 he’ll be able to broadcast the refund transaction in 24 hours for a
 full refund.</p>
 
-  <p>Now, when Alice does some work worth 1 millibitcoin, she asks Bob to create
+  <p>Now, when Alice does some work worth 1 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a>, she asks Bob to create
 and sign a new version of the refund transaction.  Version two of the
-transaction spends 1 millibitcoin to Alice and the other 99 back to Bob; it does
+transaction spends 1 <a href="/en/glossary/denominations" title="Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff.  One dash equals 100,000,000 duffs." class="auto-link">millidash</a> to Alice and the other 99 back to Bob; it does
 not have a <a href="/en/glossary/locktime" title="Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain." class="auto-link">locktime</a>, so Alice can sign it and spend it whenever she
 wants.  (But she doesn’t do that immediately.)</p>
 
@@ -1917,7 +1917,7 @@ stored on pieces of paper.</p>
       <p>Take a <a href="/en/glossary/private-key" title="The private portion of a keypair which can create signatures that other people can verify using the public key." class="auto-link">private key</a>.</p>
     </li>
     <li>
-      <p>Add a 0x80 byte in front of it for <a href="/en/glossary/mainnet" title="The original and main network for Dash transactions, where duffs have real economic value." class="auto-link">mainnet</a> <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> or 0xef for <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend duffs that have no real-world value on a network that is very similar to the Dash mainnet." class="auto-link">testnet</a> <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
+      <p>Add a 0xCC byte in front of it for <a href="/en/glossary/mainnet" title="The original and main network for Dash transactions, where duffs have real economic value." class="auto-link">mainnet</a> <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a> or 0xEF for <a href="/en/glossary/testnet" title="A global testing environment in which developers can obtain and spend duffs that have no real-world value on a network that is very similar to the Dash mainnet." class="auto-link">testnet</a> <a href="/en/glossary/address" title="A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address.  Currently the most common way users exchange payment information." class="auto-link">addresses</a>.</p>
     </li>
     <li>
       <p>Append a 0x01 byte after it if it should be used with <a href="/en/glossary/compressed-public-key" title="An ECDSA public key that is 33 bytes long rather than the 65 bytes of an uncompressed public key." class="auto-link">compressed
@@ -3909,7 +3909,7 @@ objects.</p>
         <td><strong>Description</strong></td>
       </tr>
       <tr>
-        <td><strong>Inital request</strong></td>
+        <td><strong>Initial request</strong></td>
         <td> </td>
         <td> </td>
         <td><strong>Requests all governance objects (without votes)</strong></td>

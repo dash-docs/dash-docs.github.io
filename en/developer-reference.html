@@ -3928,7 +3928,7 @@ before initializing its half of the connection by first sending a
         <td>start_height</td>
         <td>int32_t</td>
         <td>Required</td>
-        <td>The <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> of the transmitting <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a> <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> or, in the case of an <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight clients." class="auto-link">SPV client</a>, best <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> <a href="/en/glossary/header-chain" title="A chain of block headers with each header linking to the header that preceded it; the most-difficult-to-recreate chain is the best header chain" class="auto-link">header chain</a>.</td>
+        <td>The <a href="/en/glossary/block-height" title="The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it." class="auto-link">height</a> of the transmitting <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node’s</a> <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a> or, in the case of an <a href="/en/glossary/simplified-payment-verification" title="A method for verifying if particular transactions are included in a block without downloading the entire block.  The method is used by some lightweight clients." class="auto-link">SPV client</a>, best <a href="/en/glossary/block-header" title="An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." class="auto-link">block header</a> chain.</td>
       </tr>
       <tr>
         <td>1</td>
@@ -10151,7 +10151,7 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
       <tr>
         <td>→ →<br /><code class="highlighter-rouge">addresses</code></td>
         <td>array</td>
-        <td>Requred<br />(exactly 1)</td>
+        <td>Required<br />(exactly 1)</td>
         <td>This will be an array of addresses belonging to the added <a href="/en/glossary/node" title="A computer that connects to the Dash network." class="auto-link">node</a></td>
       </tr>
       <tr>
@@ -11517,7 +11517,7 @@ that account. Add the <a href="/en/glossary/instantsend" title="InstantSend is a
         <td>→ → →<br /><code class="highlighter-rouge">status</code></td>
         <td>string</td>
         <td>Required<br />(exactly 1)</td>
-        <td>Set to one of the following reasons:<br />• <code class="highlighter-rouge">defined</code> if voting hasn’t started yet<br />• <code class="highlighter-rouge">started</code> if the voting has started <br />• <code class="highlighter-rouge">locked_in</code> if the voting was successful but the softfort hasn’t been activated yet<br />• <code class="highlighter-rouge">active</code> if the softfork was activated<br />• <code class="highlighter-rouge">failed</code> if the softfork has not receieved enough votes</td>
+        <td>Set to one of the following reasons:<br />• <code class="highlighter-rouge">defined</code> if voting hasn’t started yet<br />• <code class="highlighter-rouge">started</code> if the voting has started <br />• <code class="highlighter-rouge">locked_in</code> if the voting was successful but the softfork hasn’t been activated yet<br />• <code class="highlighter-rouge">active</code> if the softfork was activated<br />• <code class="highlighter-rouge">failed</code> if the softfork has not receieved enough votes</td>
       </tr>
       <tr>
         <td>→ → →<br /><code class="highlighter-rouge">bit</code></td>
@@ -13592,7 +13592,7 @@ Core.  Use the <a href="/en/developer-reference#remote-procedure-calls-rpcs" cla
         <td>→<br /><code class="highlighter-rouge">uploadtarget</code></td>
         <td>string : <br />object</td>
         <td>Required<br />(exactly 1)</td>
-        <td>The upload traget information</td>
+        <td>The upload <a href="/en/glossary/nbits" title="The target is the threshold below which a block header hash must be in order for the block to valid, and nBits is the encoded form of the target threshold as it appears in the block header." class="auto-link">target</a> information</td>
       </tr>
       <tr>
         <td>→ →<br /><code class="highlighter-rouge">timeframe</code></td>
@@ -15751,7 +15751,7 @@ locked <a href="/en/glossary/instantsend" title="InstantSend is a service that a
         <td>→ →<br /><code class="highlighter-rouge">category</code></td>
         <td>string</td>
         <td>Required<br />(exactly 1)</td>
-        <td>Set to one of the following values:<br />• <code class="highlighter-rouge">send</code> if sending payment normally<br />• <a href="/en/developer-reference#privatesend" class="auto-link"><code class="highlighter-rouge">privatesend</code></a> if sending PrivateSent payment<br />• <code class="highlighter-rouge">receive</code> if this <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> received payment in a regular transaction<br />• <a href="/en/developer-reference#generate" class="auto-link"><code class="highlighter-rouge">generate</code></a> if a matured and spendable <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a><br />• <code class="highlighter-rouge">immature</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> that is not spendable yet<br />• <code class="highlighter-rouge">orphan</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> from a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> that’s not in the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a></td>
+        <td>Set to one of the following values:<br />• <code class="highlighter-rouge">send</code> if sending payment normally<br />• <a href="/en/developer-reference#privatesend" class="auto-link"><code class="highlighter-rouge">privatesend</code></a> if sending <a href="/en/glossary/privatesend" title="PrivateSend is a masternode managage, decentralized mixer for creating an on-demand system of removing the history from coins on the network. PrivateSend mixes inputs while allowing each participant to retain control of their coins at all times so the process can be done without trusting a third party." class="auto-link">PrivateSend</a> payment<br />• <code class="highlighter-rouge">receive</code> if this <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> received payment in a regular transaction<br />• <a href="/en/developer-reference#generate" class="auto-link"><code class="highlighter-rouge">generate</code></a> if a matured and spendable <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a><br />• <code class="highlighter-rouge">immature</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> that is not spendable yet<br />• <code class="highlighter-rouge">orphan</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> from a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> that’s not in the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a></td>
       </tr>
       <tr>
         <td>→ →<br /><code class="highlighter-rouge">amount</code></td>
@@ -20288,7 +20288,7 @@ transactions):</p>
         <td>→ → → <br /><code class="highlighter-rouge">category</code></td>
         <td>string</td>
         <td>Required<br />(exactly 1)</td>
-        <td>Set to one of the following values:<br />• <code class="highlighter-rouge">send</code> if sending payment normally<br />• <a href="/en/developer-reference#privatesend" class="auto-link"><code class="highlighter-rouge">privatesend</code></a> if sending PrivateSent payment<br />• <code class="highlighter-rouge">receive</code> if this <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> received payment in a regular transaction<br />• <a href="/en/developer-reference#generate" class="auto-link"><code class="highlighter-rouge">generate</code></a> if a matured and spendable <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a><br />• <code class="highlighter-rouge">immature</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> that is not spendable yet<br />• <code class="highlighter-rouge">orphan</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> from a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> that’s not in the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a></td>
+        <td>Set to one of the following values:<br />• <code class="highlighter-rouge">send</code> if sending payment normally<br />• <a href="/en/developer-reference#privatesend" class="auto-link"><code class="highlighter-rouge">privatesend</code></a> if sending <a href="/en/glossary/privatesend" title="PrivateSend is a masternode managage, decentralized mixer for creating an on-demand system of removing the history from coins on the network. PrivateSend mixes inputs while allowing each participant to retain control of their coins at all times so the process can be done without trusting a third party." class="auto-link">PrivateSend</a> payment<br />• <code class="highlighter-rouge">receive</code> if this <a href="/en/glossary/wallet" title="Software that stores private keys and monitors the block chain (sometimes as a client of a server that does the processing) to allow users to spend and receive duffs." class="auto-link">wallet</a> received payment in a regular transaction<br />• <a href="/en/developer-reference#generate" class="auto-link"><code class="highlighter-rouge">generate</code></a> if a matured and spendable <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a><br />• <code class="highlighter-rouge">immature</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> that is not spendable yet<br />• <code class="highlighter-rouge">orphan</code> if a <a href="/en/glossary/coinbase" title="A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data." class="auto-link">coinbase</a> from a <a href="/en/glossary/block" title="One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain." class="auto-link">block</a> that’s not in the local <a href="/en/glossary/block-chain" title="A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain." class="auto-link">best block chain</a></td>
       </tr>
       <tr>
         <td>→ → → <br /><code class="highlighter-rouge">amount</code></td>
@@ -20487,7 +20487,7 @@ transactions) and the <a href="/en/glossary/block-header" title="An 80-byte head
         <td>Account</td>
         <td>string</td>
         <td>Optional<br />(0 or 1)</td>
-        <td><em>Deprecated: will be removed in a later version of Dash Core</em><br /><br />The name of an account to get transactinos from.  Use an empty string (“”) to get transactions for the default account.  Default is <code class="highlighter-rouge">*</code> to get transactions for all accounts.</td>
+        <td><em>Deprecated: will be removed in a later version of Dash Core</em><br /><br />The name of an account to get transactions from.  Use an empty string (“”) to get transactions for the default account.  Default is <code class="highlighter-rouge">*</code> to get transactions for all accounts.</td>
       </tr>
     </tbody>
   </table>
@@ -26811,7 +26811,7 @@ d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000</code></pre></figur
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/block/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
    </span><span class="nt">"hash"</span><span class="p">:</span><span class="s2">"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451"</span><span class="p">,</span><span class="w">
@@ -27134,7 +27134,7 @@ d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000</code></pre></figur
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
    </span><span class="nt">"hash"</span><span class="p">:</span><span class="s2">"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451"</span><span class="p">,</span><span class="w">
@@ -27370,7 +27370,7 @@ d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000</code></pre></figur
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/chaininfo.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
    </span><span class="nt">"chain"</span><span class="p">:</span><span class="s2">"test"</span><span class="p">,</span><span class="w">
@@ -27654,7 +27654,7 @@ d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000</code></pre></figur
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/getutxos/checkmempool/7b6caf68c33794b0bda65e63691739919f13156b57c7ec20a0b4de1f33c580bd-0.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
    </span><span class="nt">"chainHeight"</span><span class="p">:</span><span class="mi">38083</span><span class="p">,</span><span class="w">
@@ -27884,7 +27884,7 @@ e88b59829f01c17a82786bcf46bfcc000000000004dc24bddd15f790efcd7af3<span class="se"
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">  
    </span><span class="p">{</span><span class="w">  
@@ -28049,7 +28049,7 @@ e88b59829f01c17a82786bcf46bfcc000000000004dc24bddd15f790efcd7af3<span class="se"
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/mempool/contents.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
    </span><span class="nt">"b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32"</span><span class="p">:{</span><span class="w">  
@@ -28150,7 +28150,7 @@ e88b59829f01c17a82786bcf46bfcc000000000004dc24bddd15f790efcd7af3<span class="se"
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/mempool/info.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
    </span><span class="nt">"size"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -28470,7 +28470,7 @@ fc8f65e2ecc078ecad42b23462f27832b441ffa5feffffff0200e1f505000000\
 
   <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://localhost:19998/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.json</code></pre></figure>
 
-  <p>Result (whitespaced added):</p>
+  <p>Result (whitespace added):</p>
 
   <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  
    </span><span class="nt">"txid"</span><span class="p">:</span><span class="s2">"b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32"</span><span class="p">,</span><span class="w">
