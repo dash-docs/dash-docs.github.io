@@ -1,7 +1,7 @@
 ## Developer Documentation
 
 Most parts of the documentation can be found in the
-[_includes](https://github.com/thephez/dash.org/tree/master/_includes)
+[_includes](https://github.com/dash-docs/dash-docs/tree/master/_includes)
 directory. Updates, fixes and improvements are welcome and can submitted using
 [pull requests](#working-with-github) on GitHub.
 

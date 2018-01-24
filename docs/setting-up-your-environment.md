@@ -11,7 +11,7 @@ page is refreshed.
 
 For anything more than simple text previews, you will need to build the
 site. If you can't do this yourself using the instructions below, please
-[open a pull request](https://github.com/thephez/dash.org/compare)
+[open a pull request](https://github.com/dash-docs/dash-docs/compare)
 with your suggested change and one of the site developers will create a preview
 for you.
 
@@ -84,7 +84,7 @@ Use that program to install bundle:
 **Install the Ruby dependencies**
 
 Ensure you checked out the site repository as described in [Working with
-GitHub](https://github.com/thephez/dash.org/blob/master/docs/working-with-github.md).
+GitHub](https://github.com/dash-docs/dash-docs/blob/master/docs/working-with-github.md).
 Then change directory to the top-level of your local repository (replace
 `dash.org` with the full path to your local repository clone):
 
