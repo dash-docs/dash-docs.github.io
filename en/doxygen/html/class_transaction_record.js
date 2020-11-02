@@ -1,0 +1,38 @@
+var class_transaction_record =
+[
+    [ "Type", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685", [
+      [ "Other", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685aecbcb11ffbb16d3853676e3ce12c12df", null ],
+      [ "Generated", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685ab15d09d5069ce2dd728812d7ddfbdc7b", null ],
+      [ "SendToAddress", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685a92ce91a965ee8cd1c3ca60fe415b0eb0", null ],
+      [ "SendToOther", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685a6bcc2354c3ab1fcaaeb8c1aab51dc889", null ],
+      [ "RecvWithAddress", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685ab0bb06b109e1fa70877d42a1c22f709f", null ],
+      [ "RecvFromOther", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685af952e16195e2dad5c132b3d77856ea05", null ],
+      [ "SendToSelf", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685abbd291cccd8b7d4c1dadfbd69db12c6d", null ],
+      [ "RecvWithPrivateSend", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685afc62a80e34317771b08e702a3dc719d7", null ],
+      [ "PrivateSendDenominate", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685acc1a5106c84f234d0c8f3880b15301ca", null ],
+      [ "PrivateSendCollateralPayment", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685a519552f0363047734d460075045719ea", null ],
+      [ "PrivateSendMakeCollaterals", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685aa591fe5ed8af16d5c02a315c74678977", null ],
+      [ "PrivateSendCreateDenominations", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685af901caeec69bcb3b2fb5949c050a5d64", null ],
+      [ "PrivateSend", "class_transaction_record.html#afb76f5876fba21c3d2c388b98a35d685a6a7a6b8b2dec4f522e37d4f7bc6f858d", null ]
+    ] ],
+    [ "TransactionRecord", "class_transaction_record.html#abb95ce852c0d00e86dcf7ebf63e70a83", null ],
+    [ "TransactionRecord", "class_transaction_record.html#a3623e6c56331c4ff6d63f0a0e647f716", null ],
+    [ "TransactionRecord", "class_transaction_record.html#a0e451bbaa25903111cd95ee36116db2d", null ],
+    [ "decomposeTransaction", "class_transaction_record.html#a9f5db4465fa5fdcc3f9af525096bcdb9", null ],
+    [ "getOutputIndex", "class_transaction_record.html#a51d9d52d92a57448ab9b237e968c5ff6", null ],
+    [ "getTxID", "class_transaction_record.html#a838d881f68f967b751e7f7707bccfffa", null ],
+    [ "showTransaction", "class_transaction_record.html#a5ad1d1af4bec5b15a624b7a451e8cdbf", null ],
+    [ "statusUpdateNeeded", "class_transaction_record.html#a370d5d9aa0db618ee54eed7cabccca03", null ],
+    [ "updateStatus", "class_transaction_record.html#a60197683f46b945ce92c115682a0027e", null ],
+    [ "credit", "class_transaction_record.html#aea9d8e5ead391ada02422cef6f45d9c7", null ],
+    [ "debit", "class_transaction_record.html#a536fdaa56c7f7fb789f064cc475d30c1", null ],
+    [ "hash", "class_transaction_record.html#a7a89b1316eb6e7c14be17cb8448ae586", null ],
+    [ "idx", "class_transaction_record.html#a143da419e3dc0bc2ec73e22b3a56d1c9", null ],
+    [ "involvesWatchAddress", "class_transaction_record.html#ac938161128e04ca5d044d8a19827b0e2", null ],
+    [ "RecommendedNumConfirmations", "class_transaction_record.html#a1cdf534b1ab2495c839f87beb053eaf8", null ],
+    [ "status", "class_transaction_record.html#a50342213092284a9994f2903991134c0", null ],
+    [ "strAddress", "class_transaction_record.html#a4826c2e5c88eb5dfa9574de1dfa92155", null ],
+    [ "time", "class_transaction_record.html#afd105941a1ce3788f86573d17e999a8e", null ],
+    [ "txDest", "class_transaction_record.html#a7427431ef493d8e4c9c8d654edaff0e5", null ],
+    [ "type", "class_transaction_record.html#a6a68c861c3f1f10971fa11d8fc7c46e1", null ]
+];

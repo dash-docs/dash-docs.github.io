@@ -1,0 +1,25 @@
+var class_c_governance_object_vote_file =
+[
+    [ "vote_l_cit", "class_c_governance_object_vote_file.html#a286f1c0c773cf4cb96cc54bb3277785b", null ],
+    [ "vote_l_it", "class_c_governance_object_vote_file.html#ad1afe8426dee0a608d8c3fe8025ba80e", null ],
+    [ "vote_l_t", "class_c_governance_object_vote_file.html#ab854ae6742a91fb301dd09b882827a7a", null ],
+    [ "vote_m_cit", "class_c_governance_object_vote_file.html#a2a53d08ef2270e1d76bca62f51da3ccf", null ],
+    [ "vote_m_it", "class_c_governance_object_vote_file.html#a09ec19a3d77f0a7a7ece26ae2ee908f1", null ],
+    [ "vote_m_t", "class_c_governance_object_vote_file.html#a92b569c74c8207f62a4af92c551da9fe", null ],
+    [ "CGovernanceObjectVoteFile", "class_c_governance_object_vote_file.html#aa0cb1e387fa2611422b5cf04a1fe6a56", null ],
+    [ "CGovernanceObjectVoteFile", "class_c_governance_object_vote_file.html#a4f8275b683781632c7009ab8089201bf", null ],
+    [ "AddVote", "class_c_governance_object_vote_file.html#a0bfd2b7928e2e36d34a863726b84f01f", null ],
+    [ "GetVoteCount", "class_c_governance_object_vote_file.html#a7f6fa564e61933f632a3db38077180ab", null ],
+    [ "GetVotes", "class_c_governance_object_vote_file.html#a23cc5f6602ed9269c17f178854b32f49", null ],
+    [ "HasVote", "class_c_governance_object_vote_file.html#a0875c5f3b0fc99fb8a43445302fccf44", null ],
+    [ "RebuildIndex", "class_c_governance_object_vote_file.html#abae842fdec71b72f44960d22c9ac7368", null ],
+    [ "RemoveInvalidVotes", "class_c_governance_object_vote_file.html#a1423f2f2a0a28bec80dd26968fee9b5a", null ],
+    [ "RemoveOldVotes", "class_c_governance_object_vote_file.html#a0025e27d89bc37d182372e450376b123", null ],
+    [ "RemoveVotesFromMasternode", "class_c_governance_object_vote_file.html#ac565d2c0d0419344bef3b3015d12aff4", null ],
+    [ "SerializationOp", "class_c_governance_object_vote_file.html#a884f0f888a24f3d21e4fcd5d1d0491e3", null ],
+    [ "SerializeVoteToStream", "class_c_governance_object_vote_file.html#a7d9a3f0b95c5c0bf85bfd464b3f879ec", null ],
+    [ "ADD_SERIALIZE_METHODS", "class_c_governance_object_vote_file.html#a6399037588acff04bb3216a6022847cc", null ],
+    [ "listVotes", "class_c_governance_object_vote_file.html#a28a321fd985ea2fa656832b68bd30740", null ],
+    [ "mapVoteIndex", "class_c_governance_object_vote_file.html#a603d6368a025adffdb1feef798ce40a7", null ],
+    [ "nMemoryVotes", "class_c_governance_object_vote_file.html#ae676ac9722a1076d7bbfba2e1d2d9e7c", null ]
+];

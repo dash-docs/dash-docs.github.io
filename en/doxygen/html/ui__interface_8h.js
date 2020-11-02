@@ -1,0 +1,14 @@
+var ui__interface_8h =
+[
+    [ "CClientUIInterface", "class_c_client_u_i_interface.html", "class_c_client_u_i_interface" ],
+    [ "ChangeType", "ui__interface_8h.html#a293ba931937e469a6327b8d6b4872969", [
+      [ "CT_NEW", "ui__interface_8h.html#a293ba931937e469a6327b8d6b4872969ae975c67c7f3a5386de0bbde38221b32f", null ],
+      [ "CT_UPDATED", "ui__interface_8h.html#a293ba931937e469a6327b8d6b4872969a5ab4035117df6ed11f4f5cd2f2d732e5", null ],
+      [ "CT_DELETED", "ui__interface_8h.html#a293ba931937e469a6327b8d6b4872969a6aa8d1cd0da86fe8886e3a5c47f194ef", null ]
+    ] ],
+    [ "AmountErrMsg", "ui__interface_8h.html#a1a6a75fac961c253508d8ddf6aee426e", null ],
+    [ "AmountHighWarn", "ui__interface_8h.html#a697caa9b5aa32f8841b223659cb4b9bd", null ],
+    [ "InitError", "ui__interface_8h.html#a36f8e669221ac80facf023671576ee82", null ],
+    [ "InitWarning", "ui__interface_8h.html#a8a850858f643481684bf1ed56ed74541", null ],
+    [ "uiInterface", "ui__interface_8h.html#a4fe31b510fc1c2b95321cedb9f89e8de", null ]
+];

@@ -1,0 +1,27 @@
+var class_c_buffered_file =
+[
+    [ "CBufferedFile", "class_c_buffered_file.html#a30ad96a8d09bed60355d1fadda7dabdc", null ],
+    [ "~CBufferedFile", "class_c_buffered_file.html#a8804f689b27d3298cd5d63fbcddb97d1", null ],
+    [ "CBufferedFile", "class_c_buffered_file.html#abab2903224b17c70981307be4ad5e6c6", null ],
+    [ "eof", "class_c_buffered_file.html#af0ff112a5fd46ba3e8f2f1f4f36d5566", null ],
+    [ "fclose", "class_c_buffered_file.html#aef8c993fe3eb0fa423d09d095f40dcf6", null ],
+    [ "Fill", "class_c_buffered_file.html#a2c93fc60c4460bd1ccf90922646b19b8", null ],
+    [ "FindByte", "class_c_buffered_file.html#a15ce0683ba5925939d33f098a948236b", null ],
+    [ "GetPos", "class_c_buffered_file.html#a3e88caab7a10a5a6963a283777d1fe3e", null ],
+    [ "GetType", "class_c_buffered_file.html#a94757bf0e51983a7d4d8bca832251017", null ],
+    [ "GetVersion", "class_c_buffered_file.html#a2949b91d1a41c8527f6cb23e637e6fec", null ],
+    [ "operator=", "class_c_buffered_file.html#acfe6daf9254596e5490bd10d384a16c0", null ],
+    [ "operator>>", "class_c_buffered_file.html#ab570d5f1a173a41100e7b42b4aacbbc5", null ],
+    [ "read", "class_c_buffered_file.html#a58985fb633dea4616acf648e01388aaa", null ],
+    [ "Seek", "class_c_buffered_file.html#afbf9abcc70f24824661aec96a4310a63", null ],
+    [ "SetLimit", "class_c_buffered_file.html#adfcf370a41be0454e0f6b3dc358e415c", null ],
+    [ "SetPos", "class_c_buffered_file.html#aac4029a9aade127cc8a1fbbcc1549599", null ],
+    [ "nReadLimit", "class_c_buffered_file.html#a14409b620943fcc88a114dcbe417f77c", null ],
+    [ "nReadPos", "class_c_buffered_file.html#ab8fd6b1adfed6b2364a97984d6dc336b", null ],
+    [ "nRewind", "class_c_buffered_file.html#a3352d0e0d6a5758961f2fafc950fb37d", null ],
+    [ "nSrcPos", "class_c_buffered_file.html#a9c12254ffa498eef11a41e3a5a02c313", null ],
+    [ "nType", "class_c_buffered_file.html#aae39b184b0add2b63b2abf5c4049e468", null ],
+    [ "nVersion", "class_c_buffered_file.html#ad4952a29f28cd1da3a5ebe90acb9b993", null ],
+    [ "src", "class_c_buffered_file.html#a85ed820b4e1a4c2d1ca983749044f172", null ],
+    [ "vchBuf", "class_c_buffered_file.html#a50fde609bd4dfeeb7c2ecf4f0d75e789", null ]
+];

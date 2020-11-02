@@ -1,0 +1,25 @@
+var class_c_deterministic_m_n_manager =
+[
+    [ "CDeterministicMNManager", "class_c_deterministic_m_n_manager.html#a3c083f42050850fd225a2bd6c974208c", null ],
+    [ "BuildNewListFromBlock", "class_c_deterministic_m_n_manager.html#ae358ffb1fcd0f1b1fb0e0504ec7aa09e", null ],
+    [ "CleanupCache", "class_c_deterministic_m_n_manager.html#a82d13a638dde8a8666d211e122db4797", null ],
+    [ "DecreasePoSePenalties", "class_c_deterministic_m_n_manager.html#ac44ce01023064a290ab7c7dfed8b137d", null ],
+    [ "GetListAtChainTip", "class_c_deterministic_m_n_manager.html#a99372ef9b13c480a55878139b9404ecd", null ],
+    [ "GetListForBlock", "class_c_deterministic_m_n_manager.html#a15a77d2588a63d39133f1933ad801956", null ],
+    [ "HandleQuorumCommitment", "class_c_deterministic_m_n_manager.html#aff3a4bde7659ea6703ef681c9ef674f9", null ],
+    [ "IsDIP3Enforced", "class_c_deterministic_m_n_manager.html#aa64bf190ef1223c701075dafc6c72b9f", null ],
+    [ "IsProTxWithCollateral", "class_c_deterministic_m_n_manager.html#a2e8ac701a8b8695eb6eb6f5d77fae6fd", null ],
+    [ "ProcessBlock", "class_c_deterministic_m_n_manager.html#a917d73da4429a8114a10a15710f3c5c7", null ],
+    [ "UndoBlock", "class_c_deterministic_m_n_manager.html#a186d1a5e8b3db93b636f2c9c162b7735", null ],
+    [ "UpdatedBlockTip", "class_c_deterministic_m_n_manager.html#ab6cbf0831e438dace69f7ca627031d1b", null ],
+    [ "UpgradeDBIfNeeded", "class_c_deterministic_m_n_manager.html#a37bcf386509f30841117bfe553b40cbc", null ],
+    [ "UpgradeDiff", "class_c_deterministic_m_n_manager.html#a1fd7cbe2892dbfdbc16c72f2e911a6d8", null ],
+    [ "cs", "class_c_deterministic_m_n_manager.html#a7951cb871dfdcb05cdfc0122c07d18f6", null ],
+    [ "DISK_SNAPSHOT_PERIOD", "class_c_deterministic_m_n_manager.html#a8fdf983fbb19e68e04f712f1a5da19db", null ],
+    [ "DISK_SNAPSHOTS", "class_c_deterministic_m_n_manager.html#a3529340d0dae2539cdb47ff139d66dd8", null ],
+    [ "evoDb", "class_c_deterministic_m_n_manager.html#a6347c36a83fc42e5874c994526f4b420", null ],
+    [ "LIST_DIFFS_CACHE_SIZE", "class_c_deterministic_m_n_manager.html#a58a75c4f09f807cf9879c813a836195a", null ],
+    [ "mnListDiffsCache", "class_c_deterministic_m_n_manager.html#ad3c10ad542cf2b84d07f8f632a370c72", null ],
+    [ "mnListsCache", "class_c_deterministic_m_n_manager.html#aebc4ef3ce53c43d5a05392d2d698b4ab", null ],
+    [ "tipIndex", "class_c_deterministic_m_n_manager.html#a94ba3ad21918fd7a336674448b6d0fc8", null ]
+];

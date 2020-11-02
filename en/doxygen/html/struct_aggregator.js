@@ -1,0 +1,26 @@
+var struct_aggregator =
+[
+    [ "DoneCallback", "struct_aggregator.html#ab6585a51841bc4098d18f6b946276879", null ],
+    [ "ElementType", "struct_aggregator.html#ab23447d1889ee3643607493f646b102d", null ],
+    [ "Aggregator", "struct_aggregator.html#a46e6931c2586225cd52832b63460d5b4", null ],
+    [ "AsyncAggregateAndPushAggQueue", "struct_aggregator.html#ac00e08e3a3afd5f7f8a1d00d84eb0ec2", null ],
+    [ "CheckDone", "struct_aggregator.html#a07d825a90b078d84aea077126adbb687", null ],
+    [ "Finish", "struct_aggregator.html#a99b70b94a8c7ac577d09b5e91d9919dc", null ],
+    [ "IncWait", "struct_aggregator.html#a5c2ea0e7e3524faa214d8bec1e5ac49b", null ],
+    [ "pointer", "struct_aggregator.html#a11fea72da9bc0a46696dddd4c3afcc4f", null ],
+    [ "pointer", "struct_aggregator.html#aaf7eaa8bcc799e9e8fcade2aa56a4812", null ],
+    [ "PushAggQueue", "struct_aggregator.html#a0cec8a266916cb5f0bea5a6421983ae8", null ],
+    [ "PushWork", "struct_aggregator.html#acebe8c1f3d807f8cf51a05d71028e311", null ],
+    [ "Start", "struct_aggregator.html#a1bd3f592dd0a55fa9a854d05be6ec8a7", null ],
+    [ "SyncAggregate", "struct_aggregator.html#a4168f44d3d95a60d4c0ca4c95256ada2", null ],
+    [ "SyncAggregateAndPushAggQueue", "struct_aggregator.html#a3743168634d00199b9d62881102ab3eb", null ],
+    [ "aggQueue", "struct_aggregator.html#a3fa026558bd7455d83f24b59c461e47c", null ],
+    [ "aggQueueSize", "struct_aggregator.html#a067bc0f55be295d0cbf9064955128f0f", null ],
+    [ "batchSize", "struct_aggregator.html#a7179104ccaabef0091cbca439611cc6d", null ],
+    [ "doneCallback", "struct_aggregator.html#ac142785e6339efcf75ccb62525a10bcd", null ],
+    [ "inputVec", "struct_aggregator.html#a1485c8f8aca5b63b6eba869f82bdb250", null ],
+    [ "m", "struct_aggregator.html#afea9794d707494055b971bbe738eaf90", null ],
+    [ "parallel", "struct_aggregator.html#a2b8a5f146bc7a7e8f6cc4a2ba618df5b", null ],
+    [ "waitCount", "struct_aggregator.html#a843e8a3e731d2d1fda4a83fe0e6c289b", null ],
+    [ "workerPool", "struct_aggregator.html#ab9e7a703b68a3e0588c815d21d96bc04", null ]
+];

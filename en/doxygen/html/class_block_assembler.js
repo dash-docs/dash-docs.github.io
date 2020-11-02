@@ -1,0 +1,28 @@
+var class_block_assembler =
+[
+    [ "Options", "struct_block_assembler_1_1_options.html", "struct_block_assembler_1_1_options" ],
+    [ "BlockAssembler", "class_block_assembler.html#a6c9ac261800db16dfd386f0063a96081", null ],
+    [ "BlockAssembler", "class_block_assembler.html#a9097778c02e1194888201f09fc1d0136", null ],
+    [ "addPackageTxs", "class_block_assembler.html#ae70b1a66271f21fd4bc9dd0e72b3091d", null ],
+    [ "AddToBlock", "class_block_assembler.html#a3bb43b38f5af6bac3cdeb9c811865884", null ],
+    [ "CreateNewBlock", "class_block_assembler.html#acd45f01ed2556e805c82907def19efcb", null ],
+    [ "onlyUnconfirmed", "class_block_assembler.html#a5dedcbcc00df8337158dbc5d37126419", null ],
+    [ "resetBlock", "class_block_assembler.html#abc6d40e5050db0e74b92e457d88fd215", null ],
+    [ "SkipMapTxEntry", "class_block_assembler.html#ae3c70769b83910937795a128ed358853", null ],
+    [ "SortForBlock", "class_block_assembler.html#a5dc18cd47b5d25f33f97e79f6e8c66c3", null ],
+    [ "TestPackage", "class_block_assembler.html#a09f3f3232d5deb74edb4818030b388cb", null ],
+    [ "TestPackageTransactions", "class_block_assembler.html#a6af6e96d13f9263bd498a23c6ca14015", null ],
+    [ "UpdatePackagesForAdded", "class_block_assembler.html#af0307ce7a51afb8b63c3e6458e96b276", null ],
+    [ "blockMinFeeRate", "class_block_assembler.html#a662b9ce97f18ef56117e87ab81ed49e7", null ],
+    [ "chainparams", "class_block_assembler.html#acbde571f946f076a6957481e35c336cd", null ],
+    [ "inBlock", "class_block_assembler.html#a3f4cfefe0466de418e9990b53cdc4274", null ],
+    [ "nBlockMaxSize", "class_block_assembler.html#a5d931b2ca9d024530d6c20648584b3b0", null ],
+    [ "nBlockSigOps", "class_block_assembler.html#ae10c280f7b448298e1a9b4fbf5e5b892", null ],
+    [ "nBlockSize", "class_block_assembler.html#a8e1fa0f26f0af43d0adf336ce7b3ed1c", null ],
+    [ "nBlockTx", "class_block_assembler.html#a6d3c5440e9ec378c28a11305686952f2", null ],
+    [ "nFees", "class_block_assembler.html#aabce6a2692f787278795aa9de588a0b9", null ],
+    [ "nHeight", "class_block_assembler.html#ae5df7065687170ae50aaa6097993c312", null ],
+    [ "nLockTimeCutoff", "class_block_assembler.html#a073813243b1d21ae7bd39b191ed15755", null ],
+    [ "pblock", "class_block_assembler.html#ab7307903fa7875ee8153b67370b89b10", null ],
+    [ "pblocktemplate", "class_block_assembler.html#ac074cbe993c4fc3319adfb19c3459763", null ]
+];

@@ -1,0 +1,787 @@
+<!DOCTYPE HTML>
+<head>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+
+
+
+
+,
+
+
+
+<a href="/en/developer-reference#abandontransaction">AbandonTransaction</a>
+,
+<a href="/en/developer-reference#abortrescan">AbortRescan</a>
+,
+<a href="/en/developer-reference#addmultisigaddress">AddMultiSigAddress</a>
+,
+<a href="/en/developer-reference#addnode">AddNode</a>
+,
+<a href="/en/developer-reference#backupwallet">BackupWallet</a>
+,
+<a href="/en/developer-reference#bls">BLS</a>
+,
+<a href="/en/developer-reference#clearbanned">ClearBanned</a>
+,
+<a href="/en/developer-reference#createmultisig">CreateMultisig</a>
+,
+<a href="/en/developer-reference#combinerawtransaction">CombineRawTransaction</a>
+,
+<a href="/en/developer-reference#createrawtransaction">CreateRawTransaction</a>
+,
+<a href="/en/developer-reference#debug">Debug</a>
+,
+<a href="/en/developer-reference#decoderawtransaction">DecodeRawTransaction</a>
+,
+<a href="/en/developer-reference#decodescript">DecodeScript</a>
+,
+<a href="/en/developer-reference#disconnectnode">DisconnectNode</a>
+,
+<a href="/en/developer-reference#dumphdinfo">DumpHDInfo</a>
+,
+<a href="/en/developer-reference#dumpprivkey">DumpPrivKey</a>
+,
+<a href="/en/developer-reference#dumpwallet">DumpWallet</a>
+,
+<a href="/en/developer-reference#encryptwallet">EncryptWallet</a>
+,
+<a href="/en/developer-reference#estimatefee">EstimateFee</a>
+,
+<a href="/en/developer-reference#estimatepriority">EstimatePriority</a>
+,
+<a href="/en/developer-reference#estimatesmartfee">EstimateSmartFee</a>
+,
+<a href="/en/developer-reference#estimatesmartpriority">EstimateSmartPriority</a>
+,
+<a href="/en/developer-reference#fundrawtransaction">FundRawTransaction</a>
+,
+<a href="/en/developer-reference#generate">Generate</a>
+,
+<a href="/en/developer-reference#generatetoaddress">GenerateToAddress</a>
+,
+<a href="/en/developer-reference#getaccount">GetAccount</a>
+,
+<a href="/en/developer-reference#getaccountaddress">GetAccountAddress</a>
+,
+<a href="/en/developer-reference#getaddednodeinfo">GetAddedNodeInfo</a>
+,
+<a href="/en/developer-reference#getaddressesbyaccount">GetAddressesByAccount</a>
+,
+<a href="/en/developer-reference#getaddressbalance">GetAddressBalance</a>
+,
+<a href="/en/developer-reference#getaddressdeltas">GetAddressDeltas</a>
+,
+<a href="/en/developer-reference#getaddressmempool">GetAddressMempool</a>
+,
+<a href="/en/developer-reference#getaddresstxids">GetAddressTxids</a>
+,
+<a href="/en/developer-reference#getaddressutxos">GetAddressUtxos</a>
+,
+<a href="/en/developer-reference#getbalance">GetBalance</a>
+,
+<a href="/en/developer-reference#getbestblockhash">GetBestBlockHash</a>
+,
+<a href="/en/developer-reference#getbestchainlock">GetBestChainLock</a>
+,
+<a href="/en/developer-reference#getblock">GetBlock</a>
+,
+<a href="/en/developer-reference#getblockchaininfo">GetBlockChainInfo</a>
+,
+<a href="/en/developer-reference#getblockcount">GetBlockCount</a>
+,
+<a href="/en/developer-reference#getblockhash">GetBlockHash</a>
+,
+<a href="/en/developer-reference#getblockhashes">GetBlockHashes</a>
+,
+<a href="/en/developer-reference#getblockheader">GetBlockHeader</a>
+,
+<a href="/en/developer-reference#getblockheaders">GetBlockHeaders</a>
+,
+<a href="/en/developer-reference#getblockstats">GetBlockStats</a>
+,
+<a href="/en/developer-reference#getblocktemplate">GetBlockTemplate</a>
+,
+<a href="/en/developer-reference#getchaintips">GetChainTips</a>
+,
+<a href="/en/developer-reference#getchaintxstats">GetChainTxStats</a>
+,
+<a href="/en/developer-reference#getconnectioncount">GetConnectionCount</a>
+,
+<a href="/en/developer-reference#getdifficulty">GetDifficulty</a>
+,
+<a href="/en/developer-reference#getgenerate">GetGenerate</a>
+,
+<a href="/en/developer-reference#getgovernanceinfo">GetGovernanceInfo</a>
+,
+<a href="/en/developer-reference#gethashespersec">GetHashesPerSec</a>
+,
+<a href="/en/developer-reference#getinfo">GetInfo</a>
+,
+<a href="/en/developer-reference#getmemoryinfo">GetMemoryInfo</a>
+,
+<a href="/en/developer-reference#getmempoolancestors">GetMempoolAncestors</a>
+,
+<a href="/en/developer-reference#getmempooldescendants">GetMempoolDescendants</a>
+,
+<a href="/en/developer-reference#getmempoolentry">GetMempoolEntry</a>
+,
+<a href="/en/developer-reference#getmempoolinfo">GetMempoolInfo</a>
+,
+<a href="/en/developer-reference#getmerkleblocks">GetMerkleBlocks</a>
+,
+<a href="/en/developer-reference#getmininginfo">GetMiningInfo</a>
+,
+<a href="/en/developer-reference#getnettotals">GetNetTotals</a>
+,
+<a href="/en/developer-reference#getnetworkhashps">GetNetworkHashPS</a>
+,
+<a href="/en/developer-reference#getnetworkinfo">GetNetworkInfo</a>
+,
+<a href="/en/developer-reference#getnewaddress">GetNewAddress</a>
+,
+<a href="/en/developer-reference#getpeerinfo">GetPeerInfo</a>
+,
+<a href="/en/developer-reference#getpoolinfo">GetPoolInfo</a>
+,
+<a href="/en/developer-reference#getprivatesendinfo">GetPrivateSendInfo</a>
+,
+<a href="/en/developer-reference#getrawchangeaddress">GetRawChangeAddress</a>
+,
+<a href="/en/developer-reference#getrawmempool">GetRawMempool</a>
+,
+<a href="/en/developer-reference#getrawtransaction">GetRawTransaction</a>
+,
+<a href="/en/developer-reference#getreceivedbyaccount">GetReceivedByAccount</a>
+,
+<a href="/en/developer-reference#getreceivedbyaddress">GetReceivedByAddress</a>
+,
+<a href="/en/developer-reference#getspecialtxes">GetSpecialTxes</a>
+,
+<a href="/en/developer-reference#getspentinfo">GetSpentInfo</a>
+,
+<a href="/en/developer-reference#getsuperblockbudget">GetSuperblockBudget</a>
+,
+<a href="/en/developer-reference#gettransaction">GetTransaction</a>
+,
+<a href="/en/developer-reference#gettxout">GetTxout</a>
+,
+<a href="/en/developer-reference#gettxoutproof">GetTxOutProof</a>
+,
+<a href="/en/developer-reference#gettxoutsetinfo">GetTxoutSetInfo</a>
+,
+<a href="/en/developer-reference#getunconfirmedbalance">GetUnconfirmedBalance</a>
+,
+<a href="/en/developer-reference#getwalletinfo">GetWalletInfo</a>
+,
+<a href="/en/developer-reference#getwork">GetWork</a>
+,
+<a href="/en/developer-reference#gobject">GObject</a>
+,
+<a href="/en/developer-reference#help">Help</a>
+,
+<a href="/en/developer-reference#importaddress">ImportAddress</a>
+,
+<a href="/en/developer-reference#importelectrumwallet">ImportElectrumWallet</a>
+,
+<a href="/en/developer-reference#importmulti">ImportMulti</a>
+,
+<a href="/en/developer-reference#importprivkey">ImportPrivkey</a>
+,
+<a href="/en/developer-reference#importprunedfunds">ImportPrunedFunds</a>
+,
+<a href="/en/developer-reference#importpubkey">ImportPubkey</a>
+,
+<a href="/en/developer-reference#importwallet">ImportWallet</a>
+,
+<a href="/en/developer-reference#keepass">KeePass</a>
+,
+<a href="/en/developer-reference#keypoolrefill">KeypoolRefill</a>
+,
+<a href="/en/developer-reference#listaccounts">ListAccounts</a>
+,
+<a href="/en/developer-reference#listaddressbalances">ListAddressBalances</a>
+,
+<a href="/en/developer-reference#listaddressgroupings">ListAddressGroupings</a>
+,
+<a href="/en/developer-reference#listbanned">ListBanned</a>
+,
+<a href="/en/developer-reference#listlockunspent">ListLockUnspent</a>
+,
+<a href="/en/developer-reference#listreceivedbyaccount">ListReceivedByAccount</a>
+,
+<a href="/en/developer-reference#listreceivedbyaddress">ListReceivedByAddress</a>
+,
+<a href="/en/developer-reference#listsinceblock">ListSinceBlock</a>
+,
+<a href="/en/developer-reference#listtransactions">ListTransactions</a>
+,
+<a href="/en/developer-reference#listunspent">ListUnspent</a>
+,
+<a href="/en/developer-reference#listwallets">ListWallets</a>
+,
+<a href="/en/developer-reference#lockunspent">LockUnspent</a>
+,
+<a href="/en/developer-reference#logging">Logging</a>
+,
+<a href="/en/developer-reference#masternode">Masternode</a>
+,
+<a href="/en/developer-reference#masternodebroadcast">MasternodeBroadcast</a>
+,
+<a href="/en/developer-reference#masternodelist">MasternodeList</a>
+,
+<a href="/en/developer-reference#mnsync">MnSync</a>
+,
+<a href="/en/developer-reference#move">Move</a>
+,
+<a href="/en/developer-reference#ping-rpc">Ping</a>
+,
+<a href="/en/developer-reference#protx">ProTx</a>
+,
+<a href="/en/developer-reference#preciousblock">PreciousBlock</a>
+,
+<a href="/en/developer-reference#prioritisetransaction">PrioritiseTransaction</a>
+,
+<a href="/en/developer-reference#privatesend">PrivateSend</a>
+,
+<a href="/en/developer-reference#pruneblockchain">PruneBlockChain</a>
+,
+<a href="/en/developer-reference#quorum">Quorum</a>
+,
+<a href="/en/developer-reference#removeprunedfunds">RemovePrunedFunds</a>
+,
+<a href="/en/developer-reference#sendfrom">SendFrom</a>
+,
+<a href="/en/developer-reference#sendmany">SendMany</a>
+,
+<a href="/en/developer-reference#sendrawtransaction">SendRawTransaction</a>
+,
+<a href="/en/developer-reference#sendtoaddress">SendToAddress</a>
+,
+<a href="/en/developer-reference#setaccount">SetAccount</a>
+,
+<a href="/en/developer-reference#setban">SetBan</a>
+,
+<a href="/en/developer-reference#setgenerate">SetGenerate</a>
+,
+<a href="/en/developer-reference#setnetworkactive">SetNetworkActive</a>
+,
+<a href="/en/developer-reference#setprivatesendamount">SetPrivateSendAmount</a>
+,
+<a href="/en/developer-reference#setprivatesendrounds">SetPrivateSendRounds</a>
+,
+<a href="/en/developer-reference#settxfee">SetTxFee</a>
+,
+<a href="/en/developer-reference#signmessage">SignMessage</a>
+,
+<a href="/en/developer-reference#signmessagewithprivkey">SignMessageWithPrivKey</a>
+,
+<a href="/en/developer-reference#signrawtransaction">SignRawTransaction</a>
+,
+<a href="/en/developer-reference#sentinelping">SentinelPing</a>
+,
+<a href="/en/developer-reference#spork-rpc">Spork</a>
+,
+<a href="/en/developer-reference#stop">Stop</a>
+,
+<a href="/en/developer-reference#submitblock">SubmitBlock</a>
+,
+<a href="/en/developer-reference#uptime">Uptime</a>
+,
+<a href="/en/developer-reference#validateaddress">ValidateAddress</a>
+,
+<a href="/en/developer-reference#verifychain">VerifyChain</a>
+,
+<a href="/en/developer-reference#verifymessage">VerifyMessage</a>
+,
+<a href="/en/developer-reference#verifytxoutproof">VerifyTxOutProof</a>
+,
+<a href="/en/developer-reference#voteraw">VoteRaw</a>
+,
+<a href="/en/developer-reference#walletlock">WalletLock</a>
+,
+<a href="/en/developer-reference#walletpassphrase">WalletPassphrase</a>
+,
+<a href="/en/developer-reference#walletpassphrasechange">WalletPassphraseChange</a>
+,
+
+
+
+<a href="/en/developer-reference#get-block">GetBlock</a>
+,
+<a href="/en/developer-reference#get-blocknotxdetails">GetBlock-noTxDetails</a>
+,
+<a href="/en/developer-reference#get-chaininfo">GetChainInfo</a>
+,
+<a href="/en/developer-reference#get-getutxos">GetUtxos</a>
+,
+<a href="/en/developer-reference#get-headers">GetHeaders</a>
+,
+<a href="/en/developer-reference#get-mempoolcontents">GetMemPool-contents</a>
+,
+<a href="/en/developer-reference#get-mempoolinfo">GetMemPool-info</a>
+,
+<a href="/en/developer-reference#get-tx">GetTx</a>
+,
+
+
+
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_0 (OP_FALSE)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_PUSHDATA1</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_PUSHDATA2</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_PUSHDATA4</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_1NEGATE</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_1 (OP_TRUE)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_2</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_3</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_4</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_5</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_6</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_7</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_8</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_9</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_10</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_11</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_12</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_13</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_14</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_15</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Constants">OP_16</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Flow_control">OP_NOP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Flow_control">OP_IF</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Flow_control">OP_NOTIF</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Flow_control">OP_ELSE</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Flow_control">OP_ENDIF</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Flow_control">OP_VERIFY</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Flow_control">OP_RETURN</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_TOALTSTACK</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_FROMALTSTACK</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_IFDUP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_DEPTH</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_DROP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_DUP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_NIP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_OVER</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_PICK</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_ROLL</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_ROT</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_SWAP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_TUCK</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_2DROP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_2DUP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_3DUP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_2OVER</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_2ROT</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Stack">OP_2SWAP</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Splice">OP_CAT (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Splice">OP_SUBSTR (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Splice">OP_LEFT (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Splice">OP_RIGHT (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Splice">OP_SIZE</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Bitwise_logic">OP_INVERT (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Bitwise_logic">OP_AND (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Bitwise_logic">OP_OR (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Bitwise_logic">OP_XOR (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Bitwise_logic">OP_EQUAL</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Bitwise_logic">OP_EQUALVERIFY</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_1ADD</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_1SUB</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_2MUL (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_2DIV (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_NEGATE</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_ABS</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_NOT</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_0NOTEQUAL</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_ADD</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_SUB</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_MUL (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_DIV (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_MOD (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_LSHIFT (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_RSHIFT (disabled)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_BOOLAND</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_BOOLOR</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_NUMEQUAL</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_NUMEQUALVERIFY</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_NUMNOTEQUAL</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_LESSTHAN</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_GREATERTHAN</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_LESSTHANOREQUAL</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_GREATERTHANOREQUAL</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_MIN</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_MAX</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Arithmetic">OP_WITHIN</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_RIPEMD160</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_SHA1</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_SHA256</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_HASH160</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_HASH256</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_CODESEPARATOR</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_CHECKSIG</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_CHECKSIGVERIFY</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_CHECKMULTISIG</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Crypto">OP_CHECKMULTISIGVERIFY</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Locktime">OP_CHECKLOCKTIMEVERIFY</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Locktime">OP_CHECKSEQUENCEVERIFY </a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Pseudo-words">OP_PUBKEYHASH (invalid)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Pseudo-words">OP_PUBKEY (invalid)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Pseudo-words">OP_INVALIDOPCODE (invalid)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_RESERVED (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_VER (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_VERIF (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_VERNOTIF (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_RESERVED1 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_RESERVED2 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP1 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP4 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP5 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP6 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP7 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP8 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP9 (reserved)</a>
+,
+<a href="https://en.bitcoin.it/wiki/Script#Reserved_words">OP_NOP10 (reserved)</a>
+,
+
+
+
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki">BIP1: BIP purpose and guidelines</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">BIP9: soft fork mechanism</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0011.mediawiki">BIP11: m-of-n multisig transactions</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0013.mediawiki">BIP13: P2SH address format</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki">BIP14: protocol version and user agent</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki">BIP16: pay to script hash (P2SH)</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki">BIP21: URI scheme</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki">BIP22: GetBlockTemplate fundamentals</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0023.mediawiki">BIP23: GetBlockTemplate pooled mining</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki">BIP30: dealing with duplicate transactions</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0031.mediawiki">BIP31: P2P pong message</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">BIP32: HD wallets</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki">BIP34: block height in coinbase</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0035.mediawiki">BIP35: P2P mempool message</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki">BIP37: bloom filtering</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki">BIP38: passphrase-protected private key</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP39: mnemonic code for HD wallets</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki">BIP42: finite monetary supply</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP44: HD wallet account hierarchy</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki">BIP50: March 2013 fork post-mortem</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0060.mediawiki">BIP60: fixed-length version message</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0061.mediawiki">BIP61: P2P reject message</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki">BIP62: dealing with malleability</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0064.mediawiki">BIP64: P2P geutxos message</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki">BIP65: OP_CHECKLOCKTIMEVERIFY</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki">BIP66: strict DER signatures</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki">BIP68: relative lock-time</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki">BIP70: payment protocol</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0071.mediawiki">BIP71: payment protocol MIME types</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0072.mediawiki">BIP72: payment protocol URIs</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0073.mediawiki">BIP73: accept header with payment protocol</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0090.mediawiki">BIP90: buried deployments</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0111.mediawiki">BIP111: NODE_BLOOM service bit</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki">BIP112: OP_CHECKSEQUENCEVERIFY</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki">BIP113: median time for lock-time</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki">BIP125: replace-by-fee signaling</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0130.mediawiki">BIP130: sendheaders message</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0133.mediawiki">BIP133: feefilter message</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141: segregated witness</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki">BIP147: NULLYDUMMY enforcement</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0151.mediawiki">BIP151: P2P communication encryption</a>
+,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki">BIP152: compact block relay</a>
+,
+
+
+
+<a href="https://github.com/dashpay/dips/blob/master/dip-0001.md">DIP1: 2MB Blocks</a>
+,
+<a href="https://github.com/dashpay/dips/blob/master/dip-0002.md">DIP2: Special Transactions</a>
+,
+<a href="https://github.com/dashpay/dips/blob/master/dip-0003.md">DIP3: Deterministic Masternode Lists</a>
+,
+<a href="https://github.com/dashpay/dips/blob/master/dip-0004.md">DIP4: Simplified Verification of Deterministic Masternode Lists</a>
+,
+<a href="https://github.com/dashpay/dips/blob/master/dip-0005.md">DIP5: Blockchain Users</a>
+,
+<a href="https://github.com/dashpay/dips/blob/master/dip-0006.md">DIP6: Long-Living Masternode Quorums</a>
+,
+<a href="https://github.com/dashpay/dips/blob/master/dip-0007.md">DIP7: LLMQ Signing Requests / Sessions</a>
+,
+<a href="https://github.com/dashpay/dips/blob/master/dip-0008.md">DIP8: ChainLocks</a>
+,
+
+
+
+<a href="/en/developer-reference#addr">addr</a>
+,
+<a href="/en/developer-reference#block">block</a>
+,
+<a href="/en/developer-reference#blocktxn">blocktxn</a>
+,
+<a href="/en/developer-reference#cmpctblock">cmpctblock</a>
+,
+<a href="/en/developer-reference#filteradd">filteradd</a>
+,
+<a href="/en/developer-reference#filterclear">filterclear</a>
+,
+<a href="/en/developer-reference#filterload">filterload</a>
+,
+<a href="/en/developer-reference#getaddr">getaddr</a>
+,
+<a href="/en/developer-reference#getblocks">getblocks</a>
+,
+<a href="/en/developer-reference#getblocktxn">getblocktxn</a>
+,
+<a href="/en/developer-reference#getdata">getdata</a>
+,
+<a href="/en/developer-reference#getheaders">getheaders</a>
+,
+<a href="/en/developer-reference#getmnlistd">getmnlistd</a>
+,
+<a href="/en/developer-reference#headers">headers</a>
+,
+<a href="/en/developer-reference#inv">inv</a>
+,
+<a href="/en/developer-reference#mempool">mempool</a>
+,
+<a href="/en/developer-reference#merkleblock">merkleblock</a>
+,
+<a href="/en/developer-reference#mnlistdiff">mnlistdiff</a>
+,
+<a href="/en/developer-reference#notfound">notfound</a>
+,
+<a href="/en/developer-reference#ping">ping</a>
+,
+<a href="/en/developer-reference#pong">pong</a>
+,
+<a href="/en/developer-reference#reject">reject</a>
+,
+<a href="/en/developer-reference#sendcmpct">sendcmpct</a>
+,
+<a href="/en/developer-reference#senddsq">senddsq</a>
+,
+<a href="/en/developer-reference#tx">tx</a>
+,
+<a href="/en/developer-reference#verack">verack</a>
+,
+<a href="/en/developer-reference#version">version</a>
+,
+<a href="/en/developer-reference#getsporks">getsporks</a>
+,
+<a href="/en/developer-reference#spork">spork</a>
+,
+<a href="/en/developer-reference#clsig">clsig</a>
+,
+<a href="/en/developer-reference#islock">islock</a>
+,
+<a href="/en/developer-reference#dsa">dsa</a>
+,
+<a href="/en/developer-reference#dsc">dsc</a>
+,
+<a href="/en/developer-reference#dsf">dsf</a>
+,
+<a href="/en/developer-reference#dsi">dsi</a>
+,
+<a href="/en/developer-reference#dsq">dsq</a>
+,
+<a href="/en/developer-reference#dss">dss</a>
+,
+<a href="/en/developer-reference#dssu">dssu</a>
+,
+<a href="/en/developer-reference#dstx">dstx</a>
+,
+<a href="/en/developer-reference#ssc">ssc</a>
+,
+<a href="/en/developer-reference#mnauth">mnauth</a>
+,
+<a href="/en/developer-reference#qbsigs">qbsigs</a>
+,
+<a href="/en/developer-reference#qcomplaint">qcomplaint</a>
+,
+<a href="/en/developer-reference#qcontrib">qcontrib</a>
+,
+<a href="/en/developer-reference#qfcommit">qfcommit</a>
+,
+<a href="/en/developer-reference#qgetsigs">qgetsigs</a>
+,
+<a href="/en/developer-reference#qjustify">qjustify</a>
+,
+<a href="/en/developer-reference#qpcommit">qpcommit</a>
+,
+<a href="/en/developer-reference#qsendrecsigs">qsendrecsigs</a>
+,
+<a href="/en/developer-reference#qsigrec">qsigrec</a>
+,
+<a href="/en/developer-reference#qsigsesann">qsigsesann</a>
+,
+<a href="/en/developer-reference#qsigsinv">qsigsinv</a>
+,
+<a href="/en/developer-reference#qwatch">qwatch</a>
+,
+<a href="/en/developer-reference#govobj">govobj</a>
+,
+<a href="/en/developer-reference#govobjvote">govobjvote</a>
+,
+<a href="/en/developer-reference#govsync">govsync</a>
+,
+<a href="/en/developer-reference#alert">alert</a>
+,
+<a href="/en/developer-reference#ix">ix</a>
+,
+<a href="/en/developer-reference#txlvote">txlvote</a>
+
+
+</body></html>

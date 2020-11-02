@@ -1,0 +1,27 @@
+var class_c_deterministic_m_n_state =
+[
+    [ "CDeterministicMNState", "class_c_deterministic_m_n_state.html#a90529f091f8ea2c7ea3a29b89d36eeb6", null ],
+    [ "CDeterministicMNState", "class_c_deterministic_m_n_state.html#a38f00e5f959244a8039eae47437a4fcb", null ],
+    [ "CDeterministicMNState", "class_c_deterministic_m_n_state.html#aed4c1f8d37c2fb09f26982e04fb7ee7e", null ],
+    [ "BanIfNotBanned", "class_c_deterministic_m_n_state.html#a100da8a01a1ddf307b6f09b1d948a7c4", null ],
+    [ "ResetOperatorFields", "class_c_deterministic_m_n_state.html#a2abd8ee54af08c584f5cdbc63c089599", null ],
+    [ "SerializationOp", "class_c_deterministic_m_n_state.html#a48ce4e14e4cccffaadb2744629f0a6be", null ],
+    [ "ToJson", "class_c_deterministic_m_n_state.html#a8c6e978d88c412e90ba5e57634e074ee", null ],
+    [ "ToString", "class_c_deterministic_m_n_state.html#a6193e667f0f802bc1b0a3d3e1eed545b", null ],
+    [ "UpdateConfirmedHash", "class_c_deterministic_m_n_state.html#a22a23d01fd45cc4834699b059f491219", null ],
+    [ "ADD_SERIALIZE_METHODS", "class_c_deterministic_m_n_state.html#ada2eda824d2e5730bb89e57a7d396521", null ],
+    [ "addr", "class_c_deterministic_m_n_state.html#aa86cc0d0d2e4d96d93618719ef719ee6", null ],
+    [ "confirmedHash", "class_c_deterministic_m_n_state.html#a1606e4788954e064ceb24a2f0eae00a2", null ],
+    [ "confirmedHashWithProRegTxHash", "class_c_deterministic_m_n_state.html#a5a18b6372000561bd69dd423b68cb456", null ],
+    [ "keyIDOwner", "class_c_deterministic_m_n_state.html#aef7076eeaf0bff00b4c0617d5bf21e32", null ],
+    [ "keyIDVoting", "class_c_deterministic_m_n_state.html#aaa626437b84f1b56def28459bb887c65", null ],
+    [ "nLastPaidHeight", "class_c_deterministic_m_n_state.html#ab97cceb67fb88c86ba8cd0b5bb67479f", null ],
+    [ "nPoSeBanHeight", "class_c_deterministic_m_n_state.html#a05f209239d0ada0c99eab8aedb680da0", null ],
+    [ "nPoSePenalty", "class_c_deterministic_m_n_state.html#a20ad6743214b38c63f2084dabfacfee5", null ],
+    [ "nPoSeRevivedHeight", "class_c_deterministic_m_n_state.html#ad2ee7a08fc72137fb3d69d05d75d1a37", null ],
+    [ "nRegisteredHeight", "class_c_deterministic_m_n_state.html#a91d91aa37f9012c98fe4c92254422725", null ],
+    [ "nRevocationReason", "class_c_deterministic_m_n_state.html#aead78972e718bfe046b7a48dda2a62bf", null ],
+    [ "pubKeyOperator", "class_c_deterministic_m_n_state.html#a481a69095ee782cb3b28d5e9fa4eaeca", null ],
+    [ "scriptOperatorPayout", "class_c_deterministic_m_n_state.html#a4be8ae380728f44e69ccb57926751048", null ],
+    [ "scriptPayout", "class_c_deterministic_m_n_state.html#a3d6c86544bb838dbf5915e2274e04c0d", null ]
+];

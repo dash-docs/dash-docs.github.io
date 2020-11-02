@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['varr',['VARR',['../class_uni_value.html#a2f9803e567ede73e88302b01e394cc63aa95a3bc9bbb82964abef922146cc73c4',1,'UniValue']]],
+  ['vbool',['VBOOL',['../class_uni_value.html#a2f9803e567ede73e88302b01e394cc63af6f71c0fb8fb8fd72d0ec30d8ec9e1b8',1,'UniValue']]],
+  ['verify_5fok',['VERIFY_OK',['../class_berkeley_environment.html#a898177d0cb22503c06cf8c40d70d6b56aa8fb3f93ae96d3bd74d55ba22bb6ad7c',1,'BerkeleyEnvironment']]],
+  ['vnull',['VNULL',['../class_uni_value.html#a2f9803e567ede73e88302b01e394cc63a49973f733a7441eacf39e816229891cd',1,'UniValue']]],
+  ['vnum',['VNUM',['../class_uni_value.html#a2f9803e567ede73e88302b01e394cc63aba88a44dcdb6e3be0538d14997ff042b',1,'UniValue']]],
+  ['vobj',['VOBJ',['../class_uni_value.html#a2f9803e567ede73e88302b01e394cc63a4d17ac56db012de25e26ac62daf3f475',1,'UniValue']]],
+  ['vote_5foutcome_5fabstain',['VOTE_OUTCOME_ABSTAIN',['../governance-vote_8h.html#afc6318ac3bd65dd6391ea25695723f03a1c1c74ace454178da8c580c0ddcd444b',1,'governance-vote.h']]],
+  ['vote_5foutcome_5fno',['VOTE_OUTCOME_NO',['../governance-vote_8h.html#afc6318ac3bd65dd6391ea25695723f03a0ca1aacf0c5b87f7fc39e4cb4441c252',1,'governance-vote.h']]],
+  ['vote_5foutcome_5fnone',['VOTE_OUTCOME_NONE',['../governance-vote_8h.html#afc6318ac3bd65dd6391ea25695723f03a9dc19363c4331601f69b3d72f41a2d4f',1,'governance-vote.h']]],
+  ['vote_5foutcome_5fyes',['VOTE_OUTCOME_YES',['../governance-vote_8h.html#afc6318ac3bd65dd6391ea25695723f03aa30357b2eef79d2006273b09faa43084',1,'governance-vote.h']]],
+  ['vote_5fsignal_5fdelete',['VOTE_SIGNAL_DELETE',['../governance-vote_8h.html#a538152723c5c3608a104401d174e60ffa85537c35732a55c24872fa64b919e32a',1,'governance-vote.h']]],
+  ['vote_5fsignal_5fendorsed',['VOTE_SIGNAL_ENDORSED',['../governance-vote_8h.html#a538152723c5c3608a104401d174e60ffae2e664d4cb4c983f65df8e4cedb0f6d8',1,'governance-vote.h']]],
+  ['vote_5fsignal_5ffunding',['VOTE_SIGNAL_FUNDING',['../governance-vote_8h.html#a538152723c5c3608a104401d174e60ffa1db6c7f0db8869d6ec2ba645edd9ba60',1,'governance-vote.h']]],
+  ['vote_5fsignal_5fnone',['VOTE_SIGNAL_NONE',['../governance-vote_8h.html#a538152723c5c3608a104401d174e60ffa3356da4ab41529860f3fbadac4a262d4',1,'governance-vote.h']]],
+  ['vote_5fsignal_5fvalid',['VOTE_SIGNAL_VALID',['../governance-vote_8h.html#a538152723c5c3608a104401d174e60ffa9bc29e20fbc6e7e0ce9d21af64c31d40',1,'governance-vote.h']]],
+  ['voutrole',['VOutRole',['../class_coin_control_dialog.html#ace2171d331f96758d8974495826a1e2ca255dffb508fb02ebe80e74222ff86ece',1,'CoinControlDialog']]],
+  ['vstr',['VSTR',['../class_uni_value.html#a2f9803e567ede73e88302b01e394cc63a7afa7b747615105024aab97ff5bf4d11',1,'UniValue']]]
+];
